@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>BenchmarkResults </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="BenchmarkResults ">
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/README.md/#L1">
+  </head>
+
+  <script type="module">
+    import options from './../../public/main.js'
+    import { init } from './../../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="benchmarkresults">BenchmarkResults</h1>
+
+<p>(<a href="../../README.html">← Back</a>)</p>
+<h2 id="benchmark-results-基准测试结果">Benchmark results (基准测试结果)</h2>
+<ul>
+<li><a href="ABitUtil/README.html">ABitUtil</a></li>
+<li><a href="AVector/README.html">AVector</a></li>
+</ul>
+<h2 id="common-command-lines-常用的命令行">Common command lines (常用的命令行)</h2>
+<h3 id="benchmark-基准测试">Benchmark (基准测试)</h3>
+<p>Prepare (准备):</p>
+<pre><code>mkdir -p ~/Documents/VectorTraits
+mkdir -p ~/Documents/VectorTraits/benchmarks
+
+cd ~/Documents/VectorTraits/benchmarks
+rm -r *
+rz
+unzip Release.zip
+
+</code></pre>
+<p>Run (运行):</p>
+<pre><code>cd ~/Documents/VectorTraits/benchmarks
+dotnet netcoreapp3.1/VectorTraits.Benchmarks.dll
+dotnet net5.0/VectorTraits.Benchmarks.dll
+dotnet net6.0/VectorTraits.Benchmarks.dll
+dotnet net7.0/VectorTraits.Benchmarks.dll
+
+cd ~/Documents/VectorTraits/benchmarks/net7.0
+dotnet VectorTraits.Benchmarks.dll &gt;1.txt
+dotnet VectorTraits.Benchmarks.NetCore.dll &gt;1.txt
+sz 1.txt
+
+dotnet VectorTraits.Benchmarks.dll 1&gt;1.txt
+rm -r BenchmarkDotNet.Artifacts
+tar -cvf BenchmarkDotNet.Artifacts.tar BenchmarkDotNet.Artifacts
+sz BenchmarkDotNet.Artifacts.tar
+
+set DOTNET_JitDisasm=AloneTest
+export DOTNET_JitDisasm=AloneTest
+dotnet VectorTraits.Benchmarks.dll 3 &gt;1.txt
+set DOTNET_JitDisasm=WidenBenchmark_SByte.*
+dotnet VectorTraits.Benchmarks.dll &gt;1.txt
+
+dotnet VectorTraits.Benchmarks.dll -waitdebug
+</code></pre>
+<p>RunBenchmarks_Combine.sh</p>
+<pre><code>cd ~/Documents/VectorTraits/benchmarks
+rm RunBenchmarks_Combine.sh
+rz
+chmod u+x RunBenchmarks_Combine.sh
+./RunBenchmarks_Combine.sh
+vi CombineBenchmarks_out.txt
+sz CombineBenchmarks_out.txt
+</code></pre>
+<h3 id="unit-test-单元测试">Unit test (单元测试)</h3>
+<p>Prepare (准备):</p>
+<pre><code>mkdir -p ~/Documents/VectorTraits/tests
+
+cd ~/Documents/VectorTraits/tests
+rm -r *
+rz
+unzip Release.zip
+
+</code></pre>
+<p>Run (运行):</p>
+<pre><code>cd ~/Documents/VectorTraits/tests/netcoreapp3.0
+cd ~/Documents/VectorTraits/tests/net5.0
+cd ~/Documents/VectorTraits/tests/net6.0
+cd ~/Documents/VectorTraits/tests/net7.0
+
+dotnet test VectorTraits.Tests.dll
+dotnet test VectorTraits.Tests.dll --logger:&quot;trx;LogFileName=out.trx&quot;
+dotnet test VectorTraits.Tests.dll --logger:&quot;trx;LogFileName=out.trx&quot; /Tests:InstancesTest
+sz TestResults/out.trx
+</code></pre>
+<h3 id="vectortraitssample-范例">VectorTraits.Sample (范例)</h3>
+<p>Prepare (准备):</p>
+<pre><code>mkdir -p ~/Documents/VectorTraits/samples
+
+cd ~/Documents/VectorTraits/samples
+rm -r *
+rz
+unzip Release.zip
+
+</code></pre>
+<p>Run (运行):</p>
+<pre><code>cd ~/Documents/VectorTraits/samples
+dotnet net7.0/VectorTraits.Sample.dll
+</code></pre>
+<h3 id="docfx-docfx-文档">docfx (docfx 文档)</h3>
+<p>Install (安装).</p>
+<pre><code>dotnet tool update -g docfx
+</code></pre>
+<p>Start document service (启动文档服务):</p>
+<pre><code>docfx docfx.json --serve -p 8080
+~/.dotnet/tools/docfx docfx.json --serve -p 8080
+</code></pre>
+<p>Then browse http://localhost:8080/ .</p>
+<p>docfx_serve_mac.sh</p>
+<pre><code>chmod u+x docfx_serve_mac.sh
+./docfx_serve_mac.sh
+</code></pre>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

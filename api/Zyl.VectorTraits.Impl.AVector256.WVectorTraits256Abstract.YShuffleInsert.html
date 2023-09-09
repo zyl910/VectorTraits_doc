@@ -1,0 +1,667 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Method YShuffleInsert
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Method YShuffleInsert
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*">
+
+
+
+
+
+<h1 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*" class="text-break">
+  Method YShuffleInsert
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L639"><i class="bi bi-code-slash"></i></a>
+</h1>
+
+<div class="facts text-secondary">
+  <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a>.<a class="xref" href="Zyl.VectorTraits.Impl.html">Impl</a>.<a class="xref" href="Zyl.VectorTraits.Impl.AVector256.html">AVector256</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+</div>
+
+<div class="markdown summary"></div>
+<div class="markdown conceptual"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_System_Runtime_Intrinsics_Vector256_System_Single__System_Runtime_Intrinsics_Vector256_System_Single__System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert(System.Runtime.Intrinsics.Vector256{System.Single},System.Runtime.Intrinsics.Vector256{System.Single},System.Runtime.Intrinsics.Vector256{System.Int32})">
+  YShuffleInsert(Vector256&lt;float&gt;, Vector256&lt;float&gt;, Vector256&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L639"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public virtual Vector256&lt;float&gt; YShuffleInsert(Vector256&lt;float&gt; back, Vector256&lt;float&gt; vector, Vector256&lt;int&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>back</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>The background vector (背景向量).</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits256.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits256_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256.shuffle#system-runtime-intrinsics-vector256-shuffle(system-runtime-intrinsics-vector256((system-single))-system-runtime-intrinsics-vector256((system-int32)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_System_Runtime_Intrinsics_Vector256_System_Double__System_Runtime_Intrinsics_Vector256_System_Double__System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert(System.Runtime.Intrinsics.Vector256{System.Double},System.Runtime.Intrinsics.Vector256{System.Double},System.Runtime.Intrinsics.Vector256{System.Int64})">
+  YShuffleInsert(Vector256&lt;double&gt;, Vector256&lt;double&gt;, Vector256&lt;long&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L645"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public virtual Vector256&lt;double&gt; YShuffleInsert(Vector256&lt;double&gt; back, Vector256&lt;double&gt; vector, Vector256&lt;long&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>back</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+  <dd><p>The background vector (背景向量).</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits256.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits256_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256.shuffle#system-runtime-intrinsics-vector256-shuffle(system-runtime-intrinsics-vector256((system-double))-system-runtime-intrinsics-vector256((system-int64)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert(System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte})">
+  YShuffleInsert(Vector256&lt;sbyte&gt;, Vector256&lt;sbyte&gt;, Vector256&lt;sbyte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L651"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public virtual Vector256&lt;sbyte&gt; YShuffleInsert(Vector256&lt;sbyte&gt; back, Vector256&lt;sbyte&gt; vector, Vector256&lt;sbyte&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>back</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>The background vector (背景向量).</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits256.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits256_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256.shuffle#system-runtime-intrinsics-vector256-shuffle(system-runtime-intrinsics-vector256((system-sbyte))-system-runtime-intrinsics-vector256((system-sbyte)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_System_Runtime_Intrinsics_Vector256_System_Byte__System_Runtime_Intrinsics_Vector256_System_Byte__System_Runtime_Intrinsics_Vector256_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert(System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte})">
+  YShuffleInsert(Vector256&lt;byte&gt;, Vector256&lt;byte&gt;, Vector256&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L658"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public virtual Vector256&lt;byte&gt; YShuffleInsert(Vector256&lt;byte&gt; back, Vector256&lt;byte&gt; vector, Vector256&lt;byte&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>back</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>The background vector (背景向量).</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits256.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits256_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256.shuffle#system-runtime-intrinsics-vector256-shuffle(system-runtime-intrinsics-vector256((system-byte))-system-runtime-intrinsics-vector256((system-byte)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert(System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16})">
+  YShuffleInsert(Vector256&lt;short&gt;, Vector256&lt;short&gt;, Vector256&lt;short&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L664"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public virtual Vector256&lt;short&gt; YShuffleInsert(Vector256&lt;short&gt; back, Vector256&lt;short&gt; vector, Vector256&lt;short&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>back</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>The background vector (背景向量).</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits256.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits256_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256.shuffle#system-runtime-intrinsics-vector256-shuffle(system-runtime-intrinsics-vector256((system-int16))-system-runtime-intrinsics-vector256((system-int16)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Runtime_Intrinsics_Vector256_System_UInt16__System_Runtime_Intrinsics_Vector256_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16})">
+  YShuffleInsert(Vector256&lt;ushort&gt;, Vector256&lt;ushort&gt;, Vector256&lt;ushort&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L670"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public virtual Vector256&lt;ushort&gt; YShuffleInsert(Vector256&lt;ushort&gt; back, Vector256&lt;ushort&gt; vector, Vector256&lt;ushort&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>back</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>The background vector (背景向量).</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits256.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits256_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256.shuffle#system-runtime-intrinsics-vector256-shuffle(system-runtime-intrinsics-vector256((system-uint16))-system-runtime-intrinsics-vector256((system-uint16)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert(System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32})">
+  YShuffleInsert(Vector256&lt;int&gt;, Vector256&lt;int&gt;, Vector256&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L677"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public virtual Vector256&lt;int&gt; YShuffleInsert(Vector256&lt;int&gt; back, Vector256&lt;int&gt; vector, Vector256&lt;int&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>back</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The background vector (背景向量).</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits256.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits256_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256.shuffle#system-runtime-intrinsics-vector256-shuffle(system-runtime-intrinsics-vector256((system-int32))-system-runtime-intrinsics-vector256((system-int32)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Runtime_Intrinsics_Vector256_System_UInt32__System_Runtime_Intrinsics_Vector256_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32})">
+  YShuffleInsert(Vector256&lt;uint&gt;, Vector256&lt;uint&gt;, Vector256&lt;uint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L683"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public virtual Vector256&lt;uint&gt; YShuffleInsert(Vector256&lt;uint&gt; back, Vector256&lt;uint&gt; vector, Vector256&lt;uint&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>back</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>The background vector (背景向量).</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits256.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits256_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256.shuffle#system-runtime-intrinsics-vector256-shuffle(system-runtime-intrinsics-vector256((system-uint32))-system-runtime-intrinsics-vector256((system-uint32)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert(System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64})">
+  YShuffleInsert(Vector256&lt;long&gt;, Vector256&lt;long&gt;, Vector256&lt;long&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L690"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public virtual Vector256&lt;long&gt; YShuffleInsert(Vector256&lt;long&gt; back, Vector256&lt;long&gt; vector, Vector256&lt;long&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>back</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The background vector (背景向量).</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits256.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits256_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256.shuffle#system-runtime-intrinsics-vector256-shuffle(system-runtime-intrinsics-vector256((system-int64))-system-runtime-intrinsics-vector256((system-int64)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Abstract_YShuffleInsert_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Runtime_Intrinsics_Vector256_System_UInt64__System_Runtime_Intrinsics_Vector256_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Abstract.YShuffleInsert(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64})">
+  YShuffleInsert(Vector256&lt;ulong&gt;, Vector256&lt;ulong&gt;, Vector256&lt;ulong&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L696"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public virtual Vector256&lt;ulong&gt; YShuffleInsert(Vector256&lt;ulong&gt; back, Vector256&lt;ulong&gt; vector, Vector256&lt;ulong&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>back</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>The background vector (背景向量).</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits256.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits256_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256.shuffle#system-runtime-intrinsics-vector256-shuffle(system-runtime-intrinsics-vector256((system-uint64))-system-runtime-intrinsics-vector256((system-uint64)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Abstract.Y.cs/#L639" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

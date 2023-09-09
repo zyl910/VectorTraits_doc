@@ -1,0 +1,2645 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>VectorTraits (向量特征) </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="VectorTraits (向量特征) ">
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="articles/toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/blob/main/README_Chinese.md/#L1">
+  </head>
+
+  <script type="module">
+    import options from './public/main.js'
+    import { init } from './public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="vectortraits-向量特征">VectorTraits (向量特征)</h1>
+
+<p><a href="README.html">English</a> | Chinese(中文)</p>
+<p>VectorTraits: SIMD Vector type traits methods (SIMD向量类型的特征方法).</p>
+<p><a href="https://www.nuget.org/packages/VectorTraits"><img src="https://buildstats.info/nuget/VectorTraits" alt="NuGet"></a></p>
+<p>本库为向量类型提供了许多重要的算术方法(如 Shift, Shuffle, NarrowSaturate)及常数, 使您能更方便的编写跨平台的SIMD运算代码。它充分利用了 X86、Arm架构的内在函数实现硬件加速，且能够享受内联编译优化。</p>
+<p>常用类型：</p>
+<ul>
+<li><code>Vectors</code>: 为向量类型, 提供了常用工具函数, e.g. Create(T/T[]/Span/ReadOnlySpan), CreatePadding, CreateRotate, CreateByFunc, CreateByDouble ... 它还为向量提供了特征方法, e.g. ShiftLeft、ShiftRightArithmetic、ShiftRightLogical、Shuffle ...</li>
+<li><code>Vectors&lt;T&gt;</code>: 为向量类型, 提供了各种元素类型的常数. e.g. Serial, SerialDesc, XyzwWMask, MantissaMask, MaxValue, MinValue, NormOne, FixedOne, E, Pi, Tau, VMaxByte, VReciprocalMaxSByte ...</li>
+<li><code>Vector64s/Vector128s/Vector256s</code>: 为固定位宽的向量（Vector64/Vector128/Vector256），提供了常用工具函数与特征方法.</li>
+<li><code>Vector64s&lt;T&gt;/Vector128s&lt;T&gt;/Vector256s&lt;T&gt;</code>: 为固定位宽的向量，提供了各种元素类型的常数.</li>
+<li><code>Scalars</code>: 为标量类型, 提供了各种工具函数. e.g. GetByDouble, GetFixedByDouble, GetByBits, GetBitsMask ...</li>
+<li><code>Scalars&lt;T&gt;</code>: 为标量类型, 提供了许多常数. e.g. ExponentBits, MantissaBits, MantissaMask, MaxValue, MinValue, NormOne, FixedOne, E, Pi, Tau, VMaxByte, VReciprocalMaxSByte ...</li>
+<li><code>VectorTextUtil</code>: 提供了一些向量的文本性工具函数. e.g. GetHex, Format, WriteLine ...</li>
+</ul>
+<p>特征方法:</p>
+<ul>
+<li>支持 <code>.NET Standard 2.1</code> 新增的向量方法: ConvertToDouble, ConvertToInt32, ConvertToInt64, ConvertToSingle, ConvertToUInt32, ConvertToUInt64, Narrow, Widen .</li>
+<li>支持 <code>.NET 5.0</code> 新增的向量方法: Ceiling, Floor .</li>
+<li>支持 <code>.NET 6.0</code> 新增的向量方法: Sum .</li>
+<li>支持 <code>.NET 7.0</code> 新增的向量方法: ExtractMostSignificantBits, Shuffle, ShiftLeft, ShiftRightArithmetic, ShiftRightLogical .</li>
+<li>提供缩窄饱和的向量方法: YNarrowSaturate, YNarrowSaturateUnsigned .</li>
+<li>提供舍入的向量方法: YRoundToEven, YRoundToZero .</li>
+<li>提供换位的向量方法: YShuffleInsert, YShuffleKernel, YShuffleG2, YShuffleG4, YShuffleG4X2 . 且提供了 ShuffleControlG2/ShuffleControlG4 enum.</li>
+<li>...</li>
+<li>完整列表: <a href="TraitsMethodList.html">TraitsMethodList</a></li>
+</ul>
+<p>支持的指令集:</p>
+<ul>
+<li>x86
+<ul>
+<li>256位向量: Avx, Avx2 .</li>
+</ul>
+</li>
+<li>Arm
+<ul>
+<li>128位向量: AdvSimd .</li>
+</ul>
+</li>
+</ul>
+<h2 id="用途">用途</h2>
+<p>总所周知，使用SIMD指令集，能够加速 多媒体处理（图形、图像、音频、视频...）、人工智能、科学计算 等。
+然而，传统的SIMD编程存在以下痛点：</p>
+<ul>
+<li>难以跨平台。因为不同的CPU体系，提供了不同的SIMD指令集，例如 X86与Arm平台的SIMD指令集存在很多差异。如果程序欲移植到另一平台下，则需要查找该平台的SIMD指令集手册，重新开发一遍。</li>
+<li>位宽难以升级。即使是同一个平台，随着发展，会逐渐增加位数更宽的指令集。例如X86平台，除了已淘汰的64位MMX系列指令外，提供了了 128位SSE指令集、256位的AVX指令集，且部分高端处理器开始支持 512位的AVX-512指令集。以前用128位SSE系列指令编写的算法，若想移植到256位的AVX指令集，需要重新开发一遍，才能充分利用更宽的SIMD指令集。</li>
+<li>代码可读性差，开发门槛高。很多现代C语言编译器为SIMD指令，映射了<code>内在函数</code>（Intrinsic Functions），比编写汇编代码要容易了不少，且可读性提升了不少。但是由于函数名使用了一些晦涩的缩写，且C语言不支持函数名重载，以及C语言本身的复杂性，导致代码可读性与开发难度，仍有较高的门槛。</li>
+</ul>
+<p>2016年的 <code>.NET Core 1.0</code> 新增了 <code>Vector&lt;T&gt;</code> 等向量类型，在很大程度上解决了以上痛点。</p>
+<ul>
+<li>容易跨平台。<code>.NET</code>平台的程序，是通过JIT（Just-In-Time Compiler，即时编译器）运行的。只编写一套基于向量方法的算法，且仅需编译为一套程序。随后该程序在不同平台上运行时，向量方法会被JIT编译为平台特有的SIMD指令集，从而充分的享用硬件加速。</li>
+<li>位宽能自动升级。对于<code>Vector&lt;T&gt;</code>类型，它的长度不是固定的，而是与该处理器的最长向量寄存器相同。具体来说，若CPU支持AVX指令集（严格来说是AVX2及以上），<code>Vector&lt;T&gt;</code>类型便是256位；若CPU仅支持SSE指令集（严格来说是SSE2及以上），<code>Vector&lt;T&gt;</code>类型便是128位。简单来说，在编写程序时仅使用<code>Vector&lt;T&gt;</code>类型就行，程序运行时，JIT会自动使用最宽的SIMD指令集。</li>
+<li>代码可读性较高，降低了开发门槛。<code>.NET</code>平台下，向量类型的方法名都是用完整英文单词所组成，并充分利用了函数名重载等 C# 语法特点，使这些方法名既简洁、又清晰。使得代码可读性有了很大的提高。</li>
+</ul>
+<p>向量类型<code>Vector&lt;T&gt;</code> 虽然设计的好，但它缺少许多重要的向量函数，如 Ceiling、Sum、Shift、Shuffle 等。导致很多算法，难以用向量类型来实现。
+当 <code>.NET</code> 平台版本升级时, 有时会增加若干个向量方法。例如2022年发布的 <code>.NET 7.0</code>，增加了ShiftRightArithmetic、Shuffle 等函数。但目前的向量方法还是较少, 例如缺少饱和处理等.
+为了解决缺少向量方法的问题，<code>.NET Core 3.0</code>开始支持了内在函数。这能让开发者直接使用SIMD指令集，但这又面临了难以跨平台与位宽难以升级等问题。随着 <code>.NET</code> 平台的不断升级，会增加了更多的内在函数。例如 <code>.NET 5.0</code> 增加了 Arm平台的内在函数。
+对于开发类库, 不能仅支持 <code>.NET 7.0</code>，而是需要支持多个 <code>.NET</code> 版本。于是你会面临繁琐的版本检查与条件处理. 而且 <code>.NET Standard</code> 类库的最高版本(2.1)，仍是是不支持Ceiling等向量方法的，导致版本检查更加繁琐.</p>
+<p>本库致力于解决以上麻烦, 使您能更方便的编写跨平台的SIMD算法。
+特点:</p>
+<ul>
+<li>支持低版本的 <code>.NET</code> 程序（<code>.NET Standard 1.1</code>, <code>.NET Core 1.0</code>, <code>.NET Framework 4.5</code>, ...）。能使低版本的 <code>.NET</code> 程序，也能使用最新的向量函数. 例如 <code>.NET 7.0</code>所新增的 ShiftRightArithmetic、Shuffle 等。</li>
+<li>功能强. 除了参考高版本 <code>.NET</code> 的向量方法外，本库还参考内在函数，提供了很多有用的向量方法。例如 YClamp, YNarrowSaturate ...</li>
+<li>性能高。本库能充分利用 X86、Arm架构的内在函数对向量类型的运算进行硬件加速，且能够享受内联编译优化。且本库解决了BCL的部分向量方法（如Multiply, Shuffle等）在一些平台上没有硬件加速的问题, 因它补充了硬件加速算法.</li>
+<li>软件算法也很快。若发现向量类型的某个方法不支持硬件加速时，.NET Bcl会切换为软件算法，但它软件算法很多是含有分支语句的，性能较差。而本库的软件算法，是高度优化的无分支算法。</li>
+<li>使用方便。本库不仅支持 <code>Vector&lt;T&gt;</code>，还支持 <code>Vector128&lt;T&gt;</code>/<code>Vector256&lt;T&gt;</code> 等向量类型。工具类的类名很好记（Vectors/Vector64s/Vector128s/Vector256s），且通过同名的泛型类提供了许多常用的向量常数。</li>
+<li>为每一个特征方法, 增加了一些获取信息的的属性. e.g. <code>_AcceleratedTypes</code>, <code>_FullAcceleratedTypes</code> .</li>
+</ul>
+<p>提示: 在 Visual Studio 的 Disassembly窗口可以查看运行时的汇编代码. 例如在支持 Avx指令集的机器上运行时, <code>Vectors.ShiftLeft_Const</code> 会被内联编译优化为使用 <code>vpsllw</code> 指令. 且对于常量值(1), 会被编译为指令的立即数.
+<img src="images/Vectors.ShiftLeft_use_inline.png" alt="Vectors.ShiftLeft_use_inline.png"></p>
+<p>例2: 使用 <code>Vectors.ShiftLeft_Args</code> 与 <code>Vectors.ShiftLeft_Core</code>, 能将部分运算挪到循环外去提前处理. 例如在支持 Avx指令集的机器上运行时, 会在循环外设置好 <code>xmm1</code>, 随后在内循环的<code>vpsllw</code>指令里使用了它. 且这里展示了: 内联编译优化消除了冗余的 xmm/ymm 转换.
+<img src="images/Vectors.ShiftLeft_Core_use_inline.png" alt="Vectors.ShiftLeft_Core_use_inline.png"></p>
+<h2 id="入门指南">入门指南</h2>
+<h3 id="1-通过nuget安装">1) 通过NuGet安装</h3>
+<p>可在'包管理器控制台'里输入以下命令, 或是使用'包管理器'GUI来安装本库.</p>
+<p>NuGet: <code>PM&gt; Install-Package VectorTraits</code></p>
+<h3 id="2-用法示例">2) 用法示例</h3>
+<p>静态类 <code>Vectors</code> 提供了许多方法, 例如 CreateRotate, ShiftLeft, Shuffle.
+泛型结构体 <code>Vectors&lt;T&gt;</code> 为常用常数提供了字段.</p>
+<p>范例代码在 <code>samples/VectorTraits.Sample</code> 文件夹. 源代码如下.</p>
+<pre><code class="lang-cs">using System;
+using System.IO;
+using System.Numerics;
+#if NETCOREAPP3_0_OR_GREATER
+using System.Runtime.Intrinsics;
+#endif
+using Zyl.VectorTraits;
+
+namespace Zyl.VectorTraits.Sample {
+    class Program {
+        private static readonly TextWriter writer = Console.Out;
+        static void Main(string[] args) {
+            writer.WriteLine(&quot;VectorTraits.Sample&quot;);
+            writer.WriteLine();
+            VectorTraitsGlobal.Init(); // Initialization (初始化).
+            TraitsOutput.OutputEnvironment(writer); // Output environment info. It depends on `VectorTraits.InfoInc`. This row can be deleted when only VectorTraits are used (输出环境信息. 它依赖 `VectorTraits.InfoInc`. 当仅使用 VectorTraits 时, 可以删除本行).
+            writer.WriteLine();
+
+            // -- Start --
+            Vector&lt;short&gt; src = Vectors.CreateRotate&lt;short&gt;(0, 1, 2, 3, 4, 5, 6, 7); // The `Vectors` class provides some methods. For example, 'CreateRotate' is rotate fill (`Vectors` 类提供了许多方法. 例如 `CreateRotate` 是旋转填充).
+            VectorTextUtil.WriteLine(writer, &quot;src:\t{0}&quot;, src); // It can not only format the string, but also display the hexadecimal of each element in the vector on the right Easy to view vector data (它不仅能格式化字符串, 且会在右侧显示向量中各元素的十六进制. 便于查看向量数据).
+
+            // ShiftLeft. It is a new vector method in `.NET 7.0` (左移位. 它是 `.NET 7.0` 新增的向量方法)
+            const int shiftAmount = 1;
+            Vector&lt;short&gt; shifted = Vectors.ShiftLeft(src, shiftAmount); // shifted[i] = src[i] &lt;&lt; shiftAmount.
+            VectorTextUtil.WriteLine(writer, &quot;ShiftLeft:\t{0}&quot;, shifted);
+#if NET7_0_OR_GREATER
+            // Compare BCL function (与BCL的函数做对比).
+            Vector&lt;short&gt; shiftedBCL = Vector.ShiftLeft(src, shiftAmount);
+            VectorTextUtil.WriteLine(writer, &quot;Equals to BCL ShiftLeft:\t{0}&quot;, shifted.Equals(shiftedBCL));
+#endif
+            // ShiftLeft_Const
+            VectorTextUtil.WriteLine(writer, &quot;Equals to ShiftLeft_Const:\t{0}&quot;, shifted.Equals(Vectors.ShiftLeft_Const(src, shiftAmount))); // If the parameter shiftAmount is a constant, you can also use the Vectors' ShiftLeft_Const method. It is faster in many scenarios (若参数 shiftAmount 是常数, 还可以使用 Vectors 的 ShiftLeft_Const 方法. 它在不少场景下更快).
+            writer.WriteLine();
+
+            // Shuffle. It is a new vector method in `.NET 7.0` (换位. 它是 `.NET 7.0` 新增的向量方法)
+            Vector&lt;short&gt; desc = Vectors&lt;short&gt;.SerialDesc; // The generic structure 'Vectors&lt;T&gt;' provides fields for commonly used constants. For example, 'SerialDesc' is a descending order value (泛型结构体 `Vectors&lt;T&gt;` 为常用常数提供了字段. 例如 `SerialDesc` 是降序的顺序值).
+            VectorTextUtil.WriteLine(writer, &quot;desc:\t{0}&quot;, desc);
+            Vector&lt;short&gt; dst = Vectors.Shuffle(shifted, desc); // dst[i] = shifted[desc[i]].
+            VectorTextUtil.WriteLine(writer, &quot;Shuffle:\t{0}&quot;, dst);
+#if NET7_0_OR_GREATER
+            // Compare BCL function (与BCL的函数做对比). 
+            Vector&lt;short&gt; dstBCL = default; // Since `.NET 7.0`, the Shuffle method has been provided in Vector128/Vector256, but the Shuffle method has not yet been provided in Vector (自 `.NET 7.0` 开始, Vector128/Vector256 里提供了 Shuffle 方法, 但 Vector 里尚未提供 Shuffle 方法).
+            if (Vector&lt;short&gt;.Count == Vector128&lt;short&gt;.Count) {
+                dstBCL = Vector128.Shuffle(shifted.AsVector128(), desc.AsVector128()).AsVector();
+            } else if (Vector&lt;short&gt;.Count == Vector256&lt;short&gt;.Count) {
+                dstBCL = Vector256.Shuffle(shifted.AsVector256(), desc.AsVector256()).AsVector();
+            }
+            VectorTextUtil.WriteLine(writer, &quot;Equals to BCL Shuffle:\t{0}&quot;, dst.Equals(dstBCL));
+#endif
+            // Shuffle_Args and Shuffle_Core
+            Vectors.Shuffle_Args(desc, out var args0, out var args1); // The suffix is the `Args' method used for parameter calculation, which involves processing such as parameter transformation in advance It is suitable for external loop (后缀是 `Args` 的方法, 用于参数计算, 即提前进行参数变换等处理. 它适合放在外循环).
+            Vector&lt;short&gt; dst2 = Vectors.Shuffle_Core(shifted, args0, args1); // The suffix is the `Core` method used for core calculations, which calculates based on cached parameters It is suitable for internal loop to improve performance (后缀是 `Core` 方法, 用于核心计算, 既根据已缓存的参数进行计算. 它适合放在内循环, 便于改善性能).
+            VectorTextUtil.WriteLine(writer, &quot;Equals to Shuffle_Core:\t{0}&quot;, dst.Equals(dst2));
+            writer.WriteLine();
+
+            // Show AcceleratedTypes.
+            VectorTextUtil.WriteLine(writer, &quot;ShiftLeft_AcceleratedTypes:\t{0}&quot;, Vectors.ShiftLeft_AcceleratedTypes);
+            VectorTextUtil.WriteLine(writer, &quot;Shuffle_AcceleratedTypes:\t{0}&quot;, Vectors.Shuffle_AcceleratedTypes);
+        }
+    }
+}
+</code></pre>
+<h3 id="3-示例的运行结果">3) 示例的运行结果</h3>
+<h4 id="net70-on-x86"><code>.NET7.0</code> on X86</h4>
+<p>程序: <code>VectorTraits.Sample</code></p>
+<pre><code>VectorTraits.Sample
+
+IsRelease:      True
+EnvironmentVariable(PROCESSOR_IDENTIFIER):      Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+Environment.ProcessorCount:     8
+Environment.Is64BitProcess:     True
+Environment.OSVersion:  Microsoft Windows NT 10.0.19045.0
+Environment.Version:    7.0.3
+Stopwatch.Frequency:    10000000
+RuntimeEnvironment.GetRuntimeDirectory: C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.3\
+RuntimeInformation.FrameworkDescription:        .NET 7.0.3
+RuntimeInformation.OSArchitecture:      X64
+RuntimeInformation.OSDescription:       Microsoft Windows 10.0.19045
+RuntimeInformation.RuntimeIdentifier:   win10-x64
+IntPtr.Size:    8
+BitConverter.IsLittleEndian:    True
+Vector.IsHardwareAccelerated:   True
+Vector&lt;byte&gt;.Count:     32      # 256bit
+Vector&lt;float&gt;.Count:    8       # 256bit
+VectorTraitsGlobal.InitCheckSum:        7960959 # 0x0079797F
+Vector&lt;T&gt;.Assembly.CodeBase:    file:///C:/Program Files/dotnet/shared/Microsoft.NETCore.App/7.0.3/System.Private.CoreLib.dll
+GetTargetFrameworkDisplayName(VectorTextUtil):  .NET 7.0
+GetTargetFrameworkDisplayName(TraitsOutput):    .NET 7.0
+Vectors.Instance:       VectorTraits256Avx2
+
+src:    &lt;0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7&gt;        # (0000 0001 0002 0003 0004 0005 0006 0007 0000 0001 0002 0003 0004 0005 0006 0007)
+ShiftLeft:      &lt;0, 2, 4, 6, 8, 10, 12, 14, 0, 2, 4, 6, 8, 10, 12, 14&gt;  # (0000 0002 0004 0006 0008 000A 000C 000E 0000 0002 0004 0006 0008 000A 000C 000E)
+Equals to BCL ShiftLeft:        True
+Equals to ShiftLeft_Const:      True
+
+desc:   &lt;15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0&gt;  # (000F 000E 000D 000C 000B 000A 0009 0008 0007 0006 0005 0004 0003 0002 0001 0000)
+Shuffle:        &lt;14, 12, 10, 8, 6, 4, 2, 0, 14, 12, 10, 8, 6, 4, 2, 0&gt;  # (000E 000C 000A 0008 0006 0004 0002 0000 000E 000C 000A 0008 0006 0004 0002 0000)
+Equals to BCL Shuffle:  True
+Equals to Shuffle_Core: True
+
+ShiftLeft_AcceleratedTypes:     SByte, Byte, Int16, UInt16, Int32, UInt32, Int64, UInt64        # (00001FE0)
+Shuffle_AcceleratedTypes:       SByte, Byte, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double        # (00007FE0)
+</code></pre>
+<p>注: <code>Vectors.Instance</code> 及之前的文本, 是<code>TraitsOutput.OutputEnvironment</code>输出的环境信息. 而从 <code>src</code> 开始的, 才是示例的主体代码.
+由于CPU支持X86的Avx2指令集, 于是 <code>Vector&lt;byte&gt;.Count</code> 为 32(256bit), <code>Vectors.Instance</code> 为 <code>VectorTraits256Avx2</code>.</p>
+<h4 id="net70-on-arm"><code>.NET7.0</code> on Arm</h4>
+<p>程序: <code>VectorTraits.Sample</code></p>
+<pre><code>VectorTraits.Sample
+
+IsRelease:	True
+EnvironmentVariable(PROCESSOR_IDENTIFIER):	
+Environment.ProcessorCount:	2
+Environment.Is64BitProcess:	True
+Environment.OSVersion:	Unix 5.19.0.1025
+Environment.Version:	7.0.8
+Stopwatch.Frequency:	1000000000
+RuntimeEnvironment.GetRuntimeDirectory:	/home/ubuntu/.dotnet/shared/Microsoft.NETCore.App/7.0.8/
+RuntimeInformation.FrameworkDescription:	.NET 7.0.8
+RuntimeInformation.OSArchitecture:	Arm64
+RuntimeInformation.OSDescription:	Linux 5.19.0-1025-aws #26~22.04.1-Ubuntu SMP Mon Apr 24 01:58:03 UTC 2023
+RuntimeInformation.RuntimeIdentifier:	ubuntu.22.04-arm64
+IntPtr.Size:	8
+BitConverter.IsLittleEndian:	True
+Vector.IsHardwareAccelerated:	True
+Vector&lt;byte&gt;.Count:	16	# 128bit
+Vector&lt;float&gt;.Count:	4	# 128bit
+VectorTraitsGlobal.InitCheckSum:	7960961	# 0x00797981
+Vector&lt;T&gt;.Assembly.CodeBase:	file:///home/ubuntu/.dotnet/shared/Microsoft.NETCore.App/7.0.8/System.Private.CoreLib.dll
+GetTargetFrameworkDisplayName(VectorTextUtil):	.NET 7.0
+GetTargetFrameworkDisplayName(TraitsOutput):	.NET 7.0
+Vectors.Instance:	VectorTraits128AdvSimdB64
+
+src:	&lt;0, 1, 2, 3, 4, 5, 6, 7&gt;	# (0000 0001 0002 0003 0004 0005 0006 0007)
+ShiftLeft:	&lt;0, 2, 4, 6, 8, 10, 12, 14&gt;	# (0000 0002 0004 0006 0008 000A 000C 000E)
+Equals to BCL ShiftLeft:	True
+Equals to ShiftLeft_Const:	True
+
+desc:	&lt;7, 6, 5, 4, 3, 2, 1, 0&gt;	# (0007 0006 0005 0004 0003 0002 0001 0000)
+Shuffle:	&lt;14, 12, 10, 8, 6, 4, 2, 0&gt;	# (000E 000C 000A 0008 0006 0004 0002 0000)
+Equals to BCL Shuffle:	True
+Equals to Shuffle_Core:	True
+
+ShiftLeft_AcceleratedTypes:	SByte, Byte, Int16, UInt16, Int32, UInt32, Int64, UInt64	# (00001FE0)
+Shuffle_AcceleratedTypes:	SByte, Byte, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double	# (00007FE0)
+</code></pre>
+<p>运算结果与X86的相同，只是环境信息不同。
+由于CPU支持Arm的AdvSimd指令集, 于是 <code>Vector&lt;byte&gt;.Count</code> 为 16(128bit), <code>Vectors.Instance</code> 为 <code>VectorTraits128AdvSimdB64</code>.</p>
+<h4 id="net-framework-45-on-x86"><code>.NET Framework 4.5</code> on X86</h4>
+<p>程序: <code>VectorTraits.Sample.NetFw</code>.</p>
+<pre><code>VectorTraits.Sample
+
+IsRelease:      True
+EnvironmentVariable(PROCESSOR_IDENTIFIER):      Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+Environment.ProcessorCount:     8
+Environment.Is64BitProcess:     True
+Environment.OSVersion:  Microsoft Windows NT 6.2.9200.0
+Environment.Version:    4.0.30319.42000
+Stopwatch.Frequency:    10000000
+RuntimeEnvironment.GetRuntimeDirectory: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\
+RuntimeInformation.FrameworkDescription:        .NET Framework 4.8.9167.0
+RuntimeInformation.OSArchitecture:      X64
+RuntimeInformation.OSDescription:       Microsoft Windows 10.0.19045
+IntPtr.Size:    8
+BitConverter.IsLittleEndian:    True
+Vector.IsHardwareAccelerated:   True
+Vector&lt;byte&gt;.Count:     32      # 256bit
+Vector&lt;float&gt;.Count:    8       # 256bit
+VectorTraitsGlobal.InitCheckSum:        -25396097       # 0xFE7C7C7F
+Vector&lt;T&gt;.Assembly.CodeBase:    file:///E:/zylSelf/Code/cs/base/VectorTraits/samples/VectorTraits.Sample.NetFw/bin/Release/System.Numerics.Vectors.DLL
+GetTargetFrameworkDisplayName(VectorTextUtil):  .NET Standard 1.1
+GetTargetFrameworkDisplayName(TraitsOutput):    .NET Framework 4.5
+Vectors.Instance:       VectorTraits256Base
+
+src:    &lt;0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7&gt;        # (0000 0001 0002 0003 0004 0005 0006 0007 0000 0001 0002 0003 0004 0005 0006 0007)
+ShiftLeft:      &lt;0, 2, 4, 6, 8, 10, 12, 14, 0, 2, 4, 6, 8, 10, 12, 14&gt;  # (0000 0002 0004 0006 0008 000A 000C 000E 0000 0002 0004 0006 0008 000A 000C 000E)
+Equals to ShiftLeft_Const:      True
+
+desc:   &lt;15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0&gt;  # (000F 000E 000D 000C 000B 000A 0009 0008 0007 0006 0005 0004 0003 0002 0001 0000)
+Shuffle:        &lt;14, 12, 10, 8, 6, 4, 2, 0, 14, 12, 10, 8, 6, 4, 2, 0&gt;  # (000E 000C 000A 0008 0006 0004 0002 0000 000E 000C 000A 0008 0006 0004 0002 0000)
+Equals to Shuffle_Core: True
+
+ShiftLeft_AcceleratedTypes:     SByte, Byte, Int16, UInt16, Int32, UInt32       # (000007E0)
+Shuffle_AcceleratedTypes:       None    # (00000000)
+</code></pre>
+<p>Vectors 的 ShiftLeft/Shuffle 都能正常工作.
+由于CPU支持X86的Avx2指令集, 于是 <code>Vector&lt;byte&gt;.Count</code> 为 32(256bit). <code>Vectors.Instance</code> 为 <code>VectorTraits256Base</code>. 它不是 <code>VectorTraits256Avx2</code>, 是因为直到 <code>.NET Core 3.0</code> 才支持内在函数.
+ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft在使用这些类型时, 是存在硬件加速的. 本库巧妙的利用了向量算法, 即使在没有内在函数时，也尽量实现了硬件加速.</p>
+<h2 id="基准测试结果">基准测试结果</h2>
+<p>数据的单位: 百万次操作/秒. 数字越大, 性能越好.</p>
+<h3 id="shiftleft">ShiftLeft</h3>
+<p>ShiftLeft: 将向量的每个元素左移指定量.
+它是<code>.NET 7.0</code>所新增的向量方法.</p>
+<h4 id="shiftleft---x86---lntel-core-i5-8250u">ShiftLeft - x86 - lntel Core i5-8250U</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLScalar</td>
+<td style="text-align: right;">853.802</td>
+<td style="text-align: right;">817.528</td>
+<td style="text-align: right;">1104.993</td>
+<td style="text-align: right;">1118.381</td>
+<td style="text-align: right;">1374.255</td>
+<td style="text-align: right;">1480.225</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1128.290</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1137.564</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLTraits</td>
+<td style="text-align: right;">8296.682</td>
+<td style="text-align: right;">8114.085</td>
+<td style="text-align: right;">21811.573</td>
+<td style="text-align: right;">19960.732</td>
+<td style="text-align: right;">21044.192</td>
+<td style="text-align: right;">23074.627</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLTraits_Core</td>
+<td style="text-align: right;">33328.333</td>
+<td style="text-align: right;">35503.285</td>
+<td style="text-align: right;">41644.146</td>
+<td style="text-align: right;">35703.816</td>
+<td style="text-align: right;">36615.138</td>
+<td style="text-align: right;">32872.874</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLConstTraits</td>
+<td style="text-align: right;">10849.899</td>
+<td style="text-align: right;">10168.754</td>
+<td style="text-align: right;">25029.290</td>
+<td style="text-align: right;">29761.737</td>
+<td style="text-align: right;">33785.502</td>
+<td style="text-align: right;">32862.094</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLConstTraits_Core</td>
+<td style="text-align: right;">36537.668</td>
+<td style="text-align: right;">31837.586</td>
+<td style="text-align: right;">39307.523</td>
+<td style="text-align: right;">35698.909</td>
+<td style="text-align: right;">35679.744</td>
+<td style="text-align: right;">33994.997</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLScalar</td>
+<td style="text-align: right;">823.668</td>
+<td style="text-align: right;">806.395</td>
+<td style="text-align: right;">1176.133</td>
+<td style="text-align: right;">1183.966</td>
+<td style="text-align: right;">1379.498</td>
+<td style="text-align: right;">1486.900</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">18445.571</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19054.243</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLTraits</td>
+<td style="text-align: right;">5076.036</td>
+<td style="text-align: right;">5047.453</td>
+<td style="text-align: right;">16986.361</td>
+<td style="text-align: right;">16653.329</td>
+<td style="text-align: right;">16496.182</td>
+<td style="text-align: right;">16114.543</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLTraits_Core</td>
+<td style="text-align: right;">20318.984</td>
+<td style="text-align: right;">18959.033</td>
+<td style="text-align: right;">20182.655</td>
+<td style="text-align: right;">17683.717</td>
+<td style="text-align: right;">18500.302</td>
+<td style="text-align: right;">18439.182</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLConstTraits</td>
+<td style="text-align: right;">5899.256</td>
+<td style="text-align: right;">5693.084</td>
+<td style="text-align: right;">16944.673</td>
+<td style="text-align: right;">19378.434</td>
+<td style="text-align: right;">21059.682</td>
+<td style="text-align: right;">19572.551</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLConstTraits_Core</td>
+<td style="text-align: right;">20172.952</td>
+<td style="text-align: right;">19339.311</td>
+<td style="text-align: right;">18407.673</td>
+<td style="text-align: right;">19850.711</td>
+<td style="text-align: right;">21232.279</td>
+<td style="text-align: right;">18136.492</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLScalar</td>
+<td style="text-align: right;">803.506</td>
+<td style="text-align: right;">820.639</td>
+<td style="text-align: right;">1307.614</td>
+<td style="text-align: right;">1328.703</td>
+<td style="text-align: right;">2199.685</td>
+<td style="text-align: right;">1587.071</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9469.894</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10657.900</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLTraits</td>
+<td style="text-align: right;">2571.456</td>
+<td style="text-align: right;">2678.866</td>
+<td style="text-align: right;">8246.402</td>
+<td style="text-align: right;">7799.748</td>
+<td style="text-align: right;">8221.382</td>
+<td style="text-align: right;">9594.126</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLTraits_Core</td>
+<td style="text-align: right;">8574.361</td>
+<td style="text-align: right;">8465.712</td>
+<td style="text-align: right;">10320.833</td>
+<td style="text-align: right;">10408.381</td>
+<td style="text-align: right;">10626.910</td>
+<td style="text-align: right;">10035.217</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLConstTraits</td>
+<td style="text-align: right;">1493.590</td>
+<td style="text-align: right;">2922.103</td>
+<td style="text-align: right;">8155.046</td>
+<td style="text-align: right;">9293.148</td>
+<td style="text-align: right;">10579.400</td>
+<td style="text-align: right;">10185.431</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLConstTraits_Core</td>
+<td style="text-align: right;">8467.974</td>
+<td style="text-align: right;">8554.920</td>
+<td style="text-align: right;">9784.699</td>
+<td style="text-align: right;">10384.732</td>
+<td style="text-align: right;">9790.898</td>
+<td style="text-align: right;">10329.112</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLScalar</td>
+<td style="text-align: right;">797.703</td>
+<td style="text-align: right;">816.504</td>
+<td style="text-align: right;">1295.009</td>
+<td style="text-align: right;">1305.611</td>
+<td style="text-align: right;">2043.527</td>
+<td style="text-align: right;">1535.809</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4143.077</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4903.130</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLTraits</td>
+<td style="text-align: right;">426.950</td>
+<td style="text-align: right;">458.517</td>
+<td style="text-align: right;">3867.136</td>
+<td style="text-align: right;">3941.999</td>
+<td style="text-align: right;">3964.762</td>
+<td style="text-align: right;">3713.754</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLTraits_Core</td>
+<td style="text-align: right;">441.378</td>
+<td style="text-align: right;">463.537</td>
+<td style="text-align: right;">4802.911</td>
+<td style="text-align: right;">4813.018</td>
+<td style="text-align: right;">4776.182</td>
+<td style="text-align: right;">4653.104</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLConstTraits</td>
+<td style="text-align: right;">490.135</td>
+<td style="text-align: right;">536.949</td>
+<td style="text-align: right;">3929.109</td>
+<td style="text-align: right;">4018.072</td>
+<td style="text-align: right;">4725.293</td>
+<td style="text-align: right;">4712.366</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLConstTraits_Core</td>
+<td style="text-align: right;">491.263</td>
+<td style="text-align: right;">531.946</td>
+<td style="text-align: right;">4930.099</td>
+<td style="text-align: right;">4737.462</td>
+<td style="text-align: right;">4782.430</td>
+<td style="text-align: right;">4371.649</td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>SumSLLScalar: 使用标量算法.</li>
+<li>SumSLLNetBcl: 使用BCL的方法(<code>Vector.ShiftLeft</code>), 参数是变量. 注意 <code>.NET 7.0</code> 才提供该方法.</li>
+<li>SumSLLNetBcl_Const: 使用BCL的方法(<code>Vector.ShiftLeft</code>), 参数是常量. 注意 <code>.NET 7.0</code> 才提供该方法.</li>
+<li>SumSLLTraits: 使用本库的普通方法(<code>Vectors.ShiftLeft</code>), 参数是变量.</li>
+<li>SumSLLTraits_Core: 使用本库的 <code>Core</code> 后缀的方法(<code>Vectors.ShiftLeft_Args</code>, <code>Vectors.ShiftLeft_Core</code>), 参数是变量.</li>
+<li>SumSLLConstTraits: 使用本库的 <code>Const</code> 后缀的方法(<code>Vectors.ShiftLeft_Const</code>), 参数是常量.</li>
+<li>SumSLLConstTraits_Core: 使用本库的 <code>ConstCore</code> 后缀的方法(<code>Vectors.ShiftLeft_Args</code>, <code>Vectors.ShiftLeft_ConstCore</code>), 参数是常量.</li>
+</ul>
+<p>BCL的方法(<code>Vector.ShiftLeft</code>) 在X86平台运行时, 仅 Int16/Int32/Int64 有硬件加速, 而 Byte 没有硬件加速. 这是可能是因为 Avx2 指令集仅有 16~64位 的左移位指令, 未提供其他类型的指令, BCL便转为软件算法了.
+而本库对于这些数字类型, 会换成由其他指令组合实现的高效算法. 例如对于 Byte类型, SumSLLConstTraits_Core 在<code>.NET 7.0</code>的值为“32872.874”, 性能是 标量算法的 <code>32872.874/1480.225≈22.2080</code> 倍, 且是BCL方法的 <code>32872.874/1137.564≈28.8976</code> 倍.
+因为X86的内在函数是从<code>.NET Core 3.0</code>开始才提供的. 故对于 Int64类型, 在 <code>.NET Core 3.0</code> 之后才有硬件加速.</p>
+<p>对于ShiftLeft来说, 当参数<code>shiftAmount</code> 是常量时, 性能一般会比用变量时更高. 无论是 BCL还是本库的方法, 都是如此.
+使用本库的 <code>Core</code> 后缀的方法,  能将部分运算挪到循环外去提前处理, 从而优化了性能. 而当 CPU提供了常数参数的指令时（专业术语是“立即数参数”）, 该指令的性能一般会更高. 于是本库还提供了 <code>ConstCore</code> 后缀的方法, 会选择该平台最快的指令.
+因“CPU睿频”、“其他进程抢占CPU资源”等因素, 有时性能波动比较大. 但请放心, 已经检查过了Release的程序运行时的汇编指令, 它已经是按最佳硬件指令运行的. 例如下图.</p>
+<p><img src="images/Vectors.ShiftLeft_Core_use_inline.png" alt="Vectors.ShiftLeft_Core_use_inline.png"></p>
+<h4 id="shiftleft---arm---aws-arm-t4gsmall">ShiftLeft - Arm - AWS Arm t4g.small</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLScalar</td>
+<td style="text-align: right;">610.192</td>
+<td style="text-align: right;">610.563</td>
+<td style="text-align: right;">653.197</td>
+<td style="text-align: right;">891.088</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19580.464</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19599.073</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLTraits</td>
+<td style="text-align: right;">5668.036</td>
+<td style="text-align: right;">13252.891</td>
+<td style="text-align: right;">13253.575</td>
+<td style="text-align: right;">13241.598</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLTraits_Core</td>
+<td style="text-align: right;">14341.895</td>
+<td style="text-align: right;">15888.315</td>
+<td style="text-align: right;">15887.520</td>
+<td style="text-align: right;">19595.005</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLConstTraits</td>
+<td style="text-align: right;">9946.663</td>
+<td style="text-align: right;">13243.304</td>
+<td style="text-align: right;">15895.672</td>
+<td style="text-align: right;">19466.408</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumSLLConstTraits_Core</td>
+<td style="text-align: right;">13201.657</td>
+<td style="text-align: right;">15896.748</td>
+<td style="text-align: right;">15894.093</td>
+<td style="text-align: right;">19447.318</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLScalar</td>
+<td style="text-align: right;">606.942</td>
+<td style="text-align: right;">607.226</td>
+<td style="text-align: right;">607.742</td>
+<td style="text-align: right;">765.154</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9332.186</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9240.256</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLTraits</td>
+<td style="text-align: right;">4231.310</td>
+<td style="text-align: right;">6553.072</td>
+<td style="text-align: right;">6603.431</td>
+<td style="text-align: right;">9351.061</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLTraits_Core</td>
+<td style="text-align: right;">7881.834</td>
+<td style="text-align: right;">7897.878</td>
+<td style="text-align: right;">8449.502</td>
+<td style="text-align: right;">9356.142</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLConstTraits</td>
+<td style="text-align: right;">6577.829</td>
+<td style="text-align: right;">6620.078</td>
+<td style="text-align: right;">8444.304</td>
+<td style="text-align: right;">9359.246</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSLLConstTraits_Core</td>
+<td style="text-align: right;">8383.107</td>
+<td style="text-align: right;">7923.119</td>
+<td style="text-align: right;">8443.802</td>
+<td style="text-align: right;">9317.663</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLScalar</td>
+<td style="text-align: right;">749.491</td>
+<td style="text-align: right;">746.414</td>
+<td style="text-align: right;">747.273</td>
+<td style="text-align: right;">1403.533</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4537.804</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4533.257</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLTraits</td>
+<td style="text-align: right;">3233.214</td>
+<td style="text-align: right;">3531.441</td>
+<td style="text-align: right;">3530.389</td>
+<td style="text-align: right;">4545.497</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLTraits_Core</td>
+<td style="text-align: right;">3901.975</td>
+<td style="text-align: right;">4140.171</td>
+<td style="text-align: right;">4142.377</td>
+<td style="text-align: right;">4505.555</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLConstTraits</td>
+<td style="text-align: right;">3510.471</td>
+<td style="text-align: right;">3865.285</td>
+<td style="text-align: right;">4134.108</td>
+<td style="text-align: right;">4568.054</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSLLConstTraits_Core</td>
+<td style="text-align: right;">3905.829</td>
+<td style="text-align: right;">3895.898</td>
+<td style="text-align: right;">3896.719</td>
+<td style="text-align: right;">4547.294</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLScalar</td>
+<td style="text-align: right;">743.187</td>
+<td style="text-align: right;">742.685</td>
+<td style="text-align: right;">743.760</td>
+<td style="text-align: right;">1372.299</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2473.172</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2468.456</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLTraits</td>
+<td style="text-align: right;">482.056</td>
+<td style="text-align: right;">1637.232</td>
+<td style="text-align: right;">1640.547</td>
+<td style="text-align: right;">1981.831</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLTraits_Core</td>
+<td style="text-align: right;">488.072</td>
+<td style="text-align: right;">1970.152</td>
+<td style="text-align: right;">2088.793</td>
+<td style="text-align: right;">2468.202</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLConstTraits</td>
+<td style="text-align: right;">467.942</td>
+<td style="text-align: right;">1958.432</td>
+<td style="text-align: right;">2099.095</td>
+<td style="text-align: right;">2460.619</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSLLConstTraits_Core</td>
+<td style="text-align: right;">470.112</td>
+<td style="text-align: right;">1971.898</td>
+<td style="text-align: right;">2097.693</td>
+<td style="text-align: right;">2465.419</td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>SumSLLScalar: 使用标量算法.</li>
+<li>SumSLLNetBcl: 使用BCL的方法(<code>Vector.ShiftLeft</code>), 参数是变量. 注意 <code>.NET 7.0</code> 才提供该方法.</li>
+<li>SumSLLNetBcl_Const: 使用BCL的方法(<code>Vector.ShiftLeft</code>), 参数是常量. 注意 <code>.NET 7.0</code> 才提供该方法.</li>
+<li>SumSLLTraits: 使用本库的普通方法(<code>Vectors.ShiftLeft</code>), 参数是变量.</li>
+<li>SumSLLTraits_Core: 使用本库的 <code>Core</code> 后缀的方法(<code>Vectors.ShiftLeft_Args</code>, <code>Vectors.ShiftLeft_Core</code>), 参数是变量.</li>
+<li>SumSLLConstTraits: 使用本库的 <code>Const</code> 后缀的方法(<code>Vectors.ShiftLeft_Const</code>), 参数是常量.</li>
+<li>SumSLLConstTraits_Core: 使用本库的 <code>ConstCore</code> 后缀的方法(<code>Vectors.ShiftLeft_Args</code>, <code>Vectors.ShiftLeft_ConstCore</code>), 参数是常量.</li>
+</ul>
+<p>BCL的方法(<code>Vector.ShiftLeft</code>) 在Arm平台运行时, 整数类型都有硬件加速. 对于8~64位整数的左移位, AdvSimd指令集都提供了专用指令.
+本库在Arm平台运行时, 也使用了同样的指令. 于是性能接近.
+因为从 <code>.NET 5.0</code>开始, 才提供了 Arm的内在函数. 故对于 Int64类型, 在 <code>.NET 5.0</code> 之后才有硬件加速.</p>
+<h3 id="shiftrightarithmetic">ShiftRightArithmetic</h3>
+<p>ShiftRightArithmetic: 将向量的每个有符号元素算术右移指定量.
+它是<code>.NET 7.0</code>所新增的向量方法.</p>
+<h4 id="shiftrightarithmetic---x86---lntel-core-i5-8250u">ShiftRightArithmetic - x86 - lntel Core i5-8250U</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRAScalar</td>
+<td style="text-align: right;">823.804</td>
+<td style="text-align: right;">827.734</td>
+<td style="text-align: right;">1180.933</td>
+<td style="text-align: right;">1182.307</td>
+<td style="text-align: right;">1341.171</td>
+<td style="text-align: right;">1592.939</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRANetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">18480.038</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRANetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">21052.686</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRATraits</td>
+<td style="text-align: right;">1557.132</td>
+<td style="text-align: right;">1559.674</td>
+<td style="text-align: right;">17325.184</td>
+<td style="text-align: right;">17699.944</td>
+<td style="text-align: right;">16372.799</td>
+<td style="text-align: right;">17193.661</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRATraits_Core</td>
+<td style="text-align: right;">1653.816</td>
+<td style="text-align: right;">1653.714</td>
+<td style="text-align: right;">18414.632</td>
+<td style="text-align: right;">19664.147</td>
+<td style="text-align: right;">17938.068</td>
+<td style="text-align: right;">18476.248</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRAConstTraits</td>
+<td style="text-align: right;">1672.258</td>
+<td style="text-align: right;">1675.044</td>
+<td style="text-align: right;">17658.703</td>
+<td style="text-align: right;">20409.889</td>
+<td style="text-align: right;">20233.738</td>
+<td style="text-align: right;">20835.294</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRAConstTraits_Core</td>
+<td style="text-align: right;">1714.582</td>
+<td style="text-align: right;">1667.090</td>
+<td style="text-align: right;">20076.043</td>
+<td style="text-align: right;">20212.774</td>
+<td style="text-align: right;">20994.717</td>
+<td style="text-align: right;">21053.837</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRAScalar</td>
+<td style="text-align: right;">825.056</td>
+<td style="text-align: right;">829.789</td>
+<td style="text-align: right;">1275.799</td>
+<td style="text-align: right;">1342.349</td>
+<td style="text-align: right;">1621.295</td>
+<td style="text-align: right;">1620.315</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRANetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10132.774</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRANetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11033.258</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRATraits</td>
+<td style="text-align: right;">764.013</td>
+<td style="text-align: right;">759.588</td>
+<td style="text-align: right;">8195.470</td>
+<td style="text-align: right;">8298.404</td>
+<td style="text-align: right;">8314.921</td>
+<td style="text-align: right;">9937.082</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRATraits_Core</td>
+<td style="text-align: right;">826.612</td>
+<td style="text-align: right;">825.854</td>
+<td style="text-align: right;">10576.367</td>
+<td style="text-align: right;">10449.535</td>
+<td style="text-align: right;">9783.716</td>
+<td style="text-align: right;">11108.074</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRAConstTraits</td>
+<td style="text-align: right;">837.650</td>
+<td style="text-align: right;">834.126</td>
+<td style="text-align: right;">8484.959</td>
+<td style="text-align: right;">9238.089</td>
+<td style="text-align: right;">9979.236</td>
+<td style="text-align: right;">10053.944</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRAConstTraits_Core</td>
+<td style="text-align: right;">856.397</td>
+<td style="text-align: right;">859.426</td>
+<td style="text-align: right;">10201.125</td>
+<td style="text-align: right;">10314.334</td>
+<td style="text-align: right;">11009.384</td>
+<td style="text-align: right;">10772.948</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRAScalar</td>
+<td style="text-align: right;">815.238</td>
+<td style="text-align: right;">811.645</td>
+<td style="text-align: right;">1300.052</td>
+<td style="text-align: right;">1280.982</td>
+<td style="text-align: right;">1322.441</td>
+<td style="text-align: right;">1602.916</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRANetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">578.499</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRANetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">553.963</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRATraits</td>
+<td style="text-align: right;">447.196</td>
+<td style="text-align: right;">441.690</td>
+<td style="text-align: right;">3032.903</td>
+<td style="text-align: right;">2830.935</td>
+<td style="text-align: right;">2988.130</td>
+<td style="text-align: right;">2922.851</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRATraits_Core</td>
+<td style="text-align: right;">459.781</td>
+<td style="text-align: right;">458.269</td>
+<td style="text-align: right;">3639.092</td>
+<td style="text-align: right;">3352.255</td>
+<td style="text-align: right;">3336.974</td>
+<td style="text-align: right;">3488.018</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRAConstTraits</td>
+<td style="text-align: right;">491.449</td>
+<td style="text-align: right;">491.420</td>
+<td style="text-align: right;">3074.926</td>
+<td style="text-align: right;">2820.864</td>
+<td style="text-align: right;">3365.642</td>
+<td style="text-align: right;">3397.660</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRAConstTraits_Core</td>
+<td style="text-align: right;">496.174</td>
+<td style="text-align: right;">491.022</td>
+<td style="text-align: right;">3660.380</td>
+<td style="text-align: right;">3365.210</td>
+<td style="text-align: right;">3398.657</td>
+<td style="text-align: right;">3237.150</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRAScalar</td>
+<td style="text-align: right;">827.231</td>
+<td style="text-align: right;">823.643</td>
+<td style="text-align: right;">1101.518</td>
+<td style="text-align: right;">1105.244</td>
+<td style="text-align: right;">1348.340</td>
+<td style="text-align: right;">1619.984</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRANetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1161.428</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRANetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1156.552</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRATraits</td>
+<td style="text-align: right;">3108.569</td>
+<td style="text-align: right;">3100.703</td>
+<td style="text-align: right;">17944.555</td>
+<td style="text-align: right;">17103.399</td>
+<td style="text-align: right;">17926.975</td>
+<td style="text-align: right;">20115.939</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRATraits_Core</td>
+<td style="text-align: right;">3298.491</td>
+<td style="text-align: right;">3288.742</td>
+<td style="text-align: right;">30742.095</td>
+<td style="text-align: right;">30212.469</td>
+<td style="text-align: right;">29604.498</td>
+<td style="text-align: right;">33040.654</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRAConstTraits</td>
+<td style="text-align: right;">3320.813</td>
+<td style="text-align: right;">3327.910</td>
+<td style="text-align: right;">18297.669</td>
+<td style="text-align: right;">25989.446</td>
+<td style="text-align: right;">28437.425</td>
+<td style="text-align: right;">31118.235</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRAConstTraits_Core</td>
+<td style="text-align: right;">3423.868</td>
+<td style="text-align: right;">3427.681</td>
+<td style="text-align: right;">29454.032</td>
+<td style="text-align: right;">27559.316</td>
+<td style="text-align: right;">30075.338</td>
+<td style="text-align: right;">30565.076</td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>SumSRAScalar: 使用标量算法.</li>
+<li>SumSRANetBcl: 使用BCL的方法(<code>Vector.ShiftRightArithmetic</code>), 参数是变量. 注意 <code>.NET 7.0</code> 才提供该方法.</li>
+<li>SumSRANetBcl_Const: 使用BCL的方法(<code>Vector.ShiftRightArithmetic</code>), 参数是常量. 注意 <code>.NET 7.0</code> 才提供该方法.</li>
+<li>SumSRATraits: 使用本库的普通方法(<code>Vectors.ShiftRightArithmetic</code>), 参数是变量.</li>
+<li>SumSRATraits_Core: 使用本库的 <code>Core</code> 后缀的方法(<code>Vectors.ShiftRightArithmetic_Args</code>, <code>Vectors.ShiftRightArithmetic_Core</code>), 参数是变量.</li>
+<li>SumSRAConstTraits: 使用本库的 <code>Const</code> 后缀的方法(<code>Vectors.ShiftRightArithmetic_Const</code>), 参数是常量.</li>
+<li>SumSRAConstTraits_Core: 使用本库的 <code>ConstCore</code> 后缀的方法(<code>Vectors.ShiftRightArithmetic_Args</code>, <code>Vectors.ShiftRightArithmetic_ConstCore</code>), 参数是常量.</li>
+</ul>
+<p>BCL的方法(<code>Vector.ShiftRightArithmetic</code>) 在X86平台运行时, 仅 Int16/Int32 有硬件加速, 而 SByte/Int64 没有硬件加速. 这是可能是因为 Avx2 指令集仅有 16~32位 的算术右移位指令.
+而本库对于这些数字类型, 会换成由其他指令组合实现的高效算法. 从 <code>.NET Core 3.0</code> 开始, 具有硬件加速.</p>
+<h4 id="shiftrightarithmetic---arm---aws-arm-t4gsmall">ShiftRightArithmetic - Arm - AWS Arm t4g.small</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRAScalar</td>
+<td style="text-align: right;">587.279</td>
+<td style="text-align: right;">541.166</td>
+<td style="text-align: right;">607.230</td>
+<td style="text-align: right;">822.580</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRANetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9941.333</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRANetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9938.477</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRATraits</td>
+<td style="text-align: right;">1559.138</td>
+<td style="text-align: right;">4950.480</td>
+<td style="text-align: right;">5645.497</td>
+<td style="text-align: right;">9938.217</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRATraits_Core</td>
+<td style="text-align: right;">1823.509</td>
+<td style="text-align: right;">8388.956</td>
+<td style="text-align: right;">7904.366</td>
+<td style="text-align: right;">9938.584</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRAConstTraits</td>
+<td style="text-align: right;">1808.965</td>
+<td style="text-align: right;">6589.881</td>
+<td style="text-align: right;">7892.407</td>
+<td style="text-align: right;">9871.343</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumSRAConstTraits_Core</td>
+<td style="text-align: right;">1810.527</td>
+<td style="text-align: right;">8392.943</td>
+<td style="text-align: right;">7896.220</td>
+<td style="text-align: right;">9925.543</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRAScalar</td>
+<td style="text-align: right;">712.668</td>
+<td style="text-align: right;">746.666</td>
+<td style="text-align: right;">747.055</td>
+<td style="text-align: right;">1188.551</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRANetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4861.897</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRANetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4859.816</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRATraits</td>
+<td style="text-align: right;">779.787</td>
+<td style="text-align: right;">2944.169</td>
+<td style="text-align: right;">2945.026</td>
+<td style="text-align: right;">4868.865</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRATraits_Core</td>
+<td style="text-align: right;">914.346</td>
+<td style="text-align: right;">4125.748</td>
+<td style="text-align: right;">4135.353</td>
+<td style="text-align: right;">4862.075</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRAConstTraits</td>
+<td style="text-align: right;">884.914</td>
+<td style="text-align: right;">3266.272</td>
+<td style="text-align: right;">3892.016</td>
+<td style="text-align: right;">4841.364</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRAConstTraits_Core</td>
+<td style="text-align: right;">920.389</td>
+<td style="text-align: right;">4134.164</td>
+<td style="text-align: right;">3893.088</td>
+<td style="text-align: right;">4844.364</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRAScalar</td>
+<td style="text-align: right;">717.640</td>
+<td style="text-align: right;">742.361</td>
+<td style="text-align: right;">742.337</td>
+<td style="text-align: right;">1189.925</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRANetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2468.196</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRANetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2471.434</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRATraits</td>
+<td style="text-align: right;">451.956</td>
+<td style="text-align: right;">1235.429</td>
+<td style="text-align: right;">1233.818</td>
+<td style="text-align: right;">1420.116</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRATraits_Core</td>
+<td style="text-align: right;">435.180</td>
+<td style="text-align: right;">1972.734</td>
+<td style="text-align: right;">1966.992</td>
+<td style="text-align: right;">2465.932</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRAConstTraits</td>
+<td style="text-align: right;">437.799</td>
+<td style="text-align: right;">1962.084</td>
+<td style="text-align: right;">1966.946</td>
+<td style="text-align: right;">2470.825</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumSRAConstTraits_Core</td>
+<td style="text-align: right;">436.419</td>
+<td style="text-align: right;">2099.303</td>
+<td style="text-align: right;">2097.296</td>
+<td style="text-align: right;">2469.149</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRAScalar</td>
+<td style="text-align: right;">577.766</td>
+<td style="text-align: right;">610.669</td>
+<td style="text-align: right;">672.786</td>
+<td style="text-align: right;">925.515</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRANetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19792.701</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRANetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19792.641</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRATraits</td>
+<td style="text-align: right;">2991.228</td>
+<td style="text-align: right;">11281.229</td>
+<td style="text-align: right;">11275.758</td>
+<td style="text-align: right;">11356.994</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRATraits_Core</td>
+<td style="text-align: right;">3529.326</td>
+<td style="text-align: right;">16818.297</td>
+<td style="text-align: right;">16827.844</td>
+<td style="text-align: right;">19798.924</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRAConstTraits</td>
+<td style="text-align: right;">3476.138</td>
+<td style="text-align: right;">15680.873</td>
+<td style="text-align: right;">16829.920</td>
+<td style="text-align: right;">19774.470</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumSRAConstTraits_Core</td>
+<td style="text-align: right;">3577.927</td>
+<td style="text-align: right;">16813.202</td>
+<td style="text-align: right;">15762.243</td>
+<td style="text-align: right;">19759.552</td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>SumSRAScalar: 使用标量算法.</li>
+<li>SumSRANetBcl: 使用BCL的方法(<code>Vector.ShiftRightArithmetic</code>), 参数是变量. 注意 <code>.NET 7.0</code> 才提供该方法.</li>
+<li>SumSRANetBcl_Const: 使用BCL的方法(<code>Vector.ShiftRightArithmetic</code>), 参数是常量. 注意 <code>.NET 7.0</code> 才提供该方法.</li>
+<li>SumSRATraits: 使用本库的普通方法(<code>Vectors.ShiftRightArithmetic</code>), 参数是变量.</li>
+<li>SumSRATraits_Core: 使用本库的 <code>Core</code> 后缀的方法(<code>Vectors.ShiftRightArithmetic_Args</code>, <code>Vectors.ShiftRightArithmetic_Core</code>), 参数是变量.</li>
+<li>SumSRAConstTraits: 使用本库的 <code>Const</code> 后缀的方法(<code>Vectors.ShiftRightArithmetic_Const</code>), 参数是常量.</li>
+<li>SumSRAConstTraits_Core: 使用本库的 <code>ConstCore</code> 后缀的方法(<code>Vectors.ShiftRightArithmetic_Args</code>, <code>Vectors.ShiftRightArithmetic_ConstCore</code>), 参数是常量.</li>
+</ul>
+<p>BCL的方法(<code>Vector.ShiftRightArithmetic</code>) 在Arm平台运行时, 整数类型都有硬件加速. 对于8~64位整数的算术右移位, AdvSimd指令集都提供了专用指令.
+本库在Arm平台运行时, 也使用了同样的指令. 于是性能接近. 从 <code>.NET 5.0</code> 开始, 具有硬件加速.</p>
+<h3 id="shuffle">Shuffle</h3>
+<p>Shuffle: 换位并清零. 通过使用一组索引从输入向量中选择值，来创建一个新向量.
+它是<code>.NET 7.0</code>所新增的向量方法. 自 <code>.NET 7.0</code> 开始, Vector128/Vector256 里提供了 Shuffle 方法, 但 Vector 里尚未提供 Shuffle 方法.</p>
+<p>Shuffle 允许索引超过有效范围, 此次会将对应元素置0. 这个特性会稍微拖慢性能, 于是本库还提供了 YShuffleKernel 方法(仅换位). 若能确保索引总是在有效范围内, 用 YShuffleKernel 更快.</p>
+<h4 id="shuffle---x86---lntel-core-i5-8250u">Shuffle - x86 - lntel Core i5-8250U</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1009.132</td>
+<td style="text-align: right;">1007.748</td>
+<td style="text-align: right;">992.299</td>
+<td style="text-align: right;">1004.370</td>
+<td style="text-align: right;">1034.912</td>
+<td style="text-align: right;">989.043</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">775.841</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1012.626</td>
+<td style="text-align: right;">1008.900</td>
+<td style="text-align: right;">6025.629</td>
+<td style="text-align: right;">8058.075</td>
+<td style="text-align: right;">8017.278</td>
+<td style="text-align: right;">9060.106</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">1008.925</td>
+<td style="text-align: right;">988.646</td>
+<td style="text-align: right;">14845.370</td>
+<td style="text-align: right;">14590.246</td>
+<td style="text-align: right;">14413.193</td>
+<td style="text-align: right;">14209.436</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">1008.981</td>
+<td style="text-align: right;">991.790</td>
+<td style="text-align: right;">14644.219</td>
+<td style="text-align: right;">14527.035</td>
+<td style="text-align: right;">14198.718</td>
+<td style="text-align: right;">14024.591</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">1011.528</td>
+<td style="text-align: right;">1009.289</td>
+<td style="text-align: right;">7566.266</td>
+<td style="text-align: right;">9381.227</td>
+<td style="text-align: right;">9585.573</td>
+<td style="text-align: right;">10330.592</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">1006.331</td>
+<td style="text-align: right;">989.488</td>
+<td style="text-align: right;">15045.753</td>
+<td style="text-align: right;">14575.460</td>
+<td style="text-align: right;">14464.147</td>
+<td style="text-align: right;">14484.413</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">1017.264</td>
+<td style="text-align: right;">990.161</td>
+<td style="text-align: right;">14900.553</td>
+<td style="text-align: right;">13672.167</td>
+<td style="text-align: right;">14556.627</td>
+<td style="text-align: right;">14280.139</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">723.019</td>
+<td style="text-align: right;">725.013</td>
+<td style="text-align: right;">704.809</td>
+<td style="text-align: right;">708.372</td>
+<td style="text-align: right;">735.378</td>
+<td style="text-align: right;">747.651</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">611.393</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">716.509</td>
+<td style="text-align: right;">724.369</td>
+<td style="text-align: right;">5216.757</td>
+<td style="text-align: right;">5813.206</td>
+<td style="text-align: right;">7139.337</td>
+<td style="text-align: right;">9250.625</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">716.520</td>
+<td style="text-align: right;">703.636</td>
+<td style="text-align: right;">9278.507</td>
+<td style="text-align: right;">9221.310</td>
+<td style="text-align: right;">9159.683</td>
+<td style="text-align: right;">9728.639</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">722.854</td>
+<td style="text-align: right;">709.654</td>
+<td style="text-align: right;">9010.834</td>
+<td style="text-align: right;">9164.854</td>
+<td style="text-align: right;">8992.356</td>
+<td style="text-align: right;">9828.623</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">722.441</td>
+<td style="text-align: right;">725.218</td>
+<td style="text-align: right;">9554.766</td>
+<td style="text-align: right;">7064.711</td>
+<td style="text-align: right;">6932.192</td>
+<td style="text-align: right;">9996.960</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">724.689</td>
+<td style="text-align: right;">706.345</td>
+<td style="text-align: right;">11017.874</td>
+<td style="text-align: right;">11092.301</td>
+<td style="text-align: right;">11134.924</td>
+<td style="text-align: right;">11279.116</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">727.981</td>
+<td style="text-align: right;">701.155</td>
+<td style="text-align: right;">11030.886</td>
+<td style="text-align: right;">10970.116</td>
+<td style="text-align: right;">10510.208</td>
+<td style="text-align: right;">11324.558</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">459.881</td>
+<td style="text-align: right;">457.952</td>
+<td style="text-align: right;">188.562</td>
+<td style="text-align: right;">477.806</td>
+<td style="text-align: right;">459.242</td>
+<td style="text-align: right;">462.021</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">515.863</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">459.302</td>
+<td style="text-align: right;">459.876</td>
+<td style="text-align: right;">2143.129</td>
+<td style="text-align: right;">2518.325</td>
+<td style="text-align: right;">2433.449</td>
+<td style="text-align: right;">3524.309</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">465.064</td>
+<td style="text-align: right;">441.576</td>
+<td style="text-align: right;">4508.754</td>
+<td style="text-align: right;">4449.098</td>
+<td style="text-align: right;">4406.994</td>
+<td style="text-align: right;">4484.512</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">459.786</td>
+<td style="text-align: right;">408.545</td>
+<td style="text-align: right;">4466.028</td>
+<td style="text-align: right;">4214.808</td>
+<td style="text-align: right;">4293.438</td>
+<td style="text-align: right;">4270.565</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">460.058</td>
+<td style="text-align: right;">458.858</td>
+<td style="text-align: right;">2702.105</td>
+<td style="text-align: right;">3195.810</td>
+<td style="text-align: right;">1714.735</td>
+<td style="text-align: right;">4046.124</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">464.705</td>
+<td style="text-align: right;">438.224</td>
+<td style="text-align: right;">4820.767</td>
+<td style="text-align: right;">4705.843</td>
+<td style="text-align: right;">4042.262</td>
+<td style="text-align: right;">4882.344</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">463.218</td>
+<td style="text-align: right;">411.905</td>
+<td style="text-align: right;">4884.277</td>
+<td style="text-align: right;">5433.558</td>
+<td style="text-align: right;">4140.529</td>
+<td style="text-align: right;">4788.233</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1263.210</td>
+<td style="text-align: right;">1262.732</td>
+<td style="text-align: right;">844.749</td>
+<td style="text-align: right;">1013.924</td>
+<td style="text-align: right;">1077.513</td>
+<td style="text-align: right;">1261.932</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">930.329</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1264.393</td>
+<td style="text-align: right;">1264.667</td>
+<td style="text-align: right;">13239.408</td>
+<td style="text-align: right;">17766.242</td>
+<td style="text-align: right;">16140.964</td>
+<td style="text-align: right;">24537.440</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">1262.368</td>
+<td style="text-align: right;">1242.503</td>
+<td style="text-align: right;">31793.487</td>
+<td style="text-align: right;">31423.344</td>
+<td style="text-align: right;">31314.488</td>
+<td style="text-align: right;">34322.789</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">1221.542</td>
+<td style="text-align: right;">1248.121</td>
+<td style="text-align: right;">31118.400</td>
+<td style="text-align: right;">31615.120</td>
+<td style="text-align: right;">31980.794</td>
+<td style="text-align: right;">33156.240</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">1260.097</td>
+<td style="text-align: right;">1266.056</td>
+<td style="text-align: right;">19996.806</td>
+<td style="text-align: right;">23032.250</td>
+<td style="text-align: right;">23853.314</td>
+<td style="text-align: right;">29612.169</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">1260.461</td>
+<td style="text-align: right;">1245.530</td>
+<td style="text-align: right;">31084.955</td>
+<td style="text-align: right;">30974.022</td>
+<td style="text-align: right;">31913.287</td>
+<td style="text-align: right;">33643.052</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">1260.272</td>
+<td style="text-align: right;">1249.316</td>
+<td style="text-align: right;">30827.152</td>
+<td style="text-align: right;">30734.831</td>
+<td style="text-align: right;">32311.418</td>
+<td style="text-align: right;">32977.071</td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>SumScalar: 使用标量算法.</li>
+<li>Sum256_Bcl: 使用BCL的方法(<code>Vector256.Shuffle</code>).</li>
+<li>SumTraits: 使用本库的普通方法(<code>Vectors.Shuffle</code>).</li>
+<li>SumTraits_Args0: 使用本库的 <code>Core</code> 后缀的方法(<code>Vectors.Shuffle_Args</code>, <code>Vectors.Shuffle_Core</code>), 不使用ValueTuple, 而是用“out”关键字返回多个值.</li>
+<li>SumTraits_Args: 使用本库的 <code>Core</code> 后缀的方法(<code>Vectors.Shuffle_Args</code>, <code>Vectors.Shuffle_Core</code>), 使用ValueTuple.</li>
+<li>SumKernelTraits: 使用本库的YShuffleKernel的普通方法(<code>Vectors.YShuffleKernel</code>).</li>
+<li>SumKernelTraits_Args0: 使用本库的YShuffleKernel的 <code>Core</code> 后缀的方法(<code>Vectors.YShuffleKernel_Args</code>, <code>Vectors.YShuffleKernel_Core</code>), 不使用ValueTuple, 而是用“out”关键字返回多个值.</li>
+<li>SumKernelTraits_Args: 使用本库的YShuffleKernel的 <code>Core</code> 后缀的方法(<code>Vectors.YShuffleKernel_Args</code>, <code>Vectors.YShuffleKernel_Core</code>), 使用ValueTuple.</li>
+</ul>
+<p>BCL的方法(<code>Vector.Shuffle</code>) 在X86平台运行时, 所有数字类型, 均没有硬件加速.
+而本库对于这些数字类型, 会换成由其他指令组合实现的高效算法. 从 <code>.NET Core 3.0</code> 开始, 具有硬件加速.
+使用本库的 <code>Core</code> 后缀的方法,  能将部分运算挪到循环外去提前处理, 从而优化了性能. 特别对于Shuffle方法来说, 性能提升幅度较大.
+若能确保索引总是在有效范围内, 能用 YShuffleKernel 替代Shuffle. 它更快.
+对于<code>Args</code> 后缀的方法, 除了可以用“out”关键字返回多个值外, 还可以用 ValueTuple 来接收多个值, 简化了代码. 但得注意 ValueTuple 有时会降低性能.</p>
+<h4 id="shuffle---arm---aws-arm-t4gsmall">Shuffle - Arm - AWS Arm t4g.small</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">424.835</td>
+<td style="text-align: right;">422.286</td>
+<td style="text-align: right;">423.070</td>
+<td style="text-align: right;">526.071</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">482.320</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">423.942</td>
+<td style="text-align: right;">4925.034</td>
+<td style="text-align: right;">4938.077</td>
+<td style="text-align: right;">5853.245</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">423.872</td>
+<td style="text-align: right;">8381.395</td>
+<td style="text-align: right;">7862.055</td>
+<td style="text-align: right;">9821.786</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">400.767</td>
+<td style="text-align: right;">2982.755</td>
+<td style="text-align: right;">2976.138</td>
+<td style="text-align: right;">9769.321</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3169.036</td>
+<td style="text-align: right;">3115.859</td>
+<td style="text-align: right;">3239.207</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">424.317</td>
+<td style="text-align: right;">5644.808</td>
+<td style="text-align: right;">6565.519</td>
+<td style="text-align: right;">7904.834</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">423.899</td>
+<td style="text-align: right;">7881.823</td>
+<td style="text-align: right;">7847.868</td>
+<td style="text-align: right;">9835.768</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">399.772</td>
+<td style="text-align: right;">2982.013</td>
+<td style="text-align: right;">2868.286</td>
+<td style="text-align: right;">9778.383</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">288.211</td>
+<td style="text-align: right;">281.081</td>
+<td style="text-align: right;">276.668</td>
+<td style="text-align: right;">317.268</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">303.702</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">287.942</td>
+<td style="text-align: right;">2447.812</td>
+<td style="text-align: right;">2561.501</td>
+<td style="text-align: right;">2912.918</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">286.646</td>
+<td style="text-align: right;">4103.084</td>
+<td style="text-align: right;">4110.550</td>
+<td style="text-align: right;">4796.704</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">268.613</td>
+<td style="text-align: right;">1487.180</td>
+<td style="text-align: right;">1483.994</td>
+<td style="text-align: right;">4775.891</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">287.900</td>
+<td style="text-align: right;">2805.355</td>
+<td style="text-align: right;">3237.345</td>
+<td style="text-align: right;">3909.519</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">286.556</td>
+<td style="text-align: right;">4112.689</td>
+<td style="text-align: right;">4128.402</td>
+<td style="text-align: right;">4825.180</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">268.858</td>
+<td style="text-align: right;">1487.021</td>
+<td style="text-align: right;">1430.400</td>
+<td style="text-align: right;">4755.708</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">378.628</td>
+<td style="text-align: right;">188.199</td>
+<td style="text-align: right;">447.044</td>
+<td style="text-align: right;">552.523</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">712.025</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">379.643</td>
+<td style="text-align: right;">1015.811</td>
+<td style="text-align: right;">1089.628</td>
+<td style="text-align: right;">1242.552</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">380.133</td>
+<td style="text-align: right;">2091.948</td>
+<td style="text-align: right;">1967.766</td>
+<td style="text-align: right;">2465.800</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">326.603</td>
+<td style="text-align: right;">743.033</td>
+<td style="text-align: right;">744.908</td>
+<td style="text-align: right;">2452.967</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">379.696</td>
+<td style="text-align: right;">1221.923</td>
+<td style="text-align: right;">1480.182</td>
+<td style="text-align: right;">1756.478</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">379.788</td>
+<td style="text-align: right;">2096.124</td>
+<td style="text-align: right;">2095.536</td>
+<td style="text-align: right;">2464.674</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">170.957</td>
+<td style="text-align: right;">715.532</td>
+<td style="text-align: right;">717.549</td>
+<td style="text-align: right;">2457.398</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">668.450</td>
+<td style="text-align: right;">650.673</td>
+<td style="text-align: right;">659.984</td>
+<td style="text-align: right;">833.921</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">648.985</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">667.527</td>
+<td style="text-align: right;">13135.356</td>
+<td style="text-align: right;">16713.009</td>
+<td style="text-align: right;">19730.059</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">664.988</td>
+<td style="text-align: right;">15734.264</td>
+<td style="text-align: right;">15708.758</td>
+<td style="text-align: right;">19741.441</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">625.410</td>
+<td style="text-align: right;">5723.523</td>
+<td style="text-align: right;">5948.766</td>
+<td style="text-align: right;">19692.665</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">667.280</td>
+<td style="text-align: right;">15584.505</td>
+<td style="text-align: right;">15643.225</td>
+<td style="text-align: right;">19741.523</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">664.914</td>
+<td style="text-align: right;">16731.942</td>
+<td style="text-align: right;">16685.534</td>
+<td style="text-align: right;">19726.599</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">625.761</td>
+<td style="text-align: right;">5723.910</td>
+<td style="text-align: right;">5950.549</td>
+<td style="text-align: right;">19685.073</td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>SumScalar: 使用标量算法.</li>
+<li>Sum128_Bcl: 使用BCL的方法(<code>Vector128.Shuffle</code>).</li>
+<li>SumTraits: 使用本库的普通方法(<code>Vectors.Shuffle</code>).</li>
+<li>SumTraits_Args0: 使用本库的 <code>Core</code> 后缀的方法(<code>Vectors.Shuffle_Args</code>, <code>Vectors.Shuffle_Core</code>), 不使用ValueTuple, 而是用“out”关键字返回多个值.</li>
+<li>SumTraits_Args: 使用本库的 <code>Core</code> 后缀的方法(<code>Vectors.Shuffle_Args</code>, <code>Vectors.Shuffle_Core</code>), 使用ValueTuple.</li>
+<li>SumKernelTraits: 使用本库的YShuffleKernel的普通方法(<code>Vectors.YShuffleKernel</code>).</li>
+<li>SumKernelTraits_Args0: 使用本库的YShuffleKernel的 <code>Core</code> 后缀的方法(<code>Vectors.YShuffleKernel_Args</code>, <code>Vectors.YShuffleKernel_Core</code>), 不使用ValueTuple, 而是用“out”关键字返回多个值.</li>
+<li>SumKernelTraits_Args: 使用本库的YShuffleKernel的 <code>Core</code> 后缀的方法(<code>Vectors.YShuffleKernel_Args</code>, <code>Vectors.YShuffleKernel_Core</code>), 使用ValueTuple.</li>
+</ul>
+<p>BCL的方法(<code>Vector.Shuffle</code>) 在Arm平台运行时, 所有数字类型, 均没有硬件加速.
+而本库对于这些数字类型, 会换成由其他指令组合实现的高效算法. 从 <code>.NET 5.0</code> 开始, 具有硬件加速.
+注意在<code>.NET 7.0</code>之前, SumTraits_Args 有时与 SumTraits_Args0 的性能相差较大, 这是因为ValueTuple 在Arm下的性能损失较大.</p>
+<h3 id="ynarrowsaturate">YNarrowSaturate</h3>
+<p>YNarrowSaturate: 将两个 Vector 实例饱和缩窄为一个 Vector .</p>
+<h4 id="ynarrowsaturate---x86---lntel-core-i5-8250u">YNarrowSaturate - x86 - lntel Core i5-8250U</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">209.442</td>
+<td style="text-align: right;">209.620</td>
+<td style="text-align: right;">210.928</td>
+<td style="text-align: right;">199.480</td>
+<td style="text-align: right;">211.138</td>
+<td style="text-align: right;">215.694</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">202.714</td>
+<td style="text-align: right;">215.451</td>
+<td style="text-align: right;">212.224</td>
+<td style="text-align: right;">214.893</td>
+<td style="text-align: right;">175.099</td>
+<td style="text-align: right;">219.752</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">13095.098</td>
+<td style="text-align: right;">13774.472</td>
+<td style="text-align: right;">13161.165</td>
+<td style="text-align: right;">13013.472</td>
+<td style="text-align: right;">13168.239</td>
+<td style="text-align: right;">15964.293</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">13024.364</td>
+<td style="text-align: right;">13662.396</td>
+<td style="text-align: right;">28118.834</td>
+<td style="text-align: right;">25049.004</td>
+<td style="text-align: right;">28198.282</td>
+<td style="text-align: right;">27819.176</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">210.834</td>
+<td style="text-align: right;">212.404</td>
+<td style="text-align: right;">213.735</td>
+<td style="text-align: right;">214.810</td>
+<td style="text-align: right;">208.985</td>
+<td style="text-align: right;">222.597</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">212.099</td>
+<td style="text-align: right;">211.786</td>
+<td style="text-align: right;">210.670</td>
+<td style="text-align: right;">205.029</td>
+<td style="text-align: right;">210.333</td>
+<td style="text-align: right;">208.573</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">6933.036</td>
+<td style="text-align: right;">6441.062</td>
+<td style="text-align: right;">6584.000</td>
+<td style="text-align: right;">7382.254</td>
+<td style="text-align: right;">6728.319</td>
+<td style="text-align: right;">7703.530</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">6856.456</td>
+<td style="text-align: right;">6398.525</td>
+<td style="text-align: right;">12533.505</td>
+<td style="text-align: right;">14263.835</td>
+<td style="text-align: right;">12888.771</td>
+<td style="text-align: right;">13992.887</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">195.128</td>
+<td style="text-align: right;">186.841</td>
+<td style="text-align: right;">195.864</td>
+<td style="text-align: right;">199.460</td>
+<td style="text-align: right;">193.475</td>
+<td style="text-align: right;">204.264</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">189.209</td>
+<td style="text-align: right;">178.971</td>
+<td style="text-align: right;">196.065</td>
+<td style="text-align: right;">191.231</td>
+<td style="text-align: right;">191.600</td>
+<td style="text-align: right;">203.201</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">1959.806</td>
+<td style="text-align: right;">1878.724</td>
+<td style="text-align: right;">2000.976</td>
+<td style="text-align: right;">2118.858</td>
+<td style="text-align: right;">1976.264</td>
+<td style="text-align: right;">2658.885</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">1956.908</td>
+<td style="text-align: right;">1872.465</td>
+<td style="text-align: right;">2587.636</td>
+<td style="text-align: right;">2763.282</td>
+<td style="text-align: right;">2689.931</td>
+<td style="text-align: right;">2418.496</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt16</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">1066.840</td>
+<td style="text-align: right;">902.516</td>
+<td style="text-align: right;">1078.540</td>
+<td style="text-align: right;">974.749</td>
+<td style="text-align: right;">1067.768</td>
+<td style="text-align: right;">1083.124</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt16</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">1066.895</td>
+<td style="text-align: right;">903.120</td>
+<td style="text-align: right;">901.484</td>
+<td style="text-align: right;">959.577</td>
+<td style="text-align: right;">900.228</td>
+<td style="text-align: right;">823.878</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt16</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">16884.658</td>
+<td style="text-align: right;">17052.914</td>
+<td style="text-align: right;">15147.602</td>
+<td style="text-align: right;">17094.243</td>
+<td style="text-align: right;">17200.043</td>
+<td style="text-align: right;">19717.119</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt16</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">16862.587</td>
+<td style="text-align: right;">16975.925</td>
+<td style="text-align: right;">21142.034</td>
+<td style="text-align: right;">26121.170</td>
+<td style="text-align: right;">26440.908</td>
+<td style="text-align: right;">24575.123</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">1116.417</td>
+<td style="text-align: right;">961.764</td>
+<td style="text-align: right;">856.272</td>
+<td style="text-align: right;">901.272</td>
+<td style="text-align: right;">872.811</td>
+<td style="text-align: right;">1111.046</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">1115.502</td>
+<td style="text-align: right;">902.014</td>
+<td style="text-align: right;">900.357</td>
+<td style="text-align: right;">877.358</td>
+<td style="text-align: right;">839.361</td>
+<td style="text-align: right;">854.364</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">7824.674</td>
+<td style="text-align: right;">7015.984</td>
+<td style="text-align: right;">8617.594</td>
+<td style="text-align: right;">8176.926</td>
+<td style="text-align: right;">8059.923</td>
+<td style="text-align: right;">8801.283</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">7879.556</td>
+<td style="text-align: right;">7024.438</td>
+<td style="text-align: right;">12181.180</td>
+<td style="text-align: right;">10713.260</td>
+<td style="text-align: right;">11063.765</td>
+<td style="text-align: right;">11314.953</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt64</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">997.327</td>
+<td style="text-align: right;">847.431</td>
+<td style="text-align: right;">871.820</td>
+<td style="text-align: right;">875.547</td>
+<td style="text-align: right;">858.060</td>
+<td style="text-align: right;">1109.023</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt64</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">865.420</td>
+<td style="text-align: right;">1083.437</td>
+<td style="text-align: right;">1107.671</td>
+<td style="text-align: right;">1095.561</td>
+<td style="text-align: right;">886.387</td>
+<td style="text-align: right;">735.609</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt64</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">2015.328</td>
+<td style="text-align: right;">1971.981</td>
+<td style="text-align: right;">1833.610</td>
+<td style="text-align: right;">2446.346</td>
+<td style="text-align: right;">2636.137</td>
+<td style="text-align: right;">3336.732</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt64</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">2020.405</td>
+<td style="text-align: right;">1979.078</td>
+<td style="text-align: right;">2918.828</td>
+<td style="text-align: right;">3258.796</td>
+<td style="text-align: right;">3341.184</td>
+<td style="text-align: right;">3108.173</td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>SumNarrow_If: 基于if语句的标量算法.</li>
+<li>SumNarrow_MinMax: 基于Math类的 Min/Max 方法的标量算法.</li>
+<li>SumNarrowVectorBase: 使用本库的基础方法(<code>VectorTraitsBase.Statics.YNarrowSaturate</code>). 它是通过组合使用BCL的向量方法来实现的, 能够利用硬件加速.</li>
+<li>SumNarrowVectorTraits: 使用本库的特征方法(<code>Vectors.YNarrowSaturate</code>). 它是通过内在函数来实现的, 能获得更佳硬件加速.</li>
+</ul>
+<p>对于 16~32位整数, 在 <code>.NET Core 3.1</code> 之后, SumNarrowVectorTraits的性能比SumNarrowVectorBase强很多. 这是因为 X86提供了专门的指令。
+对于 64位整数（Int64/UInt64）, 虽然X86没有提供对应指令. 但由于 SumNarrowVectorTraits 版代码使用了更佳的内在函数算法, 所以在很多时候它的性能仍是比SumNarrowVectorBase 更强。</p>
+<h4 id="ynarrowsaturate---arm---aws-arm-t4gsmall">YNarrowSaturate - Arm - AWS Arm t4g.small</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">154.717</td>
+<td style="text-align: right;">163.350</td>
+<td style="text-align: right;">157.517</td>
+<td style="text-align: right;">181.894</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">160.654</td>
+<td style="text-align: right;">161.130</td>
+<td style="text-align: right;">108.656</td>
+<td style="text-align: right;">184.712</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">6124.516</td>
+<td style="text-align: right;">5210.880</td>
+<td style="text-align: right;">6055.721</td>
+<td style="text-align: right;">7165.511</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">6125.113</td>
+<td style="text-align: right;">13574.329</td>
+<td style="text-align: right;">13433.471</td>
+<td style="text-align: right;">15507.867</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">163.905</td>
+<td style="text-align: right;">165.250</td>
+<td style="text-align: right;">160.416</td>
+<td style="text-align: right;">190.897</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">155.399</td>
+<td style="text-align: right;">155.059</td>
+<td style="text-align: right;">159.092</td>
+<td style="text-align: right;">195.986</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">2701.810</td>
+<td style="text-align: right;">3219.290</td>
+<td style="text-align: right;">2766.267</td>
+<td style="text-align: right;">3025.432</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">2703.709</td>
+<td style="text-align: right;">6306.022</td>
+<td style="text-align: right;">6210.719</td>
+<td style="text-align: right;">8003.142</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">161.985</td>
+<td style="text-align: right;">162.089</td>
+<td style="text-align: right;">160.805</td>
+<td style="text-align: right;">205.371</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">154.244</td>
+<td style="text-align: right;">153.980</td>
+<td style="text-align: right;">165.349</td>
+<td style="text-align: right;">197.005</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">716.880</td>
+<td style="text-align: right;">1189.192</td>
+<td style="text-align: right;">1156.627</td>
+<td style="text-align: right;">1229.301</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">716.661</td>
+<td style="text-align: right;">3282.455</td>
+<td style="text-align: right;">3283.969</td>
+<td style="text-align: right;">3921.550</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt16</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">525.100</td>
+<td style="text-align: right;">530.550</td>
+<td style="text-align: right;">525.952</td>
+<td style="text-align: right;">608.947</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt16</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">528.430</td>
+<td style="text-align: right;">527.506</td>
+<td style="text-align: right;">539.088</td>
+<td style="text-align: right;">609.259</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt16</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">7945.777</td>
+<td style="text-align: right;">8739.615</td>
+<td style="text-align: right;">7945.913</td>
+<td style="text-align: right;">8916.311</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt16</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">7943.115</td>
+<td style="text-align: right;">14158.586</td>
+<td style="text-align: right;">14166.207</td>
+<td style="text-align: right;">13814.007</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">544.871</td>
+<td style="text-align: right;">540.266</td>
+<td style="text-align: right;">538.649</td>
+<td style="text-align: right;">621.107</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">541.719</td>
+<td style="text-align: right;">536.718</td>
+<td style="text-align: right;">535.769</td>
+<td style="text-align: right;">621.414</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">4001.590</td>
+<td style="text-align: right;">4022.504</td>
+<td style="text-align: right;">3954.723</td>
+<td style="text-align: right;">4379.473</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt32</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">4018.815</td>
+<td style="text-align: right;">6824.637</td>
+<td style="text-align: right;">6400.947</td>
+<td style="text-align: right;">6722.416</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt64</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">620.408</td>
+<td style="text-align: right;">620.900</td>
+<td style="text-align: right;">622.076</td>
+<td style="text-align: right;">828.917</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt64</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">620.012</td>
+<td style="text-align: right;">619.806</td>
+<td style="text-align: right;">622.201</td>
+<td style="text-align: right;">828.565</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt64</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">1291.051</td>
+<td style="text-align: right;">1863.543</td>
+<td style="text-align: right;">1869.904</td>
+<td style="text-align: right;">1816.732</td>
+</tr>
+<tr>
+<td style="text-align: left;">UInt64</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">1293.997</td>
+<td style="text-align: right;">3233.726</td>
+<td style="text-align: right;">3491.369</td>
+<td style="text-align: right;">3501.256</td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>SumNarrow_If: 基于if语句的标量算法.</li>
+<li>SumNarrow_MinMax: 基于Math类的 Min/Max 方法的标量算法.</li>
+<li>SumNarrowVectorBase: 使用本库的基础方法(<code>VectorTraitsBase.Statics.YNarrowSaturate</code>). 它是通过组合使用BCL的向量方法来实现的, 能够利用硬件加速.</li>
+<li>SumNarrowVectorTraits: 使用本库的特征方法(<code>Vectors.YNarrowSaturate</code>). 它是通过内在函数来实现的, 能获得更佳硬件加速.</li>
+</ul>
+<p>因为从 <code>.NET 5.0</code>开始，提供了 Arm的内在函数. 故从 <code>.NET 5.0</code> 开始, SumNarrowVectorTraits的性能比SumNarrowVectorBase强很多.</p>
+<h3 id="更多结果">更多结果</h3>
+<p>详见: <a href="articles/BenchmarkResults/AVector/README.html">BenchmarkResults</a></p>
+<h2 id="文档">文档</h2>
+<ul>
+<li>特征方法列表: <a href="TraitsMethodList.html">TraitsMethodList</a></li>
+<li>DocFX: 运行 <code>docfx_serve.bat</code>. 随后浏览  http://localhost:8080/ .</li>
+<li>Doxygen: 运行 Doxywizard, 点击菜单栏的 File-&gt;Open. 选择 <code>Doxyfile</code> 文件，并点击“OK”. 点击“Run”Tab, 点击“Run doxygen”按钮. 它会在“doc_gen”文件夹生成文档.</li>
+</ul>
+<h2 id="变更日志">变更日志</h2>
+<p>完整列表: <a href="ChangeLog.html">ChangeLog</a></p>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/README_Chinese.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

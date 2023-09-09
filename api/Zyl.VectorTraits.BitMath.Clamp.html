@@ -1,0 +1,801 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Method Clamp
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Method Clamp
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_BitMath_Clamp_.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.BitMath.Clamp*%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.BitMath.Clamp*">
+
+
+
+
+
+<h1 id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*" class="text-break">
+  Method Clamp
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L717"><i class="bi bi-code-slash"></i></a>
+</h1>
+
+<div class="facts text-secondary">
+  <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+</div>
+
+<div class="markdown summary"></div>
+<div class="markdown conceptual"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_SByte_System_SByte_System_SByte_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.SByte,System.SByte,System.SByte)">
+  Clamp(sbyte, sbyte, sbyte)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L717"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static sbyte Clamp(sbyte value, sbyte amin, sbyte amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-sbyte-system-sbyte-system-sbyte)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_Byte_System_Byte_System_Byte_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.Byte,System.Byte,System.Byte)">
+  Clamp(byte, byte, byte)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L729"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static byte Clamp(byte value, byte amin, byte amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-byte-system-byte-system-byte)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_Int16_System_Int16_System_Int16_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.Int16,System.Int16,System.Int16)">
+  Clamp(short, short, short)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L740"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static short Clamp(short value, short amin, short amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-int16-system-int16-system-int16)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_UInt16_System_UInt16_System_UInt16_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.UInt16,System.UInt16,System.UInt16)">
+  Clamp(ushort, ushort, ushort)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L751"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static ushort Clamp(ushort value, ushort amin, ushort amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-uint16-system-uint16-system-uint16)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_Int32_System_Int32_System_Int32_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.Int32,System.Int32,System.Int32)">
+  Clamp(int, int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L763"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static int Clamp(int value, int amin, int amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-int32-system-int32-system-int32)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_UInt32_System_UInt32_System_UInt32_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.UInt32,System.UInt32,System.UInt32)">
+  Clamp(uint, uint, uint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L774"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static uint Clamp(uint value, uint amin, uint amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-uint32-system-uint32-system-uint32)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_Int64_System_Int64_System_Int64_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.Int64,System.Int64,System.Int64)">
+  Clamp(long, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L786"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static long Clamp(long value, long amin, long amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-int64-system-int64-system-int64)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_UInt64_System_UInt64_System_UInt64_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.UInt64,System.UInt64,System.UInt64)">
+  Clamp(ulong, ulong, ulong)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L797"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static ulong Clamp(ulong value, ulong amin, ulong amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-uint64-system-uint64-system-uint64)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_IntPtr_System_IntPtr_System_IntPtr_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.IntPtr,System.IntPtr,System.IntPtr)">
+  Clamp(nint, nint, nint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L809"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static nint Clamp(nint value, nint amin, nint amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-intptr-system-intptr-system-intptr)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_UIntPtr_System_UIntPtr_System_UIntPtr_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.UIntPtr,System.UIntPtr,System.UIntPtr)">
+  Clamp(nuint, nuint, nuint)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L820"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static nuint Clamp(nuint value, nuint amin, nuint amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-uintptr-system-uintptr-system-uintptr)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_Single_System_Single_System_Single_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.Single,System.Single,System.Single)">
+  Clamp(float, float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L832"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static float Clamp(float value, float amin, float amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-single-system-single-system-single)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_Double_System_Double_System_Double_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.Double,System.Double,System.Double)">
+  Clamp(double, double, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L843"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static double Clamp(double value, double amin, double amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-double-system-double-system-double)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_BitMath_Clamp_" data-uid="Zyl.VectorTraits.BitMath.Clamp*"></a>
+
+<h3 id="Zyl_VectorTraits_BitMath_Clamp_System_Half_System_Half_System_Half_" data-uid="Zyl.VectorTraits.BitMath.Clamp(System.Half,System.Half,System.Half)">
+  Clamp(Half, Half, Half)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L857"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Half Clamp(Half value, Half amin, Half amax)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+  <dt><code>amin</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a></dt>
+  <dd><p>The lower bound of the result (结果的下限).</p>
+</dd>
+  <dt><code>amax</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a></dt>
+  <dd><p>The upper bound of the result (结果的上限).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a></dt>
+  <dd><p>Returns <code>(value&lt;amax)?( (value&gt;amin)?value:amin ):amax</code>.</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math.clamp#system-math-clamp(system-single-system-single-system-single)">Clamp</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>)</div>
+  </dd>
+</dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.cs/#L717" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

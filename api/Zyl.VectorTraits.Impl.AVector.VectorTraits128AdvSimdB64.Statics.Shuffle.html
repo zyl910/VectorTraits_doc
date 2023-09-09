@@ -1,0 +1,644 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Method Shuffle
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Method Shuffle
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*">
+
+
+
+
+
+<h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*" class="text-break">
+  Method Shuffle
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L288"><i class="bi bi-code-slash"></i></a>
+</h1>
+
+<div class="facts text-secondary">
+  <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a>.<a class="xref" href="Zyl.VectorTraits.Impl.html">Impl</a>.<a class="xref" href="Zyl.VectorTraits.Impl.AVector.html">AVector</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+</div>
+
+<div class="markdown summary"></div>
+<div class="markdown conceptual"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Int32})">
+  Shuffle(Vector&lt;float&gt;, Vector&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L288"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and clear (换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector&lt;float&gt; Shuffle(Vector&lt;float&gt; vector, Vector&lt;int&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128.shuffle#system-runtime-intrinsics-vector128-shuffle(system-runtime-intrinsics-vector128((system-single))-system-runtime-intrinsics-vector128((system-int32)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;)</div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx2.permutevar8x32#system-runtime-intrinsics-x86-avx2-permutevar8x32(system-runtime-intrinsics-vector256((system-single))-system-runtime-intrinsics-vector256((system-int32)))">PermuteVar8x32</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Int64})">
+  Shuffle(Vector&lt;double&gt;, Vector&lt;long&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L294"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and clear (换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector&lt;double&gt; Shuffle(Vector&lt;double&gt; vector, Vector&lt;long&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128.shuffle#system-runtime-intrinsics-vector128-shuffle(system-runtime-intrinsics-vector128((system-double))-system-runtime-intrinsics-vector128((system-int64)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte})">
+  Shuffle(Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L300"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and clear (换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector&lt;sbyte&gt; Shuffle(Vector&lt;sbyte&gt; vector, Vector&lt;sbyte&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128.shuffle#system-runtime-intrinsics-vector128-shuffle(system-runtime-intrinsics-vector128((system-sbyte))-system-runtime-intrinsics-vector128((system-sbyte)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;)</div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.arm.advsimd.vectortablelookup#system-runtime-intrinsics-arm-advsimd-vectortablelookup(system-runtime-intrinsics-vector128((system-byte))-system-runtime-intrinsics-vector64((system-byte)))">VectorTableLookup</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;)</div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx2.shuffle#system-runtime-intrinsics-x86-avx2-shuffle(system-runtime-intrinsics-vector256((system-sbyte))-system-runtime-intrinsics-vector256((system-sbyte)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte})">
+  Shuffle(Vector&lt;byte&gt;, Vector&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L307"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and clear (换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector&lt;byte&gt; Shuffle(Vector&lt;byte&gt; vector, Vector&lt;byte&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128.shuffle#system-runtime-intrinsics-vector128-shuffle(system-runtime-intrinsics-vector128((system-byte))-system-runtime-intrinsics-vector128((system-byte)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;)</div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.arm.advsimd.vectortablelookup#system-runtime-intrinsics-arm-advsimd-vectortablelookup(system-runtime-intrinsics-vector128((system-byte))-system-runtime-intrinsics-vector64((system-byte)))">VectorTableLookup</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;)</div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx2.shuffle#system-runtime-intrinsics-x86-avx2-shuffle(system-runtime-intrinsics-vector256((system-byte))-system-runtime-intrinsics-vector256((system-byte)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16})">
+  Shuffle(Vector&lt;short&gt;, Vector&lt;short&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L313"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and clear (换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector&lt;short&gt; Shuffle(Vector&lt;short&gt; vector, Vector&lt;short&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128.shuffle#system-runtime-intrinsics-vector128-shuffle(system-runtime-intrinsics-vector128((system-int16))-system-runtime-intrinsics-vector128((system-int16)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16})">
+  Shuffle(Vector&lt;ushort&gt;, Vector&lt;ushort&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L319"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and clear (换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector&lt;ushort&gt; Shuffle(Vector&lt;ushort&gt; vector, Vector&lt;ushort&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128.shuffle#system-runtime-intrinsics-vector128-shuffle(system-runtime-intrinsics-vector128((system-uint16))-system-runtime-intrinsics-vector128((system-uint16)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})">
+  Shuffle(Vector&lt;int&gt;, Vector&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L326"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and clear (换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector&lt;int&gt; Shuffle(Vector&lt;int&gt; vector, Vector&lt;int&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128.shuffle#system-runtime-intrinsics-vector128-shuffle(system-runtime-intrinsics-vector128((system-int32))-system-runtime-intrinsics-vector128((system-int32)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;)</div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx2.permutevar8x32#system-runtime-intrinsics-x86-avx2-permutevar8x32(system-runtime-intrinsics-vector256((system-int32))-system-runtime-intrinsics-vector256((system-int32)))">PermuteVar8x32</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32})">
+  Shuffle(Vector&lt;uint&gt;, Vector&lt;uint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L332"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and clear (换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector&lt;uint&gt; Shuffle(Vector&lt;uint&gt; vector, Vector&lt;uint&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128.shuffle#system-runtime-intrinsics-vector128-shuffle(system-runtime-intrinsics-vector128((system-uint32))-system-runtime-intrinsics-vector128((system-uint32)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;)</div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx2.permutevar8x32#system-runtime-intrinsics-x86-avx2-permutevar8x32(system-runtime-intrinsics-vector256((system-uint32))-system-runtime-intrinsics-vector256((system-uint32)))">PermuteVar8x32</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})">
+  Shuffle(Vector&lt;long&gt;, Vector&lt;long&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L339"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and clear (换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector&lt;long&gt; Shuffle(Vector&lt;long&gt; vector, Vector&lt;long&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128.shuffle#system-runtime-intrinsics-vector128-shuffle(system-runtime-intrinsics-vector128((system-int64))-system-runtime-intrinsics-vector128((system-int64)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_Shuffle_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.Shuffle(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64})">
+  Shuffle(Vector&lt;ulong&gt;, Vector&lt;ulong&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L345"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Shuffle and clear (换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector&lt;ulong&gt; Shuffle(Vector&lt;ulong&gt; vector, Vector&lt;ulong&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from <code class="paramref">vector</code> (用于从 <code class="paramref">vector</code> 中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128.shuffle#system-runtime-intrinsics-vector128-shuffle(system-runtime-intrinsics-vector128((system-uint64))-system-runtime-intrinsics-vector128((system-uint64)))">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.cs/#L288" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

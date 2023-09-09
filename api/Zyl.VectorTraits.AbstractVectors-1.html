@@ -1,0 +1,530 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AbstractVectors&lt;T&gt;
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AbstractVectors&lt;T&gt;
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_AbstractVectors_1.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.AbstractVectors%601%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+  </head>
+
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.AbstractVectors`1">
+
+
+
+  <h1 id="Zyl_VectorTraits_AbstractVectors_1" data-uid="Zyl.VectorTraits.AbstractVectors`1" class="text-break">
+    Class AbstractVectors&lt;T&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/AbstractVectors.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Common constants of any Vector types (任何向量类型的公用常量).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class AbstractVectors&lt;T&gt; where T : struct</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The vector element type. T can be any primitive numeric type.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AbstractVectors&lt;T&gt;</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Zyl.VectorTraits.Vector128s-1.html">Vector128s&lt;T&gt;</a></div>
+      <div><a class="xref" href="Zyl.VectorTraits.Vector256s-1.html">Vector256s&lt;T&gt;</a></div>
+      <div><a class="xref" href="Zyl.VectorTraits.Vector64s-1.html">Vector64s&lt;T&gt;</a></div>
+      <div><a class="xref" href="Zyl.VectorTraits.Vectors-1.html">Vectors&lt;T&gt;</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementAllBitsSet.html#Zyl_VectorTraits_AbstractVectors_1_ElementAllBitsSet">ElementAllBitsSet</a></dt>
+    <dd><p>(Element) All bit is 1 (所有位都是1的值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementBitSize.html#Zyl_VectorTraits_AbstractVectors_1_ElementBitSize">ElementBitSize</a></dt>
+    <dd><p>(Element) Bit size (位大小).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementBitSizeMask.html#Zyl_VectorTraits_AbstractVectors_1_ElementBitSizeMask">ElementBitSizeMask</a></dt>
+    <dd><p>(Element) Bit size mask (位大小掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementByteSize.html#Zyl_VectorTraits_AbstractVectors_1_ElementByteSize">ElementByteSize</a></dt>
+    <dd><p>(Element) byte size (字节大小).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementE.html#Zyl_VectorTraits_AbstractVectors_1_ElementE">ElementE</a></dt>
+    <dd><p>(Element) Represents the natural logarithmic base, specified by the constant, e (表示自然对数的底，它由常数 e 指定).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementEpsilon.html#Zyl_VectorTraits_AbstractVectors_1_ElementEpsilon">ElementEpsilon</a></dt>
+    <dd><p>(Element) Represents the smallest positive value that is greater than zero (表示大于零的最小正值). When the type is an integer, the value is 1 (当类型为整数时，该值为1).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementExponentBias.html#Zyl_VectorTraits_AbstractVectors_1_ElementExponentBias">ElementExponentBias</a></dt>
+    <dd><p>(Element) Exponent bias (指数偏移值). When the type is an integer, the value is 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementExponentBits.html#Zyl_VectorTraits_AbstractVectors_1_ElementExponentBits">ElementExponentBits</a></dt>
+    <dd><p>(Element) Exponent bit size (指数位数). When the type is an integer, the value is 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementExponentMask.html#Zyl_VectorTraits_AbstractVectors_1_ElementExponentMask">ElementExponentMask</a></dt>
+    <dd><p>(Element) Exponent mask (指数掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementExponentShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementExponentShift">ElementExponentShift</a></dt>
+    <dd><p>(Element) Exponent shift bit (指数位移).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedOne.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedOne">ElementFixedOne</a></dt>
+    <dd><p>(Element) The fixed point number of the value 1 (值1的定点数). When the type is an integer, the value is'Pow(2, <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a>)'; Otherwise it's 1 (当类型为整数时，它的值为 <code>Pow(2, &lt;xref href=&quot;Zyl.VectorTraits.AbstractVectors%601.ElementFixedShift&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt;)</code>; 其他情况下为 1).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedOneDouble.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedOneDouble">ElementFixedOneDouble</a></dt>
+    <dd><p>(Element) The double of the fixed point number with the value 1 (值1的定点数的双精度浮点值). When the type is an integer, the value is'Pow(2, <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a>)'; Otherwise it's 1 (当类型为整数时，它的值为 <code>Pow(2, &lt;xref href=&quot;Zyl.VectorTraits.AbstractVectors%601.ElementFixedShift&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt;)</code>; 其他情况下为 1).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a></dt>
+    <dd><p>(Element) Binary shift of fixed point number (定点数的位移). When the type is an integer, the value is '<a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementBitSize.html#Zyl_VectorTraits_AbstractVectors_1_ElementBitSize">ElementBitSize</a>/2'; Otherwise it's 0 (当类型为整数时，它的值为 <code>&lt;xref href=&quot;Zyl.VectorTraits.AbstractVectors%601.ElementBitSize&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt;/2</code>; 其他情况下为 0).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMantissaBits.html#Zyl_VectorTraits_AbstractVectors_1_ElementMantissaBits">ElementMantissaBits</a></dt>
+    <dd><p>(Element) Mantissa bit size (尾数位数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMantissaMask.html#Zyl_VectorTraits_AbstractVectors_1_ElementMantissaMask">ElementMantissaMask</a></dt>
+    <dd><p>(Element) Mantissa mast (尾数掩码)k.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMantissaShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementMantissaShift">ElementMantissaShift</a></dt>
+    <dd><p>(Element) Mantissa shift bit (尾数位移).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMaskBits1.html#Zyl_VectorTraits_AbstractVectors_1_ElementMaskBits1">ElementMaskBits1</a></dt>
+    <dd><p>(Element) 1 bits mask (1位掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMaskBits16.html#Zyl_VectorTraits_AbstractVectors_1_ElementMaskBits16">ElementMaskBits16</a></dt>
+    <dd><p>(Element) 16 bits mask (16位掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMaskBits2.html#Zyl_VectorTraits_AbstractVectors_1_ElementMaskBits2">ElementMaskBits2</a></dt>
+    <dd><p>(Element) 2 bits mask (2位掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMaskBits32.html#Zyl_VectorTraits_AbstractVectors_1_ElementMaskBits32">ElementMaskBits32</a></dt>
+    <dd><p>(Element) 32 bits mask (32位掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMaskBits4.html#Zyl_VectorTraits_AbstractVectors_1_ElementMaskBits4">ElementMaskBits4</a></dt>
+    <dd><p>(Element) 4 bits mask (4位掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMaskBits8.html#Zyl_VectorTraits_AbstractVectors_1_ElementMaskBits8">ElementMaskBits8</a></dt>
+    <dd><p>(Element) 8 bits mask (8位掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMaxValue.html#Zyl_VectorTraits_AbstractVectors_1_ElementMaxValue">ElementMaxValue</a></dt>
+    <dd><p>(Element) Represents the largest possible value (表示最大可能值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMinValue.html#Zyl_VectorTraits_AbstractVectors_1_ElementMinValue">ElementMinValue</a></dt>
+    <dd><p>(Element) Represents the smallest possible value (表示最小可能值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementNaN.html#Zyl_VectorTraits_AbstractVectors_1_ElementNaN">ElementNaN</a></dt>
+    <dd><p>(Element) Represents not a number (NaN) (表示“非数(NaN)”的值). When the type is an integer, the value is 0 (当类型为整数时，该值为0).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementNegativeInfinity.html#Zyl_VectorTraits_AbstractVectors_1_ElementNegativeInfinity">ElementNegativeInfinity</a></dt>
+    <dd><p>(Element) Represents negative infinity (表示负无穷). When the type is an integer, the value is 0 (当类型为整数时，该值为0).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementNonExponentMask.html#Zyl_VectorTraits_AbstractVectors_1_ElementNonExponentMask">ElementNonExponentMask</a></dt>
+    <dd><p>(Element) Non-exponent mask (非指数掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementNonMantissaMask.html#Zyl_VectorTraits_AbstractVectors_1_ElementNonMantissaMask">ElementNonMantissaMask</a></dt>
+    <dd><p>(Element) Non-mantissa mask (非尾数掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementNonSignMask.html#Zyl_VectorTraits_AbstractVectors_1_ElementNonSignMask">ElementNonSignMask</a></dt>
+    <dd><p>(Element) Non-sign mask (非符号掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementNormOne.html#Zyl_VectorTraits_AbstractVectors_1_ElementNormOne">ElementNormOne</a></dt>
+    <dd><p>(Element) Normalized number of value 1 (值1的归一化数). When the type is an integer, the value is '<a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementMaxValue.html#Zyl_VectorTraits_AbstractVectors_1_ElementMaxValue">ElementMaxValue</a>'; Otherwise it's 1 (当类型为整数时，它的值为 <code>&lt;xref href=&quot;Zyl.VectorTraits.AbstractVectors%601.ElementMaxValue&quot; data-throw-if-not-resolved=&quot;false&quot;&gt;&lt;/xref&gt;</code>; 其他情况下为 1).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementPi.html#Zyl_VectorTraits_AbstractVectors_1_ElementPi">ElementPi</a></dt>
+    <dd><p>(Element) Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π (表示圆的周长与其直径的比值，由常数 π 指定).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementPositiveInfinity.html#Zyl_VectorTraits_AbstractVectors_1_ElementPositiveInfinity">ElementPositiveInfinity</a></dt>
+    <dd><p>(Element) Represents positive infinity (表示正无穷). When the type is an integer, the value is 0 (当类型为整数时，该值为0).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementSignBits.html#Zyl_VectorTraits_AbstractVectors_1_ElementSignBits">ElementSignBits</a></dt>
+    <dd><p>(Element) Sign bit size (符号位数). When the type is an unsigned number, the value is 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementSignMask.html#Zyl_VectorTraits_AbstractVectors_1_ElementSignMask">ElementSignMask</a></dt>
+    <dd><p>(Element) Sign mask (符号掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementSignShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementSignShift">ElementSignShift</a></dt>
+    <dd><p>(Element) Sign shift bit (符号位移).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementTau.html#Zyl_VectorTraits_AbstractVectors_1_ElementTau">ElementTau</a></dt>
+    <dd><p>(Element) Represents the number of radians in one turn, specified by the constant, τ (表示转一圈的弧度数，由常量 τ 指定).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV0.html#Zyl_VectorTraits_AbstractVectors_1_ElementV0">ElementV0</a></dt>
+    <dd><p>(Element) Value 0 (0的值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV1.html#Zyl_VectorTraits_AbstractVectors_1_ElementV1">ElementV1</a></dt>
+    <dd><p>(Element) Value 1 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV2.html#Zyl_VectorTraits_AbstractVectors_1_ElementV2">ElementV2</a></dt>
+    <dd><p>(Element) Value 2 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV3.html#Zyl_VectorTraits_AbstractVectors_1_ElementV3">ElementV3</a></dt>
+    <dd><p>(Element) Value 3 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV4.html#Zyl_VectorTraits_AbstractVectors_1_ElementV4">ElementV4</a></dt>
+    <dd><p>(Element) Value 4 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV5.html#Zyl_VectorTraits_AbstractVectors_1_ElementV5">ElementV5</a></dt>
+    <dd><p>(Element) Value 5 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV6.html#Zyl_VectorTraits_AbstractVectors_1_ElementV6">ElementV6</a></dt>
+    <dd><p>(Element) Value 6 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV7.html#Zyl_VectorTraits_AbstractVectors_1_ElementV7">ElementV7</a></dt>
+    <dd><p>(Element) Value 7 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV8.html#Zyl_VectorTraits_AbstractVectors_1_ElementV8">ElementV8</a></dt>
+    <dd><p>(Element) Value 8 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVMaxByte.html#Zyl_VectorTraits_AbstractVectors_1_ElementVMaxByte">ElementVMaxByte</a></dt>
+    <dd><p>(Element) Value 255 (byte.MaxValue).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVMaxInt16.html#Zyl_VectorTraits_AbstractVectors_1_ElementVMaxInt16">ElementVMaxInt16</a></dt>
+    <dd><p>(Element) Value 32767 (short.MaxValue) .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVMaxInt32.html#Zyl_VectorTraits_AbstractVectors_1_ElementVMaxInt32">ElementVMaxInt32</a></dt>
+    <dd><p>(Element) Value 2147483647 (int.MaxValue) .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVMaxSByte.html#Zyl_VectorTraits_AbstractVectors_1_ElementVMaxSByte">ElementVMaxSByte</a></dt>
+    <dd><p>(Element) Value 127 (sbyte.MaxValue).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVMaxUInt16.html#Zyl_VectorTraits_AbstractVectors_1_ElementVMaxUInt16">ElementVMaxUInt16</a></dt>
+    <dd><p>(Element) Value 65535 (ushort.MaxValue) .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVMaxUInt32.html#Zyl_VectorTraits_AbstractVectors_1_ElementVMaxUInt32">ElementVMaxUInt32</a></dt>
+    <dd><p>(Element) Value 4294967295 (uint.MaxValue) .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVMinInt16.html#Zyl_VectorTraits_AbstractVectors_1_ElementVMinInt16">ElementVMinInt16</a></dt>
+    <dd><p>(Element) Value -32768 (short.MinValue) .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVMinInt32.html#Zyl_VectorTraits_AbstractVectors_1_ElementVMinInt32">ElementVMinInt32</a></dt>
+    <dd><p>(Element) Value -2147483648 (int.MinValue) .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVMinSByte.html#Zyl_VectorTraits_AbstractVectors_1_ElementVMinSByte">ElementVMinSByte</a></dt>
+    <dd><p>(Element) Value -128 (sbyte.MinValue).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVReciprocalMaxByte.html#Zyl_VectorTraits_AbstractVectors_1_ElementVReciprocalMaxByte">ElementVReciprocalMaxByte</a></dt>
+    <dd><p>Reciprocal value: 1/255 (byte.MaxValue). When the type is an integer, it is a fixed point number using the <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> convention (当类型为整数时, 是使用 <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> 约定的定点数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVReciprocalMaxInt16.html#Zyl_VectorTraits_AbstractVectors_1_ElementVReciprocalMaxInt16">ElementVReciprocalMaxInt16</a></dt>
+    <dd><p>Reciprocal value: 1/32767 (short.MaxValue). When the type is an integer, it is a fixed point number using the <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> convention (当类型为整数时, 是使用 <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> 约定的定点数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVReciprocalMaxInt32.html#Zyl_VectorTraits_AbstractVectors_1_ElementVReciprocalMaxInt32">ElementVReciprocalMaxInt32</a></dt>
+    <dd><p>Reciprocal value: 1/2147483647 (int.MaxValue). When the type is an integer, it is a fixed point number using the <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> convention (当类型为整数时, 是使用 <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> 约定的定点数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVReciprocalMaxSByte.html#Zyl_VectorTraits_AbstractVectors_1_ElementVReciprocalMaxSByte">ElementVReciprocalMaxSByte</a></dt>
+    <dd><p>Reciprocal value: 1/127 (sbyte.MaxValue). When the type is an integer, it is a fixed point number using the <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> convention (当类型为整数时, 是使用 <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> 约定的定点数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVReciprocalMaxUInt16.html#Zyl_VectorTraits_AbstractVectors_1_ElementVReciprocalMaxUInt16">ElementVReciprocalMaxUInt16</a></dt>
+    <dd><p>Reciprocal value: 1/65535 (ushort.MaxValue). When the type is an integer, it is a fixed point number using the <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> convention (当类型为整数时, 是使用 <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> 约定的定点数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementVReciprocalMaxUInt32.html#Zyl_VectorTraits_AbstractVectors_1_ElementVReciprocalMaxUInt32">ElementVReciprocalMaxUInt32</a></dt>
+    <dd><p>Reciprocal value: 1/4294967295 (uint.MaxValue). When the type is an integer, it is a fixed point number using the <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> convention (当类型为整数时, 是使用 <a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementFixedShift.html#Zyl_VectorTraits_AbstractVectors_1_ElementFixedShift">ElementFixedShift</a> 约定的定点数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV_1.html#Zyl_VectorTraits_AbstractVectors_1_ElementV_1">ElementV_1</a></dt>
+    <dd><p>(Element) Value -1 . When the type is unsigned integer, the value is a signed cast value (当类型为无符号整型时，值为有符号强制转换值). Example: '(byte)(-1)=255' .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV_2.html#Zyl_VectorTraits_AbstractVectors_1_ElementV_2">ElementV_2</a></dt>
+    <dd><p>(Element) Value -2 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV_3.html#Zyl_VectorTraits_AbstractVectors_1_ElementV_3">ElementV_3</a></dt>
+    <dd><p>(Element) Value -3 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV_4.html#Zyl_VectorTraits_AbstractVectors_1_ElementV_4">ElementV_4</a></dt>
+    <dd><p>(Element) Value -4 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV_5.html#Zyl_VectorTraits_AbstractVectors_1_ElementV_5">ElementV_5</a></dt>
+    <dd><p>(Element) Value -5 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV_6.html#Zyl_VectorTraits_AbstractVectors_1_ElementV_6">ElementV_6</a></dt>
+    <dd><p>(Element) Value -6 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV_7.html#Zyl_VectorTraits_AbstractVectors_1_ElementV_7">ElementV_7</a></dt>
+    <dd><p>(Element) Value -7 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementV_8.html#Zyl_VectorTraits_AbstractVectors_1_ElementV_8">ElementV_8</a></dt>
+    <dd><p>(Element) Value -8 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.AbstractVectors-1.ElementZero.html#Zyl_VectorTraits_AbstractVectors_1_ElementZero">ElementZero</a></dt>
+    <dd><p>(Element) Zero (0).</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/AbstractVectors.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+        
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
