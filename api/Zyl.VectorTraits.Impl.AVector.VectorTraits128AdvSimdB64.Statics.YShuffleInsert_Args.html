@@ -2,11 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Method YShuffleInsert_Args
- </title>
+      <title>Method YShuffleInsert_Args </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Method YShuffleInsert_Args
- ">
+      <meta name="title" content="Method YShuffleInsert_Args ">
+      
       
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
@@ -18,13 +17,21 @@
       
       
       <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args*%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -80,8 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args*" class="text-break">
-  Method YShuffleInsert_Args
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L598"><i class="bi bi-code-slash"></i></a>
+Method YShuffleInsert_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L957"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -111,10 +117,12 @@
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte___System_Numerics_Vector_System_SByte___System_Numerics_Vector_System_SByte___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte}@,System.Numerics.Vector{System.SByte}@,System.Numerics.Vector{System.SByte}@)">
   YShuffleInsert_Args(Vector&lt;sbyte&gt;, out Vector&lt;sbyte&gt;, out Vector&lt;sbyte&gt;, out Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L598"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L957"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -125,13 +133,17 @@ public static void YShuffleInsert_Args(Vector&lt;sbyte&gt; indices, out Vector&l
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>The per-element indices used to select a value from vector (用于从 vector 中选择值的每个元素索引).</p>
+</dd>
   <dt><code>args0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 0 (参数0). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 1 (参数1). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 2 (参数2). Used for YShuffleInsert_Core .</p>
+</dd>
 </dl>
 
 
@@ -143,16 +155,25 @@ public static void YShuffleInsert_Args(Vector&lt;sbyte&gt; indices, out Vector&l
 
 
 
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_Core.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_Core_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__">YShuffleInsert_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;)</div>
+  </dd>
+</dl>
 
 
 <a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args*"></a>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte___System_Numerics_Vector_System_Byte___System_Numerics_Vector_System_Byte___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte}@,System.Numerics.Vector{System.Byte}@,System.Numerics.Vector{System.Byte}@)">
   YShuffleInsert_Args(Vector&lt;byte&gt;, out Vector&lt;byte&gt;, out Vector&lt;byte&gt;, out Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L608"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L967"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -162,13 +183,17 @@ public static void YShuffleInsert_Args(Vector&lt;sbyte&gt; indices, out Vector&l
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>The per-element indices used to select a value from vector (用于从 vector 中选择值的每个元素索引).</p>
+</dd>
   <dt><code>args0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 0 (参数0). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 1 (参数1). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 2 (参数2). Used for YShuffleInsert_Core .</p>
+</dd>
 </dl>
 
 
@@ -180,16 +205,25 @@ public static void YShuffleInsert_Args(Vector&lt;sbyte&gt; indices, out Vector&l
 
 
 
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_Core.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_Core_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__">YShuffleInsert_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;)</div>
+  </dd>
+</dl>
 
 
 <a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args*"></a>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16___System_Numerics_Vector_System_Int16___System_Numerics_Vector_System_Int16___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16}@,System.Numerics.Vector{System.Int16}@,System.Numerics.Vector{System.Int16}@)">
   YShuffleInsert_Args(Vector&lt;short&gt;, out Vector&lt;short&gt;, out Vector&lt;short&gt;, out Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L617"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L976"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -199,13 +233,17 @@ public static void YShuffleInsert_Args(Vector&lt;sbyte&gt; indices, out Vector&l
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>The per-element indices used to select a value from vector (用于从 vector 中选择值的每个元素索引).</p>
+</dd>
   <dt><code>args0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 0 (参数0). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 1 (参数1). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 2 (参数2). Used for YShuffleInsert_Core .</p>
+</dd>
 </dl>
 
 
@@ -217,16 +255,25 @@ public static void YShuffleInsert_Args(Vector&lt;sbyte&gt; indices, out Vector&l
 
 
 
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_Core.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_Core_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__">YShuffleInsert_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;)</div>
+  </dd>
+</dl>
 
 
 <a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args*"></a>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16___System_Numerics_Vector_System_UInt16___System_Numerics_Vector_System_UInt16___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16}@,System.Numerics.Vector{System.UInt16}@,System.Numerics.Vector{System.UInt16}@)">
   YShuffleInsert_Args(Vector&lt;ushort&gt;, out Vector&lt;ushort&gt;, out Vector&lt;ushort&gt;, out Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L626"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L985"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -237,13 +284,17 @@ public static void YShuffleInsert_Args(Vector&lt;ushort&gt; indices, out Vector&
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>The per-element indices used to select a value from vector (用于从 vector 中选择值的每个元素索引).</p>
+</dd>
   <dt><code>args0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 0 (参数0). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 1 (参数1). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 2 (参数2). Used for YShuffleInsert_Core .</p>
+</dd>
 </dl>
 
 
@@ -255,16 +306,25 @@ public static void YShuffleInsert_Args(Vector&lt;ushort&gt; indices, out Vector&
 
 
 
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_Core.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_Core_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__">YShuffleInsert_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;)</div>
+  </dd>
+</dl>
 
 
 <a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args*"></a>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32___System_Numerics_Vector_System_Int32___System_Numerics_Vector_System_Int32___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32}@,System.Numerics.Vector{System.Int32}@,System.Numerics.Vector{System.Int32}@)">
   YShuffleInsert_Args(Vector&lt;int&gt;, out Vector&lt;int&gt;, out Vector&lt;int&gt;, out Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L636"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L995"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -274,13 +334,17 @@ public static void YShuffleInsert_Args(Vector&lt;ushort&gt; indices, out Vector&
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>The per-element indices used to select a value from vector (用于从 vector 中选择值的每个元素索引).</p>
+</dd>
   <dt><code>args0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 0 (参数0). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 1 (参数1). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 2 (参数2). Used for YShuffleInsert_Core .</p>
+</dd>
 </dl>
 
 
@@ -292,16 +356,25 @@ public static void YShuffleInsert_Args(Vector&lt;ushort&gt; indices, out Vector&
 
 
 
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_Core.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_Core_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__">YShuffleInsert_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;)</div>
+  </dd>
+</dl>
 
 
 <a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args*"></a>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32___System_Numerics_Vector_System_UInt32___System_Numerics_Vector_System_UInt32___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32}@,System.Numerics.Vector{System.UInt32}@,System.Numerics.Vector{System.UInt32}@)">
   YShuffleInsert_Args(Vector&lt;uint&gt;, out Vector&lt;uint&gt;, out Vector&lt;uint&gt;, out Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L645"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L1004"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -312,13 +385,17 @@ public static void YShuffleInsert_Args(Vector&lt;uint&gt; indices, out Vector&lt
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>The per-element indices used to select a value from vector (用于从 vector 中选择值的每个元素索引).</p>
+</dd>
   <dt><code>args0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 0 (参数0). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 1 (参数1). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 2 (参数2). Used for YShuffleInsert_Core .</p>
+</dd>
 </dl>
 
 
@@ -330,16 +407,25 @@ public static void YShuffleInsert_Args(Vector&lt;uint&gt; indices, out Vector&lt
 
 
 
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_Core.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_Core_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__">YShuffleInsert_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;)</div>
+  </dd>
+</dl>
 
 
 <a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args*"></a>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64___System_Numerics_Vector_System_Int64___System_Numerics_Vector_System_Int64___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64}@,System.Numerics.Vector{System.Int64}@,System.Numerics.Vector{System.Int64}@)">
   YShuffleInsert_Args(Vector&lt;long&gt;, out Vector&lt;long&gt;, out Vector&lt;long&gt;, out Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L655"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L1014"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -349,13 +435,17 @@ public static void YShuffleInsert_Args(Vector&lt;uint&gt; indices, out Vector&lt
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>The per-element indices used to select a value from vector (用于从 vector 中选择值的每个元素索引).</p>
+</dd>
   <dt><code>args0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 0 (参数0). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 1 (参数1). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 2 (参数2). Used for YShuffleInsert_Core .</p>
+</dd>
 </dl>
 
 
@@ -367,16 +457,25 @@ public static void YShuffleInsert_Args(Vector&lt;uint&gt; indices, out Vector&lt
 
 
 
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_Core.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_Core_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__">YShuffleInsert_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;)</div>
+  </dd>
+</dl>
 
 
 <a id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args*"></a>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64_Statics_YShuffleInsert_Args_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64___System_Numerics_Vector_System_UInt64___System_Numerics_Vector_System_UInt64___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64.Statics.YShuffleInsert_Args(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64}@,System.Numerics.Vector{System.UInt64}@,System.Numerics.Vector{System.UInt64}@)">
   YShuffleInsert_Args(Vector&lt;ulong&gt;, out Vector&lt;ulong&gt;, out Vector&lt;ulong&gt;, out Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L664"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L1023"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"></div>
+<div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</p>
+</div>
 <div class="markdown level1 conceptual"></div>
 
 <div class="codewrapper">
@@ -387,13 +486,17 @@ public static void YShuffleInsert_Args(Vector&lt;ulong&gt; indices, out Vector&l
 <h4 class="section">Parameters</h4>
 <dl class="parameters">
   <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>The per-element indices used to select a value from vector (用于从 vector 中选择值的每个元素索引).</p>
+</dd>
   <dt><code>args0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 0 (参数0). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 1 (参数1). Used for YShuffleInsert_Core .</p>
+</dd>
   <dt><code>args2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
-  <dd></dd>
+  <dd><p>Arguments 2 (参数2). Used for YShuffleInsert_Core .</p>
+</dd>
 </dl>
 
 
@@ -405,15 +508,22 @@ public static void YShuffleInsert_Args(Vector&lt;ulong&gt; indices, out Vector&l
 
 
 
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_AcceleratedTypes">YShuffleInsert_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IVectorTraits.YShuffleInsert_Core.html#Zyl_VectorTraits_Impl_IVectorTraits_YShuffleInsert_Core_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__">YShuffleInsert_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;)</div>
+  </dd>
+</dl>
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L598" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64.Y.cs/#L957" class="edit-link">Edit this page</a>
         </div>
 
-        
+
       </div>
 
       <div class="affix">
@@ -422,7 +532,7 @@ public static void YShuffleInsert_Args(Vector&lt;ulong&gt; indices, out Vector&l
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>

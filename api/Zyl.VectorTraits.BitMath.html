@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class BitMath
- </title>
+      <title>Class BitMath </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class BitMath
- ">
+      <meta name="title" content="Class BitMath ">
       
+      <meta name="description" content="Provides constants and static methods for binary operations, and other common mathematical functions (为二进制运算和其他通用数学函数提供常数和静态方法).">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -18,13 +17,21 @@
       
       
       <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_BitMath.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.BitMath%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -78,8 +85,7 @@
 
 
   <h1 id="Zyl_VectorTraits_BitMath" data-uid="Zyl.VectorTraits.BitMath" class="text-break">
-    Class BitMath
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.Helper.cs/#L6"><i class="bi bi-code-slash"></i></a>
+Class BitMath  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -92,7 +98,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class BitMath</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BitMath : BitMathCore</code></pre>
   </div>
 
 
@@ -102,15 +108,187 @@
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.html">BitMathCore</a></div>
       <div><span class="xref">BitMath</span></div>
     </dd>
   </dl>
 
 
 
-  <dl class="typelist derived">
+  <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore._MM_SHUFFLE.html#Zyl_VectorTraits_Numerics_BitMathCore__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">BitMathCore._MM_SHUFFLE(byte, byte, byte, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore._MM_SHUFFLE2.html#Zyl_VectorTraits_Numerics_BitMathCore__MM_SHUFFLE2_System_Byte_System_Byte_">BitMathCore._MM_SHUFFLE2(byte, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_SByte_System_SByte_System_SByte_">BitMathCore.BitSelect(sbyte, sbyte, sbyte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Byte_System_Byte_System_Byte_">BitMathCore.BitSelect(byte, byte, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Int16_System_Int16_System_Int16_">BitMathCore.BitSelect(short, short, short)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_UInt16_System_UInt16_System_UInt16_">BitMathCore.BitSelect(ushort, ushort, ushort)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Int32_System_Int32_System_Int32_">BitMathCore.BitSelect(int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_UInt32_System_UInt32_System_UInt32_">BitMathCore.BitSelect(uint, uint, uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Int64_System_Int64_System_Int64_">BitMathCore.BitSelect(long, long, long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_UInt64_System_UInt64_System_UInt64_">BitMathCore.BitSelect(ulong, ulong, ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_IntPtr_System_IntPtr_System_IntPtr_">BitMathCore.BitSelect(nint, nint, nint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_UIntPtr_System_UIntPtr_System_UIntPtr_">BitMathCore.BitSelect(nuint, nuint, nuint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Int32_System_Single_System_Single_">BitMathCore.BitSelect(int, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Single_System_Single_System_Single_">BitMathCore.BitSelect(float, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Int64_System_Double_System_Double_">BitMathCore.BitSelect(long, double, double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Double_System_Double_System_Double_">BitMathCore.BitSelect(double, double, double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Int16_System_Half_System_Half_">BitMathCore.BitSelect(short, Half, Half)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Half_System_Half_System_Half_">BitMathCore.BitSelect(Half, Half, Half)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_Int32_System_Int32_">BitMathCore.ClampToBitMax(int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_UInt32_System_UInt32_">BitMathCore.ClampToBitMax(uint, uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_Int64_System_Int64_">BitMathCore.ClampToBitMax(long, long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_UInt64_System_UInt64_">BitMathCore.ClampToBitMax(ulong, ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_Int32_">BitMathCore.ClampToByte(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_UInt32_">BitMathCore.ClampToByte(uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_Int64_">BitMathCore.ClampToByte(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_UInt64_">BitMathCore.ClampToByte(ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_SByte_System_SByte_">BitMathCore.ConditionalSelect(bool, sbyte, sbyte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Byte_System_Byte_">BitMathCore.ConditionalSelect(bool, byte, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Int16_System_Int16_">BitMathCore.ConditionalSelect(bool, short, short)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt16_System_UInt16_">BitMathCore.ConditionalSelect(bool, ushort, ushort)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Int32_System_Int32_">BitMathCore.ConditionalSelect(bool, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt32_System_UInt32_">BitMathCore.ConditionalSelect(bool, uint, uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Int64_System_Int64_">BitMathCore.ConditionalSelect(bool, long, long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt64_System_UInt64_">BitMathCore.ConditionalSelect(bool, ulong, ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_IntPtr_System_IntPtr_">BitMathCore.ConditionalSelect(bool, nint, nint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UIntPtr_System_UIntPtr_">BitMathCore.ConditionalSelect(bool, nuint, nuint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Single_System_Single_">BitMathCore.ConditionalSelect(bool, float, float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Double_System_Double_">BitMathCore.ConditionalSelect(bool, double, double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Half_System_Half_">BitMathCore.ConditionalSelect(bool, Half, Half)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteByBit2.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteByBit2_System_Byte_System_Byte_System_Byte_System_Byte_">BitMathCore.GetByteByBit2(byte, byte, byte, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteByBit2R.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteByBit2R_System_Byte_System_Byte_System_Byte_System_Byte_">BitMathCore.GetByteByBit2R(byte, byte, byte, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteByBit4.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteByBit4_System_Byte_System_Byte_">BitMathCore.GetByteByBit4(byte, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteByBit4R.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteByBit4R_System_Byte_System_Byte_">BitMathCore.GetByteByBit4R(byte, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_Single_">BitMathCore.GetMostSignificantBit(float)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_Double_">BitMathCore.GetMostSignificantBit(double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_SByte_">BitMathCore.GetMostSignificantBit(sbyte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_Byte_">BitMathCore.GetMostSignificantBit(byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_Int16_">BitMathCore.GetMostSignificantBit(short)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_UInt16_">BitMathCore.GetMostSignificantBit(ushort)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_Int32_">BitMathCore.GetMostSignificantBit(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_UInt32_">BitMathCore.GetMostSignificantBit(uint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_Int64_">BitMathCore.GetMostSignificantBit(long)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_UInt64_">BitMathCore.GetMostSignificantBit(ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.MapFlags.html#Zyl_VectorTraits_Numerics_BitMathCore_MapFlags_System_Int32_System_Int32_System_Int32_">BitMathCore.MapFlags(int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.MapFlags.html#Zyl_VectorTraits_Numerics_BitMathCore_MapFlags_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_">BitMathCore.MapFlags(int, int, int, int, int)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ToInt32.html#Zyl_VectorTraits_Numerics_BitMathCore_ToInt32_System_Boolean_">BitMathCore.ToInt32(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ToInt32Mask.html#Zyl_VectorTraits_Numerics_BitMathCore_ToInt32Mask_System_Boolean_">BitMathCore.ToInt32Mask(bool)</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -227,86 +405,6 @@
 </dd>
   </dl>
   <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_Byte_System_Byte_System_Byte_">BitSelect(byte, byte, byte)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_Double_System_Double_System_Double_">BitSelect(double, double, double)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_Half_System_Half_System_Half_">BitSelect(Half, Half, Half)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_Int16_System_Half_System_Half_">BitSelect(short, Half, Half)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_Int16_System_Int16_System_Int16_">BitSelect(short, short, short)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_Int32_System_Int32_System_Int32_">BitSelect(int, int, int)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_Int32_System_Single_System_Single_">BitSelect(int, float, float)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_Int64_System_Double_System_Double_">BitSelect(long, double, double)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_Int64_System_Int64_System_Int64_">BitSelect(long, long, long)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_IntPtr_System_IntPtr_System_IntPtr_">BitSelect(nint, nint, nint)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_SByte_System_SByte_System_SByte_">BitSelect(sbyte, sbyte, sbyte)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_Single_System_Single_System_Single_">BitSelect(float, float, float)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_UInt16_System_UInt16_System_UInt16_">BitSelect(ushort, ushort, ushort)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_UInt32_System_UInt32_System_UInt32_">BitSelect(uint, uint, uint)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_UInt64_System_UInt64_System_UInt64_">BitSelect(ulong, ulong, ulong)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.BitSelect.html#Zyl_VectorTraits_BitMath_BitSelect_System_UIntPtr_System_UIntPtr_System_UIntPtr_">BitSelect(nuint, nuint, nuint)</a></dt>
-    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Clamp.html#Zyl_VectorTraits_BitMath_Clamp_System_Byte_System_Byte_System_Byte_">Clamp(byte, byte, byte)</a></dt>
     <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of <code class="paramref">amin</code> and <code class="paramref">amax</code> (返回限制在 <code class="paramref">amin</code> 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>).</p>
 </dd>
@@ -372,108 +470,38 @@
 </dd>
   </dl>
   <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ClampToBitMax.html#Zyl_VectorTraits_BitMath_ClampToBitMax_System_Int32_System_Int32_">ClampToBitMax(int, int)</a></dt>
-    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code class="paramref">amax</code> (返回限制在 0 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>). <code class="paramref">amax</code> must be a <code>Pow(2,n)-1</code>.</p>
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.CopySign.html#Zyl_VectorTraits_BitMath_CopySign_System_Double_System_Double_">CopySign(double, double)</a></dt>
+    <dd><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
 </dd>
   </dl>
   <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ClampToBitMax.html#Zyl_VectorTraits_BitMath_ClampToBitMax_System_Int64_System_Int64_">ClampToBitMax(long, long)</a></dt>
-    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code class="paramref">amax</code> (返回限制在 0 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>). <code class="paramref">amax</code> must be a <code>Pow(2,n)-1</code>.</p>
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.CopySign.html#Zyl_VectorTraits_BitMath_CopySign_System_Half_System_Half_">CopySign(Half, Half)</a></dt>
+    <dd><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
 </dd>
   </dl>
   <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ClampToBitMax.html#Zyl_VectorTraits_BitMath_ClampToBitMax_System_UInt32_System_UInt32_">ClampToBitMax(uint, uint)</a></dt>
-    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code class="paramref">amax</code> (返回限制在 0 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>). <code class="paramref">amax</code> must be a <code>Pow(2,n)-1</code>.</p>
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.CopySign.html#Zyl_VectorTraits_BitMath_CopySign_System_Int16_System_Int16_">CopySign(short, short)</a></dt>
+    <dd><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
 </dd>
   </dl>
   <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ClampToBitMax.html#Zyl_VectorTraits_BitMath_ClampToBitMax_System_UInt64_System_UInt64_">ClampToBitMax(ulong, ulong)</a></dt>
-    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code class="paramref">amax</code> (返回限制在 0 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>). <code class="paramref">amax</code> must be a <code>Pow(2,n)-1</code>.</p>
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.CopySign.html#Zyl_VectorTraits_BitMath_CopySign_System_Int32_System_Int32_">CopySign(int, int)</a></dt>
+    <dd><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
 </dd>
   </dl>
   <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ClampToByte.html#Zyl_VectorTraits_BitMath_ClampToByte_System_Int32_">ClampToByte(int)</a></dt>
-    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.CopySign.html#Zyl_VectorTraits_BitMath_CopySign_System_Int64_System_Int64_">CopySign(long, long)</a></dt>
+    <dd><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
 </dd>
   </dl>
   <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ClampToByte.html#Zyl_VectorTraits_BitMath_ClampToByte_System_Int64_">ClampToByte(long)</a></dt>
-    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.CopySign.html#Zyl_VectorTraits_BitMath_CopySign_System_SByte_System_SByte_">CopySign(sbyte, sbyte)</a></dt>
+    <dd><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
 </dd>
   </dl>
   <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ClampToByte.html#Zyl_VectorTraits_BitMath_ClampToByte_System_UInt32_">ClampToByte(uint)</a></dt>
-    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ClampToByte.html#Zyl_VectorTraits_BitMath_ClampToByte_System_UInt64_">ClampToByte(ulong)</a></dt>
-    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_Byte_System_Byte_">ConditionalSelect(bool, byte, byte)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_Double_System_Double_">ConditionalSelect(bool, double, double)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_Half_System_Half_">ConditionalSelect(bool, Half, Half)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_Int16_System_Int16_">ConditionalSelect(bool, short, short)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_Int32_System_Int32_">ConditionalSelect(bool, int, int)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_Int64_System_Int64_">ConditionalSelect(bool, long, long)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_IntPtr_System_IntPtr_">ConditionalSelect(bool, nint, nint)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_SByte_System_SByte_">ConditionalSelect(bool, sbyte, sbyte)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_Single_System_Single_">ConditionalSelect(bool, float, float)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_UInt16_System_UInt16_">ConditionalSelect(bool, ushort, ushort)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_UInt32_System_UInt32_">ConditionalSelect(bool, uint, uint)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_UInt64_System_UInt64_">ConditionalSelect(bool, ulong, ulong)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ConditionalSelect.html#Zyl_VectorTraits_BitMath_ConditionalSelect_System_Boolean_System_UIntPtr_System_UIntPtr_">ConditionalSelect(bool, nuint, nuint)</a></dt>
-    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.CopySign.html#Zyl_VectorTraits_BitMath_CopySign_System_Single_System_Single_">CopySign(float, float)</a></dt>
+    <dd><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -484,86 +512,6 @@
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DoubleToUInt64Bits.html#Zyl_VectorTraits_BitMath_DoubleToUInt64Bits_System_Double_">DoubleToUInt64Bits(double)</a></dt>
     <dd><p>Converts a double-precision floating-point value into a 64-bit unsigned integer (将指定的单精度浮点数转换为 64 位无符号整数).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetByteByBit2.html#Zyl_VectorTraits_BitMath_GetByteByBit2_System_Byte_System_Byte_System_Byte_System_Byte_">GetByteByBit2(byte, byte, byte, byte)</a></dt>
-    <dd><p>Get the byte made by the 2-bit value (获取由2位值构成的字节). Generally used to make shuffle control codes, like <a class="xref" href="Zyl.VectorTraits.BitMath._MM_SHUFFLE.html#Zyl_VectorTraits_BitMath__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">_MM_SHUFFLE(byte, byte, byte, byte)</a> (一般用于制作 shuffle 控制码, 类似 <a class="xref" href="Zyl.VectorTraits.BitMath._MM_SHUFFLE.html#Zyl_VectorTraits_BitMath__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">_MM_SHUFFLE(byte, byte, byte, byte)</a>).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetByteByBit2R.html#Zyl_VectorTraits_BitMath_GetByteByBit2R_System_Byte_System_Byte_System_Byte_System_Byte_">GetByteByBit2R(byte, byte, byte, byte)</a></dt>
-    <dd><p>Get the byte made by the 2-bit value - reversed (获取由2位值构成的字节 - 逆序). Generally used to make shuffle control codes, like <a class="xref" href="Zyl.VectorTraits.BitMath._MM_SHUFFLE.html#Zyl_VectorTraits_BitMath__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">_MM_SHUFFLE(byte, byte, byte, byte)</a> (一般用于制作 shuffle 控制码, 类似 <a class="xref" href="Zyl.VectorTraits.BitMath._MM_SHUFFLE.html#Zyl_VectorTraits_BitMath__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">_MM_SHUFFLE(byte, byte, byte, byte)</a>).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetByteByBit4.html#Zyl_VectorTraits_BitMath_GetByteByBit4_System_Byte_System_Byte_">GetByteByBit4(byte, byte)</a></dt>
-    <dd><p>Get the byte made by the 4-bit value (获取由4位值构成的字节). Generally used to make shuffle control codes, like <a class="xref" href="Zyl.VectorTraits.BitMath._MM_SHUFFLE.html#Zyl_VectorTraits_BitMath__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">_MM_SHUFFLE(byte, byte, byte, byte)</a> (一般用于制作 shuffle 控制码, 类似 <a class="xref" href="Zyl.VectorTraits.BitMath._MM_SHUFFLE.html#Zyl_VectorTraits_BitMath__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">_MM_SHUFFLE(byte, byte, byte, byte)</a>).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetByteByBit4R.html#Zyl_VectorTraits_BitMath_GetByteByBit4R_System_Byte_System_Byte_">GetByteByBit4R(byte, byte)</a></dt>
-    <dd><p>Get the byte made by the 4-bit value - reversed (获取由4位值构成的字节 - 逆序). Generally used to make shuffle control codes, like <a class="xref" href="Zyl.VectorTraits.BitMath._MM_SHUFFLE.html#Zyl_VectorTraits_BitMath__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">_MM_SHUFFLE(byte, byte, byte, byte)</a> (一般用于制作 shuffle 控制码, 类似 <a class="xref" href="Zyl.VectorTraits.BitMath._MM_SHUFFLE.html#Zyl_VectorTraits_BitMath__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">_MM_SHUFFLE(byte, byte, byte, byte)</a>).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetMostSignificantBit.html#Zyl_VectorTraits_BitMath_GetMostSignificantBit_System_Byte_">GetMostSignificantBit(byte)</a></dt>
-    <dd><p>Get the most significant bit (取得最高有效位).
-Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetMostSignificantBit.html#Zyl_VectorTraits_BitMath_GetMostSignificantBit_System_Double_">GetMostSignificantBit(double)</a></dt>
-    <dd><p>Get the most significant bit (取得最高有效位).
-Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetMostSignificantBit.html#Zyl_VectorTraits_BitMath_GetMostSignificantBit_System_Int16_">GetMostSignificantBit(short)</a></dt>
-    <dd><p>Get the most significant bit (取得最高有效位).
-Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetMostSignificantBit.html#Zyl_VectorTraits_BitMath_GetMostSignificantBit_System_Int32_">GetMostSignificantBit(int)</a></dt>
-    <dd><p>Get the most significant bit (取得最高有效位).
-Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetMostSignificantBit.html#Zyl_VectorTraits_BitMath_GetMostSignificantBit_System_Int64_">GetMostSignificantBit(long)</a></dt>
-    <dd><p>Get the most significant bit (取得最高有效位).
-Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetMostSignificantBit.html#Zyl_VectorTraits_BitMath_GetMostSignificantBit_System_SByte_">GetMostSignificantBit(sbyte)</a></dt>
-    <dd><p>Get the most significant bit (取得最高有效位).
-Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetMostSignificantBit.html#Zyl_VectorTraits_BitMath_GetMostSignificantBit_System_Single_">GetMostSignificantBit(float)</a></dt>
-    <dd><p>Get the most significant bit (取得最高有效位).
-Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetMostSignificantBit.html#Zyl_VectorTraits_BitMath_GetMostSignificantBit_System_UInt16_">GetMostSignificantBit(ushort)</a></dt>
-    <dd><p>Get the most significant bit (取得最高有效位).
-Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetMostSignificantBit.html#Zyl_VectorTraits_BitMath_GetMostSignificantBit_System_UInt32_">GetMostSignificantBit(uint)</a></dt>
-    <dd><p>Get the most significant bit (取得最高有效位).
-Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.GetMostSignificantBit.html#Zyl_VectorTraits_BitMath_GetMostSignificantBit_System_UInt64_">GetMostSignificantBit(ulong)</a></dt>
-    <dd><p>Get the most significant bit (取得最高有效位).
-Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -589,6 +537,421 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Int64BitsToDouble.html#Zyl_VectorTraits_BitMath_Int64BitsToDouble_System_Int64_">Int64BitsToDouble(long)</a></dt>
     <dd><p>Reinterprets the specified 64-bit signed integer value as a double-precision floating-point value (将指定的 64 位有符号整数值重新解释为单精度浮点值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_Byte_">IsEvenInteger(byte)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_Double_">IsEvenInteger(double)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_Half_">IsEvenInteger(Half)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_Int16_">IsEvenInteger(short)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_Int32_">IsEvenInteger(int)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_Int64_">IsEvenInteger(long)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_SByte_">IsEvenInteger(sbyte)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_Single_">IsEvenInteger(float)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_UInt16_">IsEvenInteger(ushort)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_UInt32_">IsEvenInteger(uint)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsEvenInteger.html#Zyl_VectorTraits_BitMath_IsEvenInteger_System_UInt64_">IsEvenInteger(ulong)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsFinite.html#Zyl_VectorTraits_BitMath_IsFinite_System_Double_">IsFinite(double)</a></dt>
+    <dd><p>Determines if a element is finite. It contains zero, subnormal, and normal. It does not contain infinity, NaN (确定元素是否为有限值. 它包含 零、次正规数、正规数. 它不含无穷大、非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsFinite.html#Zyl_VectorTraits_BitMath_IsFinite_System_Half_">IsFinite(Half)</a></dt>
+    <dd><p>Determines if a element is finite. It contains zero, subnormal, and normal. It does not contain infinity, NaN (确定元素是否为有限值. 它包含 零、次正规数、正规数. 它不含无穷大、非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsFinite.html#Zyl_VectorTraits_BitMath_IsFinite_System_Single_">IsFinite(float)</a></dt>
+    <dd><p>Determines if a element is finite. It contains zero, subnormal, and normal. It does not contain infinity, NaN (确定元素是否为有限值. 它包含 零、次正规数、正规数. 它不含无穷大、非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsInfinity.html#Zyl_VectorTraits_BitMath_IsInfinity_System_Double_">IsInfinity(double)</a></dt>
+    <dd><p>Determines if a element is negative or positive infinite (确定元素是否为负数或正数的无穷大).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsInfinity.html#Zyl_VectorTraits_BitMath_IsInfinity_System_Half_">IsInfinity(Half)</a></dt>
+    <dd><p>Determines if a element is negative or positive infinite (确定元素是否为负数或正数的无穷大).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsInfinity.html#Zyl_VectorTraits_BitMath_IsInfinity_System_Single_">IsInfinity(float)</a></dt>
+    <dd><p>Determines if a element is negative or positive infinite (确定元素是否为负数或正数的无穷大).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsInfinityOrNaN.html#Zyl_VectorTraits_BitMath_IsInfinityOrNaN_System_Double_">IsInfinityOrNaN(double)</a></dt>
+    <dd><p>Determines if a element is infinite or NaN (确定元素是否为无穷大或非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsInfinityOrNaN.html#Zyl_VectorTraits_BitMath_IsInfinityOrNaN_System_Half_">IsInfinityOrNaN(Half)</a></dt>
+    <dd><p>Determines if a element is infinite or NaN (确定元素是否为无穷大或非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsInfinityOrNaN.html#Zyl_VectorTraits_BitMath_IsInfinityOrNaN_System_Single_">IsInfinityOrNaN(float)</a></dt>
+    <dd><p>Determines if a element is infinite or NaN (确定元素是否为无穷大或非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsInteger.html#Zyl_VectorTraits_BitMath_IsInteger_System_Double_">IsInteger(double)</a></dt>
+    <dd><p>Determines if a element represents an integral number (确定元素是否为整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsInteger.html#Zyl_VectorTraits_BitMath_IsInteger_System_Half_">IsInteger(Half)</a></dt>
+    <dd><p>Determines if a element represents an integral number (确定元素是否为整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsInteger.html#Zyl_VectorTraits_BitMath_IsInteger_System_Single_">IsInteger(float)</a></dt>
+    <dd><p>Determines if a element represents an integral number (确定元素是否为整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNaN.html#Zyl_VectorTraits_BitMath_IsNaN_System_Double_">IsNaN(double)</a></dt>
+    <dd><p>Determines if a element is NaN (确定元素是否为非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNaN.html#Zyl_VectorTraits_BitMath_IsNaN_System_Half_">IsNaN(Half)</a></dt>
+    <dd><p>Determines if a element is NaN (确定元素是否为非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNaN.html#Zyl_VectorTraits_BitMath_IsNaN_System_Single_">IsNaN(float)</a></dt>
+    <dd><p>Determines if a element is NaN (确定元素是否为非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegative.html#Zyl_VectorTraits_BitMath_IsNegative_System_Double_">IsNegative(double)</a></dt>
+    <dd><p>Determines if a element represents a negative number (确定元素是否为负数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegative.html#Zyl_VectorTraits_BitMath_IsNegative_System_Half_">IsNegative(Half)</a></dt>
+    <dd><p>Determines if a element represents a negative number (确定元素是否为负数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegative.html#Zyl_VectorTraits_BitMath_IsNegative_System_Int16_">IsNegative(short)</a></dt>
+    <dd><p>Determines if a element represents a negative number (确定元素是否为负数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegative.html#Zyl_VectorTraits_BitMath_IsNegative_System_Int32_">IsNegative(int)</a></dt>
+    <dd><p>Determines if a element represents a negative number (确定元素是否为负数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegative.html#Zyl_VectorTraits_BitMath_IsNegative_System_Int64_">IsNegative(long)</a></dt>
+    <dd><p>Determines if a element represents a negative number (确定元素是否为负数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegative.html#Zyl_VectorTraits_BitMath_IsNegative_System_SByte_">IsNegative(sbyte)</a></dt>
+    <dd><p>Determines if a element represents a negative number (确定元素是否为负数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegative.html#Zyl_VectorTraits_BitMath_IsNegative_System_Single_">IsNegative(float)</a></dt>
+    <dd><p>Determines if a element represents a negative number (确定元素是否为负数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegativeInfinity.html#Zyl_VectorTraits_BitMath_IsNegativeInfinity_System_Double_">IsNegativeInfinity(double)</a></dt>
+    <dd><p>Determines if a element is negative infinity (确定元素是否为负无穷大).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegativeInfinity.html#Zyl_VectorTraits_BitMath_IsNegativeInfinity_System_Half_">IsNegativeInfinity(Half)</a></dt>
+    <dd><p>Determines if a element is negative infinity (确定元素是否为负无穷大).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegativeInfinity.html#Zyl_VectorTraits_BitMath_IsNegativeInfinity_System_Single_">IsNegativeInfinity(float)</a></dt>
+    <dd><p>Determines if a element is negative infinity (确定元素是否为负无穷大).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegativeZero.html#Zyl_VectorTraits_BitMath_IsNegativeZero_System_Double_">IsNegativeZero(double)</a></dt>
+    <dd><p>Determines if a element represents a negative zero (确定元素是否为负零).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegativeZero.html#Zyl_VectorTraits_BitMath_IsNegativeZero_System_Half_">IsNegativeZero(Half)</a></dt>
+    <dd><p>Determines if a element represents a negative zero (确定元素是否为负零).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNegativeZero.html#Zyl_VectorTraits_BitMath_IsNegativeZero_System_Single_">IsNegativeZero(float)</a></dt>
+    <dd><p>Determines if a element represents a negative zero (确定元素是否为负零).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNormal.html#Zyl_VectorTraits_BitMath_IsNormal_System_Double_">IsNormal(double)</a></dt>
+    <dd><p>Determines if a element is normal (确定元素是否为正规数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNormal.html#Zyl_VectorTraits_BitMath_IsNormal_System_Half_">IsNormal(Half)</a></dt>
+    <dd><p>Determines if a element is normal (确定元素是否为正规数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNormal.html#Zyl_VectorTraits_BitMath_IsNormal_System_Single_">IsNormal(float)</a></dt>
+    <dd><p>Determines if a element is normal (确定元素是否为正规数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNotNaN.html#Zyl_VectorTraits_BitMath_IsNotNaN_System_Double_">IsNotNaN(double)</a></dt>
+    <dd><p>Determines if a element is not NaN (确定元素是否不为非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNotNaN.html#Zyl_VectorTraits_BitMath_IsNotNaN_System_Half_">IsNotNaN(Half)</a></dt>
+    <dd><p>Determines if a element is not NaN (确定元素是否不为非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsNotNaN.html#Zyl_VectorTraits_BitMath_IsNotNaN_System_Single_">IsNotNaN(float)</a></dt>
+    <dd><p>Determines if a element is not NaN (确定元素是否不为非数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_Byte_">IsOddInteger(byte)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_Double_">IsOddInteger(double)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_Half_">IsOddInteger(Half)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_Int16_">IsOddInteger(short)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_Int32_">IsOddInteger(int)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_Int64_">IsOddInteger(long)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_SByte_">IsOddInteger(sbyte)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_Single_">IsOddInteger(float)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_UInt16_">IsOddInteger(ushort)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_UInt32_">IsOddInteger(uint)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsOddInteger.html#Zyl_VectorTraits_BitMath_IsOddInteger_System_UInt64_">IsOddInteger(ulong)</a></dt>
+    <dd><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsPositive.html#Zyl_VectorTraits_BitMath_IsPositive_System_Double_">IsPositive(double)</a></dt>
+    <dd><p>Determines if a element represents zero or a positive number (确定元素是否为正零或正数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsPositive.html#Zyl_VectorTraits_BitMath_IsPositive_System_Half_">IsPositive(Half)</a></dt>
+    <dd><p>Determines if a element represents zero or a positive number (确定元素是否为正零或正数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsPositive.html#Zyl_VectorTraits_BitMath_IsPositive_System_Int16_">IsPositive(short)</a></dt>
+    <dd><p>Determines if a element represents zero or a positive number (确定元素是否为正零或正数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsPositive.html#Zyl_VectorTraits_BitMath_IsPositive_System_Int32_">IsPositive(int)</a></dt>
+    <dd><p>Determines if a element represents zero or a positive number (确定元素是否为正零或正数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsPositive.html#Zyl_VectorTraits_BitMath_IsPositive_System_Int64_">IsPositive(long)</a></dt>
+    <dd><p>Determines if a element represents zero or a positive number (确定元素是否为正零或正数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsPositive.html#Zyl_VectorTraits_BitMath_IsPositive_System_SByte_">IsPositive(sbyte)</a></dt>
+    <dd><p>Determines if a element represents zero or a positive number (确定元素是否为正零或正数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsPositive.html#Zyl_VectorTraits_BitMath_IsPositive_System_Single_">IsPositive(float)</a></dt>
+    <dd><p>Determines if a element represents zero or a positive number (确定元素是否为正零或正数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsPositiveInfinity.html#Zyl_VectorTraits_BitMath_IsPositiveInfinity_System_Double_">IsPositiveInfinity(double)</a></dt>
+    <dd><p>Determines if a element is positive infinity (确定元素是否为正无穷大).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsPositiveInfinity.html#Zyl_VectorTraits_BitMath_IsPositiveInfinity_System_Half_">IsPositiveInfinity(Half)</a></dt>
+    <dd><p>Determines if a element is positive infinity (确定元素是否为正无穷大).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsPositiveInfinity.html#Zyl_VectorTraits_BitMath_IsPositiveInfinity_System_Single_">IsPositiveInfinity(float)</a></dt>
+    <dd><p>Determines if a element is positive infinity (确定元素是否为正无穷大).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsSubnormal.html#Zyl_VectorTraits_BitMath_IsSubnormal_System_Double_">IsSubnormal(double)</a></dt>
+    <dd><p>Determines if a element is subnormal (确定元素是否为次正规数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsSubnormal.html#Zyl_VectorTraits_BitMath_IsSubnormal_System_Half_">IsSubnormal(Half)</a></dt>
+    <dd><p>Determines if a element is subnormal (确定元素是否为次正规数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsSubnormal.html#Zyl_VectorTraits_BitMath_IsSubnormal_System_Single_">IsSubnormal(float)</a></dt>
+    <dd><p>Determines if a element is subnormal (确定元素是否为次正规数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_Byte_">IsZero(byte)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_Double_">IsZero(double)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_Half_">IsZero(Half)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_Int16_">IsZero(short)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_Int32_">IsZero(int)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_Int64_">IsZero(long)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_SByte_">IsZero(sbyte)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_Single_">IsZero(float)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_UInt16_">IsZero(ushort)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_UInt32_">IsZero(uint)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZero.html#Zyl_VectorTraits_BitMath_IsZero_System_UInt64_">IsZero(ulong)</a></dt>
+    <dd><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZeroOrSubnormal.html#Zyl_VectorTraits_BitMath_IsZeroOrSubnormal_System_Double_">IsZeroOrSubnormal(double)</a></dt>
+    <dd><p>Determines if a element is subnormal (确定元素是否为次正规数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZeroOrSubnormal.html#Zyl_VectorTraits_BitMath_IsZeroOrSubnormal_System_Half_">IsZeroOrSubnormal(Half)</a></dt>
+    <dd><p>Determines if a element is subnormal (确定元素是否为次正规数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.IsZeroOrSubnormal.html#Zyl_VectorTraits_BitMath_IsZeroOrSubnormal_System_Single_">IsZeroOrSubnormal(float)</a></dt>
+    <dd><p>Determines if a element is subnormal (确定元素是否为次正规数).</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -657,6 +1020,21 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.MaxNumber.html#Zyl_VectorTraits_BitMath_MaxNumber_System_Double_System_Double_">MaxNumber(double, double)</a></dt>
+    <dd><p>Compares two values to compute which is greater and returning the other value if an input is <code>NaN</code> (取得两个值中较大的数字. 若其中一个是<code>NaN</code>, 则会返回另一个值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.MaxNumber.html#Zyl_VectorTraits_BitMath_MaxNumber_System_Half_System_Half_">MaxNumber(Half, Half)</a></dt>
+    <dd><p>Compares two values to compute which is greater and returning the other value if an input is <code>NaN</code> (取得两个值中较大的数字. 若其中一个是<code>NaN</code>, 则会返回另一个值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.MaxNumber.html#Zyl_VectorTraits_BitMath_MaxNumber_System_Single_System_Single_">MaxNumber(float, float)</a></dt>
+    <dd><p>Compares two values to compute which is greater and returning the other value if an input is <code>NaN</code> (取得两个值中较大的数字. 若其中一个是<code>NaN</code>, 则会返回另一个值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Min.html#Zyl_VectorTraits_BitMath_Min_System_Byte_System_Byte_">Min(byte, byte)</a></dt>
     <dd><p>Get the smaller of two variables (取得两个变量中较小的一个).</p>
 </dd>
@@ -722,6 +1100,71 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.MinNumber.html#Zyl_VectorTraits_BitMath_MinNumber_System_Double_System_Double_">MinNumber(double, double)</a></dt>
+    <dd><p>Compares two values to compute which is lesser and returning the other value if an input is <code>NaN</code> (取得两个值中较小的数字. 若其中一个是<code>NaN</code>, 则会返回另一个值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.MinNumber.html#Zyl_VectorTraits_BitMath_MinNumber_System_Half_System_Half_">MinNumber(Half, Half)</a></dt>
+    <dd><p>Compares two values to compute which is lesser and returning the other value if an input is <code>NaN</code> (取得两个值中较小的数字. 若其中一个是<code>NaN</code>, 则会返回另一个值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.MinNumber.html#Zyl_VectorTraits_BitMath_MinNumber_System_Single_System_Single_">MinNumber(float, float)</a></dt>
+    <dd><p>Compares two values to compute which is lesser and returning the other value if an input is <code>NaN</code> (取得两个值中较小的数字. 若其中一个是<code>NaN</code>, 则会返回另一个值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sign.html#Zyl_VectorTraits_BitMath_Sign_System_Double_">Sign(double)</a></dt>
+    <dd><p>Computes the sign of a value (计算值的符号).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sign.html#Zyl_VectorTraits_BitMath_Sign_System_Half_">Sign(Half)</a></dt>
+    <dd><p>Computes the sign of a value (计算值的符号).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sign.html#Zyl_VectorTraits_BitMath_Sign_System_Int16_">Sign(short)</a></dt>
+    <dd><p>Computes the sign of a value (计算值的符号).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sign.html#Zyl_VectorTraits_BitMath_Sign_System_Int32_">Sign(int)</a></dt>
+    <dd><p>Computes the sign of a value (计算值的符号).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sign.html#Zyl_VectorTraits_BitMath_Sign_System_Int64_">Sign(long)</a></dt>
+    <dd><p>Computes the sign of a value (计算值的符号).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sign.html#Zyl_VectorTraits_BitMath_Sign_System_SByte_">Sign(sbyte)</a></dt>
+    <dd><p>Computes the sign of a value (计算值的符号).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sign.html#Zyl_VectorTraits_BitMath_Sign_System_Single_">Sign(float)</a></dt>
+    <dd><p>Computes the sign of a value (计算值的符号).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.SignFloat.html#Zyl_VectorTraits_BitMath_SignFloat_System_Double_">SignFloat(double)</a></dt>
+    <dd><p>Computes the sign of a value and returns a floating point number (计算值的符号并返回浮点数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.SignFloat.html#Zyl_VectorTraits_BitMath_SignFloat_System_Half_">SignFloat(Half)</a></dt>
+    <dd><p>Computes the sign of a value and returns a floating point number (计算值的符号并返回浮点数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.SignFloat.html#Zyl_VectorTraits_BitMath_SignFloat_System_Single_">SignFloat(float)</a></dt>
+    <dd><p>Computes the sign of a value and returns a floating point number (计算值的符号并返回浮点数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.SingleToInt32Bits.html#Zyl_VectorTraits_BitMath_SingleToInt32Bits_System_Single_">SingleToInt32Bits(float)</a></dt>
     <dd><p>Converts a single-precision floating-point value into a 32-bit integer (将单精度浮点值转换为 32 位整数).</p>
 </dd>
@@ -732,13 +1175,78 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ToInt32.html#Zyl_VectorTraits_BitMath_ToInt32_System_Boolean_">ToInt32(bool)</a></dt>
-    <dd><p>Convert bool to Int32 (将 bool 转为 Int32).</p>
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sqrt.html#Zyl_VectorTraits_BitMath_Sqrt_System_Byte_">Sqrt(byte)</a></dt>
+    <dd><p>Computes the square-root of a value (计算值的平方根).
+Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-point types return NaN, integer types return 0.</p>
 </dd>
   </dl>
   <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.ToInt32Mask.html#Zyl_VectorTraits_BitMath_ToInt32Mask_System_Boolean_">ToInt32Mask(bool)</a></dt>
-    <dd><p>Convert bool to Int32 mask (将 bool 转为 Int32 掩码).</p>
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sqrt.html#Zyl_VectorTraits_BitMath_Sqrt_System_Double_">Sqrt(double)</a></dt>
+    <dd><p>Computes the square-root of a value (计算值的平方根).
+Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-point types return NaN, integer types return 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sqrt.html#Zyl_VectorTraits_BitMath_Sqrt_System_Int16_">Sqrt(short)</a></dt>
+    <dd><p>Computes the square-root of a value (计算值的平方根).
+Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-point types return NaN, integer types return 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sqrt.html#Zyl_VectorTraits_BitMath_Sqrt_System_Int32_">Sqrt(int)</a></dt>
+    <dd><p>Computes the square-root of a value (计算值的平方根).
+Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-point types return NaN, integer types return 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sqrt.html#Zyl_VectorTraits_BitMath_Sqrt_System_Int64_">Sqrt(long)</a></dt>
+    <dd><p>Computes the square-root of a value (计算值的平方根).
+Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-point types return NaN, integer types return 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sqrt.html#Zyl_VectorTraits_BitMath_Sqrt_System_SByte_">Sqrt(sbyte)</a></dt>
+    <dd><p>Computes the square-root of a value (计算值的平方根).
+Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-point types return NaN, integer types return 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sqrt.html#Zyl_VectorTraits_BitMath_Sqrt_System_Single_">Sqrt(float)</a></dt>
+    <dd><p>Computes the square-root of a value (计算值的平方根).
+Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-point types return NaN, integer types return 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sqrt.html#Zyl_VectorTraits_BitMath_Sqrt_System_UInt16_">Sqrt(ushort)</a></dt>
+    <dd><p>Computes the square-root of a value (计算值的平方根).
+Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-point types return NaN, integer types return 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sqrt.html#Zyl_VectorTraits_BitMath_Sqrt_System_UInt32_">Sqrt(uint)</a></dt>
+    <dd><p>Computes the square-root of a value (计算值的平方根).
+Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-point types return NaN, integer types return 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Sqrt.html#Zyl_VectorTraits_BitMath_Sqrt_System_UInt64_">Sqrt(ulong)</a></dt>
+    <dd><p>Computes the square-root of a value (计算值的平方根).
+Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-point types return NaN, integer types return 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Truncate.html#Zyl_VectorTraits_BitMath_Truncate_System_Double_">Truncate(double)</a></dt>
+    <dd><p>Computes the round to zero of value (计算值的向零舍入). It is also known as truncate (它也被称作截断取整). See more: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.midpointrounding#system-midpointrounding-tozero">ToZero</a>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Truncate.html#Zyl_VectorTraits_BitMath_Truncate_System_Half_">Truncate(Half)</a></dt>
+    <dd><p>Computes the round to zero of value (计算值的向零舍入). It is also known as truncate (它也被称作截断取整). See more: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.midpointrounding#system-midpointrounding-tozero">ToZero</a>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Truncate.html#Zyl_VectorTraits_BitMath_Truncate_System_Single_">Truncate(float)</a></dt>
+    <dd><p>Computes the round to zero of value (计算值的向零舍入). It is also known as truncate (它也被称作截断取整). See more: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.midpointrounding#system-midpointrounding-tozero">ToZero</a>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -756,16 +1264,6 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
     <dd><p>Reinterprets the specified 64-bit unsigned integer value as a double-precision floating-point value (将指定的 64 位无符号整数转换为单精度浮点数).</p>
 </dd>
   </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath._MM_SHUFFLE.html#Zyl_VectorTraits_BitMath__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">_MM_SHUFFLE(byte, byte, byte, byte)</a></dt>
-    <dd><p>Make the shuffle control code for selecting four 2-bit values (制作shuffle控制码, 用于选择4个2位值).</p>
-</dd>
-  </dl>
-  <dl class="jumplist">
-    <dt><a class="xref" href="Zyl.VectorTraits.BitMath._MM_SHUFFLE2.html#Zyl_VectorTraits_BitMath__MM_SHUFFLE2_System_Byte_System_Byte_">_MM_SHUFFLE2(byte, byte)</a></dt>
-    <dd><p>Make the shuffle control code for selecting two 1-bit values (制作shuffle控制码, 用于选择2个1位值).</p>
-</dd>
-  </dl>
 
 
   <h2 id="seealso">See Also</h2>
@@ -778,10 +1276,10 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.Helper.cs/#L6" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
-        
+
       </div>
 
       <div class="affix">
@@ -790,7 +1288,7 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>

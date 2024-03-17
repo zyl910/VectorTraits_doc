@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="ChangeLog (变更日志) ">
       
+      
       <link rel="icon" href="favicon.ico">
       <link rel="stylesheet" href="public/docfx.min.css">
       <link rel="stylesheet" href="public/main.css">
@@ -16,13 +17,21 @@
       
       
       <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/blob/main/ChangeLog.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
 
-  <script type="module">
-    import options from './public/main.js'
-    import { init } from './public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -74,6 +83,24 @@
         <article data-uid="">
 <h1 id="changelog-变更日志">ChangeLog (变更日志)</h1>
 
+<h2 id="2024-03-17-v20">[2024-03-17] v2.0</h2>
+<ul>
+<li>Major: Support for the X86 Sse family instruction set; supplement all vector methods for Vector128/Vector256; also provides innovative vector methods such as check floating number (YIsNaN, YIsInfinity), sign (YCopySign, YSign) (支持 x86的Sse系列指令集; 为 Vector128/Vector256 补充全部的向量方法; 还提供了 浮点数判断(YIsNaN, YIsinfinity)、符号判断(YCopySign, YSign) 等原创的向量方法).</li>
+<li>Provides the CPU model info (提供CPU型号信息). VectorEnvironment adds members: CpuModelName, CpuFlags, CpuDetectionCommand, CpuDetectionException, CpuDetectionResult .</li>
+<li>Provides information about the supported instruction set (提供所支持的指令集信息). e.g. <code>VectorEnvironment.SupportedInstructionSets</code>, <code>IBaseTraits.UsedInstructionSets</code></li>
+<li>Supplement all vector methods for Vector128/Vector256 (为 Vector128/Vector256 补充全部的向量方法): Dot, Equals, EqualsAll, EqualsAny, GreaterThanAll, GreaterThanAny, GreaterThanOrEqual, GreaterThanOrEqualAll, GreaterThanOrEqualAny, LessThanAll, LessThanAny, LessThanOrEqual, LessThanOrEqualAll, LessThanOrEqualAny, Sqrt .</li>
+<li>Provides the vector methods of bitwise operations (提供位运算的向量方法): YBitToByte, YBitToInt16, YBitToInt32, YBitToInt64, YOrNot .</li>
+<li>Provides the vector methods of check floating number (提供浮点数判断的向量方法): YIsEvenInteger, YIsFinite, YIsInfinity, YIsInfinityOrNaN, YIsInteger, YIsNaN, YIsNegative, YIsNegativeZero, YIsNegativeInfinity, YIsNormal, YIsNotNaN, YIsOddInteger, YIsPositive, YIsPositiveInfinity, YIsSubnormal, YIsZero, YIsZeroOrSubnormal.</li>
+<li>Provides the vector methods of check sign (提供符号判断的向量方法): YCopySign, YSign, YSignFloat .</li>
+<li>Provides the vector methods of clamp (提供限制的向量方法): YMaxNumber, YMinNumber .</li>
+<li>Provides the vector methods of compare (提供比较的向量方法): YIsAllTrue, YIsAnyTrue, YIsNotEquals.</li>
+<li>VectorTraits.dll: Add TargetFrameworks <code>net8.0</code> and <code>netstandard2.1</code> (增加目标框架 <code>net8.0</code> 与 <code>netstandard2.1</code> ).</li>
+<li>Provides arrays of fixed length (提供固定长度的数组). e.g. FixedArray2, FixedArray4 ...</li>
+<li>BitMath changed from static to abstract class. Add namespace Zyl.VectorTraits.Numerics, add some math functions (BitMath从静态类改为抽象类. 新增名称空间 Zyl.VectorTraits.Numerics, 增加一些的数学函数).</li>
+<li>Benchmark programs add command line parameter (基准测试程序增加命令行参数): -accelerated0 -allowFakeBenchmark -cpuDetection0 -fixedVector0 -test0</li>
+<li>Add tool program (增加工具程序): UpdateBenchmarkResults.</li>
+<li>Optimized hardware acceleration of ExtractMostSignificantBits methods in the Arm architecture (优化ExtractMostSignificantBits方法在Arm架构的硬件加速). For 8~64 bit types.</li>
+</ul>
 <h2 id="2023-09-07-v10">[2023-09-07] v1.0</h2>
 <ul>
 <li>Major: Support for the X86 Avx instruction set, as well as Arm AdvSimd instruction set; supports NET 5.0-7.0 new vector methods; also provides innovative vector methods such as 4-element shuffle (YShuffleG4), saturation narrow (YNarrowSaturate, YNarrowSaturateUnsigned) (支持 x86的Avx指令集, 以及Arm的 AdvSimd 指令集; 支持 NET 5.0-7.0 新增的向量方法; 还提供了 4元素换位(YShuffleG4)、饱和变窄(YNarrowSaturate, YNarrowSaturateUnsigned) 等原创的向量方法).</li>
@@ -88,6 +115,7 @@
 <li>Provides the vector methods of round (提供舍入的向量方法): YRoundToEven, YRoundToZero .</li>
 <li>Provides the vector methods of shuffle (提供换位的向量方法): YShuffleInsert, YShuffleKernel, YShuffleG2, YShuffleG4, YShuffleG4X2 . Also provides ShuffleControlG2/ShuffleControlG4 enum.</li>
 </ul>
+
 </article>
 
         <div class="contribution d-print-none">
@@ -95,7 +123,7 @@
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>
-        
+
       </div>
 
       <div class="affix">
@@ -104,7 +132,7 @@
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>

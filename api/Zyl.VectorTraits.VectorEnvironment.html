@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class VectorEnvironment
- </title>
+      <title>Class VectorEnvironment </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class VectorEnvironment
- ">
+      <meta name="title" content="Class VectorEnvironment ">
       
+      <meta name="description" content="Environment information related to vector types. Its members are similar to ,. It caches properties, improving performance (向量类型相关的环境信息. 它的成员类似 ,. 它会对属性进行缓存, 提高了性能).">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -18,13 +17,21 @@
       
       
       <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_VectorEnvironment.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.VectorEnvironment%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
   </head>
 
-  <script type="module">
-    import options from './../public/main.js'
-    import { init } from './../public/docfx.min.js'
-    init(options)
-  </script>
+  <script type="module" src="./../public/docfx.min.js"></script>
 
   <script>
     const theme = localStorage.getItem('theme') || 'auto'
@@ -78,8 +85,7 @@
 
 
   <h1 id="Zyl_VectorTraits_VectorEnvironment" data-uid="Zyl.VectorTraits.VectorEnvironment" class="text-break">
-    Class VectorEnvironment
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorEnvironment.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class VectorEnvironment  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorEnvironment.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -108,7 +114,7 @@
 
 
 
-  <dl class="typelist derived">
+  <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
     <div>
@@ -142,6 +148,36 @@
 </h2>
 
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.VectorEnvironment.CpuDetectionCommand.html#Zyl_VectorTraits_VectorEnvironment_CpuDetectionCommand">CpuDetectionCommand</a></dt>
+    <dd><p>Command used for CPU detection (CPU检测所用命令). e.g. <code>wmic</code> ...</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.VectorEnvironment.CpuDetectionException.html#Zyl_VectorTraits_VectorEnvironment_CpuDetectionException">CpuDetectionException</a></dt>
+    <dd><p>Latest exception during CPU detection (CPU检测时的最新异常).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.VectorEnvironment.CpuDetectionResult.html#Zyl_VectorTraits_VectorEnvironment_CpuDetectionResult">CpuDetectionResult</a></dt>
+    <dd><p>The raw return value of the CPU detection. It is related to <a class="xref" href="Zyl.VectorTraits.Impl.Util.CpuDetectionHelper.CpuDetectionCommand.html#Zyl_VectorTraits_Impl_Util_CpuDetectionHelper_CpuDetectionCommand">CpuDetectionCommand</a> (CPU检测的原始返回值. 它与 CpuDetectionCommand 有关.).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.VectorEnvironment.CpuFlags.html#Zyl_VectorTraits_VectorEnvironment_CpuFlags">CpuFlags</a></dt>
+    <dd><p>CPU feature Flags (CPU特征标志).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.VectorEnvironment.CpuModelName.html#Zyl_VectorTraits_VectorEnvironment_CpuModelName">CpuModelName</a></dt>
+    <dd><p>CPU model name (CPU型号名).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.VectorEnvironment.InstructionSetsSeparator.html#Zyl_VectorTraits_VectorEnvironment_InstructionSetsSeparator">InstructionSetsSeparator</a></dt>
+    <dd><p>The separator of the instruction set (指令集的分隔符).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.VectorEnvironment.Is64BitProcess.html#Zyl_VectorTraits_VectorEnvironment_Is64BitProcess">Is64BitProcess</a></dt>
     <dd><p>Gets a value that indicates whether the current process is a 64-bit process (获取一个值，该值指示当前进程是否为 64 位进程).</p>
 </dd>
@@ -161,6 +197,11 @@
     <dd><p>Gets a value that indicates whether the current process architecture is a X86 family (获取一个值，该值指示当前进程架构是否为 X86 家族的). e.g. X86, X64 .</p>
 </dd>
   </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.VectorEnvironment.SupportedInstructionSets.html#Zyl_VectorTraits_VectorEnvironment_SupportedInstructionSets">SupportedInstructionSets</a></dt>
+    <dd><p>Supported instruction sets. The separator is a comma char ',' (支持的指令集. 分隔符是逗号 ',').</p>
+</dd>
+  </dl>
 
 
   <h2 id="seealso">See Also</h2>
@@ -172,10 +213,10 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorEnvironment.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorEnvironment.cs/#L14" class="edit-link">Edit this page</a>
         </div>
 
-        
+
       </div>
 
       <div class="affix">
@@ -184,7 +225,7 @@
     </main>
 
 
-    <footer class="border-top">
+    <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
           <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
