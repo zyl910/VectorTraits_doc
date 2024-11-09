@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add*" class="text-break">
-Method Add  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L79"><i class="bi bi-code-slash"></i></a>
+Method Add  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L86"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Add  <a class="header-action link-secondary" title="View source" href="ht
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_System_Runtime_Intrinsics_Vector256_System_Single__System_Runtime_Intrinsics_Vector256_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add(System.Runtime.Intrinsics.Vector256{System.Single},System.Runtime.Intrinsics.Vector256{System.Single})">
   Add(Vector256&lt;float&gt;, Vector256&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L86"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds two vectors to compute their sum (将两个向量相加来计算它们的和).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt[i] := left[i] + right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_System_Runtime_Intrinsics_Vector256_System_Double__System_Runtime_Intrinsics_Vector256_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add(System.Runtime.Intrinsics.Vector256{System.Double},System.Runtime.Intrinsics.Vector256{System.Double})">
   Add(Vector256&lt;double&gt;, Vector256&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L92"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds two vectors to compute their sum (将两个向量相加来计算它们的和).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt[i] := left[i] + right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add(System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte})">
   Add(Vector256&lt;sbyte&gt;, Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L98"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds two vectors to compute their sum (将两个向量相加来计算它们的和).
@@ -268,7 +268,7 @@ public static Vector256&lt;sbyte&gt; Add(Vector256&lt;sbyte&gt; left, Vector256&
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_System_Runtime_Intrinsics_Vector256_System_Byte__System_Runtime_Intrinsics_Vector256_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add(System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte})">
   Add(Vector256&lt;byte&gt;, Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L105"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds two vectors to compute their sum (将两个向量相加来计算它们的和).
@@ -318,7 +318,7 @@ Mnemonic: <code>rt[i] := left[i] + right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add(System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16})">
   Add(Vector256&lt;short&gt;, Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L111"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds two vectors to compute their sum (将两个向量相加来计算它们的和).
@@ -368,7 +368,7 @@ Mnemonic: <code>rt[i] := left[i] + right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Runtime_Intrinsics_Vector256_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16})">
   Add(Vector256&lt;ushort&gt;, Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L117"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds two vectors to compute their sum (将两个向量相加来计算它们的和).
@@ -419,7 +419,7 @@ public static Vector256&lt;ushort&gt; Add(Vector256&lt;ushort&gt; left, Vector25
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add(System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32})">
   Add(Vector256&lt;int&gt;, Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L124"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds two vectors to compute their sum (将两个向量相加来计算它们的和).
@@ -469,7 +469,7 @@ Mnemonic: <code>rt[i] := left[i] + right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Runtime_Intrinsics_Vector256_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32})">
   Add(Vector256&lt;uint&gt;, Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L130"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds two vectors to compute their sum (将两个向量相加来计算它们的和).
@@ -520,7 +520,7 @@ public static Vector256&lt;uint&gt; Add(Vector256&lt;uint&gt; left, Vector256&lt
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add(System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64})">
   Add(Vector256&lt;long&gt;, Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L137"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds two vectors to compute their sum (将两个向量相加来计算它们的和).
@@ -570,7 +570,7 @@ Mnemonic: <code>rt[i] := left[i] + right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Add_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Runtime_Intrinsics_Vector256_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Add(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64})">
   Add(Vector256&lt;ulong&gt;, Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L143"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Adds two vectors to compute their sum (将两个向量相加来计算它们的和).
@@ -620,7 +620,7 @@ public static Vector256&lt;ulong&gt; Add(Vector256&lt;ulong&gt; left, Vector256&
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L79" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L86" class="edit-link">Edit this page</a>
         </div>
 
 

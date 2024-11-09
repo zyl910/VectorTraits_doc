@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../../../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,6 +85,695 @@
 
 <p>(<a href="YShuffleG4X2.html">← Back</a>)</p>
 <p>Unit of data: Million operations per second. The larger the number, the better the performance.</p>
+<h3 id="x86---amd-ryzen-7-7840h">X86 - AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">932.849</td>
+<td style="text-align: right;">857.083</td>
+<td style="text-align: right;">836.889</td>
+<td style="text-align: right;">851.184</td>
+<td style="text-align: right;">876.439</td>
+<td style="text-align: right;">841.274</td>
+<td style="text-align: right;">864.052</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;">907.773</td>
+<td style="text-align: right;">846.272</td>
+<td style="text-align: right;">20988.970</td>
+<td style="text-align: right;">24259.678</td>
+<td style="text-align: right;">28714.463</td>
+<td style="text-align: right;">28411.778</td>
+<td style="text-align: right;">26522.605</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">937.669</td>
+<td style="text-align: right;">863.389</td>
+<td style="text-align: right;">29062.897</td>
+<td style="text-align: right;">30749.699</td>
+<td style="text-align: right;">34800.021</td>
+<td style="text-align: right;">33539.357</td>
+<td style="text-align: right;">34734.374</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">788.375</td>
+<td style="text-align: right;">728.822</td>
+<td style="text-align: right;">28512.432</td>
+<td style="text-align: right;">31525.252</td>
+<td style="text-align: right;">35639.518</td>
+<td style="text-align: right;">35323.473</td>
+<td style="text-align: right;">35114.181</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">432.967</td>
+<td style="text-align: right;">434.706</td>
+<td style="text-align: right;">432.871</td>
+<td style="text-align: right;">492.241</td>
+<td style="text-align: right;">525.951</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">28233.307</td>
+<td style="text-align: right;">31109.392</td>
+<td style="text-align: right;">36356.234</td>
+<td style="text-align: right;">34364.944</td>
+<td style="text-align: right;">35189.646</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">901.082</td>
+<td style="text-align: right;">858.425</td>
+<td style="text-align: right;">39070.402</td>
+<td style="text-align: right;">39501.008</td>
+<td style="text-align: right;">38643.543</td>
+<td style="text-align: right;">37657.209</td>
+<td style="text-align: right;">38505.508</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">747.602</td>
+<td style="text-align: right;">720.269</td>
+<td style="text-align: right;">38801.858</td>
+<td style="text-align: right;">38461.283</td>
+<td style="text-align: right;">38203.686</td>
+<td style="text-align: right;">38293.013</td>
+<td style="text-align: right;">37763.698</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">38917.102</td>
+<td style="text-align: right;">38756.603</td>
+<td style="text-align: right;">37700.343</td>
+<td style="text-align: right;">37241.789</td>
+<td style="text-align: right;">37945.592</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">881.357</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">45244.389</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">708.401</td>
+<td style="text-align: right;">658.863</td>
+<td style="text-align: right;">686.634</td>
+<td style="text-align: right;">690.427</td>
+<td style="text-align: right;">681.261</td>
+<td style="text-align: right;">692.795</td>
+<td style="text-align: right;">701.310</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;">682.318</td>
+<td style="text-align: right;">665.595</td>
+<td style="text-align: right;">13224.210</td>
+<td style="text-align: right;">10471.827</td>
+<td style="text-align: right;">11661.263</td>
+<td style="text-align: right;">12331.832</td>
+<td style="text-align: right;">16072.444</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">701.631</td>
+<td style="text-align: right;">685.846</td>
+<td style="text-align: right;">15161.528</td>
+<td style="text-align: right;">13921.015</td>
+<td style="text-align: right;">14706.853</td>
+<td style="text-align: right;">15489.143</td>
+<td style="text-align: right;">16990.173</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">563.486</td>
+<td style="text-align: right;">552.068</td>
+<td style="text-align: right;">15483.075</td>
+<td style="text-align: right;">12897.447</td>
+<td style="text-align: right;">15144.164</td>
+<td style="text-align: right;">15258.950</td>
+<td style="text-align: right;">17129.397</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">298.850</td>
+<td style="text-align: right;">297.491</td>
+<td style="text-align: right;">297.649</td>
+<td style="text-align: right;">255.042</td>
+<td style="text-align: right;">265.971</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum256_AvxByte</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13282.211</td>
+<td style="text-align: right;">10358.081</td>
+<td style="text-align: right;">11663.457</td>
+<td style="text-align: right;">12632.545</td>
+<td style="text-align: right;">16113.826</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">15143.842</td>
+<td style="text-align: right;">13773.854</td>
+<td style="text-align: right;">15070.801</td>
+<td style="text-align: right;">15646.616</td>
+<td style="text-align: right;">17023.002</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">688.537</td>
+<td style="text-align: right;">686.595</td>
+<td style="text-align: right;">19483.800</td>
+<td style="text-align: right;">19595.733</td>
+<td style="text-align: right;">18810.468</td>
+<td style="text-align: right;">19184.438</td>
+<td style="text-align: right;">17996.367</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">563.599</td>
+<td style="text-align: right;">551.314</td>
+<td style="text-align: right;">19346.964</td>
+<td style="text-align: right;">18910.901</td>
+<td style="text-align: right;">18974.978</td>
+<td style="text-align: right;">18464.753</td>
+<td style="text-align: right;">18624.287</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19430.094</td>
+<td style="text-align: right;">18166.371</td>
+<td style="text-align: right;">19039.168</td>
+<td style="text-align: right;">19111.498</td>
+<td style="text-align: right;">18287.944</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">842.825</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19554.420</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">522.949</td>
+<td style="text-align: right;">538.362</td>
+<td style="text-align: right;">542.829</td>
+<td style="text-align: right;">530.794</td>
+<td style="text-align: right;">542.965</td>
+<td style="text-align: right;">536.505</td>
+<td style="text-align: right;">562.778</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;">544.235</td>
+<td style="text-align: right;">518.716</td>
+<td style="text-align: right;">5437.361</td>
+<td style="text-align: right;">5389.533</td>
+<td style="text-align: right;">6926.200</td>
+<td style="text-align: right;">5972.114</td>
+<td style="text-align: right;">6657.890</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">546.002</td>
+<td style="text-align: right;">519.799</td>
+<td style="text-align: right;">6664.104</td>
+<td style="text-align: right;">6805.716</td>
+<td style="text-align: right;">8071.543</td>
+<td style="text-align: right;">7647.959</td>
+<td style="text-align: right;">8533.007</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">379.590</td>
+<td style="text-align: right;">371.322</td>
+<td style="text-align: right;">6706.533</td>
+<td style="text-align: right;">7044.950</td>
+<td style="text-align: right;">8229.299</td>
+<td style="text-align: right;">7572.252</td>
+<td style="text-align: right;">8470.704</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">176.912</td>
+<td style="text-align: right;">169.318</td>
+<td style="text-align: right;">170.616</td>
+<td style="text-align: right;">445.845</td>
+<td style="text-align: right;">489.290</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6275.586</td>
+<td style="text-align: right;">6332.355</td>
+<td style="text-align: right;">8532.363</td>
+<td style="text-align: right;">7530.993</td>
+<td style="text-align: right;">8362.667</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">551.994</td>
+<td style="text-align: right;">552.244</td>
+<td style="text-align: right;">9224.785</td>
+<td style="text-align: right;">9073.656</td>
+<td style="text-align: right;">9173.119</td>
+<td style="text-align: right;">9101.991</td>
+<td style="text-align: right;">9203.110</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">389.703</td>
+<td style="text-align: right;">374.339</td>
+<td style="text-align: right;">9215.734</td>
+<td style="text-align: right;">9093.494</td>
+<td style="text-align: right;">9487.618</td>
+<td style="text-align: right;">9146.258</td>
+<td style="text-align: right;">9197.155</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8984.493</td>
+<td style="text-align: right;">9206.516</td>
+<td style="text-align: right;">9240.250</td>
+<td style="text-align: right;">9163.501</td>
+<td style="text-align: right;">9168.055</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">664.574</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9984.934</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">921.770</td>
+<td style="text-align: right;">871.936</td>
+<td style="text-align: right;">896.449</td>
+<td style="text-align: right;">914.022</td>
+<td style="text-align: right;">835.593</td>
+<td style="text-align: right;">924.133</td>
+<td style="text-align: right;">856.264</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;">924.459</td>
+<td style="text-align: right;">906.186</td>
+<td style="text-align: right;">46818.160</td>
+<td style="text-align: right;">47147.269</td>
+<td style="text-align: right;">59229.988</td>
+<td style="text-align: right;">62022.890</td>
+<td style="text-align: right;">67615.594</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">951.955</td>
+<td style="text-align: right;">894.447</td>
+<td style="text-align: right;">65921.580</td>
+<td style="text-align: right;">64169.644</td>
+<td style="text-align: right;">70322.789</td>
+<td style="text-align: right;">73841.190</td>
+<td style="text-align: right;">74944.981</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">866.870</td>
+<td style="text-align: right;">788.888</td>
+<td style="text-align: right;">62890.216</td>
+<td style="text-align: right;">62521.063</td>
+<td style="text-align: right;">69877.752</td>
+<td style="text-align: right;">71101.981</td>
+<td style="text-align: right;">73542.098</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">553.210</td>
+<td style="text-align: right;">541.171</td>
+<td style="text-align: right;">508.771</td>
+<td style="text-align: right;">977.423</td>
+<td style="text-align: right;">1054.977</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">63720.486</td>
+<td style="text-align: right;">62994.811</td>
+<td style="text-align: right;">71219.755</td>
+<td style="text-align: right;">72043.149</td>
+<td style="text-align: right;">72898.902</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">956.700</td>
+<td style="text-align: right;">837.742</td>
+<td style="text-align: right;">64196.544</td>
+<td style="text-align: right;">61935.418</td>
+<td style="text-align: right;">65116.939</td>
+<td style="text-align: right;">71932.872</td>
+<td style="text-align: right;">75253.882</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">852.483</td>
+<td style="text-align: right;">798.094</td>
+<td style="text-align: right;">65672.111</td>
+<td style="text-align: right;">62243.783</td>
+<td style="text-align: right;">67444.837</td>
+<td style="text-align: right;">73284.557</td>
+<td style="text-align: right;">76071.745</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">64128.357</td>
+<td style="text-align: right;">63223.678</td>
+<td style="text-align: right;">67611.717</td>
+<td style="text-align: right;">73528.369</td>
+<td style="text-align: right;">76548.870</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">876.075</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">83615.534</td>
+</tr>
+</tbody>
+</table>
 <h3 id="x86---intel-core-i5-8250u">X86 - Intel Core i5-8250U</h3>
 <table>
 <thead>
@@ -552,6 +1241,447 @@
 </tr>
 </tbody>
 </table>
+<h3 id="arm---apple-m2">Arm - Apple M2</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1266.145</td>
+<td style="text-align: right;">2017.094</td>
+<td style="text-align: right;">2033.488</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;">22828.856</td>
+<td style="text-align: right;">23518.214</td>
+<td style="text-align: right;">26910.156</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">25514.693</td>
+<td style="text-align: right;">26829.468</td>
+<td style="text-align: right;">27164.932</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">11921.728</td>
+<td style="text-align: right;">11375.207</td>
+<td style="text-align: right;">27160.534</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">1060.931</td>
+<td style="text-align: right;">989.560</td>
+<td style="text-align: right;">998.447</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;">16112.361</td>
+<td style="text-align: right;">17400.628</td>
+<td style="text-align: right;">23948.554</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">25507.665</td>
+<td style="text-align: right;">26834.360</td>
+<td style="text-align: right;">27170.830</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">11900.069</td>
+<td style="text-align: right;">11374.801</td>
+<td style="text-align: right;">27165.799</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">25503.530</td>
+<td style="text-align: right;">26823.701</td>
+<td style="text-align: right;">27154.820</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">11881.957</td>
+<td style="text-align: right;">11390.594</td>
+<td style="text-align: right;">27165.108</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;">25505.617</td>
+<td style="text-align: right;">26833.371</td>
+<td style="text-align: right;">27168.774</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1759.388</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1792.255</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">3272.623</td>
+<td style="text-align: right;">3510.706</td>
+<td style="text-align: right;">3510.907</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;">11420.907</td>
+<td style="text-align: right;">12096.314</td>
+<td style="text-align: right;">13514.691</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">12765.153</td>
+<td style="text-align: right;">13560.104</td>
+<td style="text-align: right;">13568.031</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">5941.773</td>
+<td style="text-align: right;">5517.619</td>
+<td style="text-align: right;">13545.642</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">1306.510</td>
+<td style="text-align: right;">494.591</td>
+<td style="text-align: right;">499.155</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;">8056.450</td>
+<td style="text-align: right;">8699.414</td>
+<td style="text-align: right;">11978.400</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">12768.117</td>
+<td style="text-align: right;">13562.594</td>
+<td style="text-align: right;">13567.261</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">5947.472</td>
+<td style="text-align: right;">5518.168</td>
+<td style="text-align: right;">13567.360</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum256_AvxByte</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">12768.205</td>
+<td style="text-align: right;">13563.960</td>
+<td style="text-align: right;">13568.443</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">5928.307</td>
+<td style="text-align: right;">5519.171</td>
+<td style="text-align: right;">13567.871</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;">12767.220</td>
+<td style="text-align: right;">13548.236</td>
+<td style="text-align: right;">13567.536</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1832.706</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1839.055</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">995.330</td>
+<td style="text-align: right;">1426.754</td>
+<td style="text-align: right;">2228.386</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">4345.013</td>
+<td style="text-align: right;">4370.626</td>
+<td style="text-align: right;">5127.943</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">2342.740</td>
+<td style="text-align: right;">2479.855</td>
+<td style="text-align: right;">5128.556</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">677.749</td>
+<td style="text-align: right;">1425.859</td>
+<td style="text-align: right;">2213.691</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;">2315.011</td>
+<td style="text-align: right;">2406.883</td>
+<td style="text-align: right;">2630.674</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">4344.798</td>
+<td style="text-align: right;">4370.687</td>
+<td style="text-align: right;">5127.537</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">2341.368</td>
+<td style="text-align: right;">2470.290</td>
+<td style="text-align: right;">5127.707</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">4180.220</td>
+<td style="text-align: right;">4370.805</td>
+<td style="text-align: right;">5127.101</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">2341.544</td>
+<td style="text-align: right;">2470.290</td>
+<td style="text-align: right;">5127.666</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;">4180.824</td>
+<td style="text-align: right;">4370.989</td>
+<td style="text-align: right;">5128.206</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1526.467</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1551.242</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1388.692</td>
+<td style="text-align: right;">1936.440</td>
+<td style="text-align: right;">1950.010</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;">45275.217</td>
+<td style="text-align: right;">48093.272</td>
+<td style="text-align: right;">53824.371</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">50639.522</td>
+<td style="text-align: right;">53953.917</td>
+<td style="text-align: right;">54129.662</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">23575.785</td>
+<td style="text-align: right;">23469.345</td>
+<td style="text-align: right;">54138.762</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">1134.480</td>
+<td style="text-align: right;">1978.018</td>
+<td style="text-align: right;">1996.198</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;">32155.494</td>
+<td style="text-align: right;">34725.077</td>
+<td style="text-align: right;">47766.135</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">50651.126</td>
+<td style="text-align: right;">53935.614</td>
+<td style="text-align: right;">54135.497</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">23624.743</td>
+<td style="text-align: right;">23476.011</td>
+<td style="text-align: right;">54142.845</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">50644.832</td>
+<td style="text-align: right;">53953.044</td>
+<td style="text-align: right;">54127.973</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">23581.920</td>
+<td style="text-align: right;">23478.810</td>
+<td style="text-align: right;">54135.303</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;">50648.761</td>
+<td style="text-align: right;">53952.223</td>
+<td style="text-align: right;">54145.715</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1631.974</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1552.746</td>
+</tr>
+</tbody>
+</table>
 <h3 id="arm---aws-arm-t4gsmall">Arm - AWS Arm t4g.small</h3>
 <table>
 <thead>
@@ -562,56 +1692,81 @@
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
 <td style="text-align: left;">SumBase</td>
-<td style="text-align: right;">385.858</td>
+<td style="text-align: right;">388.572</td>
 <td style="text-align: right;">387.764</td>
-<td style="text-align: right;">387.014</td>
-<td style="text-align: right;">517.029</td>
+<td style="text-align: right;">387.454</td>
+<td style="text-align: right;">514.192</td>
+<td style="text-align: right;">499.889</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
 <td style="text-align: left;">SumX1Traits</td>
-<td style="text-align: right;">383.028</td>
+<td style="text-align: right;">388.802</td>
 <td style="text-align: right;">5935.688</td>
-<td style="text-align: right;">7893.089</td>
-<td style="text-align: right;">8859.966</td>
+<td style="text-align: right;">8218.359</td>
+<td style="text-align: right;">8868.754</td>
+<td style="text-align: right;">10959.278</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">385.785</td>
+<td style="text-align: right;">388.963</td>
 <td style="text-align: right;">7144.903</td>
-<td style="text-align: right;">8462.884</td>
-<td style="text-align: right;">10554.444</td>
+<td style="text-align: right;">8740.520</td>
+<td style="text-align: right;">10564.249</td>
+<td style="text-align: right;">12289.034</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
 <td style="text-align: left;">SumTraits_Tuple</td>
-<td style="text-align: right;">353.229</td>
+<td style="text-align: right;">355.816</td>
 <td style="text-align: right;">2154.287</td>
-<td style="text-align: right;">2894.568</td>
-<td style="text-align: right;">2909.155</td>
+<td style="text-align: right;">2954.695</td>
+<td style="text-align: right;">2872.239</td>
+<td style="text-align: right;">12295.928</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">245.618</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">245.204</td>
+<td style="text-align: right;">323.392</td>
+<td style="text-align: right;">324.487</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
 <td style="text-align: left;">Sum128_AdvSimd</td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;">3681.616</td>
-<td style="text-align: right;">5305.467</td>
-<td style="text-align: right;">5792.771</td>
+<td style="text-align: right;">5417.959</td>
+<td style="text-align: right;">5775.797</td>
+<td style="text-align: right;">6926.310</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
 <td style="text-align: left;">Sum128Traits</td>
-<td style="text-align: right;">242.531</td>
+<td style="text-align: right;">245.409</td>
 <td style="text-align: right;">7137.978</td>
-<td style="text-align: right;">8546.491</td>
-<td style="text-align: right;">10561.232</td>
+<td style="text-align: right;">9020.751</td>
+<td style="text-align: right;">10551.366</td>
+<td style="text-align: right;">12291.394</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">228.697</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2952.599</td>
+<td style="text-align: right;">2855.831</td>
+<td style="text-align: right;">12300.414</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
@@ -620,30 +1775,34 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
 <td style="text-align: left;">Sum_ConstTraits</td>
-<td style="text-align: right;">373.978</td>
+<td style="text-align: right;">376.898</td>
 <td style="text-align: right;">7162.871</td>
-<td style="text-align: right;">8402.658</td>
-<td style="text-align: right;">9948.207</td>
+<td style="text-align: right;">8751.098</td>
+<td style="text-align: right;">9933.533</td>
+<td style="text-align: right;">12295.206</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
 <td style="text-align: left;">Sum_ConstTraits_Tuple</td>
-<td style="text-align: right;">343.227</td>
+<td style="text-align: right;">344.906</td>
 <td style="text-align: right;">2152.246</td>
-<td style="text-align: right;">2946.516</td>
-<td style="text-align: right;">3000.704</td>
+<td style="text-align: right;">2842.910</td>
+<td style="text-align: right;">2844.992</td>
+<td style="text-align: right;">12291.962</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
 <td style="text-align: left;">Sum_Const128Traits</td>
-<td style="text-align: right;">238.526</td>
+<td style="text-align: right;">238.738</td>
 <td style="text-align: right;">7168.684</td>
-<td style="text-align: right;">8526.711</td>
-<td style="text-align: right;">9954.407</td>
+<td style="text-align: right;">8687.564</td>
+<td style="text-align: right;">9935.026</td>
+<td style="text-align: right;">12301.023</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
@@ -652,54 +1811,97 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">516.232</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">521.424</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
 <td style="text-align: left;">SumBase</td>
-<td style="text-align: right;">373.690</td>
+<td style="text-align: right;">385.425</td>
 <td style="text-align: right;">381.151</td>
-<td style="text-align: right;">381.516</td>
-<td style="text-align: right;">394.864</td>
+<td style="text-align: right;">382.970</td>
+<td style="text-align: right;">395.455</td>
+<td style="text-align: right;">408.281</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
 <td style="text-align: left;">SumX1Traits</td>
-<td style="text-align: right;">376.163</td>
+<td style="text-align: right;">384.757</td>
 <td style="text-align: right;">3536.042</td>
-<td style="text-align: right;">3871.594</td>
-<td style="text-align: right;">4210.424</td>
+<td style="text-align: right;">4006.673</td>
+<td style="text-align: right;">4243.097</td>
+<td style="text-align: right;">5390.197</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">375.524</td>
+<td style="text-align: right;">386.245</td>
 <td style="text-align: right;">3879.751</td>
-<td style="text-align: right;">4254.200</td>
-<td style="text-align: right;">5109.443</td>
+<td style="text-align: right;">4325.246</td>
+<td style="text-align: right;">5162.812</td>
+<td style="text-align: right;">6040.819</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
 <td style="text-align: left;">SumTraits_Tuple</td>
-<td style="text-align: right;">281.434</td>
+<td style="text-align: right;">302.025</td>
 <td style="text-align: right;">1379.956</td>
-<td style="text-align: right;">1428.878</td>
-<td style="text-align: right;">1468.844</td>
+<td style="text-align: right;">1370.696</td>
+<td style="text-align: right;">1440.568</td>
+<td style="text-align: right;">6054.474</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">184.142</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">189.719</td>
+<td style="text-align: right;">161.180</td>
+<td style="text-align: right;">161.462</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
 <td style="text-align: left;">Sum128_AdvSimd</td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;">2224.736</td>
-<td style="text-align: right;">2669.193</td>
-<td style="text-align: right;">2872.439</td>
+<td style="text-align: right;">2700.939</td>
+<td style="text-align: right;">2839.176</td>
+<td style="text-align: right;">3456.390</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
 <td style="text-align: left;">Sum128Traits</td>
-<td style="text-align: right;">178.734</td>
+<td style="text-align: right;">183.913</td>
 <td style="text-align: right;">3875.407</td>
-<td style="text-align: right;">4193.269</td>
-<td style="text-align: right;">5101.200</td>
+<td style="text-align: right;">4344.588</td>
+<td style="text-align: right;">5178.832</td>
+<td style="text-align: right;">6041.822</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">164.708</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1370.193</td>
+<td style="text-align: right;">1455.882</td>
+<td style="text-align: right;">6043.611</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
@@ -708,6 +1910,7 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
@@ -716,30 +1919,34 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
 <td style="text-align: left;">Sum_ConstTraits</td>
-<td style="text-align: right;">384.960</td>
+<td style="text-align: right;">399.729</td>
 <td style="text-align: right;">3879.192</td>
-<td style="text-align: right;">4207.505</td>
-<td style="text-align: right;">4825.364</td>
+<td style="text-align: right;">4339.523</td>
+<td style="text-align: right;">4893.442</td>
+<td style="text-align: right;">6059.206</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
 <td style="text-align: left;">Sum_ConstTraits_Tuple</td>
-<td style="text-align: right;">287.371</td>
+<td style="text-align: right;">311.570</td>
 <td style="text-align: right;">1170.146</td>
-<td style="text-align: right;">1428.726</td>
-<td style="text-align: right;">1458.906</td>
+<td style="text-align: right;">1371.375</td>
+<td style="text-align: right;">1444.626</td>
+<td style="text-align: right;">6063.987</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
 <td style="text-align: left;">Sum_Const128Traits</td>
-<td style="text-align: right;">179.090</td>
+<td style="text-align: right;">183.625</td>
 <td style="text-align: right;">3878.295</td>
-<td style="text-align: right;">4195.113</td>
-<td style="text-align: right;">4838.384</td>
+<td style="text-align: right;">4357.983</td>
+<td style="text-align: right;">4894.059</td>
+<td style="text-align: right;">6052.588</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
@@ -748,14 +1955,34 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">549.540</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">571.969</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
 <td style="text-align: left;">SumBase</td>
-<td style="text-align: right;">314.661</td>
+<td style="text-align: right;">326.921</td>
 <td style="text-align: right;">338.750</td>
-<td style="text-align: right;">340.130</td>
-<td style="text-align: right;">464.597</td>
+<td style="text-align: right;">340.240</td>
+<td style="text-align: right;">433.911</td>
+<td style="text-align: right;">599.349</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
@@ -764,38 +1991,61 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">314.596</td>
+<td style="text-align: right;">326.327</td>
 <td style="text-align: right;">1209.464</td>
-<td style="text-align: right;">1536.557</td>
-<td style="text-align: right;">1634.510</td>
+<td style="text-align: right;">1535.823</td>
+<td style="text-align: right;">1649.868</td>
+<td style="text-align: right;">1891.549</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
 <td style="text-align: left;">SumTraits_Tuple</td>
-<td style="text-align: right;">255.207</td>
+<td style="text-align: right;">267.943</td>
 <td style="text-align: right;">429.520</td>
-<td style="text-align: right;">676.752</td>
-<td style="text-align: right;">710.218</td>
+<td style="text-align: right;">629.843</td>
+<td style="text-align: right;">748.853</td>
+<td style="text-align: right;">1891.635</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">224.117</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">228.689</td>
+<td style="text-align: right;">471.974</td>
+<td style="text-align: right;">479.340</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
 <td style="text-align: left;">Sum128_AdvSimd</td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;">536.945</td>
-<td style="text-align: right;">674.696</td>
-<td style="text-align: right;">726.143</td>
+<td style="text-align: right;">646.288</td>
+<td style="text-align: right;">697.292</td>
+<td style="text-align: right;">752.081</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
 <td style="text-align: left;">Sum128Traits</td>
-<td style="text-align: right;">205.594</td>
+<td style="text-align: right;">224.481</td>
 <td style="text-align: right;">1209.861</td>
-<td style="text-align: right;">1499.145</td>
-<td style="text-align: right;">1630.660</td>
+<td style="text-align: right;">1500.433</td>
+<td style="text-align: right;">1649.320</td>
+<td style="text-align: right;">1895.580</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">177.525</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">629.945</td>
+<td style="text-align: right;">733.392</td>
+<td style="text-align: right;">1890.259</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
@@ -804,30 +2054,34 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
 <td style="text-align: left;">Sum_ConstTraits</td>
-<td style="text-align: right;">311.072</td>
+<td style="text-align: right;">318.860</td>
 <td style="text-align: right;">1206.914</td>
-<td style="text-align: right;">1500.990</td>
-<td style="text-align: right;">1633.253</td>
+<td style="text-align: right;">1493.044</td>
+<td style="text-align: right;">1650.172</td>
+<td style="text-align: right;">1888.801</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
 <td style="text-align: left;">Sum_ConstTraits_Tuple</td>
-<td style="text-align: right;">253.560</td>
+<td style="text-align: right;">266.385</td>
 <td style="text-align: right;">430.271</td>
-<td style="text-align: right;">676.521</td>
-<td style="text-align: right;">709.713</td>
+<td style="text-align: right;">631.521</td>
+<td style="text-align: right;">735.695</td>
+<td style="text-align: right;">1887.523</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
 <td style="text-align: left;">Sum_Const128Traits</td>
-<td style="text-align: right;">203.104</td>
+<td style="text-align: right;">223.903</td>
 <td style="text-align: right;">1205.197</td>
-<td style="text-align: right;">1498.478</td>
-<td style="text-align: right;">1632.409</td>
+<td style="text-align: right;">1492.042</td>
+<td style="text-align: right;">1649.360</td>
+<td style="text-align: right;">1890.652</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
@@ -836,54 +2090,97 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">506.096</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">563.436</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
 <td style="text-align: left;">SumBase</td>
-<td style="text-align: right;">459.578</td>
+<td style="text-align: right;">464.075</td>
 <td style="text-align: right;">463.651</td>
-<td style="text-align: right;">463.870</td>
-<td style="text-align: right;">638.305</td>
+<td style="text-align: right;">462.850</td>
+<td style="text-align: right;">636.873</td>
+<td style="text-align: right;">613.894</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
 <td style="text-align: left;">SumX1Traits</td>
-<td style="text-align: right;">462.515</td>
+<td style="text-align: right;">463.459</td>
 <td style="text-align: right;">14034.527</td>
-<td style="text-align: right;">14040.669</td>
-<td style="text-align: right;">17806.962</td>
+<td style="text-align: right;">16368.976</td>
+<td style="text-align: right;">17226.361</td>
+<td style="text-align: right;">15410.569</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">460.261</td>
+<td style="text-align: right;">463.894</td>
 <td style="text-align: right;">15515.454</td>
-<td style="text-align: right;">17124.365</td>
-<td style="text-align: right;">21066.988</td>
+<td style="text-align: right;">18019.755</td>
+<td style="text-align: right;">21023.719</td>
+<td style="text-align: right;">19338.464</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
 <td style="text-align: left;">SumTraits_Tuple</td>
-<td style="text-align: right;">433.209</td>
+<td style="text-align: right;">437.336</td>
 <td style="text-align: right;">4819.098</td>
-<td style="text-align: right;">5684.755</td>
-<td style="text-align: right;">5972.603</td>
+<td style="text-align: right;">5629.911</td>
+<td style="text-align: right;">6122.320</td>
+<td style="text-align: right;">19323.959</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">310.842</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">309.723</td>
+<td style="text-align: right;">645.069</td>
+<td style="text-align: right;">612.553</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
 <td style="text-align: left;">Sum128_AdvSimd</td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;">8866.246</td>
-<td style="text-align: right;">9048.188</td>
-<td style="text-align: right;">11533.557</td>
+<td style="text-align: right;">10805.820</td>
+<td style="text-align: right;">11412.385</td>
+<td style="text-align: right;">11706.856</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
 <td style="text-align: left;">Sum128Traits</td>
-<td style="text-align: right;">310.085</td>
+<td style="text-align: right;">310.871</td>
 <td style="text-align: right;">15483.485</td>
-<td style="text-align: right;">17202.753</td>
-<td style="text-align: right;">21060.724</td>
+<td style="text-align: right;">18003.254</td>
+<td style="text-align: right;">20996.548</td>
+<td style="text-align: right;">19329.970</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">296.882</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5742.993</td>
+<td style="text-align: right;">5996.400</td>
+<td style="text-align: right;">19318.673</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
@@ -892,30 +2189,34 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
 <td style="text-align: left;">Sum_ConstTraits</td>
-<td style="text-align: right;">442.729</td>
+<td style="text-align: right;">447.156</td>
 <td style="text-align: right;">15552.141</td>
-<td style="text-align: right;">16947.788</td>
-<td style="text-align: right;">19811.234</td>
+<td style="text-align: right;">17437.562</td>
+<td style="text-align: right;">19790.198</td>
+<td style="text-align: right;">19332.312</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
 <td style="text-align: left;">Sum_ConstTraits_Tuple</td>
-<td style="text-align: right;">417.837</td>
+<td style="text-align: right;">422.221</td>
 <td style="text-align: right;">4710.493</td>
-<td style="text-align: right;">5782.395</td>
-<td style="text-align: right;">5976.286</td>
+<td style="text-align: right;">5486.175</td>
+<td style="text-align: right;">6117.678</td>
+<td style="text-align: right;">19333.869</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
 <td style="text-align: left;">Sum_Const128Traits</td>
-<td style="text-align: right;">303.322</td>
+<td style="text-align: right;">304.099</td>
 <td style="text-align: right;">15509.914</td>
-<td style="text-align: right;">16702.273</td>
-<td style="text-align: right;">19807.954</td>
+<td style="text-align: right;">17482.560</td>
+<td style="text-align: right;">19784.806</td>
+<td style="text-align: right;">19341.469</td>
 </tr>
 <tr>
 <td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
@@ -924,6 +2225,342 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">633.766</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">641.145</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wasm---wasm-on-amd-ryzen-7-7840h">Wasm - Wasm on AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">11.347</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;">95.861</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">110.570</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">64.915</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">74.776</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">140.876</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">73.183</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">107.638</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">67.351</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;">130.834</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;">11.214</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int16</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;">10.701</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">9.920</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;">48.634</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">56.136</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">32.351</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">37.869</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">68.246</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">23.881</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum256_AvxByte</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">51.527</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">31.663</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;">62.570</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;">7.497</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int32</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;">7.589</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">4.035</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">6.481</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">5.587</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">2.806</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">15.447</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">8.687</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">6.234</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">5.835</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;">17.012</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;">2.854</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_Int64</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;">5.404</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">13.619</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumX1Traits</td>
+<td style="text-align: right;">186.621</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">211.478</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">SumTraits_Tuple</td>
+<td style="text-align: right;">130.325</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">144.144</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">260.921</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum128Traits_Tuple</td>
+<td style="text-align: right;">104.618</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_ConstTraits</td>
+<td style="text-align: right;">207.468</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_ConstTraits_Tuple</td>
+<td style="text-align: right;">123.604</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const128Traits</td>
+<td style="text-align: right;">249.847</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const512Base</td>
+<td style="text-align: right;">13.422</td>
+</tr>
+<tr>
+<td style="text-align: left;">YShuffleG4X2Benchmark_SByte</td>
+<td style="text-align: left;">Sum_Const512Traits</td>
+<td style="text-align: right;">13.205</td>
 </tr>
 </tbody>
 </table>

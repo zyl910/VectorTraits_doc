@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../../../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,6 +85,860 @@
 
 <p>(<a href="YNarrowSaturate.html">← Back</a>)</p>
 <p>Unit of data: Million operations per second. The larger the number, the better the performance.</p>
+<h3 id="x86---amd-ryzen-7-7840h">X86 - AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">208.976</td>
+<td style="text-align: right;">197.924</td>
+<td style="text-align: right;">195.466</td>
+<td style="text-align: right;">200.430</td>
+<td style="text-align: right;">197.261</td>
+<td style="text-align: right;">205.623</td>
+<td style="text-align: right;">221.224</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_IfUnrolling4</td>
+<td style="text-align: right;">214.379</td>
+<td style="text-align: right;">207.763</td>
+<td style="text-align: right;">205.433</td>
+<td style="text-align: right;">209.018</td>
+<td style="text-align: right;">208.461</td>
+<td style="text-align: right;">213.239</td>
+<td style="text-align: right;">218.859</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">200.034</td>
+<td style="text-align: right;">201.184</td>
+<td style="text-align: right;">197.505</td>
+<td style="text-align: right;">208.715</td>
+<td style="text-align: right;">199.736</td>
+<td style="text-align: right;">222.635</td>
+<td style="text-align: right;">208.102</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_MinMaxUnrolling4</td>
+<td style="text-align: right;">206.436</td>
+<td style="text-align: right;">210.913</td>
+<td style="text-align: right;">211.050</td>
+<td style="text-align: right;">213.829</td>
+<td style="text-align: right;">198.853</td>
+<td style="text-align: right;">219.191</td>
+<td style="text-align: right;">217.852</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">230.931</td>
+<td style="text-align: right;">231.703</td>
+<td style="text-align: right;">231.229</td>
+<td style="text-align: right;">166.954</td>
+<td style="text-align: right;">189.938</td>
+<td style="text-align: right;">267.536</td>
+<td style="text-align: right;">433.581</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_BitMathUnrolling4</td>
+<td style="text-align: right;">306.714</td>
+<td style="text-align: right;">302.037</td>
+<td style="text-align: right;">323.461</td>
+<td style="text-align: right;">178.821</td>
+<td style="text-align: right;">204.515</td>
+<td style="text-align: right;">270.226</td>
+<td style="text-align: right;">437.336</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">21160.119</td>
+<td style="text-align: right;">19565.035</td>
+<td style="text-align: right;">19063.346</td>
+<td style="text-align: right;">19960.925</td>
+<td style="text-align: right;">19532.398</td>
+<td style="text-align: right;">19258.689</td>
+<td style="text-align: right;">24197.090</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">20477.038</td>
+<td style="text-align: right;">18251.731</td>
+<td style="text-align: right;">44050.630</td>
+<td style="text-align: right;">45196.128</td>
+<td style="text-align: right;">43674.654</td>
+<td style="text-align: right;">44677.389</td>
+<td style="text-align: right;">47325.429</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12153.308</td>
+<td style="text-align: right;">14300.947</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">32817.086</td>
+<td style="text-align: right;">30303.181</td>
+<td style="text-align: right;">32497.518</td>
+<td style="text-align: right;">33274.592</td>
+<td style="text-align: right;">32398.086</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">43953.618</td>
+<td style="text-align: right;">45254.059</td>
+<td style="text-align: right;">43728.433</td>
+<td style="text-align: right;">44268.684</td>
+<td style="text-align: right;">47270.777</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">25480.586</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">46125.775</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">44992.635</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">211.070</td>
+<td style="text-align: right;">218.235</td>
+<td style="text-align: right;">225.479</td>
+<td style="text-align: right;">211.761</td>
+<td style="text-align: right;">207.353</td>
+<td style="text-align: right;">223.740</td>
+<td style="text-align: right;">232.860</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">221.396</td>
+<td style="text-align: right;">206.735</td>
+<td style="text-align: right;">214.815</td>
+<td style="text-align: right;">214.341</td>
+<td style="text-align: right;">211.238</td>
+<td style="text-align: right;">210.944</td>
+<td style="text-align: right;">223.415</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">464.418</td>
+<td style="text-align: right;">423.390</td>
+<td style="text-align: right;">351.229</td>
+<td style="text-align: right;">197.987</td>
+<td style="text-align: right;">199.268</td>
+<td style="text-align: right;">348.317</td>
+<td style="text-align: right;">551.117</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">9753.258</td>
+<td style="text-align: right;">9549.313</td>
+<td style="text-align: right;">9743.042</td>
+<td style="text-align: right;">9519.188</td>
+<td style="text-align: right;">9577.993</td>
+<td style="text-align: right;">10513.071</td>
+<td style="text-align: right;">12059.829</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">9117.869</td>
+<td style="text-align: right;">9253.891</td>
+<td style="text-align: right;">20503.088</td>
+<td style="text-align: right;">20225.447</td>
+<td style="text-align: right;">19198.947</td>
+<td style="text-align: right;">19012.815</td>
+<td style="text-align: right;">19398.087</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4414.235</td>
+<td style="text-align: right;">7371.361</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">16032.722</td>
+<td style="text-align: right;">10767.055</td>
+<td style="text-align: right;">13522.821</td>
+<td style="text-align: right;">15353.537</td>
+<td style="text-align: right;">14003.514</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">20395.395</td>
+<td style="text-align: right;">19843.148</td>
+<td style="text-align: right;">18130.482</td>
+<td style="text-align: right;">19492.541</td>
+<td style="text-align: right;">19341.192</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13854.230</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19896.890</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19090.544</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">207.654</td>
+<td style="text-align: right;">206.920</td>
+<td style="text-align: right;">215.020</td>
+<td style="text-align: right;">207.405</td>
+<td style="text-align: right;">207.239</td>
+<td style="text-align: right;">220.198</td>
+<td style="text-align: right;">227.592</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">205.724</td>
+<td style="text-align: right;">201.036</td>
+<td style="text-align: right;">203.815</td>
+<td style="text-align: right;">200.292</td>
+<td style="text-align: right;">213.422</td>
+<td style="text-align: right;">213.819</td>
+<td style="text-align: right;">231.741</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">349.700</td>
+<td style="text-align: right;">344.637</td>
+<td style="text-align: right;">345.614</td>
+<td style="text-align: right;">211.870</td>
+<td style="text-align: right;">213.703</td>
+<td style="text-align: right;">340.272</td>
+<td style="text-align: right;">483.755</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">2951.264</td>
+<td style="text-align: right;">2720.663</td>
+<td style="text-align: right;">2835.882</td>
+<td style="text-align: right;">2949.423</td>
+<td style="text-align: right;">2915.473</td>
+<td style="text-align: right;">4372.612</td>
+<td style="text-align: right;">5917.536</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">2941.336</td>
+<td style="text-align: right;">2696.543</td>
+<td style="text-align: right;">4690.391</td>
+<td style="text-align: right;">4875.851</td>
+<td style="text-align: right;">4917.149</td>
+<td style="text-align: right;">3808.744</td>
+<td style="text-align: right;">9411.507</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2449.433</td>
+<td style="text-align: right;">3475.261</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2006.083</td>
+<td style="text-align: right;">2955.944</td>
+<td style="text-align: right;">2901.395</td>
+<td style="text-align: right;">2495.051</td>
+<td style="text-align: right;">7940.087</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4963.393</td>
+<td style="text-align: right;">5000.887</td>
+<td style="text-align: right;">4966.963</td>
+<td style="text-align: right;">3683.941</td>
+<td style="text-align: right;">9442.143</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7279.925</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9960.331</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512_Clamp</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7215.541</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10021.894</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">1263.960</td>
+<td style="text-align: right;">1205.876</td>
+<td style="text-align: right;">1247.409</td>
+<td style="text-align: right;">1184.537</td>
+<td style="text-align: right;">1124.520</td>
+<td style="text-align: right;">1175.733</td>
+<td style="text-align: right;">1387.128</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_IfUnrolling4</td>
+<td style="text-align: right;">1228.848</td>
+<td style="text-align: right;">1123.366</td>
+<td style="text-align: right;">1160.886</td>
+<td style="text-align: right;">1110.098</td>
+<td style="text-align: right;">1142.262</td>
+<td style="text-align: right;">1134.191</td>
+<td style="text-align: right;">1373.796</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">1363.298</td>
+<td style="text-align: right;">1283.027</td>
+<td style="text-align: right;">1336.103</td>
+<td style="text-align: right;">1178.860</td>
+<td style="text-align: right;">1344.978</td>
+<td style="text-align: right;">761.908</td>
+<td style="text-align: right;">1487.848</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_MinMaxUnrolling4</td>
+<td style="text-align: right;">1346.263</td>
+<td style="text-align: right;">1300.561</td>
+<td style="text-align: right;">1286.975</td>
+<td style="text-align: right;">1306.523</td>
+<td style="text-align: right;">1083.484</td>
+<td style="text-align: right;">937.092</td>
+<td style="text-align: right;">1602.582</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">612.158</td>
+<td style="text-align: right;">585.350</td>
+<td style="text-align: right;">590.742</td>
+<td style="text-align: right;">197.142</td>
+<td style="text-align: right;">195.812</td>
+<td style="text-align: right;">472.548</td>
+<td style="text-align: right;">719.852</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_BitMathUnrolling4</td>
+<td style="text-align: right;">480.198</td>
+<td style="text-align: right;">474.883</td>
+<td style="text-align: right;">476.484</td>
+<td style="text-align: right;">218.805</td>
+<td style="text-align: right;">216.810</td>
+<td style="text-align: right;">508.845</td>
+<td style="text-align: right;">736.505</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">25617.831</td>
+<td style="text-align: right;">25358.182</td>
+<td style="text-align: right;">25019.795</td>
+<td style="text-align: right;">25056.656</td>
+<td style="text-align: right;">26527.170</td>
+<td style="text-align: right;">25337.769</td>
+<td style="text-align: right;">30941.796</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">24795.433</td>
+<td style="text-align: right;">24950.279</td>
+<td style="text-align: right;">33163.801</td>
+<td style="text-align: right;">41303.846</td>
+<td style="text-align: right;">40678.067</td>
+<td style="text-align: right;">29966.481</td>
+<td style="text-align: right;">45560.104</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8508.828</td>
+<td style="text-align: right;">19354.326</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19854.583</td>
+<td style="text-align: right;">25215.196</td>
+<td style="text-align: right;">24688.707</td>
+<td style="text-align: right;">18118.123</td>
+<td style="text-align: right;">31370.112</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">33716.319</td>
+<td style="text-align: right;">40643.683</td>
+<td style="text-align: right;">43639.630</td>
+<td style="text-align: right;">31733.343</td>
+<td style="text-align: right;">43515.935</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">34333.004</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">45374.589</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">45431.950</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512_Pack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">34692.637</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">1446.297</td>
+<td style="text-align: right;">1396.148</td>
+<td style="text-align: right;">1364.953</td>
+<td style="text-align: right;">1339.805</td>
+<td style="text-align: right;">1382.470</td>
+<td style="text-align: right;">1240.158</td>
+<td style="text-align: right;">1507.078</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">1461.884</td>
+<td style="text-align: right;">1346.542</td>
+<td style="text-align: right;">1363.853</td>
+<td style="text-align: right;">1376.390</td>
+<td style="text-align: right;">1373.016</td>
+<td style="text-align: right;">960.104</td>
+<td style="text-align: right;">1383.498</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">556.167</td>
+<td style="text-align: right;">551.856</td>
+<td style="text-align: right;">464.792</td>
+<td style="text-align: right;">223.355</td>
+<td style="text-align: right;">220.816</td>
+<td style="text-align: right;">566.793</td>
+<td style="text-align: right;">871.130</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">12509.780</td>
+<td style="text-align: right;">11160.711</td>
+<td style="text-align: right;">11971.259</td>
+<td style="text-align: right;">11511.978</td>
+<td style="text-align: right;">11080.158</td>
+<td style="text-align: right;">11897.237</td>
+<td style="text-align: right;">15997.508</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">12962.030</td>
+<td style="text-align: right;">11581.014</td>
+<td style="text-align: right;">14895.009</td>
+<td style="text-align: right;">16343.372</td>
+<td style="text-align: right;">17051.602</td>
+<td style="text-align: right;">14727.107</td>
+<td style="text-align: right;">19760.603</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4598.785</td>
+<td style="text-align: right;">9489.508</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9276.632</td>
+<td style="text-align: right;">11443.000</td>
+<td style="text-align: right;">11488.181</td>
+<td style="text-align: right;">8680.100</td>
+<td style="text-align: right;">14081.477</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">14585.027</td>
+<td style="text-align: right;">16733.952</td>
+<td style="text-align: right;">16846.341</td>
+<td style="text-align: right;">14669.718</td>
+<td style="text-align: right;">19625.999</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">20187.199</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">21255.152</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">20989.131</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512_Pack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">20295.873</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">1003.570</td>
+<td style="text-align: right;">1326.642</td>
+<td style="text-align: right;">913.881</td>
+<td style="text-align: right;">912.071</td>
+<td style="text-align: right;">878.848</td>
+<td style="text-align: right;">1312.352</td>
+<td style="text-align: right;">1874.180</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">1455.402</td>
+<td style="text-align: right;">1404.391</td>
+<td style="text-align: right;">1392.157</td>
+<td style="text-align: right;">891.629</td>
+<td style="text-align: right;">902.245</td>
+<td style="text-align: right;">937.792</td>
+<td style="text-align: right;">895.795</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">731.295</td>
+<td style="text-align: right;">685.363</td>
+<td style="text-align: right;">683.996</td>
+<td style="text-align: right;">457.240</td>
+<td style="text-align: right;">450.840</td>
+<td style="text-align: right;">554.814</td>
+<td style="text-align: right;">842.500</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">3340.377</td>
+<td style="text-align: right;">3102.954</td>
+<td style="text-align: right;">3033.044</td>
+<td style="text-align: right;">3449.113</td>
+<td style="text-align: right;">3649.422</td>
+<td style="text-align: right;">5104.550</td>
+<td style="text-align: right;">7693.314</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">3306.018</td>
+<td style="text-align: right;">3050.492</td>
+<td style="text-align: right;">4497.385</td>
+<td style="text-align: right;">5401.914</td>
+<td style="text-align: right;">5969.621</td>
+<td style="text-align: right;">4527.588</td>
+<td style="text-align: right;">9530.757</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2704.534</td>
+<td style="text-align: right;">5068.074</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2136.396</td>
+<td style="text-align: right;">3117.646</td>
+<td style="text-align: right;">3137.098</td>
+<td style="text-align: right;">2654.322</td>
+<td style="text-align: right;">9021.456</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4602.012</td>
+<td style="text-align: right;">5090.608</td>
+<td style="text-align: right;">5878.031</td>
+<td style="text-align: right;">4293.952</td>
+<td style="text-align: right;">9444.117</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9873.078</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10029.859</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512_Clamp</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9808.525</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10018.529</td>
+</tr>
+</tbody>
+</table>
 <h3 id="x86---intel-core-i5-8250u">X86 - Intel Core i5-8250U</h3>
 <table>
 <thead>
@@ -582,6 +1436,552 @@
 </tr>
 </tbody>
 </table>
+<h3 id="arm---apple-m2">Arm - Apple M2</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">259.239</td>
+<td style="text-align: right;">313.988</td>
+<td style="text-align: right;">319.573</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_IfUnrolling4</td>
+<td style="text-align: right;">259.525</td>
+<td style="text-align: right;">324.588</td>
+<td style="text-align: right;">320.551</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">248.775</td>
+<td style="text-align: right;">311.285</td>
+<td style="text-align: right;">313.648</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_MinMaxUnrolling4</td>
+<td style="text-align: right;">249.219</td>
+<td style="text-align: right;">321.865</td>
+<td style="text-align: right;">324.788</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">536.277</td>
+<td style="text-align: right;">697.949</td>
+<td style="text-align: right;">817.423</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_BitMathUnrolling4</td>
+<td style="text-align: right;">538.456</td>
+<td style="text-align: right;">716.261</td>
+<td style="text-align: right;">825.550</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">18906.949</td>
+<td style="text-align: right;">20485.803</td>
+<td style="text-align: right;">20210.073</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">27169.213</td>
+<td style="text-align: right;">27188.567</td>
+<td style="text-align: right;">27190.966</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">20206.487</td>
+<td style="text-align: right;">20226.822</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">27168.944</td>
+<td style="text-align: right;">27179.389</td>
+<td style="text-align: right;">27191.345</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">131.747</td>
+<td style="text-align: right;">101.672</td>
+<td style="text-align: right;">20230.254</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3415.605</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3206.987</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">258.653</td>
+<td style="text-align: right;">311.787</td>
+<td style="text-align: right;">320.704</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">261.437</td>
+<td style="text-align: right;">300.766</td>
+<td style="text-align: right;">311.212</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">765.670</td>
+<td style="text-align: right;">975.824</td>
+<td style="text-align: right;">1088.657</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">9525.207</td>
+<td style="text-align: right;">10337.378</td>
+<td style="text-align: right;">10181.084</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">13603.507</td>
+<td style="text-align: right;">13609.145</td>
+<td style="text-align: right;">13610.696</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10197.022</td>
+<td style="text-align: right;">10166.101</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">13607.521</td>
+<td style="text-align: right;">13606.380</td>
+<td style="text-align: right;">13609.783</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">124.034</td>
+<td style="text-align: right;">143.208</td>
+<td style="text-align: right;">10185.664</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1604.462</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1611.747</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">259.683</td>
+<td style="text-align: right;">298.367</td>
+<td style="text-align: right;">309.217</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">257.590</td>
+<td style="text-align: right;">312.277</td>
+<td style="text-align: right;">314.984</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">754.117</td>
+<td style="text-align: right;">940.435</td>
+<td style="text-align: right;">992.302</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">4182.131</td>
+<td style="text-align: right;">4530.439</td>
+<td style="text-align: right;">3367.829</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">6793.625</td>
+<td style="text-align: right;">6802.217</td>
+<td style="text-align: right;">6802.478</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3370.535</td>
+<td style="text-align: right;">3365.327</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">6793.243</td>
+<td style="text-align: right;">6801.454</td>
+<td style="text-align: right;">6804.882</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">70.365</td>
+<td style="text-align: right;">122.170</td>
+<td style="text-align: right;">3375.141</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">756.510</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">758.031</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512_Clamp</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">1492.504</td>
+<td style="text-align: right;">1615.631</td>
+<td style="text-align: right;">1698.095</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_IfUnrolling4</td>
+<td style="text-align: right;">1469.925</td>
+<td style="text-align: right;">2032.898</td>
+<td style="text-align: right;">2425.154</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">1597.277</td>
+<td style="text-align: right;">1105.847</td>
+<td style="text-align: right;">1696.542</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_MinMaxUnrolling4</td>
+<td style="text-align: right;">1465.953</td>
+<td style="text-align: right;">1466.964</td>
+<td style="text-align: right;">2662.381</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">982.194</td>
+<td style="text-align: right;">1256.318</td>
+<td style="text-align: right;">1352.346</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_BitMathUnrolling4</td>
+<td style="text-align: right;">970.667</td>
+<td style="text-align: right;">1269.848</td>
+<td style="text-align: right;">1314.044</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">24125.030</td>
+<td style="text-align: right;">27095.117</td>
+<td style="text-align: right;">27122.730</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">27179.027</td>
+<td style="text-align: right;">27193.560</td>
+<td style="text-align: right;">27199.244</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">27071.325</td>
+<td style="text-align: right;">27117.966</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">27179.284</td>
+<td style="text-align: right;">27184.396</td>
+<td style="text-align: right;">27205.375</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">388.163</td>
+<td style="text-align: right;">571.107</td>
+<td style="text-align: right;">28322.047</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6009.319</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9852.199</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512_Pack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">1560.454</td>
+<td style="text-align: right;">1699.903</td>
+<td style="text-align: right;">1697.840</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">1560.625</td>
+<td style="text-align: right;">1133.600</td>
+<td style="text-align: right;">1697.695</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">1100.331</td>
+<td style="text-align: right;">1487.859</td>
+<td style="text-align: right;">1573.698</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">12078.072</td>
+<td style="text-align: right;">13563.557</td>
+<td style="text-align: right;">13582.691</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">13603.252</td>
+<td style="text-align: right;">13611.053</td>
+<td style="text-align: right;">13594.922</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13569.482</td>
+<td style="text-align: right;">13578.494</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">13605.140</td>
+<td style="text-align: right;">13593.953</td>
+<td style="text-align: right;">13610.400</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">275.573</td>
+<td style="text-align: right;">536.458</td>
+<td style="text-align: right;">14210.792</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3015.294</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4942.898</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512_Pack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">1699.931</td>
+<td style="text-align: right;">1700.165</td>
+<td style="text-align: right;">3021.943</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">1700.235</td>
+<td style="text-align: right;">1133.635</td>
+<td style="text-align: right;">3021.954</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">1156.830</td>
+<td style="text-align: right;">1620.023</td>
+<td style="text-align: right;">1573.272</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">5439.933</td>
+<td style="text-align: right;">5581.440</td>
+<td style="text-align: right;">5254.481</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">6802.666</td>
+<td style="text-align: right;">6805.388</td>
+<td style="text-align: right;">6804.533</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6039.991</td>
+<td style="text-align: right;">5254.300</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">6802.282</td>
+<td style="text-align: right;">6804.834</td>
+<td style="text-align: right;">6804.696</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">197.705</td>
+<td style="text-align: right;">353.693</td>
+<td style="text-align: right;">5255.719</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1507.046</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2472.189</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512_Clamp</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
 <h3 id="arm---aws-arm-t4gsmall">Arm - AWS Arm t4g.small</h3>
 <table>
 <thead>
@@ -592,392 +1992,1085 @@
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">157.417</td>
+<td style="text-align: right;">157.270</td>
 <td style="text-align: right;">154.692</td>
-<td style="text-align: right;">157.258</td>
-<td style="text-align: right;">181.941</td>
+<td style="text-align: right;">157.383</td>
+<td style="text-align: right;">181.610</td>
+<td style="text-align: right;">193.265</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
 <td style="text-align: left;">SumNarrow_IfUnrolling4</td>
-<td style="text-align: right;">159.908</td>
+<td style="text-align: right;">158.321</td>
 <td style="text-align: right;">158.508</td>
-<td style="text-align: right;">162.110</td>
-<td style="text-align: right;">186.487</td>
+<td style="text-align: right;">160.305</td>
+<td style="text-align: right;">186.059</td>
+<td style="text-align: right;">193.602</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">160.956</td>
+<td style="text-align: right;">160.909</td>
 <td style="text-align: right;">165.733</td>
-<td style="text-align: right;">108.545</td>
-<td style="text-align: right;">184.609</td>
+<td style="text-align: right;">108.425</td>
+<td style="text-align: right;">184.240</td>
+<td style="text-align: right;">189.973</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
 <td style="text-align: left;">SumNarrow_MinMaxUnrolling4</td>
-<td style="text-align: right;">162.013</td>
+<td style="text-align: right;">162.742</td>
 <td style="text-align: right;">163.387</td>
-<td style="text-align: right;">146.918</td>
-<td style="text-align: right;">186.324</td>
+<td style="text-align: right;">147.011</td>
+<td style="text-align: right;">186.203</td>
+<td style="text-align: right;">195.226</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
 <td style="text-align: left;">SumNarrow_BitMath</td>
-<td style="text-align: right;">211.079</td>
+<td style="text-align: right;">210.673</td>
 <td style="text-align: right;">165.500</td>
-<td style="text-align: right;">165.700</td>
-<td style="text-align: right;">205.499</td>
+<td style="text-align: right;">164.757</td>
+<td style="text-align: right;">204.094</td>
+<td style="text-align: right;">281.533</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
 <td style="text-align: left;">SumNarrow_BitMathUnrolling4</td>
-<td style="text-align: right;">208.453</td>
+<td style="text-align: right;">208.339</td>
 <td style="text-align: right;">162.637</td>
-<td style="text-align: right;">164.249</td>
-<td style="text-align: right;">205.436</td>
+<td style="text-align: right;">163.376</td>
+<td style="text-align: right;">204.357</td>
+<td style="text-align: right;">283.737</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">6044.523</td>
+<td style="text-align: right;">6100.275</td>
 <td style="text-align: right;">6193.938</td>
-<td style="text-align: right;">5979.916</td>
-<td style="text-align: right;">6778.968</td>
+<td style="text-align: right;">6308.118</td>
+<td style="text-align: right;">7201.735</td>
+<td style="text-align: right;">8261.974</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">6039.229</td>
+<td style="text-align: right;">6102.238</td>
 <td style="text-align: right;">13460.358</td>
-<td style="text-align: right;">12053.732</td>
-<td style="text-align: right;">15472.104</td>
+<td style="text-align: right;">13445.824</td>
+<td style="text-align: right;">15514.261</td>
+<td style="text-align: right;">13674.647</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8730.227</td>
+<td style="text-align: right;">8161.972</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
 <td style="text-align: left;">SumNarrowVector128Traits</td>
-<td style="text-align: right;">122.891</td>
+<td style="text-align: right;">126.853</td>
 <td style="text-align: right;">13429.272</td>
-<td style="text-align: right;">12658.154</td>
-<td style="text-align: right;">15191.105</td>
+<td style="text-align: right;">12853.868</td>
+<td style="text-align: right;">15568.535</td>
+<td style="text-align: right;">13528.084</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
 <td style="text-align: left;">SumNarrowVector256Traits</td>
-<td style="text-align: right;">82.423</td>
+<td style="text-align: right;">88.570</td>
 <td style="text-align: right;">81.261</td>
-<td style="text-align: right;">48.495</td>
-<td style="text-align: right;">61.217</td>
+<td style="text-align: right;">58.984</td>
+<td style="text-align: right;">61.070</td>
+<td style="text-align: right;">8487.915</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1428.184</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1335.247</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">165.309</td>
+<td style="text-align: right;">163.854</td>
 <td style="text-align: right;">165.352</td>
-<td style="text-align: right;">169.826</td>
-<td style="text-align: right;">191.086</td>
+<td style="text-align: right;">165.160</td>
+<td style="text-align: right;">190.240</td>
+<td style="text-align: right;">213.807</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">162.009</td>
+<td style="text-align: right;">154.976</td>
 <td style="text-align: right;">162.019</td>
-<td style="text-align: right;">153.413</td>
-<td style="text-align: right;">195.939</td>
+<td style="text-align: right;">161.884</td>
+<td style="text-align: right;">195.349</td>
+<td style="text-align: right;">194.881</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
 <td style="text-align: left;">SumNarrow_BitMath</td>
-<td style="text-align: right;">250.740</td>
+<td style="text-align: right;">250.349</td>
 <td style="text-align: right;">194.825</td>
-<td style="text-align: right;">194.586</td>
-<td style="text-align: right;">259.524</td>
+<td style="text-align: right;">194.448</td>
+<td style="text-align: right;">258.791</td>
+<td style="text-align: right;">368.568</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">3071.364</td>
+<td style="text-align: right;">3047.923</td>
 <td style="text-align: right;">3268.933</td>
-<td style="text-align: right;">3154.830</td>
-<td style="text-align: right;">3508.643</td>
+<td style="text-align: right;">3253.378</td>
+<td style="text-align: right;">3532.128</td>
+<td style="text-align: right;">4034.752</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">3015.939</td>
+<td style="text-align: right;">3125.498</td>
 <td style="text-align: right;">6121.553</td>
-<td style="text-align: right;">6164.284</td>
-<td style="text-align: right;">7756.942</td>
+<td style="text-align: right;">6162.533</td>
+<td style="text-align: right;">7914.641</td>
+<td style="text-align: right;">6782.358</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4208.391</td>
+<td style="text-align: right;">4017.123</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
 <td style="text-align: left;">SumNarrowVector128Traits</td>
-<td style="text-align: right;">64.909</td>
+<td style="text-align: right;">71.606</td>
 <td style="text-align: right;">6122.989</td>
-<td style="text-align: right;">6145.077</td>
-<td style="text-align: right;">7666.446</td>
+<td style="text-align: right;">6175.605</td>
+<td style="text-align: right;">8017.058</td>
+<td style="text-align: right;">6843.500</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
 <td style="text-align: left;">SumNarrowVector256Traits</td>
-<td style="text-align: right;">45.046</td>
+<td style="text-align: right;">48.696</td>
 <td style="text-align: right;">53.596</td>
-<td style="text-align: right;">50.734</td>
-<td style="text-align: right;">57.739</td>
+<td style="text-align: right;">52.385</td>
+<td style="text-align: right;">57.525</td>
+<td style="text-align: right;">4084.919</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">659.577</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">660.305</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">162.470</td>
+<td style="text-align: right;">161.788</td>
 <td style="text-align: right;">160.690</td>
-<td style="text-align: right;">160.450</td>
-<td style="text-align: right;">205.339</td>
+<td style="text-align: right;">161.656</td>
+<td style="text-align: right;">203.670</td>
+<td style="text-align: right;">190.163</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">154.207</td>
+<td style="text-align: right;">160.836</td>
 <td style="text-align: right;">157.655</td>
-<td style="text-align: right;">165.821</td>
-<td style="text-align: right;">197.450</td>
+<td style="text-align: right;">164.693</td>
+<td style="text-align: right;">194.496</td>
+<td style="text-align: right;">201.793</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
 <td style="text-align: left;">SumNarrow_BitMath</td>
-<td style="text-align: right;">248.694</td>
+<td style="text-align: right;">248.519</td>
 <td style="text-align: right;">191.750</td>
-<td style="text-align: right;">192.290</td>
-<td style="text-align: right;">246.062</td>
+<td style="text-align: right;">191.679</td>
+<td style="text-align: right;">245.585</td>
+<td style="text-align: right;">336.215</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">715.642</td>
+<td style="text-align: right;">728.629</td>
 <td style="text-align: right;">1157.104</td>
-<td style="text-align: right;">1137.600</td>
-<td style="text-align: right;">1243.915</td>
+<td style="text-align: right;">1139.372</td>
+<td style="text-align: right;">1231.877</td>
+<td style="text-align: right;">1326.584</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">715.027</td>
+<td style="text-align: right;">727.603</td>
 <td style="text-align: right;">3114.720</td>
-<td style="text-align: right;">3114.881</td>
-<td style="text-align: right;">3958.193</td>
+<td style="text-align: right;">3307.205</td>
+<td style="text-align: right;">4088.677</td>
+<td style="text-align: right;">3409.341</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1450.789</td>
+<td style="text-align: right;">1328.573</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
 <td style="text-align: left;">SumNarrowVector128Traits</td>
-<td style="text-align: right;">45.484</td>
+<td style="text-align: right;">52.069</td>
 <td style="text-align: right;">3084.209</td>
-<td style="text-align: right;">3084.659</td>
-<td style="text-align: right;">4042.758</td>
+<td style="text-align: right;">3313.665</td>
+<td style="text-align: right;">4100.966</td>
+<td style="text-align: right;">3416.920</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
 <td style="text-align: left;">SumNarrowVector256Traits</td>
-<td style="text-align: right;">38.662</td>
+<td style="text-align: right;">40.370</td>
 <td style="text-align: right;">32.920</td>
-<td style="text-align: right;">33.364</td>
-<td style="text-align: right;">64.307</td>
+<td style="text-align: right;">31.583</td>
+<td style="text-align: right;">63.296</td>
+<td style="text-align: right;">1338.381</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">304.707</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">304.431</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512_Clamp</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">528.192</td>
+<td style="text-align: right;">527.761</td>
 <td style="text-align: right;">515.076</td>
-<td style="text-align: right;">517.816</td>
-<td style="text-align: right;">608.849</td>
+<td style="text-align: right;">531.818</td>
+<td style="text-align: right;">608.056</td>
+<td style="text-align: right;">832.441</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
 <td style="text-align: left;">SumNarrow_IfUnrolling4</td>
-<td style="text-align: right;">508.343</td>
+<td style="text-align: right;">506.919</td>
 <td style="text-align: right;">508.194</td>
-<td style="text-align: right;">506.940</td>
-<td style="text-align: right;">702.256</td>
+<td style="text-align: right;">507.516</td>
+<td style="text-align: right;">701.576</td>
+<td style="text-align: right;">836.161</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">575.986</td>
+<td style="text-align: right;">573.087</td>
 <td style="text-align: right;">525.410</td>
-<td style="text-align: right;">573.922</td>
-<td style="text-align: right;">608.538</td>
+<td style="text-align: right;">576.628</td>
+<td style="text-align: right;">608.744</td>
+<td style="text-align: right;">893.594</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
 <td style="text-align: left;">SumNarrow_MinMaxUnrolling4</td>
-<td style="text-align: right;">549.319</td>
+<td style="text-align: right;">548.515</td>
 <td style="text-align: right;">544.925</td>
-<td style="text-align: right;">542.072</td>
-<td style="text-align: right;">692.196</td>
+<td style="text-align: right;">542.638</td>
+<td style="text-align: right;">692.186</td>
+<td style="text-align: right;">915.938</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
 <td style="text-align: left;">SumNarrow_BitMath</td>
-<td style="text-align: right;">328.582</td>
+<td style="text-align: right;">327.919</td>
 <td style="text-align: right;">259.389</td>
-<td style="text-align: right;">258.893</td>
-<td style="text-align: right;">333.571</td>
+<td style="text-align: right;">258.320</td>
+<td style="text-align: right;">332.968</td>
+<td style="text-align: right;">449.076</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
 <td style="text-align: left;">SumNarrow_BitMathUnrolling4</td>
-<td style="text-align: right;">322.312</td>
+<td style="text-align: right;">321.641</td>
 <td style="text-align: right;">247.554</td>
-<td style="text-align: right;">249.095</td>
-<td style="text-align: right;">333.070</td>
+<td style="text-align: right;">248.727</td>
+<td style="text-align: right;">330.572</td>
+<td style="text-align: right;">445.716</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">8754.855</td>
+<td style="text-align: right;">8361.120</td>
 <td style="text-align: right;">8439.577</td>
-<td style="text-align: right;">7850.298</td>
-<td style="text-align: right;">8862.558</td>
+<td style="text-align: right;">7945.486</td>
+<td style="text-align: right;">8853.731</td>
+<td style="text-align: right;">11829.808</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">8617.492</td>
+<td style="text-align: right;">8307.680</td>
 <td style="text-align: right;">13106.613</td>
-<td style="text-align: right;">13478.400</td>
-<td style="text-align: right;">14063.862</td>
+<td style="text-align: right;">14179.297</td>
+<td style="text-align: right;">13964.213</td>
+<td style="text-align: right;">16532.648</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10758.370</td>
+<td style="text-align: right;">11827.230</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
 <td style="text-align: left;">SumNarrowVector128Traits</td>
-<td style="text-align: right;">193.712</td>
+<td style="text-align: right;">200.025</td>
 <td style="text-align: right;">13100.479</td>
-<td style="text-align: right;">13479.084</td>
-<td style="text-align: right;">14225.569</td>
+<td style="text-align: right;">13108.836</td>
+<td style="text-align: right;">14024.172</td>
+<td style="text-align: right;">16514.181</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
 <td style="text-align: left;">SumNarrowVector256Traits</td>
-<td style="text-align: right;">143.088</td>
+<td style="text-align: right;">146.955</td>
 <td style="text-align: right;">148.944</td>
-<td style="text-align: right;">147.702</td>
-<td style="text-align: right;">188.993</td>
+<td style="text-align: right;">141.223</td>
+<td style="text-align: right;">189.958</td>
+<td style="text-align: right;">12315.255</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3233.614</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4273.747</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512_Pack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">541.002</td>
+<td style="text-align: right;">537.550</td>
 <td style="text-align: right;">534.718</td>
-<td style="text-align: right;">534.109</td>
-<td style="text-align: right;">620.704</td>
+<td style="text-align: right;">539.467</td>
+<td style="text-align: right;">620.874</td>
+<td style="text-align: right;">989.646</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">544.926</td>
+<td style="text-align: right;">539.997</td>
 <td style="text-align: right;">537.029</td>
-<td style="text-align: right;">529.782</td>
-<td style="text-align: right;">620.851</td>
+<td style="text-align: right;">545.333</td>
+<td style="text-align: right;">620.923</td>
+<td style="text-align: right;">827.472</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
 <td style="text-align: left;">SumNarrow_BitMath</td>
-<td style="text-align: right;">369.806</td>
+<td style="text-align: right;">366.681</td>
 <td style="text-align: right;">285.679</td>
-<td style="text-align: right;">285.600</td>
-<td style="text-align: right;">405.899</td>
+<td style="text-align: right;">285.287</td>
+<td style="text-align: right;">404.492</td>
+<td style="text-align: right;">609.037</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">3959.347</td>
+<td style="text-align: right;">4099.703</td>
 <td style="text-align: right;">4021.154</td>
-<td style="text-align: right;">4200.870</td>
-<td style="text-align: right;">4300.706</td>
+<td style="text-align: right;">3963.463</td>
+<td style="text-align: right;">4356.804</td>
+<td style="text-align: right;">5896.924</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">3955.773</td>
+<td style="text-align: right;">4024.310</td>
 <td style="text-align: right;">6340.994</td>
-<td style="text-align: right;">6282.575</td>
-<td style="text-align: right;">6524.682</td>
+<td style="text-align: right;">6977.151</td>
+<td style="text-align: right;">6619.009</td>
+<td style="text-align: right;">7993.300</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5246.643</td>
+<td style="text-align: right;">5773.791</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
 <td style="text-align: left;">SumNarrowVector128Traits</td>
-<td style="text-align: right;">106.066</td>
+<td style="text-align: right;">116.727</td>
 <td style="text-align: right;">6855.859</td>
-<td style="text-align: right;">6720.106</td>
-<td style="text-align: right;">6505.829</td>
+<td style="text-align: right;">6439.929</td>
+<td style="text-align: right;">6563.849</td>
+<td style="text-align: right;">8008.986</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
 <td style="text-align: left;">SumNarrowVector256Traits</td>
-<td style="text-align: right;">76.781</td>
+<td style="text-align: right;">81.541</td>
 <td style="text-align: right;">105.898</td>
-<td style="text-align: right;">105.046</td>
-<td style="text-align: right;">159.990</td>
+<td style="text-align: right;">106.843</td>
+<td style="text-align: right;">162.120</td>
+<td style="text-align: right;">5962.081</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1610.932</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2142.688</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512_Pack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">620.385</td>
+<td style="text-align: right;">619.788</td>
 <td style="text-align: right;">621.120</td>
-<td style="text-align: right;">618.355</td>
-<td style="text-align: right;">828.085</td>
+<td style="text-align: right;">620.256</td>
+<td style="text-align: right;">827.649</td>
+<td style="text-align: right;">995.113</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">620.048</td>
+<td style="text-align: right;">619.494</td>
 <td style="text-align: right;">620.151</td>
-<td style="text-align: right;">617.816</td>
-<td style="text-align: right;">827.820</td>
+<td style="text-align: right;">620.119</td>
+<td style="text-align: right;">818.259</td>
+<td style="text-align: right;">994.695</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
 <td style="text-align: left;">SumNarrow_BitMath</td>
-<td style="text-align: right;">389.972</td>
+<td style="text-align: right;">389.265</td>
 <td style="text-align: right;">296.914</td>
-<td style="text-align: right;">296.283</td>
-<td style="text-align: right;">418.417</td>
+<td style="text-align: right;">296.184</td>
+<td style="text-align: right;">416.534</td>
+<td style="text-align: right;">604.653</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">1287.681</td>
+<td style="text-align: right;">1229.723</td>
 <td style="text-align: right;">1821.232</td>
-<td style="text-align: right;">1854.543</td>
-<td style="text-align: right;">1811.620</td>
+<td style="text-align: right;">1848.632</td>
+<td style="text-align: right;">1805.499</td>
+<td style="text-align: right;">2169.309</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">1286.616</td>
+<td style="text-align: right;">1228.911</td>
 <td style="text-align: right;">3489.303</td>
-<td style="text-align: right;">3442.668</td>
-<td style="text-align: right;">3491.233</td>
+<td style="text-align: right;">3526.548</td>
+<td style="text-align: right;">3480.212</td>
+<td style="text-align: right;">4100.727</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1828.969</td>
+<td style="text-align: right;">2122.309</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
 <td style="text-align: left;">SumNarrowVector128Traits</td>
-<td style="text-align: right;">80.834</td>
+<td style="text-align: right;">93.850</td>
 <td style="text-align: right;">3234.292</td>
-<td style="text-align: right;">3203.035</td>
-<td style="text-align: right;">3483.151</td>
+<td style="text-align: right;">3267.989</td>
+<td style="text-align: right;">3507.478</td>
+<td style="text-align: right;">4069.548</td>
 </tr>
 <tr>
 <td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
 <td style="text-align: left;">SumNarrowVector256Traits</td>
-<td style="text-align: right;">62.778</td>
+<td style="text-align: right;">64.301</td>
 <td style="text-align: right;">70.135</td>
-<td style="text-align: right;">72.817</td>
-<td style="text-align: right;">149.185</td>
+<td style="text-align: right;">73.275</td>
+<td style="text-align: right;">149.018</td>
+<td style="text-align: right;">2243.867</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">716.931</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">910.327</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512_Clamp</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="wasm---wasm-on-amd-ryzen-7-7840h">Wasm - Wasm on AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">20.517</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_IfUnrolling4</td>
+<td style="text-align: right;">18.952</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">14.458</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_MinMaxUnrolling4</td>
+<td style="text-align: right;">14.674</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">8.610</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrow_BitMathUnrolling4</td>
+<td style="text-align: right;">8.766</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">5.070</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">181.703</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;">3.875</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">212.617</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">3.118</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;">3.163</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;">2.979</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int16</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">19.107</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">14.330</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">9.952</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">4.400</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">89.209</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;">2.717</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">109.763</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">2.204</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;">2.156</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;">2.028</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int32</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">21.132</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">15.456</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">10.105</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">3.416</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">1.784</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;">1.770</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">1.836</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">1.381</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;">1.368</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;">1.259</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512_Clamp</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_Int64</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">23.491</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_IfUnrolling4</td>
+<td style="text-align: right;">22.805</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">20.428</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_MinMaxUnrolling4</td>
+<td style="text-align: right;">20.970</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">14.425</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrow_BitMathUnrolling4</td>
+<td style="text-align: right;">14.865</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">8.959</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">129.263</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;">9.738</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">149.087</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">7.646</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;">7.666</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;">7.069</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt16</td>
+<td style="text-align: left;">SumNarrowVector512_Pack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">21.626</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">18.469</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">15.869</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">7.159</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">64.773</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;">4.498</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">73.364</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">3.573</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;">3.419</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;">3.414</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt32</td>
+<td style="text-align: left;">SumNarrowVector512_Pack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrow_If</td>
+<td style="text-align: right;">25.690</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrow_MinMax</td>
+<td style="text-align: right;">21.880</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrow_BitMath</td>
+<td style="text-align: right;">17.055</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVectorBase</td>
+<td style="text-align: right;">5.777</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVectorTraits</td>
+<td style="text-align: right;">3.406</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector128Base</td>
+<td style="text-align: right;">2.867</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector128Traits</td>
+<td style="text-align: right;">3.650</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector256Traits</td>
+<td style="text-align: right;">2.304</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512Base</td>
+<td style="text-align: right;">2.145</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512Traits</td>
+<td style="text-align: right;">2.108</td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512_Clamp</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YNarrowSaturateBenchmark_UInt64</td>
+<td style="text-align: left;">SumNarrowVector512_Convert</td>
+<td style="text-align: right;"></td>
 </tr>
 </tbody>
 </table>

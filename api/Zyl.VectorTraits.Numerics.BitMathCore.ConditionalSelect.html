@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect*" class="text-break">
-Method ConditionalSelect  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L315"><i class="bi bi-code-slash"></i></a>
+Method ConditionalSelect  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L427"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ConditionalSelect  <a class="header-action link-secondary" title="View so
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_SByte_System_SByte_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.SByte,System.SByte)">
   ConditionalSelect(bool, sbyte, sbyte)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L427"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -163,7 +163,7 @@ public static sbyte ConditionalSelect(bool condition, sbyte left, sbyte right)</
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Byte_System_Byte_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.Byte,System.Byte)">
   ConditionalSelect(bool, byte, byte)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L326"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L438"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -208,7 +208,7 @@ public static sbyte ConditionalSelect(bool condition, sbyte left, sbyte right)</
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Int16_System_Int16_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.Int16,System.Int16)">
   ConditionalSelect(bool, short, short)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L448"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -253,7 +253,7 @@ public static sbyte ConditionalSelect(bool condition, sbyte left, sbyte right)</
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt16_System_UInt16_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.UInt16,System.UInt16)">
   ConditionalSelect(bool, ushort, ushort)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L458"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -299,7 +299,7 @@ public static ushort ConditionalSelect(bool condition, ushort left, ushort right
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Int32_System_Int32_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.Int32,System.Int32)">
   ConditionalSelect(bool, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L357"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L469"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -344,7 +344,7 @@ public static ushort ConditionalSelect(bool condition, ushort left, ushort right
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt32_System_UInt32_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.UInt32,System.UInt32)">
   ConditionalSelect(bool, uint, uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L367"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L479"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -390,7 +390,7 @@ public static uint ConditionalSelect(bool condition, uint left, uint right)</cod
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Int64_System_Int64_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.Int64,System.Int64)">
   ConditionalSelect(bool, long, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L378"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L490"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -435,7 +435,7 @@ public static uint ConditionalSelect(bool condition, uint left, uint right)</cod
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt64_System_UInt64_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.UInt64,System.UInt64)">
   ConditionalSelect(bool, ulong, ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L388"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L500"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -479,9 +479,191 @@ public static ulong ConditionalSelect(bool condition, ulong left, ulong right)</
 
 <a id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect*"></a>
 
+<h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,Zyl.VectorTraits.ExTypes.ExInt128,Zyl.VectorTraits.ExTypes.ExInt128)">
+  ConditionalSelect(bool, ExInt128, ExInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L507"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static ExInt128 ConditionalSelect(bool condition, ExInt128 left, ExInt128 right)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+  <dd><p>The mask that is used to select a value from <code class="paramref">left</code> or <code class="paramref">right</code> (用于从 <code class="paramref">left</code> 或 <code class="paramref">right</code>中选择值的掩码).</p>
+</dd>
+  <dt><code>left</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a></dt>
+  <dd><p>The variable that is selected when the corresponding bit in <code class="paramref">condition</code> is one (当 <code class="paramref">condition</code> 中的对应位为 1 时选择的变量).</p>
+</dd>
+  <dt><code>right</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a></dt>
+  <dd><p>The variable that is selected when the corresponding bit in <code class="paramref">condition</code> is zero (当 <code class="paramref">condition</code> 中的对应位为 0 时选择的变量).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a></dt>
+  <dd><p>A value whose bits come from <code class="paramref">left</code> or <code class="paramref">right</code> based on the value of <code class="paramref">condition</code> (一个数值，其二进制位是根据 <code class="paramref">condition</code> 由 <code class="paramref">left</code> or <code class="paramref">right</code> 组合而成).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect*"></a>
+
+<h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,Zyl.VectorTraits.ExTypes.ExUInt128,Zyl.VectorTraits.ExTypes.ExUInt128)">
+  ConditionalSelect(bool, ExUInt128, ExUInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L512"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static ExUInt128 ConditionalSelect(bool condition, ExUInt128 left, ExUInt128 right)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+  <dd><p>The mask that is used to select a value from <code class="paramref">left</code> or <code class="paramref">right</code> (用于从 <code class="paramref">left</code> 或 <code class="paramref">right</code>中选择值的掩码).</p>
+</dd>
+  <dt><code>left</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a></dt>
+  <dd><p>The variable that is selected when the corresponding bit in <code class="paramref">condition</code> is one (当 <code class="paramref">condition</code> 中的对应位为 1 时选择的变量).</p>
+</dd>
+  <dt><code>right</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a></dt>
+  <dd><p>The variable that is selected when the corresponding bit in <code class="paramref">condition</code> is zero (当 <code class="paramref">condition</code> 中的对应位为 0 时选择的变量).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a></dt>
+  <dd><p>A value whose bits come from <code class="paramref">left</code> or <code class="paramref">right</code> based on the value of <code class="paramref">condition</code> (一个数值，其二进制位是根据 <code class="paramref">condition</code> 由 <code class="paramref">left</code> or <code class="paramref">right</code> 组合而成).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect*"></a>
+
+<h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Int128_System_Int128_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.Int128,System.Int128)">
+  ConditionalSelect(bool, Int128, Int128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L521"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Int128 ConditionalSelect(bool condition, Int128 left, Int128 right)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+  <dd><p>The mask that is used to select a value from <code class="paramref">left</code> or <code class="paramref">right</code> (用于从 <code class="paramref">left</code> 或 <code class="paramref">right</code>中选择值的掩码).</p>
+</dd>
+  <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a></dt>
+  <dd><p>The variable that is selected when the corresponding bit in <code class="paramref">condition</code> is one (当 <code class="paramref">condition</code> 中的对应位为 1 时选择的变量).</p>
+</dd>
+  <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a></dt>
+  <dd><p>The variable that is selected when the corresponding bit in <code class="paramref">condition</code> is zero (当 <code class="paramref">condition</code> 中的对应位为 0 时选择的变量).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a></dt>
+  <dd><p>A value whose bits come from <code class="paramref">left</code> or <code class="paramref">right</code> based on the value of <code class="paramref">condition</code> (一个数值，其二进制位是根据 <code class="paramref">condition</code> 由 <code class="paramref">left</code> or <code class="paramref">right</code> 组合而成).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect*"></a>
+
+<h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt128_System_UInt128_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.UInt128,System.UInt128)">
+  ConditionalSelect(bool, UInt128, UInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L526"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static UInt128 ConditionalSelect(bool condition, UInt128 left, UInt128 right)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>condition</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+  <dd><p>The mask that is used to select a value from <code class="paramref">left</code> or <code class="paramref">right</code> (用于从 <code class="paramref">left</code> 或 <code class="paramref">right</code>中选择值的掩码).</p>
+</dd>
+  <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a></dt>
+  <dd><p>The variable that is selected when the corresponding bit in <code class="paramref">condition</code> is one (当 <code class="paramref">condition</code> 中的对应位为 1 时选择的变量).</p>
+</dd>
+  <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a></dt>
+  <dd><p>The variable that is selected when the corresponding bit in <code class="paramref">condition</code> is zero (当 <code class="paramref">condition</code> 中的对应位为 0 时选择的变量).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a></dt>
+  <dd><p>A value whose bits come from <code class="paramref">left</code> or <code class="paramref">right</code> based on the value of <code class="paramref">condition</code> (一个数值，其二进制位是根据 <code class="paramref">condition</code> 由 <code class="paramref">left</code> or <code class="paramref">right</code> 组合而成).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect*"></a>
+
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_IntPtr_System_IntPtr_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.IntPtr,System.IntPtr)">
   ConditionalSelect(bool, nint, nint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L399"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L539"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -526,7 +708,7 @@ public static ulong ConditionalSelect(bool condition, ulong left, ulong right)</
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UIntPtr_System_UIntPtr_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.UIntPtr,System.UIntPtr)">
   ConditionalSelect(bool, nuint, nuint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L409"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L549"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -572,7 +754,7 @@ public static nuint ConditionalSelect(bool condition, nuint left, nuint right)</
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Single_System_Single_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.Single,System.Single)">
   ConditionalSelect(bool, float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L420"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L560"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -617,7 +799,7 @@ public static nuint ConditionalSelect(bool condition, nuint left, nuint right)</
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Double_System_Double_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.Double,System.Double)">
   ConditionalSelect(bool, double, double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L430"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L570"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -662,7 +844,7 @@ public static nuint ConditionalSelect(bool condition, nuint left, nuint right)</
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Half_System_Half_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect(System.Boolean,System.Half,System.Half)">
   ConditionalSelect(bool, Half, Half)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L442"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L582"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
@@ -706,7 +888,7 @@ public static nuint ConditionalSelect(bool condition, nuint left, nuint right)</
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L315" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L427" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply*" class="text-break">
-Method Multiply  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1808"><i class="bi bi-code-slash"></i></a>
+Method Multiply  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1959"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Multiply  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_System_Runtime_Intrinsics_Vector128_System_Single__System_Runtime_Intrinsics_Vector128_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply(System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Single})">
   Multiply(Vector128&lt;float&gt;, Vector128&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1808"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1959"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_System_Runtime_Intrinsics_Vector128_System_Double__System_Runtime_Intrinsics_Vector128_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply(System.Runtime.Intrinsics.Vector128{System.Double},System.Runtime.Intrinsics.Vector128{System.Double})">
   Multiply(Vector128&lt;double&gt;, Vector128&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1814"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1965"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_System_Runtime_Intrinsics_Vector128_System_SByte__System_Runtime_Intrinsics_Vector128_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply(System.Runtime.Intrinsics.Vector128{System.SByte},System.Runtime.Intrinsics.Vector128{System.SByte})">
   Multiply(Vector128&lt;sbyte&gt;, Vector128&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1820"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1971"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -268,7 +268,7 @@ public static Vector128&lt;sbyte&gt; Multiply(Vector128&lt;sbyte&gt; left, Vecto
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply(System.Runtime.Intrinsics.Vector128{System.Byte},System.Runtime.Intrinsics.Vector128{System.Byte})">
   Multiply(Vector128&lt;byte&gt;, Vector128&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1831"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1982"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -318,7 +318,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_System_Runtime_Intrinsics_Vector128_System_Int16__System_Runtime_Intrinsics_Vector128_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply(System.Runtime.Intrinsics.Vector128{System.Int16},System.Runtime.Intrinsics.Vector128{System.Int16})">
   Multiply(Vector128&lt;short&gt;, Vector128&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1841"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1992"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -368,7 +368,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_System_Runtime_Intrinsics_Vector128_System_UInt16__System_Runtime_Intrinsics_Vector128_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply(System.Runtime.Intrinsics.Vector128{System.UInt16},System.Runtime.Intrinsics.Vector128{System.UInt16})">
   Multiply(Vector128&lt;ushort&gt;, Vector128&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1847"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1998"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -419,7 +419,7 @@ public static Vector128&lt;ushort&gt; Multiply(Vector128&lt;ushort&gt; left, Vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_System_Runtime_Intrinsics_Vector128_System_Int32__System_Runtime_Intrinsics_Vector128_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply(System.Runtime.Intrinsics.Vector128{System.Int32},System.Runtime.Intrinsics.Vector128{System.Int32})">
   Multiply(Vector128&lt;int&gt;, Vector128&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1854"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L2005"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -469,7 +469,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_System_Runtime_Intrinsics_Vector128_System_UInt32__System_Runtime_Intrinsics_Vector128_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply(System.Runtime.Intrinsics.Vector128{System.UInt32},System.Runtime.Intrinsics.Vector128{System.UInt32})">
   Multiply(Vector128&lt;uint&gt;, Vector128&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1864"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L2015"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -520,7 +520,7 @@ public static Vector128&lt;uint&gt; Multiply(Vector128&lt;uint&gt; left, Vector1
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_System_Runtime_Intrinsics_Vector128_System_Int64__System_Runtime_Intrinsics_Vector128_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply(System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64})">
   Multiply(Vector128&lt;long&gt;, Vector128&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1882"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L2033"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -570,7 +570,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Sse_Statics_Multiply_System_Runtime_Intrinsics_Vector128_System_UInt64__System_Runtime_Intrinsics_Vector128_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Sse.Statics.Multiply(System.Runtime.Intrinsics.Vector128{System.UInt64},System.Runtime.Intrinsics.Vector128{System.UInt64})">
   Multiply(Vector128&lt;ulong&gt;, Vector128&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1892"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L2048"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -620,7 +620,7 @@ public static Vector128&lt;ulong&gt; Multiply(Vector128&lt;ulong&gt; left, Vecto
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1808" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Sse.Supplement.cs/#L1959" class="edit-link">Edit this page</a>
         </div>
 
 

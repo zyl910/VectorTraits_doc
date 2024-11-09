@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vectors_Shuffle_Core_" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core*" class="text-break">
-Method Shuffle_Core  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L804"><i class="bi bi-code-slash"></i></a>
+Method Shuffle_Core  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L911"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Shuffle_Core  <a class="header-action link-secondary" title="View source"
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Single__System_ValueTuple_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Single},System.ValueTuple{System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32}})">
   Shuffle_Core(Vector&lt;float&gt;, (Vector&lt;int&gt; args0, Vector&lt;int&gt; args1))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L804"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L911"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Double__System_ValueTuple_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Double},System.ValueTuple{System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64}})">
   Shuffle_Core(Vector&lt;double&gt;, (Vector&lt;long&gt; args0, Vector&lt;long&gt; args1))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L818"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L925"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_SByte__System_ValueTuple_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.SByte},System.ValueTuple{System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte}})">
   Shuffle_Core(Vector&lt;sbyte&gt;, (Vector&lt;sbyte&gt; args0, Vector&lt;sbyte&gt; args1))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L832"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L939"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -268,7 +268,7 @@ public static Vector&lt;sbyte&gt; Shuffle_Core(Vector&lt;sbyte&gt; vector, (Vect
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Byte__System_ValueTuple_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Byte},System.ValueTuple{System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte}})">
   Shuffle_Core(Vector&lt;byte&gt;, (Vector&lt;byte&gt; args0, Vector&lt;byte&gt; args1))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L847"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L954"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -318,7 +318,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Int16__System_ValueTuple_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Int16},System.ValueTuple{System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16}})">
   Shuffle_Core(Vector&lt;short&gt;, (Vector&lt;short&gt; args0, Vector&lt;short&gt; args1))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L861"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L968"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -368,7 +368,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_UInt16__System_ValueTuple_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.UInt16},System.ValueTuple{System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16}})">
   Shuffle_Core(Vector&lt;ushort&gt;, (Vector&lt;ushort&gt; args0, Vector&lt;ushort&gt; args1))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L875"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L982"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -419,7 +419,7 @@ public static Vector&lt;ushort&gt; Shuffle_Core(Vector&lt;ushort&gt; vector, (Ve
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Int32__System_ValueTuple_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Int32},System.ValueTuple{System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32}})">
   Shuffle_Core(Vector&lt;int&gt;, (Vector&lt;int&gt; args0, Vector&lt;int&gt; args1))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L890"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L997"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -469,7 +469,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_UInt32__System_ValueTuple_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.UInt32},System.ValueTuple{System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32}})">
   Shuffle_Core(Vector&lt;uint&gt;, (Vector&lt;uint&gt; args0, Vector&lt;uint&gt; args1))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L904"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L1011"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -520,7 +520,7 @@ public static Vector&lt;uint&gt; Shuffle_Core(Vector&lt;uint&gt; vector, (Vector
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Int64__System_ValueTuple_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Int64},System.ValueTuple{System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64}})">
   Shuffle_Core(Vector&lt;long&gt;, (Vector&lt;long&gt; args0, Vector&lt;long&gt; args1))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L919"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L1026"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -570,7 +570,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_UInt64__System_ValueTuple_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.UInt64},System.ValueTuple{System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64}})">
   Shuffle_Core(Vector&lt;ulong&gt;, (Vector&lt;ulong&gt; args0, Vector&lt;ulong&gt; args1))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L933"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L1040"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -621,7 +621,7 @@ public static Vector&lt;ulong&gt; Shuffle_Core(Vector&lt;ulong&gt; vector, (Vect
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})">
   Shuffle_Core(Vector&lt;float&gt;, Vector&lt;int&gt;, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3045"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -675,7 +675,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})">
   Shuffle_Core(Vector&lt;double&gt;, Vector&lt;long&gt;, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2164"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3060"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -728,7 +728,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte})">
   Shuffle_Core(Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3075"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -784,7 +784,7 @@ public static Vector&lt;sbyte&gt; Shuffle_Core(Vector&lt;sbyte&gt; vector, Vecto
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte})">
   Shuffle_Core(Vector&lt;byte&gt;, Vector&lt;byte&gt;, Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3091"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -839,7 +839,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16})">
   Shuffle_Core(Vector&lt;short&gt;, Vector&lt;short&gt;, Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3106"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -892,7 +892,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16})">
   Shuffle_Core(Vector&lt;ushort&gt;, Vector&lt;ushort&gt;, Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2205"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3121"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -946,7 +946,7 @@ public static Vector&lt;ushort&gt; Shuffle_Core(Vector&lt;ushort&gt; vector, Vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})">
   Shuffle_Core(Vector&lt;int&gt;, Vector&lt;int&gt;, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3137"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -1000,7 +1000,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32})">
   Shuffle_Core(Vector&lt;uint&gt;, Vector&lt;uint&gt;, Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2226"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3152"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -1055,7 +1055,7 @@ public static Vector&lt;uint&gt; Shuffle_Core(Vector&lt;uint&gt; vector, Vector&
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})">
   Shuffle_Core(Vector&lt;long&gt;, Vector&lt;long&gt;, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3168"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -1108,7 +1108,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Core_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Core(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64})">
   Shuffle_Core(Vector&lt;ulong&gt;, Vector&lt;ulong&gt;, Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3183"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
@@ -1161,7 +1161,7 @@ public static Vector&lt;ulong&gt; Shuffle_Core(Vector&lt;ulong&gt; vector, Vecto
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L804" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L911" class="edit-link">Edit this page</a>
         </div>
 
 

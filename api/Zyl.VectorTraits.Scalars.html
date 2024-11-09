@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Zyl_VectorTraits_Scalars" data-uid="Zyl.VectorTraits.Scalars" class="text-break">
-Class Scalars  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Scalars.cs/#L11"><i class="bi bi-code-slash"></i></a>
+Class Scalars  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Scalars.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -148,6 +148,11 @@ Class Scalars  <a class="header-action link-secondary" title="View source" href=
 </h2>
 
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Scalars.GetBitsMask128.html#Zyl_VectorTraits_Scalars_GetBitsMask128_System_Int32_System_Int32_">GetBitsMask128(int, int)</a></dt>
+    <dd><p>Get 128-bit's bits mask (取得128位的掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Scalars.GetBitsMask64.html#Zyl_VectorTraits_Scalars_GetBitsMask64_System_Int32_System_Int32_">GetBitsMask64(int, int)</a></dt>
     <dd><p>Get 64-bit's bits mask (取得64位的掩码).</p>
 </dd>
@@ -155,6 +160,11 @@ Class Scalars  <a class="header-action link-secondary" title="View source" href=
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Scalars.GetBitsMask.html#Zyl_VectorTraits_Scalars_GetBitsMask__1_System_Int32_System_Int32_">GetBitsMask&lt;T&gt;(int, int)</a></dt>
     <dd><p>Get bits mask (取得位掩码).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Scalars.GetBy128Bits.html#Zyl_VectorTraits_Scalars_GetBy128Bits__1_Zyl_VectorTraits_ExTypes_ExInt128_">GetBy128Bits&lt;T&gt;(ExInt128)</a></dt>
+    <dd><p>Converts a 128-bits integer to the target type value (将128位整数位转换为目标类型值).</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -183,8 +193,18 @@ Class Scalars  <a class="header-action link-secondary" title="View source" href=
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Scalars.GetInt128BitsFrom.html#Zyl_VectorTraits_Scalars_GetInt128BitsFrom__1___0_">GetInt128BitsFrom&lt;T&gt;(T)</a></dt>
+    <dd><p>Get a <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a> bits from target type value (从目标类型取得 <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a> 类型的128位值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Scalars.GetInt64BitsFrom.html#Zyl_VectorTraits_Scalars_GetInt64BitsFrom__1___0_">GetInt64BitsFrom&lt;T&gt;(T)</a></dt>
     <dd><p>Get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> bits from target type value (从目标类型取得 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> 类型的64位值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Scalars.IsLeast128.html#Zyl_VectorTraits_Scalars_IsLeast128__1">IsLeast128&lt;T&gt;()</a></dt>
+    <dd><p>Does it have at least 128 bits (它是否至少有128位).</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -208,7 +228,7 @@ Class Scalars  <a class="header-action link-secondary" title="View source" href=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Scalars.cs/#L11" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Scalars.cs/#L19" class="edit-link">Edit this page</a>
         </div>
 
 

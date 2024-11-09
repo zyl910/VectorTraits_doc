@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64Abstract_Max_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64Abstract.Max*" class="text-break">
-Method Max  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L499"><i class="bi bi-code-slash"></i></a>
+Method Max  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L500"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Max  <a class="header-action link-secondary" title="View source" href="ht
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64Abstract_Max_System_Runtime_Intrinsics_Vector128_System_Double__System_Runtime_Intrinsics_Vector128_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64Abstract.Max(System.Runtime.Intrinsics.Vector128{System.Double},System.Runtime.Intrinsics.Vector128{System.Double})">
   Max(Vector128&lt;double&gt;, Vector128&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L499"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L500"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the maximum of two vectors on a per-element basis (在每个元素的基础上计算两个向量的最大值).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt[i] := max(left[i], right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64Abstract_Max_System_Runtime_Intrinsics_Vector128_System_Int64__System_Runtime_Intrinsics_Vector128_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64Abstract.Max(System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64})">
   Max(Vector128&lt;long&gt;, Vector128&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L505"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L506"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the maximum of two vectors on a per-element basis (在每个元素的基础上计算两个向量的最大值).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt[i] := max(left[i], right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64Abstract_Max_System_Runtime_Intrinsics_Vector128_System_UInt64__System_Runtime_Intrinsics_Vector128_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64Abstract.Max(System.Runtime.Intrinsics.Vector128{System.UInt64},System.Runtime.Intrinsics.Vector128{System.UInt64})">
   Max(Vector128&lt;ulong&gt;, Vector128&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L511"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L512"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the maximum of two vectors on a per-element basis (在每个元素的基础上计算两个向量的最大值).
@@ -267,7 +267,7 @@ public override Vector128&lt;ulong&gt; Max(Vector128&lt;ulong&gt; left, Vector12
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L499" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L500" class="edit-link">Edit this page</a>
         </div>
 
 

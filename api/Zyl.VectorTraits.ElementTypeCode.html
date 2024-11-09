@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Enum ElementTypeCode ">
       
-      <meta name="description" content="Specifies the type of an vector element. Reference from: https://learn.microsoft.com/en-us/dotnet/api/system.typecode">
+      <meta name="description" content="Specifies the type of an vector element (指定向量元素的类型). Reference from: https://learn.microsoft.com/en-us/dotnet/api/system.typecode">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -86,7 +86,7 @@
 
 
   <h1 id="Zyl_VectorTraits_ElementTypeCode" data-uid="Zyl.VectorTraits.ElementTypeCode" class="text-break">
-Enum ElementTypeCode  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/TypeCodeFlagsUtil.cs/#L10"><i class="bi bi-code-slash"></i></a>
+Enum ElementTypeCode  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/TypeCodeFlagsUtil.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -94,7 +94,7 @@ Enum ElementTypeCode  <a class="header-action link-secondary" title="View source
   <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Specifies the type of an vector element. Reference from: <a href="https://learn.microsoft.com/en-us/dotnet/api/system.typecode">https://learn.microsoft.com/en-us/dotnet/api/system.typecode</a></p>
+  <div class="markdown summary"><p>Specifies the type of an vector element (指定向量元素的类型). Reference from: <a href="https://learn.microsoft.com/en-us/dotnet/api/system.typecode">https://learn.microsoft.com/en-us/dotnet/api/system.typecode</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -114,37 +114,43 @@ Enum ElementTypeCode  <a class="header-action link-secondary" title="View source
 </h2>
   <dl class="parameters">
     <dt id="Zyl_VectorTraits_ElementTypeCode_Byte"><code>Byte = 6</code></dt>
-    <dd><p>An integral type representing unsigned 8-bit integers with values between 0 and 255.</p>
+    <dd><p>An integral type representing unsigned 8-bit integers with values between 0 and 255 (整型，表示值介于 0 到 255 之间的无符号 8 位整数). Related types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>.</p>
 </dd>
     <dt id="Zyl_VectorTraits_ElementTypeCode_Double"><code>Double = 14</code></dt>
-    <dd><p>A floating point type representing values ranging from approximately 5.0 x 10^-324 to 1.7 x 10^308 with a precision of 15-16 digits.</p>
+    <dd><p>A floating point type representing values ranging from approximately 5.0 x 10^-324 to 1.7 x 10^308 with a precision of 15-16 digits (浮点型，表示从大约 5.0 x 10^-324 到 1.7 x 10^308 且精度为 15 到 16 位的值). Related types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>.</p>
 </dd>
     <dt id="Zyl_VectorTraits_ElementTypeCode_Empty"><code>Empty = 0</code></dt>
-    <dd><p>A null reference.</p>
+    <dd><p>A null reference (空引用).</p>
+</dd>
+    <dt id="Zyl_VectorTraits_ElementTypeCode_Int128"><code>Int128 = 28</code></dt>
+    <dd><p>An integral type representing signed 128-bit integers with values between -170141183460469231731687303715884105728 and 170141183460469231731687303715884105727 (整型，表示值介于-170141183460469231731687303715884105728 和 170141183460469231731687303715884105727 之间的 128 位有符号整数). Related types: <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a>.</p>
 </dd>
     <dt id="Zyl_VectorTraits_ElementTypeCode_Int16"><code>Int16 = 7</code></dt>
-    <dd><p>An integral type representing signed 16-bit integers with values between -32768 and 32767.</p>
+    <dd><p>An integral type representing signed 16-bit integers with values between -32768 and 32767 (整型，表示值介于 -32768 到 32767 之间的有符号 16 位整数). Related types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>.</p>
 </dd>
     <dt id="Zyl_VectorTraits_ElementTypeCode_Int32"><code>Int32 = 9</code></dt>
-    <dd><p>An integral type representing signed 32-bit integers with values between -2147483648 and 2147483647.</p>
+    <dd><p>An integral type representing signed 32-bit integers with values between -2147483648 and 2147483647 (整型，表示值介于 -2147483648 到 2147483647 之间的 32 位有符号整数). Related types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>.</p>
 </dd>
     <dt id="Zyl_VectorTraits_ElementTypeCode_Int64"><code>Int64 = 11</code></dt>
-    <dd><p>An integral type representing signed 64-bit integers with values between -9223372036854775808 and 9223372036854775807.</p>
+    <dd><p>An integral type representing signed 64-bit integers with values between -9223372036854775808 and 9223372036854775807 (整型，表示值介于-9223372036854775808 和 9223372036854775807 之间的 64 位有符号整数). Related types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>.</p>
 </dd>
     <dt id="Zyl_VectorTraits_ElementTypeCode_SByte"><code>SByte = 5</code></dt>
-    <dd><p>An integral type representing signed 8-bit integers with values between -128 and 127.</p>
+    <dd><p>An integral type representing signed 8-bit integers with values between -128 and 127 (整型，表示值介于 -128 到 127 之间的 8 位有符号整数). Related types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>.</p>
 </dd>
     <dt id="Zyl_VectorTraits_ElementTypeCode_Single"><code>Single = 13</code></dt>
-    <dd><p>A floating point type representing values ranging from approximately 1.5 x 10^-45 to 3.4 x 10^38 with a precision of 7 digits.</p>
+    <dd><p>A floating point type representing values ranging from approximately 1.5 x 10^-45 to 3.4 x 10^38 with a precision of 7 digits (浮点型，表示从大约 1.5 x 10^-45 到 3.4 x 10^38 且精度为 7 位的值). Related types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>.</p>
+</dd>
+    <dt id="Zyl_VectorTraits_ElementTypeCode_UInt128"><code>UInt128 = 29</code></dt>
+    <dd><p>An integral type representing unsigned 128-bit integers with values between 0 and 340282366920938463463374607431768211455 (整型，表示值介于 0 到 340282366920938463463374607431768211455 之间的 128 位无符号整数). Related types: <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a>.</p>
 </dd>
     <dt id="Zyl_VectorTraits_ElementTypeCode_UInt16"><code>UInt16 = 8</code></dt>
-    <dd><p>An integral type representing unsigned 16-bit integers with values between 0 and 65535.</p>
+    <dd><p>An integral type representing unsigned 16-bit integers with values between 0 and 65535 (整型，表示值介于 0 到 65535 之间的 16 位无符号整数). Related types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>.</p>
 </dd>
     <dt id="Zyl_VectorTraits_ElementTypeCode_UInt32"><code>UInt32 = 10</code></dt>
-    <dd><p>An integral type representing unsigned 32-bit integers with values between 0 and 4294967295.</p>
+    <dd><p>An integral type representing unsigned 32-bit integers with values between 0 and 4294967295 (整型，表示值介于 0 到 4294967295 之间的 32 位无符号整数). Related types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>.</p>
 </dd>
     <dt id="Zyl_VectorTraits_ElementTypeCode_UInt64"><code>UInt64 = 12</code></dt>
-    <dd><p>An integral type representing unsigned 64-bit integers with values between 0 and 18446744073709551615.</p>
+    <dd><p>An integral type representing unsigned 64-bit integers with values between 0 and 18446744073709551615 (整型，表示值介于 0 到 18446744073709551615 之间的 64 位无符号整数). Related types: <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>.</p>
 </dd>
   </dl>
 
@@ -153,7 +159,7 @@ Enum ElementTypeCode  <a class="header-action link-secondary" title="View source
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/TypeCodeFlagsUtil.cs/#L10" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/TypeCodeFlagsUtil.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

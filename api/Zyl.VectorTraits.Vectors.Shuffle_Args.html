@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vectors_Shuffle_Args_" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args*" class="text-break">
-Method Shuffle_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L620"><i class="bi bi-code-slash"></i></a>
+Method Shuffle_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L727"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Shuffle_Args  <a class="header-action link-secondary" title="View source"
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args__1_System_Numerics_Vector___0__System_Numerics_Vector___0___System_Numerics_Vector___0___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0}@,System.Numerics.Vector{``0}@)">
   Shuffle_Args&lt;TIdx&gt;(Vector&lt;TIdx&gt;, out Vector&lt;TIdx&gt;, out Vector&lt;TIdx&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L620"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L727"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -177,7 +177,7 @@ public static void Shuffle_Args&lt;TIdx&gt;(Vector&lt;TIdx&gt; indices, out Vect
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args__1_System_Numerics_Vector___0__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args``1(System.Numerics.Vector{``0})">
   Shuffle_Args&lt;TIdx&gt;(Vector&lt;TIdx&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L777"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -237,7 +237,7 @@ public static (Vector&lt;TIdx&gt; args0, Vector&lt;TIdx&gt; args1) Shuffle_Args&
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.SByte})">
   Shuffle_Args(Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L686"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L793"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -285,7 +285,7 @@ public static (Vector&lt;sbyte&gt; args0, Vector&lt;sbyte&gt; args1) Shuffle_Arg
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.Byte})">
   Shuffle_Args(Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L701"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L808"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -332,7 +332,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.Int16})">
   Shuffle_Args(Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L715"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L822"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -379,7 +379,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.UInt16})">
   Shuffle_Args(Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L729"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L836"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -427,7 +427,7 @@ public static (Vector&lt;ushort&gt; args0, Vector&lt;ushort&gt; args1) Shuffle_A
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.Int32})">
   Shuffle_Args(Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L744"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L851"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -474,7 +474,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.UInt32})">
   Shuffle_Args(Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L758"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L865"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -522,7 +522,7 @@ public static (Vector&lt;uint&gt; args0, Vector&lt;uint&gt; args1) Shuffle_Args(
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.Int64})">
   Shuffle_Args(Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L773"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L880"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -569,7 +569,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.UInt64})">
   Shuffle_Args(Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L787"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L894"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -617,7 +617,7 @@ public static (Vector&lt;ulong&gt; args0, Vector&lt;ulong&gt; args1) Shuffle_Arg
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte___System_Numerics_Vector_System_SByte___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte}@,System.Numerics.Vector{System.SByte}@)">
   Shuffle_Args(Vector&lt;sbyte&gt;, out Vector&lt;sbyte&gt;, out Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2069"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2920"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -665,7 +665,7 @@ public static void Shuffle_Args(Vector&lt;sbyte&gt; indices, out Vector&lt;sbyte
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte___System_Numerics_Vector_System_Byte___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte}@,System.Numerics.Vector{System.Byte}@)">
   Shuffle_Args(Vector&lt;byte&gt;, out Vector&lt;byte&gt;, out Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2080"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2936"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -712,7 +712,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16___System_Numerics_Vector_System_Int16___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16}@,System.Numerics.Vector{System.Int16}@)">
   Shuffle_Args(Vector&lt;short&gt;, out Vector&lt;short&gt;, out Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2090"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2951"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -759,7 +759,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16___System_Numerics_Vector_System_UInt16___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16}@,System.Numerics.Vector{System.UInt16}@)">
   Shuffle_Args(Vector&lt;ushort&gt;, out Vector&lt;ushort&gt;, out Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2966"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -807,7 +807,7 @@ public static void Shuffle_Args(Vector&lt;ushort&gt; indices, out Vector&lt;usho
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32___System_Numerics_Vector_System_Int32___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32}@,System.Numerics.Vector{System.Int32}@)">
   Shuffle_Args(Vector&lt;int&gt;, out Vector&lt;int&gt;, out Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2982"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -854,7 +854,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32___System_Numerics_Vector_System_UInt32___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32}@,System.Numerics.Vector{System.UInt32}@)">
   Shuffle_Args(Vector&lt;uint&gt;, out Vector&lt;uint&gt;, out Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2997"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -902,7 +902,7 @@ public static void Shuffle_Args(Vector&lt;uint&gt; indices, out Vector&lt;uint&g
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64___System_Numerics_Vector_System_Int64___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64}@,System.Numerics.Vector{System.Int64}@)">
   Shuffle_Args(Vector&lt;long&gt;, out Vector&lt;long&gt;, out Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3013"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -949,7 +949,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_Shuffle_Args_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64___System_Numerics_Vector_System_UInt64___" data-uid="Zyl.VectorTraits.Vectors.Shuffle_Args(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64}@,System.Numerics.Vector{System.UInt64}@)">
   Shuffle_Args(Vector&lt;ulong&gt;, out Vector&lt;ulong&gt;, out Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L2142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.cs/#L3028"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and clear (换位并清零的参数计算). Provide arguments for Shuffle_Core (为 Shuffle_Core 提供参数). If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
@@ -996,7 +996,7 @@ public static void Shuffle_Args(Vector&lt;ulong&gt; indices, out Vector&lt;ulong
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L620" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.cs/#L727" class="edit-link">Edit this page</a>
         </div>
 
 

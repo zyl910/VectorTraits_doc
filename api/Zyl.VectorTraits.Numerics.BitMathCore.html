@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Zyl_VectorTraits_Numerics_BitMathCore" data-uid="Zyl.VectorTraits.Numerics.BitMathCore" class="text-break">
-Class BitMathCore  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L14"><i class="bi bi-code-slash"></i></a>
+Class BitMathCore  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -150,6 +150,15 @@ Class BitMathCore  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.Is64Bit.html#Zyl_VectorTraits_Numerics_BitMathCore_Is64Bit">Is64Bit</a></dt>
+    <dd><p>Is 64bit system (是不是64位系统).</p>
+</dd>
+  </dl>
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -165,6 +174,11 @@ Class BitMathCore  <a class="header-action link-secondary" title="View source" h
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Half_System_Half_System_Half_">BitSelect(Half, Half, Half)</a></dt>
+    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Int128_System_Int128_System_Int128_">BitSelect(Int128, Int128, Int128)</a></dt>
     <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
 </dd>
   </dl>
@@ -214,6 +228,11 @@ Class BitMathCore  <a class="header-action link-secondary" title="View source" h
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_UInt128_System_UInt128_System_UInt128_">BitSelect(UInt128, UInt128, UInt128)</a></dt>
+    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_UInt16_System_UInt16_System_UInt16_">BitSelect(ushort, ushort, ushort)</a></dt>
     <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
 </dd>
@@ -234,12 +253,32 @@ Class BitMathCore  <a class="header-action link-secondary" title="View source" h
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_">BitSelect(ExInt128, ExInt128, ExInt128)</a></dt>
+    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">BitSelect(ExUInt128, ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Conditionally mask selects a value from two variables on a bitwise basis (按条件掩码从两个变量中按位选择值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_Int128_System_Int128_">ClampToBitMax(Int128, Int128)</a></dt>
+    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code class="paramref">amax</code> (返回限制在 0 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>). <code class="paramref">amax</code> must be a <code>Pow(2,n)-1</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_Int32_System_Int32_">ClampToBitMax(int, int)</a></dt>
     <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code class="paramref">amax</code> (返回限制在 0 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>). <code class="paramref">amax</code> must be a <code>Pow(2,n)-1</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_Int64_System_Int64_">ClampToBitMax(long, long)</a></dt>
+    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code class="paramref">amax</code> (返回限制在 0 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>). <code class="paramref">amax</code> must be a <code>Pow(2,n)-1</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_UInt128_System_UInt128_">ClampToBitMax(UInt128, UInt128)</a></dt>
     <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code class="paramref">amax</code> (返回限制在 0 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>). <code class="paramref">amax</code> must be a <code>Pow(2,n)-1</code>.</p>
 </dd>
   </dl>
@@ -254,6 +293,21 @@ Class BitMathCore  <a class="header-action link-secondary" title="View source" h
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_">ClampToBitMax(ExInt128, ExInt128)</a></dt>
+    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code class="paramref">amax</code> (返回限制在 0 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>). <code class="paramref">amax</code> must be a <code>Pow(2,n)-1</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">ClampToBitMax(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code class="paramref">amax</code> (返回限制在 0 和 <code class="paramref">amax</code> 范围内的 <code class="paramref">value</code>). <code class="paramref">amax</code> must be a <code>Pow(2,n)-1</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_Int128_">ClampToByte(Int128)</a></dt>
+    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_Int32_">ClampToByte(int)</a></dt>
     <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
 </dd>
@@ -264,12 +318,27 @@ Class BitMathCore  <a class="header-action link-secondary" title="View source" h
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_UInt128_">ClampToByte(UInt128)</a></dt>
+    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_UInt32_">ClampToByte(uint)</a></dt>
     <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_UInt64_">ClampToByte(ulong)</a></dt>
+    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_Zyl_VectorTraits_ExTypes_ExInt128_">ClampToByte(ExInt128)</a></dt>
+    <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_Zyl_VectorTraits_ExTypes_ExUInt128_">ClampToByte(ExUInt128)</a></dt>
     <dd><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
 </dd>
   </dl>
@@ -285,6 +354,11 @@ Class BitMathCore  <a class="header-action link-secondary" title="View source" h
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Half_System_Half_">ConditionalSelect(bool, Half, Half)</a></dt>
+    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Int128_System_Int128_">ConditionalSelect(bool, Int128, Int128)</a></dt>
     <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
 </dd>
   </dl>
@@ -319,6 +393,11 @@ Class BitMathCore  <a class="header-action link-secondary" title="View source" h
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt128_System_UInt128_">ConditionalSelect(bool, UInt128, UInt128)</a></dt>
+    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt16_System_UInt16_">ConditionalSelect(bool, ushort, ushort)</a></dt>
     <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
 </dd>
@@ -336,6 +415,31 @@ Class BitMathCore  <a class="header-action link-secondary" title="View source" h
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UIntPtr_System_UIntPtr_">ConditionalSelect(bool, nuint, nuint)</a></dt>
     <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_">ConditionalSelect(bool, ExInt128, ExInt128)</a></dt>
+    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">ConditionalSelect(bool, ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Conditionally selects a value from two variables on a bitwise basis (按条件从两个变量中按位选择值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteBy2XBitR.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteBy2XBitR_System_Byte_System_Byte_">GetByteBy2XBitR(byte, byte)</a></dt>
+    <dd><p>Get the byte made by the 2<em>1-bit value - reversed (获取由2</em>1位值构成的字节 - 逆序). Generally used to make shuffle control codes, like <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore._MM_SHUFFLE2.html#Zyl_VectorTraits_Numerics_BitMathCore__MM_SHUFFLE2_System_Byte_System_Byte_">_MM_SHUFFLE2(byte, byte)</a> (一般用于制作 shuffle 控制码, 类似 <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore._MM_SHUFFLE2.html#Zyl_VectorTraits_Numerics_BitMathCore__MM_SHUFFLE2_System_Byte_System_Byte_">_MM_SHUFFLE2(byte, byte)</a>).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteBy4XBitR.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteBy4XBitR_System_Byte_System_Byte_System_Byte_System_Byte_">GetByteBy4XBitR(byte, byte, byte, byte)</a></dt>
+    <dd><p>Get the byte made by the 4<em>1-bit value - reversed (获取由4</em>1位值构成的字节 - 逆序).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteBy8XBitR.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteBy8XBitR_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_">GetByteBy8XBitR(byte, byte, byte, byte, byte, byte, byte, byte)</a></dt>
+    <dd><p>Get the byte made by the 8<em>1-bit value - reversed (获取由8</em>1位值构成的字节 - 逆序).</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -371,6 +475,12 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_Int128_">GetMostSignificantBit(Int128)</a></dt>
+    <dd><p>Get the most significant bit (取得最高有效位).
+Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_Int16_">GetMostSignificantBit(short)</a></dt>
     <dd><p>Get the most significant bit (取得最高有效位).
 Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
@@ -401,6 +511,12 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_UInt128_">GetMostSignificantBit(UInt128)</a></dt>
+    <dd><p>Get the most significant bit (取得最高有效位).
+Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_UInt16_">GetMostSignificantBit(ushort)</a></dt>
     <dd><p>Get the most significant bit (取得最高有效位).
 Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
@@ -414,6 +530,18 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_UInt64_">GetMostSignificantBit(ulong)</a></dt>
+    <dd><p>Get the most significant bit (取得最高有效位).
+Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_Zyl_VectorTraits_ExTypes_ExInt128_">GetMostSignificantBit(ExInt128)</a></dt>
+    <dd><p>Get the most significant bit (取得最高有效位).
+Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_Zyl_VectorTraits_ExTypes_ExUInt128_">GetMostSignificantBit(ExUInt128)</a></dt>
     <dd><p>Get the most significant bit (取得最高有效位).
 Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
 </dd>
@@ -454,7 +582,7 @@ Mnemonic: <code>rt := src &gt;&gt;&gt; (sizeof(T)*8-1)</code>.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L23" class="edit-link">Edit this page</a>
         </div>
 
 

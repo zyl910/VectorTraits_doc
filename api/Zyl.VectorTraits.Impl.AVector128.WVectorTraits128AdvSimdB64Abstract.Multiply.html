@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64Abstract_Multiply_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64Abstract.Multiply*" class="text-break">
-Method Multiply  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L580"><i class="bi bi-code-slash"></i></a>
+Method Multiply  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L581"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Multiply  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64Abstract_Multiply_System_Runtime_Intrinsics_Vector128_System_Double__System_Runtime_Intrinsics_Vector128_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64Abstract.Multiply(System.Runtime.Intrinsics.Vector128{System.Double},System.Runtime.Intrinsics.Vector128{System.Double})">
   Multiply(Vector128&lt;double&gt;, Vector128&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L580"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L581"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -166,7 +166,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L580" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64Abstract.Supplement.cs/#L581" class="edit-link">Edit this page</a>
         </div>
 
 

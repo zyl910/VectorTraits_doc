@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Abstract_ShiftRightLogical_Const_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Abstract.ShiftRightLogical_Const*" class="text-break">
-Method ShiftRightLogical_Const  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L776"><i class="bi bi-code-slash"></i></a>
+Method ShiftRightLogical_Const  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L783"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ShiftRightLogical_Const  <a class="header-action link-secondary" title="V
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Abstract_ShiftRightLogical_Const_System_Numerics_Vector_System_SByte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Abstract.ShiftRightLogical_Const(System.Numerics.Vector{System.SByte},System.Int32)">
   ShiftRightLogical_Const(Vector&lt;sbyte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L776"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L783"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量 - 常量).
@@ -169,7 +169,7 @@ public override Vector&lt;sbyte&gt; ShiftRightLogical_Const(Vector&lt;sbyte&gt; 
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Abstract_ShiftRightLogical_Const_System_Numerics_Vector_System_Byte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Abstract.ShiftRightLogical_Const(System.Numerics.Vector{System.Byte},System.Int32)">
   ShiftRightLogical_Const(Vector&lt;byte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L783"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L790"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量 - 常量).
@@ -220,7 +220,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Abstract_ShiftRightLogical_Const_System_Numerics_Vector_System_Int16__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Abstract.ShiftRightLogical_Const(System.Numerics.Vector{System.Int16},System.Int32)">
   ShiftRightLogical_Const(Vector&lt;short&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L789"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L796"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量 - 常量).
@@ -271,7 +271,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Abstract_ShiftRightLogical_Const_System_Numerics_Vector_System_UInt16__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Abstract.ShiftRightLogical_Const(System.Numerics.Vector{System.UInt16},System.Int32)">
   ShiftRightLogical_Const(Vector&lt;ushort&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L795"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L802"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量 - 常量).
@@ -323,7 +323,7 @@ public override Vector&lt;ushort&gt; ShiftRightLogical_Const(Vector&lt;ushort&gt
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Abstract_ShiftRightLogical_Const_System_Numerics_Vector_System_Int32__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Abstract.ShiftRightLogical_Const(System.Numerics.Vector{System.Int32},System.Int32)">
   ShiftRightLogical_Const(Vector&lt;int&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L802"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L809"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量 - 常量).
@@ -374,7 +374,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Abstract_ShiftRightLogical_Const_System_Numerics_Vector_System_UInt32__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Abstract.ShiftRightLogical_Const(System.Numerics.Vector{System.UInt32},System.Int32)">
   ShiftRightLogical_Const(Vector&lt;uint&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L808"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L815"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量 - 常量).
@@ -426,7 +426,7 @@ public override Vector&lt;uint&gt; ShiftRightLogical_Const(Vector&lt;uint&gt; va
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Abstract_ShiftRightLogical_Const_System_Numerics_Vector_System_Int64__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Abstract.ShiftRightLogical_Const(System.Numerics.Vector{System.Int64},System.Int32)">
   ShiftRightLogical_Const(Vector&lt;long&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L815"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L822"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量 - 常量).
@@ -477,7 +477,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Abstract_ShiftRightLogical_Const_System_Numerics_Vector_System_UInt64__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Abstract.ShiftRightLogical_Const(System.Numerics.Vector{System.UInt64},System.Int32)">
   ShiftRightLogical_Const(Vector&lt;ulong&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L821"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L828"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量 - 常量).
@@ -528,7 +528,7 @@ public override Vector&lt;ulong&gt; ShiftRightLogical_Const(Vector&lt;ulong&gt; 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L776" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Abstract.cs/#L783" class="edit-link">Edit this page</a>
         </div>
 
 

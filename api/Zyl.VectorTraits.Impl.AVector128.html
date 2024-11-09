@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -148,6 +148,21 @@ Classes
     <dl class="jumplist">
       <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.html">WVectorTraits128Base.Statics</a></dt>
       <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> traits.Statics - Base.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128PackedSimd.html">WVectorTraits128PackedSimd</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> traits - PackedSimd .</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128PackedSimd.Statics.html">WVectorTraits128PackedSimd.Statics</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> traits.Statics - PackedSimd.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128PackedSimdAbstract.html">WVectorTraits128PackedSimdAbstract</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> traits - PackedSimd abstract.</p>
 </dd>
     </dl>
     <dl class="jumplist">

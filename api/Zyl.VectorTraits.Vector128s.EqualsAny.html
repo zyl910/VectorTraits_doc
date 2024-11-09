@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vector128s_EqualsAny_" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny*" class="text-break">
-Method EqualsAny  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L706"><i class="bi bi-code-slash"></i></a>
+Method EqualsAny  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L974"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method EqualsAny  <a class="header-action link-secondary" title="View source" hr
 
 <h3 id="Zyl_VectorTraits_Vector128s_EqualsAny_System_Runtime_Intrinsics_Vector128_System_Single__System_Runtime_Intrinsics_Vector128_System_Single__" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny(System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Single})">
   EqualsAny(Vector128&lt;float&gt;, Vector128&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L706"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L974"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt := (left[0] == right[0]) || (left[1] == right[1]) || ... || (
 
 <h3 id="Zyl_VectorTraits_Vector128s_EqualsAny_System_Runtime_Intrinsics_Vector128_System_Double__System_Runtime_Intrinsics_Vector128_System_Double__" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny(System.Runtime.Intrinsics.Vector128{System.Double},System.Runtime.Intrinsics.Vector128{System.Double})">
   EqualsAny(Vector128&lt;double&gt;, Vector128&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L716"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L989"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt := (left[0] == right[0]) || (left[1] == right[1]) || ... || (
 
 <h3 id="Zyl_VectorTraits_Vector128s_EqualsAny_System_Runtime_Intrinsics_Vector128_System_SByte__System_Runtime_Intrinsics_Vector128_System_SByte__" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny(System.Runtime.Intrinsics.Vector128{System.SByte},System.Runtime.Intrinsics.Vector128{System.SByte})">
   EqualsAny(Vector128&lt;sbyte&gt;, Vector128&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L726"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L1004"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
@@ -268,7 +268,7 @@ public static bool EqualsAny(Vector128&lt;sbyte&gt; left, Vector128&lt;sbyte&gt;
 
 <h3 id="Zyl_VectorTraits_Vector128s_EqualsAny_System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny(System.Runtime.Intrinsics.Vector128{System.Byte},System.Runtime.Intrinsics.Vector128{System.Byte})">
   EqualsAny(Vector128&lt;byte&gt;, Vector128&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L737"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L1020"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
@@ -318,7 +318,7 @@ Mnemonic: <code>rt := (left[0] == right[0]) || (left[1] == right[1]) || ... || (
 
 <h3 id="Zyl_VectorTraits_Vector128s_EqualsAny_System_Runtime_Intrinsics_Vector128_System_Int16__System_Runtime_Intrinsics_Vector128_System_Int16__" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny(System.Runtime.Intrinsics.Vector128{System.Int16},System.Runtime.Intrinsics.Vector128{System.Int16})">
   EqualsAny(Vector128&lt;short&gt;, Vector128&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L747"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L1035"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
@@ -368,7 +368,7 @@ Mnemonic: <code>rt := (left[0] == right[0]) || (left[1] == right[1]) || ... || (
 
 <h3 id="Zyl_VectorTraits_Vector128s_EqualsAny_System_Runtime_Intrinsics_Vector128_System_UInt16__System_Runtime_Intrinsics_Vector128_System_UInt16__" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny(System.Runtime.Intrinsics.Vector128{System.UInt16},System.Runtime.Intrinsics.Vector128{System.UInt16})">
   EqualsAny(Vector128&lt;ushort&gt;, Vector128&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L757"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L1050"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
@@ -419,7 +419,7 @@ public static bool EqualsAny(Vector128&lt;ushort&gt; left, Vector128&lt;ushort&g
 
 <h3 id="Zyl_VectorTraits_Vector128s_EqualsAny_System_Runtime_Intrinsics_Vector128_System_Int32__System_Runtime_Intrinsics_Vector128_System_Int32__" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny(System.Runtime.Intrinsics.Vector128{System.Int32},System.Runtime.Intrinsics.Vector128{System.Int32})">
   EqualsAny(Vector128&lt;int&gt;, Vector128&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L768"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L1066"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
@@ -469,7 +469,7 @@ Mnemonic: <code>rt := (left[0] == right[0]) || (left[1] == right[1]) || ... || (
 
 <h3 id="Zyl_VectorTraits_Vector128s_EqualsAny_System_Runtime_Intrinsics_Vector128_System_UInt32__System_Runtime_Intrinsics_Vector128_System_UInt32__" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny(System.Runtime.Intrinsics.Vector128{System.UInt32},System.Runtime.Intrinsics.Vector128{System.UInt32})">
   EqualsAny(Vector128&lt;uint&gt;, Vector128&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L778"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L1081"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
@@ -520,7 +520,7 @@ public static bool EqualsAny(Vector128&lt;uint&gt; left, Vector128&lt;uint&gt; r
 
 <h3 id="Zyl_VectorTraits_Vector128s_EqualsAny_System_Runtime_Intrinsics_Vector128_System_Int64__System_Runtime_Intrinsics_Vector128_System_Int64__" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny(System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64})">
   EqualsAny(Vector128&lt;long&gt;, Vector128&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L789"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L1097"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
@@ -570,7 +570,7 @@ Mnemonic: <code>rt := (left[0] == right[0]) || (left[1] == right[1]) || ... || (
 
 <h3 id="Zyl_VectorTraits_Vector128s_EqualsAny_System_Runtime_Intrinsics_Vector128_System_UInt64__System_Runtime_Intrinsics_Vector128_System_UInt64__" data-uid="Zyl.VectorTraits.Vector128s.EqualsAny(System.Runtime.Intrinsics.Vector128{System.UInt64},System.Runtime.Intrinsics.Vector128{System.UInt64})">
   EqualsAny(Vector128&lt;ulong&gt;, Vector128&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L799"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L1112"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
@@ -620,7 +620,7 @@ public static bool EqualsAny(Vector128&lt;ulong&gt; left, Vector128&lt;ulong&gt;
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L706" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Supplement.cs/#L974" class="edit-link">Edit this page</a>
         </div>
 
 

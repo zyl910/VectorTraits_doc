@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic*" class="text-break">
-Method YShuffleG2_Basic  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L119"><i class="bi bi-code-slash"></i></a>
+Method YShuffleG2_Basic  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L121"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,10 +117,10 @@ Method YShuffleG2_Basic  <a class="header-action link-secondary" title="View sou
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_System_Runtime_Intrinsics_Vector256_System_Single__Zyl_VectorTraits_ShuffleControlG2_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic(System.Runtime.Intrinsics.Vector256{System.Single},Zyl.VectorTraits.ShuffleControlG2)">
   YShuffleG2_Basic(Vector256&lt;float&gt;, ShuffleControlG2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L121"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -166,10 +166,10 @@ Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. V
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_System_Runtime_Intrinsics_Vector256_System_Double__Zyl_VectorTraits_ShuffleControlG2_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic(System.Runtime.Intrinsics.Vector256{System.Double},Zyl.VectorTraits.ShuffleControlG2)">
   YShuffleG2_Basic(Vector256&lt;double&gt;, ShuffleControlG2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L127"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -215,10 +215,10 @@ Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. V
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_System_Runtime_Intrinsics_Vector256_System_SByte__Zyl_VectorTraits_ShuffleControlG2_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic(System.Runtime.Intrinsics.Vector256{System.SByte},Zyl.VectorTraits.ShuffleControlG2)">
   YShuffleG2_Basic(Vector256&lt;sbyte&gt;, ShuffleControlG2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L133"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -265,10 +265,10 @@ public static Vector256&lt;sbyte&gt; YShuffleG2_Basic(Vector256&lt;sbyte&gt; sou
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_System_Runtime_Intrinsics_Vector256_System_Byte__Zyl_VectorTraits_ShuffleControlG2_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic(System.Runtime.Intrinsics.Vector256{System.Byte},Zyl.VectorTraits.ShuffleControlG2)">
   YShuffleG2_Basic(Vector256&lt;byte&gt;, ShuffleControlG2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L140"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -314,10 +314,10 @@ Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. V
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_System_Runtime_Intrinsics_Vector256_System_Int16__Zyl_VectorTraits_ShuffleControlG2_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic(System.Runtime.Intrinsics.Vector256{System.Int16},Zyl.VectorTraits.ShuffleControlG2)">
   YShuffleG2_Basic(Vector256&lt;short&gt;, ShuffleControlG2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L154"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -363,10 +363,10 @@ Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. V
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_System_Runtime_Intrinsics_Vector256_System_UInt16__Zyl_VectorTraits_ShuffleControlG2_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic(System.Runtime.Intrinsics.Vector256{System.UInt16},Zyl.VectorTraits.ShuffleControlG2)">
   YShuffleG2_Basic(Vector256&lt;ushort&gt;, ShuffleControlG2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L160"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -413,10 +413,10 @@ public static Vector256&lt;ushort&gt; YShuffleG2_Basic(Vector256&lt;ushort&gt; s
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_System_Runtime_Intrinsics_Vector256_System_Int32__Zyl_VectorTraits_ShuffleControlG2_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic(System.Runtime.Intrinsics.Vector256{System.Int32},Zyl.VectorTraits.ShuffleControlG2)">
   YShuffleG2_Basic(Vector256&lt;int&gt;, ShuffleControlG2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L175"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -462,10 +462,10 @@ Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. V
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_System_Runtime_Intrinsics_Vector256_System_UInt32__Zyl_VectorTraits_ShuffleControlG2_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic(System.Runtime.Intrinsics.Vector256{System.UInt32},Zyl.VectorTraits.ShuffleControlG2)">
   YShuffleG2_Basic(Vector256&lt;uint&gt;, ShuffleControlG2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L181"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -512,10 +512,10 @@ public static Vector256&lt;uint&gt; YShuffleG2_Basic(Vector256&lt;uint&gt; sourc
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_System_Runtime_Intrinsics_Vector256_System_Int64__Zyl_VectorTraits_ShuffleControlG2_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic(System.Runtime.Intrinsics.Vector256{System.Int64},Zyl.VectorTraits.ShuffleControlG2)">
   YShuffleG2_Basic(Vector256&lt;long&gt;, ShuffleControlG2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L194"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L196"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -561,10 +561,10 @@ Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. V
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YShuffleG2_Basic_System_Runtime_Intrinsics_Vector256_System_UInt64__Zyl_VectorTraits_ShuffleControlG2_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YShuffleG2_Basic(System.Runtime.Intrinsics.Vector256{System.UInt64},Zyl.VectorTraits.ShuffleControlG2)">
   YShuffleG2_Basic(Vector256&lt;ulong&gt;, ShuffleControlG2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L202"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -610,7 +610,7 @@ public static Vector256&lt;ulong&gt; YShuffleG2_Basic(Vector256&lt;ulong&gt; sou
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L119" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.YS.cs/#L121" class="edit-link">Edit this page</a>
         </div>
 
 

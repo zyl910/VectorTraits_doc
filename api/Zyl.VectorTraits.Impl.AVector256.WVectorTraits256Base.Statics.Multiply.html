@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply*" class="text-break">
-Method Multiply  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4076"><i class="bi bi-code-slash"></i></a>
+Method Multiply  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4219"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Multiply  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_System_Runtime_Intrinsics_Vector256_System_Single__System_Runtime_Intrinsics_Vector256_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply(System.Runtime.Intrinsics.Vector256{System.Single},System.Runtime.Intrinsics.Vector256{System.Single})">
   Multiply(Vector256&lt;float&gt;, Vector256&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4076"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4219"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_System_Runtime_Intrinsics_Vector256_System_Double__System_Runtime_Intrinsics_Vector256_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply(System.Runtime.Intrinsics.Vector256{System.Double},System.Runtime.Intrinsics.Vector256{System.Double})">
   Multiply(Vector256&lt;double&gt;, Vector256&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4086"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4229"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply(System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte})">
   Multiply(Vector256&lt;sbyte&gt;, Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4096"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4239"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -268,7 +268,7 @@ public static Vector256&lt;sbyte&gt; Multiply(Vector256&lt;sbyte&gt; left, Vecto
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_System_Runtime_Intrinsics_Vector256_System_Byte__System_Runtime_Intrinsics_Vector256_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply(System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte})">
   Multiply(Vector256&lt;byte&gt;, Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4250"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -318,7 +318,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply(System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16})">
   Multiply(Vector256&lt;short&gt;, Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4260"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -368,7 +368,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Runtime_Intrinsics_Vector256_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16})">
   Multiply(Vector256&lt;ushort&gt;, Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4270"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -419,7 +419,7 @@ public static Vector256&lt;ushort&gt; Multiply(Vector256&lt;ushort&gt; left, Vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply(System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32})">
   Multiply(Vector256&lt;int&gt;, Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4281"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -469,7 +469,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Runtime_Intrinsics_Vector256_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32})">
   Multiply(Vector256&lt;uint&gt;, Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4291"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -520,7 +520,7 @@ public static Vector256&lt;uint&gt; Multiply(Vector256&lt;uint&gt; left, Vector2
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply(System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64})">
   Multiply(Vector256&lt;long&gt;, Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4302"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -570,7 +570,7 @@ Mnemonic: <code>rt[i] := left[i] * right[i]</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Multiply_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Runtime_Intrinsics_Vector256_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Multiply(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64})">
   Multiply(Vector256&lt;ulong&gt;, Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4169"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4316"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Multiplies two vectors to compute their element-wise product (将两个向量相乘来计算它们各元素的积).
@@ -620,7 +620,7 @@ public static Vector256&lt;ulong&gt; Multiply(Vector256&lt;ulong&gt; left, Vecto
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4076" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L4219" class="edit-link">Edit this page</a>
         </div>
 
 

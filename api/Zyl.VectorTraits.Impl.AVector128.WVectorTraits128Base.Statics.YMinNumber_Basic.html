@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YMinNumber_Basic_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YMinNumber_Basic*" class="text-break">
-Method YMinNumber_Basic  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.Y.cs/#L656"><i class="bi bi-code-slash"></i></a>
+Method YMinNumber_Basic  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.Y.cs/#L659"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YMinNumber_Basic  <a class="header-action link-secondary" title="View sou
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YMinNumber_Basic_System_Runtime_Intrinsics_Vector128_System_Single__System_Runtime_Intrinsics_Vector128_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YMinNumber_Basic(System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Single})">
   YMinNumber_Basic(Vector128&lt;float&gt;, Vector128&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.Y.cs/#L656"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.Y.cs/#L659"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the minimum number of two vectors on a per-element basis (在每个元素的基础上计算两个向量的最小数值). The minNumber method matches the IEEE 754:2019 minimumNumber function. This requires <code>NaN</code> inputs to not be propagated back to the caller and for <code>-0.0</code> to be treated as less than <code>+0.0</code> (minNumber方法与 IEEE 754:2019 minimumNumber 函数匹配。 这要求 <code>NaN</code> 输入不传播回调用方，且 <code>-0.0</code> 被视为小于 <code>+0.0</code>).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt[i] := minNumber(left[i], right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YMinNumber_Basic_System_Runtime_Intrinsics_Vector128_System_Double__System_Runtime_Intrinsics_Vector128_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YMinNumber_Basic(System.Runtime.Intrinsics.Vector128{System.Double},System.Runtime.Intrinsics.Vector128{System.Double})">
   YMinNumber_Basic(Vector128&lt;double&gt;, Vector128&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.Y.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.Y.cs/#L673"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the minimum number of two vectors on a per-element basis (在每个元素的基础上计算两个向量的最小数值). The minNumber method matches the IEEE 754:2019 minimumNumber function. This requires <code>NaN</code> inputs to not be propagated back to the caller and for <code>-0.0</code> to be treated as less than <code>+0.0</code> (minNumber方法与 IEEE 754:2019 minimumNumber 函数匹配。 这要求 <code>NaN</code> 输入不传播回调用方，且 <code>-0.0</code> 被视为小于 <code>+0.0</code>).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt[i] := minNumber(left[i], right[i])</code>.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.Y.cs/#L656" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.Y.cs/#L659" class="edit-link">Edit this page</a>
         </div>
 
 

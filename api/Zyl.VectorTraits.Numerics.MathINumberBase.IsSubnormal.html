@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Numerics_MathINumberBase_IsSubnormal_" data-uid="Zyl.VectorTraits.Numerics.MathINumberBase.IsSubnormal*" class="text-break">
-Method IsSubnormal  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1880"><i class="bi bi-code-slash"></i></a>
+Method IsSubnormal  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1910"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method IsSubnormal  <a class="header-action link-secondary" title="View source" 
 
 <h3 id="Zyl_VectorTraits_Numerics_MathINumberBase_IsSubnormal_System_Single_" data-uid="Zyl.VectorTraits.Numerics.MathINumberBase.IsSubnormal(System.Single)">
   IsSubnormal(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1880"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1910"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is subnormal (确定元素是否为次正规数).</p>
@@ -164,7 +164,7 @@ Method IsSubnormal  <a class="header-action link-secondary" title="View source" 
 
 <h3 id="Zyl_VectorTraits_Numerics_MathINumberBase_IsSubnormal_System_Double_" data-uid="Zyl.VectorTraits.Numerics.MathINumberBase.IsSubnormal(System.Double)">
   IsSubnormal(double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1896"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1926"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is subnormal (确定元素是否为次正规数).</p>
@@ -210,7 +210,7 @@ Method IsSubnormal  <a class="header-action link-secondary" title="View source" 
 
 <h3 id="Zyl_VectorTraits_Numerics_MathINumberBase_IsSubnormal_System_Half_" data-uid="Zyl.VectorTraits.Numerics.MathINumberBase.IsSubnormal(System.Half)">
   IsSubnormal(Half)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1908"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1938"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is subnormal (确定元素是否为次正规数).</p>
@@ -256,7 +256,7 @@ Method IsSubnormal  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1880" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1910" class="edit-link">Edit this page</a>
         </div>
 
 

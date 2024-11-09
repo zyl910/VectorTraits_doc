@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YCopySign_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YCopySign*" class="text-break">
-Method YCopySign  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L329"><i class="bi bi-code-slash"></i></a>
+Method YCopySign  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L332"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YCopySign  <a class="header-action link-secondary" title="View source" hr
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YCopySign_System_Runtime_Intrinsics_Vector256_System_Single__System_Runtime_Intrinsics_Vector256_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YCopySign(System.Runtime.Intrinsics.Vector256{System.Single},System.Runtime.Intrinsics.Vector256{System.Single})">
   YCopySign(Vector256&lt;float&gt;, Vector256&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L332"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt[i] := copySign(value[i], sign[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YCopySign_System_Runtime_Intrinsics_Vector256_System_Double__System_Runtime_Intrinsics_Vector256_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YCopySign(System.Runtime.Intrinsics.Vector256{System.Double},System.Runtime.Intrinsics.Vector256{System.Double})">
   YCopySign(Vector256&lt;double&gt;, Vector256&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L339"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L342"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).
@@ -218,7 +218,7 @@ Mnemonic: <code>rt[i] := copySign(value[i], sign[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YCopySign_System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YCopySign(System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte})">
   YCopySign(Vector256&lt;sbyte&gt;, Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L352"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).
@@ -270,7 +270,7 @@ public static Vector256&lt;sbyte&gt; YCopySign(Vector256&lt;sbyte&gt; value, Vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YCopySign_System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YCopySign(System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16})">
   YCopySign(Vector256&lt;short&gt;, Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L360"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L363"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).
@@ -321,7 +321,7 @@ Mnemonic: <code>rt[i] := copySign(value[i], sign[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YCopySign_System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YCopySign(System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32})">
   YCopySign(Vector256&lt;int&gt;, Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L373"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).
@@ -372,7 +372,7 @@ Mnemonic: <code>rt[i] := copySign(value[i], sign[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_YCopySign_System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.YCopySign(System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64})">
   YCopySign(Vector256&lt;long&gt;, Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L380"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L383"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).
@@ -422,7 +422,7 @@ Mnemonic: <code>rt[i] := copySign(value[i], sign[i])</code>.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L329" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Y.cs/#L332" class="edit-link">Edit this page</a>
         </div>
 
 

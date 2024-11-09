@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128SseAbstract_YIsAllTrue_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128SseAbstract.YIsAllTrue*" class="text-break">
-Method YIsAllTrue  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128SseAbstract.Y.cs/#L202"><i class="bi bi-code-slash"></i></a>
+Method YIsAllTrue  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128SseAbstract.Y.cs/#L1642"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YIsAllTrue  <a class="header-action link-secondary" title="View source" h
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128SseAbstract_YIsAllTrue__1_System_Numerics_Vector___0__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128SseAbstract.YIsAllTrue``1(System.Numerics.Vector{``0})">
   YIsAllTrue&lt;T&gt;(Vector&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128SseAbstract.Y.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128SseAbstract.Y.cs/#L1642"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Checks if all elements of the vector is true (检查向量中所有元素是不是都为true).
@@ -169,7 +169,7 @@ Mnemonic: <code>rt := value[0] &amp;&amp; value[1] &amp;&amp; value[2] &amp;&amp
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128SseAbstract.Y.cs/#L202" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128SseAbstract.Y.cs/#L1642" class="edit-link">Edit this page</a>
         </div>
 
 

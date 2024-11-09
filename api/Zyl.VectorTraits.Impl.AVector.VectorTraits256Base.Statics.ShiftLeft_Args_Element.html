@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Base_Statics_ShiftLeft_Args_Element_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Base.Statics.ShiftLeft_Args_Element*" class="text-break">
-Method ShiftLeft_Args_Element  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Base.cs/#L576"><i class="bi bi-code-slash"></i></a>
+Method ShiftLeft_Args_Element  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Base.cs/#L583"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ShiftLeft_Args_Element  <a class="header-action link-secondary" title="Vi
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Base_Statics_ShiftLeft_Args_Element_System_Numerics_Vector_System_Int16__System_Int32_System_Numerics_Vector_System_Int16___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Base.Statics.ShiftLeft_Args_Element(System.Numerics.Vector{System.Int16},System.Int32,System.Numerics.Vector{System.Int16}@)">
   ShiftLeft_Args_Element(Vector&lt;short&gt;, int, out Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Base.cs/#L576"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Base.cs/#L583"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shifts each element of a vector left by the specified amount (将向量的每个元素左移指定量的参数计算). Provide arguments for ShiftLeft_Core (为 ShiftLeft_Core 提供参数).
@@ -171,7 +171,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>, <code>shiftAmount
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Base.cs/#L576" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Base.cs/#L583" class="edit-link">Edit this page</a>
         </div>
 
 

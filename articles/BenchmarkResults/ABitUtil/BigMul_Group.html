@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Benchmark group - BigMul </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Benchmark group - BigMul ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/ABitUtil/BigMul_Group.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="benchmark-group---bigmul">Benchmark group - BigMul</h1>
+
+<p>(<a href="BigMul.html">← Back</a>)</p>
+<p>Unit of data: Million operations per second. The larger the number, the better the performance.</p>
+<h3 id="x86---amd-ryzen-7-7840h">X86 - AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BigNum</td>
+<td style="text-align: right;">98.096</td>
+<td style="text-align: right;">164.004</td>
+<td style="text-align: right;">173.642</td>
+<td style="text-align: right;">174.014</td>
+<td style="text-align: right;">136.906</td>
+<td style="text-align: right;">136.612</td>
+<td style="text-align: right;">137.591</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BCL</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1469.285</td>
+<td style="text-align: right;">1509.959</td>
+<td style="text-align: right;">1881.872</td>
+<td style="text-align: right;">1850.417</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BitMath</td>
+<td style="text-align: right;">589.710</td>
+<td style="text-align: right;">598.064</td>
+<td style="text-align: right;">596.050</td>
+<td style="text-align: right;">1486.426</td>
+<td style="text-align: right;">1454.321</td>
+<td style="text-align: right;">1881.845</td>
+<td style="text-align: right;">1869.394</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_Two</td>
+<td style="text-align: right;">592.620</td>
+<td style="text-align: right;">573.341</td>
+<td style="text-align: right;">580.001</td>
+<td style="text-align: right;">555.165</td>
+<td style="text-align: right;">582.180</td>
+<td style="text-align: right;">586.122</td>
+<td style="text-align: right;">646.901</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_HighLow</td>
+<td style="text-align: right;">564.036</td>
+<td style="text-align: right;">544.152</td>
+<td style="text-align: right;">563.094</td>
+<td style="text-align: right;">560.426</td>
+<td style="text-align: right;">558.926</td>
+<td style="text-align: right;">636.107</td>
+<td style="text-align: right;">558.935</td>
+</tr>
+</tbody>
+</table>
+<h3 id="x86---intel-core-i5-8250u">X86 - Intel Core i5-8250U</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BigNum</td>
+<td style="text-align: right;">77.993</td>
+<td style="text-align: right;">142.167</td>
+<td style="text-align: right;">163.763</td>
+<td style="text-align: right;">163.607</td>
+<td style="text-align: right;">136.364</td>
+<td style="text-align: right;">141.144</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BCL</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1274.310</td>
+<td style="text-align: right;">1271.931</td>
+<td style="text-align: right;">1411.787</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BitMath</td>
+<td style="text-align: right;">628.149</td>
+<td style="text-align: right;">627.425</td>
+<td style="text-align: right;">630.325</td>
+<td style="text-align: right;">1275.560</td>
+<td style="text-align: right;">1272.478</td>
+<td style="text-align: right;">1399.433</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_Two</td>
+<td style="text-align: right;">626.984</td>
+<td style="text-align: right;">629.075</td>
+<td style="text-align: right;">623.226</td>
+<td style="text-align: right;">621.301</td>
+<td style="text-align: right;">619.612</td>
+<td style="text-align: right;">656.726</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_HighLow</td>
+<td style="text-align: right;">605.800</td>
+<td style="text-align: right;">606.756</td>
+<td style="text-align: right;">601.787</td>
+<td style="text-align: right;">596.904</td>
+<td style="text-align: right;">595.405</td>
+<td style="text-align: right;">628.617</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---apple-m2">Arm - Apple M2</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BigNum</td>
+<td style="text-align: right;">233.862</td>
+<td style="text-align: right;">283.340</td>
+<td style="text-align: right;">312.692</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BCL</td>
+<td style="text-align: right;">2255.659</td>
+<td style="text-align: right;">3454.319</td>
+<td style="text-align: right;">3308.230</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BitMath</td>
+<td style="text-align: right;">2256.545</td>
+<td style="text-align: right;">3458.445</td>
+<td style="text-align: right;">3194.530</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_Two</td>
+<td style="text-align: right;">1164.324</td>
+<td style="text-align: right;">1609.842</td>
+<td style="text-align: right;">1117.510</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_HighLow</td>
+<td style="text-align: right;">1141.513</td>
+<td style="text-align: right;">1500.428</td>
+<td style="text-align: right;">1414.967</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---aws-arm-t4gsmall">Arm - AWS Arm t4g.small</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BigNum</td>
+<td style="text-align: right;">79.848</td>
+<td style="text-align: right;">79.107</td>
+<td style="text-align: right;">74.308</td>
+<td style="text-align: right;">103.459</td>
+<td style="text-align: right;">103.582</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BCL</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">274.263</td>
+<td style="text-align: right;">701.860</td>
+<td style="text-align: right;">708.687</td>
+<td style="text-align: right;">710.373</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BitMath</td>
+<td style="text-align: right;">324.965</td>
+<td style="text-align: right;">275.150</td>
+<td style="text-align: right;">701.601</td>
+<td style="text-align: right;">710.639</td>
+<td style="text-align: right;">710.412</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_Two</td>
+<td style="text-align: right;">322.223</td>
+<td style="text-align: right;">325.097</td>
+<td style="text-align: right;">324.767</td>
+<td style="text-align: right;">413.866</td>
+<td style="text-align: right;">382.854</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_HighLow</td>
+<td style="text-align: right;">312.355</td>
+<td style="text-align: right;">310.825</td>
+<td style="text-align: right;">310.338</td>
+<td style="text-align: right;">397.464</td>
+<td style="text-align: right;">412.720</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wasm---wasm-on-amd-ryzen-7-7840h">Wasm - Wasm on AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BigNum</td>
+<td style="text-align: right;">4.607</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BCL</td>
+<td style="text-align: right;">20.757</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_BitMath</td>
+<td style="text-align: right;">20.921</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_Two</td>
+<td style="text-align: right;">83.949</td>
+</tr>
+<tr>
+<td style="text-align: left;">BigMulBenchmark_UInt64</td>
+<td style="text-align: left;">SumBigMul_HighLow</td>
+<td style="text-align: right;">59.656</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/ABitUtil/BigMul_Group.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

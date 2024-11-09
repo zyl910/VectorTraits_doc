@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals*" class="text-break">
-Method YIsNotEquals  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L506"><i class="bi bi-code-slash"></i></a>
+Method YIsNotEquals  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2098"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YIsNotEquals  <a class="header-action link-secondary" title="View source"
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})">
   YIsNotEquals(Vector&lt;float&gt;, Vector&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L506"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2098"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if they are not equal on a per-element basis (比较两个向量，确定它们每个元素是否不相等).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] != right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})">
   YIsNotEquals(Vector&lt;double&gt;, Vector&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2104"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if they are not equal on a per-element basis (比较两个向量，确定它们每个元素是否不相等).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] != right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte})">
   YIsNotEquals(Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L518"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2110"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if they are not equal on a per-element basis (比较两个向量，确定它们每个元素是否不相等).
@@ -268,7 +268,7 @@ public virtual Vector&lt;sbyte&gt; YIsNotEquals(Vector&lt;sbyte&gt; left, Vector
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte})">
   YIsNotEquals(Vector&lt;byte&gt;, Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L525"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2117"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if they are not equal on a per-element basis (比较两个向量，确定它们每个元素是否不相等).
@@ -318,7 +318,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] != right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16})">
   YIsNotEquals(Vector&lt;short&gt;, Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L531"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2123"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if they are not equal on a per-element basis (比较两个向量，确定它们每个元素是否不相等).
@@ -368,7 +368,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] != right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16})">
   YIsNotEquals(Vector&lt;ushort&gt;, Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L537"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2129"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if they are not equal on a per-element basis (比较两个向量，确定它们每个元素是否不相等).
@@ -419,7 +419,7 @@ public virtual Vector&lt;ushort&gt; YIsNotEquals(Vector&lt;ushort&gt; left, Vect
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})">
   YIsNotEquals(Vector&lt;int&gt;, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L544"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2136"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if they are not equal on a per-element basis (比较两个向量，确定它们每个元素是否不相等).
@@ -469,7 +469,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] != right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32})">
   YIsNotEquals(Vector&lt;uint&gt;, Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L550"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2142"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if they are not equal on a per-element basis (比较两个向量，确定它们每个元素是否不相等).
@@ -520,7 +520,7 @@ public virtual Vector&lt;uint&gt; YIsNotEquals(Vector&lt;uint&gt; left, Vector&l
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})">
   YIsNotEquals(Vector&lt;long&gt;, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L557"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2149"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if they are not equal on a per-element basis (比较两个向量，确定它们每个元素是否不相等).
@@ -570,7 +570,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] != right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsNotEquals_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsNotEquals(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64})">
   YIsNotEquals(Vector&lt;ulong&gt;, Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L563"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2155"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if they are not equal on a per-element basis (比较两个向量，确定它们每个元素是否不相等).
@@ -620,7 +620,7 @@ public virtual Vector&lt;ulong&gt; YIsNotEquals(Vector&lt;ulong&gt; left, Vector
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L506" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2098" class="edit-link">Edit this page</a>
         </div>
 
 

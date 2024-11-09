@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero*" class="text-break">
-Method YIsZero  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L756"><i class="bi bi-code-slash"></i></a>
+Method YIsZero  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2348"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YIsZero  <a class="header-action link-secondary" title="View source" href
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_System_Numerics_Vector_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero(System.Numerics.Vector{System.Single})">
   YIsZero(Vector&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L756"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2348"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is zero (确定元素是否为零).
@@ -164,7 +164,7 @@ Mnemonic: <code>rt[i] := to_mask(0==value[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_System_Numerics_Vector_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero(System.Numerics.Vector{System.Double})">
   YIsZero(Vector&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L762"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2354"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is zero (确定元素是否为零).
@@ -212,7 +212,7 @@ Mnemonic: <code>rt[i] := to_mask(0==value[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero(System.Numerics.Vector{System.SByte})">
   YIsZero(Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L768"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2360"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is zero (确定元素是否为零).
@@ -261,7 +261,7 @@ public override Vector&lt;sbyte&gt; YIsZero(Vector&lt;sbyte&gt; value)</code></p
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero(System.Numerics.Vector{System.Byte})">
   YIsZero(Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L775"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2367"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is zero (确定元素是否为零).
@@ -309,7 +309,7 @@ Mnemonic: <code>rt[i] := to_mask(0==value[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero(System.Numerics.Vector{System.Int16})">
   YIsZero(Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L781"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2373"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is zero (确定元素是否为零).
@@ -357,7 +357,7 @@ Mnemonic: <code>rt[i] := to_mask(0==value[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero(System.Numerics.Vector{System.UInt16})">
   YIsZero(Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L787"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2379"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is zero (确定元素是否为零).
@@ -406,7 +406,7 @@ public override Vector&lt;ushort&gt; YIsZero(Vector&lt;ushort&gt; value)</code><
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero(System.Numerics.Vector{System.Int32})">
   YIsZero(Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L794"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2386"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is zero (确定元素是否为零).
@@ -454,7 +454,7 @@ Mnemonic: <code>rt[i] := to_mask(0==value[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero(System.Numerics.Vector{System.UInt32})">
   YIsZero(Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L800"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2392"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is zero (确定元素是否为零).
@@ -503,7 +503,7 @@ public override Vector&lt;uint&gt; YIsZero(Vector&lt;uint&gt; value)</code></pre
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero(System.Numerics.Vector{System.Int64})">
   YIsZero(Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L807"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2399"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is zero (确定元素是否为零).
@@ -551,7 +551,7 @@ Mnemonic: <code>rt[i] := to_mask(0==value[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_YIsZero_System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.YIsZero(System.Numerics.Vector{System.UInt64})">
   YIsZero(Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L813"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2405"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is zero (确定元素是否为零).
@@ -599,7 +599,7 @@ public override Vector&lt;ulong&gt; YIsZero(Vector&lt;ulong&gt; value)</code></p
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L756" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Y.cs/#L2348" class="edit-link">Edit this page</a>
         </div>
 
 

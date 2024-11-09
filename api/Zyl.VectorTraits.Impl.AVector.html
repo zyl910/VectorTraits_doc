@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -151,6 +151,21 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits128PackedSimd.html">VectorTraits128PackedSimd</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> traits 128 - PackedSimd on Wasm architecture.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits128PackedSimd.Statics.html">VectorTraits128PackedSimd.Statics</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> traits.Statics - Sse.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits128PackedSimdAbstract.html">VectorTraits128PackedSimdAbstract</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> traits 128 - PackedSimd on Wasm architecture abstract.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.html">VectorTraits128Sse</a></dt>
       <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> traits 128 - Sse .</p>
 </dd>
@@ -193,6 +208,36 @@ Classes
     <dl class="jumplist">
       <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits256Base.Statics.html">VectorTraits256Base.Statics</a></dt>
       <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> traits.Statics 256 - base.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits512Abstract.html">VectorTraits512Abstract</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> traits 512 - abstract.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits512Avx512.html">VectorTraits512Avx512</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> traits 512 - Avx512 .</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits512Avx512.Statics.html">VectorTraits512Avx512.Statics</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> traits.Statics - Avx512.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits512Avx512Abstract.html">VectorTraits512Avx512Abstract</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> traits 512 - Avx512 abstract.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits512Base.html">VectorTraits512Base</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> traits 512 - base.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector.VectorTraits512Base.Statics.html">VectorTraits512Base.Statics</a></dt>
+      <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> traits.Statics 512 - base.</p>
 </dd>
     </dl>
     <dl class="jumplist">

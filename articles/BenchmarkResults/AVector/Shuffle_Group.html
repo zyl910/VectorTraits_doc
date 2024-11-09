@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../../../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,6 +85,1069 @@
 
 <p>(<a href="Shuffle.html">← Back</a>)</p>
 <p>Unit of data: Million operations per second. The larger the number, the better the performance.</p>
+<h3 id="x86---amd-ryzen-7-7840h">X86 - AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1236.944</td>
+<td style="text-align: right;">1263.908</td>
+<td style="text-align: right;">1214.484</td>
+<td style="text-align: right;">1278.657</td>
+<td style="text-align: right;">1195.188</td>
+<td style="text-align: right;">1408.179</td>
+<td style="text-align: right;">1235.365</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1270.376</td>
+<td style="text-align: right;">1208.793</td>
+<td style="text-align: right;">1221.340</td>
+<td style="text-align: right;">1246.319</td>
+<td style="text-align: right;">1212.305</td>
+<td style="text-align: right;">1406.729</td>
+<td style="text-align: right;">1261.582</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1221.046</td>
+<td style="text-align: right;">1255.341</td>
+<td style="text-align: right;">8067.493</td>
+<td style="text-align: right;">10943.134</td>
+<td style="text-align: right;">10421.696</td>
+<td style="text-align: right;">14194.280</td>
+<td style="text-align: right;">32579.746</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">1278.650</td>
+<td style="text-align: right;">1211.361</td>
+<td style="text-align: right;">22661.648</td>
+<td style="text-align: right;">25363.988</td>
+<td style="text-align: right;">24123.555</td>
+<td style="text-align: right;">26722.243</td>
+<td style="text-align: right;">34671.910</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">1255.109</td>
+<td style="text-align: right;">1154.801</td>
+<td style="text-align: right;">22911.649</td>
+<td style="text-align: right;">26138.766</td>
+<td style="text-align: right;">24804.170</td>
+<td style="text-align: right;">26585.684</td>
+<td style="text-align: right;">33172.777</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1074.656</td>
+<td style="text-align: right;">938.447</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8453.891</td>
+<td style="text-align: right;">12415.380</td>
+<td style="text-align: right;">12463.128</td>
+<td style="text-align: right;">19916.073</td>
+<td style="text-align: right;">33098.630</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">918.911</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">32342.977</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">1269.733</td>
+<td style="text-align: right;">1192.079</td>
+<td style="text-align: right;">8698.117</td>
+<td style="text-align: right;">12377.326</td>
+<td style="text-align: right;">11972.407</td>
+<td style="text-align: right;">17610.477</td>
+<td style="text-align: right;">35632.301</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">1297.765</td>
+<td style="text-align: right;">1199.697</td>
+<td style="text-align: right;">23028.564</td>
+<td style="text-align: right;">25852.122</td>
+<td style="text-align: right;">25176.482</td>
+<td style="text-align: right;">24261.582</td>
+<td style="text-align: right;">36741.022</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">1270.852</td>
+<td style="text-align: right;">1142.885</td>
+<td style="text-align: right;">23265.595</td>
+<td style="text-align: right;">25960.405</td>
+<td style="text-align: right;">21744.418</td>
+<td style="text-align: right;">23156.078</td>
+<td style="text-align: right;">37227.607</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256_Avx2_Multiply</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8575.866</td>
+<td style="text-align: right;">13784.163</td>
+<td style="text-align: right;">13809.947</td>
+<td style="text-align: right;">18935.398</td>
+<td style="text-align: right;">36602.662</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256_Avx2_ShiftLane</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10109.809</td>
+<td style="text-align: right;">14360.709</td>
+<td style="text-align: right;">13711.196</td>
+<td style="text-align: right;">13723.729</td>
+<td style="text-align: right;">23133.972</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8489.587</td>
+<td style="text-align: right;">13381.369</td>
+<td style="text-align: right;">13280.373</td>
+<td style="text-align: right;">18872.614</td>
+<td style="text-align: right;">36266.651</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">25043.819</td>
+<td style="text-align: right;">24164.491</td>
+<td style="text-align: right;">25218.816</td>
+<td style="text-align: right;">23099.332</td>
+<td style="text-align: right;">36420.461</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">24582.356</td>
+<td style="text-align: right;">25719.170</td>
+<td style="text-align: right;">24805.980</td>
+<td style="text-align: right;">20517.507</td>
+<td style="text-align: right;">36162.413</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">850.057</td>
+<td style="text-align: right;">829.782</td>
+<td style="text-align: right;">816.013</td>
+<td style="text-align: right;">859.672</td>
+<td style="text-align: right;">817.223</td>
+<td style="text-align: right;">853.140</td>
+<td style="text-align: right;">837.720</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">829.011</td>
+<td style="text-align: right;">832.311</td>
+<td style="text-align: right;">845.489</td>
+<td style="text-align: right;">855.995</td>
+<td style="text-align: right;">838.020</td>
+<td style="text-align: right;">864.152</td>
+<td style="text-align: right;">826.740</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">821.394</td>
+<td style="text-align: right;">844.388</td>
+<td style="text-align: right;">10852.534</td>
+<td style="text-align: right;">10832.760</td>
+<td style="text-align: right;">10943.342</td>
+<td style="text-align: right;">12695.692</td>
+<td style="text-align: right;">15067.794</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">864.447</td>
+<td style="text-align: right;">818.042</td>
+<td style="text-align: right;">12704.591</td>
+<td style="text-align: right;">15953.127</td>
+<td style="text-align: right;">15574.554</td>
+<td style="text-align: right;">14391.785</td>
+<td style="text-align: right;">15559.766</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">810.166</td>
+<td style="text-align: right;">762.183</td>
+<td style="text-align: right;">12531.310</td>
+<td style="text-align: right;">14746.991</td>
+<td style="text-align: right;">14125.335</td>
+<td style="text-align: right;">13524.193</td>
+<td style="text-align: right;">15368.528</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Wasm_CompareGreater</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Wasm_EqualsShift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">755.314</td>
+<td style="text-align: right;">770.558</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum256_Avx2_Add1</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7141.994</td>
+<td style="text-align: right;">10800.960</td>
+<td style="text-align: right;">12024.807</td>
+<td style="text-align: right;">11699.668</td>
+<td style="text-align: right;">15235.520</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11595.912</td>
+<td style="text-align: right;">13052.644</td>
+<td style="text-align: right;">14283.708</td>
+<td style="text-align: right;">13979.190</td>
+<td style="text-align: right;">15620.350</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">930.330</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">14817.994</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">825.747</td>
+<td style="text-align: right;">841.229</td>
+<td style="text-align: right;">14515.308</td>
+<td style="text-align: right;">14407.190</td>
+<td style="text-align: right;">14545.131</td>
+<td style="text-align: right;">16276.648</td>
+<td style="text-align: right;">15999.993</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">856.015</td>
+<td style="text-align: right;">814.055</td>
+<td style="text-align: right;">14754.810</td>
+<td style="text-align: right;">14880.916</td>
+<td style="text-align: right;">17262.390</td>
+<td style="text-align: right;">14319.199</td>
+<td style="text-align: right;">16261.174</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">806.479</td>
+<td style="text-align: right;">765.218</td>
+<td style="text-align: right;">15073.768</td>
+<td style="text-align: right;">14604.621</td>
+<td style="text-align: right;">16999.007</td>
+<td style="text-align: right;">16367.119</td>
+<td style="text-align: right;">16422.220</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">16988.322</td>
+<td style="text-align: right;">15526.311</td>
+<td style="text-align: right;">10548.803</td>
+<td style="text-align: right;">14853.425</td>
+<td style="text-align: right;">16343.393</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">16610.754</td>
+<td style="text-align: right;">17017.951</td>
+<td style="text-align: right;">15952.165</td>
+<td style="text-align: right;">15817.259</td>
+<td style="text-align: right;">15931.136</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">17216.220</td>
+<td style="text-align: right;">11015.375</td>
+<td style="text-align: right;">13792.076</td>
+<td style="text-align: right;">13552.579</td>
+<td style="text-align: right;">15905.211</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">425.474</td>
+<td style="text-align: right;">430.216</td>
+<td style="text-align: right;">457.179</td>
+<td style="text-align: right;">497.203</td>
+<td style="text-align: right;">465.105</td>
+<td style="text-align: right;">432.348</td>
+<td style="text-align: right;">425.921</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">468.461</td>
+<td style="text-align: right;">428.475</td>
+<td style="text-align: right;">425.688</td>
+<td style="text-align: right;">496.350</td>
+<td style="text-align: right;">430.476</td>
+<td style="text-align: right;">501.038</td>
+<td style="text-align: right;">427.753</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">474.906</td>
+<td style="text-align: right;">431.296</td>
+<td style="text-align: right;">3789.327</td>
+<td style="text-align: right;">4192.951</td>
+<td style="text-align: right;">4280.568</td>
+<td style="text-align: right;">4155.819</td>
+<td style="text-align: right;">8171.028</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">423.703</td>
+<td style="text-align: right;">461.664</td>
+<td style="text-align: right;">6979.885</td>
+<td style="text-align: right;">7855.241</td>
+<td style="text-align: right;">8501.271</td>
+<td style="text-align: right;">7846.303</td>
+<td style="text-align: right;">8198.449</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">446.260</td>
+<td style="text-align: right;">420.925</td>
+<td style="text-align: right;">6704.874</td>
+<td style="text-align: right;">8599.441</td>
+<td style="text-align: right;">8317.550</td>
+<td style="text-align: right;">7312.362</td>
+<td style="text-align: right;">8378.340</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">506.686</td>
+<td style="text-align: right;">515.520</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4025.137</td>
+<td style="text-align: right;">5466.388</td>
+<td style="text-align: right;">5258.504</td>
+<td style="text-align: right;">5355.022</td>
+<td style="text-align: right;">8089.992</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">688.892</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7733.564</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">473.823</td>
+<td style="text-align: right;">426.081</td>
+<td style="text-align: right;">4854.793</td>
+<td style="text-align: right;">5862.440</td>
+<td style="text-align: right;">5735.074</td>
+<td style="text-align: right;">5938.699</td>
+<td style="text-align: right;">8560.856</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">424.508</td>
+<td style="text-align: right;">458.248</td>
+<td style="text-align: right;">7804.575</td>
+<td style="text-align: right;">8108.408</td>
+<td style="text-align: right;">9181.086</td>
+<td style="text-align: right;">8364.106</td>
+<td style="text-align: right;">8701.155</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">446.097</td>
+<td style="text-align: right;">428.538</td>
+<td style="text-align: right;">8386.279</td>
+<td style="text-align: right;">9239.331</td>
+<td style="text-align: right;">9198.798</td>
+<td style="text-align: right;">8344.952</td>
+<td style="text-align: right;">8673.715</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128_Sse_DuplicateEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128_Arm_Multiply</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_AlignRight</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4880.617</td>
+<td style="text-align: right;">5470.127</td>
+<td style="text-align: right;">5419.855</td>
+<td style="text-align: right;">5415.151</td>
+<td style="text-align: right;">8791.891</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_DuplicateEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5276.504</td>
+<td style="text-align: right;">6066.870</td>
+<td style="text-align: right;">6154.469</td>
+<td style="text-align: right;">6241.420</td>
+<td style="text-align: right;">8688.759</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_Multiply</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2267.039</td>
+<td style="text-align: right;">2848.082</td>
+<td style="text-align: right;">2984.934</td>
+<td style="text-align: right;">2710.042</td>
+<td style="text-align: right;">8892.630</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_ShiftLane</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4821.492</td>
+<td style="text-align: right;">5977.394</td>
+<td style="text-align: right;">6254.779</td>
+<td style="text-align: right;">6266.401</td>
+<td style="text-align: right;">8825.284</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5471.014</td>
+<td style="text-align: right;">6193.223</td>
+<td style="text-align: right;">5999.570</td>
+<td style="text-align: right;">6335.666</td>
+<td style="text-align: right;">8680.147</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8963.776</td>
+<td style="text-align: right;">8029.324</td>
+<td style="text-align: right;">9198.774</td>
+<td style="text-align: right;">8191.638</td>
+<td style="text-align: right;">8601.527</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7897.715</td>
+<td style="text-align: right;">7810.420</td>
+<td style="text-align: right;">8772.684</td>
+<td style="text-align: right;">8391.317</td>
+<td style="text-align: right;">8724.270</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1496.783</td>
+<td style="text-align: right;">1403.348</td>
+<td style="text-align: right;">1448.660</td>
+<td style="text-align: right;">1239.277</td>
+<td style="text-align: right;">1468.827</td>
+<td style="text-align: right;">1415.139</td>
+<td style="text-align: right;">1213.582</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1537.986</td>
+<td style="text-align: right;">1513.440</td>
+<td style="text-align: right;">1306.115</td>
+<td style="text-align: right;">1500.220</td>
+<td style="text-align: right;">1452.622</td>
+<td style="text-align: right;">1474.647</td>
+<td style="text-align: right;">1441.306</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1476.771</td>
+<td style="text-align: right;">1494.144</td>
+<td style="text-align: right;">17086.314</td>
+<td style="text-align: right;">24231.464</td>
+<td style="text-align: right;">24097.622</td>
+<td style="text-align: right;">30243.434</td>
+<td style="text-align: right;">60885.250</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">1392.158</td>
+<td style="text-align: right;">1331.083</td>
+<td style="text-align: right;">45038.802</td>
+<td style="text-align: right;">50540.409</td>
+<td style="text-align: right;">49090.081</td>
+<td style="text-align: right;">46979.783</td>
+<td style="text-align: right;">60672.985</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">1389.074</td>
+<td style="text-align: right;">1295.641</td>
+<td style="text-align: right;">46794.997</td>
+<td style="text-align: right;">51069.265</td>
+<td style="text-align: right;">50078.249</td>
+<td style="text-align: right;">46518.750</td>
+<td style="text-align: right;">65261.554</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">901.114</td>
+<td style="text-align: right;">1022.223</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_Add1</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">17680.705</td>
+<td style="text-align: right;">27259.330</td>
+<td style="text-align: right;">26928.091</td>
+<td style="text-align: right;">31652.671</td>
+<td style="text-align: right;">54966.710</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_Add2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">16981.534</td>
+<td style="text-align: right;">24595.180</td>
+<td style="text-align: right;">25390.338</td>
+<td style="text-align: right;">29868.309</td>
+<td style="text-align: right;">42493.502</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_Cmp2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19108.512</td>
+<td style="text-align: right;">25697.522</td>
+<td style="text-align: right;">32141.792</td>
+<td style="text-align: right;">32237.731</td>
+<td style="text-align: right;">58940.683</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_EqualAnd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">20064.881</td>
+<td style="text-align: right;">27827.353</td>
+<td style="text-align: right;">27032.611</td>
+<td style="text-align: right;">26385.226</td>
+<td style="text-align: right;">60458.784</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">16711.858</td>
+<td style="text-align: right;">26366.642</td>
+<td style="text-align: right;">28817.941</td>
+<td style="text-align: right;">31706.056</td>
+<td style="text-align: right;">66988.398</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">989.131</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">64432.274</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">1476.637</td>
+<td style="text-align: right;">1242.198</td>
+<td style="text-align: right;">27650.933</td>
+<td style="text-align: right;">32894.218</td>
+<td style="text-align: right;">32711.664</td>
+<td style="text-align: right;">39630.939</td>
+<td style="text-align: right;">72350.167</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">1523.543</td>
+<td style="text-align: right;">1440.011</td>
+<td style="text-align: right;">44451.891</td>
+<td style="text-align: right;">49973.813</td>
+<td style="text-align: right;">51540.236</td>
+<td style="text-align: right;">48754.502</td>
+<td style="text-align: right;">72615.251</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">1395.106</td>
+<td style="text-align: right;">1274.943</td>
+<td style="text-align: right;">41001.996</td>
+<td style="text-align: right;">50067.099</td>
+<td style="text-align: right;">49654.805</td>
+<td style="text-align: right;">45904.504</td>
+<td style="text-align: right;">71412.964</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">27602.150</td>
+<td style="text-align: right;">38375.073</td>
+<td style="text-align: right;">37451.508</td>
+<td style="text-align: right;">43518.592</td>
+<td style="text-align: right;">71712.144</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">48745.607</td>
+<td style="text-align: right;">49345.013</td>
+<td style="text-align: right;">50973.728</td>
+<td style="text-align: right;">48093.264</td>
+<td style="text-align: right;">71875.070</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">47232.647</td>
+<td style="text-align: right;">47781.949</td>
+<td style="text-align: right;">50184.740</td>
+<td style="text-align: right;">46542.897</td>
+<td style="text-align: right;">73291.774</td>
+</tr>
+</tbody>
+</table>
 <h3 id="x86---intel-core-i5-8250u">X86 - Intel Core i5-8250U</h3>
 <table>
 <thead>
@@ -1629,6 +2692,685 @@
 </tr>
 </tbody>
 </table>
+<h3 id="arm---apple-m2">Arm - Apple M2</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1813.611</td>
+<td style="text-align: right;">2286.981</td>
+<td style="text-align: right;">2267.510</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1813.720</td>
+<td style="text-align: right;">2290.775</td>
+<td style="text-align: right;">2267.218</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">13593.983</td>
+<td style="text-align: right;">13603.414</td>
+<td style="text-align: right;">13614.059</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">13611.708</td>
+<td style="text-align: right;">13607.433</td>
+<td style="text-align: right;">13611.140</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">13577.658</td>
+<td style="text-align: right;">13608.068</td>
+<td style="text-align: right;">13613.104</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1892.287</td>
+<td style="text-align: right;">1909.152</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;">11448.478</td>
+<td style="text-align: right;">13116.280</td>
+<td style="text-align: right;">13603.377</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">13602.376</td>
+<td style="text-align: right;">13606.053</td>
+<td style="text-align: right;">13614.115</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1912.983</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1912.982</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">13604.116</td>
+<td style="text-align: right;">13611.317</td>
+<td style="text-align: right;">13616.924</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">13610.012</td>
+<td style="text-align: right;">13612.060</td>
+<td style="text-align: right;">13613.942</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">13578.600</td>
+<td style="text-align: right;">13609.518</td>
+<td style="text-align: right;">13616.825</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;">12085.817</td>
+<td style="text-align: right;">13593.857</td>
+<td style="text-align: right;">13600.748</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;">13604.367</td>
+<td style="text-align: right;">13611.349</td>
+<td style="text-align: right;">13613.471</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256_Avx2_Multiply</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256_Avx2_ShiftLane</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1600.170</td>
+<td style="text-align: right;">1943.129</td>
+<td style="text-align: right;">1942.939</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1600.118</td>
+<td style="text-align: right;">1942.929</td>
+<td style="text-align: right;">1700.166</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">6798.483</td>
+<td style="text-align: right;">6802.443</td>
+<td style="text-align: right;">6805.336</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">6802.581</td>
+<td style="text-align: right;">6802.236</td>
+<td style="text-align: right;">6804.942</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">6793.540</td>
+<td style="text-align: right;">6802.317</td>
+<td style="text-align: right;">6804.719</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2617.002</td>
+<td style="text-align: right;">2619.142</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;">5725.075</td>
+<td style="text-align: right;">6562.261</td>
+<td style="text-align: right;">6802.300</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Wasm_CompareGreater</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Wasm_EqualsShift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">6800.272</td>
+<td style="text-align: right;">6803.618</td>
+<td style="text-align: right;">6805.516</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum256_Avx2_Add1</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1747.491</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1748.702</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">6798.492</td>
+<td style="text-align: right;">6804.381</td>
+<td style="text-align: right;">6803.818</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">6803.152</td>
+<td style="text-align: right;">6804.811</td>
+<td style="text-align: right;">6805.694</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">6795.238</td>
+<td style="text-align: right;">6804.500</td>
+<td style="text-align: right;">6802.751</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;">6013.588</td>
+<td style="text-align: right;">6799.175</td>
+<td style="text-align: right;">6799.723</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;">6801.578</td>
+<td style="text-align: right;">6803.402</td>
+<td style="text-align: right;">6803.696</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1294.758</td>
+<td style="text-align: right;">1551.021</td>
+<td style="text-align: right;">1505.013</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1294.541</td>
+<td style="text-align: right;">1550.515</td>
+<td style="text-align: right;">1509.312</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">3399.181</td>
+<td style="text-align: right;">3400.917</td>
+<td style="text-align: right;">3402.669</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">3400.768</td>
+<td style="text-align: right;">3401.830</td>
+<td style="text-align: right;">3401.864</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">3398.536</td>
+<td style="text-align: right;">3401.340</td>
+<td style="text-align: right;">3402.187</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2055.437</td>
+<td style="text-align: right;">2059.051</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;">2365.370</td>
+<td style="text-align: right;">2773.480</td>
+<td style="text-align: right;">3400.783</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">3400.241</td>
+<td style="text-align: right;">3401.851</td>
+<td style="text-align: right;">3402.265</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1512.807</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1510.622</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">3400.653</td>
+<td style="text-align: right;">3401.744</td>
+<td style="text-align: right;">3400.987</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">3401.209</td>
+<td style="text-align: right;">3401.822</td>
+<td style="text-align: right;">3401.855</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">3398.930</td>
+<td style="text-align: right;">3402.198</td>
+<td style="text-align: right;">3402.201</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128_Sse_DuplicateEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;">3022.573</td>
+<td style="text-align: right;">3400.468</td>
+<td style="text-align: right;">3401.420</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128_Arm_Multiply</td>
+<td style="text-align: right;">1553.900</td>
+<td style="text-align: right;">2063.375</td>
+<td style="text-align: right;">443.217</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;">3401.970</td>
+<td style="text-align: right;">3401.930</td>
+<td style="text-align: right;">3402.144</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_AlignRight</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_DuplicateEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_Multiply</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_ShiftLane</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">2266.726</td>
+<td style="text-align: right;">2736.182</td>
+<td style="text-align: right;">2715.459</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">2266.739</td>
+<td style="text-align: right;">2735.397</td>
+<td style="text-align: right;">2716.850</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">27175.969</td>
+<td style="text-align: right;">27165.670</td>
+<td style="text-align: right;">27193.666</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">27183.317</td>
+<td style="text-align: right;">27163.344</td>
+<td style="text-align: right;">27200.994</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">27066.764</td>
+<td style="text-align: right;">27153.973</td>
+<td style="text-align: right;">27194.756</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1986.725</td>
+<td style="text-align: right;">1995.712</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;">27147.801</td>
+<td style="text-align: right;">27144.258</td>
+<td style="text-align: right;">27178.830</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">27202.974</td>
+<td style="text-align: right;">27195.784</td>
+<td style="text-align: right;">27201.747</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_Add1</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_Add2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_Cmp2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_EqualAnd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1998.195</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1998.720</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">27176.436</td>
+<td style="text-align: right;">27166.467</td>
+<td style="text-align: right;">27199.577</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">27181.156</td>
+<td style="text-align: right;">27163.831</td>
+<td style="text-align: right;">27199.077</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">27065.350</td>
+<td style="text-align: right;">27153.156</td>
+<td style="text-align: right;">27202.032</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;">27148.573</td>
+<td style="text-align: right;">27135.989</td>
+<td style="text-align: right;">27183.552</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;">27197.911</td>
+<td style="text-align: right;">27196.443</td>
+<td style="text-align: right;">27206.105</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
 <h3 id="arm---aws-arm-t4gsmall">Arm - AWS Arm t4g.small</h3>
 <table>
 <thead>
@@ -1639,48 +3381,54 @@
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">424.999</td>
-<td style="text-align: right;">423.218</td>
-<td style="text-align: right;">419.101</td>
-<td style="text-align: right;">527.300</td>
+<td style="text-align: right;">427.276</td>
+<td style="text-align: right;">421.887</td>
+<td style="text-align: right;">421.454</td>
+<td style="text-align: right;">526.589</td>
+<td style="text-align: right;">516.294</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumBase</td>
-<td style="text-align: right;">425.670</td>
-<td style="text-align: right;">422.538</td>
-<td style="text-align: right;">422.107</td>
-<td style="text-align: right;">527.113</td>
+<td style="text-align: right;">425.871</td>
+<td style="text-align: right;">421.454</td>
+<td style="text-align: right;">423.412</td>
+<td style="text-align: right;">526.191</td>
+<td style="text-align: right;">518.273</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">425.313</td>
-<td style="text-align: right;">4699.731</td>
-<td style="text-align: right;">5530.044</td>
-<td style="text-align: right;">5869.854</td>
+<td style="text-align: right;">428.281</td>
+<td style="text-align: right;">4922.876</td>
+<td style="text-align: right;">5555.655</td>
+<td style="text-align: right;">5864.193</td>
+<td style="text-align: right;">9711.569</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">424.768</td>
-<td style="text-align: right;">8429.938</td>
-<td style="text-align: right;">8257.430</td>
-<td style="text-align: right;">9942.485</td>
+<td style="text-align: right;">428.928</td>
+<td style="text-align: right;">7902.420</td>
+<td style="text-align: right;">8416.624</td>
+<td style="text-align: right;">9925.441</td>
+<td style="text-align: right;">9709.555</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">400.596</td>
-<td style="text-align: right;">2978.896</td>
-<td style="text-align: right;">2867.447</td>
-<td style="text-align: right;">9921.169</td>
+<td style="text-align: right;">405.537</td>
+<td style="text-align: right;">2809.483</td>
+<td style="text-align: right;">2798.925</td>
+<td style="text-align: right;">9880.804</td>
+<td style="text-align: right;">9707.490</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
@@ -1688,27 +3436,31 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">481.867</td>
+<td style="text-align: right;">482.907</td>
+<td style="text-align: right;">468.383</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">Sum128_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">3150.881</td>
-<td style="text-align: right;">3102.195</td>
-<td style="text-align: right;">3111.658</td>
+<td style="text-align: right;">2730.866</td>
+<td style="text-align: right;">3116.533</td>
+<td style="text-align: right;">3140.910</td>
+<td style="text-align: right;">5334.923</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">Sum128Traits</td>
-<td style="text-align: right;">238.425</td>
-<td style="text-align: right;">4981.104</td>
-<td style="text-align: right;">5528.097</td>
-<td style="text-align: right;">5878.244</td>
+<td style="text-align: right;">239.485</td>
+<td style="text-align: right;">5262.847</td>
+<td style="text-align: right;">5567.725</td>
+<td style="text-align: right;">5868.675</td>
+<td style="text-align: right;">9827.341</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -1721,50 +3473,75 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">557.399</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">557.424</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">425.055</td>
-<td style="text-align: right;">5280.154</td>
-<td style="text-align: right;">6489.835</td>
-<td style="text-align: right;">7965.363</td>
+<td style="text-align: right;">427.637</td>
+<td style="text-align: right;">5650.913</td>
+<td style="text-align: right;">6540.446</td>
+<td style="text-align: right;">7957.175</td>
+<td style="text-align: right;">9833.813</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">424.753</td>
-<td style="text-align: right;">8432.769</td>
-<td style="text-align: right;">7773.929</td>
-<td style="text-align: right;">9946.938</td>
+<td style="text-align: right;">427.578</td>
+<td style="text-align: right;">7897.224</td>
+<td style="text-align: right;">7891.894</td>
+<td style="text-align: right;">9929.863</td>
+<td style="text-align: right;">9819.774</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">400.853</td>
-<td style="text-align: right;">2976.102</td>
-<td style="text-align: right;">2977.539</td>
-<td style="text-align: right;">9918.004</td>
+<td style="text-align: right;">405.223</td>
+<td style="text-align: right;">2811.195</td>
+<td style="text-align: right;">2797.170</td>
+<td style="text-align: right;">9861.330</td>
+<td style="text-align: right;">9829.822</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumKernel128_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">2963.866</td>
-<td style="text-align: right;">3350.936</td>
-<td style="text-align: right;">3971.472</td>
+<td style="text-align: right;">3477.554</td>
+<td style="text-align: right;">3373.104</td>
+<td style="text-align: right;">3505.451</td>
+<td style="text-align: right;">5352.675</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumKernel128Traits</td>
-<td style="text-align: right;">238.843</td>
-<td style="text-align: right;">6554.537</td>
-<td style="text-align: right;">6472.303</td>
-<td style="text-align: right;">7967.252</td>
+<td style="text-align: right;">239.538</td>
+<td style="text-align: right;">6543.087</td>
+<td style="text-align: right;">6551.098</td>
+<td style="text-align: right;">7950.782</td>
+<td style="text-align: right;">9753.632</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumKernel256_Avx2_Multiply</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -1777,10 +3554,12 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
 <td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -1793,6 +3572,7 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int16</td>
@@ -1801,46 +3581,52 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">287.973</td>
-<td style="text-align: right;">280.924</td>
-<td style="text-align: right;">281.376</td>
-<td style="text-align: right;">316.554</td>
+<td style="text-align: right;">286.900</td>
+<td style="text-align: right;">281.167</td>
+<td style="text-align: right;">281.838</td>
+<td style="text-align: right;">317.876</td>
+<td style="text-align: right;">309.427</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumBase</td>
-<td style="text-align: right;">287.844</td>
-<td style="text-align: right;">281.217</td>
-<td style="text-align: right;">281.189</td>
-<td style="text-align: right;">317.811</td>
+<td style="text-align: right;">287.569</td>
+<td style="text-align: right;">280.676</td>
+<td style="text-align: right;">281.450</td>
+<td style="text-align: right;">315.976</td>
+<td style="text-align: right;">309.741</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">288.127</td>
-<td style="text-align: right;">2450.585</td>
-<td style="text-align: right;">2447.558</td>
-<td style="text-align: right;">2921.792</td>
+<td style="text-align: right;">286.596</td>
+<td style="text-align: right;">2311.209</td>
+<td style="text-align: right;">2472.592</td>
+<td style="text-align: right;">2917.343</td>
+<td style="text-align: right;">4801.979</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">287.246</td>
-<td style="text-align: right;">4151.578</td>
-<td style="text-align: right;">3868.791</td>
-<td style="text-align: right;">4864.057</td>
+<td style="text-align: right;">288.066</td>
+<td style="text-align: right;">4185.430</td>
+<td style="text-align: right;">3928.604</td>
+<td style="text-align: right;">4934.590</td>
+<td style="text-align: right;">4821.784</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">268.578</td>
-<td style="text-align: right;">1484.278</td>
-<td style="text-align: right;">1488.202</td>
-<td style="text-align: right;">4826.316</td>
+<td style="text-align: right;">270.249</td>
+<td style="text-align: right;">1396.323</td>
+<td style="text-align: right;">1401.742</td>
+<td style="text-align: right;">4886.669</td>
+<td style="text-align: right;">4806.886</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
@@ -1848,27 +3634,58 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">302.889</td>
+<td style="text-align: right;">304.320</td>
+<td style="text-align: right;">301.222</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">Sum128_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">1356.297</td>
-<td style="text-align: right;">1554.618</td>
-<td style="text-align: right;">1591.645</td>
+<td style="text-align: right;">1561.060</td>
+<td style="text-align: right;">1556.727</td>
+<td style="text-align: right;">1604.657</td>
+<td style="text-align: right;">2676.530</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Wasm_CompareGreater</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Wasm_EqualsShift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">Sum128Traits</td>
-<td style="text-align: right;">153.214</td>
-<td style="text-align: right;">2622.213</td>
-<td style="text-align: right;">2760.609</td>
-<td style="text-align: right;">2920.299</td>
+<td style="text-align: right;">156.899</td>
+<td style="text-align: right;">2475.662</td>
+<td style="text-align: right;">2773.273</td>
+<td style="text-align: right;">2925.412</td>
+<td style="text-align: right;">4850.125</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum256_Avx2_Add1</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -1881,50 +3698,75 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">515.317</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">515.275</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">287.659</td>
-<td style="text-align: right;">2653.535</td>
-<td style="text-align: right;">3231.874</td>
-<td style="text-align: right;">3916.923</td>
+<td style="text-align: right;">287.386</td>
+<td style="text-align: right;">2677.394</td>
+<td style="text-align: right;">3247.692</td>
+<td style="text-align: right;">3953.573</td>
+<td style="text-align: right;">4846.437</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">286.498</td>
-<td style="text-align: right;">3910.887</td>
-<td style="text-align: right;">3874.060</td>
-<td style="text-align: right;">4840.789</td>
+<td style="text-align: right;">286.724</td>
+<td style="text-align: right;">3919.619</td>
+<td style="text-align: right;">4182.617</td>
+<td style="text-align: right;">4930.469</td>
+<td style="text-align: right;">4852.808</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">268.501</td>
-<td style="text-align: right;">1483.173</td>
-<td style="text-align: right;">1480.430</td>
-<td style="text-align: right;">4819.802</td>
+<td style="text-align: right;">270.724</td>
+<td style="text-align: right;">1399.968</td>
+<td style="text-align: right;">1395.953</td>
+<td style="text-align: right;">4899.359</td>
+<td style="text-align: right;">4853.093</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumKernel128_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">1442.208</td>
-<td style="text-align: right;">1672.496</td>
-<td style="text-align: right;">1980.863</td>
+<td style="text-align: right;">1607.527</td>
+<td style="text-align: right;">1680.474</td>
+<td style="text-align: right;">1756.488</td>
+<td style="text-align: right;">2673.903</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumKernel128Traits</td>
-<td style="text-align: right;">153.157</td>
-<td style="text-align: right;">3259.100</td>
-<td style="text-align: right;">3231.342</td>
-<td style="text-align: right;">3925.725</td>
+<td style="text-align: right;">157.325</td>
+<td style="text-align: right;">3272.674</td>
+<td style="text-align: right;">3250.843</td>
+<td style="text-align: right;">3956.969</td>
+<td style="text-align: right;">4805.883</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
 <td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -1937,6 +3779,7 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int32</td>
@@ -1945,46 +3788,52 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">379.969</td>
-<td style="text-align: right;">440.479</td>
-<td style="text-align: right;">443.096</td>
-<td style="text-align: right;">552.245</td>
+<td style="text-align: right;">448.592</td>
+<td style="text-align: right;">440.758</td>
+<td style="text-align: right;">444.884</td>
+<td style="text-align: right;">552.061</td>
+<td style="text-align: right;">534.531</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumBase</td>
-<td style="text-align: right;">379.331</td>
-<td style="text-align: right;">411.212</td>
-<td style="text-align: right;">442.968</td>
-<td style="text-align: right;">551.973</td>
+<td style="text-align: right;">425.377</td>
+<td style="text-align: right;">421.331</td>
+<td style="text-align: right;">445.929</td>
+<td style="text-align: right;">551.659</td>
+<td style="text-align: right;">494.525</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">184.441</td>
-<td style="text-align: right;">1012.778</td>
-<td style="text-align: right;">1070.236</td>
-<td style="text-align: right;">1254.759</td>
+<td style="text-align: right;">190.913</td>
+<td style="text-align: right;">1005.614</td>
+<td style="text-align: right;">1064.650</td>
+<td style="text-align: right;">1255.025</td>
+<td style="text-align: right;">2448.365</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">378.846</td>
-<td style="text-align: right;">1963.813</td>
-<td style="text-align: right;">2069.707</td>
-<td style="text-align: right;">2463.769</td>
+<td style="text-align: right;">426.809</td>
+<td style="text-align: right;">2090.887</td>
+<td style="text-align: right;">2100.527</td>
+<td style="text-align: right;">2479.821</td>
+<td style="text-align: right;">2451.574</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">335.792</td>
-<td style="text-align: right;">717.028</td>
-<td style="text-align: right;">742.759</td>
-<td style="text-align: right;">2452.291</td>
+<td style="text-align: right;">179.534</td>
+<td style="text-align: right;">698.013</td>
+<td style="text-align: right;">699.200</td>
+<td style="text-align: right;">2457.898</td>
+<td style="text-align: right;">2451.414</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
@@ -1992,27 +3841,31 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">712.337</td>
+<td style="text-align: right;">708.356</td>
+<td style="text-align: right;">692.663</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">Sum128_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">592.424</td>
-<td style="text-align: right;">536.670</td>
-<td style="text-align: right;">604.608</td>
+<td style="text-align: right;">503.046</td>
+<td style="text-align: right;">550.840</td>
+<td style="text-align: right;">604.367</td>
+<td style="text-align: right;">1336.768</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">Sum128Traits</td>
-<td style="text-align: right;">207.549</td>
-<td style="text-align: right;">1228.061</td>
-<td style="text-align: right;">1078.230</td>
-<td style="text-align: right;">1266.492</td>
+<td style="text-align: right;">234.241</td>
+<td style="text-align: right;">1224.675</td>
+<td style="text-align: right;">1068.241</td>
+<td style="text-align: right;">1259.901</td>
+<td style="text-align: right;">2444.056</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -2025,30 +3878,52 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">543.760</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">543.555</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">182.389</td>
-<td style="text-align: right;">1217.434</td>
-<td style="text-align: right;">1408.426</td>
-<td style="text-align: right;">1767.667</td>
+<td style="text-align: right;">448.065</td>
+<td style="text-align: right;">1237.258</td>
+<td style="text-align: right;">1412.876</td>
+<td style="text-align: right;">1753.457</td>
+<td style="text-align: right;">2434.096</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">180.539</td>
-<td style="text-align: right;">2100.070</td>
-<td style="text-align: right;">1952.918</td>
-<td style="text-align: right;">2464.893</td>
+<td style="text-align: right;">449.857</td>
+<td style="text-align: right;">2101.411</td>
+<td style="text-align: right;">1967.152</td>
+<td style="text-align: right;">2469.054</td>
+<td style="text-align: right;">2443.626</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">335.424</td>
-<td style="text-align: right;">741.609</td>
-<td style="text-align: right;">743.436</td>
-<td style="text-align: right;">2450.730</td>
+<td style="text-align: right;">345.877</td>
+<td style="text-align: right;">701.805</td>
+<td style="text-align: right;">698.753</td>
+<td style="text-align: right;">2456.761</td>
+<td style="text-align: right;">2451.680</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
@@ -2057,34 +3932,39 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumKernel128_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">931.591</td>
-<td style="text-align: right;">892.424</td>
-<td style="text-align: right;">914.749</td>
+<td style="text-align: right;">931.986</td>
+<td style="text-align: right;">894.636</td>
+<td style="text-align: right;">915.626</td>
+<td style="text-align: right;">1340.858</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumKernel128_Arm_Multiply</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">468.751</td>
-<td style="text-align: right;">489.128</td>
-<td style="text-align: right;">569.016</td>
+<td style="text-align: right;">461.974</td>
+<td style="text-align: right;">491.264</td>
+<td style="text-align: right;">525.260</td>
+<td style="text-align: right;">425.974</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumKernel128Traits</td>
-<td style="text-align: right;">146.886</td>
-<td style="text-align: right;">1457.029</td>
-<td style="text-align: right;">1473.008</td>
-<td style="text-align: right;">1765.059</td>
+<td style="text-align: right;">234.516</td>
+<td style="text-align: right;">1477.127</td>
+<td style="text-align: right;">1476.100</td>
+<td style="text-align: right;">1758.550</td>
+<td style="text-align: right;">2438.271</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumKernel256_Avx2_AlignRight</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -2097,10 +3977,12 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumKernel256_Avx2_Multiply</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -2113,10 +3995,12 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
 <td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -2129,6 +4013,7 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_Int64</td>
@@ -2137,46 +4022,52 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">667.455</td>
-<td style="text-align: right;">660.836</td>
-<td style="text-align: right;">658.330</td>
-<td style="text-align: right;">833.764</td>
+<td style="text-align: right;">665.739</td>
+<td style="text-align: right;">664.224</td>
+<td style="text-align: right;">658.168</td>
+<td style="text-align: right;">834.224</td>
+<td style="text-align: right;">803.566</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumBase</td>
-<td style="text-align: right;">648.386</td>
-<td style="text-align: right;">646.261</td>
-<td style="text-align: right;">660.571</td>
-<td style="text-align: right;">835.092</td>
+<td style="text-align: right;">672.364</td>
+<td style="text-align: right;">659.589</td>
+<td style="text-align: right;">659.055</td>
+<td style="text-align: right;">834.209</td>
+<td style="text-align: right;">812.422</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">667.668</td>
-<td style="text-align: right;">15581.384</td>
-<td style="text-align: right;">16720.691</td>
-<td style="text-align: right;">19748.119</td>
+<td style="text-align: right;">680.590</td>
+<td style="text-align: right;">13176.730</td>
+<td style="text-align: right;">16739.161</td>
+<td style="text-align: right;">19723.567</td>
+<td style="text-align: right;">19531.685</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">665.086</td>
-<td style="text-align: right;">16724.814</td>
-<td style="text-align: right;">15729.294</td>
-<td style="text-align: right;">19742.430</td>
+<td style="text-align: right;">660.595</td>
+<td style="text-align: right;">15704.393</td>
+<td style="text-align: right;">15724.340</td>
+<td style="text-align: right;">19723.852</td>
+<td style="text-align: right;">19530.241</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">626.181</td>
-<td style="text-align: right;">5940.901</td>
-<td style="text-align: right;">5954.235</td>
-<td style="text-align: right;">19683.036</td>
+<td style="text-align: right;">637.568</td>
+<td style="text-align: right;">5597.644</td>
+<td style="text-align: right;">5602.803</td>
+<td style="text-align: right;">19605.289</td>
+<td style="text-align: right;">19527.338</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
@@ -2184,27 +4075,31 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">649.177</td>
+<td style="text-align: right;">647.757</td>
+<td style="text-align: right;">610.244</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">Sum128_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">11739.301</td>
-<td style="text-align: right;">11725.385</td>
-<td style="text-align: right;">13143.611</td>
+<td style="text-align: right;">11242.569</td>
+<td style="text-align: right;">11736.112</td>
+<td style="text-align: right;">13105.897</td>
+<td style="text-align: right;">16282.896</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">Sum128Traits</td>
-<td style="text-align: right;">399.980</td>
-<td style="text-align: right;">15752.275</td>
-<td style="text-align: right;">16761.213</td>
-<td style="text-align: right;">19779.062</td>
+<td style="text-align: right;">400.426</td>
+<td style="text-align: right;">16767.896</td>
+<td style="text-align: right;">16723.557</td>
+<td style="text-align: right;">19729.703</td>
+<td style="text-align: right;">19544.244</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -2217,10 +4112,12 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">Sum256_Avx2_Add2</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -2233,10 +4130,12 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">Sum256_Avx2_EqualAnd</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -2249,50 +4148,75 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">640.352</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">640.432</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">648.453</td>
-<td style="text-align: right;">13129.238</td>
-<td style="text-align: right;">16691.707</td>
-<td style="text-align: right;">19731.858</td>
+<td style="text-align: right;">672.784</td>
+<td style="text-align: right;">15604.597</td>
+<td style="text-align: right;">16732.629</td>
+<td style="text-align: right;">19692.571</td>
+<td style="text-align: right;">19533.892</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">665.102</td>
-<td style="text-align: right;">15734.005</td>
-<td style="text-align: right;">15694.804</td>
-<td style="text-align: right;">19702.186</td>
+<td style="text-align: right;">675.236</td>
+<td style="text-align: right;">16718.959</td>
+<td style="text-align: right;">15715.512</td>
+<td style="text-align: right;">19729.144</td>
+<td style="text-align: right;">19534.508</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">624.959</td>
-<td style="text-align: right;">5728.363</td>
-<td style="text-align: right;">5940.288</td>
-<td style="text-align: right;">19669.480</td>
+<td style="text-align: right;">642.795</td>
+<td style="text-align: right;">5573.999</td>
+<td style="text-align: right;">5598.168</td>
+<td style="text-align: right;">19588.655</td>
+<td style="text-align: right;">19538.006</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumKernel128_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">11248.646</td>
-<td style="text-align: right;">11746.544</td>
-<td style="text-align: right;">13134.187</td>
+<td style="text-align: right;">11748.196</td>
+<td style="text-align: right;">11737.578</td>
+<td style="text-align: right;">13131.709</td>
+<td style="text-align: right;">16275.599</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumKernel128Traits</td>
-<td style="text-align: right;">400.112</td>
-<td style="text-align: right;">16757.494</td>
-<td style="text-align: right;">16751.903</td>
-<td style="text-align: right;">19765.379</td>
+<td style="text-align: right;">400.750</td>
+<td style="text-align: right;">15719.108</td>
+<td style="text-align: right;">16747.893</td>
+<td style="text-align: right;">19744.815</td>
+<td style="text-align: right;">19497.899</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
 <td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
@@ -2305,6 +4229,7 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShuffleBenchmark_SByte</td>
@@ -2312,6 +4237,494 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="wasm---wasm-on-amd-ryzen-7-7840h">Wasm - Wasm on AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">19.744</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">20.256</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">61.970</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">69.356</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">70.149</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;">115.599</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">67.732</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;">14.532</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">13.004</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">80.660</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">94.466</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">76.913</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;">95.497</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256_Avx2_Multiply</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256_Avx2_ShiftLane</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int16</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">14.994</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">15.204</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">54.525</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">43.831</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">34.977</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;">69.596</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Wasm_CompareGreater</td>
+<td style="text-align: right;">32.736</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128_Wasm_EqualsShift</td>
+<td style="text-align: right;">30.780</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">66.975</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum256_Avx2_Add1</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;">10.770</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">9.895</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">54.959</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">41.181</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">35.099</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;">67.659</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int32</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">6.100</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">6.105</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">6.167</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">8.013</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">7.827</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;">4.731</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">12.715</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;">3.235</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">6.421</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">7.582</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">8.713</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">8.432</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128_Sse_DuplicateEven</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128_Arm_Multiply</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;">18.353</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_AlignRight</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_DuplicateEven</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_Multiply</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256_Avx2_ShiftLane</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_Int64</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">25.764</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">26.280</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">262.417</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumTraits_Args0</td>
+<td style="text-align: right;">198.939</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumTraits_Args</td>
+<td style="text-align: right;">154.569</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum128_Bcl</td>
+<td style="text-align: right;">200.205</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">338.108</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Bcl</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_Add1</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_Add2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_Cmp2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256_Avx2_EqualAnd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;">18.759</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">17.766</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernelTraits</td>
+<td style="text-align: right;">255.913</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernelTraits_Args0</td>
+<td style="text-align: right;">184.754</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernelTraits_Args</td>
+<td style="text-align: right;">155.117</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel128Traits</td>
+<td style="text-align: right;">325.587</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel256Traits</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel256Traits_Args0</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShuffleBenchmark_SByte</td>
+<td style="text-align: left;">SumKernel256Traits_Args</td>
 <td style="text-align: right;"></td>
 </tr>
 </tbody>

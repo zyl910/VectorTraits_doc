@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Base_Statics_Narrow_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Base.Statics.Narrow*" class="text-break">
-Method Narrow  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L82"><i class="bi bi-code-slash"></i></a>
+Method Narrow  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L89"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Narrow  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Base_Statics_Narrow_System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Base.Statics.Narrow(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})">
   Narrow(Vector&lt;double&gt;, Vector&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L89"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Narrows two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances into one <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>&quot;  (将两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例缩窄为一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> ). /&gt;.
@@ -167,7 +167,7 @@ Mnemonic: <code>rt[i] := narrow(element_ref(i, lower, upper))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Base_Statics_Narrow_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Base.Statics.Narrow(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16})">
   Narrow(Vector&lt;short&gt;, Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L99"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Narrows two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances into one <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>&quot;  (将两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例缩窄为一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> ). /&gt;.
@@ -218,7 +218,7 @@ public static Vector&lt;sbyte&gt; Narrow(Vector&lt;short&gt; lower, Vector&lt;sh
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Base_Statics_Narrow_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Base.Statics.Narrow(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16})">
   Narrow(Vector&lt;ushort&gt;, Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L110"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Narrows two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances into one <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>&quot;  (将两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例缩窄为一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> ). /&gt;.
@@ -269,7 +269,7 @@ public static Vector&lt;byte&gt; Narrow(Vector&lt;ushort&gt; lower, Vector&lt;us
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Base_Statics_Narrow_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Base.Statics.Narrow(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})">
   Narrow(Vector&lt;int&gt;, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L121"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Narrows two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances into one <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>&quot;  (将两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例缩窄为一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> ). /&gt;.
@@ -319,7 +319,7 @@ Mnemonic: <code>rt[i] := narrow(element_ref(i, lower, upper))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Base_Statics_Narrow_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Base.Statics.Narrow(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32})">
   Narrow(Vector&lt;uint&gt;, Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L131"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Narrows two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances into one <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>&quot;  (将两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例缩窄为一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> ). /&gt;.
@@ -370,7 +370,7 @@ public static Vector&lt;ushort&gt; Narrow(Vector&lt;uint&gt; lower, Vector&lt;ui
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Base_Statics_Narrow_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Base.Statics.Narrow(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})">
   Narrow(Vector&lt;long&gt;, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L142"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Narrows two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances into one <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>&quot;  (将两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例缩窄为一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> ). /&gt;.
@@ -420,7 +420,7 @@ Mnemonic: <code>rt[i] := narrow(element_ref(i, lower, upper))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Base_Statics_Narrow_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Base.Statics.Narrow(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64})">
   Narrow(Vector&lt;ulong&gt;, Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L152"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Narrows two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances into one <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>&quot;  (将两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例缩窄为一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> ). /&gt;.
@@ -470,7 +470,7 @@ public static Vector&lt;uint&gt; Narrow(Vector&lt;ulong&gt; lower, Vector&lt;ulo
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L82" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Base.cs/#L89" class="edit-link">Edit this page</a>
         </div>
 
 

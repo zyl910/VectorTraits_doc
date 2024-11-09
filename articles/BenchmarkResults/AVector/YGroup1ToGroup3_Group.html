@@ -1,0 +1,4333 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Benchmark group - YGroup1ToGroup3 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Benchmark group - YGroup1ToGroup3 ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/AVector/YGroup1ToGroup3_Group.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="benchmark-group---ygroup1togroup3">Benchmark group - YGroup1ToGroup3</h1>
+
+<p>(<a href="YGroup1ToGroup3.html">← Back</a>)</p>
+<p>Unit of data: Million operations per second. The larger the number, the better the performance.</p>
+<h3 id="x86---amd-ryzen-7-7840h">X86 - AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">201.212</td>
+<td style="text-align: right;">569.905</td>
+<td style="text-align: right;">559.971</td>
+<td style="text-align: right;">565.897</td>
+<td style="text-align: right;">577.907</td>
+<td style="text-align: right;">481.910</td>
+<td style="text-align: right;">657.775</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">309.448</td>
+<td style="text-align: right;">539.563</td>
+<td style="text-align: right;">572.491</td>
+<td style="text-align: right;">516.651</td>
+<td style="text-align: right;">567.679</td>
+<td style="text-align: right;">1594.596</td>
+<td style="text-align: right;">1694.728</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">312.110</td>
+<td style="text-align: right;">530.879</td>
+<td style="text-align: right;">565.638</td>
+<td style="text-align: right;">501.590</td>
+<td style="text-align: right;">555.634</td>
+<td style="text-align: right;">1581.913</td>
+<td style="text-align: right;">1697.482</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">304.782</td>
+<td style="text-align: right;">528.698</td>
+<td style="text-align: right;">20496.271</td>
+<td style="text-align: right;">24942.998</td>
+<td style="text-align: right;">26852.829</td>
+<td style="text-align: right;">28010.644</td>
+<td style="text-align: right;">32791.571</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">271.118</td>
+<td style="text-align: right;">267.551</td>
+<td style="text-align: right;">264.023</td>
+<td style="text-align: right;">471.610</td>
+<td style="text-align: right;">590.259</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">341.619</td>
+<td style="text-align: right;">344.590</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2047.259</td>
+<td style="text-align: right;">687.528</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">262.757</td>
+<td style="text-align: right;">264.318</td>
+<td style="text-align: right;">270.715</td>
+<td style="text-align: right;">2088.283</td>
+<td style="text-align: right;">710.799</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13111.956</td>
+<td style="text-align: right;">17779.785</td>
+<td style="text-align: right;">18619.346</td>
+<td style="text-align: right;">19048.937</td>
+<td style="text-align: right;">19210.301</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4791.792</td>
+<td style="text-align: right;">6798.016</td>
+<td style="text-align: right;">6872.608</td>
+<td style="text-align: right;">8141.345</td>
+<td style="text-align: right;">10265.847</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12543.228</td>
+<td style="text-align: right;">18301.469</td>
+<td style="text-align: right;">17646.411</td>
+<td style="text-align: right;">19505.721</td>
+<td style="text-align: right;">18367.247</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">309.007</td>
+<td style="text-align: right;">287.273</td>
+<td style="text-align: right;">301.868</td>
+<td style="text-align: right;">509.001</td>
+<td style="text-align: right;">650.162</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">369.747</td>
+<td style="text-align: right;">373.700</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3175.860</td>
+<td style="text-align: right;">1056.238</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">313.530</td>
+<td style="text-align: right;">272.748</td>
+<td style="text-align: right;">305.018</td>
+<td style="text-align: right;">3147.104</td>
+<td style="text-align: right;">1095.968</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">20655.074</td>
+<td style="text-align: right;">26901.184</td>
+<td style="text-align: right;">27122.757</td>
+<td style="text-align: right;">28343.458</td>
+<td style="text-align: right;">28915.108</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">34870.852</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9294.262</td>
+<td style="text-align: right;">11591.582</td>
+<td style="text-align: right;">11412.567</td>
+<td style="text-align: right;">12095.607</td>
+<td style="text-align: right;">20934.398</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">20912.985</td>
+<td style="text-align: right;">27429.126</td>
+<td style="text-align: right;">27053.606</td>
+<td style="text-align: right;">26436.191</td>
+<td style="text-align: right;">34609.174</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">620.867</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">363.143</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1319.164</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1346.947</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">43617.870</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">25351.085</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">41332.581</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">156.709</td>
+<td style="text-align: right;">427.982</td>
+<td style="text-align: right;">446.237</td>
+<td style="text-align: right;">470.927</td>
+<td style="text-align: right;">480.360</td>
+<td style="text-align: right;">423.314</td>
+<td style="text-align: right;">576.318</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">256.464</td>
+<td style="text-align: right;">434.690</td>
+<td style="text-align: right;">502.766</td>
+<td style="text-align: right;">377.265</td>
+<td style="text-align: right;">486.560</td>
+<td style="text-align: right;">1095.194</td>
+<td style="text-align: right;">1133.078</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">153.991</td>
+<td style="text-align: right;">431.691</td>
+<td style="text-align: right;">459.796</td>
+<td style="text-align: right;">331.793</td>
+<td style="text-align: right;">482.868</td>
+<td style="text-align: right;">437.044</td>
+<td style="text-align: right;">597.767</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">163.171</td>
+<td style="text-align: right;">419.570</td>
+<td style="text-align: right;">10570.534</td>
+<td style="text-align: right;">13845.445</td>
+<td style="text-align: right;">13729.824</td>
+<td style="text-align: right;">14023.718</td>
+<td style="text-align: right;">16206.470</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">172.891</td>
+<td style="text-align: right;">168.035</td>
+<td style="text-align: right;">164.962</td>
+<td style="text-align: right;">318.339</td>
+<td style="text-align: right;">441.036</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">165.305</td>
+<td style="text-align: right;">162.857</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1455.200</td>
+<td style="text-align: right;">660.635</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">170.959</td>
+<td style="text-align: right;">168.736</td>
+<td style="text-align: right;">165.525</td>
+<td style="text-align: right;">341.432</td>
+<td style="text-align: right;">444.489</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6580.527</td>
+<td style="text-align: right;">9061.386</td>
+<td style="text-align: right;">8975.554</td>
+<td style="text-align: right;">9953.193</td>
+<td style="text-align: right;">9164.452</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2381.624</td>
+<td style="text-align: right;">3432.849</td>
+<td style="text-align: right;">3434.066</td>
+<td style="text-align: right;">4026.535</td>
+<td style="text-align: right;">5114.630</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6635.593</td>
+<td style="text-align: right;">9026.123</td>
+<td style="text-align: right;">8667.774</td>
+<td style="text-align: right;">9952.312</td>
+<td style="text-align: right;">9120.436</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">229.251</td>
+<td style="text-align: right;">214.220</td>
+<td style="text-align: right;">234.720</td>
+<td style="text-align: right;">425.084</td>
+<td style="text-align: right;">576.638</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">183.781</td>
+<td style="text-align: right;">181.848</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2047.525</td>
+<td style="text-align: right;">747.146</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">227.860</td>
+<td style="text-align: right;">196.976</td>
+<td style="text-align: right;">235.446</td>
+<td style="text-align: right;">414.182</td>
+<td style="text-align: right;">574.870</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10165.003</td>
+<td style="text-align: right;">14169.380</td>
+<td style="text-align: right;">13471.905</td>
+<td style="text-align: right;">13531.276</td>
+<td style="text-align: right;">14473.274</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">16429.405</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4449.502</td>
+<td style="text-align: right;">6126.488</td>
+<td style="text-align: right;">5579.248</td>
+<td style="text-align: right;">6042.465</td>
+<td style="text-align: right;">10295.021</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10125.689</td>
+<td style="text-align: right;">13250.631</td>
+<td style="text-align: right;">13530.932</td>
+<td style="text-align: right;">14018.333</td>
+<td style="text-align: right;">16392.557</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">587.391</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">175.179</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">854.684</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">572.501</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">18683.500</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11488.119</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">18840.425</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">124.388</td>
+<td style="text-align: right;">267.065</td>
+<td style="text-align: right;">318.241</td>
+<td style="text-align: right;">297.864</td>
+<td style="text-align: right;">315.939</td>
+<td style="text-align: right;">278.856</td>
+<td style="text-align: right;">404.297</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">188.869</td>
+<td style="text-align: right;">279.257</td>
+<td style="text-align: right;">361.279</td>
+<td style="text-align: right;">227.600</td>
+<td style="text-align: right;">357.545</td>
+<td style="text-align: right;">558.970</td>
+<td style="text-align: right;">642.422</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">126.009</td>
+<td style="text-align: right;">274.032</td>
+<td style="text-align: right;">307.709</td>
+<td style="text-align: right;">196.963</td>
+<td style="text-align: right;">323.196</td>
+<td style="text-align: right;">281.132</td>
+<td style="text-align: right;">402.613</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">128.763</td>
+<td style="text-align: right;">272.099</td>
+<td style="text-align: right;">5912.002</td>
+<td style="text-align: right;">8023.815</td>
+<td style="text-align: right;">8155.602</td>
+<td style="text-align: right;">8408.023</td>
+<td style="text-align: right;">7940.467</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">99.746</td>
+<td style="text-align: right;">100.828</td>
+<td style="text-align: right;">100.147</td>
+<td style="text-align: right;">197.243</td>
+<td style="text-align: right;">278.266</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">84.034</td>
+<td style="text-align: right;">83.460</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">822.260</td>
+<td style="text-align: right;">1103.132</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">100.532</td>
+<td style="text-align: right;">100.188</td>
+<td style="text-align: right;">100.090</td>
+<td style="text-align: right;">192.493</td>
+<td style="text-align: right;">278.411</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3157.854</td>
+<td style="text-align: right;">4329.174</td>
+<td style="text-align: right;">4418.355</td>
+<td style="text-align: right;">4921.525</td>
+<td style="text-align: right;">4676.505</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4108.937</td>
+<td style="text-align: right;">4107.796</td>
+<td style="text-align: right;">4124.548</td>
+<td style="text-align: right;">4164.632</td>
+<td style="text-align: right;">3915.989</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6328.526</td>
+<td style="text-align: right;">5852.964</td>
+<td style="text-align: right;">6267.487</td>
+<td style="text-align: right;">5772.396</td>
+<td style="text-align: right;">5862.637</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">147.606</td>
+<td style="text-align: right;">126.446</td>
+<td style="text-align: right;">158.042</td>
+<td style="text-align: right;">289.270</td>
+<td style="text-align: right;">415.501</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">93.069</td>
+<td style="text-align: right;">92.734</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1125.801</td>
+<td style="text-align: right;">833.784</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">158.412</td>
+<td style="text-align: right;">122.837</td>
+<td style="text-align: right;">161.363</td>
+<td style="text-align: right;">267.038</td>
+<td style="text-align: right;">414.701</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5211.255</td>
+<td style="text-align: right;">6713.910</td>
+<td style="text-align: right;">6326.344</td>
+<td style="text-align: right;">6626.700</td>
+<td style="text-align: right;">6803.587</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8008.941</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8130.001</td>
+<td style="text-align: right;">7925.183</td>
+<td style="text-align: right;">7832.520</td>
+<td style="text-align: right;">7983.594</td>
+<td style="text-align: right;">7712.927</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5940.092</td>
+<td style="text-align: right;">5893.323</td>
+<td style="text-align: right;">5954.808</td>
+<td style="text-align: right;">5839.314</td>
+<td style="text-align: right;">5644.008</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6159.607</td>
+<td style="text-align: right;">8085.233</td>
+<td style="text-align: right;">8352.016</td>
+<td style="text-align: right;">8524.874</td>
+<td style="text-align: right;">8089.788</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">491.615</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">95.497</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">679.497</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">491.309</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9123.104</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6931.441</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5363.607</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9083.674</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">88.433</td>
+<td style="text-align: right;">150.533</td>
+<td style="text-align: right;">177.280</td>
+<td style="text-align: right;">169.596</td>
+<td style="text-align: right;">175.835</td>
+<td style="text-align: right;">155.039</td>
+<td style="text-align: right;">247.348</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">83.954</td>
+<td style="text-align: right;">155.543</td>
+<td style="text-align: right;">182.279</td>
+<td style="text-align: right;">107.572</td>
+<td style="text-align: right;">178.867</td>
+<td style="text-align: right;">158.242</td>
+<td style="text-align: right;">254.239</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">86.064</td>
+<td style="text-align: right;">151.261</td>
+<td style="text-align: right;">4538.574</td>
+<td style="text-align: right;">4697.509</td>
+<td style="text-align: right;">4670.839</td>
+<td style="text-align: right;">4533.808</td>
+<td style="text-align: right;">4244.514</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">53.568</td>
+<td style="text-align: right;">53.507</td>
+<td style="text-align: right;">52.872</td>
+<td style="text-align: right;">112.238</td>
+<td style="text-align: right;">149.184</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Move</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">63.735</td>
+<td style="text-align: right;">64.941</td>
+<td style="text-align: right;">65.144</td>
+<td style="text-align: right;">152.857</td>
+<td style="text-align: right;">279.122</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">64.690</td>
+<td style="text-align: right;">64.141</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">64.212</td>
+<td style="text-align: right;">64.840</td>
+<td style="text-align: right;">64.795</td>
+<td style="text-align: right;">153.852</td>
+<td style="text-align: right;">279.088</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Move</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2072.393</td>
+<td style="text-align: right;">2890.429</td>
+<td style="text-align: right;">2888.482</td>
+<td style="text-align: right;">3402.042</td>
+<td style="text-align: right;">3213.388</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3261.265</td>
+<td style="text-align: right;">3216.820</td>
+<td style="text-align: right;">3165.896</td>
+<td style="text-align: right;">3017.366</td>
+<td style="text-align: right;">3095.483</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3591.477</td>
+<td style="text-align: right;">3571.370</td>
+<td style="text-align: right;">3479.028</td>
+<td style="text-align: right;">3465.500</td>
+<td style="text-align: right;">3351.049</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">83.677</td>
+<td style="text-align: right;">70.129</td>
+<td style="text-align: right;">91.190</td>
+<td style="text-align: right;">158.905</td>
+<td style="text-align: right;">248.341</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">46.227</td>
+<td style="text-align: right;">45.781</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">90.046</td>
+<td style="text-align: right;">67.285</td>
+<td style="text-align: right;">90.832</td>
+<td style="text-align: right;">158.448</td>
+<td style="text-align: right;">251.046</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3348.187</td>
+<td style="text-align: right;">4209.277</td>
+<td style="text-align: right;">4138.127</td>
+<td style="text-align: right;">3935.247</td>
+<td style="text-align: right;">4288.609</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4082.735</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4590.304</td>
+<td style="text-align: right;">4653.342</td>
+<td style="text-align: right;">4624.727</td>
+<td style="text-align: right;">4529.503</td>
+<td style="text-align: right;">4565.062</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4179.180</td>
+<td style="text-align: right;">4127.939</td>
+<td style="text-align: right;">4266.810</td>
+<td style="text-align: right;">3987.515</td>
+<td style="text-align: right;">4093.651</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4666.342</td>
+<td style="text-align: right;">4742.007</td>
+<td style="text-align: right;">4564.062</td>
+<td style="text-align: right;">4530.563</td>
+<td style="text-align: right;">4239.783</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">315.533</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">46.544</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">313.328</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4881.449</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3985.604</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3565.943</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4905.752</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---apple-m2">Arm - Apple M2</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">711.295</td>
+<td style="text-align: right;">767.751</td>
+<td style="text-align: right;">926.887</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">829.041</td>
+<td style="text-align: right;">2638.149</td>
+<td style="text-align: right;">2615.393</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">829.086</td>
+<td style="text-align: right;">2637.875</td>
+<td style="text-align: right;">2614.729</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">27099.355</td>
+<td style="text-align: right;">27026.176</td>
+<td style="text-align: right;">27063.402</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">455.939</td>
+<td style="text-align: right;">767.689</td>
+<td style="text-align: right;">926.260</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">672.796</td>
+<td style="text-align: right;">672.803</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3230.266</td>
+<td style="text-align: right;">1884.924</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">455.951</td>
+<td style="text-align: right;">3231.140</td>
+<td style="text-align: right;">1904.481</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;">14022.513</td>
+<td style="text-align: right;">14316.149</td>
+<td style="text-align: right;">14308.316</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;">4730.770</td>
+<td style="text-align: right;">4787.301</td>
+<td style="text-align: right;">8700.760</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;">27114.430</td>
+<td style="text-align: right;">27022.407</td>
+<td style="text-align: right;">27136.482</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;">12072.611</td>
+<td style="text-align: right;">12070.029</td>
+<td style="text-align: right;">16717.159</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">27110.833</td>
+<td style="text-align: right;">27025.958</td>
+<td style="text-align: right;">27140.054</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">444.925</td>
+<td style="text-align: right;">379.956</td>
+<td style="text-align: right;">930.070</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">258.512</td>
+<td style="text-align: right;">339.238</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">451.177</td>
+<td style="text-align: right;">1733.363</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">442.039</td>
+<td style="text-align: right;">379.686</td>
+<td style="text-align: right;">922.888</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">422.768</td>
+<td style="text-align: right;">379.368</td>
+<td style="text-align: right;">922.780</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">838.023</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">382.682</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1317.458</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">897.385</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">897.599</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">557.411</td>
+<td style="text-align: right;">623.502</td>
+<td style="text-align: right;">870.597</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">665.480</td>
+<td style="text-align: right;">1428.912</td>
+<td style="text-align: right;">1408.964</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">569.708</td>
+<td style="text-align: right;">625.137</td>
+<td style="text-align: right;">876.568</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">13580.473</td>
+<td style="text-align: right;">13527.752</td>
+<td style="text-align: right;">13539.665</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">387.867</td>
+<td style="text-align: right;">626.038</td>
+<td style="text-align: right;">871.140</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">336.372</td>
+<td style="text-align: right;">336.408</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2240.782</td>
+<td style="text-align: right;">1618.859</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">383.948</td>
+<td style="text-align: right;">625.056</td>
+<td style="text-align: right;">876.595</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;">7015.349</td>
+<td style="text-align: right;">7165.037</td>
+<td style="text-align: right;">7156.675</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;">2365.458</td>
+<td style="text-align: right;">2394.876</td>
+<td style="text-align: right;">4352.483</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;">13576.926</td>
+<td style="text-align: right;">13525.622</td>
+<td style="text-align: right;">13573.173</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;">6040.252</td>
+<td style="text-align: right;">6039.878</td>
+<td style="text-align: right;">8365.533</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">13548.803</td>
+<td style="text-align: right;">13525.378</td>
+<td style="text-align: right;">13576.243</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">366.973</td>
+<td style="text-align: right;">331.299</td>
+<td style="text-align: right;">876.175</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">144.623</td>
+<td style="text-align: right;">306.563</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">288.294</td>
+<td style="text-align: right;">801.567</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">368.188</td>
+<td style="text-align: right;">329.307</td>
+<td style="text-align: right;">870.574</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">368.512</td>
+<td style="text-align: right;">329.009</td>
+<td style="text-align: right;">870.484</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">809.407</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">190.357</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">617.168</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">811.022</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">807.656</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">396.544</td>
+<td style="text-align: right;">435.302</td>
+<td style="text-align: right;">725.199</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">557.862</td>
+<td style="text-align: right;">1205.663</td>
+<td style="text-align: right;">1185.101</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">396.004</td>
+<td style="text-align: right;">435.126</td>
+<td style="text-align: right;">725.191</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">6794.900</td>
+<td style="text-align: right;">6768.263</td>
+<td style="text-align: right;">6769.722</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">275.874</td>
+<td style="text-align: right;">437.049</td>
+<td style="text-align: right;">725.133</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">168.171</td>
+<td style="text-align: right;">168.191</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1812.350</td>
+<td style="text-align: right;">1918.821</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">280.072</td>
+<td style="text-align: right;">435.619</td>
+<td style="text-align: right;">725.107</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;">3509.474</td>
+<td style="text-align: right;">3582.178</td>
+<td style="text-align: right;">3580.869</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;">1813.200</td>
+<td style="text-align: right;">1812.298</td>
+<td style="text-align: right;">2176.490</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;">6796.050</td>
+<td style="text-align: right;">6769.192</td>
+<td style="text-align: right;">6788.508</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;">3884.418</td>
+<td style="text-align: right;">3885.557</td>
+<td style="text-align: right;">4184.695</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">6794.822</td>
+<td style="text-align: right;">6768.202</td>
+<td style="text-align: right;">6789.677</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">245.773</td>
+<td style="text-align: right;">256.442</td>
+<td style="text-align: right;">787.068</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">78.850</td>
+<td style="text-align: right;">153.195</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">190.323</td>
+<td style="text-align: right;">508.199</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">246.167</td>
+<td style="text-align: right;">257.048</td>
+<td style="text-align: right;">787.167</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">245.794</td>
+<td style="text-align: right;">256.621</td>
+<td style="text-align: right;">787.385</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">689.522</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">97.802</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">310.130</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">690.830</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">688.934</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">182.403</td>
+<td style="text-align: right;">195.330</td>
+<td style="text-align: right;">589.856</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">181.942</td>
+<td style="text-align: right;">195.527</td>
+<td style="text-align: right;">587.510</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">3357.413</td>
+<td style="text-align: right;">3363.223</td>
+<td style="text-align: right;">3362.746</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">134.325</td>
+<td style="text-align: right;">196.058</td>
+<td style="text-align: right;">589.903</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Move</td>
+<td style="text-align: right;">445.801</td>
+<td style="text-align: right;">3394.989</td>
+<td style="text-align: right;">3368.530</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">125.071</td>
+<td style="text-align: right;">125.088</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">445.509</td>
+<td style="text-align: right;">3394.429</td>
+<td style="text-align: right;">3367.402</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;">2266.956</td>
+<td style="text-align: right;">2452.523</td>
+<td style="text-align: right;">2452.673</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;">3369.214</td>
+<td style="text-align: right;">3373.619</td>
+<td style="text-align: right;">3386.520</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Move</td>
+<td style="text-align: right;">3356.965</td>
+<td style="text-align: right;">3362.679</td>
+<td style="text-align: right;">3354.361</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;">3399.278</td>
+<td style="text-align: right;">3398.402</td>
+<td style="text-align: right;">3399.037</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;">3369.780</td>
+<td style="text-align: right;">3373.630</td>
+<td style="text-align: right;">3387.035</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">3356.962</td>
+<td style="text-align: right;">3362.838</td>
+<td style="text-align: right;">3354.745</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">136.599</td>
+<td style="text-align: right;">152.801</td>
+<td style="text-align: right;">522.411</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">39.797</td>
+<td style="text-align: right;">79.209</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">137.437</td>
+<td style="text-align: right;">152.543</td>
+<td style="text-align: right;">524.141</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">137.601</td>
+<td style="text-align: right;">152.696</td>
+<td style="text-align: right;">524.260</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">513.555</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">47.579</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">513.910</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">507.647</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---aws-arm-t4gsmall">Arm - AWS Arm t4g.small</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">263.535</td>
+<td style="text-align: right;">268.036</td>
+<td style="text-align: right;">264.801</td>
+<td style="text-align: right;">257.086</td>
+<td style="text-align: right;">325.241</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">278.931</td>
+<td style="text-align: right;">280.373</td>
+<td style="text-align: right;">281.700</td>
+<td style="text-align: right;">796.731</td>
+<td style="text-align: right;">804.353</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">278.875</td>
+<td style="text-align: right;">281.212</td>
+<td style="text-align: right;">281.434</td>
+<td style="text-align: right;">797.058</td>
+<td style="text-align: right;">804.406</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">279.055</td>
+<td style="text-align: right;">9835.776</td>
+<td style="text-align: right;">9754.413</td>
+<td style="text-align: right;">9720.851</td>
+<td style="text-align: right;">11196.632</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">149.006</td>
+<td style="text-align: right;">150.201</td>
+<td style="text-align: right;">150.723</td>
+<td style="text-align: right;">257.905</td>
+<td style="text-align: right;">324.197</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">216.510</td>
+<td style="text-align: right;">217.234</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1064.116</td>
+<td style="text-align: right;">560.385</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">148.404</td>
+<td style="text-align: right;">150.156</td>
+<td style="text-align: right;">150.497</td>
+<td style="text-align: right;">1061.837</td>
+<td style="text-align: right;">556.947</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3640.120</td>
+<td style="text-align: right;">4011.689</td>
+<td style="text-align: right;">4838.366</td>
+<td style="text-align: right;">5212.471</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1434.441</td>
+<td style="text-align: right;">1447.421</td>
+<td style="text-align: right;">1714.445</td>
+<td style="text-align: right;">2037.479</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9832.696</td>
+<td style="text-align: right;">9774.721</td>
+<td style="text-align: right;">9784.189</td>
+<td style="text-align: right;">11254.906</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3375.409</td>
+<td style="text-align: right;">3606.464</td>
+<td style="text-align: right;">4073.080</td>
+<td style="text-align: right;">4404.951</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">148.895</td>
+<td style="text-align: right;">9731.111</td>
+<td style="text-align: right;">9864.138</td>
+<td style="text-align: right;">9729.958</td>
+<td style="text-align: right;">11255.776</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">152.176</td>
+<td style="text-align: right;">158.335</td>
+<td style="text-align: right;">158.553</td>
+<td style="text-align: right;">125.159</td>
+<td style="text-align: right;">331.439</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">91.868</td>
+<td style="text-align: right;">133.397</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">155.842</td>
+<td style="text-align: right;">644.259</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">150.921</td>
+<td style="text-align: right;">157.536</td>
+<td style="text-align: right;">158.120</td>
+<td style="text-align: right;">125.542</td>
+<td style="text-align: right;">331.520</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">131.083</td>
+<td style="text-align: right;">152.899</td>
+<td style="text-align: right;">153.226</td>
+<td style="text-align: right;">125.567</td>
+<td style="text-align: right;">332.231</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">323.891</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">135.297</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">435.388</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">323.409</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">323.439</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">209.051</td>
+<td style="text-align: right;">212.969</td>
+<td style="text-align: right;">214.030</td>
+<td style="text-align: right;">212.179</td>
+<td style="text-align: right;">295.788</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">218.138</td>
+<td style="text-align: right;">217.086</td>
+<td style="text-align: right;">219.226</td>
+<td style="text-align: right;">434.262</td>
+<td style="text-align: right;">425.956</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">207.301</td>
+<td style="text-align: right;">211.730</td>
+<td style="text-align: right;">211.722</td>
+<td style="text-align: right;">212.183</td>
+<td style="text-align: right;">296.510</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">206.522</td>
+<td style="text-align: right;">4780.104</td>
+<td style="text-align: right;">4741.043</td>
+<td style="text-align: right;">4959.038</td>
+<td style="text-align: right;">5281.192</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">111.238</td>
+<td style="text-align: right;">111.782</td>
+<td style="text-align: right;">111.076</td>
+<td style="text-align: right;">212.366</td>
+<td style="text-align: right;">295.792</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">109.096</td>
+<td style="text-align: right;">107.579</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">704.632</td>
+<td style="text-align: right;">441.871</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">111.475</td>
+<td style="text-align: right;">111.575</td>
+<td style="text-align: right;">111.231</td>
+<td style="text-align: right;">211.670</td>
+<td style="text-align: right;">294.869</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1947.854</td>
+<td style="text-align: right;">1909.914</td>
+<td style="text-align: right;">2560.228</td>
+<td style="text-align: right;">2470.682</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">695.614</td>
+<td style="text-align: right;">705.902</td>
+<td style="text-align: right;">872.550</td>
+<td style="text-align: right;">977.838</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4738.337</td>
+<td style="text-align: right;">4694.937</td>
+<td style="text-align: right;">4944.177</td>
+<td style="text-align: right;">5309.112</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1676.201</td>
+<td style="text-align: right;">1828.396</td>
+<td style="text-align: right;">2117.422</td>
+<td style="text-align: right;">2023.202</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">111.598</td>
+<td style="text-align: right;">4320.930</td>
+<td style="text-align: right;">4720.567</td>
+<td style="text-align: right;">4944.316</td>
+<td style="text-align: right;">5207.055</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">101.067</td>
+<td style="text-align: right;">122.495</td>
+<td style="text-align: right;">118.670</td>
+<td style="text-align: right;">103.414</td>
+<td style="text-align: right;">303.213</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">50.710</td>
+<td style="text-align: right;">99.610</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">102.865</td>
+<td style="text-align: right;">299.509</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">99.509</td>
+<td style="text-align: right;">120.408</td>
+<td style="text-align: right;">119.260</td>
+<td style="text-align: right;">103.078</td>
+<td style="text-align: right;">304.342</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">81.741</td>
+<td style="text-align: right;">120.109</td>
+<td style="text-align: right;">119.575</td>
+<td style="text-align: right;">103.019</td>
+<td style="text-align: right;">304.320</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">281.867</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">65.877</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">221.542</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">281.836</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">281.451</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">149.606</td>
+<td style="text-align: right;">151.940</td>
+<td style="text-align: right;">153.003</td>
+<td style="text-align: right;">149.449</td>
+<td style="text-align: right;">232.515</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">183.528</td>
+<td style="text-align: right;">177.285</td>
+<td style="text-align: right;">179.744</td>
+<td style="text-align: right;">353.154</td>
+<td style="text-align: right;">343.321</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">152.049</td>
+<td style="text-align: right;">152.388</td>
+<td style="text-align: right;">151.784</td>
+<td style="text-align: right;">150.119</td>
+<td style="text-align: right;">234.027</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">152.364</td>
+<td style="text-align: right;">2320.831</td>
+<td style="text-align: right;">2338.269</td>
+<td style="text-align: right;">2471.274</td>
+<td style="text-align: right;">2623.663</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">74.115</td>
+<td style="text-align: right;">73.673</td>
+<td style="text-align: right;">73.713</td>
+<td style="text-align: right;">150.321</td>
+<td style="text-align: right;">233.946</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">54.430</td>
+<td style="text-align: right;">53.693</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">540.456</td>
+<td style="text-align: right;">553.902</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">73.723</td>
+<td style="text-align: right;">73.475</td>
+<td style="text-align: right;">73.591</td>
+<td style="text-align: right;">150.122</td>
+<td style="text-align: right;">232.032</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1033.593</td>
+<td style="text-align: right;">1034.034</td>
+<td style="text-align: right;">1271.500</td>
+<td style="text-align: right;">1231.241</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">506.905</td>
+<td style="text-align: right;">508.906</td>
+<td style="text-align: right;">539.701</td>
+<td style="text-align: right;">494.953</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2381.454</td>
+<td style="text-align: right;">2304.038</td>
+<td style="text-align: right;">2471.802</td>
+<td style="text-align: right;">2612.431</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">972.077</td>
+<td style="text-align: right;">965.813</td>
+<td style="text-align: right;">1092.202</td>
+<td style="text-align: right;">1046.267</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">74.162</td>
+<td style="text-align: right;">2408.217</td>
+<td style="text-align: right;">2326.887</td>
+<td style="text-align: right;">2471.791</td>
+<td style="text-align: right;">2610.040</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">59.923</td>
+<td style="text-align: right;">78.289</td>
+<td style="text-align: right;">77.762</td>
+<td style="text-align: right;">82.072</td>
+<td style="text-align: right;">268.726</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">28.607</td>
+<td style="text-align: right;">49.770</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">71.769</td>
+<td style="text-align: right;">178.995</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">58.801</td>
+<td style="text-align: right;">75.642</td>
+<td style="text-align: right;">77.612</td>
+<td style="text-align: right;">82.119</td>
+<td style="text-align: right;">268.343</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">47.745</td>
+<td style="text-align: right;">75.790</td>
+<td style="text-align: right;">77.694</td>
+<td style="text-align: right;">81.952</td>
+<td style="text-align: right;">268.280</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">232.847</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">33.016</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">120.419</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">232.267</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">233.267</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">104.263</td>
+<td style="text-align: right;">100.861</td>
+<td style="text-align: right;">103.549</td>
+<td style="text-align: right;">96.562</td>
+<td style="text-align: right;">210.628</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">104.259</td>
+<td style="text-align: right;">101.227</td>
+<td style="text-align: right;">103.234</td>
+<td style="text-align: right;">96.038</td>
+<td style="text-align: right;">212.581</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">104.155</td>
+<td style="text-align: right;">1488.224</td>
+<td style="text-align: right;">1475.517</td>
+<td style="text-align: right;">1936.954</td>
+<td style="text-align: right;">1622.809</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">70.083</td>
+<td style="text-align: right;">67.745</td>
+<td style="text-align: right;">72.264</td>
+<td style="text-align: right;">96.248</td>
+<td style="text-align: right;">213.132</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Move</td>
+<td style="text-align: right;">111.337</td>
+<td style="text-align: right;">171.737</td>
+<td style="text-align: right;">165.103</td>
+<td style="text-align: right;">1090.819</td>
+<td style="text-align: right;">1023.602</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">40.495</td>
+<td style="text-align: right;">39.585</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">112.565</td>
+<td style="text-align: right;">173.044</td>
+<td style="text-align: right;">166.404</td>
+<td style="text-align: right;">1089.591</td>
+<td style="text-align: right;">1030.895</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">702.378</td>
+<td style="text-align: right;">708.572</td>
+<td style="text-align: right;">861.187</td>
+<td style="text-align: right;">821.687</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1043.906</td>
+<td style="text-align: right;">1028.431</td>
+<td style="text-align: right;">1217.006</td>
+<td style="text-align: right;">1064.457</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Move</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1484.275</td>
+<td style="text-align: right;">1489.293</td>
+<td style="text-align: right;">1938.141</td>
+<td style="text-align: right;">1650.699</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1364.253</td>
+<td style="text-align: right;">1334.597</td>
+<td style="text-align: right;">1630.523</td>
+<td style="text-align: right;">1598.098</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1033.383</td>
+<td style="text-align: right;">1018.483</td>
+<td style="text-align: right;">1212.726</td>
+<td style="text-align: right;">1064.226</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">110.551</td>
+<td style="text-align: right;">1472.196</td>
+<td style="text-align: right;">1459.702</td>
+<td style="text-align: right;">1934.692</td>
+<td style="text-align: right;">1653.470</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">38.212</td>
+<td style="text-align: right;">55.340</td>
+<td style="text-align: right;">53.837</td>
+<td style="text-align: right;">63.692</td>
+<td style="text-align: right;">221.753</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">15.741</td>
+<td style="text-align: right;">25.721</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">37.000</td>
+<td style="text-align: right;">54.034</td>
+<td style="text-align: right;">55.276</td>
+<td style="text-align: right;">64.069</td>
+<td style="text-align: right;">222.780</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">27.131</td>
+<td style="text-align: right;">53.676</td>
+<td style="text-align: right;">53.539</td>
+<td style="text-align: right;">63.806</td>
+<td style="text-align: right;">222.741</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">172.668</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">16.385</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">172.852</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">172.414</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wasm---wasm-on-amd-ryzen-7-7840h">Wasm - Wasm on AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">4.237</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">10.740</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">4.275</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">110.268</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">4.181</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;">72.026</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;">16.666</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">17.102</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;">150.277</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;">51.480</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">153.837</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">4.055</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;">6.405</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;">16.308</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">4.128</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">4.120</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;">4.085</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;">6.101</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;">9.206</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">3.874</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Byte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">4.098</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">3.641</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">7.828</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">3.543</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">53.871</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">3.621</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;">36.816</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;">7.793</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">3.573</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;">75.618</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;">25.277</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">76.451</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">3.436</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;">2.994</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;">5.502</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">3.510</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">3.306</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;">3.263</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;">2.958</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;">4.863</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">3.517</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">3.331</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">2.927</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase_Zip</td>
+<td style="text-align: right;">5.557</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">2.921</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">28.650</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">2.893</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;">18.306</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Zip</td>
+<td style="text-align: right;">5.526</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">2.828</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;">38.965</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;">12.753</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">37.895</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">2.819</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;">1.568</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Zip</td>
+<td style="text-align: right;">3.501</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">2.798</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">2.609</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;">2.819</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;">1.582</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Zip</td>
+<td style="text-align: right;">2.723</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">2.786</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">2.709</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">1.429</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1.435</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">3.240</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">0.957</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Move</td>
+<td style="text-align: right;">1.488</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;">1.533</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">1.483</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Move</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;">22.362</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Zip</td>
+<td style="text-align: right;">12.065</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">22.795</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">0.959</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;">0.555</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">0.963</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">1.618</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;">0.990</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;">0.530</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">0.951</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Zip</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup1ToGroup3Benchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">1.820</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/AVector/YGroup1ToGroup3_Group.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

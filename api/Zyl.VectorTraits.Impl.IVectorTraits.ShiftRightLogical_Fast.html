@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_IVectorTraits_ShiftRightLogical_Fast_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.ShiftRightLogical_Fast*" class="text-break">
-Method ShiftRightLogical_Fast  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2086"><i class="bi bi-code-slash"></i></a>
+Method ShiftRightLogical_Fast  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2089"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ShiftRightLogical_Fast  <a class="header-action link-secondary" title="Vi
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_ShiftRightLogical_Fast_System_Numerics_Vector_System_SByte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.ShiftRightLogical_Fast(System.Numerics.Vector{System.SByte},System.Int32)">
   ShiftRightLogical_Fast(Vector&lt;sbyte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2086"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2089"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. - Fast(将向量的每个无符号元素逻辑右移指定量 - 快速). No check <code class="paramref">shiftAmount</code>, please use <a class="xref" href="Zyl.VectorTraits.Scalars.LimitShiftAmount.html#Zyl_VectorTraits_Scalars_LimitShiftAmount__1_System_Int32_">LimitShiftAmount&lt;T&gt;(int)</a> first, and shiftAmount must not be 0 .
@@ -168,7 +168,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_ShiftRightLogical_Fast_System_Numerics_Vector_System_Byte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.ShiftRightLogical_Fast(System.Numerics.Vector{System.Byte},System.Int32)">
   ShiftRightLogical_Fast(Vector&lt;byte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2098"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2101"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. - Fast(将向量的每个无符号元素逻辑右移指定量 - 快速). No check <code class="paramref">shiftAmount</code>, please use <a class="xref" href="Zyl.VectorTraits.Scalars.LimitShiftAmount.html#Zyl_VectorTraits_Scalars_LimitShiftAmount__1_System_Int32_">LimitShiftAmount&lt;T&gt;(int)</a> first, and shiftAmount must not be 0 .
@@ -219,7 +219,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_ShiftRightLogical_Fast_System_Numerics_Vector_System_Int16__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.ShiftRightLogical_Fast(System.Numerics.Vector{System.Int16},System.Int32)">
   ShiftRightLogical_Fast(Vector&lt;short&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2113"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. - Fast(将向量的每个无符号元素逻辑右移指定量 - 快速). No check <code class="paramref">shiftAmount</code>, please use <a class="xref" href="Zyl.VectorTraits.Scalars.LimitShiftAmount.html#Zyl_VectorTraits_Scalars_LimitShiftAmount__1_System_Int32_">LimitShiftAmount&lt;T&gt;(int)</a> first, and shiftAmount must not be 0 .
@@ -270,7 +270,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_ShiftRightLogical_Fast_System_Numerics_Vector_System_UInt16__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.ShiftRightLogical_Fast(System.Numerics.Vector{System.UInt16},System.Int32)">
   ShiftRightLogical_Fast(Vector&lt;ushort&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2125"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. - Fast(将向量的每个无符号元素逻辑右移指定量 - 快速). No check <code class="paramref">shiftAmount</code>, please use <a class="xref" href="Zyl.VectorTraits.Scalars.LimitShiftAmount.html#Zyl_VectorTraits_Scalars_LimitShiftAmount__1_System_Int32_">LimitShiftAmount&lt;T&gt;(int)</a> first, and shiftAmount must not be 0 .
@@ -321,7 +321,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_ShiftRightLogical_Fast_System_Numerics_Vector_System_Int32__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.ShiftRightLogical_Fast(System.Numerics.Vector{System.Int32},System.Int32)">
   ShiftRightLogical_Fast(Vector&lt;int&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2137"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. - Fast(将向量的每个无符号元素逻辑右移指定量 - 快速). No check <code class="paramref">shiftAmount</code>, please use <a class="xref" href="Zyl.VectorTraits.Scalars.LimitShiftAmount.html#Zyl_VectorTraits_Scalars_LimitShiftAmount__1_System_Int32_">LimitShiftAmount&lt;T&gt;(int)</a> first, and shiftAmount must not be 0 .
@@ -372,7 +372,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_ShiftRightLogical_Fast_System_Numerics_Vector_System_UInt32__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.ShiftRightLogical_Fast(System.Numerics.Vector{System.UInt32},System.Int32)">
   ShiftRightLogical_Fast(Vector&lt;uint&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2149"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. - Fast(将向量的每个无符号元素逻辑右移指定量 - 快速). No check <code class="paramref">shiftAmount</code>, please use <a class="xref" href="Zyl.VectorTraits.Scalars.LimitShiftAmount.html#Zyl_VectorTraits_Scalars_LimitShiftAmount__1_System_Int32_">LimitShiftAmount&lt;T&gt;(int)</a> first, and shiftAmount must not be 0 .
@@ -423,7 +423,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_ShiftRightLogical_Fast_System_Numerics_Vector_System_Int64__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.ShiftRightLogical_Fast(System.Numerics.Vector{System.Int64},System.Int32)">
   ShiftRightLogical_Fast(Vector&lt;long&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2158"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2161"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. - Fast(将向量的每个无符号元素逻辑右移指定量 - 快速). No check <code class="paramref">shiftAmount</code>, please use <a class="xref" href="Zyl.VectorTraits.Scalars.LimitShiftAmount.html#Zyl_VectorTraits_Scalars_LimitShiftAmount__1_System_Int32_">LimitShiftAmount&lt;T&gt;(int)</a> first, and shiftAmount must not be 0 .
@@ -474,7 +474,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_ShiftRightLogical_Fast_System_Numerics_Vector_System_UInt64__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.ShiftRightLogical_Fast(System.Numerics.Vector{System.UInt64},System.Int32)">
   ShiftRightLogical_Fast(Vector&lt;ulong&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2173"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. - Fast(将向量的每个无符号元素逻辑右移指定量 - 快速). No check <code class="paramref">shiftAmount</code>, please use <a class="xref" href="Zyl.VectorTraits.Scalars.LimitShiftAmount.html#Zyl_VectorTraits_Scalars_LimitShiftAmount__1_System_Int32_">LimitShiftAmount&lt;T&gt;(int)</a> first, and shiftAmount must not be 0 .
@@ -524,7 +524,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2086" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.cs/#L2089" class="edit-link">Edit this page</a>
         </div>
 
 

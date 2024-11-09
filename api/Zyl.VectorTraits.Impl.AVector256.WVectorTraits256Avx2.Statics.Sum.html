@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum*" class="text-break">
-Method Sum  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2338"><i class="bi bi-code-slash"></i></a>
+Method Sum  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2556"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Sum  <a class="header-action link-secondary" title="View source" href="ht
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_System_Runtime_Intrinsics_Vector256_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum(System.Runtime.Intrinsics.Vector256{System.Single})">
   Sum(Vector256&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2338"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2556"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sum of all elements in a vector (计算向量中所有元素的总和).
@@ -164,7 +164,7 @@ Mnemonic: <code>rt := value[0] + value[1] + value[2] + ... + value[Count-1]</cod
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_System_Runtime_Intrinsics_Vector256_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum(System.Runtime.Intrinsics.Vector256{System.Double})">
   Sum(Vector256&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2350"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2568"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sum of all elements in a vector (计算向量中所有元素的总和).
@@ -211,7 +211,7 @@ Mnemonic: <code>rt := value[0] + value[1] + value[2] + ... + value[Count-1]</cod
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum(System.Runtime.Intrinsics.Vector256{System.SByte})">
   Sum(Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2360"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2578"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sum of all elements in a vector (计算向量中所有元素的总和).
@@ -259,7 +259,7 @@ public static sbyte Sum(Vector256&lt;sbyte&gt; value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_System_Runtime_Intrinsics_Vector256_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum(System.Runtime.Intrinsics.Vector256{System.Byte})">
   Sum(Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2369"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2587"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sum of all elements in a vector (计算向量中所有元素的总和).
@@ -306,7 +306,7 @@ Mnemonic: <code>rt := value[0] + value[1] + value[2] + ... + value[Count-1]</cod
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum(System.Runtime.Intrinsics.Vector256{System.Int16})">
   Sum(Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2375"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2593"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sum of all elements in a vector (计算向量中所有元素的总和).
@@ -353,7 +353,7 @@ Mnemonic: <code>rt := value[0] + value[1] + value[2] + ... + value[Count-1]</cod
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_System_Runtime_Intrinsics_Vector256_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum(System.Runtime.Intrinsics.Vector256{System.UInt16})">
   Sum(Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2385"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2603"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sum of all elements in a vector (计算向量中所有元素的总和).
@@ -401,7 +401,7 @@ public static ushort Sum(Vector256&lt;ushort&gt; value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum(System.Runtime.Intrinsics.Vector256{System.Int32})">
   Sum(Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2392"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2610"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sum of all elements in a vector (计算向量中所有元素的总和).
@@ -448,7 +448,7 @@ Mnemonic: <code>rt := value[0] + value[1] + value[2] + ... + value[Count-1]</cod
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_System_Runtime_Intrinsics_Vector256_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum(System.Runtime.Intrinsics.Vector256{System.UInt32})">
   Sum(Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2404"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2622"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sum of all elements in a vector (计算向量中所有元素的总和).
@@ -496,7 +496,7 @@ public static uint Sum(Vector256&lt;uint&gt; value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum(System.Runtime.Intrinsics.Vector256{System.Int64})">
   Sum(Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2411"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2629"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sum of all elements in a vector (计算向量中所有元素的总和).
@@ -543,7 +543,7 @@ Mnemonic: <code>rt := value[0] + value[1] + value[2] + ... + value[Count-1]</cod
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_Sum_System_Runtime_Intrinsics_Vector256_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.Sum(System.Runtime.Intrinsics.Vector256{System.UInt64})">
   Sum(Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2424"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2642"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sum of all elements in a vector (计算向量中所有元素的总和).
@@ -590,7 +590,7 @@ public static ulong Sum(Vector256&lt;ulong&gt; value)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2338" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.cs/#L2556" class="edit-link">Edit this page</a>
         </div>
 
 

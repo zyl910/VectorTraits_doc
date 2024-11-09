@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vectors_YIsNotNaN_" data-uid="Zyl.VectorTraits.Vectors.YIsNotNaN*" class="text-break">
-Method YIsNotNaN  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L916"><i class="bi bi-code-slash"></i></a>
+Method YIsNotNaN  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4875"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YIsNotNaN  <a class="header-action link-secondary" title="View source" hr
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsNotNaN_System_Numerics_Vector_System_Single__" data-uid="Zyl.VectorTraits.Vectors.YIsNotNaN(System.Numerics.Vector{System.Single})">
   YIsNotNaN(Vector&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L916"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4875"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is not NaN (确定元素是否不为非数).
@@ -164,7 +164,7 @@ Mnemonic: <code>rt[i] := to_mask(isNotNaN(value[i])) = to_mask(!isNaN(value[i]))
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsNotNaN_System_Numerics_Vector_System_Double__" data-uid="Zyl.VectorTraits.Vectors.YIsNotNaN(System.Numerics.Vector{System.Double})">
   YIsNotNaN(Vector&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L926"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4890"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is not NaN (确定元素是否不为非数).
@@ -211,7 +211,7 @@ Mnemonic: <code>rt[i] := to_mask(isNotNaN(value[i])) = to_mask(!isNaN(value[i]))
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L916" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4875" class="edit-link">Edit this page</a>
         </div>
 
 

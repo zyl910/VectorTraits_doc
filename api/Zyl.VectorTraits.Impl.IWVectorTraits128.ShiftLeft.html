@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_IWVectorTraits128_ShiftLeft_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.ShiftLeft*" class="text-break">
-Method ShiftLeft  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L519"><i class="bi bi-code-slash"></i></a>
+Method ShiftLeft  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L523"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ShiftLeft  <a class="header-action link-secondary" title="View source" hr
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_ShiftLeft_System_Runtime_Intrinsics_Vector128_System_SByte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.ShiftLeft(System.Runtime.Intrinsics.Vector128{System.SByte},System.Int32)">
   ShiftLeft(Vector128&lt;sbyte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L519"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L523"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount (将向量的每个元素左移指定量).
@@ -168,7 +168,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>, <code>shiftAmount
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_ShiftLeft_System_Runtime_Intrinsics_Vector128_System_Byte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.ShiftLeft(System.Runtime.Intrinsics.Vector128{System.Byte},System.Int32)">
   ShiftLeft(Vector128&lt;byte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L531"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L535"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount (将向量的每个元素左移指定量).
@@ -219,7 +219,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>, <code>shiftAmount
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_ShiftLeft_System_Runtime_Intrinsics_Vector128_System_Int16__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.ShiftLeft(System.Runtime.Intrinsics.Vector128{System.Int16},System.Int32)">
   ShiftLeft(Vector128&lt;short&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L543"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L547"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount (将向量的每个元素左移指定量).
@@ -270,7 +270,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>, <code>shiftAmount
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_ShiftLeft_System_Runtime_Intrinsics_Vector128_System_UInt16__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.ShiftLeft(System.Runtime.Intrinsics.Vector128{System.UInt16},System.Int32)">
   ShiftLeft(Vector128&lt;ushort&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L559"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount (将向量的每个元素左移指定量).
@@ -321,7 +321,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>, <code>shiftAmount
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_ShiftLeft_System_Runtime_Intrinsics_Vector128_System_Int32__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.ShiftLeft(System.Runtime.Intrinsics.Vector128{System.Int32},System.Int32)">
   ShiftLeft(Vector128&lt;int&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L567"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L571"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount (将向量的每个元素左移指定量).
@@ -372,7 +372,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>, <code>shiftAmount
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_ShiftLeft_System_Runtime_Intrinsics_Vector128_System_UInt32__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.ShiftLeft(System.Runtime.Intrinsics.Vector128{System.UInt32},System.Int32)">
   ShiftLeft(Vector128&lt;uint&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L579"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L583"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount (将向量的每个元素左移指定量).
@@ -423,7 +423,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>, <code>shiftAmount
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_ShiftLeft_System_Runtime_Intrinsics_Vector128_System_Int64__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.ShiftLeft(System.Runtime.Intrinsics.Vector128{System.Int64},System.Int32)">
   ShiftLeft(Vector128&lt;long&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L591"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L595"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount (将向量的每个元素左移指定量).
@@ -474,7 +474,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>, <code>shiftAmount
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_ShiftLeft_System_Runtime_Intrinsics_Vector128_System_UInt64__System_Int32_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.ShiftLeft(System.Runtime.Intrinsics.Vector128{System.UInt64},System.Int32)">
   ShiftLeft(Vector128&lt;ulong&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L603"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L607"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount (将向量的每个元素左移指定量).
@@ -524,7 +524,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>, <code>shiftAmount
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L519" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.cs/#L523" class="edit-link">Edit this page</a>
         </div>
 
 

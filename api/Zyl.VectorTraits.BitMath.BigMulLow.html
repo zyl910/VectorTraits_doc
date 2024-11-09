@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_BitMath_BigMulLow_" data-uid="Zyl.VectorTraits.BitMath.BigMulLow*" class="text-break">
-Method BigMulLow  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L68"><i class="bi bi-code-slash"></i></a>
+Method BigMulLow  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L75"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method BigMulLow  <a class="header-action link-secondary" title="View source" hr
 
 <h3 id="Zyl_VectorTraits_BitMath_BigMulLow_System_Int64_System_Int64_" data-uid="Zyl.VectorTraits.BitMath.BigMulLow(System.Int64,System.Int64)">
   BigMulLow(long, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L75"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the product of two signed 64-bit numbers and returns the lower 64 bits (计算两个有符号 64 位数的乘积，并返回较低的64位).</p>
@@ -160,7 +160,7 @@ public static long BigMulLow(long a, long b)</code></pre>
 
 <h3 id="Zyl_VectorTraits_BitMath_BigMulLow_System_UInt64_System_UInt64_" data-uid="Zyl.VectorTraits.BitMath.BigMulLow(System.UInt64,System.UInt64)">
   BigMulLow(ulong, ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L82"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the product of two unsigned 64-bit numbers and returns the lower 64 bits (计算两个无符号 64 位数的乘积，并返回较低的64位).</p>
@@ -203,7 +203,7 @@ public static ulong BigMulLow(ulong u, ulong v)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L68" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L75" class="edit-link">Edit this page</a>
         </div>
 
 

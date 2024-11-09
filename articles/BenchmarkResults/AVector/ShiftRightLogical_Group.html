@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../../../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,6 +85,948 @@
 
 <p>(<a href="ShiftRightLogical.html">← Back</a>)</p>
 <p>Unit of data: Million operations per second. The larger the number, the better the performance.</p>
+<h3 id="x86---amd-ryzen-7-7840h">X86 - AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">1071.450</td>
+<td style="text-align: right;">1016.697</td>
+<td style="text-align: right;">1273.997</td>
+<td style="text-align: right;">1272.279</td>
+<td style="text-align: right;">1376.976</td>
+<td style="text-align: right;">1504.284</td>
+<td style="text-align: right;">1563.454</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1317.770</td>
+<td style="text-align: right;">1191.199</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1351.804</td>
+<td style="text-align: right;">1290.428</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">3839.507</td>
+<td style="text-align: right;">3672.868</td>
+<td style="text-align: right;">4092.590</td>
+<td style="text-align: right;">3916.065</td>
+<td style="text-align: right;">4089.363</td>
+<td style="text-align: right;">27717.606</td>
+<td style="text-align: right;">28795.947</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">3894.138</td>
+<td style="text-align: right;">3683.206</td>
+<td style="text-align: right;">4094.072</td>
+<td style="text-align: right;">3911.362</td>
+<td style="text-align: right;">4046.455</td>
+<td style="text-align: right;">24606.713</td>
+<td style="text-align: right;">61710.711</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">27459.932</td>
+<td style="text-align: right;">26508.358</td>
+<td style="text-align: right;">28252.736</td>
+<td style="text-align: right;">28458.224</td>
+<td style="text-align: right;">62019.636</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">3854.585</td>
+<td style="text-align: right;">3662.265</td>
+<td style="text-align: right;">27698.459</td>
+<td style="text-align: right;">28069.566</td>
+<td style="text-align: right;">26773.205</td>
+<td style="text-align: right;">27799.744</td>
+<td style="text-align: right;">58606.409</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">3854.872</td>
+<td style="text-align: right;">3697.576</td>
+<td style="text-align: right;">54318.092</td>
+<td style="text-align: right;">64315.896</td>
+<td style="text-align: right;">69667.070</td>
+<td style="text-align: right;">67442.052</td>
+<td style="text-align: right;">59215.221</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">3923.294</td>
+<td style="text-align: right;">4021.272</td>
+<td style="text-align: right;">32953.039</td>
+<td style="text-align: right;">56872.527</td>
+<td style="text-align: right;">63174.538</td>
+<td style="text-align: right;">60709.326</td>
+<td style="text-align: right;">59045.413</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">3928.770</td>
+<td style="text-align: right;">4016.501</td>
+<td style="text-align: right;">56659.658</td>
+<td style="text-align: right;">66593.174</td>
+<td style="text-align: right;">70656.395</td>
+<td style="text-align: right;">48757.214</td>
+<td style="text-align: right;">60558.842</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1139.538</td>
+<td style="text-align: right;">31304.820</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">14089.082</td>
+<td style="text-align: right;">14118.663</td>
+<td style="text-align: right;">14026.701</td>
+<td style="text-align: right;">14461.197</td>
+<td style="text-align: right;">33820.788</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">35778.968</td>
+<td style="text-align: right;">36145.991</td>
+<td style="text-align: right;">37267.956</td>
+<td style="text-align: right;">36792.382</td>
+<td style="text-align: right;">32395.655</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">17242.305</td>
+<td style="text-align: right;">31510.477</td>
+<td style="text-align: right;">34407.197</td>
+<td style="text-align: right;">32576.616</td>
+<td style="text-align: right;">35159.169</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">35612.483</td>
+<td style="text-align: right;">34420.833</td>
+<td style="text-align: right;">34720.105</td>
+<td style="text-align: right;">27929.106</td>
+<td style="text-align: right;">32469.562</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">83375.675</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">82559.438</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">34064.026</td>
+<td style="text-align: right;">51738.033</td>
+<td style="text-align: right;">62365.889</td>
+<td style="text-align: right;">64115.912</td>
+<td style="text-align: right;">58562.286</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">3966.581</td>
+<td style="text-align: right;">4038.706</td>
+<td style="text-align: right;">34009.663</td>
+<td style="text-align: right;">51167.202</td>
+<td style="text-align: right;">61839.933</td>
+<td style="text-align: right;">57899.087</td>
+<td style="text-align: right;">61081.627</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">1254.596</td>
+<td style="text-align: right;">1161.779</td>
+<td style="text-align: right;">1452.172</td>
+<td style="text-align: right;">1339.479</td>
+<td style="text-align: right;">1358.332</td>
+<td style="text-align: right;">1470.442</td>
+<td style="text-align: right;">1566.632</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">31642.174</td>
+<td style="text-align: right;">35464.642</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36282.651</td>
+<td style="text-align: right;">36418.354</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">1918.488</td>
+<td style="text-align: right;">1835.475</td>
+<td style="text-align: right;">2032.977</td>
+<td style="text-align: right;">1959.531</td>
+<td style="text-align: right;">2053.127</td>
+<td style="text-align: right;">32089.512</td>
+<td style="text-align: right;">35894.516</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">1918.802</td>
+<td style="text-align: right;">1823.582</td>
+<td style="text-align: right;">2034.294</td>
+<td style="text-align: right;">1956.428</td>
+<td style="text-align: right;">2041.286</td>
+<td style="text-align: right;">30763.957</td>
+<td style="text-align: right;">37675.350</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">25781.614</td>
+<td style="text-align: right;">26469.444</td>
+<td style="text-align: right;">26867.839</td>
+<td style="text-align: right;">27077.410</td>
+<td style="text-align: right;">29155.023</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">1948.179</td>
+<td style="text-align: right;">1843.168</td>
+<td style="text-align: right;">25620.862</td>
+<td style="text-align: right;">28328.689</td>
+<td style="text-align: right;">26938.107</td>
+<td style="text-align: right;">30921.940</td>
+<td style="text-align: right;">36243.188</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">1923.033</td>
+<td style="text-align: right;">1848.126</td>
+<td style="text-align: right;">35468.107</td>
+<td style="text-align: right;">39089.479</td>
+<td style="text-align: right;">37022.833</td>
+<td style="text-align: right;">36421.851</td>
+<td style="text-align: right;">35020.924</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">1948.901</td>
+<td style="text-align: right;">2020.348</td>
+<td style="text-align: right;">27472.547</td>
+<td style="text-align: right;">37360.705</td>
+<td style="text-align: right;">37608.314</td>
+<td style="text-align: right;">33548.043</td>
+<td style="text-align: right;">36989.736</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">1963.184</td>
+<td style="text-align: right;">2021.805</td>
+<td style="text-align: right;">30288.080</td>
+<td style="text-align: right;">37956.778</td>
+<td style="text-align: right;">42016.713</td>
+<td style="text-align: right;">33639.639</td>
+<td style="text-align: right;">37736.310</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">15385.905</td>
+<td style="text-align: right;">19547.373</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13773.261</td>
+<td style="text-align: right;">13027.141</td>
+<td style="text-align: right;">14394.549</td>
+<td style="text-align: right;">14601.264</td>
+<td style="text-align: right;">19809.393</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">18514.880</td>
+<td style="text-align: right;">19336.784</td>
+<td style="text-align: right;">19307.874</td>
+<td style="text-align: right;">19143.922</td>
+<td style="text-align: right;">18421.237</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">14482.487</td>
+<td style="text-align: right;">18789.528</td>
+<td style="text-align: right;">19072.700</td>
+<td style="text-align: right;">21678.958</td>
+<td style="text-align: right;">20291.893</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19547.279</td>
+<td style="text-align: right;">18625.629</td>
+<td style="text-align: right;">20985.247</td>
+<td style="text-align: right;">23017.465</td>
+<td style="text-align: right;">19951.472</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">44264.320</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">40553.403</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">28280.799</td>
+<td style="text-align: right;">40254.330</td>
+<td style="text-align: right;">32953.026</td>
+<td style="text-align: right;">33599.601</td>
+<td style="text-align: right;">35278.477</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">1964.476</td>
+<td style="text-align: right;">2011.653</td>
+<td style="text-align: right;">28777.743</td>
+<td style="text-align: right;">37820.967</td>
+<td style="text-align: right;">32129.782</td>
+<td style="text-align: right;">33077.751</td>
+<td style="text-align: right;">36876.759</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">1367.956</td>
+<td style="text-align: right;">1301.164</td>
+<td style="text-align: right;">1501.828</td>
+<td style="text-align: right;">1533.168</td>
+<td style="text-align: right;">2268.257</td>
+<td style="text-align: right;">2674.573</td>
+<td style="text-align: right;">2440.487</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">15200.063</td>
+<td style="text-align: right;">16324.025</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19297.750</td>
+<td style="text-align: right;">16097.869</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">957.543</td>
+<td style="text-align: right;">916.812</td>
+<td style="text-align: right;">1008.531</td>
+<td style="text-align: right;">974.623</td>
+<td style="text-align: right;">1013.019</td>
+<td style="text-align: right;">16137.919</td>
+<td style="text-align: right;">16528.451</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">960.705</td>
+<td style="text-align: right;">917.034</td>
+<td style="text-align: right;">1011.560</td>
+<td style="text-align: right;">970.955</td>
+<td style="text-align: right;">1001.900</td>
+<td style="text-align: right;">16927.365</td>
+<td style="text-align: right;">17173.835</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13060.531</td>
+<td style="text-align: right;">13235.603</td>
+<td style="text-align: right;">12247.979</td>
+<td style="text-align: right;">15141.329</td>
+<td style="text-align: right;">15712.209</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">954.057</td>
+<td style="text-align: right;">927.557</td>
+<td style="text-align: right;">13062.138</td>
+<td style="text-align: right;">12523.984</td>
+<td style="text-align: right;">12678.623</td>
+<td style="text-align: right;">16835.230</td>
+<td style="text-align: right;">16488.228</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">960.141</td>
+<td style="text-align: right;">910.222</td>
+<td style="text-align: right;">14401.145</td>
+<td style="text-align: right;">17158.387</td>
+<td style="text-align: right;">17508.085</td>
+<td style="text-align: right;">21912.344</td>
+<td style="text-align: right;">10891.195</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">976.460</td>
+<td style="text-align: right;">1010.097</td>
+<td style="text-align: right;">12976.550</td>
+<td style="text-align: right;">16982.393</td>
+<td style="text-align: right;">14923.617</td>
+<td style="text-align: right;">18972.665</td>
+<td style="text-align: right;">16309.545</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">981.270</td>
+<td style="text-align: right;">1015.983</td>
+<td style="text-align: right;">16269.516</td>
+<td style="text-align: right;">16909.688</td>
+<td style="text-align: right;">17202.062</td>
+<td style="text-align: right;">22286.162</td>
+<td style="text-align: right;">17007.551</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8692.401</td>
+<td style="text-align: right;">9734.959</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7211.591</td>
+<td style="text-align: right;">6880.901</td>
+<td style="text-align: right;">6618.504</td>
+<td style="text-align: right;">8798.034</td>
+<td style="text-align: right;">9980.375</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9192.591</td>
+<td style="text-align: right;">10565.325</td>
+<td style="text-align: right;">9972.380</td>
+<td style="text-align: right;">12604.248</td>
+<td style="text-align: right;">8991.265</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6880.585</td>
+<td style="text-align: right;">9134.580</td>
+<td style="text-align: right;">10143.441</td>
+<td style="text-align: right;">12552.657</td>
+<td style="text-align: right;">9826.581</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10142.877</td>
+<td style="text-align: right;">9357.837</td>
+<td style="text-align: right;">9894.639</td>
+<td style="text-align: right;">12645.572</td>
+<td style="text-align: right;">9831.511</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19035.087</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">20000.185</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12907.105</td>
+<td style="text-align: right;">14701.111</td>
+<td style="text-align: right;">14312.420</td>
+<td style="text-align: right;">17467.507</td>
+<td style="text-align: right;">16891.141</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">978.120</td>
+<td style="text-align: right;">999.612</td>
+<td style="text-align: right;">13492.599</td>
+<td style="text-align: right;">16911.852</td>
+<td style="text-align: right;">14845.286</td>
+<td style="text-align: right;">17338.025</td>
+<td style="text-align: right;">16682.732</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">1335.712</td>
+<td style="text-align: right;">1320.254</td>
+<td style="text-align: right;">1530.239</td>
+<td style="text-align: right;">1522.594</td>
+<td style="text-align: right;">1555.359</td>
+<td style="text-align: right;">2009.797</td>
+<td style="text-align: right;">2369.881</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9270.109</td>
+<td style="text-align: right;">8520.374</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9665.721</td>
+<td style="text-align: right;">8426.164</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">477.982</td>
+<td style="text-align: right;">495.771</td>
+<td style="text-align: right;">523.150</td>
+<td style="text-align: right;">503.949</td>
+<td style="text-align: right;">529.869</td>
+<td style="text-align: right;">9234.295</td>
+<td style="text-align: right;">8658.088</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">483.834</td>
+<td style="text-align: right;">492.078</td>
+<td style="text-align: right;">519.827</td>
+<td style="text-align: right;">502.068</td>
+<td style="text-align: right;">527.376</td>
+<td style="text-align: right;">9161.493</td>
+<td style="text-align: right;">8401.351</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6680.672</td>
+<td style="text-align: right;">6824.523</td>
+<td style="text-align: right;">6777.002</td>
+<td style="text-align: right;">7881.587</td>
+<td style="text-align: right;">7580.151</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">479.804</td>
+<td style="text-align: right;">497.525</td>
+<td style="text-align: right;">6921.715</td>
+<td style="text-align: right;">6896.360</td>
+<td style="text-align: right;">6831.651</td>
+<td style="text-align: right;">7846.139</td>
+<td style="text-align: right;">7797.205</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">480.201</td>
+<td style="text-align: right;">490.528</td>
+<td style="text-align: right;">7484.619</td>
+<td style="text-align: right;">9556.599</td>
+<td style="text-align: right;">9620.412</td>
+<td style="text-align: right;">9410.686</td>
+<td style="text-align: right;">7623.647</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">513.766</td>
+<td style="text-align: right;">530.503</td>
+<td style="text-align: right;">6628.095</td>
+<td style="text-align: right;">6945.512</td>
+<td style="text-align: right;">8676.926</td>
+<td style="text-align: right;">9542.190</td>
+<td style="text-align: right;">8709.090</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">512.561</td>
+<td style="text-align: right;">530.020</td>
+<td style="text-align: right;">8026.545</td>
+<td style="text-align: right;">9036.565</td>
+<td style="text-align: right;">9259.167</td>
+<td style="text-align: right;">9574.697</td>
+<td style="text-align: right;">8450.977</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4336.025</td>
+<td style="text-align: right;">5204.002</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3635.775</td>
+<td style="text-align: right;">3560.299</td>
+<td style="text-align: right;">3427.809</td>
+<td style="text-align: right;">4106.045</td>
+<td style="text-align: right;">4691.168</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5388.843</td>
+<td style="text-align: right;">4886.756</td>
+<td style="text-align: right;">5023.916</td>
+<td style="text-align: right;">5825.882</td>
+<td style="text-align: right;">4941.696</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3712.366</td>
+<td style="text-align: right;">3821.824</td>
+<td style="text-align: right;">4998.155</td>
+<td style="text-align: right;">5912.267</td>
+<td style="text-align: right;">5287.436</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5018.612</td>
+<td style="text-align: right;">5332.192</td>
+<td style="text-align: right;">5095.346</td>
+<td style="text-align: right;">6004.927</td>
+<td style="text-align: right;">4941.188</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9709.909</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8056.250</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7939.279</td>
+<td style="text-align: right;">8257.378</td>
+<td style="text-align: right;">8252.130</td>
+<td style="text-align: right;">7396.176</td>
+<td style="text-align: right;">8357.741</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">514.896</td>
+<td style="text-align: right;">527.301</td>
+<td style="text-align: right;">7235.105</td>
+<td style="text-align: right;">8094.199</td>
+<td style="text-align: right;">8283.851</td>
+<td style="text-align: right;">8244.283</td>
+<td style="text-align: right;">8625.462</td>
+</tr>
+</tbody>
+</table>
 <h3 id="x86---intel-core-i5-8250u">X86 - Intel Core i5-8250U</h3>
 <table>
 <thead>
@@ -822,6 +1764,608 @@
 </tr>
 </tbody>
 </table>
+<h3 id="arm---apple-m2">Arm - Apple M2</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">1688.629</td>
+<td style="text-align: right;">1690.503</td>
+<td style="text-align: right;">1166.296</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">27232.144</td>
+<td style="text-align: right;">27252.985</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">27239.662</td>
+<td style="text-align: right;">27250.616</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">10607.474</td>
+<td style="text-align: right;">21719.251</td>
+<td style="text-align: right;">24137.417</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">10605.572</td>
+<td style="text-align: right;">21702.895</td>
+<td style="text-align: right;">27246.144</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;">27166.365</td>
+<td style="text-align: right;">27186.879</td>
+<td style="text-align: right;">27254.525</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">27178.127</td>
+<td style="text-align: right;">27192.221</td>
+<td style="text-align: right;">27250.813</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">27242.883</td>
+<td style="text-align: right;">27237.843</td>
+<td style="text-align: right;">27253.427</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">27242.336</td>
+<td style="text-align: right;">27240.049</td>
+<td style="text-align: right;">27255.594</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">27245.052</td>
+<td style="text-align: right;">27243.736</td>
+<td style="text-align: right;">27256.646</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">27238.161</td>
+<td style="text-align: right;">27258.084</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;">27171.259</td>
+<td style="text-align: right;">27188.409</td>
+<td style="text-align: right;">27254.462</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;">27239.818</td>
+<td style="text-align: right;">27238.587</td>
+<td style="text-align: right;">27259.644</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;">27237.085</td>
+<td style="text-align: right;">27242.811</td>
+<td style="text-align: right;">27257.768</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;">27240.584</td>
+<td style="text-align: right;">27238.765</td>
+<td style="text-align: right;">27248.360</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">90350.504</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">90322.452</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;">27244.526</td>
+<td style="text-align: right;">27248.202</td>
+<td style="text-align: right;">27253.449</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">27243.732</td>
+<td style="text-align: right;">27243.576</td>
+<td style="text-align: right;">27253.398</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">1658.483</td>
+<td style="text-align: right;">1690.261</td>
+<td style="text-align: right;">1165.666</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13617.151</td>
+<td style="text-align: right;">13617.801</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13617.156</td>
+<td style="text-align: right;">13614.849</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">5306.264</td>
+<td style="text-align: right;">13616.291</td>
+<td style="text-align: right;">13613.890</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">5304.910</td>
+<td style="text-align: right;">13613.034</td>
+<td style="text-align: right;">13618.195</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;">13592.374</td>
+<td style="text-align: right;">13599.586</td>
+<td style="text-align: right;">13617.727</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">13596.215</td>
+<td style="text-align: right;">13613.593</td>
+<td style="text-align: right;">13616.084</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">13610.939</td>
+<td style="text-align: right;">13611.098</td>
+<td style="text-align: right;">13614.865</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">13615.291</td>
+<td style="text-align: right;">13613.296</td>
+<td style="text-align: right;">13614.417</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">13612.578</td>
+<td style="text-align: right;">13612.304</td>
+<td style="text-align: right;">13617.158</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13612.325</td>
+<td style="text-align: right;">13614.329</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;">13580.995</td>
+<td style="text-align: right;">13612.202</td>
+<td style="text-align: right;">13616.317</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;">13612.101</td>
+<td style="text-align: right;">13614.051</td>
+<td style="text-align: right;">13614.819</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;">13611.184</td>
+<td style="text-align: right;">13612.664</td>
+<td style="text-align: right;">13616.120</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;">13614.566</td>
+<td style="text-align: right;">13611.217</td>
+<td style="text-align: right;">13619.579</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">45750.202</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">45750.860</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;">13610.269</td>
+<td style="text-align: right;">13614.752</td>
+<td style="text-align: right;">13615.534</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">13611.092</td>
+<td style="text-align: right;">13612.703</td>
+<td style="text-align: right;">13617.139</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">1731.498</td>
+<td style="text-align: right;">2299.889</td>
+<td style="text-align: right;">1747.304</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6805.128</td>
+<td style="text-align: right;">6805.915</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6804.595</td>
+<td style="text-align: right;">6806.831</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">2863.675</td>
+<td style="text-align: right;">6805.870</td>
+<td style="text-align: right;">6805.892</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">2863.789</td>
+<td style="text-align: right;">6805.049</td>
+<td style="text-align: right;">6806.686</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;">6801.702</td>
+<td style="text-align: right;">6803.527</td>
+<td style="text-align: right;">6806.153</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">6800.823</td>
+<td style="text-align: right;">6804.278</td>
+<td style="text-align: right;">6805.359</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">6806.345</td>
+<td style="text-align: right;">6804.215</td>
+<td style="text-align: right;">6806.141</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">6805.334</td>
+<td style="text-align: right;">6805.524</td>
+<td style="text-align: right;">6805.874</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">6804.776</td>
+<td style="text-align: right;">6805.142</td>
+<td style="text-align: right;">6805.597</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6804.888</td>
+<td style="text-align: right;">6806.950</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;">6801.102</td>
+<td style="text-align: right;">6805.669</td>
+<td style="text-align: right;">6806.608</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;">6804.298</td>
+<td style="text-align: right;">6805.048</td>
+<td style="text-align: right;">6805.854</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;">6804.239</td>
+<td style="text-align: right;">6804.734</td>
+<td style="text-align: right;">6806.359</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;">6804.456</td>
+<td style="text-align: right;">6804.416</td>
+<td style="text-align: right;">6806.647</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">22936.419</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">22934.782</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;">6804.706</td>
+<td style="text-align: right;">6805.135</td>
+<td style="text-align: right;">6806.769</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">6804.609</td>
+<td style="text-align: right;">6805.422</td>
+<td style="text-align: right;">6807.287</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">1720.232</td>
+<td style="text-align: right;">2260.330</td>
+<td style="text-align: right;">1699.773</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3402.464</td>
+<td style="text-align: right;">3402.412</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3401.641</td>
+<td style="text-align: right;">3401.847</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">1648.737</td>
+<td style="text-align: right;">3401.627</td>
+<td style="text-align: right;">3401.379</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">1648.471</td>
+<td style="text-align: right;">3402.325</td>
+<td style="text-align: right;">3402.274</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;">3399.925</td>
+<td style="text-align: right;">3400.747</td>
+<td style="text-align: right;">3401.665</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">3400.360</td>
+<td style="text-align: right;">3401.131</td>
+<td style="text-align: right;">3402.272</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">3401.510</td>
+<td style="text-align: right;">3401.194</td>
+<td style="text-align: right;">3402.674</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">3401.076</td>
+<td style="text-align: right;">3401.789</td>
+<td style="text-align: right;">3401.830</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">3402.031</td>
+<td style="text-align: right;">3401.876</td>
+<td style="text-align: right;">3402.213</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3402.460</td>
+<td style="text-align: right;">3402.464</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;">3399.868</td>
+<td style="text-align: right;">3400.491</td>
+<td style="text-align: right;">3401.794</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;">3401.143</td>
+<td style="text-align: right;">3401.441</td>
+<td style="text-align: right;">3402.385</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;">3401.473</td>
+<td style="text-align: right;">3401.356</td>
+<td style="text-align: right;">3401.928</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;">3400.980</td>
+<td style="text-align: right;">3402.016</td>
+<td style="text-align: right;">3402.009</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11503.458</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11504.614</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;">3401.142</td>
+<td style="text-align: right;">3401.942</td>
+<td style="text-align: right;">3402.086</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">3401.912</td>
+<td style="text-align: right;">3401.256</td>
+<td style="text-align: right;">3401.252</td>
+</tr>
+</tbody>
+</table>
 <h3 id="arm---aws-arm-t4gsmall">Arm - AWS Arm t4g.small</h3>
 <table>
 <thead>
@@ -832,16 +2376,18 @@
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRLScalar</td>
-<td style="text-align: right;">610.440</td>
-<td style="text-align: right;">611.068</td>
-<td style="text-align: right;">653.301</td>
-<td style="text-align: right;">925.069</td>
+<td style="text-align: right;">609.670</td>
+<td style="text-align: right;">610.175</td>
+<td style="text-align: right;">674.831</td>
+<td style="text-align: right;">888.349</td>
+<td style="text-align: right;">830.410</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
@@ -849,7 +2395,8 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">19526.683</td>
+<td style="text-align: right;">19591.854</td>
+<td style="text-align: right;">19843.063</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
@@ -857,31 +2404,35 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">19527.125</td>
+<td style="text-align: right;">19585.260</td>
+<td style="text-align: right;">19839.003</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRL_Basic</td>
-<td style="text-align: right;">3522.345</td>
-<td style="text-align: right;">3576.642</td>
-<td style="text-align: right;">1517.947</td>
-<td style="text-align: right;">7944.581</td>
+<td style="text-align: right;">3362.391</td>
+<td style="text-align: right;">1558.260</td>
+<td style="text-align: right;">1593.962</td>
+<td style="text-align: right;">7931.659</td>
+<td style="text-align: right;">9942.338</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRL_Base_Core</td>
-<td style="text-align: right;">3524.622</td>
-<td style="text-align: right;">3576.022</td>
-<td style="text-align: right;">1489.862</td>
-<td style="text-align: right;">7925.434</td>
+<td style="text-align: right;">3361.521</td>
+<td style="text-align: right;">3562.451</td>
+<td style="text-align: right;">3660.920</td>
+<td style="text-align: right;">7910.038</td>
+<td style="text-align: right;">16906.827</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRL_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">11892.353</td>
-<td style="text-align: right;">11291.053</td>
-<td style="text-align: right;">13135.329</td>
+<td style="text-align: right;">11773.904</td>
+<td style="text-align: right;">11826.627</td>
+<td style="text-align: right;">13144.260</td>
+<td style="text-align: right;">19819.532</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
@@ -890,78 +2441,115 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRLTraits</td>
-<td style="text-align: right;">3794.990</td>
-<td style="text-align: right;">11367.866</td>
-<td style="text-align: right;">11854.758</td>
-<td style="text-align: right;">13150.471</td>
+<td style="text-align: right;">3597.117</td>
+<td style="text-align: right;">11333.426</td>
+<td style="text-align: right;">11345.812</td>
+<td style="text-align: right;">13108.813</td>
+<td style="text-align: right;">19832.865</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRLTraits_Core</td>
-<td style="text-align: right;">3786.531</td>
-<td style="text-align: right;">15887.374</td>
-<td style="text-align: right;">16931.012</td>
-<td style="text-align: right;">19512.920</td>
+<td style="text-align: right;">3580.619</td>
+<td style="text-align: right;">15761.636</td>
+<td style="text-align: right;">15838.977</td>
+<td style="text-align: right;">19546.989</td>
+<td style="text-align: right;">19825.349</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRLConstTraits</td>
-<td style="text-align: right;">3895.547</td>
-<td style="text-align: right;">13254.468</td>
-<td style="text-align: right;">16929.335</td>
-<td style="text-align: right;">19416.639</td>
+<td style="text-align: right;">3841.700</td>
+<td style="text-align: right;">13217.814</td>
+<td style="text-align: right;">15859.573</td>
+<td style="text-align: right;">19410.088</td>
+<td style="text-align: right;">19834.510</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRLConstTraits_Core</td>
-<td style="text-align: right;">3875.003</td>
-<td style="text-align: right;">15889.018</td>
-<td style="text-align: right;">15854.083</td>
-<td style="text-align: right;">19416.358</td>
+<td style="text-align: right;">3841.950</td>
+<td style="text-align: right;">15820.815</td>
+<td style="text-align: right;">16985.660</td>
+<td style="text-align: right;">19399.330</td>
+<td style="text-align: right;">19829.721</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19575.999</td>
+<td style="text-align: right;">19836.369</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRL128Traits</td>
-<td style="text-align: right;">462.520</td>
-<td style="text-align: right;">11908.536</td>
-<td style="text-align: right;">11902.879</td>
-<td style="text-align: right;">13154.059</td>
+<td style="text-align: right;">457.859</td>
+<td style="text-align: right;">11896.746</td>
+<td style="text-align: right;">11335.311</td>
+<td style="text-align: right;">13155.132</td>
+<td style="text-align: right;">19827.874</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRL128Traits_Core</td>
-<td style="text-align: right;">466.298</td>
-<td style="text-align: right;">15835.768</td>
-<td style="text-align: right;">15793.090</td>
-<td style="text-align: right;">19515.757</td>
+<td style="text-align: right;">459.243</td>
+<td style="text-align: right;">15825.741</td>
+<td style="text-align: right;">16972.257</td>
+<td style="text-align: right;">19581.770</td>
+<td style="text-align: right;">19821.830</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRL128ConstTraits</td>
-<td style="text-align: right;">464.774</td>
-<td style="text-align: right;">15844.426</td>
-<td style="text-align: right;">16914.199</td>
-<td style="text-align: right;">19404.393</td>
+<td style="text-align: right;">456.272</td>
+<td style="text-align: right;">15839.376</td>
+<td style="text-align: right;">15829.417</td>
+<td style="text-align: right;">19400.383</td>
+<td style="text-align: right;">19838.864</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRL128ConstTraits_Core</td>
-<td style="text-align: right;">464.907</td>
-<td style="text-align: right;">15859.491</td>
-<td style="text-align: right;">16898.840</td>
-<td style="text-align: right;">19395.451</td>
+<td style="text-align: right;">456.831</td>
+<td style="text-align: right;">15841.274</td>
+<td style="text-align: right;">15848.712</td>
+<td style="text-align: right;">19415.233</td>
+<td style="text-align: right;">19791.258</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">30197.002</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">30162.905</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRLFast_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">13207.837</td>
-<td style="text-align: right;">16956.112</td>
-<td style="text-align: right;">19579.055</td>
+<td style="text-align: right;">13158.627</td>
+<td style="text-align: right;">15864.810</td>
+<td style="text-align: right;">19590.685</td>
+<td style="text-align: right;">19829.887</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
@@ -970,22 +2558,25 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
 <td style="text-align: left;">SumSRLFastTraits</td>
-<td style="text-align: right;">3874.840</td>
-<td style="text-align: right;">13212.078</td>
-<td style="text-align: right;">16956.265</td>
-<td style="text-align: right;">19516.840</td>
+<td style="text-align: right;">3843.004</td>
+<td style="text-align: right;">13112.678</td>
+<td style="text-align: right;">15858.362</td>
+<td style="text-align: right;">19589.811</td>
+<td style="text-align: right;">19828.833</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRLScalar</td>
-<td style="text-align: right;">606.922</td>
-<td style="text-align: right;">606.062</td>
-<td style="text-align: right;">604.075</td>
-<td style="text-align: right;">822.934</td>
+<td style="text-align: right;">603.865</td>
+<td style="text-align: right;">603.069</td>
+<td style="text-align: right;">606.017</td>
+<td style="text-align: right;">821.233</td>
+<td style="text-align: right;">830.273</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
@@ -993,7 +2584,8 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">9805.972</td>
+<td style="text-align: right;">9818.720</td>
+<td style="text-align: right;">9928.701</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
@@ -1001,31 +2593,35 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">9806.457</td>
+<td style="text-align: right;">9816.088</td>
+<td style="text-align: right;">9928.634</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRL_Basic</td>
-<td style="text-align: right;">1767.201</td>
-<td style="text-align: right;">1787.808</td>
-<td style="text-align: right;">1771.186</td>
-<td style="text-align: right;">9817.130</td>
+<td style="text-align: right;">1690.698</td>
+<td style="text-align: right;">1789.688</td>
+<td style="text-align: right;">777.186</td>
+<td style="text-align: right;">9827.791</td>
+<td style="text-align: right;">9928.037</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRL_Base_Core</td>
-<td style="text-align: right;">1769.150</td>
-<td style="text-align: right;">1782.443</td>
-<td style="text-align: right;">823.786</td>
-<td style="text-align: right;">9792.583</td>
+<td style="text-align: right;">1694.332</td>
+<td style="text-align: right;">1781.165</td>
+<td style="text-align: right;">1801.808</td>
+<td style="text-align: right;">9810.049</td>
+<td style="text-align: right;">9930.594</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRL_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">5941.433</td>
-<td style="text-align: right;">5892.797</td>
-<td style="text-align: right;">6584.266</td>
+<td style="text-align: right;">5630.795</td>
+<td style="text-align: right;">5914.675</td>
+<td style="text-align: right;">6590.873</td>
+<td style="text-align: right;">9929.409</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
@@ -1034,78 +2630,115 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRLTraits</td>
-<td style="text-align: right;">1883.644</td>
-<td style="text-align: right;">5971.707</td>
-<td style="text-align: right;">5901.827</td>
-<td style="text-align: right;">9806.873</td>
+<td style="text-align: right;">1792.932</td>
+<td style="text-align: right;">5672.668</td>
+<td style="text-align: right;">5952.491</td>
+<td style="text-align: right;">9817.877</td>
+<td style="text-align: right;">9931.876</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRLTraits_Core</td>
-<td style="text-align: right;">1888.758</td>
-<td style="text-align: right;">7952.247</td>
-<td style="text-align: right;">7835.431</td>
-<td style="text-align: right;">9809.512</td>
+<td style="text-align: right;">1794.025</td>
+<td style="text-align: right;">8513.781</td>
+<td style="text-align: right;">7944.583</td>
+<td style="text-align: right;">9799.846</td>
+<td style="text-align: right;">9926.691</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRLConstTraits</td>
-<td style="text-align: right;">1927.803</td>
-<td style="text-align: right;">1249.623</td>
-<td style="text-align: right;">7845.444</td>
-<td style="text-align: right;">9747.796</td>
+<td style="text-align: right;">1889.665</td>
+<td style="text-align: right;">1247.111</td>
+<td style="text-align: right;">7951.642</td>
+<td style="text-align: right;">9754.273</td>
+<td style="text-align: right;">9931.359</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRLConstTraits_Core</td>
-<td style="text-align: right;">1927.897</td>
-<td style="text-align: right;">7957.828</td>
-<td style="text-align: right;">7834.350</td>
-<td style="text-align: right;">9742.182</td>
+<td style="text-align: right;">1903.697</td>
+<td style="text-align: right;">8511.141</td>
+<td style="text-align: right;">7942.467</td>
+<td style="text-align: right;">9755.341</td>
+<td style="text-align: right;">9929.735</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9811.873</td>
+<td style="text-align: right;">9927.582</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRL128Traits</td>
-<td style="text-align: right;">295.401</td>
-<td style="text-align: right;">5679.936</td>
-<td style="text-align: right;">5902.850</td>
-<td style="text-align: right;">9792.525</td>
+<td style="text-align: right;">292.591</td>
+<td style="text-align: right;">5651.354</td>
+<td style="text-align: right;">5959.758</td>
+<td style="text-align: right;">9818.752</td>
+<td style="text-align: right;">9931.620</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRL128Traits_Core</td>
-<td style="text-align: right;">298.497</td>
-<td style="text-align: right;">7938.871</td>
-<td style="text-align: right;">8320.033</td>
-<td style="text-align: right;">9791.252</td>
+<td style="text-align: right;">292.344</td>
+<td style="text-align: right;">7939.185</td>
+<td style="text-align: right;">8505.116</td>
+<td style="text-align: right;">9821.111</td>
+<td style="text-align: right;">9929.405</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRL128ConstTraits</td>
-<td style="text-align: right;">293.517</td>
-<td style="text-align: right;">1248.756</td>
-<td style="text-align: right;">7792.567</td>
-<td style="text-align: right;">9729.161</td>
+<td style="text-align: right;">288.492</td>
+<td style="text-align: right;">1245.949</td>
+<td style="text-align: right;">7941.172</td>
+<td style="text-align: right;">9726.565</td>
+<td style="text-align: right;">9929.538</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRL128ConstTraits_Core</td>
-<td style="text-align: right;">293.774</td>
-<td style="text-align: right;">7940.466</td>
-<td style="text-align: right;">8306.434</td>
-<td style="text-align: right;">9728.222</td>
+<td style="text-align: right;">288.696</td>
+<td style="text-align: right;">7897.276</td>
+<td style="text-align: right;">8502.726</td>
+<td style="text-align: right;">9742.650</td>
+<td style="text-align: right;">9929.605</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">15702.931</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">15692.269</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRLFast_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">6609.521</td>
-<td style="text-align: right;">8340.868</td>
-<td style="text-align: right;">9797.920</td>
+<td style="text-align: right;">6552.259</td>
+<td style="text-align: right;">8506.717</td>
+<td style="text-align: right;">9802.989</td>
+<td style="text-align: right;">9926.063</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
@@ -1114,22 +2747,25 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
 <td style="text-align: left;">SumSRLFastTraits</td>
-<td style="text-align: right;">1911.139</td>
-<td style="text-align: right;">7953.825</td>
-<td style="text-align: right;">7814.332</td>
-<td style="text-align: right;">9820.527</td>
+<td style="text-align: right;">1908.924</td>
+<td style="text-align: right;">7946.934</td>
+<td style="text-align: right;">7951.346</td>
+<td style="text-align: right;">9801.995</td>
+<td style="text-align: right;">9933.448</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRLScalar</td>
-<td style="text-align: right;">749.805</td>
-<td style="text-align: right;">747.568</td>
-<td style="text-align: right;">741.975</td>
-<td style="text-align: right;">1170.115</td>
+<td style="text-align: right;">747.355</td>
+<td style="text-align: right;">749.175</td>
+<td style="text-align: right;">746.788</td>
+<td style="text-align: right;">1177.437</td>
+<td style="text-align: right;">1243.268</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
@@ -1137,7 +2773,8 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">4771.051</td>
+<td style="text-align: right;">4864.021</td>
+<td style="text-align: right;">4867.524</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
@@ -1145,31 +2782,35 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">4776.363</td>
+<td style="text-align: right;">4848.450</td>
+<td style="text-align: right;">4915.467</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRL_Basic</td>
-<td style="text-align: right;">952.751</td>
-<td style="text-align: right;">976.939</td>
-<td style="text-align: right;">967.911</td>
-<td style="text-align: right;">4777.290</td>
+<td style="text-align: right;">907.266</td>
+<td style="text-align: right;">978.839</td>
+<td style="text-align: right;">977.281</td>
+<td style="text-align: right;">4858.017</td>
+<td style="text-align: right;">4910.214</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRL_Base_Core</td>
-<td style="text-align: right;">952.229</td>
-<td style="text-align: right;">975.116</td>
-<td style="text-align: right;">967.333</td>
-<td style="text-align: right;">4759.469</td>
+<td style="text-align: right;">905.360</td>
+<td style="text-align: right;">959.284</td>
+<td style="text-align: right;">976.261</td>
+<td style="text-align: right;">4843.458</td>
+<td style="text-align: right;">4916.727</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRL_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">3283.631</td>
-<td style="text-align: right;">3262.002</td>
-<td style="text-align: right;">3285.996</td>
+<td style="text-align: right;">3274.989</td>
+<td style="text-align: right;">3276.607</td>
+<td style="text-align: right;">3298.839</td>
+<td style="text-align: right;">4898.382</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
@@ -1178,78 +2819,115 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRLTraits</td>
-<td style="text-align: right;">944.328</td>
-<td style="text-align: right;">3292.010</td>
-<td style="text-align: right;">3272.067</td>
-<td style="text-align: right;">4774.267</td>
+<td style="text-align: right;">896.091</td>
+<td style="text-align: right;">3287.611</td>
+<td style="text-align: right;">3304.001</td>
+<td style="text-align: right;">4860.197</td>
+<td style="text-align: right;">4903.459</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRLTraits_Core</td>
-<td style="text-align: right;">945.949</td>
-<td style="text-align: right;">3934.975</td>
-<td style="text-align: right;">4175.823</td>
-<td style="text-align: right;">4770.997</td>
+<td style="text-align: right;">893.153</td>
+<td style="text-align: right;">4204.944</td>
+<td style="text-align: right;">4230.659</td>
+<td style="text-align: right;">4860.967</td>
+<td style="text-align: right;">4891.438</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRLConstTraits</td>
-<td style="text-align: right;">952.870</td>
-<td style="text-align: right;">3933.740</td>
-<td style="text-align: right;">3917.508</td>
-<td style="text-align: right;">4733.043</td>
+<td style="text-align: right;">948.260</td>
+<td style="text-align: right;">3293.490</td>
+<td style="text-align: right;">3951.262</td>
+<td style="text-align: right;">4825.915</td>
+<td style="text-align: right;">4915.003</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRLConstTraits_Core</td>
-<td style="text-align: right;">954.282</td>
-<td style="text-align: right;">3935.683</td>
-<td style="text-align: right;">3923.493</td>
-<td style="text-align: right;">4743.864</td>
+<td style="text-align: right;">958.255</td>
+<td style="text-align: right;">4206.585</td>
+<td style="text-align: right;">3951.556</td>
+<td style="text-align: right;">4828.003</td>
+<td style="text-align: right;">4914.166</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4809.153</td>
+<td style="text-align: right;">4918.795</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRL128Traits</td>
-<td style="text-align: right;">183.110</td>
-<td style="text-align: right;">3282.675</td>
-<td style="text-align: right;">3273.167</td>
-<td style="text-align: right;">4776.961</td>
+<td style="text-align: right;">184.629</td>
+<td style="text-align: right;">3270.360</td>
+<td style="text-align: right;">3297.130</td>
+<td style="text-align: right;">4861.957</td>
+<td style="text-align: right;">4918.562</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRL128Traits_Core</td>
-<td style="text-align: right;">183.053</td>
-<td style="text-align: right;">4190.520</td>
-<td style="text-align: right;">4167.244</td>
-<td style="text-align: right;">4776.351</td>
+<td style="text-align: right;">184.595</td>
+<td style="text-align: right;">3941.342</td>
+<td style="text-align: right;">4231.167</td>
+<td style="text-align: right;">4850.766</td>
+<td style="text-align: right;">4890.365</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRL128ConstTraits</td>
-<td style="text-align: right;">183.033</td>
-<td style="text-align: right;">3925.599</td>
-<td style="text-align: right;">4169.417</td>
-<td style="text-align: right;">4734.876</td>
+<td style="text-align: right;">184.666</td>
+<td style="text-align: right;">3299.800</td>
+<td style="text-align: right;">4229.725</td>
+<td style="text-align: right;">4807.009</td>
+<td style="text-align: right;">4918.806</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRL128ConstTraits_Core</td>
-<td style="text-align: right;">183.041</td>
-<td style="text-align: right;">4198.127</td>
-<td style="text-align: right;">3913.322</td>
-<td style="text-align: right;">4743.023</td>
+<td style="text-align: right;">184.270</td>
+<td style="text-align: right;">3951.191</td>
+<td style="text-align: right;">3952.438</td>
+<td style="text-align: right;">4817.585</td>
+<td style="text-align: right;">4910.695</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7572.263</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7557.656</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRLFast_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">3932.311</td>
-<td style="text-align: right;">4161.691</td>
-<td style="text-align: right;">4781.043</td>
+<td style="text-align: right;">3921.684</td>
+<td style="text-align: right;">4231.836</td>
+<td style="text-align: right;">4858.301</td>
+<td style="text-align: right;">4907.853</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
@@ -1258,22 +2936,25 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
 <td style="text-align: left;">SumSRLFastTraits</td>
-<td style="text-align: right;">967.210</td>
-<td style="text-align: right;">3923.614</td>
-<td style="text-align: right;">3917.982</td>
-<td style="text-align: right;">4773.527</td>
+<td style="text-align: right;">961.889</td>
+<td style="text-align: right;">3943.682</td>
+<td style="text-align: right;">3954.499</td>
+<td style="text-align: right;">4856.756</td>
+<td style="text-align: right;">4908.459</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRLScalar</td>
-<td style="text-align: right;">742.433</td>
-<td style="text-align: right;">739.881</td>
-<td style="text-align: right;">739.075</td>
-<td style="text-align: right;">1192.022</td>
+<td style="text-align: right;">741.345</td>
+<td style="text-align: right;">738.573</td>
+<td style="text-align: right;">741.723</td>
+<td style="text-align: right;">1181.795</td>
+<td style="text-align: right;">1243.630</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
@@ -1281,7 +2962,8 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">2437.007</td>
+<td style="text-align: right;">2445.148</td>
+<td style="text-align: right;">2474.209</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
@@ -1289,31 +2971,35 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">2438.554</td>
+<td style="text-align: right;">2388.818</td>
+<td style="text-align: right;">2473.276</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRL_Basic</td>
-<td style="text-align: right;">478.629</td>
-<td style="text-align: right;">486.457</td>
-<td style="text-align: right;">481.770</td>
-<td style="text-align: right;">2436.375</td>
+<td style="text-align: right;">483.177</td>
+<td style="text-align: right;">483.396</td>
+<td style="text-align: right;">485.099</td>
+<td style="text-align: right;">2450.081</td>
+<td style="text-align: right;">2469.050</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRL_Base_Core</td>
-<td style="text-align: right;">485.350</td>
-<td style="text-align: right;">483.676</td>
-<td style="text-align: right;">481.629</td>
-<td style="text-align: right;">2432.922</td>
+<td style="text-align: right;">206.754</td>
+<td style="text-align: right;">477.325</td>
+<td style="text-align: right;">485.303</td>
+<td style="text-align: right;">2440.437</td>
+<td style="text-align: right;">2473.268</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRL_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">1414.415</td>
-<td style="text-align: right;">1479.955</td>
-<td style="text-align: right;">1646.618</td>
+<td style="text-align: right;">1399.336</td>
+<td style="text-align: right;">1475.860</td>
+<td style="text-align: right;">1646.726</td>
+<td style="text-align: right;">2446.845</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
@@ -1322,78 +3008,115 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRLTraits</td>
-<td style="text-align: right;">468.098</td>
-<td style="text-align: right;">1420.642</td>
-<td style="text-align: right;">1486.629</td>
-<td style="text-align: right;">1649.062</td>
+<td style="text-align: right;">471.548</td>
+<td style="text-align: right;">1414.776</td>
+<td style="text-align: right;">1488.608</td>
+<td style="text-align: right;">1645.802</td>
+<td style="text-align: right;">2462.860</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRLTraits_Core</td>
-<td style="text-align: right;">470.677</td>
-<td style="text-align: right;">2123.873</td>
-<td style="text-align: right;">1968.333</td>
-<td style="text-align: right;">2435.511</td>
+<td style="text-align: right;">470.620</td>
+<td style="text-align: right;">2126.579</td>
+<td style="text-align: right;">1984.837</td>
+<td style="text-align: right;">2440.722</td>
+<td style="text-align: right;">2464.689</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRLConstTraits</td>
-<td style="text-align: right;">467.839</td>
-<td style="text-align: right;">1983.810</td>
-<td style="text-align: right;">1964.318</td>
-<td style="text-align: right;">2429.675</td>
+<td style="text-align: right;">468.153</td>
+<td style="text-align: right;">1985.566</td>
+<td style="text-align: right;">1984.014</td>
+<td style="text-align: right;">2439.613</td>
+<td style="text-align: right;">2468.182</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRLConstTraits_Core</td>
-<td style="text-align: right;">468.965</td>
-<td style="text-align: right;">1981.799</td>
-<td style="text-align: right;">2110.022</td>
-<td style="text-align: right;">2435.217</td>
+<td style="text-align: right;">468.631</td>
+<td style="text-align: right;">1983.033</td>
+<td style="text-align: right;">2124.977</td>
+<td style="text-align: right;">2445.451</td>
+<td style="text-align: right;">2470.810</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2445.821</td>
+<td style="text-align: right;">2472.926</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRL128Traits</td>
-<td style="text-align: right;">270.583</td>
-<td style="text-align: right;">1416.889</td>
-<td style="text-align: right;">1478.744</td>
-<td style="text-align: right;">1649.302</td>
+<td style="text-align: right;">258.356</td>
+<td style="text-align: right;">1418.901</td>
+<td style="text-align: right;">1484.903</td>
+<td style="text-align: right;">1650.400</td>
+<td style="text-align: right;">2461.742</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRL128Traits_Core</td>
-<td style="text-align: right;">275.935</td>
-<td style="text-align: right;">1982.015</td>
-<td style="text-align: right;">2093.517</td>
-<td style="text-align: right;">2412.091</td>
+<td style="text-align: right;">257.422</td>
+<td style="text-align: right;">1972.717</td>
+<td style="text-align: right;">2114.908</td>
+<td style="text-align: right;">2448.262</td>
+<td style="text-align: right;">2468.665</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRL128ConstTraits</td>
-<td style="text-align: right;">273.560</td>
-<td style="text-align: right;">1972.904</td>
-<td style="text-align: right;">1972.086</td>
-<td style="text-align: right;">2430.599</td>
+<td style="text-align: right;">257.622</td>
+<td style="text-align: right;">1979.961</td>
+<td style="text-align: right;">1982.723</td>
+<td style="text-align: right;">2444.106</td>
+<td style="text-align: right;">2472.309</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRL128ConstTraits_Core</td>
-<td style="text-align: right;">276.181</td>
-<td style="text-align: right;">2112.151</td>
-<td style="text-align: right;">1968.082</td>
-<td style="text-align: right;">2435.059</td>
+<td style="text-align: right;">257.043</td>
+<td style="text-align: right;">2120.115</td>
+<td style="text-align: right;">1981.827</td>
+<td style="text-align: right;">2436.851</td>
+<td style="text-align: right;">2473.302</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3854.176</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3858.902</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRLFast_AdvSimd</td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">1978.634</td>
-<td style="text-align: right;">1647.634</td>
-<td style="text-align: right;">2410.698</td>
+<td style="text-align: right;">1976.849</td>
+<td style="text-align: right;">1653.707</td>
+<td style="text-align: right;">2420.647</td>
+<td style="text-align: right;">2468.789</td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
@@ -1402,14 +3125,448 @@
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
 </tr>
 <tr>
 <td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
 <td style="text-align: left;">SumSRLFastTraits</td>
-<td style="text-align: right;">469.657</td>
-<td style="text-align: right;">1984.034</td>
-<td style="text-align: right;">1648.839</td>
-<td style="text-align: right;">2412.110</td>
+<td style="text-align: right;">468.760</td>
+<td style="text-align: right;">1985.988</td>
+<td style="text-align: right;">1654.599</td>
+<td style="text-align: right;">2419.072</td>
+<td style="text-align: right;">2465.848</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wasm---wasm-on-amd-ryzen-7-7840h">Wasm - Wasm on AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">27.221</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;">331.921</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;">303.203</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">46.011</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">44.058</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">263.224</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">254.989</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">233.693</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">241.052</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;">321.582</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;">333.239</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;">328.107</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;">309.329</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;">300.824</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;">63.840</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;">58.180</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_Byte</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">246.151</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">27.925</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;">169.367</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;">151.738</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">165.374</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">171.123</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">133.135</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">131.397</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">118.679</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">126.493</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;">161.942</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;">166.702</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;">169.767</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;">157.730</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;">154.191</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;">31.831</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;">31.647</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt16</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">128.266</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">32.579</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;">81.940</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;">76.133</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">84.258</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">81.833</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">64.769</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">63.406</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">60.444</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">59.635</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;">85.569</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;">82.905</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;">84.181</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;">77.600</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;">79.595</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;">16.917</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;">16.054</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt32</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">64.702</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLScalar</td>
+<td style="text-align: right;">31.453</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLNetBcl</td>
+<td style="text-align: right;">10.472</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLNetBcl_Const</td>
+<td style="text-align: right;">10.613</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_Basic</td>
+<td style="text-align: right;">10.832</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_Base_Core</td>
+<td style="text-align: right;">11.094</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL_Avx2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLTraits</td>
+<td style="text-align: right;">20.869</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLTraits_Core</td>
+<td style="text-align: right;">21.207</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLConstTraits</td>
+<td style="text-align: right;">20.181</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLConstTraits_Core</td>
+<td style="text-align: right;">19.635</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128Bcl</td>
+<td style="text-align: right;">4.618</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128Traits</td>
+<td style="text-align: right;">42.467</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128Traits_Core</td>
+<td style="text-align: right;">42.175</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128ConstTraits</td>
+<td style="text-align: right;">38.229</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL128ConstTraits_Core</td>
+<td style="text-align: right;">37.843</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL512Bcl</td>
+<td style="text-align: right;">3.329</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRL512Traits</td>
+<td style="text-align: right;">6.949</td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLFast_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLFast_Avx2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ShiftRightLogicalConstBenchmark_UInt64</td>
+<td style="text-align: left;">SumSRLFastTraits</td>
+<td style="text-align: right;">9.505</td>
 </tr>
 </tbody>
 </table>

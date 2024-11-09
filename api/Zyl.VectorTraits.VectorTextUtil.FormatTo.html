@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_VectorTextUtil_FormatTo_" data-uid="Zyl.VectorTraits.VectorTextUtil.FormatTo*" class="text-break">
-Method FormatTo  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L404"><i class="bi bi-code-slash"></i></a>
+Method FormatTo  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L481"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method FormatTo  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Zyl_VectorTraits_VectorTextUtil_FormatTo_System_Action_System_String__System_Nullable_System_Boolean__System_String_System_String_System_String_System_Object___" data-uid="Zyl.VectorTraits.VectorTextUtil.FormatTo(System.Action{System.String},System.Nullable{System.Boolean},System.String,System.String,System.String,System.Object[])">
   FormatTo(Action&lt;string&gt;, bool?, string?, string?, string, params object?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L404"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L481"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Format a string, append a hexadecimal string intelligently to the end of the line, and output it to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a> (格式化字符串，智能在行尾追加十六进制字符串, 并会输出到 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a> ). With these parameters: <code class="paramref">noHex</code>, <code class="paramref">lineCommentSeparator</code>, <code class="paramref">lineCommentItemSeparator</code> .</p>
@@ -171,7 +171,7 @@ Method FormatTo  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Zyl_VectorTraits_VectorTextUtil_FormatTo_System_Action_System_String__System_String_System_Object___" data-uid="Zyl.VectorTraits.VectorTextUtil.FormatTo(System.Action{System.String},System.String,System.Object[])">
   FormatTo(Action&lt;string&gt;, string, params object?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L469"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L546"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Format a string, append a hexadecimal string intelligently to the end of the line, and output it to the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a> (格式化字符串，智能在行尾追加十六进制字符串, 并会输出到 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a> ).</p>
@@ -215,7 +215,7 @@ Method FormatTo  <a class="header-action link-secondary" title="View source" hre
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L404" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L481" class="edit-link">Edit this page</a>
         </div>
 
 

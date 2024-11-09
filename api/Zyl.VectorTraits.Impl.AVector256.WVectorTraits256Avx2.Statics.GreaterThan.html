@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan*" class="text-break">
-Method GreaterThan  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L558"><i class="bi bi-code-slash"></i></a>
+Method GreaterThan  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L581"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method GreaterThan  <a class="header-action link-secondary" title="View source" 
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_System_Runtime_Intrinsics_Vector256_System_Single__System_Runtime_Intrinsics_Vector256_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan(System.Runtime.Intrinsics.Vector256{System.Single},System.Runtime.Intrinsics.Vector256{System.Single})">
   GreaterThan(Vector256&lt;float&gt;, Vector256&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L558"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L581"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] &gt; right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_System_Runtime_Intrinsics_Vector256_System_Double__System_Runtime_Intrinsics_Vector256_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan(System.Runtime.Intrinsics.Vector256{System.Double},System.Runtime.Intrinsics.Vector256{System.Double})">
   GreaterThan(Vector256&lt;double&gt;, Vector256&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L568"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L591"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] &gt; right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan(System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte})">
   GreaterThan(Vector256&lt;sbyte&gt;, Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L578"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L601"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
@@ -268,7 +268,7 @@ public static Vector256&lt;sbyte&gt; GreaterThan(Vector256&lt;sbyte&gt; left, Ve
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_System_Runtime_Intrinsics_Vector256_System_Byte__System_Runtime_Intrinsics_Vector256_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan(System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte})">
   GreaterThan(Vector256&lt;byte&gt;, Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L585"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L608"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
@@ -318,7 +318,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] &gt; right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan(System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16})">
   GreaterThan(Vector256&lt;short&gt;, Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L596"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L624"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
@@ -368,7 +368,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] &gt; right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Runtime_Intrinsics_Vector256_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16})">
   GreaterThan(Vector256&lt;ushort&gt;, Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L602"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L630"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
@@ -419,7 +419,7 @@ public static Vector256&lt;ushort&gt; GreaterThan(Vector256&lt;ushort&gt; left, 
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan(System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32})">
   GreaterThan(Vector256&lt;int&gt;, Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L614"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L647"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
@@ -469,7 +469,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] &gt; right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Runtime_Intrinsics_Vector256_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32})">
   GreaterThan(Vector256&lt;uint&gt;, Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L620"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L653"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
@@ -520,7 +520,7 @@ public static Vector256&lt;uint&gt; GreaterThan(Vector256&lt;uint&gt; left, Vect
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan(System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64})">
   GreaterThan(Vector256&lt;long&gt;, Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L632"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L670"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
@@ -570,7 +570,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] &gt; right[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThan_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Runtime_Intrinsics_Vector256_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThan(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64})">
   GreaterThan(Vector256&lt;ulong&gt;, Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L639"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L677"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
@@ -620,7 +620,7 @@ public static Vector256&lt;ulong&gt; GreaterThan(Vector256&lt;ulong&gt; left, Ve
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L558" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L581" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const*" class="text-break">
-Method YShuffleG4X2_Const  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L714"><i class="bi bi-code-slash"></i></a>
+Method YShuffleG4X2_Const  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L353"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YShuffleG4X2_Const  <a class="header-action link-secondary" title="View s
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Single__Zyl_VectorTraits_ShuffleControlG4_System_Numerics_Vector_System_Single___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single},Zyl.VectorTraits.ShuffleControlG4,System.Numerics.Vector{System.Single}@)">
   YShuffleG4X2_Const(Vector&lt;float&gt;, Vector&lt;float&gt;, ShuffleControlG4, out Vector&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L714"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L353"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed - Constant version (对于两个向量中的每个 4-元素组, 进行换位 - 常量版).
@@ -172,7 +172,7 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Double__Zyl_VectorTraits_ShuffleControlG4_System_Numerics_Vector_System_Double___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double},Zyl.VectorTraits.ShuffleControlG4,System.Numerics.Vector{System.Double}@)">
   YShuffleG4X2_Const(Vector&lt;double&gt;, Vector&lt;double&gt;, ShuffleControlG4, out Vector&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L722"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L361"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed - Constant version (对于两个向量中的每个 4-元素组, 进行换位 - 常量版).
@@ -227,7 +227,7 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__Zyl_VectorTraits_ShuffleControlG4_System_Numerics_Vector_System_SByte___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte},Zyl.VectorTraits.ShuffleControlG4,System.Numerics.Vector{System.SByte}@)">
   YShuffleG4X2_Const(Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;, ShuffleControlG4, out Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L730"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L369"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed - Constant version (对于两个向量中的每个 4-元素组, 进行换位 - 常量版).
@@ -283,7 +283,7 @@ public static Vector&lt;sbyte&gt; YShuffleG4X2_Const(Vector&lt;sbyte&gt; source0
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__Zyl_VectorTraits_ShuffleControlG4_System_Numerics_Vector_System_Byte___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte},Zyl.VectorTraits.ShuffleControlG4,System.Numerics.Vector{System.Byte}@)">
   YShuffleG4X2_Const(Vector&lt;byte&gt;, Vector&lt;byte&gt;, ShuffleControlG4, out Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L739"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L378"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed - Constant version (对于两个向量中的每个 4-元素组, 进行换位 - 常量版).
@@ -338,7 +338,7 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__Zyl_VectorTraits_ShuffleControlG4_System_Numerics_Vector_System_Int16___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16},Zyl.VectorTraits.ShuffleControlG4,System.Numerics.Vector{System.Int16}@)">
   YShuffleG4X2_Const(Vector&lt;short&gt;, Vector&lt;short&gt;, ShuffleControlG4, out Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L747"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L386"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed - Constant version (对于两个向量中的每个 4-元素组, 进行换位 - 常量版).
@@ -393,7 +393,7 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__Zyl_VectorTraits_ShuffleControlG4_System_Numerics_Vector_System_UInt16___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16},Zyl.VectorTraits.ShuffleControlG4,System.Numerics.Vector{System.UInt16}@)">
   YShuffleG4X2_Const(Vector&lt;ushort&gt;, Vector&lt;ushort&gt;, ShuffleControlG4, out Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L755"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L394"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed - Constant version (对于两个向量中的每个 4-元素组, 进行换位 - 常量版).
@@ -449,7 +449,7 @@ public static Vector&lt;ushort&gt; YShuffleG4X2_Const(Vector&lt;ushort&gt; sourc
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__Zyl_VectorTraits_ShuffleControlG4_System_Numerics_Vector_System_Int32___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},Zyl.VectorTraits.ShuffleControlG4,System.Numerics.Vector{System.Int32}@)">
   YShuffleG4X2_Const(Vector&lt;int&gt;, Vector&lt;int&gt;, ShuffleControlG4, out Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L764"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L403"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed - Constant version (对于两个向量中的每个 4-元素组, 进行换位 - 常量版).
@@ -504,7 +504,7 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__Zyl_VectorTraits_ShuffleControlG4_System_Numerics_Vector_System_UInt32___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32},Zyl.VectorTraits.ShuffleControlG4,System.Numerics.Vector{System.UInt32}@)">
   YShuffleG4X2_Const(Vector&lt;uint&gt;, Vector&lt;uint&gt;, ShuffleControlG4, out Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L772"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L411"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed - Constant version (对于两个向量中的每个 4-元素组, 进行换位 - 常量版).
@@ -560,7 +560,7 @@ public static Vector&lt;uint&gt; YShuffleG4X2_Const(Vector&lt;uint&gt; source0, 
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__Zyl_VectorTraits_ShuffleControlG4_System_Numerics_Vector_System_Int64___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},Zyl.VectorTraits.ShuffleControlG4,System.Numerics.Vector{System.Int64}@)">
   YShuffleG4X2_Const(Vector&lt;long&gt;, Vector&lt;long&gt;, ShuffleControlG4, out Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L781"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L420"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed - Constant version (对于两个向量中的每个 4-元素组, 进行换位 - 常量版).
@@ -615,7 +615,7 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128Sse_Statics_YShuffleG4X2_Const_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__Zyl_VectorTraits_ShuffleControlG4_System_Numerics_Vector_System_UInt64___" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128Sse.Statics.YShuffleG4X2_Const(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64},Zyl.VectorTraits.ShuffleControlG4,System.Numerics.Vector{System.UInt64}@)">
   YShuffleG4X2_Const(Vector&lt;ulong&gt;, Vector&lt;ulong&gt;, ShuffleControlG4, out Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L789"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L428"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed - Constant version (对于两个向量中的每个 4-元素组, 进行换位 - 常量版).
@@ -670,7 +670,7 @@ public static Vector&lt;ulong&gt; YShuffleG4X2_Const(Vector&lt;ulong&gt; source0
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.Y.cs/#L714" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128Sse.YS.cs/#L353" class="edit-link">Edit this page</a>
         </div>
 
 

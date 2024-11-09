@@ -1,0 +1,5133 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Benchmark group - YGroup2Transpose </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Benchmark group - YGroup2Transpose ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/AVector/YGroup2Transpose_Group.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="benchmark-group---ygroup2transpose">Benchmark group - YGroup2Transpose</h1>
+
+<p>(<a href="YGroup2Transpose.html">← Back</a>)</p>
+<p>Unit of data: Million operations per second. The larger the number, the better the performance.</p>
+<h3 id="x86---amd-ryzen-7-7840h">X86 - AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">1441.302</td>
+<td style="text-align: right;">1373.075</td>
+<td style="text-align: right;">1417.602</td>
+<td style="text-align: right;">1380.282</td>
+<td style="text-align: right;">1399.632</td>
+<td style="text-align: right;">1330.814</td>
+<td style="text-align: right;">1361.794</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">37155.325</td>
+<td style="text-align: right;">38262.719</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">8474.611</td>
+<td style="text-align: right;">4199.055</td>
+<td style="text-align: right;">9493.831</td>
+<td style="text-align: right;">11227.262</td>
+<td style="text-align: right;">11177.763</td>
+<td style="text-align: right;">13642.917</td>
+<td style="text-align: right;">14679.149</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">8428.903</td>
+<td style="text-align: right;">7895.027</td>
+<td style="text-align: right;">9693.378</td>
+<td style="text-align: right;">11144.113</td>
+<td style="text-align: right;">11149.732</td>
+<td style="text-align: right;">36901.097</td>
+<td style="text-align: right;">39010.284</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">8703.029</td>
+<td style="text-align: right;">8245.866</td>
+<td style="text-align: right;">27394.422</td>
+<td style="text-align: right;">38455.627</td>
+<td style="text-align: right;">39356.226</td>
+<td style="text-align: right;">37378.897</td>
+<td style="text-align: right;">48098.762</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">467.443</td>
+<td style="text-align: right;">467.472</td>
+<td style="text-align: right;">469.098</td>
+<td style="text-align: right;">1162.633</td>
+<td style="text-align: right;">1156.885</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">18662.427</td>
+<td style="text-align: right;">19372.725</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">274.877</td>
+<td style="text-align: right;">277.819</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">471.874</td>
+<td style="text-align: right;">463.131</td>
+<td style="text-align: right;">470.791</td>
+<td style="text-align: right;">19625.135</td>
+<td style="text-align: right;">18374.476</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13970.084</td>
+<td style="text-align: right;">20183.828</td>
+<td style="text-align: right;">19667.740</td>
+<td style="text-align: right;">18863.977</td>
+<td style="text-align: right;">18639.392</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10302.426</td>
+<td style="text-align: right;">14413.063</td>
+<td style="text-align: right;">14131.058</td>
+<td style="text-align: right;">16411.431</td>
+<td style="text-align: right;">17233.052</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">27102.285</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13313.028</td>
+<td style="text-align: right;">13407.321</td>
+<td style="text-align: right;">13369.118</td>
+<td style="text-align: right;">13144.409</td>
+<td style="text-align: right;">13171.379</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13799.266</td>
+<td style="text-align: right;">14537.709</td>
+<td style="text-align: right;">13883.004</td>
+<td style="text-align: right;">13615.353</td>
+<td style="text-align: right;">13774.146</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">15221.510</td>
+<td style="text-align: right;">20597.994</td>
+<td style="text-align: right;">20417.316</td>
+<td style="text-align: right;">19054.344</td>
+<td style="text-align: right;">26775.661</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">594.016</td>
+<td style="text-align: right;">490.944</td>
+<td style="text-align: right;">591.254</td>
+<td style="text-align: right;">1351.502</td>
+<td style="text-align: right;">1332.730</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">38432.651</td>
+<td style="text-align: right;">39684.337</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">309.553</td>
+<td style="text-align: right;">258.138</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">588.219</td>
+<td style="text-align: right;">523.530</td>
+<td style="text-align: right;">588.107</td>
+<td style="text-align: right;">39193.919</td>
+<td style="text-align: right;">38085.830</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">31721.948</td>
+<td style="text-align: right;">38748.703</td>
+<td style="text-align: right;">39535.056</td>
+<td style="text-align: right;">38526.091</td>
+<td style="text-align: right;">38101.763</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19566.632</td>
+<td style="text-align: right;">27149.089</td>
+<td style="text-align: right;">26249.757</td>
+<td style="text-align: right;">27054.776</td>
+<td style="text-align: right;">32517.279</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">50338.633</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">26811.564</td>
+<td style="text-align: right;">26889.428</td>
+<td style="text-align: right;">26671.605</td>
+<td style="text-align: right;">26671.291</td>
+<td style="text-align: right;">24661.834</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">28146.623</td>
+<td style="text-align: right;">28303.023</td>
+<td style="text-align: right;">28270.208</td>
+<td style="text-align: right;">27520.772</td>
+<td style="text-align: right;">25026.818</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">31186.379</td>
+<td style="text-align: right;">40224.465</td>
+<td style="text-align: right;">38880.264</td>
+<td style="text-align: right;">38296.407</td>
+<td style="text-align: right;">45721.618</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1433.632</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">48515.893</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">268.592</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">50963.073</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">52089.390</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">35990.248</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">70120.064</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">29861.591</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">28278.590</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">67996.564</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">1067.937</td>
+<td style="text-align: right;">1100.250</td>
+<td style="text-align: right;">1141.423</td>
+<td style="text-align: right;">1079.248</td>
+<td style="text-align: right;">1177.530</td>
+<td style="text-align: right;">1068.071</td>
+<td style="text-align: right;">1084.313</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">18836.299</td>
+<td style="text-align: right;">19040.668</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">5270.541</td>
+<td style="text-align: right;">2182.759</td>
+<td style="text-align: right;">5700.205</td>
+<td style="text-align: right;">6137.886</td>
+<td style="text-align: right;">5994.017</td>
+<td style="text-align: right;">10025.228</td>
+<td style="text-align: right;">10728.752</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">5414.970</td>
+<td style="text-align: right;">5064.974</td>
+<td style="text-align: right;">5845.755</td>
+<td style="text-align: right;">6067.628</td>
+<td style="text-align: right;">6134.151</td>
+<td style="text-align: right;">19086.052</td>
+<td style="text-align: right;">18714.113</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">5287.450</td>
+<td style="text-align: right;">5188.689</td>
+<td style="text-align: right;">22518.090</td>
+<td style="text-align: right;">22699.253</td>
+<td style="text-align: right;">23374.006</td>
+<td style="text-align: right;">23184.277</td>
+<td style="text-align: right;">26941.241</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">290.512</td>
+<td style="text-align: right;">279.929</td>
+<td style="text-align: right;">288.588</td>
+<td style="text-align: right;">822.303</td>
+<td style="text-align: right;">816.253</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9125.848</td>
+<td style="text-align: right;">10025.922</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">139.673</td>
+<td style="text-align: right;">144.115</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">286.898</td>
+<td style="text-align: right;">281.356</td>
+<td style="text-align: right;">288.477</td>
+<td style="text-align: right;">9522.829</td>
+<td style="text-align: right;">9814.710</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7282.159</td>
+<td style="text-align: right;">9789.487</td>
+<td style="text-align: right;">9867.260</td>
+<td style="text-align: right;">9292.319</td>
+<td style="text-align: right;">9969.224</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4868.215</td>
+<td style="text-align: right;">6905.152</td>
+<td style="text-align: right;">6781.425</td>
+<td style="text-align: right;">8351.413</td>
+<td style="text-align: right;">8531.394</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13670.158</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11654.850</td>
+<td style="text-align: right;">11620.795</td>
+<td style="text-align: right;">11411.385</td>
+<td style="text-align: right;">11770.778</td>
+<td style="text-align: right;">12085.037</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8732.909</td>
+<td style="text-align: right;">8923.009</td>
+<td style="text-align: right;">8854.057</td>
+<td style="text-align: right;">8568.649</td>
+<td style="text-align: right;">9067.771</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11158.214</td>
+<td style="text-align: right;">12019.639</td>
+<td style="text-align: right;">11228.669</td>
+<td style="text-align: right;">11474.512</td>
+<td style="text-align: right;">14715.764</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">402.386</td>
+<td style="text-align: right;">299.387</td>
+<td style="text-align: right;">406.244</td>
+<td style="text-align: right;">1061.470</td>
+<td style="text-align: right;">1099.348</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">18689.176</td>
+<td style="text-align: right;">19110.914</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">152.755</td>
+<td style="text-align: right;">156.685</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">403.590</td>
+<td style="text-align: right;">331.025</td>
+<td style="text-align: right;">397.185</td>
+<td style="text-align: right;">19078.670</td>
+<td style="text-align: right;">19534.603</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">15714.290</td>
+<td style="text-align: right;">19675.733</td>
+<td style="text-align: right;">19219.787</td>
+<td style="text-align: right;">19588.936</td>
+<td style="text-align: right;">18927.024</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9977.978</td>
+<td style="text-align: right;">13412.948</td>
+<td style="text-align: right;">13078.338</td>
+<td style="text-align: right;">13215.429</td>
+<td style="text-align: right;">16037.189</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">25981.645</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">22983.748</td>
+<td style="text-align: right;">23657.104</td>
+<td style="text-align: right;">23479.687</td>
+<td style="text-align: right;">22574.068</td>
+<td style="text-align: right;">23329.431</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">17248.222</td>
+<td style="text-align: right;">17126.294</td>
+<td style="text-align: right;">17669.918</td>
+<td style="text-align: right;">16830.173</td>
+<td style="text-align: right;">17947.498</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">23125.151</td>
+<td style="text-align: right;">23276.756</td>
+<td style="text-align: right;">22957.086</td>
+<td style="text-align: right;">22457.159</td>
+<td style="text-align: right;">27107.054</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1340.036</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">25404.622</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">133.105</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">25459.478</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">25553.372</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">16693.189</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36099.104</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">27919.269</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19205.735</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36236.553</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">686.654</td>
+<td style="text-align: right;">675.976</td>
+<td style="text-align: right;">761.723</td>
+<td style="text-align: right;">688.536</td>
+<td style="text-align: right;">764.784</td>
+<td style="text-align: right;">668.199</td>
+<td style="text-align: right;">691.115</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8874.686</td>
+<td style="text-align: right;">9404.298</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">965.156</td>
+<td style="text-align: right;">593.976</td>
+<td style="text-align: right;">972.161</td>
+<td style="text-align: right;">958.500</td>
+<td style="text-align: right;">966.360</td>
+<td style="text-align: right;">935.189</td>
+<td style="text-align: right;">954.510</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">692.867</td>
+<td style="text-align: right;">679.152</td>
+<td style="text-align: right;">770.960</td>
+<td style="text-align: right;">672.758</td>
+<td style="text-align: right;">762.168</td>
+<td style="text-align: right;">9045.898</td>
+<td style="text-align: right;">9454.060</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">686.941</td>
+<td style="text-align: right;">674.592</td>
+<td style="text-align: right;">10637.484</td>
+<td style="text-align: right;">11209.907</td>
+<td style="text-align: right;">11611.570</td>
+<td style="text-align: right;">10928.948</td>
+<td style="text-align: right;">12866.286</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">170.044</td>
+<td style="text-align: right;">170.986</td>
+<td style="text-align: right;">172.408</td>
+<td style="text-align: right;">477.218</td>
+<td style="text-align: right;">475.885</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4787.752</td>
+<td style="text-align: right;">5119.904</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">68.557</td>
+<td style="text-align: right;">72.530</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">172.722</td>
+<td style="text-align: right;">170.853</td>
+<td style="text-align: right;">172.145</td>
+<td style="text-align: right;">4703.784</td>
+<td style="text-align: right;">5012.278</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3639.344</td>
+<td style="text-align: right;">5046.597</td>
+<td style="text-align: right;">4960.324</td>
+<td style="text-align: right;">4729.456</td>
+<td style="text-align: right;">5011.418</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2505.720</td>
+<td style="text-align: right;">3329.717</td>
+<td style="text-align: right;">3337.062</td>
+<td style="text-align: right;">3552.559</td>
+<td style="text-align: right;">4307.408</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7152.264</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5807.998</td>
+<td style="text-align: right;">6038.754</td>
+<td style="text-align: right;">5933.314</td>
+<td style="text-align: right;">5787.299</td>
+<td style="text-align: right;">6045.618</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5691.822</td>
+<td style="text-align: right;">5720.625</td>
+<td style="text-align: right;">5578.087</td>
+<td style="text-align: right;">5425.090</td>
+<td style="text-align: right;">6070.926</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6238.989</td>
+<td style="text-align: right;">6312.395</td>
+<td style="text-align: right;">5714.850</td>
+<td style="text-align: right;">5708.247</td>
+<td style="text-align: right;">6807.102</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">265.132</td>
+<td style="text-align: right;">185.686</td>
+<td style="text-align: right;">286.800</td>
+<td style="text-align: right;">666.846</td>
+<td style="text-align: right;">691.518</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8754.774</td>
+<td style="text-align: right;">9103.098</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">76.433</td>
+<td style="text-align: right;">76.991</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">287.267</td>
+<td style="text-align: right;">203.543</td>
+<td style="text-align: right;">287.283</td>
+<td style="text-align: right;">8521.597</td>
+<td style="text-align: right;">9570.426</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7205.144</td>
+<td style="text-align: right;">9149.492</td>
+<td style="text-align: right;">9562.074</td>
+<td style="text-align: right;">8788.961</td>
+<td style="text-align: right;">9375.981</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4486.803</td>
+<td style="text-align: right;">6554.810</td>
+<td style="text-align: right;">6311.726</td>
+<td style="text-align: right;">6757.990</td>
+<td style="text-align: right;">7727.964</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12635.989</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11152.278</td>
+<td style="text-align: right;">11289.191</td>
+<td style="text-align: right;">11694.822</td>
+<td style="text-align: right;">11072.780</td>
+<td style="text-align: right;">11636.384</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11641.980</td>
+<td style="text-align: right;">11210.155</td>
+<td style="text-align: right;">11164.635</td>
+<td style="text-align: right;">10822.715</td>
+<td style="text-align: right;">11433.758</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11273.651</td>
+<td style="text-align: right;">11457.623</td>
+<td style="text-align: right;">11304.557</td>
+<td style="text-align: right;">11077.138</td>
+<td style="text-align: right;">12659.967</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">915.180</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12430.099</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">72.980</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12439.970</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12365.036</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8282.516</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">16475.017</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">14043.646</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13475.853</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">16748.758</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">395.028</td>
+<td style="text-align: right;">391.795</td>
+<td style="text-align: right;">434.847</td>
+<td style="text-align: right;">389.416</td>
+<td style="text-align: right;">441.736</td>
+<td style="text-align: right;">389.720</td>
+<td style="text-align: right;">397.622</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">400.265</td>
+<td style="text-align: right;">382.802</td>
+<td style="text-align: right;">435.463</td>
+<td style="text-align: right;">386.788</td>
+<td style="text-align: right;">441.080</td>
+<td style="text-align: right;">391.912</td>
+<td style="text-align: right;">398.827</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">400.236</td>
+<td style="text-align: right;">388.938</td>
+<td style="text-align: right;">7179.881</td>
+<td style="text-align: right;">7628.245</td>
+<td style="text-align: right;">7770.801</td>
+<td style="text-align: right;">7641.226</td>
+<td style="text-align: right;">7975.323</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">92.749</td>
+<td style="text-align: right;">92.871</td>
+<td style="text-align: right;">93.025</td>
+<td style="text-align: right;">270.133</td>
+<td style="text-align: right;">271.640</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Move</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">80.738</td>
+<td style="text-align: right;">80.421</td>
+<td style="text-align: right;">80.358</td>
+<td style="text-align: right;">153.452</td>
+<td style="text-align: right;">279.036</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">31.688</td>
+<td style="text-align: right;">35.170</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">93.413</td>
+<td style="text-align: right;">93.489</td>
+<td style="text-align: right;">92.955</td>
+<td style="text-align: right;">153.901</td>
+<td style="text-align: right;">278.392</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_AlignRight</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1244.145</td>
+<td style="text-align: right;">1729.481</td>
+<td style="text-align: right;">1701.800</td>
+<td style="text-align: right;">1787.274</td>
+<td style="text-align: right;">2098.488</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3554.219</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4119.010</td>
+<td style="text-align: right;">3857.377</td>
+<td style="text-align: right;">4228.732</td>
+<td style="text-align: right;">3969.725</td>
+<td style="text-align: right;">4097.879</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4094.288</td>
+<td style="text-align: right;">3910.977</td>
+<td style="text-align: right;">4049.626</td>
+<td style="text-align: right;">4071.961</td>
+<td style="text-align: right;">4138.089</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4177.127</td>
+<td style="text-align: right;">2893.098</td>
+<td style="text-align: right;">3969.378</td>
+<td style="text-align: right;">3559.901</td>
+<td style="text-align: right;">4048.649</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">144.794</td>
+<td style="text-align: right;">99.887</td>
+<td style="text-align: right;">162.239</td>
+<td style="text-align: right;">391.639</td>
+<td style="text-align: right;">399.791</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">34.924</td>
+<td style="text-align: right;">32.240</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">163.353</td>
+<td style="text-align: right;">109.473</td>
+<td style="text-align: right;">163.281</td>
+<td style="text-align: right;">395.408</td>
+<td style="text-align: right;">395.524</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2546.429</td>
+<td style="text-align: right;">3505.087</td>
+<td style="text-align: right;">3386.457</td>
+<td style="text-align: right;">3453.686</td>
+<td style="text-align: right;">4075.881</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6810.950</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7907.564</td>
+<td style="text-align: right;">7745.265</td>
+<td style="text-align: right;">7449.184</td>
+<td style="text-align: right;">6894.503</td>
+<td style="text-align: right;">7897.670</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7243.872</td>
+<td style="text-align: right;">7367.321</td>
+<td style="text-align: right;">7515.070</td>
+<td style="text-align: right;">7159.992</td>
+<td style="text-align: right;">7856.013</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7534.895</td>
+<td style="text-align: right;">7796.693</td>
+<td style="text-align: right;">7479.196</td>
+<td style="text-align: right;">7140.319</td>
+<td style="text-align: right;">7762.624</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">561.166</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36.082</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4186.646</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8829.946</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9133.388</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9043.362</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9302.326</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---apple-m2">Arm - Apple M2</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">2461.178</td>
+<td style="text-align: right;">2458.904</td>
+<td style="text-align: right;">2469.367</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">27165.424</td>
+<td style="text-align: right;">27153.733</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">11001.569</td>
+<td style="text-align: right;">11742.220</td>
+<td style="text-align: right;">13339.615</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">11000.927</td>
+<td style="text-align: right;">27161.862</td>
+<td style="text-align: right;">27158.974</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">27204.165</td>
+<td style="text-align: right;">27220.518</td>
+<td style="text-align: right;">27170.146</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">974.803</td>
+<td style="text-align: right;">2459.565</td>
+<td style="text-align: right;">2469.467</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">27145.381</td>
+<td style="text-align: right;">27153.784</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">330.392</td>
+<td style="text-align: right;">330.489</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">975.545</td>
+<td style="text-align: right;">27142.831</td>
+<td style="text-align: right;">27153.139</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;">27104.651</td>
+<td style="text-align: right;">27139.730</td>
+<td style="text-align: right;">27160.417</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;">10751.218</td>
+<td style="text-align: right;">10755.464</td>
+<td style="text-align: right;">10757.417</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">18892.350</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;">27213.746</td>
+<td style="text-align: right;">27221.482</td>
+<td style="text-align: right;">27231.946</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">27215.292</td>
+<td style="text-align: right;">27223.667</td>
+<td style="text-align: right;">27234.776</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">1023.397</td>
+<td style="text-align: right;">757.911</td>
+<td style="text-align: right;">2788.745</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">552.629</td>
+<td style="text-align: right;">41998.174</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">178.011</td>
+<td style="text-align: right;">335.056</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">997.107</td>
+<td style="text-align: right;">726.296</td>
+<td style="text-align: right;">2780.995</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">998.531</td>
+<td style="text-align: right;">726.284</td>
+<td style="text-align: right;">2780.990</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2862.453</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">47986.257</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">244.685</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2861.747</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2861.939</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">2226.313</td>
+<td style="text-align: right;">2228.193</td>
+<td style="text-align: right;">2247.551</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13598.427</td>
+<td style="text-align: right;">13584.430</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">7749.020</td>
+<td style="text-align: right;">9883.169</td>
+<td style="text-align: right;">11369.988</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">7750.723</td>
+<td style="text-align: right;">13598.763</td>
+<td style="text-align: right;">13591.099</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">13605.242</td>
+<td style="text-align: right;">13609.477</td>
+<td style="text-align: right;">13614.084</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">816.329</td>
+<td style="text-align: right;">2227.333</td>
+<td style="text-align: right;">2246.473</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13548.513</td>
+<td style="text-align: right;">13589.474</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">145.303</td>
+<td style="text-align: right;">145.624</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">820.157</td>
+<td style="text-align: right;">13585.946</td>
+<td style="text-align: right;">13589.010</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;">13580.446</td>
+<td style="text-align: right;">13584.619</td>
+<td style="text-align: right;">13587.903</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;">5378.852</td>
+<td style="text-align: right;">5381.586</td>
+<td style="text-align: right;">5380.546</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9455.404</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;">13599.072</td>
+<td style="text-align: right;">13605.659</td>
+<td style="text-align: right;">13609.829</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">13604.684</td>
+<td style="text-align: right;">13606.980</td>
+<td style="text-align: right;">13609.635</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">768.618</td>
+<td style="text-align: right;">569.259</td>
+<td style="text-align: right;">2362.116</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">366.274</td>
+<td style="text-align: right;">20235.683</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">88.657</td>
+<td style="text-align: right;">145.687</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">768.430</td>
+<td style="text-align: right;">568.853</td>
+<td style="text-align: right;">2362.625</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">768.651</td>
+<td style="text-align: right;">569.240</td>
+<td style="text-align: right;">2362.269</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2282.426</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">23187.864</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">114.287</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2281.791</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2282.569</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">1800.507</td>
+<td style="text-align: right;">1803.269</td>
+<td style="text-align: right;">1807.714</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6800.516</td>
+<td style="text-align: right;">6798.027</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">2314.998</td>
+<td style="text-align: right;">2530.852</td>
+<td style="text-align: right;">2591.105</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1801.026</td>
+<td style="text-align: right;">6801.109</td>
+<td style="text-align: right;">6797.169</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">6802.625</td>
+<td style="text-align: right;">6805.713</td>
+<td style="text-align: right;">6803.854</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">644.664</td>
+<td style="text-align: right;">1802.007</td>
+<td style="text-align: right;">1808.465</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6797.973</td>
+<td style="text-align: right;">6797.316</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">75.351</td>
+<td style="text-align: right;">75.725</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">645.390</td>
+<td style="text-align: right;">6797.431</td>
+<td style="text-align: right;">6796.693</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;">6795.208</td>
+<td style="text-align: right;">6797.408</td>
+<td style="text-align: right;">6795.905</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;">2689.890</td>
+<td style="text-align: right;">2691.355</td>
+<td style="text-align: right;">2691.816</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4729.037</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;">6801.708</td>
+<td style="text-align: right;">6803.010</td>
+<td style="text-align: right;">6803.200</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">6802.761</td>
+<td style="text-align: right;">6802.570</td>
+<td style="text-align: right;">6804.319</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">530.074</td>
+<td style="text-align: right;">397.879</td>
+<td style="text-align: right;">1865.475</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">223.314</td>
+<td style="text-align: right;">10163.700</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">44.584</td>
+<td style="text-align: right;">73.050</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">531.380</td>
+<td style="text-align: right;">394.769</td>
+<td style="text-align: right;">1864.833</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">529.661</td>
+<td style="text-align: right;">394.844</td>
+<td style="text-align: right;">1864.114</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1709.050</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11654.494</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">53.837</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1709.251</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1709.468</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">1315.112</td>
+<td style="text-align: right;">1314.531</td>
+<td style="text-align: right;">1328.741</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1313.956</td>
+<td style="text-align: right;">1314.559</td>
+<td style="text-align: right;">1326.174</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">3401.200</td>
+<td style="text-align: right;">3401.077</td>
+<td style="text-align: right;">3401.236</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">390.060</td>
+<td style="text-align: right;">1315.664</td>
+<td style="text-align: right;">1326.224</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Move</td>
+<td style="text-align: right;">454.558</td>
+<td style="text-align: right;">3400.162</td>
+<td style="text-align: right;">3401.417</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">40.497</td>
+<td style="text-align: right;">40.484</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">390.340</td>
+<td style="text-align: right;">3400.032</td>
+<td style="text-align: right;">3402.059</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_AlignRight</td>
+<td style="text-align: right;">3400.579</td>
+<td style="text-align: right;">3400.571</td>
+<td style="text-align: right;">3401.812</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;">1344.860</td>
+<td style="text-align: right;">1345.902</td>
+<td style="text-align: right;">1346.495</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2365.506</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;">3401.672</td>
+<td style="text-align: right;">3401.493</td>
+<td style="text-align: right;">3402.379</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">3400.783</td>
+<td style="text-align: right;">3400.729</td>
+<td style="text-align: right;">3401.381</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">345.325</td>
+<td style="text-align: right;">257.853</td>
+<td style="text-align: right;">1364.356</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">24.868</td>
+<td style="text-align: right;">41.228</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">345.372</td>
+<td style="text-align: right;">257.572</td>
+<td style="text-align: right;">1364.171</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">345.435</td>
+<td style="text-align: right;">257.606</td>
+<td style="text-align: right;">1364.423</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1148.118</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">30.124</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1148.210</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---aws-arm-t4gsmall">Arm - AWS Arm t4g.small</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">765.971</td>
+<td style="text-align: right;">783.590</td>
+<td style="text-align: right;">786.147</td>
+<td style="text-align: right;">862.815</td>
+<td style="text-align: right;">875.250</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8613.444</td>
+<td style="text-align: right;">11226.945</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">2263.365</td>
+<td style="text-align: right;">2599.811</td>
+<td style="text-align: right;">2657.141</td>
+<td style="text-align: right;">2561.626</td>
+<td style="text-align: right;">2896.796</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">2262.062</td>
+<td style="text-align: right;">2675.793</td>
+<td style="text-align: right;">2657.184</td>
+<td style="text-align: right;">8598.616</td>
+<td style="text-align: right;">11210.388</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">2261.075</td>
+<td style="text-align: right;">13143.803</td>
+<td style="text-align: right;">14313.830</td>
+<td style="text-align: right;">15459.072</td>
+<td style="text-align: right;">15789.241</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">308.890</td>
+<td style="text-align: right;">309.140</td>
+<td style="text-align: right;">308.341</td>
+<td style="text-align: right;">862.941</td>
+<td style="text-align: right;">875.485</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9233.887</td>
+<td style="text-align: right;">11215.464</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">144.342</td>
+<td style="text-align: right;">153.157</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">306.598</td>
+<td style="text-align: right;">307.314</td>
+<td style="text-align: right;">308.026</td>
+<td style="text-align: right;">9160.895</td>
+<td style="text-align: right;">11210.609</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8727.499</td>
+<td style="text-align: right;">8752.732</td>
+<td style="text-align: right;">9073.843</td>
+<td style="text-align: right;">11226.761</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3172.917</td>
+<td style="text-align: right;">3071.592</td>
+<td style="text-align: right;">3753.951</td>
+<td style="text-align: right;">3838.192</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5638.952</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13209.795</td>
+<td style="text-align: right;">14311.042</td>
+<td style="text-align: right;">15423.396</td>
+<td style="text-align: right;">15786.867</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">306.687</td>
+<td style="text-align: right;">13214.100</td>
+<td style="text-align: right;">14343.457</td>
+<td style="text-align: right;">15453.771</td>
+<td style="text-align: right;">15790.296</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">325.045</td>
+<td style="text-align: right;">347.093</td>
+<td style="text-align: right;">347.124</td>
+<td style="text-align: right;">251.465</td>
+<td style="text-align: right;">994.681</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">164.769</td>
+<td style="text-align: right;">14395.012</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">74.269</td>
+<td style="text-align: right;">148.068</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">317.994</td>
+<td style="text-align: right;">339.067</td>
+<td style="text-align: right;">342.573</td>
+<td style="text-align: right;">249.773</td>
+<td style="text-align: right;">995.868</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">278.952</td>
+<td style="text-align: right;">339.017</td>
+<td style="text-align: right;">342.542</td>
+<td style="text-align: right;">249.398</td>
+<td style="text-align: right;">995.918</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">987.949</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">17093.738</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">89.867</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">988.975</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">988.528</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">589.769</td>
+<td style="text-align: right;">571.110</td>
+<td style="text-align: right;">570.867</td>
+<td style="text-align: right;">607.885</td>
+<td style="text-align: right;">597.921</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4403.506</td>
+<td style="text-align: right;">5276.586</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">1904.680</td>
+<td style="text-align: right;">2260.738</td>
+<td style="text-align: right;">2286.127</td>
+<td style="text-align: right;">2270.565</td>
+<td style="text-align: right;">2977.261</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1905.657</td>
+<td style="text-align: right;">2263.118</td>
+<td style="text-align: right;">2283.680</td>
+<td style="text-align: right;">4396.289</td>
+<td style="text-align: right;">5238.511</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1904.554</td>
+<td style="text-align: right;">7011.678</td>
+<td style="text-align: right;">6544.259</td>
+<td style="text-align: right;">7907.458</td>
+<td style="text-align: right;">7738.568</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">202.286</td>
+<td style="text-align: right;">207.019</td>
+<td style="text-align: right;">210.066</td>
+<td style="text-align: right;">607.681</td>
+<td style="text-align: right;">597.919</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4883.821</td>
+<td style="text-align: right;">5279.656</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">86.577</td>
+<td style="text-align: right;">86.818</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">202.218</td>
+<td style="text-align: right;">208.268</td>
+<td style="text-align: right;">208.771</td>
+<td style="text-align: right;">4879.563</td>
+<td style="text-align: right;">5156.775</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4212.182</td>
+<td style="text-align: right;">4262.090</td>
+<td style="text-align: right;">4855.094</td>
+<td style="text-align: right;">5239.406</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1572.034</td>
+<td style="text-align: right;">1562.449</td>
+<td style="text-align: right;">1914.612</td>
+<td style="text-align: right;">1888.091</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2649.799</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7019.852</td>
+<td style="text-align: right;">7006.907</td>
+<td style="text-align: right;">7886.405</td>
+<td style="text-align: right;">7716.261</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">202.575</td>
+<td style="text-align: right;">6999.152</td>
+<td style="text-align: right;">6999.869</td>
+<td style="text-align: right;">7901.401</td>
+<td style="text-align: right;">7718.848</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">194.212</td>
+<td style="text-align: right;">264.881</td>
+<td style="text-align: right;">269.885</td>
+<td style="text-align: right;">193.370</td>
+<td style="text-align: right;">844.677</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">116.615</td>
+<td style="text-align: right;">7071.845</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">45.443</td>
+<td style="text-align: right;">86.290</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">189.328</td>
+<td style="text-align: right;">265.277</td>
+<td style="text-align: right;">268.980</td>
+<td style="text-align: right;">194.815</td>
+<td style="text-align: right;">842.874</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">162.462</td>
+<td style="text-align: right;">265.651</td>
+<td style="text-align: right;">269.450</td>
+<td style="text-align: right;">194.618</td>
+<td style="text-align: right;">842.382</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">800.926</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8164.370</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">49.308</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">800.564</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">800.509</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">361.090</td>
+<td style="text-align: right;">353.887</td>
+<td style="text-align: right;">350.896</td>
+<td style="text-align: right;">363.118</td>
+<td style="text-align: right;">370.691</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2192.905</td>
+<td style="text-align: right;">2610.484</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">762.455</td>
+<td style="text-align: right;">815.549</td>
+<td style="text-align: right;">856.125</td>
+<td style="text-align: right;">917.540</td>
+<td style="text-align: right;">894.741</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">358.455</td>
+<td style="text-align: right;">351.127</td>
+<td style="text-align: right;">352.396</td>
+<td style="text-align: right;">2196.948</td>
+<td style="text-align: right;">2607.987</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">357.918</td>
+<td style="text-align: right;">3489.579</td>
+<td style="text-align: right;">3494.116</td>
+<td style="text-align: right;">3935.018</td>
+<td style="text-align: right;">3828.336</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">121.734</td>
+<td style="text-align: right;">121.228</td>
+<td style="text-align: right;">122.596</td>
+<td style="text-align: right;">363.746</td>
+<td style="text-align: right;">370.527</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2447.425</td>
+<td style="text-align: right;">2607.325</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">43.372</td>
+<td style="text-align: right;">43.816</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">117.853</td>
+<td style="text-align: right;">122.228</td>
+<td style="text-align: right;">122.205</td>
+<td style="text-align: right;">2442.812</td>
+<td style="text-align: right;">2606.337</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2113.498</td>
+<td style="text-align: right;">2112.835</td>
+<td style="text-align: right;">2444.736</td>
+<td style="text-align: right;">2607.062</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">779.963</td>
+<td style="text-align: right;">766.075</td>
+<td style="text-align: right;">954.362</td>
+<td style="text-align: right;">932.805</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1307.495</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3502.993</td>
+<td style="text-align: right;">3500.749</td>
+<td style="text-align: right;">3942.317</td>
+<td style="text-align: right;">3832.846</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">121.102</td>
+<td style="text-align: right;">3478.128</td>
+<td style="text-align: right;">3488.660</td>
+<td style="text-align: right;">3941.958</td>
+<td style="text-align: right;">3822.432</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">119.120</td>
+<td style="text-align: right;">175.473</td>
+<td style="text-align: right;">179.034</td>
+<td style="text-align: right;">148.313</td>
+<td style="text-align: right;">531.346</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">88.557</td>
+<td style="text-align: right;">3517.207</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">24.063</td>
+<td style="text-align: right;">44.388</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">115.130</td>
+<td style="text-align: right;">175.230</td>
+<td style="text-align: right;">177.852</td>
+<td style="text-align: right;">148.231</td>
+<td style="text-align: right;">532.904</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">96.499</td>
+<td style="text-align: right;">175.487</td>
+<td style="text-align: right;">178.348</td>
+<td style="text-align: right;">148.287</td>
+<td style="text-align: right;">531.218</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">619.908</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4062.257</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">25.965</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">618.760</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">618.868</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">371.379</td>
+<td style="text-align: right;">376.891</td>
+<td style="text-align: right;">382.218</td>
+<td style="text-align: right;">385.780</td>
+<td style="text-align: right;">386.122</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">379.934</td>
+<td style="text-align: right;">376.775</td>
+<td style="text-align: right;">376.695</td>
+<td style="text-align: right;">380.203</td>
+<td style="text-align: right;">385.831</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">380.248</td>
+<td style="text-align: right;">1630.443</td>
+<td style="text-align: right;">1751.755</td>
+<td style="text-align: right;">1967.158</td>
+<td style="text-align: right;">2034.799</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">172.535</td>
+<td style="text-align: right;">162.637</td>
+<td style="text-align: right;">164.587</td>
+<td style="text-align: right;">380.507</td>
+<td style="text-align: right;">382.675</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Move</td>
+<td style="text-align: right;">142.511</td>
+<td style="text-align: right;">258.569</td>
+<td style="text-align: right;">244.889</td>
+<td style="text-align: right;">1399.903</td>
+<td style="text-align: right;">1293.562</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">21.697</td>
+<td style="text-align: right;">21.713</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">173.672</td>
+<td style="text-align: right;">161.330</td>
+<td style="text-align: right;">165.150</td>
+<td style="text-align: right;">1400.001</td>
+<td style="text-align: right;">1292.560</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_AlignRight</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1471.262</td>
+<td style="text-align: right;">1490.869</td>
+<td style="text-align: right;">1635.254</td>
+<td style="text-align: right;">1642.530</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">386.875</td>
+<td style="text-align: right;">383.661</td>
+<td style="text-align: right;">477.816</td>
+<td style="text-align: right;">468.729</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">657.624</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1625.103</td>
+<td style="text-align: right;">1752.669</td>
+<td style="text-align: right;">1971.497</td>
+<td style="text-align: right;">2038.941</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">173.347</td>
+<td style="text-align: right;">1624.481</td>
+<td style="text-align: right;">1757.701</td>
+<td style="text-align: right;">1964.536</td>
+<td style="text-align: right;">2038.923</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">77.443</td>
+<td style="text-align: right;">138.789</td>
+<td style="text-align: right;">142.669</td>
+<td style="text-align: right;">122.338</td>
+<td style="text-align: right;">494.839</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12.692</td>
+<td style="text-align: right;">22.321</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">74.155</td>
+<td style="text-align: right;">136.037</td>
+<td style="text-align: right;">142.205</td>
+<td style="text-align: right;">121.053</td>
+<td style="text-align: right;">494.810</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">58.936</td>
+<td style="text-align: right;">136.445</td>
+<td style="text-align: right;">142.356</td>
+<td style="text-align: right;">120.771</td>
+<td style="text-align: right;">494.958</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">436.363</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12.833</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">436.245</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wasm---wasm-on-amd-ryzen-7-7840h">Wasm - Wasm on AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">22.157</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;">38.032</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">6.151</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">22.668</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">102.363</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">21.870</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;">124.000</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;">55.794</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">124.460</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;">121.223</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;">122.895</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">126.700</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">20.445</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;">18.314</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;">4.983</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">19.839</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">19.382</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;">19.735</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;">13.262</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;">4.975</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">18.487</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Byte</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">18.194</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">15.494</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;">20.928</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">7.745</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">16.029</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">50.412</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">16.346</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;">61.970</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;">27.459</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">62.836</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;">62.625</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;">60.451</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">61.466</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">13.824</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;">9.610</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;">2.515</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">14.029</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">12.557</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;">12.880</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;">6.639</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;">2.485</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">13.045</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int16</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">12.173</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">10.723</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_Shift</td>
+<td style="text-align: right;">11.975</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase_ShiftByMul</td>
+<td style="text-align: right;">2.512</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">10.735</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">24.919</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">11.605</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shift</td>
+<td style="text-align: right;">30.346</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;">13.965</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">30.545</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shift</td>
+<td style="text-align: right;">31.524</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;">29.949</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">31.426</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">9.174</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shift</td>
+<td style="text-align: right;">4.774</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;">1.277</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">9.098</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">7.955</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;">8.411</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shift</td>
+<td style="text-align: right;">3.413</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;">1.214</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">8.534</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Shift</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int32</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">8.265</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">3.612</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">3.607</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">4.275</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">1.971</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Move</td>
+<td style="text-align: right;">2.043</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Shuffle</td>
+<td style="text-align: right;">1.865</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">2.217</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_AlignRight</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimdB64</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128PackedSimd_Shuffle</td>
+<td style="text-align: right;">15.695</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Sse_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">15.369</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">1.725</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Shuffle</td>
+<td style="text-align: right;">0.505</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">1.787</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">3.994</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Basic</td>
+<td style="text-align: right;">1.814</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base_Shuffle</td>
+<td style="text-align: right;">0.499</td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Shuffle</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleX</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_ShuffleXImm</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Avx512_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">YGroup2TransposeBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">4.527</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/AVector/YGroup2Transpose_Group.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

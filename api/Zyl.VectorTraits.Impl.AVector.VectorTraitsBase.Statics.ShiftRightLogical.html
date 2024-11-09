@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsBase_Statics_ShiftRightLogical_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsBase.Statics.ShiftRightLogical*" class="text-break">
-Method ShiftRightLogical  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2274"><i class="bi bi-code-slash"></i></a>
+Method ShiftRightLogical  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2402"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ShiftRightLogical  <a class="header-action link-secondary" title="View so
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsBase_Statics_ShiftRightLogical_System_Numerics_Vector_System_SByte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsBase.Statics.ShiftRightLogical(System.Numerics.Vector{System.SByte},System.Int32)">
   ShiftRightLogical(Vector&lt;sbyte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2274"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2402"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量).
@@ -169,7 +169,7 @@ public static Vector&lt;sbyte&gt; ShiftRightLogical(Vector&lt;sbyte&gt; value, i
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsBase_Statics_ShiftRightLogical_System_Numerics_Vector_System_Byte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsBase.Statics.ShiftRightLogical(System.Numerics.Vector{System.Byte},System.Int32)">
   ShiftRightLogical(Vector&lt;byte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2287"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2415"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量).
@@ -220,7 +220,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsBase_Statics_ShiftRightLogical_System_Numerics_Vector_System_Int16__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsBase.Statics.ShiftRightLogical(System.Numerics.Vector{System.Int16},System.Int32)">
   ShiftRightLogical(Vector&lt;short&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2299"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2427"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量).
@@ -271,7 +271,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsBase_Statics_ShiftRightLogical_System_Numerics_Vector_System_UInt16__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsBase.Statics.ShiftRightLogical(System.Numerics.Vector{System.UInt16},System.Int32)">
   ShiftRightLogical(Vector&lt;ushort&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2439"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量).
@@ -323,7 +323,7 @@ public static Vector&lt;ushort&gt; ShiftRightLogical(Vector&lt;ushort&gt; value,
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsBase_Statics_ShiftRightLogical_System_Numerics_Vector_System_Int32__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsBase.Statics.ShiftRightLogical(System.Numerics.Vector{System.Int32},System.Int32)">
   ShiftRightLogical(Vector&lt;int&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2324"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2452"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量).
@@ -374,7 +374,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsBase_Statics_ShiftRightLogical_System_Numerics_Vector_System_UInt32__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsBase.Statics.ShiftRightLogical(System.Numerics.Vector{System.UInt32},System.Int32)">
   ShiftRightLogical(Vector&lt;uint&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2336"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2464"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量).
@@ -426,7 +426,7 @@ public static Vector&lt;uint&gt; ShiftRightLogical(Vector&lt;uint&gt; value, int
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsBase_Statics_ShiftRightLogical_System_Numerics_Vector_System_Int64__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsBase.Statics.ShiftRightLogical(System.Numerics.Vector{System.Int64},System.Int32)">
   ShiftRightLogical(Vector&lt;long&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2349"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2477"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量).
@@ -477,7 +477,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsBase_Statics_ShiftRightLogical_System_Numerics_Vector_System_UInt64__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsBase.Statics.ShiftRightLogical(System.Numerics.Vector{System.UInt64},System.Int32)">
   ShiftRightLogical(Vector&lt;ulong&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2361"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2489"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量).
@@ -528,7 +528,7 @@ public static Vector&lt;ulong&gt; ShiftRightLogical(Vector&lt;ulong&gt; value, i
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2274" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsBase.cs/#L2402" class="edit-link">Edit this page</a>
         </div>
 
 

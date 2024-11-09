@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64_Statics_ExtractMostSignificantBits_ShiftAnd_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64.Statics.ExtractMostSignificantBits_ShiftAnd*" class="text-break">
-Method ExtractMostSignificantBits_ShiftAnd  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L295"><i class="bi bi-code-slash"></i></a>
+Method ExtractMostSignificantBits_ShiftAnd  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L303"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ExtractMostSignificantBits_ShiftAnd  <a class="header-action link-seconda
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64_Statics_ExtractMostSignificantBits_ShiftAnd_System_Runtime_Intrinsics_Vector128_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64.Statics.ExtractMostSignificantBits_ShiftAnd(System.Runtime.Intrinsics.Vector128{System.SByte})">
   ExtractMostSignificantBits_ShiftAnd(Vector128&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L303"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Extracts the most significant bit from each element in a vector (从向量的每个元素中提取最高有效位).
@@ -165,7 +165,7 @@ public static uint ExtractMostSignificantBits_ShiftAnd(Vector128&lt;sbyte&gt; ve
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64_Statics_ExtractMostSignificantBits_ShiftAnd_System_Runtime_Intrinsics_Vector128_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64.Statics.ExtractMostSignificantBits_ShiftAnd(System.Runtime.Intrinsics.Vector128{System.Byte})">
   ExtractMostSignificantBits_ShiftAnd(Vector128&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L310"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Extracts the most significant bit from each element in a vector (从向量的每个元素中提取最高有效位).
@@ -213,7 +213,7 @@ public static uint ExtractMostSignificantBits_ShiftAnd(Vector128&lt;byte&gt; vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64_Statics_ExtractMostSignificantBits_ShiftAnd_System_Runtime_Intrinsics_Vector128_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64.Statics.ExtractMostSignificantBits_ShiftAnd(System.Runtime.Intrinsics.Vector128{System.Int16})">
   ExtractMostSignificantBits_ShiftAnd(Vector128&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L339"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Extracts the most significant bit from each element in a vector (从向量的每个元素中提取最高有效位).
@@ -261,7 +261,7 @@ public static uint ExtractMostSignificantBits_ShiftAnd(Vector128&lt;short&gt; ve
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64_Statics_ExtractMostSignificantBits_ShiftAnd_System_Runtime_Intrinsics_Vector128_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64.Statics.ExtractMostSignificantBits_ShiftAnd(System.Runtime.Intrinsics.Vector128{System.UInt16})">
   ExtractMostSignificantBits_ShiftAnd(Vector128&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L338"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L346"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Extracts the most significant bit from each element in a vector (从向量的每个元素中提取最高有效位).
@@ -309,7 +309,7 @@ public static uint ExtractMostSignificantBits_ShiftAnd(Vector128&lt;ushort&gt; v
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64_Statics_ExtractMostSignificantBits_ShiftAnd_System_Runtime_Intrinsics_Vector128_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64.Statics.ExtractMostSignificantBits_ShiftAnd(System.Runtime.Intrinsics.Vector128{System.Int32})">
   ExtractMostSignificantBits_ShiftAnd(Vector128&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L356"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Extracts the most significant bit from each element in a vector (从向量的每个元素中提取最高有效位).
@@ -357,7 +357,7 @@ public static uint ExtractMostSignificantBits_ShiftAnd(Vector128&lt;int&gt; vect
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64_Statics_ExtractMostSignificantBits_ShiftAnd_System_Runtime_Intrinsics_Vector128_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64.Statics.ExtractMostSignificantBits_ShiftAnd(System.Runtime.Intrinsics.Vector128{System.UInt32})">
   ExtractMostSignificantBits_ShiftAnd(Vector128&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L363"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Extracts the most significant bit from each element in a vector (从向量的每个元素中提取最高有效位).
@@ -405,7 +405,7 @@ public static uint ExtractMostSignificantBits_ShiftAnd(Vector128&lt;uint&gt; vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64_Statics_ExtractMostSignificantBits_ShiftAnd_System_Runtime_Intrinsics_Vector128_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64.Statics.ExtractMostSignificantBits_ShiftAnd(System.Runtime.Intrinsics.Vector128{System.Int64})">
   ExtractMostSignificantBits_ShiftAnd(Vector128&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L373"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Extracts the most significant bit from each element in a vector (从向量的每个元素中提取最高有效位).
@@ -453,7 +453,7 @@ public static uint ExtractMostSignificantBits_ShiftAnd(Vector128&lt;long&gt; vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimdB64_Statics_ExtractMostSignificantBits_ShiftAnd_System_Runtime_Intrinsics_Vector128_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimdB64.Statics.ExtractMostSignificantBits_ShiftAnd(System.Runtime.Intrinsics.Vector128{System.UInt64})">
   ExtractMostSignificantBits_ShiftAnd(Vector128&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L372"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L380"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Extracts the most significant bit from each element in a vector (从向量的每个元素中提取最高有效位).
@@ -500,7 +500,7 @@ public static uint ExtractMostSignificantBits_ShiftAnd(Vector128&lt;ulong&gt; ve
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L295" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimdB64.cs/#L303" class="edit-link">Edit this page</a>
         </div>
 
 

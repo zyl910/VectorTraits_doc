@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Zyl_VectorTraits_BitMath" data-uid="Zyl.VectorTraits.BitMath" class="text-break">
-Class BitMath  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class BitMath  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -119,6 +119,9 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.Is64Bit.html#Zyl_VectorTraits_Numerics_BitMathCore_Is64Bit">BitMathCore.Is64Bit</a>
+    </div>
+    <div>
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore._MM_SHUFFLE.html#Zyl_VectorTraits_Numerics_BitMathCore__MM_SHUFFLE_System_Byte_System_Byte_System_Byte_System_Byte_">BitMathCore._MM_SHUFFLE(byte, byte, byte, byte)</a>
     </div>
     <div>
@@ -147,6 +150,18 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
     </div>
     <div>
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_UInt64_System_UInt64_System_UInt64_">BitMathCore.BitSelect(ulong, ulong, ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_">BitMathCore.BitSelect(ExInt128, ExInt128, ExInt128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">BitMathCore.BitSelect(ExUInt128, ExUInt128, ExUInt128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_Int128_System_Int128_System_Int128_">BitMathCore.BitSelect(Int128, Int128, Int128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_UInt128_System_UInt128_System_UInt128_">BitMathCore.BitSelect(UInt128, UInt128, UInt128)</a>
     </div>
     <div>
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.BitSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_BitSelect_System_IntPtr_System_IntPtr_System_IntPtr_">BitMathCore.BitSelect(nint, nint, nint)</a>
@@ -185,6 +200,18 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_UInt64_System_UInt64_">BitMathCore.ClampToBitMax(ulong, ulong)</a>
     </div>
     <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_">BitMathCore.ClampToBitMax(ExInt128, ExInt128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">BitMathCore.ClampToBitMax(ExUInt128, ExUInt128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_Int128_System_Int128_">BitMathCore.ClampToBitMax(Int128, Int128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToBitMax.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToBitMax_System_UInt128_System_UInt128_">BitMathCore.ClampToBitMax(UInt128, UInt128)</a>
+    </div>
+    <div>
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_Int32_">BitMathCore.ClampToByte(int)</a>
     </div>
     <div>
@@ -195,6 +222,18 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
     </div>
     <div>
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_UInt64_">BitMathCore.ClampToByte(ulong)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_Zyl_VectorTraits_ExTypes_ExInt128_">BitMathCore.ClampToByte(ExInt128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_Zyl_VectorTraits_ExTypes_ExUInt128_">BitMathCore.ClampToByte(ExUInt128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_Int128_">BitMathCore.ClampToByte(Int128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte.html#Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_UInt128_">BitMathCore.ClampToByte(UInt128)</a>
     </div>
     <div>
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_SByte_System_SByte_">BitMathCore.ConditionalSelect(bool, sbyte, sbyte)</a>
@@ -221,6 +260,18 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt64_System_UInt64_">BitMathCore.ConditionalSelect(bool, ulong, ulong)</a>
     </div>
     <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_">BitMathCore.ConditionalSelect(bool, ExInt128, ExInt128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">BitMathCore.ConditionalSelect(bool, ExUInt128, ExUInt128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Int128_System_Int128_">BitMathCore.ConditionalSelect(bool, Int128, Int128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_UInt128_System_UInt128_">BitMathCore.ConditionalSelect(bool, UInt128, UInt128)</a>
+    </div>
+    <div>
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_IntPtr_System_IntPtr_">BitMathCore.ConditionalSelect(bool, nint, nint)</a>
     </div>
     <div>
@@ -234,6 +285,15 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
     </div>
     <div>
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.ConditionalSelect.html#Zyl_VectorTraits_Numerics_BitMathCore_ConditionalSelect_System_Boolean_System_Half_System_Half_">BitMathCore.ConditionalSelect(bool, Half, Half)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteBy2XBitR.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteBy2XBitR_System_Byte_System_Byte_">BitMathCore.GetByteBy2XBitR(byte, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteBy4XBitR.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteBy4XBitR_System_Byte_System_Byte_System_Byte_System_Byte_">BitMathCore.GetByteBy4XBitR(byte, byte, byte, byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteBy8XBitR.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteBy8XBitR_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_">BitMathCore.GetByteBy8XBitR(byte, byte, byte, byte, byte, byte, byte, byte)</a>
     </div>
     <div>
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteByBit2.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteByBit2_System_Byte_System_Byte_System_Byte_System_Byte_">BitMathCore.GetByteByBit2(byte, byte, byte, byte)</a>
@@ -278,6 +338,18 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_UInt64_">BitMathCore.GetMostSignificantBit(ulong)</a>
     </div>
     <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_Zyl_VectorTraits_ExTypes_ExInt128_">BitMathCore.GetMostSignificantBit(ExInt128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_Zyl_VectorTraits_ExTypes_ExUInt128_">BitMathCore.GetMostSignificantBit(ExUInt128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_Int128_">BitMathCore.GetMostSignificantBit(Int128)</a>
+    </div>
+    <div>
+      <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetMostSignificantBit.html#Zyl_VectorTraits_Numerics_BitMathCore_GetMostSignificantBit_System_UInt128_">BitMathCore.GetMostSignificantBit(UInt128)</a>
+    </div>
+    <div>
       <a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.MapFlags.html#Zyl_VectorTraits_Numerics_BitMathCore_MapFlags_System_Int32_System_Int32_System_Int32_">BitMathCore.MapFlags(int, int, int)</a>
     </div>
     <div>
@@ -315,6 +387,14 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
 
 
 
+  <h2 id="Zyl_VectorTraits_BitMath_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>It contains functions from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math">Math</a>/<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.bitconverter">BitConverter</a>, and generic math interfaces such as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1">INumber</a>. For math functions in classes such as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.bitoperations">BitOperations</a>, you can use the classes (它包含了 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.math">Math</a>/<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.bitconverter">BitConverter</a>, 与 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1">INumber</a> 等泛型数学接口中的函数. 而对于 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.bitoperations">BitOperations</a> 等类中的数学函数, 可使用这些类):</p>
+<ul><li><span class="term">
+      <a class="xref" href="Zyl.VectorTraits.Numerics.MathBinaryPrimitives.html">MathBinaryPrimitives</a>
+    </span>Compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.buffers.binary.binaryprimitives">BinaryPrimitives</a></li><li><span class="term">
+      <a class="xref" href="Zyl.VectorTraits.Numerics.MathBitOperations.html">MathBitOperations</a>
+    </span>Compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.bitoperations">BitOperations</a></li></ul>
+</div>
 
   <h2 class="section" id="methods">Methods
 </h2>
@@ -502,6 +582,56 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.CopySign.html#Zyl_VectorTraits_BitMath_CopySign_System_Single_System_Single_">CopySign(float, float)</a></dt>
     <dd><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DivRem.html#Zyl_VectorTraits_BitMath_DivRem_System_Byte_System_Byte_">DivRem(byte, byte)</a></dt>
+    <dd><p>Produces the quotient and the remainder of two unsigned 8-bit numbers (生成两个 无符号8位数字 的商和余数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DivRem.html#Zyl_VectorTraits_BitMath_DivRem_System_Int16_System_Int16_">DivRem(short, short)</a></dt>
+    <dd><p>Produces the quotient and the remainder of two signed 16-bit numbers (生成两个 有符号16位数字 的商和余数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DivRem.html#Zyl_VectorTraits_BitMath_DivRem_System_Int32_System_Int32_">DivRem(int, int)</a></dt>
+    <dd><p>Produces the quotient and the remainder of two signed 32-bit numbers (生成两个 有符号32位数字 的商和余数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DivRem.html#Zyl_VectorTraits_BitMath_DivRem_System_Int32_System_Int32_System_Int32__">DivRem(int, int, out int)</a></dt>
+    <dd><p>Calculates the quotient of two 32-bit signed integers and also returns the remainder in an output parameter (计算两个 32 位有符号整数的商，并通过输出参数返回余数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DivRem.html#Zyl_VectorTraits_BitMath_DivRem_System_Int64_System_Int64_">DivRem(long, long)</a></dt>
+    <dd><p>Produces the quotient and the remainder of two signed 64-bit numbers (生成两个 有符号64位数字 的商和余数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DivRem.html#Zyl_VectorTraits_BitMath_DivRem_System_Int64_System_Int64_System_Int64__">DivRem(long, long, out long)</a></dt>
+    <dd><p>Calculates the quotient of two 64-bit signed integers and also returns the remainder in an output parameter (计算两个 32 位有符号整数的商，并通过输出参数返回余数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DivRem.html#Zyl_VectorTraits_BitMath_DivRem_System_SByte_System_SByte_">DivRem(sbyte, sbyte)</a></dt>
+    <dd><p>Produces the quotient and the remainder of two signed 8-bit numbers (生成两个 有符号8位数字 的商和余数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DivRem.html#Zyl_VectorTraits_BitMath_DivRem_System_UInt16_System_UInt16_">DivRem(ushort, ushort)</a></dt>
+    <dd><p>Produces the quotient and the remainder of two unsigned 16-bit numbers (生成两个 无符号16位数字 的商和余数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DivRem.html#Zyl_VectorTraits_BitMath_DivRem_System_UInt32_System_UInt32_">DivRem(uint, uint)</a></dt>
+    <dd><p>Produces the quotient and the remainder of two unsigned 32-bit numbers (生成两个 无符号32位数字 的商和余数).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.DivRem.html#Zyl_VectorTraits_BitMath_DivRem_System_UInt64_System_UInt64_">DivRem(ulong, ulong)</a></dt>
+    <dd><p>Produces the quotient and the remainder of two unsigned 64-bit numbers (生成两个 无符号64位数字 的商和余数).</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -970,6 +1100,11 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Max.html#Zyl_VectorTraits_BitMath_Max_System_Int128_System_Int128_">Max(Int128, Int128)</a></dt>
+    <dd><p>Get the larger of two variables (取得两个变量中较大的一个).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Max.html#Zyl_VectorTraits_BitMath_Max_System_Int16_System_Int16_">Max(short, short)</a></dt>
     <dd><p>Get the larger of two variables (取得两个变量中较大的一个).</p>
 </dd>
@@ -1000,6 +1135,11 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Max.html#Zyl_VectorTraits_BitMath_Max_System_UInt128_System_UInt128_">Max(UInt128, UInt128)</a></dt>
+    <dd><p>Get the larger of two variables (取得两个变量中较大的一个).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Max.html#Zyl_VectorTraits_BitMath_Max_System_UInt16_System_UInt16_">Max(ushort, ushort)</a></dt>
     <dd><p>Get the larger of two variables (取得两个变量中较大的一个).</p>
 </dd>
@@ -1016,6 +1156,16 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Max.html#Zyl_VectorTraits_BitMath_Max_System_UIntPtr_System_UIntPtr_">Max(nuint, nuint)</a></dt>
+    <dd><p>Get the larger of two variables (取得两个变量中较大的一个).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Max.html#Zyl_VectorTraits_BitMath_Max_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_">Max(ExInt128, ExInt128)</a></dt>
+    <dd><p>Get the larger of two variables (取得两个变量中较大的一个).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Max.html#Zyl_VectorTraits_BitMath_Max_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">Max(ExUInt128, ExUInt128)</a></dt>
     <dd><p>Get the larger of two variables (取得两个变量中较大的一个).</p>
 </dd>
   </dl>
@@ -1050,6 +1200,11 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Min.html#Zyl_VectorTraits_BitMath_Min_System_Int128_System_Int128_">Min(Int128, Int128)</a></dt>
+    <dd><p>Get the smaller of two variables (取得两个变量中较小的一个).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Min.html#Zyl_VectorTraits_BitMath_Min_System_Int16_System_Int16_">Min(short, short)</a></dt>
     <dd><p>Get the smaller of two variables (取得两个变量中较小的一个).</p>
 </dd>
@@ -1080,6 +1235,11 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Min.html#Zyl_VectorTraits_BitMath_Min_System_UInt128_System_UInt128_">Min(UInt128, UInt128)</a></dt>
+    <dd><p>Get the smaller of two variables (取得两个变量中较小的一个).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Min.html#Zyl_VectorTraits_BitMath_Min_System_UInt16_System_UInt16_">Min(ushort, ushort)</a></dt>
     <dd><p>Get the smaller of two variables (取得两个变量中较小的一个).</p>
 </dd>
@@ -1096,6 +1256,16 @@ Class BitMath  <a class="header-action link-secondary" title="View source" href=
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Min.html#Zyl_VectorTraits_BitMath_Min_System_UIntPtr_System_UIntPtr_">Min(nuint, nuint)</a></dt>
+    <dd><p>Get the smaller of two variables (取得两个变量中较小的一个).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Min.html#Zyl_VectorTraits_BitMath_Min_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_">Min(ExInt128, ExInt128)</a></dt>
+    <dd><p>Get the smaller of two variables (取得两个变量中较小的一个).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.BitMath.Min.html#Zyl_VectorTraits_BitMath_Min_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">Min(ExUInt128, ExUInt128)</a></dt>
     <dd><p>Get the smaller of two variables (取得两个变量中较小的一个).</p>
 </dd>
   </dl>
@@ -1276,7 +1446,7 @@ Mnemonic: <code>Sqrt(x) = Pow(x, 1.0/2)</code>. When x is less than 0, floating-
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.MathOperators.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

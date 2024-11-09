@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_BitMath_Sign_" data-uid="Zyl.VectorTraits.BitMath.Sign*" class="text-break">
-Method Sign  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L366"><i class="bi bi-code-slash"></i></a>
+Method Sign  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L434"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Sign  <a class="header-action link-secondary" title="View source" href="h
 
 <h3 id="Zyl_VectorTraits_BitMath_Sign_System_Single_" data-uid="Zyl.VectorTraits.BitMath.Sign(System.Single)">
   Sign(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L366"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L434"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sign of a value (计算值的符号).</p>
@@ -169,7 +169,7 @@ Method Sign  <a class="header-action link-secondary" title="View source" href="h
 
 <h3 id="Zyl_VectorTraits_BitMath_Sign_System_Double_" data-uid="Zyl.VectorTraits.BitMath.Sign(System.Double)">
   Sign(double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L372"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L440"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sign of a value (计算值的符号).</p>
@@ -219,7 +219,7 @@ Method Sign  <a class="header-action link-secondary" title="View source" href="h
 
 <h3 id="Zyl_VectorTraits_BitMath_Sign_System_Half_" data-uid="Zyl.VectorTraits.BitMath.Sign(System.Half)">
   Sign(Half)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L379"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L447"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sign of a value (计算值的符号).</p>
@@ -270,7 +270,7 @@ Method Sign  <a class="header-action link-secondary" title="View source" href="h
 
 <h3 id="Zyl_VectorTraits_BitMath_Sign_System_SByte_" data-uid="Zyl.VectorTraits.BitMath.Sign(System.SByte)">
   Sign(sbyte)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L454"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sign of a value (计算值的符号).</p>
@@ -323,7 +323,7 @@ public static int Sign(sbyte value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_BitMath_Sign_System_Int16_" data-uid="Zyl.VectorTraits.BitMath.Sign(System.Int16)">
   Sign(short)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L393"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L461"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sign of a value (计算值的符号).</p>
@@ -375,7 +375,7 @@ public static int Sign(sbyte value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_BitMath_Sign_System_Int32_" data-uid="Zyl.VectorTraits.BitMath.Sign(System.Int32)">
   Sign(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L399"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L467"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sign of a value (计算值的符号).</p>
@@ -427,7 +427,7 @@ public static int Sign(sbyte value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_BitMath_Sign_System_Int64_" data-uid="Zyl.VectorTraits.BitMath.Sign(System.Int64)">
   Sign(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L405"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L473"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the sign of a value (计算值的符号).</p>
@@ -478,7 +478,7 @@ public static int Sign(sbyte value)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L366" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L434" class="edit-link">Edit this page</a>
         </div>
 
 

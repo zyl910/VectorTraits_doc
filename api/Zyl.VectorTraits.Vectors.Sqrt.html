@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vectors_Sqrt_" data-uid="Zyl.VectorTraits.Vectors.Sqrt*" class="text-break">
-Method Sqrt  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L269"><i class="bi bi-code-slash"></i></a>
+Method Sqrt  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L483"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Sqrt  <a class="header-action link-secondary" title="View source" href="h
 
 <h3 id="Zyl_VectorTraits_Vectors_Sqrt_System_Numerics_Vector_System_Single__" data-uid="Zyl.VectorTraits.Vectors.Sqrt(System.Numerics.Vector{System.Single})">
   Sqrt(Vector&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L483"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -163,7 +163,7 @@ Mnemonic: <code>rt[i] := sqrt(vector[i]) = pow(vector[i], 1.0/2)</code>. When x 
 
 <h3 id="Zyl_VectorTraits_Vectors_Sqrt_System_Numerics_Vector_System_Double__" data-uid="Zyl.VectorTraits.Vectors.Sqrt(System.Numerics.Vector{System.Double})">
   Sqrt(Vector&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L498"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -209,7 +209,7 @@ Mnemonic: <code>rt[i] := sqrt(vector[i]) = pow(vector[i], 1.0/2)</code>. When x 
 
 <h3 id="Zyl_VectorTraits_Vectors_Sqrt_System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Vectors.Sqrt(System.Numerics.Vector{System.SByte})">
   Sqrt(Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L513"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -256,7 +256,7 @@ public static Vector&lt;sbyte&gt; Sqrt(Vector&lt;sbyte&gt; value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_Vectors_Sqrt_System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Vectors.Sqrt(System.Numerics.Vector{System.Byte})">
   Sqrt(Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L529"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -303,7 +303,7 @@ public static Vector&lt;byte&gt; Sqrt(Vector&lt;byte&gt; value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_Vectors_Sqrt_System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Vectors.Sqrt(System.Numerics.Vector{System.Int16})">
   Sqrt(Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L545"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -349,7 +349,7 @@ Mnemonic: <code>rt[i] := sqrt(vector[i]) = pow(vector[i], 1.0/2)</code>. When x 
 
 <h3 id="Zyl_VectorTraits_Vectors_Sqrt_System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Vectors.Sqrt(System.Numerics.Vector{System.UInt16})">
   Sqrt(Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L560"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -396,7 +396,7 @@ public static Vector&lt;ushort&gt; Sqrt(Vector&lt;ushort&gt; value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_Vectors_Sqrt_System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Vectors.Sqrt(System.Numerics.Vector{System.Int32})">
   Sqrt(Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L576"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -442,7 +442,7 @@ Mnemonic: <code>rt[i] := sqrt(vector[i]) = pow(vector[i], 1.0/2)</code>. When x 
 
 <h3 id="Zyl_VectorTraits_Vectors_Sqrt_System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Vectors.Sqrt(System.Numerics.Vector{System.UInt32})">
   Sqrt(Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L591"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -489,7 +489,7 @@ public static Vector&lt;uint&gt; Sqrt(Vector&lt;uint&gt; value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_Vectors_Sqrt_System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Vectors.Sqrt(System.Numerics.Vector{System.Int64})">
   Sqrt(Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L607"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -535,7 +535,7 @@ Mnemonic: <code>rt[i] := sqrt(vector[i]) = pow(vector[i], 1.0/2)</code>. When x 
 
 <h3 id="Zyl_VectorTraits_Vectors_Sqrt_System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Vectors.Sqrt(System.Numerics.Vector{System.UInt64})">
   Sqrt(Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L622"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -581,7 +581,7 @@ public static Vector&lt;ulong&gt; Sqrt(Vector&lt;ulong&gt; value)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L269" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Supplement.cs/#L483" class="edit-link">Edit this page</a>
         </div>
 
 

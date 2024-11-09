@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_Shuffle_AcceleratedTypes_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.Shuffle_AcceleratedTypes*" class="text-break">
-Property Shuffle_AcceleratedTypes  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L1819"><i class="bi bi-code-slash"></i></a>
+Property Shuffle_AcceleratedTypes  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L1826"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Property Shuffle_AcceleratedTypes  <a class="header-action link-secondary" title
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_Shuffle_AcceleratedTypes" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.Shuffle_AcceleratedTypes">
   Shuffle_AcceleratedTypes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L1819"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L1826"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Types with hardware acceleration when running <code>Shuffle</code> (运行 <code>Shuffle</code> 时具有硬件加速的类型).</p>
@@ -150,6 +150,13 @@ Property Shuffle_AcceleratedTypes  <a class="header-action link-secondary" title
 <p>- <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.Shuffle.html#Zyl_VectorTraits_Impl_IWVectorTraits128_Shuffle_System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__">Shuffle(Vector128&lt;byte&gt;, Vector128&lt;byte&gt;)</a>: If the index value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).</p>
 <p>- <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleInsert.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleInsert_System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__">YShuffleInsert(Vector128&lt;byte&gt;, Vector128&lt;byte&gt;, Vector128&lt;byte&gt;)</a>: If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).</p>
 <p>- <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__">YShuffleKernel(Vector128&lt;byte&gt;, Vector128&lt;byte&gt;)</a>: If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). It has the best performance, and is used when you are sure that the index value is not out of range (它的性能最好, 用于确信索引值不会超出范围时).</p>
+<p>Related hardware instructions (相关的硬件指令).</p>
+<table><thead><tr><th class="term">Architecture</th><th class="description">8bit</th><th class="description">16bit</th><th class="description">32bit</th><th class="description">64bit</th></tr></thead><tbody><tr><td class="term">Arm</td><td class="description">
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.arm.advsimd.arm64.vectortablelookup#system-runtime-intrinsics-arm-advsimd-arm64-vectortablelookup(system-runtime-intrinsics-vector128((system-byte))-system-runtime-intrinsics-vector128((system-byte)))">vqtbl1q_u8</a>
+    </td><td class="description">(None)</td><td class="description">(None)</td><td class="description">(None)</td></tr><tr><td class="term">Wasm</td><td class="description">
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.wasm.packedsimd.swizzle#system-runtime-intrinsics-wasm-packedsimd-swizzle(system-runtime-intrinsics-vector128((system-byte))-system-runtime-intrinsics-vector128((system-byte)))">i8x16.swizzle</a>
+    </td><td class="description">(None)</td><td class="description">(None)</td><td class="description">(None)</td></tr><tr><td class="term">X86</td><td class="description">Combine by <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.ssse3.shuffle#system-runtime-intrinsics-x86-ssse3-shuffle(system-runtime-intrinsics-vector128((system-byte))-system-runtime-intrinsics-vector128((system-byte)))">_mm_shuffle_epi8</a>(Ssse3)
+       /<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx512vbmi.vl.permutevar16x8#system-runtime-intrinsics-x86-avx512vbmi-vl-permutevar16x8(system-runtime-intrinsics-vector128((system-byte))-system-runtime-intrinsics-vector128((system-byte)))">_mm_permutexvar_epi8</a>(Avx512Vbmi)</td><td class="description">Combine by <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx512bw.vl.permutevar8x16#system-runtime-intrinsics-x86-avx512bw-vl-permutevar8x16(system-runtime-intrinsics-vector128((system-uint16))-system-runtime-intrinsics-vector128((system-uint16)))">_mm_permutexvar_epi16</a>(Avx512BW)</td><td class="description">Same combine by <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx2.permutevar8x32#system-runtime-intrinsics-x86-avx2-permutevar8x32(system-runtime-intrinsics-vector256((system-uint32))-system-runtime-intrinsics-vector256((system-uint32)))">_mm256_permutevar8x32_epi32</a>(Avx2)</td><td class="description">Same combine by <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx512f.vl.permutevar4x64#system-runtime-intrinsics-x86-avx512f-vl-permutevar4x64(system-runtime-intrinsics-vector256((system-uint64))-system-runtime-intrinsics-vector256((system-uint64)))">_mm256_permutexvar_epi64</a>(Avx512F)</td></tr></tbody></table>
 </div>
 
 
@@ -166,7 +173,7 @@ Property Shuffle_AcceleratedTypes  <a class="header-action link-secondary" title
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L1819" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L1826" class="edit-link">Edit this page</a>
         </div>
 
 

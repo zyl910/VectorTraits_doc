@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny*" class="text-break">
-Method GreaterThanOrEqualAny  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L955"><i class="bi bi-code-slash"></i></a>
+Method GreaterThanOrEqualAny  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1038"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method GreaterThanOrEqualAny  <a class="header-action link-secondary" title="Vie
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_System_Runtime_Intrinsics_Vector256_System_Single__System_Runtime_Intrinsics_Vector256_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny(System.Runtime.Intrinsics.Vector256{System.Single},System.Runtime.Intrinsics.Vector256{System.Single})">
   GreaterThanOrEqualAny(Vector256&lt;float&gt;, Vector256&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L955"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1038"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are greater or equal (比较两个向量以判定任一元素是否大于或等于).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt := (left[0] &gt;= right[0]) || (left[1] &gt;= right[1]) || ..
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_System_Runtime_Intrinsics_Vector256_System_Double__System_Runtime_Intrinsics_Vector256_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny(System.Runtime.Intrinsics.Vector256{System.Double},System.Runtime.Intrinsics.Vector256{System.Double})">
   GreaterThanOrEqualAny(Vector256&lt;double&gt;, Vector256&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L961"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1044"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are greater or equal (比较两个向量以判定任一元素是否大于或等于).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt := (left[0] &gt;= right[0]) || (left[1] &gt;= right[1]) || ..
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny(System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte})">
   GreaterThanOrEqualAny(Vector256&lt;sbyte&gt;, Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L967"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1050"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are greater or equal (比较两个向量以判定任一元素是否大于或等于).
@@ -268,7 +268,7 @@ public static bool GreaterThanOrEqualAny(Vector256&lt;sbyte&gt; left, Vector256&
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_System_Runtime_Intrinsics_Vector256_System_Byte__System_Runtime_Intrinsics_Vector256_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny(System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte})">
   GreaterThanOrEqualAny(Vector256&lt;byte&gt;, Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L974"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1057"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are greater or equal (比较两个向量以判定任一元素是否大于或等于).
@@ -318,7 +318,7 @@ Mnemonic: <code>rt := (left[0] &gt;= right[0]) || (left[1] &gt;= right[1]) || ..
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny(System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16})">
   GreaterThanOrEqualAny(Vector256&lt;short&gt;, Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L980"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1063"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are greater or equal (比较两个向量以判定任一元素是否大于或等于).
@@ -368,7 +368,7 @@ Mnemonic: <code>rt := (left[0] &gt;= right[0]) || (left[1] &gt;= right[1]) || ..
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Runtime_Intrinsics_Vector256_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16})">
   GreaterThanOrEqualAny(Vector256&lt;ushort&gt;, Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L986"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1069"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are greater or equal (比较两个向量以判定任一元素是否大于或等于).
@@ -419,7 +419,7 @@ public static bool GreaterThanOrEqualAny(Vector256&lt;ushort&gt; left, Vector256
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny(System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32})">
   GreaterThanOrEqualAny(Vector256&lt;int&gt;, Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L993"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1076"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are greater or equal (比较两个向量以判定任一元素是否大于或等于).
@@ -469,7 +469,7 @@ Mnemonic: <code>rt := (left[0] &gt;= right[0]) || (left[1] &gt;= right[1]) || ..
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Runtime_Intrinsics_Vector256_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32})">
   GreaterThanOrEqualAny(Vector256&lt;uint&gt;, Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L999"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1082"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are greater or equal (比较两个向量以判定任一元素是否大于或等于).
@@ -520,7 +520,7 @@ public static bool GreaterThanOrEqualAny(Vector256&lt;uint&gt; left, Vector256&l
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny(System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64})">
   GreaterThanOrEqualAny(Vector256&lt;long&gt;, Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1006"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1089"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are greater or equal (比较两个向量以判定任一元素是否大于或等于).
@@ -570,7 +570,7 @@ Mnemonic: <code>rt := (left[0] &gt;= right[0]) || (left[1] &gt;= right[1]) || ..
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Avx2_Statics_GreaterThanOrEqualAny_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Runtime_Intrinsics_Vector256_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Avx2.Statics.GreaterThanOrEqualAny(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64})">
   GreaterThanOrEqualAny(Vector256&lt;ulong&gt;, Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1012"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1095"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Compares two vectors to determine if any elements are greater or equal (比较两个向量以判定任一元素是否大于或等于).
@@ -620,7 +620,7 @@ public static bool GreaterThanOrEqualAny(Vector256&lt;ulong&gt; left, Vector256&
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L955" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Avx2.Supplement.cs/#L1038" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum ShuffleControlG2On256 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum ShuffleControlG2On256 ">
+      
+      <meta name="description" content="Shuffle control constants for &amp;quot;2-element group&amp;quot; at 256 bits vector (&amp;quot;2元素组&amp;quot;在256位向量时的换位控制常数) .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_Impl_ShuffleControlG2On256.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.Impl.ShuffleControlG2On256%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.Impl.ShuffleControlG2On256">
+
+
+
+
+  <h1 id="Zyl_VectorTraits_Impl_ShuffleControlG2On256" data-uid="Zyl.VectorTraits.Impl.ShuffleControlG2On256" class="text-break">
+Enum ShuffleControlG2On256  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/ShuffleControlG2On256.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a>.<a class="xref" href="Zyl.VectorTraits.Impl.html">Impl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Shuffle control constants for &quot;2-element group&quot; at 256 bits vector (&quot;2元素组&quot;在256位向量时的换位控制常数) .</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum ShuffleControlG2On256 : byte</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_XXXX"><code>XXXX = 0</code></dt>
+    <dd><p>XXXX := GetByteBy4XBitR(0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x00 = 0 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_XXXY"><code>XXXY = 8</code></dt>
+    <dd><p>XXXY := GetByteBy4XBitR(0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x08 = 8 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_XXYX"><code>XXYX = 4</code></dt>
+    <dd><p>XXYX := GetByteBy4XBitR(0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x04 = 4 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_XXYY"><code>XXYY = 12</code></dt>
+    <dd><p>XXYY := GetByteBy4XBitR(0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x0C = 12 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_XYXX"><code>XYXX = 2</code></dt>
+    <dd><p>XYXX := GetByteBy4XBitR(0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x02 = 2 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_XYXY"><code>XYXY = 10</code></dt>
+    <dd><p>XYXY := GetByteBy4XBitR(0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x0A = 10 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_XYYX"><code>XYYX = 6</code></dt>
+    <dd><p>XYYX := GetByteBy4XBitR(0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x06 = 6 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_XYYY"><code>XYYY = 14</code></dt>
+    <dd><p>XYYY := GetByteBy4XBitR(0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x0E = 14 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_YXXX"><code>YXXX = 1</code></dt>
+    <dd><p>YXXX := GetByteBy4XBitR(1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x01 = 1 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_YXXY"><code>YXXY = 9</code></dt>
+    <dd><p>YXXY := GetByteBy4XBitR(1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x09 = 9 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_YXYX"><code>YXYX = 5</code></dt>
+    <dd><p>YXYX := GetByteBy4XBitR(1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x05 = 5 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_YXYY"><code>YXYY = 13</code></dt>
+    <dd><p>YXYY := GetByteBy4XBitR(1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x0D = 13 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_YYXX"><code>YYXX = 3</code></dt>
+    <dd><p>YYXX := GetByteBy4XBitR(1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x03 = 3 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_YYXY"><code>YYXY = 11</code></dt>
+    <dd><p>YYXY := GetByteBy4XBitR(1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x0B = 11 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_YYYX"><code>YYYX = 7</code></dt>
+    <dd><p>YYYX := GetByteBy4XBitR(1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x07 = 7 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_YYYY"><code>YYYY = 15</code></dt>
+    <dd><p>YYYY := GetByteBy4XBitR(1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x0F = 15 .</p>
+</dd>
+  </dl>
+
+
+  <h2 id="Zyl_VectorTraits_Impl_ShuffleControlG2On256_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Constant names are referenced to HLSL(High-level shader language)/GLSL(OpenGL Shading Language), using the Little-Endian mode (常量名参考了 HLSL(高级着色语言)/GLSL(OpenGL着色语言), 使用的是小端模式). </p>
+</div>
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore._MM_SHUFFLE2.html#Zyl_VectorTraits_Numerics_BitMathCore__MM_SHUFFLE2_System_Byte_System_Byte_">_MM_SHUFFLE2</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>)</div>
+      <div><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteBy4XBitR.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteBy4XBitR_System_Byte_System_Byte_System_Byte_System_Byte_">GetByteBy4XBitR</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>)</div>
+      <div><a class="xref" href="Zyl.VectorTraits.ShuffleControlG2.html">ShuffleControlG2</a></div>
+      <div><a class="xref" href="Zyl.VectorTraits.Impl.ShuffleControlG2On512.html">ShuffleControlG2On512</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx.shuffle#system-runtime-intrinsics-x86-avx-shuffle(system-runtime-intrinsics-vector256((system-double))-system-runtime-intrinsics-vector256((system-double))-system-byte)">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>)</div>
+  </div>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/ShuffleControlG2On256.cs/#L23" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

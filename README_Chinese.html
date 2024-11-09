@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -91,8 +91,8 @@
 <ul>
 <li><code>Vectors</code>: 为向量类型, 提供了常用工具函数, e.g. Create(T/T[]/Span/ReadOnlySpan), CreatePadding, CreateRotate, CreateByFunc, CreateByDouble ... 它还为向量提供了特征方法, e.g. ShiftLeft、ShiftRightArithmetic、ShiftRightLogical、Shuffle ...</li>
 <li><code>Vectors&lt;T&gt;</code>: 为向量类型, 提供了各种元素类型的常数. e.g. Serial, SerialDesc, XyzwWMask, MantissaMask, MaxValue, MinValue, NormOne, FixedOne, E, Pi, Tau, VMaxByte, VReciprocalMaxSByte ...</li>
-<li><code>Vector64s/Vector128s/Vector256s</code>: 为固定位宽的向量（Vector64/Vector128/Vector256），提供了常用工具函数与特征方法.</li>
-<li><code>Vector64s&lt;T&gt;/Vector128s&lt;T&gt;/Vector256s&lt;T&gt;</code>: 为固定位宽的向量，提供了各种元素类型的常数.</li>
+<li><code>Vector64s/Vector128s/Vector256s/Vector512s</code>: 为固定位宽的向量（Vector64/Vector128/Vector256/Vector512），提供了常用工具函数与特征方法.</li>
+<li><code>Vector64s&lt;T&gt;/Vector128s&lt;T&gt;/Vector256s&lt;T&gt;/Vector512s&lt;T&gt;</code>: 为固定位宽的向量，提供了各种元素类型的常数.</li>
 <li><code>Scalars</code>: 为标量类型, 提供了各种工具函数. e.g. GetByDouble, GetFixedByDouble, GetByBits, GetBitsMask ...</li>
 <li><code>Scalars&lt;T&gt;</code>: 为标量类型, 提供了许多常数. e.g. ExponentBits, MantissaBits, MantissaMask, MaxValue, MinValue, NormOne, FixedOne, E, Pi, Tau, VMaxByte, VReciprocalMaxSByte ...</li>
 <li><code>VectorTextUtil</code>: 提供了一些向量的文本性工具函数. e.g. GetHex, Format, WriteLine ...</li>
@@ -103,23 +103,32 @@
 <li>支持 <code>.NET 5.0</code> 新增的向量方法: Ceiling, Floor .</li>
 <li>支持 <code>.NET 6.0</code> 新增的向量方法: Sum .</li>
 <li>支持 <code>.NET 7.0</code> 新增的向量方法: ExtractMostSignificantBits, Shuffle, ShiftLeft, ShiftRightArithmetic, ShiftRightLogical .</li>
+<li>支持 <code>.NET 8.0</code> 新增的向量方法: WidenLower, WidenUpper.</li>
 <li>提供缩窄饱和的向量方法: YNarrowSaturate, YNarrowSaturateUnsigned .</li>
 <li>提供舍入的向量方法: YRoundToEven, YRoundToZero .</li>
 <li>提供换位的向量方法: YShuffleInsert, YShuffleKernel, YShuffleG2, YShuffleG4, YShuffleG4X2 . 且提供了 ShuffleControlG2/ShuffleControlG4 enum.</li>
+<li>提供解交织的向量方法: YGroup2Unzip, YGroup2UnzipEven, YGroup2UnzipOdd, YGroup3Unzip, YGroup3UnzipX2, YGroup4Unzip, YGroup6Unzip_Bit128.</li>
+<li>提供交织的向量方法: YGroup2Zip, YGroup2ZipHigh, YGroup2ZipLow, YGroup3Zip, YGroup3ZipX2, YGroup4Unzip, YGroup6Zip_Bit128.</li>
 <li>...</li>
 <li>完整列表: <a href="TraitsMethodList.html">TraitsMethodList</a></li>
 </ul>
 <p>支持的指令集:</p>
 <ul>
-<li>x86
+<li>x86 (需要 .NET Core 3.0+)
 <ul>
-<li>128位向量: Sse, Sse2, Sse3, Ssse3, Sse41, Sse42, Avx, Avx2 .</li>
-<li>256位向量: Avx, Avx2 .</li>
+<li>128位向量: Sse, Sse2, Sse3, Ssse3, Sse41, Sse42. And 128-bit instructions from Avx family.</li>
+<li>256位向量: Avx, Avx2. And 256-bit instructions from Avx512VL.</li>
+<li>512位向量: Avx512BW, Avx512DQ, Avx512F, Avx512Vbmi.</li>
 </ul>
 </li>
-<li>Arm
+<li>Arm (需要 .NET 5.0+)
 <ul>
-<li>128位向量: AdvSimd .</li>
+<li>128位向量: AdvSimd.</li>
+</ul>
+</li>
+<li>Wasm (需要 .NET 8.0+)
+<ul>
+<li>128位向量: PackedSimd.</li>
 </ul>
 </li>
 </ul>
@@ -227,35 +236,39 @@ namespace Zyl.VectorTraits.Sample {
 }
 </code></pre>
 <h3 id="3-示例的运行结果">3) 示例的运行结果</h3>
-<h4 id="net70-on-x86"><code>.NET7.0</code> on X86</h4>
+<h4 id="net80-on-x86"><code>.NET8.0</code> on X86</h4>
 <p>程序: <code>VectorTraits.Sample</code></p>
 <pre><code>VectorTraits.Sample
 
 IsRelease:	True
-Environment.ProcessorCount:	8
+Environment.ProcessorCount:	16
 Environment.Is64BitProcess:	True
-Environment.OSVersion:	Microsoft Windows NT 10.0.19045.0
-Environment.Version:	7.0.13
+Environment.OSVersion:	Microsoft Windows NT 10.0.22631.0
+Environment.Version:	8.0.8
 Stopwatch.Frequency:	10000000
-RuntimeEnvironment.GetRuntimeDirectory:	C:\Program Files\dotnet\shared\Microsoft.NETCore.App\7.0.13\
-RuntimeInformation.FrameworkDescription:	.NET 7.0.13
+RuntimeEnvironment.GetRuntimeDirectory:	C:\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.8\
+RuntimeInformation.FrameworkDescription:	.NET 8.0.8
 RuntimeInformation.OSArchitecture:	X64
-RuntimeInformation.OSDescription:	Microsoft Windows 10.0.19045
-RuntimeInformation.RuntimeIdentifier:	win10-x64
+RuntimeInformation.OSDescription:	Microsoft Windows 10.0.22631
+RuntimeInformation.RuntimeIdentifier:	win-x64
 IntPtr.Size:	8
 BitConverter.IsLittleEndian:	True
 Vector.IsHardwareAccelerated:	True
 Vector&lt;byte&gt;.Count:	32	# 256bit
 Vector&lt;float&gt;.Count:	8	# 256bit
-Vector&lt;T&gt;.Assembly.CodeBase:	file:///C:/Program Files/dotnet/shared/Microsoft.NETCore.App/7.0.13/System.Private.CoreLib.dll
-GetTargetFrameworkDisplayName(VectorTextUtil):	.NET 7.0
-GetTargetFrameworkDisplayName(TraitsOutput):	.NET 7.0
-VectorTraitsGlobal.InitCheckSum:	7960959	# 0x0079797F
-VectorEnvironment.CpuModelName:	Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
-VectorEnvironment.SupportedInstructionSets:	Aes, Avx, Avx2, Bmi1, Bmi2, Fma, Lzcnt, Pclmulqdq, Popcnt, Sse, Sse2, Sse3, Ssse3, Sse41, Sse42, X86Base
-Vector128s.Instance:	WVectorTraits128Avx2	// Sse, Sse2, Sse3, Ssse3, Sse41, Sse42, Avx, Avx2
-Vector256s.Instance:	WVectorTraits256Avx2	// Avx, Avx2, Sse, Sse2
-Vectors.Instance:	VectorTraits256Avx2	// Avx, Avx2, Sse, Sse2
+Vector128.IsHardwareAccelerated:	True
+Vector256.IsHardwareAccelerated:	True
+Vector512.IsHardwareAccelerated:	True
+Vector&lt;T&gt;.Assembly.CodeBase:	file:///C:/Program Files/dotnet/shared/Microsoft.NETCore.App/8.0.8/System.Private.CoreLib.dll
+GetTargetFrameworkDisplayName(VectorTextUtil):	.NET 8.0
+GetTargetFrameworkDisplayName(TraitsOutput):	.NET 8.0
+VectorTraitsGlobal.InitCheckSum:	-2122844161	# 0x8177F7FF
+VectorEnvironment.CpuModelName:	AMD Ryzen 7 7840H w/ Radeon 780M Graphics
+VectorEnvironment.SupportedInstructionSets:	Aes, Avx, Avx2, Avx512BW, Avx512CD, Avx512DQ, Avx512F, Avx512Vbmi, Avx512VL, Bmi1, Bmi2, Fma, Lzcnt, Pclmulqdq, Popcnt, Sse, Sse2, Sse3, Ssse3, Sse41, Sse42, X86Base
+Vector128s.Instance:	WVectorTraits128Avx2	// Sse, Sse2, Sse3, Ssse3, Sse41, Sse42, Avx, Avx2, Avx512VL
+Vector256s.Instance:	WVectorTraits256Avx2	// Avx, Avx2, Sse, Sse2, Avx512VL
+Vector512s.Instance:	WVectorTraits512Avx512	// Avx512BW, Avx512DQ, Avx512F, Avx512Vbmi, Avx, Avx2, Sse, Sse2
+Vectors.Instance:	VectorTraits256Avx2	// Avx, Avx2, Sse, Sse2, Avx512VL
 Vectors.BaseInstance:	VectorTraits256Base
 
 src:    &lt;0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7&gt;        # (0000 0001 0002 0003 0004 0005 0006 0007 0000 0001 0002 0003 0004 0005 0006 0007)
@@ -271,35 +284,38 @@ Equals to Shuffle_Core: True
 ShiftLeft_AcceleratedTypes:     SByte, Byte, Int16, UInt16, Int32, UInt32, Int64, UInt64        # (00001FE0)
 Shuffle_AcceleratedTypes:       SByte, Byte, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double        # (00007FE0)
 </code></pre>
-<p>注: <code>Vectors.Instance</code> 及之前的文本, 是<code>TraitsOutput.OutputEnvironment</code>输出的环境信息. 而从 <code>src</code> 开始的, 才是示例的主体代码.
+<p>注: <code>Vectors.BaseInstance</code> 及之前的文本, 是<code>TraitsOutput.OutputEnvironment</code>输出的环境信息. 而从 <code>src</code> 开始的, 才是示例的主体代码.
 由于CPU支持X86的Avx2指令集, 于是 <code>Vector&lt;byte&gt;.Count</code> 为 32(256bit), <code>Vectors.Instance</code> 为 <code>VectorTraits256Avx2</code>.</p>
-<h4 id="net70-on-arm"><code>.NET7.0</code> on Arm</h4>
+<h4 id="net80-on-arm"><code>.NET8.0</code> on Arm</h4>
 <p>程序: <code>VectorTraits.Sample</code></p>
 <pre><code>VectorTraits.Sample
 
 IsRelease:	True
 Environment.ProcessorCount:	2
 Environment.Is64BitProcess:	True
-Environment.OSVersion:	Unix 6.2.0.1013
-Environment.Version:	7.0.8
+Environment.OSVersion:	Unix 6.8.0.1015
+Environment.Version:	8.0.7
 Stopwatch.Frequency:	1000000000
-RuntimeEnvironment.GetRuntimeDirectory:	/home/ubuntu/.dotnet/shared/Microsoft.NETCore.App/7.0.8/
-RuntimeInformation.FrameworkDescription:	.NET 7.0.8
+RuntimeEnvironment.GetRuntimeDirectory:	/home/ubuntu/.dotnet/shared/Microsoft.NETCore.App/8.0.7/
+RuntimeInformation.FrameworkDescription:	.NET 8.0.7
 RuntimeInformation.OSArchitecture:	Arm64
-RuntimeInformation.OSDescription:	Linux 6.2.0-1013-aws #13~22.04.1-Ubuntu SMP Fri Sep  8 20:05:18 UTC 2023
-RuntimeInformation.RuntimeIdentifier:	ubuntu.22.04-arm64
+RuntimeInformation.OSDescription:	Ubuntu 22.04.2 LTS
+RuntimeInformation.RuntimeIdentifier:	linux-arm64
 IntPtr.Size:	8
 BitConverter.IsLittleEndian:	True
 Vector.IsHardwareAccelerated:	True
 Vector&lt;byte&gt;.Count:	16	# 128bit
 Vector&lt;float&gt;.Count:	4	# 128bit
-Vector&lt;T&gt;.Assembly.CodeBase:	file:///home/ubuntu/.dotnet/shared/Microsoft.NETCore.App/7.0.8/System.Private.CoreLib.dll
-GetTargetFrameworkDisplayName(VectorTextUtil):	.NET 7.0
-GetTargetFrameworkDisplayName(TraitsOutput):	.NET 7.0
-VectorTraitsGlobal.InitCheckSum:	7960961	# 0x00797981
+Vector128.IsHardwareAccelerated:	True
+Vector256.IsHardwareAccelerated:	False
+Vector512.IsHardwareAccelerated:	False
+Vector&lt;T&gt;.Assembly.CodeBase:	file:///home/ubuntu/.dotnet/shared/Microsoft.NETCore.App/8.0.7/System.Private.CoreLib.dll
+GetTargetFrameworkDisplayName(VectorTextUtil):	.NET 8.0
+GetTargetFrameworkDisplayName(TraitsOutput):	.NET 8.0
+VectorTraitsGlobal.InitCheckSum:	-2122844159	# 0x8177F801
 VectorEnvironment.CpuModelName:	Neoverse-N1
 VectorEnvironment.CpuFlags:	fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp ssbs
-VectorEnvironment.SupportedInstructionSets:	AdvSimd, Aes, ArmBase, Crc32, Sha1, Sha256
+VectorEnvironment.SupportedInstructionSets:	AdvSimd, Aes, ArmBase, Crc32, Dp, Rdm, Sha1, Sha256
 Vector128s.Instance:	WVectorTraits128AdvSimdB64	// AdvSimd
 Vectors.Instance:	VectorTraits128AdvSimdB64	// AdvSimd
 Vectors.BaseInstance:	VectorTraits128Base
@@ -324,25 +340,25 @@ Shuffle_AcceleratedTypes:	SByte, Byte, Int16, UInt16, Int32, UInt32, Int64, UInt
 <pre><code>VectorTraits.Sample
 
 IsRelease:	True
-Environment.ProcessorCount:	8
+Environment.ProcessorCount:	16
 Environment.Is64BitProcess:	True
 Environment.OSVersion:	Microsoft Windows NT 6.2.9200.0
 Environment.Version:	4.0.30319.42000
 Stopwatch.Frequency:	10000000
 RuntimeEnvironment.GetRuntimeDirectory:	C:\Windows\Microsoft.NET\Framework64\v4.0.30319\
-RuntimeInformation.FrameworkDescription:	.NET Framework 4.8.9195.0
+RuntimeInformation.FrameworkDescription:	.NET Framework 4.8.9277.0
 RuntimeInformation.OSArchitecture:	X64
-RuntimeInformation.OSDescription:	Microsoft Windows 10.0.19045 
+RuntimeInformation.OSDescription:	Microsoft Windows 10.0.22631 
 IntPtr.Size:	8
 BitConverter.IsLittleEndian:	True
 Vector.IsHardwareAccelerated:	True
 Vector&lt;byte&gt;.Count:	32	# 256bit
 Vector&lt;float&gt;.Count:	8	# 256bit
-Vector&lt;T&gt;.Assembly.CodeBase:	file:///E:/910Soft/MyCode/VectorTraits_test/RunBenchmarks_All/VectorTraits.Benchmarks.NetFw/bin/Release/System.Numerics.Vectors.DLL
+Vector&lt;T&gt;.Assembly.CodeBase:	file:///E:/zylSelf/Code/cs/base/VectorTraits/tests/VectorTraits.Benchmarks.NetFw/bin/Release/System.Numerics.Vectors.DLL
 GetTargetFrameworkDisplayName(VectorTextUtil):	.NET Standard 1.1
 GetTargetFrameworkDisplayName(TraitsOutput):	.NET Framework 4.5
 VectorTraitsGlobal.InitCheckSum:	-25396097	# 0xFE7C7C7F
-VectorEnvironment.CpuModelName:	Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+VectorEnvironment.CpuModelName:	AMD Ryzen 7 7840H w/ Radeon 780M Graphics
 VectorEnvironment.SupportedInstructionSets:	
 Vectors.Instance:	VectorTraits256Base	// 
 Vectors.BaseInstance:	VectorTraits256Base
@@ -366,7 +382,7 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <h3 id="shiftleft">ShiftLeft</h3>
 <p>ShiftLeft: 将向量的每个元素左移指定量.
 它是<code>.NET 7.0</code>所新增的向量方法.</p>
-<h4 id="shiftleft---x86---lntel-core-i5-8250u">ShiftLeft - x86 - lntel Core i5-8250U</h4>
+<h4 id="shiftleft---x86---amd-ryzen-7-7840h">ShiftLeft - X86 - AMD Ryzen 7 7840H</h4>
 <table>
 <thead>
 <tr>
@@ -378,18 +394,20 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">Byte</td>
 <td style="text-align: left;">SumSLLScalar</td>
-<td style="text-align: right;">853.802</td>
-<td style="text-align: right;">817.528</td>
-<td style="text-align: right;">1104.993</td>
-<td style="text-align: right;">1118.381</td>
-<td style="text-align: right;">1374.255</td>
-<td style="text-align: right;">1480.225</td>
+<td style="text-align: right;">1062.046</td>
+<td style="text-align: right;">1025.936</td>
+<td style="text-align: right;">1287.865</td>
+<td style="text-align: right;">1265.446</td>
+<td style="text-align: right;">1445.575</td>
+<td style="text-align: right;">1416.712</td>
+<td style="text-align: right;">1693.330</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
@@ -399,7 +417,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">1128.290</td>
+<td style="text-align: right;">1344.738</td>
+<td style="text-align: right;">1109.752</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
@@ -409,57 +428,63 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">1137.564</td>
+<td style="text-align: right;">1281.901</td>
+<td style="text-align: right;">1164.382</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
 <td style="text-align: left;">SumSLLTraits</td>
-<td style="text-align: right;">8296.682</td>
-<td style="text-align: right;">8114.085</td>
-<td style="text-align: right;">21811.573</td>
-<td style="text-align: right;">19960.732</td>
-<td style="text-align: right;">21044.192</td>
-<td style="text-align: right;">23074.627</td>
+<td style="text-align: right;">11312.499</td>
+<td style="text-align: right;">10715.920</td>
+<td style="text-align: right;">28897.868</td>
+<td style="text-align: right;">28611.234</td>
+<td style="text-align: right;">28219.205</td>
+<td style="text-align: right;">34068.741</td>
+<td style="text-align: right;">57456.802</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
 <td style="text-align: left;">SumSLLTraits_Core</td>
-<td style="text-align: right;">33328.333</td>
-<td style="text-align: right;">35503.285</td>
-<td style="text-align: right;">41644.146</td>
-<td style="text-align: right;">35703.816</td>
-<td style="text-align: right;">36615.138</td>
-<td style="text-align: right;">32872.874</td>
+<td style="text-align: right;">55791.675</td>
+<td style="text-align: right;">52165.732</td>
+<td style="text-align: right;">53563.421</td>
+<td style="text-align: right;">68653.359</td>
+<td style="text-align: right;">59916.622</td>
+<td style="text-align: right;">67868.291</td>
+<td style="text-align: right;">74889.177</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
 <td style="text-align: left;">SumSLLConstTraits</td>
-<td style="text-align: right;">10849.899</td>
-<td style="text-align: right;">10168.754</td>
-<td style="text-align: right;">25029.290</td>
-<td style="text-align: right;">29761.737</td>
-<td style="text-align: right;">33785.502</td>
-<td style="text-align: right;">32862.094</td>
+<td style="text-align: right;">13408.916</td>
+<td style="text-align: right;">12604.412</td>
+<td style="text-align: right;">38925.388</td>
+<td style="text-align: right;">57842.081</td>
+<td style="text-align: right;">57095.294</td>
+<td style="text-align: right;">62012.692</td>
+<td style="text-align: right;">62729.225</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
 <td style="text-align: left;">SumSLLConstTraits_Core</td>
-<td style="text-align: right;">36537.668</td>
-<td style="text-align: right;">31837.586</td>
-<td style="text-align: right;">39307.523</td>
-<td style="text-align: right;">35698.909</td>
-<td style="text-align: right;">35679.744</td>
-<td style="text-align: right;">33994.997</td>
+<td style="text-align: right;">56843.523</td>
+<td style="text-align: right;">55673.528</td>
+<td style="text-align: right;">53642.484</td>
+<td style="text-align: right;">62674.397</td>
+<td style="text-align: right;">65797.708</td>
+<td style="text-align: right;">50869.840</td>
+<td style="text-align: right;">73873.979</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSLLScalar</td>
-<td style="text-align: right;">823.668</td>
-<td style="text-align: right;">806.395</td>
-<td style="text-align: right;">1176.133</td>
-<td style="text-align: right;">1183.966</td>
-<td style="text-align: right;">1379.498</td>
-<td style="text-align: right;">1486.900</td>
+<td style="text-align: right;">1081.716</td>
+<td style="text-align: right;">999.767</td>
+<td style="text-align: right;">1261.475</td>
+<td style="text-align: right;">1198.111</td>
+<td style="text-align: right;">1218.767</td>
+<td style="text-align: right;">1365.754</td>
+<td style="text-align: right;">1547.294</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
@@ -469,7 +494,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">18445.571</td>
+<td style="text-align: right;">32011.646</td>
+<td style="text-align: right;">34816.284</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
@@ -479,57 +505,63 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">19054.243</td>
+<td style="text-align: right;">39975.924</td>
+<td style="text-align: right;">37368.541</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSLLTraits</td>
-<td style="text-align: right;">5076.036</td>
-<td style="text-align: right;">5047.453</td>
-<td style="text-align: right;">16986.361</td>
-<td style="text-align: right;">16653.329</td>
-<td style="text-align: right;">16496.182</td>
-<td style="text-align: right;">16114.543</td>
+<td style="text-align: right;">6752.349</td>
+<td style="text-align: right;">6185.968</td>
+<td style="text-align: right;">25221.856</td>
+<td style="text-align: right;">26382.708</td>
+<td style="text-align: right;">27125.955</td>
+<td style="text-align: right;">32617.944</td>
+<td style="text-align: right;">36448.716</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSLLTraits_Core</td>
-<td style="text-align: right;">20318.984</td>
-<td style="text-align: right;">18959.033</td>
-<td style="text-align: right;">20182.655</td>
-<td style="text-align: right;">17683.717</td>
-<td style="text-align: right;">18500.302</td>
-<td style="text-align: right;">18439.182</td>
+<td style="text-align: right;">34727.283</td>
+<td style="text-align: right;">31457.238</td>
+<td style="text-align: right;">31800.310</td>
+<td style="text-align: right;">32231.553</td>
+<td style="text-align: right;">35687.996</td>
+<td style="text-align: right;">37750.305</td>
+<td style="text-align: right;">30731.745</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSLLConstTraits</td>
-<td style="text-align: right;">5899.256</td>
-<td style="text-align: right;">5693.084</td>
-<td style="text-align: right;">16944.673</td>
-<td style="text-align: right;">19378.434</td>
-<td style="text-align: right;">21059.682</td>
-<td style="text-align: right;">19572.551</td>
+<td style="text-align: right;">6037.367</td>
+<td style="text-align: right;">6498.819</td>
+<td style="text-align: right;">27783.526</td>
+<td style="text-align: right;">37605.559</td>
+<td style="text-align: right;">40699.914</td>
+<td style="text-align: right;">39598.663</td>
+<td style="text-align: right;">36242.630</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSLLConstTraits_Core</td>
-<td style="text-align: right;">20172.952</td>
-<td style="text-align: right;">19339.311</td>
-<td style="text-align: right;">18407.673</td>
-<td style="text-align: right;">19850.711</td>
-<td style="text-align: right;">21232.279</td>
-<td style="text-align: right;">18136.492</td>
+<td style="text-align: right;">37678.435</td>
+<td style="text-align: right;">34784.616</td>
+<td style="text-align: right;">32625.543</td>
+<td style="text-align: right;">33694.338</td>
+<td style="text-align: right;">40019.325</td>
+<td style="text-align: right;">39380.404</td>
+<td style="text-align: right;">36914.775</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSLLScalar</td>
-<td style="text-align: right;">803.506</td>
-<td style="text-align: right;">820.639</td>
-<td style="text-align: right;">1307.614</td>
-<td style="text-align: right;">1328.703</td>
-<td style="text-align: right;">2199.685</td>
-<td style="text-align: right;">1587.071</td>
+<td style="text-align: right;">1369.140</td>
+<td style="text-align: right;">1315.852</td>
+<td style="text-align: right;">1514.690</td>
+<td style="text-align: right;">1521.516</td>
+<td style="text-align: right;">2284.670</td>
+<td style="text-align: right;">2484.407</td>
+<td style="text-align: right;">2409.358</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
@@ -539,7 +571,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">9469.894</td>
+<td style="text-align: right;">17373.567</td>
+<td style="text-align: right;">15954.004</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
@@ -549,57 +582,63 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">10657.900</td>
+<td style="text-align: right;">17967.080</td>
+<td style="text-align: right;">15983.409</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSLLTraits</td>
-<td style="text-align: right;">2571.456</td>
-<td style="text-align: right;">2678.866</td>
-<td style="text-align: right;">8246.402</td>
-<td style="text-align: right;">7799.748</td>
-<td style="text-align: right;">8221.382</td>
-<td style="text-align: right;">9594.126</td>
+<td style="text-align: right;">3762.374</td>
+<td style="text-align: right;">3511.433</td>
+<td style="text-align: right;">13343.304</td>
+<td style="text-align: right;">12906.293</td>
+<td style="text-align: right;">12661.423</td>
+<td style="text-align: right;">17279.760</td>
+<td style="text-align: right;">15886.410</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSLLTraits_Core</td>
-<td style="text-align: right;">8574.361</td>
-<td style="text-align: right;">8465.712</td>
-<td style="text-align: right;">10320.833</td>
-<td style="text-align: right;">10408.381</td>
-<td style="text-align: right;">10626.910</td>
-<td style="text-align: right;">10035.217</td>
+<td style="text-align: right;">17324.275</td>
+<td style="text-align: right;">15468.381</td>
+<td style="text-align: right;">14587.937</td>
+<td style="text-align: right;">17407.823</td>
+<td style="text-align: right;">17886.651</td>
+<td style="text-align: right;">18052.162</td>
+<td style="text-align: right;">14126.571</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSLLConstTraits</td>
-<td style="text-align: right;">1493.590</td>
-<td style="text-align: right;">2922.103</td>
-<td style="text-align: right;">8155.046</td>
-<td style="text-align: right;">9293.148</td>
-<td style="text-align: right;">10579.400</td>
-<td style="text-align: right;">10185.431</td>
+<td style="text-align: right;">3910.600</td>
+<td style="text-align: right;">3724.412</td>
+<td style="text-align: right;">12646.545</td>
+<td style="text-align: right;">15290.340</td>
+<td style="text-align: right;">17745.992</td>
+<td style="text-align: right;">17829.078</td>
+<td style="text-align: right;">15991.615</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSLLConstTraits_Core</td>
-<td style="text-align: right;">8467.974</td>
-<td style="text-align: right;">8554.920</td>
-<td style="text-align: right;">9784.699</td>
-<td style="text-align: right;">10384.732</td>
-<td style="text-align: right;">9790.898</td>
-<td style="text-align: right;">10329.112</td>
+<td style="text-align: right;">16235.154</td>
+<td style="text-align: right;">14216.598</td>
+<td style="text-align: right;">15282.565</td>
+<td style="text-align: right;">16088.400</td>
+<td style="text-align: right;">17940.330</td>
+<td style="text-align: right;">15961.166</td>
+<td style="text-align: right;">16378.506</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSLLScalar</td>
-<td style="text-align: right;">797.703</td>
-<td style="text-align: right;">816.504</td>
-<td style="text-align: right;">1295.009</td>
-<td style="text-align: right;">1305.611</td>
-<td style="text-align: right;">2043.527</td>
-<td style="text-align: right;">1535.809</td>
+<td style="text-align: right;">1394.719</td>
+<td style="text-align: right;">1281.156</td>
+<td style="text-align: right;">1517.938</td>
+<td style="text-align: right;">1441.160</td>
+<td style="text-align: right;">2270.521</td>
+<td style="text-align: right;">2508.577</td>
+<td style="text-align: right;">2421.558</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
@@ -609,7 +648,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">4143.077</td>
+<td style="text-align: right;">7528.184</td>
+<td style="text-align: right;">8530.835</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
@@ -619,47 +659,52 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">4903.130</td>
+<td style="text-align: right;">8743.504</td>
+<td style="text-align: right;">8471.981</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSLLTraits</td>
-<td style="text-align: right;">426.950</td>
-<td style="text-align: right;">458.517</td>
-<td style="text-align: right;">3867.136</td>
-<td style="text-align: right;">3941.999</td>
-<td style="text-align: right;">3964.762</td>
-<td style="text-align: right;">3713.754</td>
+<td style="text-align: right;">483.430</td>
+<td style="text-align: right;">494.335</td>
+<td style="text-align: right;">6677.544</td>
+<td style="text-align: right;">6570.711</td>
+<td style="text-align: right;">6635.070</td>
+<td style="text-align: right;">6891.705</td>
+<td style="text-align: right;">7469.236</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSLLTraits_Core</td>
-<td style="text-align: right;">441.378</td>
-<td style="text-align: right;">463.537</td>
-<td style="text-align: right;">4802.911</td>
-<td style="text-align: right;">4813.018</td>
-<td style="text-align: right;">4776.182</td>
-<td style="text-align: right;">4653.104</td>
+<td style="text-align: right;">479.761</td>
+<td style="text-align: right;">488.827</td>
+<td style="text-align: right;">7758.515</td>
+<td style="text-align: right;">8525.784</td>
+<td style="text-align: right;">8596.290</td>
+<td style="text-align: right;">8267.855</td>
+<td style="text-align: right;">7879.060</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSLLConstTraits</td>
-<td style="text-align: right;">490.135</td>
-<td style="text-align: right;">536.949</td>
-<td style="text-align: right;">3929.109</td>
-<td style="text-align: right;">4018.072</td>
-<td style="text-align: right;">4725.293</td>
-<td style="text-align: right;">4712.366</td>
+<td style="text-align: right;">509.585</td>
+<td style="text-align: right;">525.195</td>
+<td style="text-align: right;">7036.223</td>
+<td style="text-align: right;">6787.101</td>
+<td style="text-align: right;">8246.601</td>
+<td style="text-align: right;">8254.880</td>
+<td style="text-align: right;">8526.022</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSLLConstTraits_Core</td>
-<td style="text-align: right;">491.263</td>
-<td style="text-align: right;">531.946</td>
-<td style="text-align: right;">4930.099</td>
-<td style="text-align: right;">4737.462</td>
-<td style="text-align: right;">4782.430</td>
-<td style="text-align: right;">4371.649</td>
+<td style="text-align: right;">512.652</td>
+<td style="text-align: right;">528.381</td>
+<td style="text-align: right;">8229.954</td>
+<td style="text-align: right;">8747.125</td>
+<td style="text-align: right;">8711.523</td>
+<td style="text-align: right;">8871.948</td>
+<td style="text-align: right;">8647.339</td>
 </tr>
 </tbody>
 </table>
@@ -674,7 +719,7 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <li>SumSLLConstTraits_Core: 使用本库的 <code>ConstCore</code> 后缀的方法(<code>Vectors.ShiftLeft_Args</code>, <code>Vectors.ShiftLeft_ConstCore</code>), 参数是常量.</li>
 </ul>
 <p>BCL的方法(<code>Vector.ShiftLeft</code>) 在X86平台运行时, 仅 Int16/Int32/Int64 有硬件加速, 而 Byte 没有硬件加速. 这是可能是因为 Avx2 指令集仅有 16~64位 的左移位指令, 未提供其他类型的指令, BCL便转为软件算法了.
-而本库对于这些数字类型, 会换成由其他指令组合实现的高效算法. 例如对于 Byte类型, SumSLLConstTraits_Core 在<code>.NET 7.0</code>的值为“32872.874”, 性能是 标量算法的 <code>32872.874/1480.225≈22.2080</code> 倍, 且是BCL方法的 <code>32872.874/1137.564≈28.8976</code> 倍.
+而本库对于这些数字类型, 会换成由其他指令组合实现的高效算法. 例如对于 Byte类型, SumSLLConstTraits_Core 在<code>.NET 8.0</code>的值为“73873.979”, 性能是 标量算法的 <code>73873.979/1693.330≈43.6264</code> 倍, 且是BCL方法的 <code>73873.979/1164.382≈63.4448</code> 倍.
 因为X86的内在函数是从<code>.NET Core 3.0</code>开始才提供的. 故对于 Int64类型, 在 <code>.NET Core 3.0</code> 之后才有硬件加速.</p>
 <p>对于ShiftLeft来说, 当参数<code>shiftAmount</code> 是常量时, 性能一般会比用变量时更高. 无论是 BCL还是本库的方法, 都是如此.
 使用本库的 <code>Core</code> 后缀的方法,  能将部分运算挪到循环外去提前处理, 从而优化了性能. 而当 CPU提供了常数参数的指令时（专业术语是“立即数参数”）, 该指令的性能一般会更高. 于是本库还提供了 <code>ConstCore</code> 后缀的方法, 会选择该平台最快的指令.
@@ -690,16 +735,18 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">Byte</td>
 <td style="text-align: left;">SumSLLScalar</td>
-<td style="text-align: right;">610.192</td>
-<td style="text-align: right;">610.563</td>
-<td style="text-align: right;">653.197</td>
-<td style="text-align: right;">891.088</td>
+<td style="text-align: right;">606.721</td>
+<td style="text-align: right;">607.751</td>
+<td style="text-align: right;">674.256</td>
+<td style="text-align: right;">890.878</td>
+<td style="text-align: right;">1238.814</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
@@ -707,7 +754,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">19580.464</td>
+<td style="text-align: right;">19585.982</td>
+<td style="text-align: right;">19831.927</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
@@ -715,47 +763,53 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">19599.073</td>
+<td style="text-align: right;">19564.840</td>
+<td style="text-align: right;">19840.232</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
 <td style="text-align: left;">SumSLLTraits</td>
-<td style="text-align: right;">5668.036</td>
-<td style="text-align: right;">13252.891</td>
-<td style="text-align: right;">13253.575</td>
-<td style="text-align: right;">13241.598</td>
+<td style="text-align: right;">5541.532</td>
+<td style="text-align: right;">13075.259</td>
+<td style="text-align: right;">13190.705</td>
+<td style="text-align: right;">13209.927</td>
+<td style="text-align: right;">19844.497</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
 <td style="text-align: left;">SumSLLTraits_Core</td>
-<td style="text-align: right;">14341.895</td>
-<td style="text-align: right;">15888.315</td>
-<td style="text-align: right;">15887.520</td>
-<td style="text-align: right;">19595.005</td>
+<td style="text-align: right;">14048.511</td>
+<td style="text-align: right;">16947.485</td>
+<td style="text-align: right;">15828.571</td>
+<td style="text-align: right;">19589.430</td>
+<td style="text-align: right;">19841.525</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
 <td style="text-align: left;">SumSLLConstTraits</td>
-<td style="text-align: right;">9946.663</td>
-<td style="text-align: right;">13243.304</td>
-<td style="text-align: right;">15895.672</td>
-<td style="text-align: right;">19466.408</td>
+<td style="text-align: right;">9734.870</td>
+<td style="text-align: right;">15699.315</td>
+<td style="text-align: right;">15853.772</td>
+<td style="text-align: right;">19511.952</td>
+<td style="text-align: right;">19811.385</td>
 </tr>
 <tr>
 <td style="text-align: left;">Byte</td>
 <td style="text-align: left;">SumSLLConstTraits_Core</td>
-<td style="text-align: right;">13201.657</td>
-<td style="text-align: right;">15896.748</td>
-<td style="text-align: right;">15894.093</td>
-<td style="text-align: right;">19447.318</td>
+<td style="text-align: right;">13007.028</td>
+<td style="text-align: right;">16817.247</td>
+<td style="text-align: right;">15838.060</td>
+<td style="text-align: right;">19422.222</td>
+<td style="text-align: right;">19839.627</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSLLScalar</td>
-<td style="text-align: right;">606.942</td>
-<td style="text-align: right;">607.226</td>
-<td style="text-align: right;">607.742</td>
-<td style="text-align: right;">765.154</td>
+<td style="text-align: right;">606.135</td>
+<td style="text-align: right;">603.800</td>
+<td style="text-align: right;">605.734</td>
+<td style="text-align: right;">820.880</td>
+<td style="text-align: right;">1031.035</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
@@ -763,7 +817,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">9332.186</td>
+<td style="text-align: right;">9943.220</td>
+<td style="text-align: right;">9803.495</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
@@ -771,47 +826,53 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">9240.256</td>
+<td style="text-align: right;">9937.639</td>
+<td style="text-align: right;">9837.136</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSLLTraits</td>
-<td style="text-align: right;">4231.310</td>
-<td style="text-align: right;">6553.072</td>
-<td style="text-align: right;">6603.431</td>
-<td style="text-align: right;">9351.061</td>
+<td style="text-align: right;">4215.369</td>
+<td style="text-align: right;">6547.514</td>
+<td style="text-align: right;">6558.299</td>
+<td style="text-align: right;">9923.088</td>
+<td style="text-align: right;">9839.256</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSLLTraits_Core</td>
-<td style="text-align: right;">7881.834</td>
-<td style="text-align: right;">7897.878</td>
-<td style="text-align: right;">8449.502</td>
-<td style="text-align: right;">9356.142</td>
+<td style="text-align: right;">7918.688</td>
+<td style="text-align: right;">8431.934</td>
+<td style="text-align: right;">7892.235</td>
+<td style="text-align: right;">9939.469</td>
+<td style="text-align: right;">9839.496</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSLLConstTraits</td>
-<td style="text-align: right;">6577.829</td>
-<td style="text-align: right;">6620.078</td>
-<td style="text-align: right;">8444.304</td>
-<td style="text-align: right;">9359.246</td>
+<td style="text-align: right;">6568.606</td>
+<td style="text-align: right;">7829.860</td>
+<td style="text-align: right;">7887.842</td>
+<td style="text-align: right;">9925.988</td>
+<td style="text-align: right;">9839.534</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSLLConstTraits_Core</td>
-<td style="text-align: right;">8383.107</td>
-<td style="text-align: right;">7923.119</td>
-<td style="text-align: right;">8443.802</td>
-<td style="text-align: right;">9317.663</td>
+<td style="text-align: right;">8494.550</td>
+<td style="text-align: right;">8416.796</td>
+<td style="text-align: right;">7902.444</td>
+<td style="text-align: right;">9914.384</td>
+<td style="text-align: right;">9823.608</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSLLScalar</td>
-<td style="text-align: right;">749.491</td>
-<td style="text-align: right;">746.414</td>
-<td style="text-align: right;">747.273</td>
-<td style="text-align: right;">1403.533</td>
+<td style="text-align: right;">747.656</td>
+<td style="text-align: right;">746.013</td>
+<td style="text-align: right;">749.108</td>
+<td style="text-align: right;">1406.122</td>
+<td style="text-align: right;">1410.137</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
@@ -819,7 +880,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">4537.804</td>
+<td style="text-align: right;">4926.651</td>
+<td style="text-align: right;">4826.909</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
@@ -827,47 +889,53 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">4533.257</td>
+<td style="text-align: right;">4917.732</td>
+<td style="text-align: right;">4840.232</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSLLTraits</td>
-<td style="text-align: right;">3233.214</td>
-<td style="text-align: right;">3531.441</td>
-<td style="text-align: right;">3530.389</td>
-<td style="text-align: right;">4545.497</td>
+<td style="text-align: right;">3293.943</td>
+<td style="text-align: right;">3269.129</td>
+<td style="text-align: right;">3278.303</td>
+<td style="text-align: right;">4925.488</td>
+<td style="text-align: right;">4836.941</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSLLTraits_Core</td>
-<td style="text-align: right;">3901.975</td>
-<td style="text-align: right;">4140.171</td>
-<td style="text-align: right;">4142.377</td>
-<td style="text-align: right;">4505.555</td>
+<td style="text-align: right;">4210.811</td>
+<td style="text-align: right;">3930.619</td>
+<td style="text-align: right;">3927.408</td>
+<td style="text-align: right;">4923.867</td>
+<td style="text-align: right;">4844.083</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSLLConstTraits</td>
-<td style="text-align: right;">3510.471</td>
-<td style="text-align: right;">3865.285</td>
-<td style="text-align: right;">4134.108</td>
-<td style="text-align: right;">4568.054</td>
+<td style="text-align: right;">3275.986</td>
+<td style="text-align: right;">3249.809</td>
+<td style="text-align: right;">3923.176</td>
+<td style="text-align: right;">4926.463</td>
+<td style="text-align: right;">4846.238</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSLLConstTraits_Core</td>
-<td style="text-align: right;">3905.829</td>
-<td style="text-align: right;">3895.898</td>
-<td style="text-align: right;">3896.719</td>
-<td style="text-align: right;">4547.294</td>
+<td style="text-align: right;">4205.245</td>
+<td style="text-align: right;">4199.155</td>
+<td style="text-align: right;">4156.634</td>
+<td style="text-align: right;">4925.448</td>
+<td style="text-align: right;">4844.679</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSLLScalar</td>
-<td style="text-align: right;">743.187</td>
-<td style="text-align: right;">742.685</td>
-<td style="text-align: right;">743.760</td>
-<td style="text-align: right;">1372.299</td>
+<td style="text-align: right;">739.137</td>
+<td style="text-align: right;">729.158</td>
+<td style="text-align: right;">741.673</td>
+<td style="text-align: right;">1372.480</td>
+<td style="text-align: right;">1296.655</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
@@ -875,7 +943,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">2473.172</td>
+<td style="text-align: right;">2477.025</td>
+<td style="text-align: right;">2264.032</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
@@ -883,39 +952,44 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">2468.456</td>
+<td style="text-align: right;">2473.102</td>
+<td style="text-align: right;">2251.272</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSLLTraits</td>
-<td style="text-align: right;">482.056</td>
-<td style="text-align: right;">1637.232</td>
-<td style="text-align: right;">1640.547</td>
-<td style="text-align: right;">1981.831</td>
+<td style="text-align: right;">486.734</td>
+<td style="text-align: right;">1638.835</td>
+<td style="text-align: right;">1636.233</td>
+<td style="text-align: right;">1985.596</td>
+<td style="text-align: right;">2285.512</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSLLTraits_Core</td>
-<td style="text-align: right;">488.072</td>
-<td style="text-align: right;">1970.152</td>
-<td style="text-align: right;">2088.793</td>
-<td style="text-align: right;">2468.202</td>
+<td style="text-align: right;">489.554</td>
+<td style="text-align: right;">2075.273</td>
+<td style="text-align: right;">1967.902</td>
+<td style="text-align: right;">2474.105</td>
+<td style="text-align: right;">2289.521</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSLLConstTraits</td>
-<td style="text-align: right;">467.942</td>
-<td style="text-align: right;">1958.432</td>
-<td style="text-align: right;">2099.095</td>
-<td style="text-align: right;">2460.619</td>
+<td style="text-align: right;">467.393</td>
+<td style="text-align: right;">1930.821</td>
+<td style="text-align: right;">1968.798</td>
+<td style="text-align: right;">2471.124</td>
+<td style="text-align: right;">2308.745</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSLLConstTraits_Core</td>
-<td style="text-align: right;">470.112</td>
-<td style="text-align: right;">1971.898</td>
-<td style="text-align: right;">2097.693</td>
-<td style="text-align: right;">2465.419</td>
+<td style="text-align: right;">466.293</td>
+<td style="text-align: right;">2074.656</td>
+<td style="text-align: right;">1968.834</td>
+<td style="text-align: right;">2476.602</td>
+<td style="text-align: right;">2281.018</td>
 </tr>
 </tbody>
 </table>
@@ -935,7 +1009,7 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <h3 id="shiftrightarithmetic">ShiftRightArithmetic</h3>
 <p>ShiftRightArithmetic: 将向量的每个有符号元素算术右移指定量.
 它是<code>.NET 7.0</code>所新增的向量方法.</p>
-<h4 id="shiftrightarithmetic---x86---lntel-core-i5-8250u">ShiftRightArithmetic - x86 - lntel Core i5-8250U</h4>
+<h4 id="shiftrightarithmetic---x86---amd-ryzen-7-7840h">ShiftRightArithmetic - X86 - AMD Ryzen 7 7840H</h4>
 <table>
 <thead>
 <tr>
@@ -947,18 +1021,20 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSRAScalar</td>
-<td style="text-align: right;">823.804</td>
-<td style="text-align: right;">827.734</td>
-<td style="text-align: right;">1180.933</td>
-<td style="text-align: right;">1182.307</td>
-<td style="text-align: right;">1341.171</td>
-<td style="text-align: right;">1592.939</td>
+<td style="text-align: right;">1085.176</td>
+<td style="text-align: right;">1043.731</td>
+<td style="text-align: right;">1227.822</td>
+<td style="text-align: right;">1215.729</td>
+<td style="text-align: right;">1209.230</td>
+<td style="text-align: right;">1310.645</td>
+<td style="text-align: right;">1397.378</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
@@ -968,7 +1044,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">18480.038</td>
+<td style="text-align: right;">31888.645</td>
+<td style="text-align: right;">35102.079</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
@@ -978,57 +1055,63 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">21052.686</td>
+<td style="text-align: right;">39751.018</td>
+<td style="text-align: right;">36630.458</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSRATraits</td>
-<td style="text-align: right;">1557.132</td>
-<td style="text-align: right;">1559.674</td>
-<td style="text-align: right;">17325.184</td>
-<td style="text-align: right;">17699.944</td>
-<td style="text-align: right;">16372.799</td>
-<td style="text-align: right;">17193.661</td>
+<td style="text-align: right;">1829.405</td>
+<td style="text-align: right;">1861.938</td>
+<td style="text-align: right;">25643.096</td>
+<td style="text-align: right;">26584.675</td>
+<td style="text-align: right;">26634.093</td>
+<td style="text-align: right;">31578.602</td>
+<td style="text-align: right;">37184.123</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSRATraits_Core</td>
-<td style="text-align: right;">1653.816</td>
-<td style="text-align: right;">1653.714</td>
-<td style="text-align: right;">18414.632</td>
-<td style="text-align: right;">19664.147</td>
-<td style="text-align: right;">17938.068</td>
-<td style="text-align: right;">18476.248</td>
+<td style="text-align: right;">1837.663</td>
+<td style="text-align: right;">1874.262</td>
+<td style="text-align: right;">33248.481</td>
+<td style="text-align: right;">36967.972</td>
+<td style="text-align: right;">36890.508</td>
+<td style="text-align: right;">37648.798</td>
+<td style="text-align: right;">37673.670</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSRAConstTraits</td>
-<td style="text-align: right;">1672.258</td>
-<td style="text-align: right;">1675.044</td>
-<td style="text-align: right;">17658.703</td>
-<td style="text-align: right;">20409.889</td>
-<td style="text-align: right;">20233.738</td>
-<td style="text-align: right;">20835.294</td>
+<td style="text-align: right;">1836.653</td>
+<td style="text-align: right;">1880.351</td>
+<td style="text-align: right;">28724.613</td>
+<td style="text-align: right;">36985.528</td>
+<td style="text-align: right;">39429.041</td>
+<td style="text-align: right;">32925.588</td>
+<td style="text-align: right;">37356.009</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSRAConstTraits_Core</td>
-<td style="text-align: right;">1714.582</td>
-<td style="text-align: right;">1667.090</td>
-<td style="text-align: right;">20076.043</td>
-<td style="text-align: right;">20212.774</td>
-<td style="text-align: right;">20994.717</td>
-<td style="text-align: right;">21053.837</td>
+<td style="text-align: right;">1830.444</td>
+<td style="text-align: right;">1879.354</td>
+<td style="text-align: right;">33935.625</td>
+<td style="text-align: right;">37498.165</td>
+<td style="text-align: right;">38127.794</td>
+<td style="text-align: right;">33120.549</td>
+<td style="text-align: right;">35752.947</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSRAScalar</td>
-<td style="text-align: right;">825.056</td>
-<td style="text-align: right;">829.789</td>
-<td style="text-align: right;">1275.799</td>
-<td style="text-align: right;">1342.349</td>
-<td style="text-align: right;">1621.295</td>
-<td style="text-align: right;">1620.315</td>
+<td style="text-align: right;">1362.876</td>
+<td style="text-align: right;">1321.507</td>
+<td style="text-align: right;">1508.831</td>
+<td style="text-align: right;">1508.378</td>
+<td style="text-align: right;">2226.648</td>
+<td style="text-align: right;">2555.622</td>
+<td style="text-align: right;">2327.611</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
@@ -1038,7 +1121,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">10132.774</td>
+<td style="text-align: right;">16806.958</td>
+<td style="text-align: right;">15967.982</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
@@ -1048,57 +1132,74 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">11033.258</td>
+<td style="text-align: right;">18365.861</td>
+<td style="text-align: right;">16092.208</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSRATraits</td>
-<td style="text-align: right;">764.013</td>
-<td style="text-align: right;">759.588</td>
-<td style="text-align: right;">8195.470</td>
-<td style="text-align: right;">8298.404</td>
-<td style="text-align: right;">8314.921</td>
-<td style="text-align: right;">9937.082</td>
+<td style="text-align: right;">883.925</td>
+<td style="text-align: right;">895.137</td>
+<td style="text-align: right;">12901.507</td>
+<td style="text-align: right;">12508.762</td>
+<td style="text-align: right;">11931.480</td>
+<td style="text-align: right;">17609.103</td>
+<td style="text-align: right;">16282.512</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSRATraits_Core</td>
-<td style="text-align: right;">826.612</td>
-<td style="text-align: right;">825.854</td>
-<td style="text-align: right;">10576.367</td>
-<td style="text-align: right;">10449.535</td>
-<td style="text-align: right;">9783.716</td>
-<td style="text-align: right;">11108.074</td>
+<td style="text-align: right;">919.507</td>
+<td style="text-align: right;">931.419</td>
+<td style="text-align: right;">15956.786</td>
+<td style="text-align: right;">15252.829</td>
+<td style="text-align: right;">17412.025</td>
+<td style="text-align: right;">18296.493</td>
+<td style="text-align: right;">16230.128</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSRAConstTraits</td>
-<td style="text-align: right;">837.650</td>
-<td style="text-align: right;">834.126</td>
-<td style="text-align: right;">8484.959</td>
-<td style="text-align: right;">9238.089</td>
-<td style="text-align: right;">9979.236</td>
-<td style="text-align: right;">10053.944</td>
+<td style="text-align: right;">911.750</td>
+<td style="text-align: right;">942.523</td>
+<td style="text-align: right;">13450.043</td>
+<td style="text-align: right;">17314.816</td>
+<td style="text-align: right;">14198.095</td>
+<td style="text-align: right;">16799.445</td>
+<td style="text-align: right;">16393.351</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSRAConstTraits_Core</td>
-<td style="text-align: right;">856.397</td>
-<td style="text-align: right;">859.426</td>
-<td style="text-align: right;">10201.125</td>
-<td style="text-align: right;">10314.334</td>
-<td style="text-align: right;">11009.384</td>
-<td style="text-align: right;">10772.948</td>
+<td style="text-align: right;">917.228</td>
+<td style="text-align: right;">938.789</td>
+<td style="text-align: right;">15344.136</td>
+<td style="text-align: right;">15470.629</td>
+<td style="text-align: right;">17084.816</td>
+<td style="text-align: right;">18274.411</td>
+<td style="text-align: right;">16054.229</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumSRAFastTraits</td>
+<td style="text-align: right;">915.754</td>
+<td style="text-align: right;">946.521</td>
+<td style="text-align: right;">13266.168</td>
+<td style="text-align: right;">15337.171</td>
+<td style="text-align: right;">14562.129</td>
+<td style="text-align: right;">17003.224</td>
+<td style="text-align: right;">16124.004</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSRAScalar</td>
-<td style="text-align: right;">815.238</td>
-<td style="text-align: right;">811.645</td>
-<td style="text-align: right;">1300.052</td>
-<td style="text-align: right;">1280.982</td>
-<td style="text-align: right;">1322.441</td>
-<td style="text-align: right;">1602.916</td>
+<td style="text-align: right;">1393.540</td>
+<td style="text-align: right;">1331.963</td>
+<td style="text-align: right;">1532.719</td>
+<td style="text-align: right;">1544.306</td>
+<td style="text-align: right;">1513.245</td>
+<td style="text-align: right;">1801.859</td>
+<td style="text-align: right;">2560.284</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
@@ -1108,7 +1209,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">578.499</td>
+<td style="text-align: right;">524.702</td>
+<td style="text-align: right;">8652.579</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
@@ -1118,57 +1220,63 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">553.963</td>
+<td style="text-align: right;">557.152</td>
+<td style="text-align: right;">8870.207</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSRATraits</td>
-<td style="text-align: right;">447.196</td>
-<td style="text-align: right;">441.690</td>
-<td style="text-align: right;">3032.903</td>
-<td style="text-align: right;">2830.935</td>
-<td style="text-align: right;">2988.130</td>
-<td style="text-align: right;">2922.851</td>
+<td style="text-align: right;">482.604</td>
+<td style="text-align: right;">490.804</td>
+<td style="text-align: right;">4949.328</td>
+<td style="text-align: right;">4970.328</td>
+<td style="text-align: right;">4932.277</td>
+<td style="text-align: right;">4902.239</td>
+<td style="text-align: right;">7541.726</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSRATraits_Core</td>
-<td style="text-align: right;">459.781</td>
-<td style="text-align: right;">458.269</td>
-<td style="text-align: right;">3639.092</td>
-<td style="text-align: right;">3352.255</td>
-<td style="text-align: right;">3336.974</td>
-<td style="text-align: right;">3488.018</td>
+<td style="text-align: right;">509.432</td>
+<td style="text-align: right;">521.769</td>
+<td style="text-align: right;">5941.547</td>
+<td style="text-align: right;">6050.322</td>
+<td style="text-align: right;">6104.433</td>
+<td style="text-align: right;">6043.337</td>
+<td style="text-align: right;">8537.297</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSRAConstTraits</td>
-<td style="text-align: right;">491.449</td>
-<td style="text-align: right;">491.420</td>
-<td style="text-align: right;">3074.926</td>
-<td style="text-align: right;">2820.864</td>
-<td style="text-align: right;">3365.642</td>
-<td style="text-align: right;">3397.660</td>
+<td style="text-align: right;">510.778</td>
+<td style="text-align: right;">529.298</td>
+<td style="text-align: right;">5526.893</td>
+<td style="text-align: right;">5360.460</td>
+<td style="text-align: right;">5834.075</td>
+<td style="text-align: right;">6217.509</td>
+<td style="text-align: right;">7562.071</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSRAConstTraits_Core</td>
-<td style="text-align: right;">496.174</td>
-<td style="text-align: right;">491.022</td>
-<td style="text-align: right;">3660.380</td>
-<td style="text-align: right;">3365.210</td>
-<td style="text-align: right;">3398.657</td>
-<td style="text-align: right;">3237.150</td>
+<td style="text-align: right;">509.597</td>
+<td style="text-align: right;">531.344</td>
+<td style="text-align: right;">5899.752</td>
+<td style="text-align: right;">5978.398</td>
+<td style="text-align: right;">6049.756</td>
+<td style="text-align: right;">6171.211</td>
+<td style="text-align: right;">7720.979</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumSRAScalar</td>
-<td style="text-align: right;">827.231</td>
-<td style="text-align: right;">823.643</td>
-<td style="text-align: right;">1101.518</td>
-<td style="text-align: right;">1105.244</td>
-<td style="text-align: right;">1348.340</td>
-<td style="text-align: right;">1619.984</td>
+<td style="text-align: right;">997.067</td>
+<td style="text-align: right;">974.147</td>
+<td style="text-align: right;">1278.049</td>
+<td style="text-align: right;">1350.082</td>
+<td style="text-align: right;">1227.788</td>
+<td style="text-align: right;">1328.380</td>
+<td style="text-align: right;">1387.993</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
@@ -1178,7 +1286,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">1161.428</td>
+<td style="text-align: right;">1135.177</td>
+<td style="text-align: right;">1113.944</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
@@ -1188,47 +1297,52 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">1156.552</td>
+<td style="text-align: right;">1165.780</td>
+<td style="text-align: right;">1061.118</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumSRATraits</td>
-<td style="text-align: right;">3108.569</td>
-<td style="text-align: right;">3100.703</td>
-<td style="text-align: right;">17944.555</td>
-<td style="text-align: right;">17103.399</td>
-<td style="text-align: right;">17926.975</td>
-<td style="text-align: right;">20115.939</td>
+<td style="text-align: right;">3635.592</td>
+<td style="text-align: right;">3696.780</td>
+<td style="text-align: right;">24686.302</td>
+<td style="text-align: right;">22906.323</td>
+<td style="text-align: right;">22437.129</td>
+<td style="text-align: right;">24879.962</td>
+<td style="text-align: right;">44225.353</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumSRATraits_Core</td>
-<td style="text-align: right;">3298.491</td>
-<td style="text-align: right;">3288.742</td>
-<td style="text-align: right;">30742.095</td>
-<td style="text-align: right;">30212.469</td>
-<td style="text-align: right;">29604.498</td>
-<td style="text-align: right;">33040.654</td>
+<td style="text-align: right;">3652.670</td>
+<td style="text-align: right;">3743.427</td>
+<td style="text-align: right;">41915.608</td>
+<td style="text-align: right;">45147.925</td>
+<td style="text-align: right;">45375.300</td>
+<td style="text-align: right;">46792.941</td>
+<td style="text-align: right;">45642.076</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumSRAConstTraits</td>
-<td style="text-align: right;">3320.813</td>
-<td style="text-align: right;">3327.910</td>
-<td style="text-align: right;">18297.669</td>
-<td style="text-align: right;">25989.446</td>
-<td style="text-align: right;">28437.425</td>
-<td style="text-align: right;">31118.235</td>
+<td style="text-align: right;">3651.109</td>
+<td style="text-align: right;">3753.761</td>
+<td style="text-align: right;">29819.076</td>
+<td style="text-align: right;">42019.515</td>
+<td style="text-align: right;">43095.169</td>
+<td style="text-align: right;">44048.300</td>
+<td style="text-align: right;">47091.982</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumSRAConstTraits_Core</td>
-<td style="text-align: right;">3423.868</td>
-<td style="text-align: right;">3427.681</td>
-<td style="text-align: right;">29454.032</td>
-<td style="text-align: right;">27559.316</td>
-<td style="text-align: right;">30075.338</td>
-<td style="text-align: right;">30565.076</td>
+<td style="text-align: right;">3662.694</td>
+<td style="text-align: right;">3753.270</td>
+<td style="text-align: right;">39588.701</td>
+<td style="text-align: right;">46397.665</td>
+<td style="text-align: right;">47507.648</td>
+<td style="text-align: right;">43046.477</td>
+<td style="text-align: right;">46878.753</td>
 </tr>
 </tbody>
 </table>
@@ -1242,7 +1356,7 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <li>SumSRAConstTraits: 使用本库的 <code>Const</code> 后缀的方法(<code>Vectors.ShiftRightArithmetic_Const</code>), 参数是常量.</li>
 <li>SumSRAConstTraits_Core: 使用本库的 <code>ConstCore</code> 后缀的方法(<code>Vectors.ShiftRightArithmetic_Args</code>, <code>Vectors.ShiftRightArithmetic_ConstCore</code>), 参数是常量.</li>
 </ul>
-<p>BCL的方法(<code>Vector.ShiftRightArithmetic</code>) 在X86平台运行时, 仅 Int16/Int32 有硬件加速, 而 SByte/Int64 没有硬件加速. 这是可能是因为 Avx2 指令集仅有 16~32位 的算术右移位指令.
+<p>BCL的方法(<code>Vector.ShiftRightArithmetic</code>) 在X86平台运行时, 仅 Int16/Int32 有硬件加速, 而 SByte/Int64 没有硬件加速. 这是可能是因为 Avx2 指令集仅有 16~32位 的算术右移位指令. Avx512 指令集增加了64位的算术右移位指令.
 而本库对于这些数字类型, 会换成由其他指令组合实现的高效算法. 从 <code>.NET Core 3.0</code> 开始, 具有硬件加速.</p>
 <h4 id="shiftrightarithmetic---arm---aws-arm-t4gsmall">ShiftRightArithmetic - Arm - AWS Arm t4g.small</h4>
 <table>
@@ -1254,16 +1368,18 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSRAScalar</td>
-<td style="text-align: right;">587.279</td>
-<td style="text-align: right;">541.166</td>
-<td style="text-align: right;">607.230</td>
-<td style="text-align: right;">822.580</td>
+<td style="text-align: right;">604.429</td>
+<td style="text-align: right;">602.027</td>
+<td style="text-align: right;">606.297</td>
+<td style="text-align: right;">818.740</td>
+<td style="text-align: right;">830.302</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
@@ -1271,7 +1387,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">9941.333</td>
+<td style="text-align: right;">9941.412</td>
+<td style="text-align: right;">9837.372</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
@@ -1279,47 +1396,53 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">9938.477</td>
+<td style="text-align: right;">9931.397</td>
+<td style="text-align: right;">9838.530</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSRATraits</td>
-<td style="text-align: right;">1559.138</td>
-<td style="text-align: right;">4950.480</td>
-<td style="text-align: right;">5645.497</td>
-<td style="text-align: right;">9938.217</td>
+<td style="text-align: right;">1713.818</td>
+<td style="text-align: right;">5611.316</td>
+<td style="text-align: right;">4949.502</td>
+<td style="text-align: right;">9932.269</td>
+<td style="text-align: right;">9837.893</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSRATraits_Core</td>
-<td style="text-align: right;">1823.509</td>
-<td style="text-align: right;">8388.956</td>
-<td style="text-align: right;">7904.366</td>
-<td style="text-align: right;">9938.584</td>
+<td style="text-align: right;">1928.197</td>
+<td style="text-align: right;">7881.850</td>
+<td style="text-align: right;">8435.043</td>
+<td style="text-align: right;">9930.918</td>
+<td style="text-align: right;">9707.757</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSRAConstTraits</td>
-<td style="text-align: right;">1808.965</td>
-<td style="text-align: right;">6589.881</td>
-<td style="text-align: right;">7892.407</td>
-<td style="text-align: right;">9871.343</td>
+<td style="text-align: right;">1936.057</td>
+<td style="text-align: right;">7776.346</td>
+<td style="text-align: right;">8432.064</td>
+<td style="text-align: right;">9926.348</td>
+<td style="text-align: right;">9834.469</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumSRAConstTraits_Core</td>
-<td style="text-align: right;">1810.527</td>
-<td style="text-align: right;">8392.943</td>
-<td style="text-align: right;">7896.220</td>
-<td style="text-align: right;">9925.543</td>
+<td style="text-align: right;">1895.291</td>
+<td style="text-align: right;">7825.036</td>
+<td style="text-align: right;">8426.085</td>
+<td style="text-align: right;">9923.414</td>
+<td style="text-align: right;">9834.395</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSRAScalar</td>
-<td style="text-align: right;">712.668</td>
-<td style="text-align: right;">746.666</td>
-<td style="text-align: right;">747.055</td>
-<td style="text-align: right;">1188.551</td>
+<td style="text-align: right;">745.287</td>
+<td style="text-align: right;">749.467</td>
+<td style="text-align: right;">747.486</td>
+<td style="text-align: right;">1181.651</td>
+<td style="text-align: right;">1244.019</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
@@ -1327,7 +1450,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">4861.897</td>
+<td style="text-align: right;">4929.438</td>
+<td style="text-align: right;">4848.848</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
@@ -1335,47 +1459,53 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">4859.816</td>
+<td style="text-align: right;">4937.824</td>
+<td style="text-align: right;">4854.964</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSRATraits</td>
-<td style="text-align: right;">779.787</td>
-<td style="text-align: right;">2944.169</td>
-<td style="text-align: right;">2945.026</td>
-<td style="text-align: right;">4868.865</td>
+<td style="text-align: right;">859.173</td>
+<td style="text-align: right;">2815.113</td>
+<td style="text-align: right;">2819.116</td>
+<td style="text-align: right;">4937.562</td>
+<td style="text-align: right;">4813.108</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSRATraits_Core</td>
-<td style="text-align: right;">914.346</td>
-<td style="text-align: right;">4125.748</td>
-<td style="text-align: right;">4135.353</td>
-<td style="text-align: right;">4862.075</td>
+<td style="text-align: right;">945.694</td>
+<td style="text-align: right;">3917.314</td>
+<td style="text-align: right;">3916.943</td>
+<td style="text-align: right;">4933.939</td>
+<td style="text-align: right;">4787.843</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSRAConstTraits</td>
-<td style="text-align: right;">884.914</td>
-<td style="text-align: right;">3266.272</td>
-<td style="text-align: right;">3892.016</td>
-<td style="text-align: right;">4841.364</td>
+<td style="text-align: right;">967.576</td>
+<td style="text-align: right;">3904.750</td>
+<td style="text-align: right;">4188.713</td>
+<td style="text-align: right;">4901.680</td>
+<td style="text-align: right;">4849.051</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumSRAConstTraits_Core</td>
-<td style="text-align: right;">920.389</td>
-<td style="text-align: right;">4134.164</td>
-<td style="text-align: right;">3893.088</td>
-<td style="text-align: right;">4844.364</td>
+<td style="text-align: right;">947.955</td>
+<td style="text-align: right;">3906.471</td>
+<td style="text-align: right;">4192.951</td>
+<td style="text-align: right;">4908.354</td>
+<td style="text-align: right;">4853.184</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSRAScalar</td>
-<td style="text-align: right;">717.640</td>
-<td style="text-align: right;">742.361</td>
-<td style="text-align: right;">742.337</td>
-<td style="text-align: right;">1189.925</td>
+<td style="text-align: right;">738.902</td>
+<td style="text-align: right;">734.754</td>
+<td style="text-align: right;">741.343</td>
+<td style="text-align: right;">1185.217</td>
+<td style="text-align: right;">1243.954</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
@@ -1383,7 +1513,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">2468.196</td>
+<td style="text-align: right;">2474.620</td>
+<td style="text-align: right;">2433.159</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
@@ -1391,47 +1522,53 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">2471.434</td>
+<td style="text-align: right;">2478.519</td>
+<td style="text-align: right;">2438.677</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSRATraits</td>
-<td style="text-align: right;">451.956</td>
-<td style="text-align: right;">1235.429</td>
-<td style="text-align: right;">1233.818</td>
-<td style="text-align: right;">1420.116</td>
+<td style="text-align: right;">467.838</td>
+<td style="text-align: right;">1233.506</td>
+<td style="text-align: right;">1233.401</td>
+<td style="text-align: right;">1418.970</td>
+<td style="text-align: right;">2424.896</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSRATraits_Core</td>
-<td style="text-align: right;">435.180</td>
-<td style="text-align: right;">1972.734</td>
-<td style="text-align: right;">1966.992</td>
-<td style="text-align: right;">2465.932</td>
+<td style="text-align: right;">468.470</td>
+<td style="text-align: right;">1952.967</td>
+<td style="text-align: right;">1971.453</td>
+<td style="text-align: right;">2478.229</td>
+<td style="text-align: right;">2424.819</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSRAConstTraits</td>
-<td style="text-align: right;">437.799</td>
-<td style="text-align: right;">1962.084</td>
-<td style="text-align: right;">1966.946</td>
-<td style="text-align: right;">2470.825</td>
+<td style="text-align: right;">467.182</td>
+<td style="text-align: right;">1939.969</td>
+<td style="text-align: right;">1970.321</td>
+<td style="text-align: right;">2474.340</td>
+<td style="text-align: right;">2413.790</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumSRAConstTraits_Core</td>
-<td style="text-align: right;">436.419</td>
-<td style="text-align: right;">2099.303</td>
-<td style="text-align: right;">2097.296</td>
-<td style="text-align: right;">2469.149</td>
+<td style="text-align: right;">468.634</td>
+<td style="text-align: right;">2095.352</td>
+<td style="text-align: right;">2102.958</td>
+<td style="text-align: right;">2474.473</td>
+<td style="text-align: right;">2432.455</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumSRAScalar</td>
-<td style="text-align: right;">577.766</td>
-<td style="text-align: right;">610.669</td>
-<td style="text-align: right;">672.786</td>
-<td style="text-align: right;">925.515</td>
+<td style="text-align: right;">608.671</td>
+<td style="text-align: right;">609.771</td>
+<td style="text-align: right;">652.251</td>
+<td style="text-align: right;">889.935</td>
+<td style="text-align: right;">830.400</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
@@ -1439,7 +1576,8 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">19792.701</td>
+<td style="text-align: right;">19779.972</td>
+<td style="text-align: right;">19615.987</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
@@ -1447,39 +1585,44 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">19792.641</td>
+<td style="text-align: right;">19803.799</td>
+<td style="text-align: right;">19613.758</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumSRATraits</td>
-<td style="text-align: right;">2991.228</td>
-<td style="text-align: right;">11281.229</td>
-<td style="text-align: right;">11275.758</td>
-<td style="text-align: right;">11356.994</td>
+<td style="text-align: right;">3482.537</td>
+<td style="text-align: right;">11212.340</td>
+<td style="text-align: right;">9894.245</td>
+<td style="text-align: right;">11352.199</td>
+<td style="text-align: right;">19512.654</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumSRATraits_Core</td>
-<td style="text-align: right;">3529.326</td>
-<td style="text-align: right;">16818.297</td>
-<td style="text-align: right;">16827.844</td>
-<td style="text-align: right;">19798.924</td>
+<td style="text-align: right;">3857.464</td>
+<td style="text-align: right;">16756.195</td>
+<td style="text-align: right;">15733.712</td>
+<td style="text-align: right;">19816.163</td>
+<td style="text-align: right;">19419.454</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumSRAConstTraits</td>
-<td style="text-align: right;">3476.138</td>
-<td style="text-align: right;">15680.873</td>
-<td style="text-align: right;">16829.920</td>
-<td style="text-align: right;">19774.470</td>
+<td style="text-align: right;">3905.027</td>
+<td style="text-align: right;">15518.199</td>
+<td style="text-align: right;">15732.344</td>
+<td style="text-align: right;">19791.972</td>
+<td style="text-align: right;">19617.529</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumSRAConstTraits_Core</td>
-<td style="text-align: right;">3577.927</td>
-<td style="text-align: right;">16813.202</td>
-<td style="text-align: right;">15762.243</td>
-<td style="text-align: right;">19759.552</td>
+<td style="text-align: right;">3796.018</td>
+<td style="text-align: right;">16708.142</td>
+<td style="text-align: right;">16787.090</td>
+<td style="text-align: right;">19791.891</td>
+<td style="text-align: right;">19619.300</td>
 </tr>
 </tbody>
 </table>
@@ -1499,7 +1642,7 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <p>Shuffle: 换位并清零. 通过使用一组索引从输入向量中选择值，来创建一个新向量.
 它是<code>.NET 7.0</code>所新增的向量方法. 自 <code>.NET 7.0</code> 开始, Vector128/Vector256 里提供了 Shuffle 方法, 但 Vector 里尚未提供 Shuffle 方法.</p>
 <p>Shuffle 允许索引超过有效范围, 此次会将对应元素置0. 这个特性会稍微拖慢性能, 于是本库还提供了 YShuffleKernel 方法(仅换位). 若能确保索引总是在有效范围内, 用 YShuffleKernel 更快.</p>
-<h4 id="shuffle---x86---lntel-core-i5-8250u">Shuffle - x86 - lntel Core i5-8250U</h4>
+<h4 id="shuffle---x86---amd-ryzen-7-7840h">Shuffle - X86 - AMD Ryzen 7 7840H</h4>
 <table>
 <thead>
 <tr>
@@ -1511,18 +1654,20 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">1009.132</td>
-<td style="text-align: right;">1007.748</td>
-<td style="text-align: right;">992.299</td>
-<td style="text-align: right;">1004.370</td>
-<td style="text-align: right;">1034.912</td>
-<td style="text-align: right;">989.043</td>
+<td style="text-align: right;">1236.944</td>
+<td style="text-align: right;">1263.908</td>
+<td style="text-align: right;">1214.484</td>
+<td style="text-align: right;">1278.657</td>
+<td style="text-align: right;">1195.188</td>
+<td style="text-align: right;">1408.179</td>
+<td style="text-align: right;">1235.365</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
@@ -1532,77 +1677,96 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">775.841</td>
+<td style="text-align: right;">1074.656</td>
+<td style="text-align: right;">938.447</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">918.911</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">1012.626</td>
-<td style="text-align: right;">1008.900</td>
-<td style="text-align: right;">6025.629</td>
-<td style="text-align: right;">8058.075</td>
-<td style="text-align: right;">8017.278</td>
-<td style="text-align: right;">9060.106</td>
+<td style="text-align: right;">1221.046</td>
+<td style="text-align: right;">1255.341</td>
+<td style="text-align: right;">8067.493</td>
+<td style="text-align: right;">10943.134</td>
+<td style="text-align: right;">10421.696</td>
+<td style="text-align: right;">14194.280</td>
+<td style="text-align: right;">32579.746</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">1008.925</td>
-<td style="text-align: right;">988.646</td>
-<td style="text-align: right;">14845.370</td>
-<td style="text-align: right;">14590.246</td>
-<td style="text-align: right;">14413.193</td>
-<td style="text-align: right;">14209.436</td>
+<td style="text-align: right;">1278.650</td>
+<td style="text-align: right;">1211.361</td>
+<td style="text-align: right;">22661.648</td>
+<td style="text-align: right;">25363.988</td>
+<td style="text-align: right;">24123.555</td>
+<td style="text-align: right;">26722.243</td>
+<td style="text-align: right;">34671.910</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">1008.981</td>
-<td style="text-align: right;">991.790</td>
-<td style="text-align: right;">14644.219</td>
-<td style="text-align: right;">14527.035</td>
-<td style="text-align: right;">14198.718</td>
-<td style="text-align: right;">14024.591</td>
+<td style="text-align: right;">1255.109</td>
+<td style="text-align: right;">1154.801</td>
+<td style="text-align: right;">22911.649</td>
+<td style="text-align: right;">26138.766</td>
+<td style="text-align: right;">24804.170</td>
+<td style="text-align: right;">26585.684</td>
+<td style="text-align: right;">33172.777</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">1011.528</td>
-<td style="text-align: right;">1009.289</td>
-<td style="text-align: right;">7566.266</td>
-<td style="text-align: right;">9381.227</td>
-<td style="text-align: right;">9585.573</td>
-<td style="text-align: right;">10330.592</td>
+<td style="text-align: right;">1269.733</td>
+<td style="text-align: right;">1192.079</td>
+<td style="text-align: right;">8698.117</td>
+<td style="text-align: right;">12377.326</td>
+<td style="text-align: right;">11972.407</td>
+<td style="text-align: right;">17610.477</td>
+<td style="text-align: right;">35632.301</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">1006.331</td>
-<td style="text-align: right;">989.488</td>
-<td style="text-align: right;">15045.753</td>
-<td style="text-align: right;">14575.460</td>
-<td style="text-align: right;">14464.147</td>
-<td style="text-align: right;">14484.413</td>
+<td style="text-align: right;">1297.765</td>
+<td style="text-align: right;">1199.697</td>
+<td style="text-align: right;">23028.564</td>
+<td style="text-align: right;">25852.122</td>
+<td style="text-align: right;">25176.482</td>
+<td style="text-align: right;">24261.582</td>
+<td style="text-align: right;">36741.022</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">1017.264</td>
-<td style="text-align: right;">990.161</td>
-<td style="text-align: right;">14900.553</td>
-<td style="text-align: right;">13672.167</td>
-<td style="text-align: right;">14556.627</td>
-<td style="text-align: right;">14280.139</td>
+<td style="text-align: right;">1270.852</td>
+<td style="text-align: right;">1142.885</td>
+<td style="text-align: right;">23265.595</td>
+<td style="text-align: right;">25960.405</td>
+<td style="text-align: right;">21744.418</td>
+<td style="text-align: right;">23156.078</td>
+<td style="text-align: right;">37227.607</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">723.019</td>
-<td style="text-align: right;">725.013</td>
-<td style="text-align: right;">704.809</td>
-<td style="text-align: right;">708.372</td>
-<td style="text-align: right;">735.378</td>
-<td style="text-align: right;">747.651</td>
+<td style="text-align: right;">850.057</td>
+<td style="text-align: right;">829.782</td>
+<td style="text-align: right;">816.013</td>
+<td style="text-align: right;">859.672</td>
+<td style="text-align: right;">817.223</td>
+<td style="text-align: right;">853.140</td>
+<td style="text-align: right;">837.720</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
@@ -1612,77 +1776,96 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">611.393</td>
+<td style="text-align: right;">755.314</td>
+<td style="text-align: right;">770.558</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">930.330</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">716.509</td>
-<td style="text-align: right;">724.369</td>
-<td style="text-align: right;">5216.757</td>
-<td style="text-align: right;">5813.206</td>
-<td style="text-align: right;">7139.337</td>
-<td style="text-align: right;">9250.625</td>
+<td style="text-align: right;">821.394</td>
+<td style="text-align: right;">844.388</td>
+<td style="text-align: right;">10852.534</td>
+<td style="text-align: right;">10832.760</td>
+<td style="text-align: right;">10943.342</td>
+<td style="text-align: right;">12695.692</td>
+<td style="text-align: right;">15067.794</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">716.520</td>
-<td style="text-align: right;">703.636</td>
-<td style="text-align: right;">9278.507</td>
-<td style="text-align: right;">9221.310</td>
-<td style="text-align: right;">9159.683</td>
-<td style="text-align: right;">9728.639</td>
+<td style="text-align: right;">864.447</td>
+<td style="text-align: right;">818.042</td>
+<td style="text-align: right;">12704.591</td>
+<td style="text-align: right;">15953.127</td>
+<td style="text-align: right;">15574.554</td>
+<td style="text-align: right;">14391.785</td>
+<td style="text-align: right;">15559.766</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">722.854</td>
-<td style="text-align: right;">709.654</td>
-<td style="text-align: right;">9010.834</td>
-<td style="text-align: right;">9164.854</td>
-<td style="text-align: right;">8992.356</td>
-<td style="text-align: right;">9828.623</td>
+<td style="text-align: right;">810.166</td>
+<td style="text-align: right;">762.183</td>
+<td style="text-align: right;">12531.310</td>
+<td style="text-align: right;">14746.991</td>
+<td style="text-align: right;">14125.335</td>
+<td style="text-align: right;">13524.193</td>
+<td style="text-align: right;">15368.528</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">722.441</td>
-<td style="text-align: right;">725.218</td>
-<td style="text-align: right;">9554.766</td>
-<td style="text-align: right;">7064.711</td>
-<td style="text-align: right;">6932.192</td>
-<td style="text-align: right;">9996.960</td>
+<td style="text-align: right;">825.747</td>
+<td style="text-align: right;">841.229</td>
+<td style="text-align: right;">14515.308</td>
+<td style="text-align: right;">14407.190</td>
+<td style="text-align: right;">14545.131</td>
+<td style="text-align: right;">16276.648</td>
+<td style="text-align: right;">15999.993</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">724.689</td>
-<td style="text-align: right;">706.345</td>
-<td style="text-align: right;">11017.874</td>
-<td style="text-align: right;">11092.301</td>
-<td style="text-align: right;">11134.924</td>
-<td style="text-align: right;">11279.116</td>
+<td style="text-align: right;">856.015</td>
+<td style="text-align: right;">814.055</td>
+<td style="text-align: right;">14754.810</td>
+<td style="text-align: right;">14880.916</td>
+<td style="text-align: right;">17262.390</td>
+<td style="text-align: right;">14319.199</td>
+<td style="text-align: right;">16261.174</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">727.981</td>
-<td style="text-align: right;">701.155</td>
-<td style="text-align: right;">11030.886</td>
-<td style="text-align: right;">10970.116</td>
-<td style="text-align: right;">10510.208</td>
-<td style="text-align: right;">11324.558</td>
+<td style="text-align: right;">806.479</td>
+<td style="text-align: right;">765.218</td>
+<td style="text-align: right;">15073.768</td>
+<td style="text-align: right;">14604.621</td>
+<td style="text-align: right;">16999.007</td>
+<td style="text-align: right;">16367.119</td>
+<td style="text-align: right;">16422.220</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">459.881</td>
-<td style="text-align: right;">457.952</td>
-<td style="text-align: right;">188.562</td>
-<td style="text-align: right;">477.806</td>
-<td style="text-align: right;">459.242</td>
-<td style="text-align: right;">462.021</td>
+<td style="text-align: right;">425.474</td>
+<td style="text-align: right;">430.216</td>
+<td style="text-align: right;">457.179</td>
+<td style="text-align: right;">497.203</td>
+<td style="text-align: right;">465.105</td>
+<td style="text-align: right;">432.348</td>
+<td style="text-align: right;">425.921</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
@@ -1692,77 +1875,96 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">515.863</td>
+<td style="text-align: right;">506.686</td>
+<td style="text-align: right;">515.520</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">688.892</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">459.302</td>
-<td style="text-align: right;">459.876</td>
-<td style="text-align: right;">2143.129</td>
-<td style="text-align: right;">2518.325</td>
-<td style="text-align: right;">2433.449</td>
-<td style="text-align: right;">3524.309</td>
+<td style="text-align: right;">474.906</td>
+<td style="text-align: right;">431.296</td>
+<td style="text-align: right;">3789.327</td>
+<td style="text-align: right;">4192.951</td>
+<td style="text-align: right;">4280.568</td>
+<td style="text-align: right;">4155.819</td>
+<td style="text-align: right;">8171.028</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">465.064</td>
-<td style="text-align: right;">441.576</td>
-<td style="text-align: right;">4508.754</td>
-<td style="text-align: right;">4449.098</td>
-<td style="text-align: right;">4406.994</td>
-<td style="text-align: right;">4484.512</td>
+<td style="text-align: right;">423.703</td>
+<td style="text-align: right;">461.664</td>
+<td style="text-align: right;">6979.885</td>
+<td style="text-align: right;">7855.241</td>
+<td style="text-align: right;">8501.271</td>
+<td style="text-align: right;">7846.303</td>
+<td style="text-align: right;">8198.449</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">459.786</td>
-<td style="text-align: right;">408.545</td>
-<td style="text-align: right;">4466.028</td>
-<td style="text-align: right;">4214.808</td>
-<td style="text-align: right;">4293.438</td>
-<td style="text-align: right;">4270.565</td>
+<td style="text-align: right;">446.260</td>
+<td style="text-align: right;">420.925</td>
+<td style="text-align: right;">6704.874</td>
+<td style="text-align: right;">8599.441</td>
+<td style="text-align: right;">8317.550</td>
+<td style="text-align: right;">7312.362</td>
+<td style="text-align: right;">8378.340</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">460.058</td>
-<td style="text-align: right;">458.858</td>
-<td style="text-align: right;">2702.105</td>
-<td style="text-align: right;">3195.810</td>
-<td style="text-align: right;">1714.735</td>
-<td style="text-align: right;">4046.124</td>
+<td style="text-align: right;">473.823</td>
+<td style="text-align: right;">426.081</td>
+<td style="text-align: right;">4854.793</td>
+<td style="text-align: right;">5862.440</td>
+<td style="text-align: right;">5735.074</td>
+<td style="text-align: right;">5938.699</td>
+<td style="text-align: right;">8560.856</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">464.705</td>
-<td style="text-align: right;">438.224</td>
-<td style="text-align: right;">4820.767</td>
-<td style="text-align: right;">4705.843</td>
-<td style="text-align: right;">4042.262</td>
-<td style="text-align: right;">4882.344</td>
+<td style="text-align: right;">424.508</td>
+<td style="text-align: right;">458.248</td>
+<td style="text-align: right;">7804.575</td>
+<td style="text-align: right;">8108.408</td>
+<td style="text-align: right;">9181.086</td>
+<td style="text-align: right;">8364.106</td>
+<td style="text-align: right;">8701.155</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">463.218</td>
-<td style="text-align: right;">411.905</td>
-<td style="text-align: right;">4884.277</td>
-<td style="text-align: right;">5433.558</td>
-<td style="text-align: right;">4140.529</td>
-<td style="text-align: right;">4788.233</td>
+<td style="text-align: right;">446.097</td>
+<td style="text-align: right;">428.538</td>
+<td style="text-align: right;">8386.279</td>
+<td style="text-align: right;">9239.331</td>
+<td style="text-align: right;">9198.798</td>
+<td style="text-align: right;">8344.952</td>
+<td style="text-align: right;">8673.715</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">1263.210</td>
-<td style="text-align: right;">1262.732</td>
-<td style="text-align: right;">844.749</td>
-<td style="text-align: right;">1013.924</td>
-<td style="text-align: right;">1077.513</td>
-<td style="text-align: right;">1261.932</td>
+<td style="text-align: right;">1496.783</td>
+<td style="text-align: right;">1403.348</td>
+<td style="text-align: right;">1448.660</td>
+<td style="text-align: right;">1239.277</td>
+<td style="text-align: right;">1468.827</td>
+<td style="text-align: right;">1415.139</td>
+<td style="text-align: right;">1213.582</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
@@ -1772,74 +1974,93 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">930.329</td>
+<td style="text-align: right;">901.114</td>
+<td style="text-align: right;">1022.223</td>
+</tr>
+<tr>
+<td style="text-align: left;">SByte</td>
+<td style="text-align: left;">Sum512_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">989.131</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">1264.393</td>
-<td style="text-align: right;">1264.667</td>
-<td style="text-align: right;">13239.408</td>
-<td style="text-align: right;">17766.242</td>
-<td style="text-align: right;">16140.964</td>
-<td style="text-align: right;">24537.440</td>
+<td style="text-align: right;">1476.771</td>
+<td style="text-align: right;">1494.144</td>
+<td style="text-align: right;">17086.314</td>
+<td style="text-align: right;">24231.464</td>
+<td style="text-align: right;">24097.622</td>
+<td style="text-align: right;">30243.434</td>
+<td style="text-align: right;">60885.250</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">1262.368</td>
-<td style="text-align: right;">1242.503</td>
-<td style="text-align: right;">31793.487</td>
-<td style="text-align: right;">31423.344</td>
-<td style="text-align: right;">31314.488</td>
-<td style="text-align: right;">34322.789</td>
+<td style="text-align: right;">1392.158</td>
+<td style="text-align: right;">1331.083</td>
+<td style="text-align: right;">45038.802</td>
+<td style="text-align: right;">50540.409</td>
+<td style="text-align: right;">49090.081</td>
+<td style="text-align: right;">46979.783</td>
+<td style="text-align: right;">60672.985</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">1221.542</td>
-<td style="text-align: right;">1248.121</td>
-<td style="text-align: right;">31118.400</td>
-<td style="text-align: right;">31615.120</td>
-<td style="text-align: right;">31980.794</td>
-<td style="text-align: right;">33156.240</td>
+<td style="text-align: right;">1389.074</td>
+<td style="text-align: right;">1295.641</td>
+<td style="text-align: right;">46794.997</td>
+<td style="text-align: right;">51069.265</td>
+<td style="text-align: right;">50078.249</td>
+<td style="text-align: right;">46518.750</td>
+<td style="text-align: right;">65261.554</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">1260.097</td>
-<td style="text-align: right;">1266.056</td>
-<td style="text-align: right;">19996.806</td>
-<td style="text-align: right;">23032.250</td>
-<td style="text-align: right;">23853.314</td>
-<td style="text-align: right;">29612.169</td>
+<td style="text-align: right;">1476.637</td>
+<td style="text-align: right;">1242.198</td>
+<td style="text-align: right;">27650.933</td>
+<td style="text-align: right;">32894.218</td>
+<td style="text-align: right;">32711.664</td>
+<td style="text-align: right;">39630.939</td>
+<td style="text-align: right;">72350.167</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">1260.461</td>
-<td style="text-align: right;">1245.530</td>
-<td style="text-align: right;">31084.955</td>
-<td style="text-align: right;">30974.022</td>
-<td style="text-align: right;">31913.287</td>
-<td style="text-align: right;">33643.052</td>
+<td style="text-align: right;">1523.543</td>
+<td style="text-align: right;">1440.011</td>
+<td style="text-align: right;">44451.891</td>
+<td style="text-align: right;">49973.813</td>
+<td style="text-align: right;">51540.236</td>
+<td style="text-align: right;">48754.502</td>
+<td style="text-align: right;">72615.251</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">1260.272</td>
-<td style="text-align: right;">1249.316</td>
-<td style="text-align: right;">30827.152</td>
-<td style="text-align: right;">30734.831</td>
-<td style="text-align: right;">32311.418</td>
-<td style="text-align: right;">32977.071</td>
+<td style="text-align: right;">1395.106</td>
+<td style="text-align: right;">1274.943</td>
+<td style="text-align: right;">41001.996</td>
+<td style="text-align: right;">50067.099</td>
+<td style="text-align: right;">49654.805</td>
+<td style="text-align: right;">45904.504</td>
+<td style="text-align: right;">71412.964</td>
 </tr>
 </tbody>
 </table>
 <p>说明:</p>
 <ul>
 <li>SumScalar: 使用标量算法.</li>
-<li>Sum256_Bcl: 使用BCL的方法(<code>Vector256.Shuffle</code>).</li>
+<li>Sum256_Bcl: 使用BCL的256位向量方法(<code>Vector256.Shuffle</code>).</li>
+<li>Sum512_Bcl: 使用BCL的512位向量方法(<code>Vector512.Shuffle</code>).</li>
 <li>SumTraits: 使用本库的普通方法(<code>Vectors.Shuffle</code>).</li>
 <li>SumTraits_Args0: 使用本库的 <code>Core</code> 后缀的方法(<code>Vectors.Shuffle_Args</code>, <code>Vectors.Shuffle_Core</code>), 不使用ValueTuple, 而是用“out”关键字返回多个值.</li>
 <li>SumTraits_Args: 使用本库的 <code>Core</code> 后缀的方法(<code>Vectors.Shuffle_Args</code>, <code>Vectors.Shuffle_Core</code>), 使用ValueTuple.</li>
@@ -1862,16 +2083,18 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">424.835</td>
-<td style="text-align: right;">422.286</td>
-<td style="text-align: right;">423.070</td>
-<td style="text-align: right;">526.071</td>
+<td style="text-align: right;">427.276</td>
+<td style="text-align: right;">421.887</td>
+<td style="text-align: right;">421.454</td>
+<td style="text-align: right;">526.589</td>
+<td style="text-align: right;">516.294</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
@@ -1879,71 +2102,71 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">482.320</td>
+<td style="text-align: right;">482.907</td>
+<td style="text-align: right;">468.383</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">423.942</td>
-<td style="text-align: right;">4925.034</td>
-<td style="text-align: right;">4938.077</td>
-<td style="text-align: right;">5853.245</td>
+<td style="text-align: right;">428.281</td>
+<td style="text-align: right;">4922.876</td>
+<td style="text-align: right;">5555.655</td>
+<td style="text-align: right;">5864.193</td>
+<td style="text-align: right;">9711.569</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">423.872</td>
-<td style="text-align: right;">8381.395</td>
-<td style="text-align: right;">7862.055</td>
-<td style="text-align: right;">9821.786</td>
+<td style="text-align: right;">428.928</td>
+<td style="text-align: right;">7902.420</td>
+<td style="text-align: right;">8416.624</td>
+<td style="text-align: right;">9925.441</td>
+<td style="text-align: right;">9709.555</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">400.767</td>
-<td style="text-align: right;">2982.755</td>
-<td style="text-align: right;">2976.138</td>
-<td style="text-align: right;">9769.321</td>
-</tr>
-<tr>
-<td style="text-align: left;">Int16</td>
-<td style="text-align: left;">Sum128_AdvSimd</td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;">3169.036</td>
-<td style="text-align: right;">3115.859</td>
-<td style="text-align: right;">3239.207</td>
+<td style="text-align: right;">405.537</td>
+<td style="text-align: right;">2809.483</td>
+<td style="text-align: right;">2798.925</td>
+<td style="text-align: right;">9880.804</td>
+<td style="text-align: right;">9707.490</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">424.317</td>
-<td style="text-align: right;">5644.808</td>
-<td style="text-align: right;">6565.519</td>
-<td style="text-align: right;">7904.834</td>
+<td style="text-align: right;">427.637</td>
+<td style="text-align: right;">5650.913</td>
+<td style="text-align: right;">6540.446</td>
+<td style="text-align: right;">7957.175</td>
+<td style="text-align: right;">9833.813</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">423.899</td>
-<td style="text-align: right;">7881.823</td>
-<td style="text-align: right;">7847.868</td>
-<td style="text-align: right;">9835.768</td>
+<td style="text-align: right;">427.578</td>
+<td style="text-align: right;">7897.224</td>
+<td style="text-align: right;">7891.894</td>
+<td style="text-align: right;">9929.863</td>
+<td style="text-align: right;">9819.774</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">399.772</td>
-<td style="text-align: right;">2982.013</td>
-<td style="text-align: right;">2868.286</td>
-<td style="text-align: right;">9778.383</td>
+<td style="text-align: right;">405.223</td>
+<td style="text-align: right;">2811.195</td>
+<td style="text-align: right;">2797.170</td>
+<td style="text-align: right;">9861.330</td>
+<td style="text-align: right;">9829.822</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">288.211</td>
-<td style="text-align: right;">281.081</td>
-<td style="text-align: right;">276.668</td>
-<td style="text-align: right;">317.268</td>
+<td style="text-align: right;">286.900</td>
+<td style="text-align: right;">281.167</td>
+<td style="text-align: right;">281.838</td>
+<td style="text-align: right;">317.876</td>
+<td style="text-align: right;">309.427</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
@@ -1951,63 +2174,71 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">303.702</td>
+<td style="text-align: right;">304.320</td>
+<td style="text-align: right;">301.222</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">287.942</td>
-<td style="text-align: right;">2447.812</td>
-<td style="text-align: right;">2561.501</td>
-<td style="text-align: right;">2912.918</td>
+<td style="text-align: right;">286.596</td>
+<td style="text-align: right;">2311.209</td>
+<td style="text-align: right;">2472.592</td>
+<td style="text-align: right;">2917.343</td>
+<td style="text-align: right;">4801.979</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">286.646</td>
-<td style="text-align: right;">4103.084</td>
-<td style="text-align: right;">4110.550</td>
-<td style="text-align: right;">4796.704</td>
+<td style="text-align: right;">288.066</td>
+<td style="text-align: right;">4185.430</td>
+<td style="text-align: right;">3928.604</td>
+<td style="text-align: right;">4934.590</td>
+<td style="text-align: right;">4821.784</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">268.613</td>
-<td style="text-align: right;">1487.180</td>
-<td style="text-align: right;">1483.994</td>
-<td style="text-align: right;">4775.891</td>
+<td style="text-align: right;">270.249</td>
+<td style="text-align: right;">1396.323</td>
+<td style="text-align: right;">1401.742</td>
+<td style="text-align: right;">4886.669</td>
+<td style="text-align: right;">4806.886</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">287.900</td>
-<td style="text-align: right;">2805.355</td>
-<td style="text-align: right;">3237.345</td>
-<td style="text-align: right;">3909.519</td>
+<td style="text-align: right;">287.386</td>
+<td style="text-align: right;">2677.394</td>
+<td style="text-align: right;">3247.692</td>
+<td style="text-align: right;">3953.573</td>
+<td style="text-align: right;">4846.437</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">286.556</td>
-<td style="text-align: right;">4112.689</td>
-<td style="text-align: right;">4128.402</td>
-<td style="text-align: right;">4825.180</td>
+<td style="text-align: right;">286.724</td>
+<td style="text-align: right;">3919.619</td>
+<td style="text-align: right;">4182.617</td>
+<td style="text-align: right;">4930.469</td>
+<td style="text-align: right;">4852.808</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">268.858</td>
-<td style="text-align: right;">1487.021</td>
-<td style="text-align: right;">1430.400</td>
-<td style="text-align: right;">4755.708</td>
+<td style="text-align: right;">270.724</td>
+<td style="text-align: right;">1399.968</td>
+<td style="text-align: right;">1395.953</td>
+<td style="text-align: right;">4899.359</td>
+<td style="text-align: right;">4853.093</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">378.628</td>
-<td style="text-align: right;">188.199</td>
-<td style="text-align: right;">447.044</td>
-<td style="text-align: right;">552.523</td>
+<td style="text-align: right;">448.592</td>
+<td style="text-align: right;">440.758</td>
+<td style="text-align: right;">444.884</td>
+<td style="text-align: right;">552.061</td>
+<td style="text-align: right;">534.531</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
@@ -2015,63 +2246,71 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">712.025</td>
+<td style="text-align: right;">708.356</td>
+<td style="text-align: right;">692.663</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">379.643</td>
-<td style="text-align: right;">1015.811</td>
-<td style="text-align: right;">1089.628</td>
-<td style="text-align: right;">1242.552</td>
+<td style="text-align: right;">190.913</td>
+<td style="text-align: right;">1005.614</td>
+<td style="text-align: right;">1064.650</td>
+<td style="text-align: right;">1255.025</td>
+<td style="text-align: right;">2448.365</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">380.133</td>
-<td style="text-align: right;">2091.948</td>
-<td style="text-align: right;">1967.766</td>
-<td style="text-align: right;">2465.800</td>
+<td style="text-align: right;">426.809</td>
+<td style="text-align: right;">2090.887</td>
+<td style="text-align: right;">2100.527</td>
+<td style="text-align: right;">2479.821</td>
+<td style="text-align: right;">2451.574</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">326.603</td>
-<td style="text-align: right;">743.033</td>
-<td style="text-align: right;">744.908</td>
-<td style="text-align: right;">2452.967</td>
+<td style="text-align: right;">179.534</td>
+<td style="text-align: right;">698.013</td>
+<td style="text-align: right;">699.200</td>
+<td style="text-align: right;">2457.898</td>
+<td style="text-align: right;">2451.414</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">379.696</td>
-<td style="text-align: right;">1221.923</td>
-<td style="text-align: right;">1480.182</td>
-<td style="text-align: right;">1756.478</td>
+<td style="text-align: right;">448.065</td>
+<td style="text-align: right;">1237.258</td>
+<td style="text-align: right;">1412.876</td>
+<td style="text-align: right;">1753.457</td>
+<td style="text-align: right;">2434.096</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">379.788</td>
-<td style="text-align: right;">2096.124</td>
-<td style="text-align: right;">2095.536</td>
-<td style="text-align: right;">2464.674</td>
+<td style="text-align: right;">449.857</td>
+<td style="text-align: right;">2101.411</td>
+<td style="text-align: right;">1967.152</td>
+<td style="text-align: right;">2469.054</td>
+<td style="text-align: right;">2443.626</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">170.957</td>
-<td style="text-align: right;">715.532</td>
-<td style="text-align: right;">717.549</td>
-<td style="text-align: right;">2457.398</td>
+<td style="text-align: right;">345.877</td>
+<td style="text-align: right;">701.805</td>
+<td style="text-align: right;">698.753</td>
+<td style="text-align: right;">2456.761</td>
+<td style="text-align: right;">2451.680</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumScalar</td>
-<td style="text-align: right;">668.450</td>
-<td style="text-align: right;">650.673</td>
-<td style="text-align: right;">659.984</td>
-<td style="text-align: right;">833.921</td>
+<td style="text-align: right;">665.739</td>
+<td style="text-align: right;">664.224</td>
+<td style="text-align: right;">658.168</td>
+<td style="text-align: right;">834.224</td>
+<td style="text-align: right;">803.566</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
@@ -2079,55 +2318,62 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">648.985</td>
+<td style="text-align: right;">647.757</td>
+<td style="text-align: right;">610.244</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumTraits</td>
-<td style="text-align: right;">667.527</td>
-<td style="text-align: right;">13135.356</td>
-<td style="text-align: right;">16713.009</td>
-<td style="text-align: right;">19730.059</td>
+<td style="text-align: right;">680.590</td>
+<td style="text-align: right;">13176.730</td>
+<td style="text-align: right;">16739.161</td>
+<td style="text-align: right;">19723.567</td>
+<td style="text-align: right;">19531.685</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumTraits_Args0</td>
-<td style="text-align: right;">664.988</td>
-<td style="text-align: right;">15734.264</td>
-<td style="text-align: right;">15708.758</td>
-<td style="text-align: right;">19741.441</td>
+<td style="text-align: right;">660.595</td>
+<td style="text-align: right;">15704.393</td>
+<td style="text-align: right;">15724.340</td>
+<td style="text-align: right;">19723.852</td>
+<td style="text-align: right;">19530.241</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumTraits_Args</td>
-<td style="text-align: right;">625.410</td>
-<td style="text-align: right;">5723.523</td>
-<td style="text-align: right;">5948.766</td>
-<td style="text-align: right;">19692.665</td>
+<td style="text-align: right;">637.568</td>
+<td style="text-align: right;">5597.644</td>
+<td style="text-align: right;">5602.803</td>
+<td style="text-align: right;">19605.289</td>
+<td style="text-align: right;">19527.338</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumKernelTraits</td>
-<td style="text-align: right;">667.280</td>
-<td style="text-align: right;">15584.505</td>
-<td style="text-align: right;">15643.225</td>
-<td style="text-align: right;">19741.523</td>
+<td style="text-align: right;">672.784</td>
+<td style="text-align: right;">15604.597</td>
+<td style="text-align: right;">16732.629</td>
+<td style="text-align: right;">19692.571</td>
+<td style="text-align: right;">19533.892</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumKernelTraits_Args0</td>
-<td style="text-align: right;">664.914</td>
-<td style="text-align: right;">16731.942</td>
-<td style="text-align: right;">16685.534</td>
-<td style="text-align: right;">19726.599</td>
+<td style="text-align: right;">675.236</td>
+<td style="text-align: right;">16718.959</td>
+<td style="text-align: right;">15715.512</td>
+<td style="text-align: right;">19729.144</td>
+<td style="text-align: right;">19534.508</td>
 </tr>
 <tr>
 <td style="text-align: left;">SByte</td>
 <td style="text-align: left;">SumKernelTraits_Args</td>
-<td style="text-align: right;">625.761</td>
-<td style="text-align: right;">5723.910</td>
-<td style="text-align: right;">5950.549</td>
-<td style="text-align: right;">19685.073</td>
+<td style="text-align: right;">642.795</td>
+<td style="text-align: right;">5573.999</td>
+<td style="text-align: right;">5598.168</td>
+<td style="text-align: right;">19588.655</td>
+<td style="text-align: right;">19538.006</td>
 </tr>
 </tbody>
 </table>
@@ -2147,7 +2393,7 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 注意在<code>.NET 7.0</code>之前, SumTraits_Args 有时与 SumTraits_Args0 的性能相差较大, 这是因为ValueTuple 在Arm下的性能损失较大.</p>
 <h3 id="ynarrowsaturate">YNarrowSaturate</h3>
 <p>YNarrowSaturate: 将两个 Vector 实例饱和缩窄为一个 Vector .</p>
-<h4 id="ynarrowsaturate---x86---lntel-core-i5-8250u">YNarrowSaturate - x86 - lntel Core i5-8250U</h4>
+<h4 id="ynarrowsaturate---x86---amd-ryzen-7-7840h">YNarrowSaturate - X86 - AMD Ryzen 7 7840H</h4>
 <table>
 <thead>
 <tr>
@@ -2159,248 +2405,273 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">209.442</td>
-<td style="text-align: right;">209.620</td>
-<td style="text-align: right;">210.928</td>
-<td style="text-align: right;">199.480</td>
-<td style="text-align: right;">211.138</td>
-<td style="text-align: right;">215.694</td>
+<td style="text-align: right;">208.976</td>
+<td style="text-align: right;">197.924</td>
+<td style="text-align: right;">195.466</td>
+<td style="text-align: right;">200.430</td>
+<td style="text-align: right;">197.261</td>
+<td style="text-align: right;">205.623</td>
+<td style="text-align: right;">221.224</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">202.714</td>
-<td style="text-align: right;">215.451</td>
-<td style="text-align: right;">212.224</td>
-<td style="text-align: right;">214.893</td>
-<td style="text-align: right;">175.099</td>
-<td style="text-align: right;">219.752</td>
+<td style="text-align: right;">200.034</td>
+<td style="text-align: right;">201.184</td>
+<td style="text-align: right;">197.505</td>
+<td style="text-align: right;">208.715</td>
+<td style="text-align: right;">199.736</td>
+<td style="text-align: right;">222.635</td>
+<td style="text-align: right;">208.102</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">13095.098</td>
-<td style="text-align: right;">13774.472</td>
-<td style="text-align: right;">13161.165</td>
-<td style="text-align: right;">13013.472</td>
-<td style="text-align: right;">13168.239</td>
-<td style="text-align: right;">15964.293</td>
+<td style="text-align: right;">21160.119</td>
+<td style="text-align: right;">19565.035</td>
+<td style="text-align: right;">19063.346</td>
+<td style="text-align: right;">19960.925</td>
+<td style="text-align: right;">19532.398</td>
+<td style="text-align: right;">19258.689</td>
+<td style="text-align: right;">24197.090</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">13024.364</td>
-<td style="text-align: right;">13662.396</td>
-<td style="text-align: right;">28118.834</td>
-<td style="text-align: right;">25049.004</td>
-<td style="text-align: right;">28198.282</td>
-<td style="text-align: right;">27819.176</td>
+<td style="text-align: right;">20477.038</td>
+<td style="text-align: right;">18251.731</td>
+<td style="text-align: right;">44050.630</td>
+<td style="text-align: right;">45196.128</td>
+<td style="text-align: right;">43674.654</td>
+<td style="text-align: right;">44677.389</td>
+<td style="text-align: right;">47325.429</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">210.834</td>
-<td style="text-align: right;">212.404</td>
-<td style="text-align: right;">213.735</td>
-<td style="text-align: right;">214.810</td>
-<td style="text-align: right;">208.985</td>
-<td style="text-align: right;">222.597</td>
+<td style="text-align: right;">211.070</td>
+<td style="text-align: right;">218.235</td>
+<td style="text-align: right;">225.479</td>
+<td style="text-align: right;">211.761</td>
+<td style="text-align: right;">207.353</td>
+<td style="text-align: right;">223.740</td>
+<td style="text-align: right;">232.860</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">212.099</td>
-<td style="text-align: right;">211.786</td>
-<td style="text-align: right;">210.670</td>
-<td style="text-align: right;">205.029</td>
-<td style="text-align: right;">210.333</td>
-<td style="text-align: right;">208.573</td>
+<td style="text-align: right;">221.396</td>
+<td style="text-align: right;">206.735</td>
+<td style="text-align: right;">214.815</td>
+<td style="text-align: right;">214.341</td>
+<td style="text-align: right;">211.238</td>
+<td style="text-align: right;">210.944</td>
+<td style="text-align: right;">223.415</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">6933.036</td>
-<td style="text-align: right;">6441.062</td>
-<td style="text-align: right;">6584.000</td>
-<td style="text-align: right;">7382.254</td>
-<td style="text-align: right;">6728.319</td>
-<td style="text-align: right;">7703.530</td>
+<td style="text-align: right;">9753.258</td>
+<td style="text-align: right;">9549.313</td>
+<td style="text-align: right;">9743.042</td>
+<td style="text-align: right;">9519.188</td>
+<td style="text-align: right;">9577.993</td>
+<td style="text-align: right;">10513.071</td>
+<td style="text-align: right;">12059.829</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">6856.456</td>
-<td style="text-align: right;">6398.525</td>
-<td style="text-align: right;">12533.505</td>
-<td style="text-align: right;">14263.835</td>
-<td style="text-align: right;">12888.771</td>
-<td style="text-align: right;">13992.887</td>
+<td style="text-align: right;">9117.869</td>
+<td style="text-align: right;">9253.891</td>
+<td style="text-align: right;">20503.088</td>
+<td style="text-align: right;">20225.447</td>
+<td style="text-align: right;">19198.947</td>
+<td style="text-align: right;">19012.815</td>
+<td style="text-align: right;">19398.087</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">195.128</td>
-<td style="text-align: right;">186.841</td>
-<td style="text-align: right;">195.864</td>
-<td style="text-align: right;">199.460</td>
-<td style="text-align: right;">193.475</td>
-<td style="text-align: right;">204.264</td>
+<td style="text-align: right;">207.654</td>
+<td style="text-align: right;">206.920</td>
+<td style="text-align: right;">215.020</td>
+<td style="text-align: right;">207.405</td>
+<td style="text-align: right;">207.239</td>
+<td style="text-align: right;">220.198</td>
+<td style="text-align: right;">227.592</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">189.209</td>
-<td style="text-align: right;">178.971</td>
-<td style="text-align: right;">196.065</td>
-<td style="text-align: right;">191.231</td>
-<td style="text-align: right;">191.600</td>
-<td style="text-align: right;">203.201</td>
+<td style="text-align: right;">205.724</td>
+<td style="text-align: right;">201.036</td>
+<td style="text-align: right;">203.815</td>
+<td style="text-align: right;">200.292</td>
+<td style="text-align: right;">213.422</td>
+<td style="text-align: right;">213.819</td>
+<td style="text-align: right;">231.741</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">1959.806</td>
-<td style="text-align: right;">1878.724</td>
-<td style="text-align: right;">2000.976</td>
-<td style="text-align: right;">2118.858</td>
-<td style="text-align: right;">1976.264</td>
-<td style="text-align: right;">2658.885</td>
+<td style="text-align: right;">2951.264</td>
+<td style="text-align: right;">2720.663</td>
+<td style="text-align: right;">2835.882</td>
+<td style="text-align: right;">2949.423</td>
+<td style="text-align: right;">2915.473</td>
+<td style="text-align: right;">4372.612</td>
+<td style="text-align: right;">5917.536</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">1956.908</td>
-<td style="text-align: right;">1872.465</td>
-<td style="text-align: right;">2587.636</td>
-<td style="text-align: right;">2763.282</td>
-<td style="text-align: right;">2689.931</td>
-<td style="text-align: right;">2418.496</td>
+<td style="text-align: right;">2941.336</td>
+<td style="text-align: right;">2696.543</td>
+<td style="text-align: right;">4690.391</td>
+<td style="text-align: right;">4875.851</td>
+<td style="text-align: right;">4917.149</td>
+<td style="text-align: right;">3808.744</td>
+<td style="text-align: right;">9411.507</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt16</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">1066.840</td>
-<td style="text-align: right;">902.516</td>
-<td style="text-align: right;">1078.540</td>
-<td style="text-align: right;">974.749</td>
-<td style="text-align: right;">1067.768</td>
-<td style="text-align: right;">1083.124</td>
+<td style="text-align: right;">1263.960</td>
+<td style="text-align: right;">1205.876</td>
+<td style="text-align: right;">1247.409</td>
+<td style="text-align: right;">1184.537</td>
+<td style="text-align: right;">1124.520</td>
+<td style="text-align: right;">1175.733</td>
+<td style="text-align: right;">1387.128</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt16</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">1066.895</td>
-<td style="text-align: right;">903.120</td>
-<td style="text-align: right;">901.484</td>
-<td style="text-align: right;">959.577</td>
-<td style="text-align: right;">900.228</td>
-<td style="text-align: right;">823.878</td>
+<td style="text-align: right;">1363.298</td>
+<td style="text-align: right;">1283.027</td>
+<td style="text-align: right;">1336.103</td>
+<td style="text-align: right;">1178.860</td>
+<td style="text-align: right;">1344.978</td>
+<td style="text-align: right;">761.908</td>
+<td style="text-align: right;">1487.848</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt16</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">16884.658</td>
-<td style="text-align: right;">17052.914</td>
-<td style="text-align: right;">15147.602</td>
-<td style="text-align: right;">17094.243</td>
-<td style="text-align: right;">17200.043</td>
-<td style="text-align: right;">19717.119</td>
+<td style="text-align: right;">25617.831</td>
+<td style="text-align: right;">25358.182</td>
+<td style="text-align: right;">25019.795</td>
+<td style="text-align: right;">25056.656</td>
+<td style="text-align: right;">26527.170</td>
+<td style="text-align: right;">25337.769</td>
+<td style="text-align: right;">30941.796</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt16</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">16862.587</td>
-<td style="text-align: right;">16975.925</td>
-<td style="text-align: right;">21142.034</td>
-<td style="text-align: right;">26121.170</td>
-<td style="text-align: right;">26440.908</td>
-<td style="text-align: right;">24575.123</td>
+<td style="text-align: right;">24795.433</td>
+<td style="text-align: right;">24950.279</td>
+<td style="text-align: right;">33163.801</td>
+<td style="text-align: right;">41303.846</td>
+<td style="text-align: right;">40678.067</td>
+<td style="text-align: right;">29966.481</td>
+<td style="text-align: right;">45560.104</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt32</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">1116.417</td>
-<td style="text-align: right;">961.764</td>
-<td style="text-align: right;">856.272</td>
-<td style="text-align: right;">901.272</td>
-<td style="text-align: right;">872.811</td>
-<td style="text-align: right;">1111.046</td>
+<td style="text-align: right;">1446.297</td>
+<td style="text-align: right;">1396.148</td>
+<td style="text-align: right;">1364.953</td>
+<td style="text-align: right;">1339.805</td>
+<td style="text-align: right;">1382.470</td>
+<td style="text-align: right;">1240.158</td>
+<td style="text-align: right;">1507.078</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt32</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">1115.502</td>
-<td style="text-align: right;">902.014</td>
-<td style="text-align: right;">900.357</td>
-<td style="text-align: right;">877.358</td>
-<td style="text-align: right;">839.361</td>
-<td style="text-align: right;">854.364</td>
+<td style="text-align: right;">1461.884</td>
+<td style="text-align: right;">1346.542</td>
+<td style="text-align: right;">1363.853</td>
+<td style="text-align: right;">1376.390</td>
+<td style="text-align: right;">1373.016</td>
+<td style="text-align: right;">960.104</td>
+<td style="text-align: right;">1383.498</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt32</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">7824.674</td>
-<td style="text-align: right;">7015.984</td>
-<td style="text-align: right;">8617.594</td>
-<td style="text-align: right;">8176.926</td>
-<td style="text-align: right;">8059.923</td>
-<td style="text-align: right;">8801.283</td>
+<td style="text-align: right;">12509.780</td>
+<td style="text-align: right;">11160.711</td>
+<td style="text-align: right;">11971.259</td>
+<td style="text-align: right;">11511.978</td>
+<td style="text-align: right;">11080.158</td>
+<td style="text-align: right;">11897.237</td>
+<td style="text-align: right;">15997.508</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt32</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">7879.556</td>
-<td style="text-align: right;">7024.438</td>
-<td style="text-align: right;">12181.180</td>
-<td style="text-align: right;">10713.260</td>
-<td style="text-align: right;">11063.765</td>
-<td style="text-align: right;">11314.953</td>
+<td style="text-align: right;">12962.030</td>
+<td style="text-align: right;">11581.014</td>
+<td style="text-align: right;">14895.009</td>
+<td style="text-align: right;">16343.372</td>
+<td style="text-align: right;">17051.602</td>
+<td style="text-align: right;">14727.107</td>
+<td style="text-align: right;">19760.603</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt64</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">997.327</td>
-<td style="text-align: right;">847.431</td>
-<td style="text-align: right;">871.820</td>
-<td style="text-align: right;">875.547</td>
-<td style="text-align: right;">858.060</td>
-<td style="text-align: right;">1109.023</td>
+<td style="text-align: right;">1003.570</td>
+<td style="text-align: right;">1326.642</td>
+<td style="text-align: right;">913.881</td>
+<td style="text-align: right;">912.071</td>
+<td style="text-align: right;">878.848</td>
+<td style="text-align: right;">1312.352</td>
+<td style="text-align: right;">1874.180</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt64</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">865.420</td>
-<td style="text-align: right;">1083.437</td>
-<td style="text-align: right;">1107.671</td>
-<td style="text-align: right;">1095.561</td>
-<td style="text-align: right;">886.387</td>
-<td style="text-align: right;">735.609</td>
+<td style="text-align: right;">1455.402</td>
+<td style="text-align: right;">1404.391</td>
+<td style="text-align: right;">1392.157</td>
+<td style="text-align: right;">891.629</td>
+<td style="text-align: right;">902.245</td>
+<td style="text-align: right;">937.792</td>
+<td style="text-align: right;">895.795</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt64</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">2015.328</td>
-<td style="text-align: right;">1971.981</td>
-<td style="text-align: right;">1833.610</td>
-<td style="text-align: right;">2446.346</td>
-<td style="text-align: right;">2636.137</td>
-<td style="text-align: right;">3336.732</td>
+<td style="text-align: right;">3340.377</td>
+<td style="text-align: right;">3102.954</td>
+<td style="text-align: right;">3033.044</td>
+<td style="text-align: right;">3449.113</td>
+<td style="text-align: right;">3649.422</td>
+<td style="text-align: right;">5104.550</td>
+<td style="text-align: right;">7693.314</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt64</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">2020.405</td>
-<td style="text-align: right;">1979.078</td>
-<td style="text-align: right;">2918.828</td>
-<td style="text-align: right;">3258.796</td>
-<td style="text-align: right;">3341.184</td>
-<td style="text-align: right;">3108.173</td>
+<td style="text-align: right;">3306.018</td>
+<td style="text-align: right;">3050.492</td>
+<td style="text-align: right;">4497.385</td>
+<td style="text-align: right;">5401.914</td>
+<td style="text-align: right;">5969.621</td>
+<td style="text-align: right;">4527.588</td>
+<td style="text-align: right;">9530.757</td>
 </tr>
 </tbody>
 </table>
@@ -2423,200 +2694,225 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <th style="text-align: right;">.NET 5.0</th>
 <th style="text-align: right;">.NET 6.0</th>
 <th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">154.717</td>
-<td style="text-align: right;">163.350</td>
-<td style="text-align: right;">157.517</td>
-<td style="text-align: right;">181.894</td>
+<td style="text-align: right;">157.270</td>
+<td style="text-align: right;">154.692</td>
+<td style="text-align: right;">157.383</td>
+<td style="text-align: right;">181.610</td>
+<td style="text-align: right;">193.265</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">160.654</td>
-<td style="text-align: right;">161.130</td>
-<td style="text-align: right;">108.656</td>
-<td style="text-align: right;">184.712</td>
+<td style="text-align: right;">160.909</td>
+<td style="text-align: right;">165.733</td>
+<td style="text-align: right;">108.425</td>
+<td style="text-align: right;">184.240</td>
+<td style="text-align: right;">189.973</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">6124.516</td>
-<td style="text-align: right;">5210.880</td>
-<td style="text-align: right;">6055.721</td>
-<td style="text-align: right;">7165.511</td>
+<td style="text-align: right;">6100.275</td>
+<td style="text-align: right;">6193.938</td>
+<td style="text-align: right;">6308.118</td>
+<td style="text-align: right;">7201.735</td>
+<td style="text-align: right;">8261.974</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int16</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">6125.113</td>
-<td style="text-align: right;">13574.329</td>
-<td style="text-align: right;">13433.471</td>
-<td style="text-align: right;">15507.867</td>
+<td style="text-align: right;">6102.238</td>
+<td style="text-align: right;">13460.358</td>
+<td style="text-align: right;">13445.824</td>
+<td style="text-align: right;">15514.261</td>
+<td style="text-align: right;">13674.647</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">163.905</td>
-<td style="text-align: right;">165.250</td>
-<td style="text-align: right;">160.416</td>
-<td style="text-align: right;">190.897</td>
+<td style="text-align: right;">163.854</td>
+<td style="text-align: right;">165.352</td>
+<td style="text-align: right;">165.160</td>
+<td style="text-align: right;">190.240</td>
+<td style="text-align: right;">213.807</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">155.399</td>
-<td style="text-align: right;">155.059</td>
-<td style="text-align: right;">159.092</td>
-<td style="text-align: right;">195.986</td>
+<td style="text-align: right;">154.976</td>
+<td style="text-align: right;">162.019</td>
+<td style="text-align: right;">161.884</td>
+<td style="text-align: right;">195.349</td>
+<td style="text-align: right;">194.881</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">2701.810</td>
-<td style="text-align: right;">3219.290</td>
-<td style="text-align: right;">2766.267</td>
-<td style="text-align: right;">3025.432</td>
+<td style="text-align: right;">3047.923</td>
+<td style="text-align: right;">3268.933</td>
+<td style="text-align: right;">3253.378</td>
+<td style="text-align: right;">3532.128</td>
+<td style="text-align: right;">4034.752</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int32</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">2703.709</td>
-<td style="text-align: right;">6306.022</td>
-<td style="text-align: right;">6210.719</td>
-<td style="text-align: right;">8003.142</td>
+<td style="text-align: right;">3125.498</td>
+<td style="text-align: right;">6121.553</td>
+<td style="text-align: right;">6162.533</td>
+<td style="text-align: right;">7914.641</td>
+<td style="text-align: right;">6782.358</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">161.985</td>
-<td style="text-align: right;">162.089</td>
-<td style="text-align: right;">160.805</td>
-<td style="text-align: right;">205.371</td>
+<td style="text-align: right;">161.788</td>
+<td style="text-align: right;">160.690</td>
+<td style="text-align: right;">161.656</td>
+<td style="text-align: right;">203.670</td>
+<td style="text-align: right;">190.163</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">154.244</td>
-<td style="text-align: right;">153.980</td>
-<td style="text-align: right;">165.349</td>
-<td style="text-align: right;">197.005</td>
+<td style="text-align: right;">160.836</td>
+<td style="text-align: right;">157.655</td>
+<td style="text-align: right;">164.693</td>
+<td style="text-align: right;">194.496</td>
+<td style="text-align: right;">201.793</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">716.880</td>
-<td style="text-align: right;">1189.192</td>
-<td style="text-align: right;">1156.627</td>
-<td style="text-align: right;">1229.301</td>
+<td style="text-align: right;">728.629</td>
+<td style="text-align: right;">1157.104</td>
+<td style="text-align: right;">1139.372</td>
+<td style="text-align: right;">1231.877</td>
+<td style="text-align: right;">1326.584</td>
 </tr>
 <tr>
 <td style="text-align: left;">Int64</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">716.661</td>
-<td style="text-align: right;">3282.455</td>
-<td style="text-align: right;">3283.969</td>
-<td style="text-align: right;">3921.550</td>
+<td style="text-align: right;">727.603</td>
+<td style="text-align: right;">3114.720</td>
+<td style="text-align: right;">3307.205</td>
+<td style="text-align: right;">4088.677</td>
+<td style="text-align: right;">3409.341</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt16</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">525.100</td>
-<td style="text-align: right;">530.550</td>
-<td style="text-align: right;">525.952</td>
-<td style="text-align: right;">608.947</td>
+<td style="text-align: right;">527.761</td>
+<td style="text-align: right;">515.076</td>
+<td style="text-align: right;">531.818</td>
+<td style="text-align: right;">608.056</td>
+<td style="text-align: right;">832.441</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt16</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">528.430</td>
-<td style="text-align: right;">527.506</td>
-<td style="text-align: right;">539.088</td>
-<td style="text-align: right;">609.259</td>
+<td style="text-align: right;">573.087</td>
+<td style="text-align: right;">525.410</td>
+<td style="text-align: right;">576.628</td>
+<td style="text-align: right;">608.744</td>
+<td style="text-align: right;">893.594</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt16</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">7945.777</td>
-<td style="text-align: right;">8739.615</td>
-<td style="text-align: right;">7945.913</td>
-<td style="text-align: right;">8916.311</td>
+<td style="text-align: right;">8361.120</td>
+<td style="text-align: right;">8439.577</td>
+<td style="text-align: right;">7945.486</td>
+<td style="text-align: right;">8853.731</td>
+<td style="text-align: right;">11829.808</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt16</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">7943.115</td>
-<td style="text-align: right;">14158.586</td>
-<td style="text-align: right;">14166.207</td>
-<td style="text-align: right;">13814.007</td>
+<td style="text-align: right;">8307.680</td>
+<td style="text-align: right;">13106.613</td>
+<td style="text-align: right;">14179.297</td>
+<td style="text-align: right;">13964.213</td>
+<td style="text-align: right;">16532.648</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt32</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">544.871</td>
-<td style="text-align: right;">540.266</td>
-<td style="text-align: right;">538.649</td>
-<td style="text-align: right;">621.107</td>
+<td style="text-align: right;">537.550</td>
+<td style="text-align: right;">534.718</td>
+<td style="text-align: right;">539.467</td>
+<td style="text-align: right;">620.874</td>
+<td style="text-align: right;">989.646</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt32</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">541.719</td>
-<td style="text-align: right;">536.718</td>
-<td style="text-align: right;">535.769</td>
-<td style="text-align: right;">621.414</td>
+<td style="text-align: right;">539.997</td>
+<td style="text-align: right;">537.029</td>
+<td style="text-align: right;">545.333</td>
+<td style="text-align: right;">620.923</td>
+<td style="text-align: right;">827.472</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt32</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">4001.590</td>
-<td style="text-align: right;">4022.504</td>
-<td style="text-align: right;">3954.723</td>
-<td style="text-align: right;">4379.473</td>
+<td style="text-align: right;">4099.703</td>
+<td style="text-align: right;">4021.154</td>
+<td style="text-align: right;">3963.463</td>
+<td style="text-align: right;">4356.804</td>
+<td style="text-align: right;">5896.924</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt32</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">4018.815</td>
-<td style="text-align: right;">6824.637</td>
-<td style="text-align: right;">6400.947</td>
-<td style="text-align: right;">6722.416</td>
+<td style="text-align: right;">4024.310</td>
+<td style="text-align: right;">6340.994</td>
+<td style="text-align: right;">6977.151</td>
+<td style="text-align: right;">6619.009</td>
+<td style="text-align: right;">7993.300</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt64</td>
 <td style="text-align: left;">SumNarrow_If</td>
-<td style="text-align: right;">620.408</td>
-<td style="text-align: right;">620.900</td>
-<td style="text-align: right;">622.076</td>
-<td style="text-align: right;">828.917</td>
+<td style="text-align: right;">619.788</td>
+<td style="text-align: right;">621.120</td>
+<td style="text-align: right;">620.256</td>
+<td style="text-align: right;">827.649</td>
+<td style="text-align: right;">995.113</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt64</td>
 <td style="text-align: left;">SumNarrow_MinMax</td>
-<td style="text-align: right;">620.012</td>
-<td style="text-align: right;">619.806</td>
-<td style="text-align: right;">622.201</td>
-<td style="text-align: right;">828.565</td>
+<td style="text-align: right;">619.494</td>
+<td style="text-align: right;">620.151</td>
+<td style="text-align: right;">620.119</td>
+<td style="text-align: right;">818.259</td>
+<td style="text-align: right;">994.695</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt64</td>
 <td style="text-align: left;">SumNarrowVectorBase</td>
-<td style="text-align: right;">1291.051</td>
-<td style="text-align: right;">1863.543</td>
-<td style="text-align: right;">1869.904</td>
-<td style="text-align: right;">1816.732</td>
+<td style="text-align: right;">1229.723</td>
+<td style="text-align: right;">1821.232</td>
+<td style="text-align: right;">1848.632</td>
+<td style="text-align: right;">1805.499</td>
+<td style="text-align: right;">2169.309</td>
 </tr>
 <tr>
 <td style="text-align: left;">UInt64</td>
 <td style="text-align: left;">SumNarrowVectorTraits</td>
-<td style="text-align: right;">1293.997</td>
-<td style="text-align: right;">3233.726</td>
-<td style="text-align: right;">3491.369</td>
-<td style="text-align: right;">3501.256</td>
+<td style="text-align: right;">1228.911</td>
+<td style="text-align: right;">3489.303</td>
+<td style="text-align: right;">3526.548</td>
+<td style="text-align: right;">3480.212</td>
+<td style="text-align: right;">4100.727</td>
 </tr>
 </tbody>
 </table>
@@ -2628,6 +2924,430 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <li>SumNarrowVectorTraits: 使用本库的特征方法(<code>Vectors.YNarrowSaturate</code>). 它是通过内在函数来实现的, 能获得更佳硬件加速.</li>
 </ul>
 <p>因为从 <code>.NET 5.0</code>开始，提供了 Arm的内在函数. 故从 <code>.NET 5.0</code> 开始, SumNarrowVectorTraits的性能比SumNarrowVectorBase强很多.</p>
+<h3 id="ygroup3unzip">YGroup3Unzip</h3>
+<p>YGroup3Unzip: 将3-元素组解交织为3个向量. 它能将3元素组的 数组结构体 转为 结构体数组. 它还能将 已打包的RGB像素数据, 解交织为 R,G,B 平面数据 .</p>
+<p>YGroup3UnzipX2: 将3-元素组解交织为3个向量, 且处理2倍数据.</p>
+<h4 id="ygroup3unzip---x86---amd-ryzen-7-7840h">YGroup3Unzip - X86 - AMD Ryzen 7 7840H</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">255.172</td>
+<td style="text-align: right;">496.713</td>
+<td style="text-align: right;">501.725</td>
+<td style="text-align: right;">499.601</td>
+<td style="text-align: right;">566.925</td>
+<td style="text-align: right;">505.052</td>
+<td style="text-align: right;">670.702</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">1140.616</td>
+<td style="text-align: right;">1053.352</td>
+<td style="text-align: right;">1089.103</td>
+<td style="text-align: right;">1138.235</td>
+<td style="text-align: right;">1111.114</td>
+<td style="text-align: right;">1478.675</td>
+<td style="text-align: right;">1463.708</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1121.904</td>
+<td style="text-align: right;">1086.799</td>
+<td style="text-align: right;">7468.216</td>
+<td style="text-align: right;">11280.246</td>
+<td style="text-align: right;">11541.671</td>
+<td style="text-align: right;">12438.171</td>
+<td style="text-align: right;">21865.365</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumX2Base</td>
+<td style="text-align: right;">2169.025</td>
+<td style="text-align: right;">2088.353</td>
+<td style="text-align: right;">2171.143</td>
+<td style="text-align: right;">2111.332</td>
+<td style="text-align: right;">2179.099</td>
+<td style="text-align: right;">2812.575</td>
+<td style="text-align: right;">2973.122</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumX2Traits</td>
+<td style="text-align: right;">2229.977</td>
+<td style="text-align: right;">2160.516</td>
+<td style="text-align: right;">10419.951</td>
+<td style="text-align: right;">10989.673</td>
+<td style="text-align: right;">10985.330</td>
+<td style="text-align: right;">11472.251</td>
+<td style="text-align: right;">22393.695</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">213.465</td>
+<td style="text-align: right;">389.617</td>
+<td style="text-align: right;">439.760</td>
+<td style="text-align: right;">352.833</td>
+<td style="text-align: right;">453.870</td>
+<td style="text-align: right;">404.842</td>
+<td style="text-align: right;">533.252</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">738.972</td>
+<td style="text-align: right;">723.809</td>
+<td style="text-align: right;">686.669</td>
+<td style="text-align: right;">739.079</td>
+<td style="text-align: right;">728.061</td>
+<td style="text-align: right;">1015.709</td>
+<td style="text-align: right;">1008.942</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">759.109</td>
+<td style="text-align: right;">691.273</td>
+<td style="text-align: right;">3767.055</td>
+<td style="text-align: right;">5383.595</td>
+<td style="text-align: right;">5638.094</td>
+<td style="text-align: right;">6270.971</td>
+<td style="text-align: right;">10452.168</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumX2Base</td>
+<td style="text-align: right;">1327.217</td>
+<td style="text-align: right;">1262.400</td>
+<td style="text-align: right;">1260.547</td>
+<td style="text-align: right;">1312.866</td>
+<td style="text-align: right;">1288.727</td>
+<td style="text-align: right;">1723.543</td>
+<td style="text-align: right;">1761.102</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumX2Traits</td>
+<td style="text-align: right;">1320.545</td>
+<td style="text-align: right;">1227.530</td>
+<td style="text-align: right;">6120.175</td>
+<td style="text-align: right;">6190.444</td>
+<td style="text-align: right;">6208.993</td>
+<td style="text-align: right;">5798.718</td>
+<td style="text-align: right;">10909.299</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">186.128</td>
+<td style="text-align: right;">276.261</td>
+<td style="text-align: right;">295.992</td>
+<td style="text-align: right;">219.993</td>
+<td style="text-align: right;">323.416</td>
+<td style="text-align: right;">280.863</td>
+<td style="text-align: right;">391.511</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">184.001</td>
+<td style="text-align: right;">273.403</td>
+<td style="text-align: right;">306.846</td>
+<td style="text-align: right;">224.431</td>
+<td style="text-align: right;">320.332</td>
+<td style="text-align: right;">551.148</td>
+<td style="text-align: right;">555.068</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">189.108</td>
+<td style="text-align: right;">277.059</td>
+<td style="text-align: right;">6262.687</td>
+<td style="text-align: right;">6454.641</td>
+<td style="text-align: right;">6392.289</td>
+<td style="text-align: right;">6488.127</td>
+<td style="text-align: right;">6951.683</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumX2Base</td>
+<td style="text-align: right;">155.218</td>
+<td style="text-align: right;">257.316</td>
+<td style="text-align: right;">284.894</td>
+<td style="text-align: right;">247.659</td>
+<td style="text-align: right;">318.492</td>
+<td style="text-align: right;">1072.598</td>
+<td style="text-align: right;">1093.091</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumX2Traits</td>
+<td style="text-align: right;">160.252</td>
+<td style="text-align: right;">253.319</td>
+<td style="text-align: right;">5049.720</td>
+<td style="text-align: right;">6341.390</td>
+<td style="text-align: right;">6285.681</td>
+<td style="text-align: right;">6215.097</td>
+<td style="text-align: right;">7422.183</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">136.976</td>
+<td style="text-align: right;">170.057</td>
+<td style="text-align: right;">187.362</td>
+<td style="text-align: right;">131.130</td>
+<td style="text-align: right;">193.633</td>
+<td style="text-align: right;">175.953</td>
+<td style="text-align: right;">240.232</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">135.652</td>
+<td style="text-align: right;">170.323</td>
+<td style="text-align: right;">187.933</td>
+<td style="text-align: right;">125.485</td>
+<td style="text-align: right;">192.634</td>
+<td style="text-align: right;">168.300</td>
+<td style="text-align: right;">238.422</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">135.704</td>
+<td style="text-align: right;">167.900</td>
+<td style="text-align: right;">4095.410</td>
+<td style="text-align: right;">3868.199</td>
+<td style="text-align: right;">4015.411</td>
+<td style="text-align: right;">4061.920</td>
+<td style="text-align: right;">4385.505</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumX2Base</td>
+<td style="text-align: right;">108.319</td>
+<td style="text-align: right;">151.252</td>
+<td style="text-align: right;">178.444</td>
+<td style="text-align: right;">137.145</td>
+<td style="text-align: right;">182.990</td>
+<td style="text-align: right;">155.501</td>
+<td style="text-align: right;">243.663</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumX2Traits</td>
+<td style="text-align: right;">109.441</td>
+<td style="text-align: right;">151.243</td>
+<td style="text-align: right;">2684.613</td>
+<td style="text-align: right;">3883.237</td>
+<td style="text-align: right;">3978.648</td>
+<td style="text-align: right;">3893.358</td>
+<td style="text-align: right;">4785.675</td>
+</tr>
+</tbody>
+</table>
+<p>说明:</p>
+<ul>
+<li>SumBase_Basic: 使用标量算法.</li>
+<li>SumBase: 使用本库的基础方法(<code>VectorTraitsBase.Statics.YGroup3Unzip</code>). 它是通过组合使用BCL的向量方法来实现的, 能够利用硬件加速.</li>
+<li>SumTraits: 使用本库的特征方法(<code>Vectors.YGroup3Unzip</code>). 它是通过内在函数来实现的, 能获得更佳硬件加速.</li>
+<li>SumX2Base: 使用 <code>VectorTraitsBase.Statics.YGroup3UnzipX2</code>. 对于 8~16位整数, YGroup3UnzipX2 一般比 YGroup3Unzip 更快, 在早期版本的.NET下更明显.</li>
+<li>SumX2Traits: 使用 <code>Vectors.YGroup3UnzipX2</code>.</li>
+</ul>
+<h4 id="ygroup3unzip---arm---aws-arm-t4gsmall">YGroup3Unzip - Arm - AWS Arm t4g.small</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">263.957</td>
+<td style="text-align: right;">265.524</td>
+<td style="text-align: right;">327.819</td>
+<td style="text-align: right;">381.159</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">380.369</td>
+<td style="text-align: right;">406.259</td>
+<td style="text-align: right;">430.545</td>
+<td style="text-align: right;">443.813</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">378.710</td>
+<td style="text-align: right;">4381.575</td>
+<td style="text-align: right;">4113.304</td>
+<td style="text-align: right;">6510.157</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumX2Base</td>
+<td style="text-align: right;">702.851</td>
+<td style="text-align: right;">728.691</td>
+<td style="text-align: right;">740.690</td>
+<td style="text-align: right;">767.491</td>
+</tr>
+<tr>
+<td style="text-align: left;">Byte</td>
+<td style="text-align: left;">SumX2Traits</td>
+<td style="text-align: right;">700.539</td>
+<td style="text-align: right;">4412.785</td>
+<td style="text-align: right;">4273.763</td>
+<td style="text-align: right;">5294.112</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">188.885</td>
+<td style="text-align: right;">189.823</td>
+<td style="text-align: right;">222.856</td>
+<td style="text-align: right;">279.398</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">213.360</td>
+<td style="text-align: right;">228.410</td>
+<td style="text-align: right;">235.157</td>
+<td style="text-align: right;">242.377</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">213.356</td>
+<td style="text-align: right;">1926.559</td>
+<td style="text-align: right;">2134.925</td>
+<td style="text-align: right;">3037.124</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumX2Base</td>
+<td style="text-align: right;">419.434</td>
+<td style="text-align: right;">448.638</td>
+<td style="text-align: right;">466.043</td>
+<td style="text-align: right;">475.565</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int16</td>
+<td style="text-align: left;">SumX2Traits</td>
+<td style="text-align: right;">419.442</td>
+<td style="text-align: right;">2413.794</td>
+<td style="text-align: right;">2650.031</td>
+<td style="text-align: right;">2638.161</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">138.088</td>
+<td style="text-align: right;">143.089</td>
+<td style="text-align: right;">154.241</td>
+<td style="text-align: right;">196.818</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">141.071</td>
+<td style="text-align: right;">143.390</td>
+<td style="text-align: right;">186.784</td>
+<td style="text-align: right;">198.177</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">144.696</td>
+<td style="text-align: right;">1033.899</td>
+<td style="text-align: right;">1069.974</td>
+<td style="text-align: right;">1494.205</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumX2Base</td>
+<td style="text-align: right;">121.726</td>
+<td style="text-align: right;">138.986</td>
+<td style="text-align: right;">275.479</td>
+<td style="text-align: right;">310.983</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int32</td>
+<td style="text-align: left;">SumX2Traits</td>
+<td style="text-align: right;">119.468</td>
+<td style="text-align: right;">1598.185</td>
+<td style="text-align: right;">1547.795</td>
+<td style="text-align: right;">1618.239</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumBase_Basic</td>
+<td style="text-align: right;">109.766</td>
+<td style="text-align: right;">100.523</td>
+<td style="text-align: right;">84.039</td>
+<td style="text-align: right;">189.270</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumBase</td>
+<td style="text-align: right;">109.531</td>
+<td style="text-align: right;">102.084</td>
+<td style="text-align: right;">81.358</td>
+<td style="text-align: right;">185.056</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">107.335</td>
+<td style="text-align: right;">1153.333</td>
+<td style="text-align: right;">1176.315</td>
+<td style="text-align: right;">1191.362</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumX2Base</td>
+<td style="text-align: right;">97.857</td>
+<td style="text-align: right;">96.111</td>
+<td style="text-align: right;">79.729</td>
+<td style="text-align: right;">203.008</td>
+</tr>
+<tr>
+<td style="text-align: left;">Int64</td>
+<td style="text-align: left;">SumX2Traits</td>
+<td style="text-align: right;">98.162</td>
+<td style="text-align: right;">1216.716</td>
+<td style="text-align: right;">1155.302</td>
+<td style="text-align: right;">1374.619</td>
+</tr>
+</tbody>
+</table>
 <h3 id="更多结果">更多结果</h3>
 <p>详见: <a href="articles/BenchmarkResults/AVector/README.html">BenchmarkResults</a></p>
 <h2 id="文档">文档</h2>

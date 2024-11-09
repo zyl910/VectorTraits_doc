@@ -1,0 +1,663 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Method YShuffleX2Kernel </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Method YShuffleX2Kernel ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*">
+
+
+
+
+
+<h1 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*" class="text-break">
+Method YShuffleX2Kernel  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8419"><i class="bi bi-code-slash"></i></a>
+</h1>
+
+<div class="facts text-secondary">
+  <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+</div>
+
+<div class="markdown summary"></div>
+<div class="markdown conceptual"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_System_Runtime_Intrinsics_Vector128_System_Single__System_Runtime_Intrinsics_Vector128_System_Single__System_Runtime_Intrinsics_Vector128_System_Int32__" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel(System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Int32})">
+  YShuffleX2Kernel(Vector128&lt;float&gt;, Vector128&lt;float&gt;, Vector128&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8419"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vectors using a set of indices (通过使用一组索引从输入向量集中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector128&lt;float&gt; YShuffleX2Kernel(Vector128&lt;float&gt; vector0, Vector128&lt;float&gt; vector1, Vector128&lt;int&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>The input vector 0 from which values are selected (从中选择值的输入向量0).</p>
+</dd>
+  <dt><code>vector1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>The input vector 1 from which values are selected (从中选择值的输入向量1).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from vectors (用于从输入向量集中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>A new vector containing the values from input vectors selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从输入向量集中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleX2Kernel_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleX2Kernel_AcceleratedTypes">YShuffleX2Kernel_AcceleratedTypes</a></div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_System_Runtime_Intrinsics_Vector128_System_Double__System_Runtime_Intrinsics_Vector128_System_Double__System_Runtime_Intrinsics_Vector128_System_Int64__" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel(System.Runtime.Intrinsics.Vector128{System.Double},System.Runtime.Intrinsics.Vector128{System.Double},System.Runtime.Intrinsics.Vector128{System.Int64})">
+  YShuffleX2Kernel(Vector128&lt;double&gt;, Vector128&lt;double&gt;, Vector128&lt;long&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8434"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vectors using a set of indices (通过使用一组索引从输入向量集中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector128&lt;double&gt; YShuffleX2Kernel(Vector128&lt;double&gt; vector0, Vector128&lt;double&gt; vector1, Vector128&lt;long&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+  <dd><p>The input vector 0 from which values are selected (从中选择值的输入向量0).</p>
+</dd>
+  <dt><code>vector1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+  <dd><p>The input vector 1 from which values are selected (从中选择值的输入向量1).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from vectors (用于从输入向量集中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+  <dd><p>A new vector containing the values from input vectors selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从输入向量集中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleX2Kernel_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleX2Kernel_AcceleratedTypes">YShuffleX2Kernel_AcceleratedTypes</a></div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_System_Runtime_Intrinsics_Vector128_System_SByte__System_Runtime_Intrinsics_Vector128_System_SByte__System_Runtime_Intrinsics_Vector128_System_SByte__" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel(System.Runtime.Intrinsics.Vector128{System.SByte},System.Runtime.Intrinsics.Vector128{System.SByte},System.Runtime.Intrinsics.Vector128{System.SByte})">
+  YShuffleX2Kernel(Vector128&lt;sbyte&gt;, Vector128&lt;sbyte&gt;, Vector128&lt;sbyte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8449"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vectors using a set of indices (通过使用一组索引从输入向量集中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector128&lt;sbyte&gt; YShuffleX2Kernel(Vector128&lt;sbyte&gt; vector0, Vector128&lt;sbyte&gt; vector1, Vector128&lt;sbyte&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>The input vector 0 from which values are selected (从中选择值的输入向量0).</p>
+</dd>
+  <dt><code>vector1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>The input vector 1 from which values are selected (从中选择值的输入向量1).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from vectors (用于从输入向量集中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>A new vector containing the values from input vectors selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从输入向量集中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleX2Kernel_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleX2Kernel_AcceleratedTypes">YShuffleX2Kernel_AcceleratedTypes</a></div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel(System.Runtime.Intrinsics.Vector128{System.Byte},System.Runtime.Intrinsics.Vector128{System.Byte},System.Runtime.Intrinsics.Vector128{System.Byte})">
+  YShuffleX2Kernel(Vector128&lt;byte&gt;, Vector128&lt;byte&gt;, Vector128&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8465"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vectors using a set of indices (通过使用一组索引从输入向量集中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector128&lt;byte&gt; YShuffleX2Kernel(Vector128&lt;byte&gt; vector0, Vector128&lt;byte&gt; vector1, Vector128&lt;byte&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>The input vector 0 from which values are selected (从中选择值的输入向量0).</p>
+</dd>
+  <dt><code>vector1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>The input vector 1 from which values are selected (从中选择值的输入向量1).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from vectors (用于从输入向量集中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>A new vector containing the values from input vectors selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从输入向量集中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleX2Kernel_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleX2Kernel_AcceleratedTypes">YShuffleX2Kernel_AcceleratedTypes</a></div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_System_Runtime_Intrinsics_Vector128_System_Int16__System_Runtime_Intrinsics_Vector128_System_Int16__System_Runtime_Intrinsics_Vector128_System_Int16__" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel(System.Runtime.Intrinsics.Vector128{System.Int16},System.Runtime.Intrinsics.Vector128{System.Int16},System.Runtime.Intrinsics.Vector128{System.Int16})">
+  YShuffleX2Kernel(Vector128&lt;short&gt;, Vector128&lt;short&gt;, Vector128&lt;short&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8480"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vectors using a set of indices (通过使用一组索引从输入向量集中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector128&lt;short&gt; YShuffleX2Kernel(Vector128&lt;short&gt; vector0, Vector128&lt;short&gt; vector1, Vector128&lt;short&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>The input vector 0 from which values are selected (从中选择值的输入向量0).</p>
+</dd>
+  <dt><code>vector1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>The input vector 1 from which values are selected (从中选择值的输入向量1).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from vectors (用于从输入向量集中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>A new vector containing the values from input vectors selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从输入向量集中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleX2Kernel_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleX2Kernel_AcceleratedTypes">YShuffleX2Kernel_AcceleratedTypes</a></div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_System_Runtime_Intrinsics_Vector128_System_UInt16__System_Runtime_Intrinsics_Vector128_System_UInt16__System_Runtime_Intrinsics_Vector128_System_UInt16__" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel(System.Runtime.Intrinsics.Vector128{System.UInt16},System.Runtime.Intrinsics.Vector128{System.UInt16},System.Runtime.Intrinsics.Vector128{System.UInt16})">
+  YShuffleX2Kernel(Vector128&lt;ushort&gt;, Vector128&lt;ushort&gt;, Vector128&lt;ushort&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8495"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vectors using a set of indices (通过使用一组索引从输入向量集中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector128&lt;ushort&gt; YShuffleX2Kernel(Vector128&lt;ushort&gt; vector0, Vector128&lt;ushort&gt; vector1, Vector128&lt;ushort&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>The input vector 0 from which values are selected (从中选择值的输入向量0).</p>
+</dd>
+  <dt><code>vector1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>The input vector 1 from which values are selected (从中选择值的输入向量1).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from vectors (用于从输入向量集中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>A new vector containing the values from input vectors selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从输入向量集中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleX2Kernel_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleX2Kernel_AcceleratedTypes">YShuffleX2Kernel_AcceleratedTypes</a></div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_System_Runtime_Intrinsics_Vector128_System_Int32__System_Runtime_Intrinsics_Vector128_System_Int32__System_Runtime_Intrinsics_Vector128_System_Int32__" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel(System.Runtime.Intrinsics.Vector128{System.Int32},System.Runtime.Intrinsics.Vector128{System.Int32},System.Runtime.Intrinsics.Vector128{System.Int32})">
+  YShuffleX2Kernel(Vector128&lt;int&gt;, Vector128&lt;int&gt;, Vector128&lt;int&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8511"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vectors using a set of indices (通过使用一组索引从输入向量集中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector128&lt;int&gt; YShuffleX2Kernel(Vector128&lt;int&gt; vector0, Vector128&lt;int&gt; vector1, Vector128&lt;int&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The input vector 0 from which values are selected (从中选择值的输入向量0).</p>
+</dd>
+  <dt><code>vector1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The input vector 1 from which values are selected (从中选择值的输入向量1).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from vectors (用于从输入向量集中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>A new vector containing the values from input vectors selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从输入向量集中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleX2Kernel_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleX2Kernel_AcceleratedTypes">YShuffleX2Kernel_AcceleratedTypes</a></div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_System_Runtime_Intrinsics_Vector128_System_UInt32__System_Runtime_Intrinsics_Vector128_System_UInt32__System_Runtime_Intrinsics_Vector128_System_UInt32__" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel(System.Runtime.Intrinsics.Vector128{System.UInt32},System.Runtime.Intrinsics.Vector128{System.UInt32},System.Runtime.Intrinsics.Vector128{System.UInt32})">
+  YShuffleX2Kernel(Vector128&lt;uint&gt;, Vector128&lt;uint&gt;, Vector128&lt;uint&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8526"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vectors using a set of indices (通过使用一组索引从输入向量集中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector128&lt;uint&gt; YShuffleX2Kernel(Vector128&lt;uint&gt; vector0, Vector128&lt;uint&gt; vector1, Vector128&lt;uint&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>The input vector 0 from which values are selected (从中选择值的输入向量0).</p>
+</dd>
+  <dt><code>vector1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>The input vector 1 from which values are selected (从中选择值的输入向量1).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from vectors (用于从输入向量集中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>A new vector containing the values from input vectors selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从输入向量集中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleX2Kernel_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleX2Kernel_AcceleratedTypes">YShuffleX2Kernel_AcceleratedTypes</a></div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_System_Runtime_Intrinsics_Vector128_System_Int64__System_Runtime_Intrinsics_Vector128_System_Int64__System_Runtime_Intrinsics_Vector128_System_Int64__" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel(System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64})">
+  YShuffleX2Kernel(Vector128&lt;long&gt;, Vector128&lt;long&gt;, Vector128&lt;long&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8542"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vectors using a set of indices (通过使用一组索引从输入向量集中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector128&lt;long&gt; YShuffleX2Kernel(Vector128&lt;long&gt; vector0, Vector128&lt;long&gt; vector1, Vector128&lt;long&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The input vector 0 from which values are selected (从中选择值的输入向量0).</p>
+</dd>
+  <dt><code>vector1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The input vector 1 from which values are selected (从中选择值的输入向量1).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from vectors (用于从输入向量集中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>A new vector containing the values from input vectors selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从输入向量集中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleX2Kernel_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleX2Kernel_AcceleratedTypes">YShuffleX2Kernel_AcceleratedTypes</a></div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector128s_YShuffleX2Kernel_System_Runtime_Intrinsics_Vector128_System_UInt64__System_Runtime_Intrinsics_Vector128_System_UInt64__System_Runtime_Intrinsics_Vector128_System_UInt64__" data-uid="Zyl.VectorTraits.Vector128s.YShuffleX2Kernel(System.Runtime.Intrinsics.Vector128{System.UInt64},System.Runtime.Intrinsics.Vector128{System.UInt64},System.Runtime.Intrinsics.Vector128{System.UInt64})">
+  YShuffleX2Kernel(Vector128&lt;ulong&gt;, Vector128&lt;ulong&gt;, Vector128&lt;ulong&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8557"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vectors using a set of indices (通过使用一组索引从输入向量集中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vector128s-1.IndexX2Mask.html">IndexX2Mask</a> 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector128&lt;ulong&gt; YShuffleX2Kernel(Vector128&lt;ulong&gt; vector0, Vector128&lt;ulong&gt; vector1, Vector128&lt;ulong&gt; indices)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>vector0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>The input vector 0 from which values are selected (从中选择值的输入向量0).</p>
+</dd>
+  <dt><code>vector1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>The input vector 1 from which values are selected (从中选择值的输入向量1).</p>
+</dd>
+  <dt><code>indices</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>The per-element indices used to select a value from vectors (用于从输入向量集中选择值的每个元素索引).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>A new vector containing the values from input vectors selected by the given <code class="paramref">indices</code> (一个新向量，其中包含给定 <code class="paramref">indices</code> 从输入向量集中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleX2Kernel_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleX2Kernel_AcceleratedTypes">YShuffleX2Kernel_AcceleratedTypes</a></div>
+  </dd>
+</dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.Traits.Y.cs/#L8419" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

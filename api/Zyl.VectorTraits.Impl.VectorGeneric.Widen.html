@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_VectorGeneric_Widen_" data-uid="Zyl.VectorTraits.Impl.VectorGeneric.Widen*" class="text-break">
-Method Widen  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L15"><i class="bi bi-code-slash"></i></a>
+Method Widen  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L16"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Widen  <a class="header-action link-secondary" title="View source" href="
 
 <h3 id="Zyl_VectorTraits_Impl_VectorGeneric_Widen_System_Numerics_Vector_System_Single__" data-uid="Zyl.VectorTraits.Impl.VectorGeneric.Widen(System.Numerics.Vector{System.Single})">
   Widen(Vector&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L16"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Widens a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> into two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances (将一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 扩宽为两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例).
@@ -163,7 +163,7 @@ Mnemonic: <code>element_ref(i, lower, upper) := widen(source[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_VectorGeneric_Widen_System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Impl.VectorGeneric.Widen(System.Numerics.Vector{System.SByte})">
   Widen(Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L23"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Widens a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> into two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances (将一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 扩宽为两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例).
@@ -210,7 +210,7 @@ public static (Vector&lt;short&gt; Lower, Vector&lt;short&gt; Upper) Widen(Vecto
 
 <h3 id="Zyl_VectorTraits_Impl_VectorGeneric_Widen_System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Impl.VectorGeneric.Widen(System.Numerics.Vector{System.Byte})">
   Widen(Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L31"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Widens a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> into two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances (将一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 扩宽为两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例).
@@ -257,7 +257,7 @@ public static (Vector&lt;ushort&gt; Lower, Vector&lt;ushort&gt; Upper) Widen(Vec
 
 <h3 id="Zyl_VectorTraits_Impl_VectorGeneric_Widen_System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Impl.VectorGeneric.Widen(System.Numerics.Vector{System.Int16})">
   Widen(Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L39"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Widens a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> into two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances (将一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 扩宽为两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例).
@@ -303,7 +303,7 @@ Mnemonic: <code>element_ref(i, lower, upper) := widen(source[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_VectorGeneric_Widen_System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.VectorGeneric.Widen(System.Numerics.Vector{System.UInt16})">
   Widen(Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L46"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Widens a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> into two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances (将一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 扩宽为两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例).
@@ -350,7 +350,7 @@ public static (Vector&lt;uint&gt; Lower, Vector&lt;uint&gt; Upper) Widen(Vector&
 
 <h3 id="Zyl_VectorTraits_Impl_VectorGeneric_Widen_System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.VectorGeneric.Widen(System.Numerics.Vector{System.Int32})">
   Widen(Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L54"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Widens a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> into two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances (将一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 扩宽为两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例).
@@ -396,7 +396,7 @@ Mnemonic: <code>element_ref(i, lower, upper) := widen(source[i])</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_VectorGeneric_Widen_System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.VectorGeneric.Widen(System.Numerics.Vector{System.UInt32})">
   Widen(Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L61"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Widens a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> into two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances (将一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 扩宽为两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例).
@@ -443,7 +443,7 @@ public static (Vector&lt;ulong&gt; Lower, Vector&lt;ulong&gt; Upper) Widen(Vecto
 
 <h3 id="Zyl_VectorTraits_Impl_VectorGeneric_Widen__2_System_Numerics_Vector___0__System_Numerics_Vector___1___System_Numerics_Vector___1___" data-uid="Zyl.VectorTraits.Impl.VectorGeneric.Widen``2(System.Numerics.Vector{``0},System.Numerics.Vector{``1}@,System.Numerics.Vector{``1}@)">
   Widen&lt;T, TOut&gt;(Vector&lt;T&gt;, out Vector&lt;TOut&gt;, out Vector&lt;TOut&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L69"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Widens a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> into two <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instances - Generic version (将一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 扩宽为两个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例 - 泛型版).
@@ -489,7 +489,7 @@ public static void Widen&lt;T, TOut&gt;(Vector&lt;T&gt; source, out Vector&lt;TO
 <h4 class="section">Exceptions</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-  <dd><p>These element types(T, TOut) are not supported.</p>
+  <dd><p>These element types(<code class="typeparamref">T</code>, <code class="typeparamref">TOut</code>) are not supported.</p>
 </dd>
 </dl>
 
@@ -505,7 +505,7 @@ public static void Widen&lt;T, TOut&gt;(Vector&lt;T&gt; source, out Vector&lt;TO
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L15" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorGeneric.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

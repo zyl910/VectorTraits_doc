@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp*" class="text-break">
-Method YClamp  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L139"><i class="bi bi-code-slash"></i></a>
+Method YClamp  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L143"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YClamp  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Single__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})">
   YClamp(Vector&lt;float&gt;, Vector&lt;float&gt;, Vector&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L143"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the numerical clamp of each element in a vector (计算向量中每个元素的数值限制).
@@ -170,7 +170,7 @@ Mnemonic: <code>rt[i] := clamp(value[i], amin[i], amax[i]) = min(max(amin[i], va
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Double__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})">
   YClamp(Vector&lt;double&gt;, Vector&lt;double&gt;, Vector&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L155"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the numerical clamp of each element in a vector (计算向量中每个元素的数值限制).
@@ -223,7 +223,7 @@ Mnemonic: <code>rt[i] := clamp(value[i], amin[i], amax[i]) = min(max(amin[i], va
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte})">
   YClamp(Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L167"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the numerical clamp of each element in a vector (计算向量中每个元素的数值限制).
@@ -276,7 +276,7 @@ Mnemonic: <code>rt[i] := clamp(value[i], amin[i], amax[i]) = min(max(amin[i], va
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte})">
   YClamp(Vector&lt;byte&gt;, Vector&lt;byte&gt;, Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L179"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the numerical clamp of each element in a vector (计算向量中每个元素的数值限制).
@@ -329,7 +329,7 @@ Mnemonic: <code>rt[i] := clamp(value[i], amin[i], amax[i]) = min(max(amin[i], va
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16})">
   YClamp(Vector&lt;short&gt;, Vector&lt;short&gt;, Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L191"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the numerical clamp of each element in a vector (计算向量中每个元素的数值限制).
@@ -382,7 +382,7 @@ Mnemonic: <code>rt[i] := clamp(value[i], amin[i], amax[i]) = min(max(amin[i], va
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16})">
   YClamp(Vector&lt;ushort&gt;, Vector&lt;ushort&gt;, Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L203"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the numerical clamp of each element in a vector (计算向量中每个元素的数值限制).
@@ -435,7 +435,7 @@ Mnemonic: <code>rt[i] := clamp(value[i], amin[i], amax[i]) = min(max(amin[i], va
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})">
   YClamp(Vector&lt;int&gt;, Vector&lt;int&gt;, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L215"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the numerical clamp of each element in a vector (计算向量中每个元素的数值限制).
@@ -488,7 +488,7 @@ Mnemonic: <code>rt[i] := clamp(value[i], amin[i], amax[i]) = min(max(amin[i], va
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32})">
   YClamp(Vector&lt;uint&gt;, Vector&lt;uint&gt;, Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L227"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the numerical clamp of each element in a vector (计算向量中每个元素的数值限制).
@@ -541,7 +541,7 @@ Mnemonic: <code>rt[i] := clamp(value[i], amin[i], amax[i]) = min(max(amin[i], va
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})">
   YClamp(Vector&lt;long&gt;, Vector&lt;long&gt;, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L239"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the numerical clamp of each element in a vector (计算向量中每个元素的数值限制).
@@ -594,7 +594,7 @@ Mnemonic: <code>rt[i] := clamp(value[i], amin[i], amax[i]) = min(max(amin[i], va
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_YClamp_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits.YClamp(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64})">
   YClamp(Vector&lt;ulong&gt;, Vector&lt;ulong&gt;, Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L251"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the numerical clamp of each element in a vector (计算向量中每个元素的数值限制).
@@ -646,7 +646,7 @@ Mnemonic: <code>rt[i] := clamp(value[i], amin[i], amax[i]) = min(max(amin[i], va
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L139" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits.Y.cs/#L143" class="edit-link">Edit this page</a>
         </div>
 
 

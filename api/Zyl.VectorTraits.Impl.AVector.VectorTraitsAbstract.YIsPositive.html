@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsPositive_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsPositive*" class="text-break">
-Method YIsPositive  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L670"><i class="bi bi-code-slash"></i></a>
+Method YIsPositive  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2262"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YIsPositive  <a class="header-action link-secondary" title="View source" 
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsPositive_System_Numerics_Vector_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsPositive(System.Numerics.Vector{System.Single})">
   YIsPositive(Vector&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2262"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents zero or a positive number (确定元素是否为零或正数).
@@ -164,7 +164,7 @@ Mnemonic: <code>rt[i] := to_mask(isNegative(value[i])) = to_mask((value[i]&lt;0)
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsPositive_System_Numerics_Vector_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsPositive(System.Numerics.Vector{System.Double})">
   YIsPositive(Vector&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L676"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2268"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents zero or a positive number (确定元素是否为零或正数).
@@ -212,7 +212,7 @@ Mnemonic: <code>rt[i] := to_mask(isNegative(value[i])) = to_mask((value[i]&lt;0)
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsPositive_System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsPositive(System.Numerics.Vector{System.SByte})">
   YIsPositive(Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L682"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2274"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents zero or a positive number (确定元素是否为零或正数).
@@ -261,7 +261,7 @@ public virtual Vector&lt;sbyte&gt; YIsPositive(Vector&lt;sbyte&gt; value)</code>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsPositive_System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsPositive(System.Numerics.Vector{System.Int16})">
   YIsPositive(Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L689"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2281"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents zero or a positive number (确定元素是否为零或正数).
@@ -309,7 +309,7 @@ Mnemonic: <code>rt[i] := to_mask(isNegative(value[i])) = to_mask((value[i]&lt;0)
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsPositive_System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsPositive(System.Numerics.Vector{System.Int32})">
   YIsPositive(Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L695"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2287"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents zero or a positive number (确定元素是否为零或正数).
@@ -357,7 +357,7 @@ Mnemonic: <code>rt[i] := to_mask(isNegative(value[i])) = to_mask((value[i]&lt;0)
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraitsAbstract_YIsPositive_System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraitsAbstract.YIsPositive(System.Numerics.Vector{System.Int64})">
   YIsPositive(Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L701"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2293"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents zero or a positive number (确定元素是否为零或正数).
@@ -404,7 +404,7 @@ Mnemonic: <code>rt[i] := to_mask(isNegative(value[i])) = to_mask((value[i]&lt;0)
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L670" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraitsAbstract.Y.cs/#L2262" class="edit-link">Edit this page</a>
         </div>
 
 

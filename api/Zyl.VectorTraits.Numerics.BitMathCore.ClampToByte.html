@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte*" class="text-break">
-Method ClampToByte  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L279"><i class="bi bi-code-slash"></i></a>
+Method ClampToByte  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L361"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ClampToByte  <a class="header-action link-secondary" title="View source" 
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_Int32_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte(System.Int32)">
   ClampToByte(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L361"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
@@ -156,7 +156,7 @@ Method ClampToByte  <a class="header-action link-secondary" title="View source" 
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_UInt32_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte(System.UInt32)">
   ClampToByte(uint)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L369"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
@@ -196,7 +196,7 @@ public static byte ClampToByte(uint value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_Int64_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte(System.Int64)">
   ClampToByte(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L378"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
@@ -235,7 +235,7 @@ public static byte ClampToByte(uint value)</code></pre>
 
 <h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_UInt64_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte(System.UInt64)">
   ClampToByte(ulong)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L386"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
@@ -271,10 +271,168 @@ public static byte ClampToByte(ulong value)</code></pre>
 
 
 
+<a id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte*"></a>
+
+<h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_Zyl_VectorTraits_ExTypes_ExInt128_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte(Zyl.VectorTraits.ExTypes.ExInt128)">
+  ClampToByte(ExInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L393"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static byte ClampToByte(ExInt128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+  <dd><p>Returns clamped value (返回限制后的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte*"></a>
+
+<h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_Zyl_VectorTraits_ExTypes_ExUInt128_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte(Zyl.VectorTraits.ExTypes.ExUInt128)">
+  ClampToByte(ExUInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L399"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static byte ClampToByte(ExUInt128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+  <dd><p>Returns clamped value (返回限制后的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte*"></a>
+
+<h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_Int128_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte(System.Int128)">
+  ClampToByte(Int128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L408"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static byte ClampToByte(Int128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+  <dd><p>Returns clamped value (返回限制后的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte*"></a>
+
+<h3 id="Zyl_VectorTraits_Numerics_BitMathCore_ClampToByte_System_UInt128_" data-uid="Zyl.VectorTraits.Numerics.BitMathCore.ClampToByte(System.UInt128)">
+  ClampToByte(UInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L414"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Returns <code class="paramref">value</code> clamped to the inclusive range of 0 and <code>byte.MaxValue</code> (返回限制在 0 和 <code>byte.MaxValue</code> 范围内的 <code class="paramref">value</code>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static byte ClampToByte(UInt128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a></dt>
+  <dd><p>The value to be clamped (要限制的值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></dt>
+  <dd><p>Returns clamped value (返回限制后的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L279" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/BitMathCore.cs/#L361" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -83,14 +83,16 @@
         <article data-uid="">
 <h1 id="traits-method-list">Traits method list</h1>
 
-<h2 id="vector-traits-method-of-official-bcl-library-官方bcl库的向量特性方法">Vector traits method of official BCL library (官方BCL库的向量特性方法)</h2>
-<p>Types: Vector, Vector128, Vector256 .</p>
+<h2 id="arithmetic-methods-for-vectors--向量的算术方法">Arithmetic methods for vectors  (向量的算术方法)</h2>
+<h3 id="vector-traits-method-of-official-bcl-library-官方bcl库的向量特性方法">Vector traits method of official BCL library (官方BCL库的向量特性方法)</h3>
+<p>Types: Vector, Vector128, Vector256, Vector512 .</p>
 <p>Summary (概要):</p>
 <ul>
 <li>Support for <code>.NET Standard 2.1</code> new vector methods (支持 <code>.NET Standard 2.1</code> 新增的向量方法): ConvertToDouble, ConvertToInt32, ConvertToInt64, ConvertToSingle, ConvertToUInt32, ConvertToUInt64, Narrow, Widen .</li>
 <li>Support for <code>.NET 5.0</code> new vector methods (支持 <code>.NET 5.0</code> 新增的向量方法): Ceiling, Floor .</li>
 <li>Support for <code>.NET 6.0</code> new vector methods (支持 <code>.NET 6.0</code> 新增的向量方法): Sum .</li>
 <li>Support for <code>.NET 7.0</code> new vector methods (支持 <code>.NET 7.0</code> 新增的向量方法): ExtractMostSignificantBits, ShiftLeft, ShiftRightArithmetic, ShiftRightLogical, Shuffle .</li>
+<li>Support for <code>.NET 8.0</code> new vector methods (支持 <code>.NET 8.0</code> 新增的向量方法): WidenLower, WidenUpper.</li>
 </ul>
 <p>List (列表):</p>
 <ul>
@@ -126,13 +128,13 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 Mnemonic: <code>rt := value[0] + value[1] + value[2] + ... + value[Count-1]</code> .</li>
 <li><code>Widen</code>: Widens a Vector into two Vector instances (将一个 Vector 扩宽为两个 Vector 实例).
 Mnemonic: <code>element_ref(i, lower, upper) := widen(source[i])</code>.</li>
+<li><code>WidenLower</code>: Widens the lower half of a Vector into a Vector (将向量的低半部分扩宽为一个向量).
+Mnemonic: <code>rt[i] := widen(source[i])</code>.</li>
+<li><code>WidenUpper</code>: Widens the upper half of a Vector into a Vector (将向量的高半部分扩宽为一个向量).
+Mnemonic: <code>rt[i] := widen(source[i - Count/2])</code>.</li>
 </ul>
-<p>Remarks:</p>
-<ul>
-<li>①: It also works for Vector (它也适用于Vector).</li>
-</ul>
-<h2 id="fixed-width-vector-supplement-traits-methods-固定宽度向量补充的特性方法">Fixed width Vector supplement traits methods (固定宽度向量补充的特性方法)</h2>
-<p>Types: Vector128, Vector256 .</p>
+<h3 id="fixed-width-vector-supplement-traits-methods-固定宽度向量补充的特性方法">Fixed width Vector supplement traits methods (固定宽度向量补充的特性方法)</h3>
+<p>Types: Vector128, Vector256, Vector512 .</p>
 <p>List (列表):</p>
 <ul>
 <li><code>Abs</code>: Computes the absolute value of each element in a vector (计算向量中每个元素的绝对值).
@@ -157,7 +159,7 @@ Mnemonic: <code>rt[i] := to_mask(left[i] == right[i])</code>.</li>
 Mnemonic: <code>rt := (left[0] == right[0]) &amp;&amp; (left[1] == right[1]) &amp;&amp; ... &amp;&amp; (left[Count-1] == right[Count-1])</code>.</li>
 <li><code>EqualsAny</code>: Compares two vectors to determine if any elements are equal (比较两个向量以判定任一元素是否相等).
 Mnemonic: <code>rt := (left[0] == right[0]) || (left[1] == right[1]) || ... || (left[Count-1] == right[Count-1])</code>.</li>
-<li><code>GreaterThan</code>: Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
+<li><code>GreaterThan[/_Unsigned]</code>: Compares two vectors to determine which is greater on a per-element basis (比较两个向量，在每个元素的基础上确定哪个更大).
 Mnemonic: <code>rt[i] := to_mask(left[i] &gt; right[i])</code>.</li>
 <li><code>GreaterThanAll</code>: Compares two vectors to determine if all elements are greater (比较两个向量以判定所有元素是否大于).
 Mnemonic: <code>rt := (left[0] &gt; right[0]) &amp;&amp; (left[1] &gt; right[1]) &amp;&amp; ... &amp;&amp; (left[Count-1] &gt; right[Count-1])</code>.</li>
@@ -198,18 +200,68 @@ Mnemonic: <code>rt[i] := left[i] - right[i]</code>.</li>
 <li><code>Xor</code>: Computes the exclusive-or of two vectors (计算两个向量的位异或).
 Mnemonic: <code>rt[i] := left[i] ^ right[i]</code>.</li>
 </ul>
-<p>Remarks:</p>
-<ul>
-<li>①: It also works for Vector (它也适用于Vector).</li>
-</ul>
-<h2 id="vector-traits-method-appended-by-this-library-由本库追加的向量特性方法">Vector traits method appended by this library (由本库追加的向量特性方法)</h2>
-<p>Types: Vector, Vector128, Vector256 .</p>
-<h3 id="methods-of-inumber-数字性接口的方法">Methods of INumber (数字性接口的方法)</h3>
+<h3 id="vector-traits-method-appended-by-this-library-由本库追加的向量特性方法">Vector traits method appended by this library (由本库追加的向量特性方法)</h3>
+<p>Types: Vector, Vector128, Vector256, Vector512 .</p>
+<h5 id="methods-of-group-组的方法">Methods of group (组的方法)</h5>
 <p>Summary (概要):</p>
 <ul>
-<li>Provides the vector methods of clamp (提供限制的向量方法): YClamp .</li>
+<li>Provides vector methods for de-interleave (提供解交织的向量方法): YGroup2Unzip, YGroup2UnzipEven, YGroup2UnzipOdd, YGroup3Unzip, YGroup3UnzipX2, YGroup4Unzip, YGroup6Unzip_Bit128.</li>
+<li>Provides vector methods for interleave (提供交织的向量方法): YGroup2Zip, YGroup2ZipHigh, YGroup2ZipLow, YGroup3Zip, YGroup3ZipX2, YGroup4Unzip, YGroup6Zip_Bit128.</li>
+<li>Provides vector methods for reconstruction groups (提供重新构造组的向量方法): YGroup1ToGroup3, YGroup1ToGroup4, YGroup1ToGroup4WithW, YGroup3ToGroup4, YGroup4ToGroup3.</li>
+<li>Provides vector methods for transpose (提供转置的向量方法): YGroup2Transpose, YGroup2TransposeEven, YGroup2TransposeOdd.</li>
+</ul>
+<p>List (列表):</p>
+<ul>
+<li><code>YGroup1ToGroup3</code>: Convert a 1-element group, to a 3-element group. It also converts grayscale pixel data to packed RGB pixel data (将1-元素组, 转为3-元素组. 它还能将 灰度像素数据, 转换为 已打包的RGB像素数据).
+Mnemonic: View for group: <code>(result0, result1, result2) = YGroup3Zip(x, x, x)</code>. View for element: <code>element_ref(i, result0, result1, result2) := x[i/3]</code>.</li>
+<li><code>YGroup1ToGroup4</code>: Convert a 1-element group, to a 4-element group. It also converts grayscale pixel data to packed RGBA pixel data (将1-元素组, 转为4-元素组. 它还能将 灰度像素数据, 转换为 已打包的RGBA像素数据).
+Mnemonic: View for group: <code>(result0, result1, result2, result4) = YGroup4Zip(x, x, x, x)</code>. View for element: <code>element_ref(i, result0, result1, result2, result4) := x[i/4]</code>.</li>
+<li><code>YGroup1ToGroup4WithW</code>: Convert a 1-element group and w argument, to a 4-element group. It also converts grayscale pixel data to packed RGBA pixel data (将1-元素组及w参数, 转为4-元素组. 它还能将 灰度像素数据, 转换为 已打包的RGBA像素数据).
+Mnemonic: View for group: <code>(result0, result1, result2, result4) = YGroup4Zip(x, x, x, w)</code>. View for element: <code>element_ref(i, result0, result1, result2, result4) := ((i%4)&lt;3)?( x[i2] ):( w[i2] )</code>, <code>i2 := i/4</code>.</li>
+<li><code>YGroup2Transpose</code>: Transpose a 2<em>2 matrix (对2</em>2矩阵进行转置).
+Mnemonic: <code>result0[i] := (0==(i&amp;1))?( x[i&amp;~1] ):( y[i&amp;~1] )</code>, <code>result1[i] := (0==(i&amp;1))?( x[(i&amp;~1) + 1] ):( y[(i&amp;~1) + 1] )</code>.</li>
+<li><code>YGroup2TransposeEven</code>: Transpose a 2<em>2 matrix and return a data in even positions (对2</em>2矩阵进行转置, 并返回偶数位置的数据).
+Mnemonic: <code>rt[i] := (0==(i&amp;1))?( x[i&amp;~1] ):( y[i&amp;~1] )</code>.</li>
+<li><code>YGroup2TransposeOdd</code>: Transpose a 2<em>2 matrix and return a data in odd positions (对2</em>2矩阵进行转置, 并返回奇数位置的数据).
+Mnemonic: <code>rt[i] := (0==(i&amp;1))?( x[(i&amp;~1) + 1] ):( y[(i&amp;~1) + 1] )</code>.</li>
+<li><code>YGroup2Unzip[/_Bit128]</code>: De-Interleave 2-element groups into 2 vectors. It converts the 2-element groups AoS to SoA (将2-元素组解交织为2个向量. 它能将2元素组的 数组结构体 转为 结构体数组).
+Mnemonic: <code>x[i] =: element_ref(2*i, data0, data1)</code>, <code>y[i] =: element_ref(2*i+1, data0, data1)</code>.</li>
+<li><code>YGroup2UnzipEven</code>: De-Interleave the 2-element groups into 2 vectors, and return the vector of even positions (将2-元素组解交织为2个向量, 并返回偶数位置的数据).
+Mnemonic: <code>rt[i] =: element_ref(2*i, data0, data1)</code>.</li>
+<li><code>YGroup2UnzipOdd</code>: De-Interleave the 2-element groups into 2 vectors, and return the vector of odd positions (将2-元素组解交织为2个向量, 并返回奇数位置的数据).
+Mnemonic: <code>rt[i] =: element_ref(2*i+1, data0, data1)</code>.</li>
+<li><code>YGroup2Zip[/_Bit128]</code>: Interleave 2 vectors into 2-element groups. It converts the 2-element groups SoA to AoS (将2个向量交织为2-元素组. 它能将2元素组的 结构体数组 转为 数组结构体).
+Mnemonic: <code>element_ref(i, data0, data1) := (0==(i&amp;1))?( x[i2] ):( y[i2] )</code>, <code>i2 := i/2</code>.</li>
+<li><code>YGroup2ZipHigh</code>: Interleave 2 vectors into 2-element groups and returns the data in the high position. (将2个向量交织为2-元素组, 并返回高位置的数据).
+Mnemonic: <code>rt[i] := (0==(i&amp;1))?( x[i2] ):( y[i2] )</code>, <code>i2 := (i+T.Count)/2</code>.</li>
+<li><code>YGroup2ZipLow</code>: Interleave 2 vectors into 2-element groups and returns the data in the low position. (将2个向量交织为2-元素组, 并返回低位置的数据).
+Mnemonic: <code>rt[i] := (0==(i&amp;1))?( x[i2] ):( y[i2] )</code>, <code>i2 := i/2</code>.</li>
+<li><code>YGroup3ToGroup4</code>: Convert a 3-element group, to a 4-element group. It also converts packed RGB pixel data to packed RGBA pixel data (将3-元素组, 转为4-元素组. 它还能将 已打包的RGB像素数据, 转换为 已打包的RGBA像素数据).
+Mnemonic: View for group: <code>(result0, result1, result2, result3) = YGroup4Zip(YGroup3Unzip(data0, data1, data2), Vector.Zero))</code>. View for element: <code>element_ref(i, result0, result1, result2, result3) := (3!=(i%4))?element_ref((i/4)*3+(i%4), data0, data1, data2):0</code>.</li>
+<li><code>YGroup3Unzip[/_Bit128]</code>: De-Interleave 3-element groups into 3 vectors. It converts the 3-element groups AoS to SoA. It can also deinterleave packed RGB pixel data into R,G,B planar data (将3-元素组解交织为3个向量. 它能将3元素组的 数组结构体 转为 结构体数组. 它还能将 已打包的RGB像素数据, 解交织为 R,G,B 平面数据).
+Mnemonic: <code>x[i] =: element_ref(3*i, data0, data1, data2)</code>, <code>y[i] =: element_ref(3*i+1, data0, data1, data2)</code>, <code>z[i] =: element_ref(3*i+2, data0, data1, data2)</code>.</li>
+<li><code>YGroup3UnzipX2[/_Bit128]</code>: De-Interleave 3-element groups into 3 vectors and process 2x data (将3-元素组解交织为3个向量, 且处理2倍数据).
+Mnemonic: <code>(x, y, z) = YGroup3Unzip(data0, data1, data2)</code>, <code>(xB, yB, zB) = YGroup3Unzip(data3, data4, data5)</code>.</li>
+<li><code>YGroup3Zip[/_Bit128]</code>: Interleave 3 vectors into 3-element groups. It converts the 3-element groups SoA to AoS. It can also interleave R,G,B planar data into packed RGB pixel data (将3个向量交织为3-元素组. 它能将3元素组的 结构体数组 转为 数组结构体. 它还能将 R,G,B 平面数据, 交织为 已打包的RGB像素数据).
+Mnemonic: <code>element_ref(i, data0, data1, data2) := (0==(i%3))?( x[i2] ):( (1==(i%3))?( y[i2] ):( z[i2] ) )</code>, <code>i2 := i/3</code>.</li>
+<li><code>YGroup3ZipX2[/_Bit128]</code>: Interleave 3 vectors into 3-element groups and process 2x data (将3个向量交织为3-元素组, 且处理2倍数据).
+Mnemonic: <code>(data0, data1, data2) = YGroup3Zip(x, y, z)</code>, <code>(data3, data4, data5) = YGroup3Zip(xB, yB, zB)</code>.</li>
+<li><code>YGroup4ToGroup3</code>: Convert a 4-element group, to a 3-element group. It also converts packed RGBA pixel data to packed RGB pixel data (将4-元素组, 转为3-元素组. 它还能将 已打包的RGBA像素数据, 转换为 已打包的RGB像素数据).
+Mnemonic: View for group: <code>(result0, result1, result2) = YGroup3Zip(YGroup4Unzip(data0, data1, data2, data3)))</code>. View for element: <code>element_ref(i, result0, result1, result2) := element_ref((i/3)*4+(i%3), data0, data1, data2, data3)</code>.</li>
+<li><code>YGroup4Unzip[/_Bit128]</code>: De-Interleave 4-element groups into 4 vectors. It converts the 4-element groups AoS to SoA. It can also deinterleave packed RGBA pixel data into R,G,B,A planar data (将4-元素组解交织为4个向量. 它能将4元素组的 数组结构体 转为 结构体数组. 它还能将 已打包的RGBA像素数据, 解交织为 R,G,B,A 平面数据).
+Mnemonic: <code>x[i] =: element_ref(4*i, data0, data1, data2, data3)</code>, <code>y[i] =: element_ref(4*i+1, data0, data1, data2, data3)</code>, <code>z[i] =: element_ref(4*i+2, data0, data1, data2, data3)</code>, <code>w[i] =: element_ref(4*i+3, data0, data1, data2, data3)</code>.</li>
+<li><code>YGroup4Zip[/_Bit128]</code>: Interleave 4 vectors into 4-element groups. It converts the 4-element groups SoA to AoS. It can also interleave R,G,B,A planar data into packed RGBA pixel data (将4个向量交织为4-元素组. 它能将4元素组的 结构体数组 转为 数组结构体. 它还能将 R,G,B,A 平面数据, 交织为 已打包的RGBA像素数据).
+Mnemonic: <code>element_ref(i, data0, data1, data2, data3) := (0==(i&amp;3))?( x[i2] ):( (1==(i&amp;3))?( y[i2] ):( (2==(i&amp;3))?( z[i2] ):( w[i2] ) ) )</code>, <code>i2 := i/4</code>.</li>
+<li><code>YGroup6Unzip_Bit128</code>: De-Interleave 6-element groups into 6 vectors. It converts the 6-element groups AoS to SoA  (将6-元素组解交织为6个向量. 它能将6元素组的 数组结构体 转为 结构体数组). It is specialized for process 128-bit element (它专门用于处理128位元素).
+Mnemonic: <code>x[i] =: element_ref(6*i, data0, data1, data2, data3, data4, data5)</code>, <code>y[i] =: element_ref(6*i+1, data0, data1, data2, data3, data4, data5)</code>, <code>z[i] =: element_ref(6*i+2, data0, data1, data2, data3, data4, data5)</code>, <code>w[i] =: element_ref(6*i+3, data0, data1, data2, data3, data4, data5)</code>, <code>u[i] =: element_ref(6*i+4, data0, data1, data2, data3, data4, data5)</code>, <code>v[i] =: element_ref(6*i+5, data0, data1, data2, data3, data4, data5)</code>.</li>
+<li><code>YGroup6Zip_Bit128</code>: Interleave 6 vectors into 6-element groups. It converts the 6-element groups SoA to AoS (将6个向量交织为6-元素组. 它能将6元素组的 结构体数组 转为 数组结构体). It is specialized for process 128-bit element (它专门用于处理128位元素).
+Mnemonic: <code>element_ref(i, data0, data1, data2, data3, data4, data5) := (0==(i%6))?( x[i2] ):( (1==(i%6))?( y[i2] ):( (2==(i%6))?( z[i2] ):( (3==(i%6))?( w[i2] ):( (4==(i%6))?( u[i2] ):( v[i2] ) ) ) ) )</code>, <code>i2 := i/6</code>.</li>
+</ul>
+<h5 id="methods-of-inumber-数字性接口的方法">Methods of INumber (数字性接口的方法)</h5>
+<p>Summary (概要):</p>
+<ul>
+<li>Provides the vector methods of clamp (提供限制的向量方法): YClamp, YMaxNumber, YMinNumber .</li>
 <li>Provides the vector methods of check sign (提供符号判断的向量方法): YCopySign, YSign, YSignFloat .</li>
-<li>Provides the vector methods of clamp (提供限制的向量方法): YMaxNumber, YMinNumber .</li>
 </ul>
 <p>List (列表):</p>
 <ul>
@@ -226,7 +278,7 @@ Mnemonic: <code>rt[i] := sign(value[i])</code>.</li>
 <li><code>YSignFloat</code>: Determine the sign of each element and returns a floating point number (判断各个元素的符号并返回浮点数).
 Mnemonic: <code>rt[i] := signFloat(value[i])</code>.</li>
 </ul>
-<h3 id="methods-of-inumberbase-数字基本性接口的方法">Methods of INumberBase (数字基本性接口的方法)</h3>
+<h5 id="methods-of-inumberbase-数字基本性接口的方法">Methods of INumberBase (数字基本性接口的方法)</h5>
 <p>Summary (概要):</p>
 <ul>
 <li>Provides the vector methods of check floating number (提供浮点数判断的向量方法): YIsEvenInteger, YIsFinite, YIsInfinity, YIsInfinityOrNaN, YIsInteger, YIsNaN, YIsNegative, YIsNegativeZero, YIsNegativeInfinity, YIsNormal, YIsNotNaN, YIsOddInteger, YIsPositive, YIsPositiveInfinity, YIsSubnormal, YIsZero, YIsZeroOrSubnormal.</li>
@@ -268,14 +320,50 @@ Mnemonic: <code>rt[i] := to_mask(0==value[i])</code> .</li>
 <li><code>YIsZeroOrSubnormal</code>: Determines if a element is zero or subnormal (确定元素是否为零或次正规数).
 Mnemonic: <code>rt[i] := to_mask(isZeroOrSubnormal(value[i]))</code> .</li>
 </ul>
-<h3 id="others-其他">Others (其他)</h3>
+<h5 id="methods-of-shuffle-换位的方法">Methods of shuffle (换位的方法)</h5>
 <p>Summary (概要):</p>
 <ul>
-<li>Provides the vector methods of bitwise operations (提供位运算的向量方法): YOrNot, YBitToByte, YBitToInt16, YBitToInt32, YBitToInt64 .</li>
+<li>Provides vector methods for group-based shuffle (提供基于组的换位的向量方法): YShuffleG2, YShuffleG4, YShuffleG4X2. Also provides ShuffleControlG2/ShuffleControlG4 enum.</li>
+<li>Provides vector methods for indices-based shuffle (提供基于索引的换位的向量方法): YShuffleInsert, YShuffleKernel, YShuffleX2, YShuffleX2Insert, YShuffleX2Kernel, YShuffleX3, YShuffleX3Insert, YShuffleX3Kernel, YShuffleX4, YShuffleX4Insert, YShuffleX4Kernel.</li>
+</ul>
+<p>List (列表):</p>
+<ul>
+<li><code>YShuffleG2</code>: For each 2-element groups in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
+Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</li>
+<li><code>YShuffleG4[/_Const]</code>: For each 4-element groups in a vector, shuffle is performed (对于一个向量中的每个 4-元素组, 进行换位). If the count of elements in a vector is less than 4, please use YShuffleG4X2 instead (如果向量的元素数量小于4，请使用 YShuffleG4X2 代替).
+Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3)]</code>.</li>
+<li><code>YShuffleG4X2[/_Const]</code>: For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</li>
+<li><code>YShuffleInsert[/_Args/_Core]</code>: Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</li>
+<li><code>YShuffleKernel[/_Args/_Core]</code>: Only shuffle (仅换位). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the IndexMask mask to constrain the parameters (可使用 IndexMask 掩码来约束参数).
+Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count</code>.</li>
+<li><code>YShuffleX2[/_Args/_Core]</code>: Shuffle and clear on 2 vectors (在2个向量上进行换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the indices value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2))?( element_ref(indices[i], vector0, vector1) ):0</code>.</li>
+<li><code>YShuffleX2Insert[/_Args/_Core]</code>: Shuffle and insert on 2 vectors (在2个向量上进行换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2))?( element_ref(indices[i], vector0, vector1) ):back[i]</code>.</li>
+<li><code>YShuffleX2Kernel[/_Args/_Core]</code>: Only shuffle on 2 vectors (在2个向量上进行仅换位). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the IndexMask mask to constrain the parameters (可使用 IndexMask 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*2)</code>.</li>
+<li><code>YShuffleX3[/_Args/_Core]</code>: Shuffle and clear on 3 vectors (在3个向量上进行换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the indices value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;3*Count)?( element_ref(indices[i], vector0, vector1, vector2) ):0</code>.</li>
+<li><code>YShuffleX3Insert[/_Args/_Core]</code>: Shuffle and insert on 3 vectors (在3个向量上进行换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;3*Count)?( element_ref(indices[i], vector0, vector1, vector2) ):back[i]</code>.</li>
+<li><code>YShuffleX3Kernel[/_Args/_Core]</code>: Only shuffle on 3 vectors (在3个向量上进行仅换位). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1, vector2)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*3)</code>.</li>
+<li><code>YShuffleX4[/_Args/_Core]</code>: Shuffle and clear on 4 vectors (在4个向量上进行换位并清零). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the indices value is out of range, the element will be cleared (若索引值超出范围, 元素会被清零).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*4))?( element_ref(indices[i], vector0, vector1, vector2, vector3) ):0</code>.</li>
+<li><code>YShuffleX4Insert[/_Args/_Core]</code>: Shuffle and insert on 4 vectors (在4个向量上进行换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*4))?( element_ref(indices[i], vector0, vector1, vector2, vector3) ):back[i]</code>.</li>
+<li><code>YShuffleX4Kernel[/_Args/_Core]</code>: Only shuffle on 4 vectors (在4个向量上进行仅换位). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the IndexMask mask to constrain the parameters (可使用 IndexMask 掩码来约束参数).
+Mnemonic: <code>rt[i] := element_ref(indices[i], vector0, vector1, vector2, vector3)</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;(Count*4)</code>.</li>
+</ul>
+<h5 id="others-其他">Others (其他)</h5>
+<p>Summary (概要):</p>
+<ul>
+<li>Provides the vector methods of bitwise operations (提供位运算的向量方法): YBitToByte, YBitToInt16, YBitToInt32, YBitToInt64, YOrNot.</li>
 <li>Provides the vector methods of compare (提供比较的向量方法): YIsAllTrue, YIsAnyTrue, YIsNotEquals.</li>
 <li>Provides the vector methods of narrow saturate (提供缩窄饱和的向量方法): YNarrowSaturate, YNarrowSaturateUnsigned .</li>
 <li>Provides the vector methods of round (提供舍入的向量方法): YRoundToEven, YRoundToZero .</li>
-<li>Provides the vector methods of shuffle (提供换位的向量方法): YShuffleInsert, YShuffleKernel, YShuffleG2, YShuffleG4, YShuffleG4X2 . Also provides ShuffleControlG2/ShuffleControlG4 enum.</li>
 </ul>
 <p>List (列表):</p>
 <ul>
@@ -303,16 +391,113 @@ Mnemonic: <code>rt[i] := left[i] | ~right[i]</code>.</li>
 Mnemonic: <code>rt[i] := round_to_even(value[i])</code> .</li>
 <li><code>YRoundToZero</code>: Computes the round to zero of each element in a vector (计算向量中每个元素的向零舍入). It is also known as truncate (它也被称作截断取整). See more: <code>MidpointRounding.ToZero</code>.
 Mnemonic: <code>rt[i] := round_to_zero(value[i])</code> .</li>
-<li><code>YShuffleG2</code>: For each 2-element group in a vector, shuffle is performed (对于一个向量中的每个 2-元素组, 进行换位).
-Mnemonic: View for group: <code>rt.xy = shuffleG2_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~1)) | ((control &gt;&gt; (i&amp;1)) &amp; 1)]</code>.</li>
-<li><code>YShuffleG4[/_Const]</code>: For each 4-element group in a vector, shuffle is performed (对于一个向量中的每个 4-元素组, 进行换位). If the count of elements in a vector is less than 4, please use YShuffleG4X2 instead (如果向量的元素数量小于4，请使用 YShuffleG4X2 代替).
-Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source)</code>. View for element: <code>rt[i] := source[(i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3)]</code>.</li>
-<li><code>YShuffleG4X2[/_Const]</code>: For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
-Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</li>
-<li><code>YShuffleInsert[/_Args/_Core]</code>: Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
-Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):back[i]</code>.</li>
-<li><code>YShuffleKernel[/_Args/_Core]</code>: Only shuffle (仅换位). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the IndexMask mask to constrain the parameters (可使用 IndexMask 掩码来约束参数).
-Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count</code>.</li>
+</ul>
+<h2 id="base-methods-for-vectors--向量的基本方法">Base methods for vectors  (向量的基本方法)</h2>
+<p>(Experimental) Experimentally added the ExType(Extended type) mechanism to enable vector types to support 128-bit integers(ExInt128/ExUInt128). If the method name contains “Ex”, it supports the ExType mechanism (实验性的增加了 ExType(扩展类型) 机制, 使向量类型能支持128位整数(ExInt128/ExUInt128). 若方法名里含有&quot;Ex&quot;，则表示它支持 ExType 机制).
+When the method supports ExType, the element type can also be (当方法支持ExType时, 元素类型还可以为): ExInt128, ExUInt128, Int128, UInt128.</p>
+<p>Warnings: However, it is found that some functions do not work properly under some .NET versions. Therefore, it is recommended to prioritize using functions with the suffix &quot;_Bit128&quot; instead of ExType (但发现某些.NET版本下，个别函数的工作不正常. 故建议优先使用“_Bit128”后缀的函数, 而不是 ExType).</p>
+<h3 id="static-methods-静态方法">Static methods (静态方法)</h3>
+<p>Types: Vectors, Vector128s, Vector256s, Vector512s .</p>
+<p>List of generic methods (泛型方法的列表):</p>
+<ul>
+<li><code>Count&lt;T&gt;(TVector&lt;T&gt;)</code>: Returns the number of elements stored in the vector (返回存储在向量中的元素数量).</li>
+<li><code>Create&lt;T&gt;(TVectorShorter&lt;T&gt;, TVectorShorter&lt;T&gt;)</code>②: Create a new vector instance from two shorter vector instances. (从两个更短的向量实例, 来创建新的向量实例).</li>
+<li><code>Create&lt;T&gt;(T)</code>: Creates a new vector instance with all elements initialized to the specified value (创建新的向量实例，其中所有元素已初始化为指定值).</li>
+<li><code>Create&lt;T&gt;(T[])</code>: Creates a new vector from a given array (从给定数组创建一个新的向量).</li>
+<li><code>Create&lt;T&gt;(T[], int)</code>: Creates a new vector from a given array starting at a specified index position (于指定索引位置开始，从指定数组创建一个向量).</li>
+<li><code>Create&lt;T&gt;(ReadOnlySpan&lt;T&gt;)</code>: Creates a new vector from a given read-only span of bytes (根据给定的只读跨度构造一个向量).</li>
+<li><code>Create&lt;T&gt;(Span&lt;T&gt;)</code>: Creates a new vector from a given span of bytes (根据给定的跨度构造一个向量).</li>
+<li><code>CreatePadding&lt;T&gt;(ReadOnlySpan&lt;T&gt;)</code>: Padding creates a new vector from a given span (从指定跨度补齐创建一个向量). The element after values is initialized to 0(values 之后的元素会初始化为0).</li>
+<li><code>CreatePadding&lt;T&gt;(T[], int, int)</code>: Padding creates a new vector from a given span starting at a specified index position (于指定索引位置开始，从指定跨度补齐创建一个向量). The element after values is initialized to 0(values 之后的元素会初始化为0).</li>
+<li><code>CreatePadding&lt;T&gt;(params T[])</code>: Padding creates a new vector from a given array (从给定数组补齐创建一个新的向量). The element after values is initialized to 0(values 之后的元素会初始化为0).</li>
+<li><code>CreateRotate&lt;T&gt;(ReadOnlySpan&lt;T&gt;)</code>: Rotate creates a new vector from a given span starting at a specified index position (于指定索引位置开始，从指定跨度旋转创建一个向量).</li>
+<li><code>CreateRotate&lt;T&gt;(T[], int, int)</code>: Rotate creates a new <see cref="Vector256{T}"></see> from a given span starting at a specified index position (于指定索引位置开始，从指定跨度旋转创建一个向量).</li>
+<li><code>CreateRotate&lt;T&gt;(params T[])</code>: Padding creates a new vector from a given array (从给定数组旋转创建一个新的向量).</li>
+<li><code>CreateByFunc&lt;T&gt;(Func&lt;int, T&gt;)</code>: Creates a new vector from a from the given Func (从给定 Func 创建一个新的向量 ) .</li>
+<li><code>CreateByDouble&lt;T&gt;(double)</code>: Creates a vector whose components are of a specified double value (创建一个向量，其元素为指定的双精度浮点值).</li>
+<li><code>CreateByDoubleLoop&lt;T&gt;(double, double)</code>: Creates a vector from double value <code>for</code> loop (创建一个向量，其元素来自双精度浮点值的<code>for</code>循环).</li>
+<li><code>CreateByBits&lt;T&gt;(long)</code>: Creates a vector whose components are of a specified integer bits (创建一个向量，其元素为指定的整数位).</li>
+<li><code>CreateBy128Bits&lt;T&gt;(ExInt128)</code>: Creates a vector whose components are of a specified 128-bits integer (创建一个向量，其元素为指定的128位整数).</li>
+<li><code>IsNativeSupported&lt;T&gt;()</code>: Determines if this element type is native supported (判断是否原生支持这种元素类型).</li>
+</ul>
+<p>List of non-generic methods (非泛型方法的列表):</p>
+<ul>
+<li><code>Create(ExInt128)</code>: Creates a new vector instance of element type ExInt128 with all elements initialized to the specified value (创建新的元素类型为UInt128的向量实例，其中所有元素已初始化为指定值).</li>
+<li><code>Create(ExUInt128)</code>: Creates a new vector instance of element type ExUInt128 with all elements initialized to the specified value (创建新的元素类型为UInt128的向量实例，其中所有元素已初始化为指定值).</li>
+<li><code>Create(Int128)</code>: Creates a new vector instance of element type Int128 with all elements initialized to the specified value (创建新的元素类型为UInt128的向量实例，其中所有元素已初始化为指定值).</li>
+<li><code>Create(UInt128)</code>: Creates a new vector instance of element type UInt128 with all elements initialized to the specified value (创建新的元素类型为UInt128的向量实例，其中所有元素已初始化为指定值).</li>
+<li><code>CreateScalar(ExInt128)</code>: Creates a new vector instance of element type ExInt128 with the first element initialized to the specified value and the remaining elements initialized to zero (创建新的元素类型为UInt128的向量实例，其中首个元素已初始化为指定值并且其余元素已初始化为零).</li>
+<li><code>CreateScalar(ExUInt128)</code>: Creates a new vector instance of element type ExUInt128 with the first element initialized to the specified value and the remaining elements initialized to zero (创建新的元素类型为UInt128的向量实例，其中首个元素已初始化为指定值并且其余元素已初始化为零).</li>
+<li><code>CreateScalar(Int128)</code>: Creates a new vector instance of element type Int128 with the first element initialized to the specified value and the remaining elements initialized to zero (创建新的元素类型为UInt128的向量实例，其中首个元素已初始化为指定值并且其余元素已初始化为零).</li>
+<li><code>CreateScalar(UInt128)</code>: Creates a new vector instance of element type UInt128 with the first element initialized to the specified value and the remaining elements initialized to zero (创建新的元素类型为UInt128的向量实例，其中首个元素已初始化为指定值并且其余元素已初始化为零).</li>
+<li><code>CreateScalarUnsafe(ExInt128)</code>: Creates a new vector instance of element type ExInt128 with the first element initialized to the specified value and the remaining elements left uninitialized (创建新的元素类型为UInt128的向量实例，其中首个元素已初始化为指定值，而其余元素未初始化).</li>
+<li><code>CreateScalarUnsafe(ExUInt128)</code>: Creates a new vector instance of element type ExUInt128 with the first element initialized to the specified value and the remaining elements left uninitialized (创建新的元素类型为UInt128的向量实例，其中首个元素已初始化为指定值，而其余元素未初始化).</li>
+<li><code>CreateScalarUnsafe(Int128)</code>: Creates a new vector instance of element type Int128 with the first element initialized to the specified value and the remaining elements left uninitialized (创建新的元素类型为UInt128的向量实例，其中首个元素已初始化为指定值，而其余元素未初始化).</li>
+<li><code>CreateScalarUnsafe(UInt128)</code>: Creates a new vector instance of element type UInt128 with the first element initialized to the specified value and the remaining elements left uninitialized (创建新的元素类型为UInt128的向量实例，其中首个元素已初始化为指定值，而其余元素未初始化).</li>
+</ul>
+<h3 id="extension-methods-扩展方法">Extension methods (扩展方法)</h3>
+<p>Types: Vector, Vector128, Vector256, Vector512 .
+Namespace: Zyl.VectorTraits</p>
+<p>List of generic methods (泛型方法的列表):</p>
+<ul>
+<li><code>BitEquals&lt;T&gt;(TVector&lt;T&gt;, TVector&lt;T&gt;)</code>: Returns a value that indicates whether this instance is binary equal to a specified vector (返回一个值，该值指示此实例是否与指定的向量二进制相等).</li>
+<li><code>ExAs&lt;TFrom,TTo&gt;(TVector&lt;TFrom&gt;)</code>: Reinterprets a vector of type  as a new vector of type TTo. It supports ExType, so there is no element type check (将 TFrom类型的向量 重新解释为 TTo类型的新向量. 它支持扩展类型, 故没有元素类型检查).</li>
+<li><code>ExAsVector&lt;T&gt;(TVector&lt;T&gt;)</code>③: Reinterprets a <code>Vector128&lt;T&gt;</code>(/<code>Vector256&lt;T&gt;</code>/<code>Vector512&lt;T&gt;</code>) as a new Vector (将 <code>Vector128&lt;T&gt;</code>(/<code>Vector256&lt;T&gt;</code>/<code>Vector512&lt;T&gt;</code>) 重新解释为新的 <code>Vector&lt;T&gt;</code>). It supports ExType, so there is no element type check (它支持扩展类型, 故没有元素类型检查).</li>
+<li><code>ExAsVector128&lt;T&gt;(TVector&lt;T&gt;)</code>③:  Reinterprets a  <code>Vector&lt;T&gt;</code> as a new <code>Vector128&lt;T&gt;</code> (将 Vector 重新解释为新的 <code>Vector128&lt;T&gt;</code>). It supports ExType, so there is no element type check (它支持扩展类型, 故没有元素类型检查).</li>
+<li><code>ExAsVector256&lt;T&gt;(TVector&lt;T&gt;)</code>③: Reinterprets a  <code>Vector&lt;T&gt;</code> as a new <code>Vector256&lt;T&gt;</code> (将 Vector 重新解释为新的 <code>Vector256&lt;T&gt;</code>). It supports ExType, so there is no element type check (它支持扩展类型, 故没有元素类型检查).</li>
+<li><code>ExAsVector512&lt;T&gt;(TVector&lt;T&gt;)</code>③:  Reinterprets a  <code>Vector&lt;T&gt;</code> as a new <code>Vector512&lt;T&gt;</code> (将 Vector 重新解释为新的 <code>Vector512&lt;T&gt;</code>). It supports ExType, so there is no element type check (它支持扩展类型, 故没有元素类型检查).</li>
+<li><code>ExGetElement&lt;T&gt;(TVector&lt;T&gt;, Int32)</code>: Gets the element at the specified index. It is unsafe method, it ignores the index range check (获取指定索引处的元素. 它是非安全的, 它忽略了索引的范围检查).</li>
+<li><code>ExGetLower&lt;T&gt;(TVector&lt;T&gt;)</code>: Gets the value of the lower bits as a new shorter vector (获取低位的值作为新的较短向量).</li>
+<li><code>ExGetUpper&lt;T&gt;(TVector&lt;T&gt;)</code>: Gets the value of the upper bits as a new shorter vector (获取高位的值作为新的较短向量).</li>
+<li><code>ExToScalar&lt;T&gt;(TVector&lt;T&gt;)</code>: Converts the given vector to a scalar containing the value of the first element (将给定向量转换为首个元素的值的标量).</li>
+<li><code>ExToVector128&lt;T&gt;(TVector&lt;T&gt;)</code>③: Converts the given vector to a new <code>Vector128&lt;T&gt;</code> with the lower 64-bits set to the value of the given vector and the upper 64-bits initialized to zero (将给定向量转换为新 <code>Vector128&lt;T&gt;</code> 向量，其中较低的 64 位设置为给定向量的值，并将高 64 位初始化为零).</li>
+<li><code>ExToVector128Unsafe&lt;T&gt;(TVector&lt;T&gt;)</code>③: Converts the given vector to a new <code>Vector128&lt;T&gt;</code> with the lower 64-bits set to the value of the given vector and the upper 64-bits left uninitialized (将给定向量转换为新 <code>Vector128&lt;T&gt;</code> 向量，其中低 64 位设置为给定向量的值，而高 64 位则未初始化).</li>
+<li><code>ExToVector256&lt;T&gt;(TVector&lt;T&gt;)</code>③: Converts the given vector to a new <code>Vector256&lt;T&gt;</code> with the lower 128-bits set to the value of the given vector and the upper 128-bits initialized to zero (将给定向量转换为新 <code>Vector256&lt;T&gt;</code> 向量，其中较低的 128 位设置为给定向量的值，并将高 128 位初始化为零).</li>
+<li><code>ExToVector256Unsafe&lt;T&gt;(TVector&lt;T&gt;)</code>③: Converts the given vector to a new <code>Vector256&lt;T&gt;</code> with the lower 128-bits set to the value of the given vector and the upper 128-bits left uninitialized (将给定向量转换为新 <code>Vector256&lt;T&gt;</code> 向量，其中低 128 位设置为给定向量的值，而高 128 位则未初始化).</li>
+<li><code>ExToVector512&lt;T&gt;(TVector&lt;T&gt;)</code>③: Converts the given vector to a new <code>Vector512&lt;T&gt;</code> with the lower 256-bits set to the value of the given vector and the upper 256-bits initialized to zero (将给定向量转换为新 <code>Vector512&lt;T&gt;</code> 向量，其中较低的 256 位设置为给定向量的值，并将高 256 位初始化为零).</li>
+<li><code>ExToVector512Unsafe&lt;T&gt;(TVector&lt;T&gt;)</code>③: Converts the given vector to a new <code>Vector512&lt;T&gt;</code> with the lower 256-bits set to the value of the given vector and the upper 256-bits left uninitialized (将给定向量转换为新 <code>Vector512&lt;T&gt;</code> 向量，其中低 256 位设置为给定向量的值，而高 256 位则未初始化).</li>
+<li><code>ExWithLower&lt;T&gt;(TVector&lt;T&gt;, TVectorShorter&lt;T&gt;)</code>③: Creates a new <code>Vector256&lt;T&gt;</code> with the lower 128-bits set to the specified value and the upper 128-bits set to the same value as that in the given vector (创建一个新的 <see cref="Vector256{T}"></see>，将低 128 位设置为指定值，并将高 128 位设置为与给定向量中的值相同的值).</li>
+<li><code>ExWithUpper&lt;T&gt;(TVector&lt;T&gt;, TVectorShorter&lt;T&gt;)</code>③: Creates a new <code>Vector256&lt;T&gt;</code> with the upper 128-bits set to the specified value and the lower 128-bits set to the same value as that in the given vector (创建一个新的 <see cref="Vector256{T}"></see>，将高 128 位设置为指定值，并将低 128 位设置为与给定向量中的值相同的值).</li>
+</ul>
+<p>List of non-generic methods (非泛型方法的列表):</p>
+<ul>
+<li><code>ExAsByte&lt;T&gt;(TVector&lt;T&gt;)</code>: Reinterprets a vector as a new vector of type Byte (将向量重新解释为 Byte类型的新向量).</li>
+<li><code>ExAsDouble&lt;T&gt;(TVector&lt;T&gt;)</code>: Reinterprets a vector as a new vector of type Double (将向量重新解释为 Double类型的新向量).</li>
+<li><code>ExAsExInt128&lt;T&gt;(TVector&lt;T&gt;)</code>③: Reinterprets a vector as a new vector of type ExInt128 (将向量重新解释为 ExInt128类型的新向量).</li>
+<li><code>ExAsExUInt128&lt;T&gt;(TVector&lt;T&gt;)</code>③: Reinterprets a vector as a new vector of type ExUInt128 (将向量重新解释为 ExUInt128类型的新向量).</li>
+<li><code>ExAsInt16&lt;T&gt;(TVector&lt;T&gt;)</code>: Reinterprets a vector as a new vector of type Int16 (将向量重新解释为 Int16类型的新向量).</li>
+<li><code>ExAsInt32&lt;T&gt;(TVector&lt;T&gt;)</code>: Reinterprets a vector as a new vector of type Int32 (将向量重新解释为 Int32类型的新向量).</li>
+<li><code>ExAsInt64&lt;T&gt;(TVector&lt;T&gt;)</code>: Reinterprets a vector as a new vector of type Int64 (将向量重新解释为 Int64类型的新向量).</li>
+<li><code>ExAsInt128&lt;T&gt;(TVector&lt;T&gt;)</code>③: Reinterprets a vector as a new vector of type Int128 (将向量重新解释为 Int128类型的新向量).</li>
+<li><code>ExAsSByte&lt;T&gt;(TVector&lt;T&gt;)</code>: Reinterprets a vector as a new vector of type SByte (将向量重新解释为 SByte类型的新向量).</li>
+<li><code>ExAsSingle&lt;T&gt;(TVector&lt;T&gt;)</code>: Reinterprets a vector as a new vector of type Single (将向量重新解释为 Single类型的新向量).</li>
+<li><code>ExAsUInt16&lt;T&gt;(TVector&lt;T&gt;)</code>: Reinterprets a vector as a new vector of type UInt16 (将向量重新解释为 UInt16类型的新向量).</li>
+<li><code>ExAsUInt32&lt;T&gt;(TVector&lt;T&gt;)</code>: Reinterprets a vector as a new vector of type UInt32 (将向量重新解释为 UInt32类型的新向量).</li>
+<li><code>ExAsUInt64&lt;T&gt;(TVector&lt;T&gt;)</code>: Reinterprets a vector as a new vector of type UInt64 (将向量重新解释为 UInt64类型的新向量).</li>
+<li><code>ExAsUInt128&lt;T&gt;(TVector&lt;T&gt;)</code>③: Reinterprets a vector as a new vector of type UInt128 (将向量重新解释为 UInt128类型的新向量).</li>
+</ul>
+<h3 id="other-extension-methods-其他扩展方法">Other extension methods (其他扩展方法)</h3>
+<p>Types: Vector, Vector128, Vector256, Vector512 .
+Namespace:  Zyl.VectorTraits.Extensions</p>
+<p>List of generic methods (泛型方法的列表):</p>
+<ul>
+<li><code>AsSigned&lt;T&gt;(TVector&lt;T&gt;)</code>④: Reinterprets a unsigned integer vector as a new signed integer vector (将无符号整数向量, 重新解释为有符号整数向量).</li>
+<li><code>AsUnsigned&lt;T&gt;(TVector&lt;T&gt;)</code>④: Reinterprets a signed integer vector as a new unsigned integer vector (将有符号整数向量, 重新解释为无符号整数向量).</li>
+</ul>
+<h3 id="utility-methods-工具方法">Utility methods (工具方法)</h3>
+<ul>
+<li><code>ExVectorUtil.Format</code>: Safely Format or ToString function. It can safely format vector types as strings, or simply convert vector types to strings (安全地的 Format 或 ToString 函数. 它能安全的将向量类型 进行字符串格式化，或简单的将向量类型转为字符串).</li>
+<li><code>ExVectorUtil.ToString</code>: Safely convert interpolated string to String (安全地将内插字符串转为 String).</li>
+<li><code>VectorTextUtil.Format</code>: Format a string, append a hexadecimal string intelligently to the end of the line (格式化字符串，智能在行尾追加十六进制字符串).</li>
+<li><code>VectorTextUtil.WriteLine</code>: Writes formatted strings and hexadecimal values, new lines in the text stream (在文本流写入 已格式化的字符串和十六进制值、新行).</li>
+</ul>
+<h2 id="endnote-尾注">Endnote (尾注)</h2>
+<p>Endnote (尾注):</p>
+<ul>
+<li>①: It also works for Vector (它也适用于Vector).</li>
+<li>②: It only works for vectors of fixed size (它仅适用于固定大小的向量类型).</li>
+<li>③: It only works with specific vector types (它仅适用于个别向量类型).</li>
+<li>④: It supports overload of different element types, with T representing the overloaded type (它支持不同元素类型的重载, 用 T 代表重载的类型).</li>
 </ul>
 
 </article>

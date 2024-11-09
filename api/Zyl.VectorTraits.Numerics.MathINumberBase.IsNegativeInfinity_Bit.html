@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Numerics_MathINumberBase_IsNegativeInfinity_Bit_" data-uid="Zyl.VectorTraits.Numerics.MathINumberBase.IsNegativeInfinity_Bit*" class="text-break">
-Method IsNegativeInfinity_Bit  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1069"><i class="bi bi-code-slash"></i></a>
+Method IsNegativeInfinity_Bit  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1099"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method IsNegativeInfinity_Bit  <a class="header-action link-secondary" title="Vi
 
 <h3 id="Zyl_VectorTraits_Numerics_MathINumberBase_IsNegativeInfinity_Bit_System_Single_" data-uid="Zyl.VectorTraits.Numerics.MathINumberBase.IsNegativeInfinity_Bit(System.Single)">
   IsNegativeInfinity_Bit(float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1069"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1099"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is negative infinity (确定元素是否为负无穷大).</p>
@@ -164,7 +164,7 @@ Method IsNegativeInfinity_Bit  <a class="header-action link-secondary" title="Vi
 
 <h3 id="Zyl_VectorTraits_Numerics_MathINumberBase_IsNegativeInfinity_Bit_System_Double_" data-uid="Zyl.VectorTraits.Numerics.MathINumberBase.IsNegativeInfinity_Bit(System.Double)">
   IsNegativeInfinity_Bit(double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1075"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1105"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is negative infinity (确定元素是否为负无穷大).</p>
@@ -210,7 +210,7 @@ Method IsNegativeInfinity_Bit  <a class="header-action link-secondary" title="Vi
 
 <h3 id="Zyl_VectorTraits_Numerics_MathINumberBase_IsNegativeInfinity_Bit_System_Half_" data-uid="Zyl.VectorTraits.Numerics.MathINumberBase.IsNegativeInfinity_Bit(System.Half)">
   IsNegativeInfinity_Bit(Half)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1082"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1112"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element is negative infinity (确定元素是否为负无穷大).</p>
@@ -256,7 +256,7 @@ Method IsNegativeInfinity_Bit  <a class="header-action link-secondary" title="Vi
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1069" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Numerics/MathINumberBase.cs/#L1099" class="edit-link">Edit this page</a>
         </div>
 
 

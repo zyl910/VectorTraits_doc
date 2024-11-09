@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger*" class="text-break">
-Method YIsOddInteger  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L953"><i class="bi bi-code-slash"></i></a>
+Method YIsOddInteger  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3574"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YIsOddInteger  <a class="header-action link-secondary" title="View source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_System_Runtime_Intrinsics_Vector256_System_Single__" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger(System.Runtime.Intrinsics.Vector256{System.Single})">
   YIsOddInteger(Vector256&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L953"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3574"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).
@@ -164,7 +164,7 @@ Mnemonic: <code>rt[i] := to_mask(isOddInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_System_Runtime_Intrinsics_Vector256_System_Double__" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger(System.Runtime.Intrinsics.Vector256{System.Double})">
   YIsOddInteger(Vector256&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L964"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3585"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).
@@ -212,7 +212,7 @@ Mnemonic: <code>rt[i] := to_mask(isOddInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger(System.Runtime.Intrinsics.Vector256{System.SByte})">
   YIsOddInteger(Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L975"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3596"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).
@@ -261,7 +261,7 @@ public static Vector256&lt;sbyte&gt; YIsOddInteger(Vector256&lt;sbyte&gt; value)
 
 <h3 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_System_Runtime_Intrinsics_Vector256_System_Byte__" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger(System.Runtime.Intrinsics.Vector256{System.Byte})">
   YIsOddInteger(Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L987"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3608"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).
@@ -309,7 +309,7 @@ Mnemonic: <code>rt[i] := to_mask(isOddInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger(System.Runtime.Intrinsics.Vector256{System.Int16})">
   YIsOddInteger(Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L998"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3619"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).
@@ -357,7 +357,7 @@ Mnemonic: <code>rt[i] := to_mask(isOddInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_System_Runtime_Intrinsics_Vector256_System_UInt16__" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger(System.Runtime.Intrinsics.Vector256{System.UInt16})">
   YIsOddInteger(Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L1009"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3630"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).
@@ -406,7 +406,7 @@ public static Vector256&lt;ushort&gt; YIsOddInteger(Vector256&lt;ushort&gt; valu
 
 <h3 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger(System.Runtime.Intrinsics.Vector256{System.Int32})">
   YIsOddInteger(Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L1021"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3642"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).
@@ -454,7 +454,7 @@ Mnemonic: <code>rt[i] := to_mask(isOddInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_System_Runtime_Intrinsics_Vector256_System_UInt32__" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger(System.Runtime.Intrinsics.Vector256{System.UInt32})">
   YIsOddInteger(Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L1032"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3653"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).
@@ -503,7 +503,7 @@ public static Vector256&lt;uint&gt; YIsOddInteger(Vector256&lt;uint&gt; value)</
 
 <h3 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger(System.Runtime.Intrinsics.Vector256{System.Int64})">
   YIsOddInteger(Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L1044"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3665"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).
@@ -551,7 +551,7 @@ Mnemonic: <code>rt[i] := to_mask(isOddInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vector256s_YIsOddInteger_System_Runtime_Intrinsics_Vector256_System_UInt64__" data-uid="Zyl.VectorTraits.Vector256s.YIsOddInteger(System.Runtime.Intrinsics.Vector256{System.UInt64})">
   YIsOddInteger(Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L1055"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3676"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an odd integral number (确定元素是否为奇数整数).
@@ -599,7 +599,7 @@ public static Vector256&lt;ulong&gt; YIsOddInteger(Vector256&lt;ulong&gt; value)
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L953" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L3574" class="edit-link">Edit this page</a>
         </div>
 
 

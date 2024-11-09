@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot*" class="text-break">
-Method Dot  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L25"><i class="bi bi-code-slash"></i></a>
+Method Dot  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L97"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Dot  <a class="header-action link-secondary" title="View source" href="ht
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Single__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single})">
   Dot(Vector&lt;float&gt;, Vector&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L97"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the dot product of two vectors (计算两个向量的点积).
@@ -167,7 +167,7 @@ Mnemonic: <code>rt := left[0]*right[0] + left[1]*right[1] + left[2]*right[2] + .
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Double__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})">
   Dot(Vector&lt;double&gt;, Vector&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L103"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the dot product of two vectors (计算两个向量的点积).
@@ -217,7 +217,7 @@ Mnemonic: <code>rt := left[0]*right[0] + left[1]*right[1] + left[2]*right[2] + .
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte})">
   Dot(Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L109"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the dot product of two vectors (计算两个向量的点积).
@@ -268,7 +268,7 @@ public override sbyte Dot(Vector&lt;sbyte&gt; left, Vector&lt;sbyte&gt; right)</
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte})">
   Dot(Vector&lt;byte&gt;, Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L116"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the dot product of two vectors (计算两个向量的点积).
@@ -318,7 +318,7 @@ Mnemonic: <code>rt := left[0]*right[0] + left[1]*right[1] + left[2]*right[2] + .
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16})">
   Dot(Vector&lt;short&gt;, Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L122"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the dot product of two vectors (计算两个向量的点积).
@@ -368,7 +368,7 @@ Mnemonic: <code>rt := left[0]*right[0] + left[1]*right[1] + left[2]*right[2] + .
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16})">
   Dot(Vector&lt;ushort&gt;, Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L128"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the dot product of two vectors (计算两个向量的点积).
@@ -419,7 +419,7 @@ public override ushort Dot(Vector&lt;ushort&gt; left, Vector&lt;ushort&gt; right
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})">
   Dot(Vector&lt;int&gt;, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L135"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the dot product of two vectors (计算两个向量的点积).
@@ -469,7 +469,7 @@ Mnemonic: <code>rt := left[0]*right[0] + left[1]*right[1] + left[2]*right[2] + .
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32})">
   Dot(Vector&lt;uint&gt;, Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L141"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the dot product of two vectors (计算两个向量的点积).
@@ -520,7 +520,7 @@ public override uint Dot(Vector&lt;uint&gt; left, Vector&lt;uint&gt; right)</cod
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})">
   Dot(Vector&lt;long&gt;, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L148"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the dot product of two vectors (计算两个向量的点积).
@@ -570,7 +570,7 @@ Mnemonic: <code>rt := left[0]*right[0] + left[1]*right[1] + left[2]*right[2] + .
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2Abstract_Dot_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2Abstract.Dot(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64})">
   Dot(Vector&lt;ulong&gt;, Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L154"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the dot product of two vectors (计算两个向量的点积).
@@ -620,7 +620,7 @@ public override ulong Dot(Vector&lt;ulong&gt; left, Vector&lt;ulong&gt; right)</
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L25" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2Abstract.Supplement.cs/#L97" class="edit-link">Edit this page</a>
         </div>
 
 

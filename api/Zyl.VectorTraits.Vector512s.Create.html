@@ -1,0 +1,872 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Method Create </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Method Create ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_Vector512s_Create_.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.Vector512s.Create*%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.Vector512s.Create*">
+
+
+
+
+
+<h1 id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*" class="text-break">
+Method Create  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.cs/#L158"><i class="bi bi-code-slash"></i></a>
+</h1>
+
+<div class="facts text-secondary">
+  <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+</div>
+
+<div class="markdown summary"></div>
+<div class="markdown conceptual"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create__1_System_Runtime_Intrinsics_Vector256___0__System_Runtime_Intrinsics_Vector256___0__" data-uid="Zyl.VectorTraits.Vector512s.Create``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
+  Create&lt;T&gt;(Vector256&lt;T&gt;, Vector256&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.cs/#L158"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Create a new vector instance from two shorter vector instances. (从两个更短的向量实例, 来创建新的向量实例).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;T&gt; Create&lt;T&gt;(Vector256&lt;T&gt; lower, Vector256&lt;T&gt; upper) where T : struct</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>lower</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;T&gt;</dt>
+  <dd><p>The value that the lower 128-bits will be initialized to (较低 128 位的初始化值).</p>
+</dd>
+  <dt><code>upper</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector256-1">Vector256</a>&lt;T&gt;</dt>
+  <dd><p>The value that the upper 128-bits will be initialized to (较高 128 位的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;T&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> initialized from <code class="paramref">lower</code> and <code class="paramref">upper</code> (从 <code class="paramref">lower</code> 和 <code class="paramref">upper</code> 初始化的新 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>).</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T</code></dt>
+  <dd><p>The type of the input vector element (输入向量元素的类型).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create__1___0_" data-uid="Zyl.VectorTraits.Vector512s.Create``1(``0)">
+  Create&lt;T&gt;(T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.cs/#L170"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> instance with all elements initialized to the specified value (创建新的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> 实例，其中所有元素已初始化为指定值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;T&gt; Create&lt;T&gt;(T value) where T : struct</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <span class="xref">T</span></dt>
+  <dd><p>The value that all elements will be initialized to (所有元素的初始化目标值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;T&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with all elements initialized to value (一个新的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>，其中所有元素已初始化为 <code class="paramref">value</code> ).</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T</code></dt>
+  <dd><p>The vector element type (向量中的元素的类型).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512.create#system-runtime-intrinsics-vector512-create-1(-0)">Create</a>&lt;T&gt;(T)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create__1___0___" data-uid="Zyl.VectorTraits.Vector512s.Create``1(``0[])">
+  Create&lt;T&gt;(T[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.cs/#L218"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> from a given array (从给定数组创建一个新的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> ).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;T&gt; Create&lt;T&gt;(T[] values) where T : struct</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>values</code> T[]</dt>
+  <dd><p>The array from which the vector is created (用于创建向量的数组).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;T&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with its elements set to the first Count elements from <code class="paramref">values</code> (一个新<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>，其元素设置为来自<code class="paramref">values</code>首批满足长度的元素).</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T</code></dt>
+  <dd><p>The vector element type (向量中的元素的类型).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512.create#system-runtime-intrinsics-vector512-create-1(-0())">Create</a>&lt;T&gt;(T[])</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create__1___0___System_Int32_" data-uid="Zyl.VectorTraits.Vector512s.Create``1(``0[],System.Int32)">
+  Create&lt;T&gt;(T[], int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.cs/#L233"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> from a given array starting at a specified index position (于指定索引位置开始，从指定数组创建一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;T&gt; Create&lt;T&gt;(T[] values, int index) where T : struct</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>values</code> T[]</dt>
+  <dd><p>The array from which the vector is created (用于创建向量的数组).</p>
+</dd>
+  <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+  <dd><p>The starting index position from which to create the vector (欲创建向量的起始索引位置).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;T&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with its elements set to the first Count elements from <code class="paramref">values</code> (一个新<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>，其元素设置为来自<code class="paramref">values</code>首批满足长度的元素).</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T</code></dt>
+  <dd><p>The vector element type (向量中的元素的类型).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+  <dd><p>The <code class="paramref">index</code> is less than zero (<code class="paramref">index</code> 小于零). The length of <code class="paramref">values</code>, starting from <code class="paramref">index</code>, is less than <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1.count">Count</a> (从 <code class="paramref">index</code> 开始的 <code class="paramref">values</code> 的长度小于 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1.count">Count</a>).</p>
+</dd>
+</dl>
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512.create#system-runtime-intrinsics-vector512-create-1(-0()-system-int32)">Create</a>&lt;T&gt;(T[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create__1_System_ReadOnlySpan_System_Byte__" data-uid="Zyl.VectorTraits.Vector512s.Create``1(System.ReadOnlySpan{System.Byte})">
+  Create&lt;T&gt;(ReadOnlySpan&lt;byte&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.cs/#L252"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> from a given read-only span of bytes (根据给定的只读字节跨度构造一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;T&gt; Create&lt;T&gt;(ReadOnlySpan&lt;byte&gt; values) where T : struct</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>A read-only span of bytes that contains the values to add to the vector (从中创建向量的只读字节跨度).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;T&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with its elements set to the first Count elements from <code class="paramref">values</code> (一个新<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>，其元素设置为来自<code class="paramref">values</code>首批满足长度的元素).</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T</code></dt>
+  <dd><p>The vector element type (向量中的元素的类型).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+  <dd><p><code class="paramref">values</code> did not contain at least <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1.count">Count</a> elements (<code class="paramref">values</code> 的长度小于 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1.count">Count</a>).</p>
+</dd>
+</dl>
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512.create#system-runtime-intrinsics-vector512-create-1(system-readonlyspan((-0)))">Create</a>&lt;T&gt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create__1_System_ReadOnlySpan___0__" data-uid="Zyl.VectorTraits.Vector512s.Create``1(System.ReadOnlySpan{``0})">
+  Create&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.cs/#L268"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> from a from the given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> (根据给定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> 构造一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;T&gt; Create&lt;T&gt;(ReadOnlySpan&lt;T&gt; values) where T : struct</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;</dt>
+  <dd><p>The readonly span from which the vector is created (从中创建向量的只读跨度).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;T&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with its elements set to the first Count elements from <code class="paramref">values</code> (一个新<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>，其元素设置为来自<code class="paramref">values</code>首批满足长度的元素).</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T</code></dt>
+  <dd><p>The vector element type (向量中的元素的类型).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+  <dd><p><code class="paramref">values</code> did not contain at least <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1.count">Count</a> elements (<code class="paramref">values</code> 的长度小于 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1.count">Count</a>).</p>
+</dd>
+</dl>
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512.create#system-runtime-intrinsics-vector512-create-1(system-readonlyspan((-0)))">Create</a>&lt;T&gt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create__1_System_Span___0__" data-uid="Zyl.VectorTraits.Vector512s.Create``1(System.Span{``0})">
+  Create&lt;T&gt;(Span&lt;T&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.cs/#L285"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> from a from the given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> (根据给定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> 构造一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;T&gt; Create&lt;T&gt;(Span&lt;T&gt; values) where T : struct</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span</a>&lt;T&gt;</dt>
+  <dd><p>The span from which the vector is created (从中创建向量的跨度).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;T&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with its elements set to the first Count elements from <code class="paramref">values</code> (一个新<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a>，其元素设置为来自<code class="paramref">values</code>首批满足长度的元素).</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T</code></dt>
+  <dd><p>The vector element type (向量中的元素的类型).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></dt>
+  <dd><p><code class="paramref">values</code> did not contain at least <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1.count">Count</a> elements (<code class="paramref">values</code> 的长度小于 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1.count">Count</a>).</p>
+</dd>
+</dl>
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512.create#system-runtime-intrinsics-vector512-create-1(system-readonlyspan((-0)))">Create</a>&lt;T&gt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;T&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create_Zyl_VectorTraits_ExTypes_ExInt128_" data-uid="Zyl.VectorTraits.Vector512s.Create(Zyl.VectorTraits.ExTypes.ExInt128)">
+  Create(ExInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.ExType.cs/#L22"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a> with all elements initialized to the specified value (创建新的元素类型为<a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a>的向量实例，其中所有元素已初始化为指定值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;ExInt128&gt; Create(ExInt128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a></dt>
+  <dd><p>The value that all elements will be initialized to (所有元素的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with all elements initialized to <code class="paramref">value</code> (一个新向量，它的所有元素都初始化为 <code class="paramref">value</code>).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create_Zyl_VectorTraits_ExTypes_ExUInt128_" data-uid="Zyl.VectorTraits.Vector512s.Create(Zyl.VectorTraits.ExTypes.ExUInt128)">
+  Create(ExUInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.ExType.cs/#L33"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a> with all elements initialized to the specified value (创建新的元素类型为<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>的向量实例，其中所有元素已初始化为指定值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;ExUInt128&gt; Create(ExUInt128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a></dt>
+  <dd><p>The value that all elements will be initialized to (所有元素的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with all elements initialized to <code class="paramref">value</code> (一个新向量，它的所有元素都初始化为 <code class="paramref">value</code>).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_Zyl_VectorTraits_ExTypes_ExInt128_" data-uid="Zyl.VectorTraits.Vector512s.Create(Zyl.VectorTraits.ExTypes.ExInt128,Zyl.VectorTraits.ExTypes.ExInt128,Zyl.VectorTraits.ExTypes.ExInt128,Zyl.VectorTraits.ExTypes.ExInt128)">
+  Create(ExInt128, ExInt128, ExInt128, ExInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.ExType.cs/#L48"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a> with each element initialized to the corresponding specified value {创建新的元素类型为<a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a>的向量实例，其中每个元素都已初始化为相应的指定值}.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;ExInt128&gt; Create(ExInt128 e0, ExInt128 e1, ExInt128 e2, ExInt128 e3)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>e0</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a></dt>
+  <dd><p>The value that element 0 will be initialized to (元素 0 的初始化值).</p>
+</dd>
+  <dt><code>e1</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a></dt>
+  <dd><p>The value that element 1 will be initialized to (元素 1 的初始化值).</p>
+</dd>
+  <dt><code>e2</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a></dt>
+  <dd><p>The value that element 2 will be initialized to (元素 2 的初始化值).</p>
+</dd>
+  <dt><code>e3</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a></dt>
+  <dd><p>The value that element 3 will be initialized to (元素 3 的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with each element initialized to corresponding specified value (一个新向量，其中每个元素都初始化为相应的指定值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_" data-uid="Zyl.VectorTraits.Vector512s.Create(Zyl.VectorTraits.ExTypes.ExUInt128,Zyl.VectorTraits.ExTypes.ExUInt128,Zyl.VectorTraits.ExTypes.ExUInt128,Zyl.VectorTraits.ExTypes.ExUInt128)">
+  Create(ExUInt128, ExUInt128, ExUInt128, ExUInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.ExType.cs/#L66"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a> with each element initialized to the corresponding specified value {创建新的元素类型为<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>的向量实例，其中每个元素都已初始化为相应的指定值}.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;ExUInt128&gt; Create(ExUInt128 e0, ExUInt128 e1, ExUInt128 e2, ExUInt128 e3)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>e0</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a></dt>
+  <dd><p>The value that element 0 will be initialized to (元素 0 的初始化值).</p>
+</dd>
+  <dt><code>e1</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a></dt>
+  <dd><p>The value that element 1 will be initialized to (元素 1 的初始化值).</p>
+</dd>
+  <dt><code>e2</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a></dt>
+  <dd><p>The value that element 2 will be initialized to (元素 2 的初始化值).</p>
+</dd>
+  <dt><code>e3</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a></dt>
+  <dd><p>The value that element 3 will be initialized to (元素 3 的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with each element initialized to corresponding specified value (一个新向量，其中每个元素都初始化为相应的指定值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create_System_Int128_" data-uid="Zyl.VectorTraits.Vector512s.Create(System.Int128)">
+  Create(Int128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.ExType.cs/#L84"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a> with all elements initialized to the specified value (创建新的元素类型为<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a>的向量实例，其中所有元素已初始化为指定值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;Int128&gt; Create(Int128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a></dt>
+  <dd><p>The value that all elements will be initialized to (所有元素的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with all elements initialized to <code class="paramref">value</code> (一个新向量，它的所有元素都初始化为 <code class="paramref">value</code>).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create_System_UInt128_" data-uid="Zyl.VectorTraits.Vector512s.Create(System.UInt128)">
+  Create(UInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.ExType.cs/#L95"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a> with all elements initialized to the specified value (创建新的元素类型为<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a>的向量实例，其中所有元素已初始化为指定值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;UInt128&gt; Create(UInt128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a></dt>
+  <dd><p>The value that all elements will be initialized to (所有元素的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with all elements initialized to <code class="paramref">value</code> (一个新向量，它的所有元素都初始化为 <code class="paramref">value</code>).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create_System_Int128_System_Int128_System_Int128_System_Int128_" data-uid="Zyl.VectorTraits.Vector512s.Create(System.Int128,System.Int128,System.Int128,System.Int128)">
+  Create(Int128, Int128, Int128, Int128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.ExType.cs/#L110"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a> with each element initialized to the corresponding specified value {创建新的元素类型为<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a>的向量实例，其中每个元素都已初始化为相应的指定值}.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector512&lt;Int128&gt; Create(Int128 e0, Int128 e1, Int128 e2, Int128 e3)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>e0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a></dt>
+  <dd><p>The value that element 0 will be initialized to (元素 0 的初始化值).</p>
+</dd>
+  <dt><code>e1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a></dt>
+  <dd><p>The value that element 1 will be initialized to (元素 1 的初始化值).</p>
+</dd>
+  <dt><code>e2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a></dt>
+  <dd><p>The value that element 2 will be initialized to (元素 2 的初始化值).</p>
+</dd>
+  <dt><code>e3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a></dt>
+  <dd><p>The value that element 3 will be initialized to (元素 3 的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with each element initialized to corresponding specified value (一个新向量，其中每个元素都初始化为相应的指定值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vector512s_Create_" data-uid="Zyl.VectorTraits.Vector512s.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vector512s_Create_System_UInt128_System_UInt128_System_UInt128_System_UInt128_" data-uid="Zyl.VectorTraits.Vector512s.Create(System.UInt128,System.UInt128,System.UInt128,System.UInt128)">
+  Create(UInt128, UInt128, UInt128, UInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.ExType.cs/#L128"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a> with each element initialized to the corresponding specified value {创建新的元素类型为<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a>的向量实例，其中每个元素都已初始化为相应的指定值}.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;UInt128&gt; Create(UInt128 e0, UInt128 e1, UInt128 e2, UInt128 e3)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>e0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a></dt>
+  <dd><p>The value that element 0 will be initialized to (元素 0 的初始化值).</p>
+</dd>
+  <dt><code>e1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a></dt>
+  <dd><p>The value that element 1 will be initialized to (元素 1 的初始化值).</p>
+</dd>
+  <dt><code>e2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a></dt>
+  <dd><p>The value that element 2 will be initialized to (元素 2 的初始化值).</p>
+</dd>
+  <dt><code>e3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a></dt>
+  <dd><p>The value that element 3 will be initialized to (元素 3 的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512&lt;T&gt;</a> with each element initialized to corresponding specified value (一个新向量，其中每个元素都初始化为相应的指定值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector512s.cs/#L158" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

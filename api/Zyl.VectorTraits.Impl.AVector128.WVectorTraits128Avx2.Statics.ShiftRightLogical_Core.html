@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_ShiftRightLogical_Core_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.ShiftRightLogical_Core*" class="text-break">
-Method ShiftRightLogical_Core  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L642"><i class="bi bi-code-slash"></i></a>
+Method ShiftRightLogical_Core  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L693"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ShiftRightLogical_Core  <a class="header-action link-secondary" title="Vi
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_ShiftRightLogical_Core_System_Runtime_Intrinsics_Vector128_System_SByte__System_Int32_System_Runtime_Intrinsics_Vector128_System_SByte__System_Runtime_Intrinsics_Vector128_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.ShiftRightLogical_Core(System.Runtime.Intrinsics.Vector128{System.SByte},System.Int32,System.Runtime.Intrinsics.Vector128{System.SByte},System.Runtime.Intrinsics.Vector128{System.SByte})">
   ShiftRightLogical_Core(Vector128&lt;sbyte&gt;, int, Vector128&lt;sbyte&gt;, Vector128&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L642"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L693"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的核心计算). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -176,7 +176,7 @@ public static Vector128&lt;sbyte&gt; ShiftRightLogical_Core(Vector128&lt;sbyte&g
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_ShiftRightLogical_Core_System_Runtime_Intrinsics_Vector128_System_Byte__System_Int32_System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.ShiftRightLogical_Core(System.Runtime.Intrinsics.Vector128{System.Byte},System.Int32,System.Runtime.Intrinsics.Vector128{System.Byte},System.Runtime.Intrinsics.Vector128{System.Byte})">
   ShiftRightLogical_Core(Vector128&lt;byte&gt;, int, Vector128&lt;byte&gt;, Vector128&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L649"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L700"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的核心计算). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -234,7 +234,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_ShiftRightLogical_Core_System_Runtime_Intrinsics_Vector128_System_Int32__System_Int32_System_Runtime_Intrinsics_Vector128_System_Int32__System_Runtime_Intrinsics_Vector128_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.ShiftRightLogical_Core(System.Runtime.Intrinsics.Vector128{System.Int32},System.Int32,System.Runtime.Intrinsics.Vector128{System.Int32},System.Runtime.Intrinsics.Vector128{System.Int32})">
   ShiftRightLogical_Core(Vector128&lt;int&gt;, int, Vector128&lt;int&gt;, Vector128&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L658"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L709"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的核心计算). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -292,7 +292,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_ShiftRightLogical_Core_System_Runtime_Intrinsics_Vector128_System_UInt32__System_Int32_System_Runtime_Intrinsics_Vector128_System_UInt32__System_Runtime_Intrinsics_Vector128_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.ShiftRightLogical_Core(System.Runtime.Intrinsics.Vector128{System.UInt32},System.Int32,System.Runtime.Intrinsics.Vector128{System.UInt32},System.Runtime.Intrinsics.Vector128{System.UInt32})">
   ShiftRightLogical_Core(Vector128&lt;uint&gt;, int, Vector128&lt;uint&gt;, Vector128&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L666"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L717"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的核心计算). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -351,7 +351,7 @@ public static Vector128&lt;uint&gt; ShiftRightLogical_Core(Vector128&lt;uint&gt;
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_ShiftRightLogical_Core_System_Runtime_Intrinsics_Vector128_System_Int64__System_Int32_System_Runtime_Intrinsics_Vector128_System_Int64__System_Runtime_Intrinsics_Vector128_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.ShiftRightLogical_Core(System.Runtime.Intrinsics.Vector128{System.Int64},System.Int32,System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64})">
   ShiftRightLogical_Core(Vector128&lt;long&gt;, int, Vector128&lt;long&gt;, Vector128&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L675"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L726"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的核心计算). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -409,7 +409,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_ShiftRightLogical_Core_System_Runtime_Intrinsics_Vector128_System_UInt64__System_Int32_System_Runtime_Intrinsics_Vector128_System_UInt64__System_Runtime_Intrinsics_Vector128_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.ShiftRightLogical_Core(System.Runtime.Intrinsics.Vector128{System.UInt64},System.Int32,System.Runtime.Intrinsics.Vector128{System.UInt64},System.Runtime.Intrinsics.Vector128{System.UInt64})">
   ShiftRightLogical_Core(Vector128&lt;ulong&gt;, int, Vector128&lt;ulong&gt;, Vector128&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L683"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L734"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的核心计算). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -467,7 +467,7 @@ public static Vector128&lt;ulong&gt; ShiftRightLogical_Core(Vector128&lt;ulong&g
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L642" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Avx2.cs/#L693" class="edit-link">Edit this page</a>
         </div>
 
 

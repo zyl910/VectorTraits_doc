@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core*" class="text-break">
-Method YShuffleKernel_Core  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2442"><i class="bi bi-code-slash"></i></a>
+Method YShuffleKernel_Core  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4098"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YShuffleKernel_Core  <a class="header-action link-secondary" title="View 
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_System_Runtime_Intrinsics_Vector128_System_Single__System_Runtime_Intrinsics_Vector128_System_Int32__System_Runtime_Intrinsics_Vector128_System_Int32__" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core(System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Int32},System.Runtime.Intrinsics.Vector128{System.Int32})">
   YShuffleKernel_Core(Vector128&lt;float&gt;, Vector128&lt;int&gt;, Vector128&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2442"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4098"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for only shuffle (仅换位的核心计算). Its arguments are derived from YShuffleKernel_Args (其参数来源于 YShuffleKernel_Args).
@@ -170,7 +170,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_System_Runtime_Intrinsics_Vector128_System_Double__System_Runtime_Intrinsics_Vector128_System_Int64__System_Runtime_Intrinsics_Vector128_System_Int64__" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core(System.Runtime.Intrinsics.Vector128{System.Double},System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64})">
   YShuffleKernel_Core(Vector128&lt;double&gt;, Vector128&lt;long&gt;, Vector128&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2454"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4110"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for only shuffle (仅换位的核心计算). Its arguments are derived from YShuffleKernel_Args (其参数来源于 YShuffleKernel_Args).
@@ -223,7 +223,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_System_Runtime_Intrinsics_Vector128_System_SByte__System_Runtime_Intrinsics_Vector128_System_SByte__System_Runtime_Intrinsics_Vector128_System_SByte__" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core(System.Runtime.Intrinsics.Vector128{System.SByte},System.Runtime.Intrinsics.Vector128{System.SByte},System.Runtime.Intrinsics.Vector128{System.SByte})">
   YShuffleKernel_Core(Vector128&lt;sbyte&gt;, Vector128&lt;sbyte&gt;, Vector128&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2467"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4123"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for only shuffle (仅换位的核心计算). Its arguments are derived from YShuffleKernel_Args (其参数来源于 YShuffleKernel_Args).
@@ -277,7 +277,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte__" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core(System.Runtime.Intrinsics.Vector128{System.Byte},System.Runtime.Intrinsics.Vector128{System.Byte},System.Runtime.Intrinsics.Vector128{System.Byte})">
   YShuffleKernel_Core(Vector128&lt;byte&gt;, Vector128&lt;byte&gt;, Vector128&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2480"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4136"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for only shuffle (仅换位的核心计算). Its arguments are derived from YShuffleKernel_Args (其参数来源于 YShuffleKernel_Args).
@@ -331,7 +331,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_System_Runtime_Intrinsics_Vector128_System_Int16__System_Runtime_Intrinsics_Vector128_System_Int16__System_Runtime_Intrinsics_Vector128_System_Int16__" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core(System.Runtime.Intrinsics.Vector128{System.Int16},System.Runtime.Intrinsics.Vector128{System.Int16},System.Runtime.Intrinsics.Vector128{System.Int16})">
   YShuffleKernel_Core(Vector128&lt;short&gt;, Vector128&lt;short&gt;, Vector128&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2492"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4148"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for only shuffle (仅换位的核心计算). Its arguments are derived from YShuffleKernel_Args (其参数来源于 YShuffleKernel_Args).
@@ -384,7 +384,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_System_Runtime_Intrinsics_Vector128_System_UInt16__System_Runtime_Intrinsics_Vector128_System_UInt16__System_Runtime_Intrinsics_Vector128_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core(System.Runtime.Intrinsics.Vector128{System.UInt16},System.Runtime.Intrinsics.Vector128{System.UInt16},System.Runtime.Intrinsics.Vector128{System.UInt16})">
   YShuffleKernel_Core(Vector128&lt;ushort&gt;, Vector128&lt;ushort&gt;, Vector128&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2504"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4160"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for only shuffle (仅换位的核心计算). Its arguments are derived from YShuffleKernel_Args (其参数来源于 YShuffleKernel_Args).
@@ -437,7 +437,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_System_Runtime_Intrinsics_Vector128_System_Int32__System_Runtime_Intrinsics_Vector128_System_Int32__System_Runtime_Intrinsics_Vector128_System_Int32__" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core(System.Runtime.Intrinsics.Vector128{System.Int32},System.Runtime.Intrinsics.Vector128{System.Int32},System.Runtime.Intrinsics.Vector128{System.Int32})">
   YShuffleKernel_Core(Vector128&lt;int&gt;, Vector128&lt;int&gt;, Vector128&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2516"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4172"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for only shuffle (仅换位的核心计算). Its arguments are derived from YShuffleKernel_Args (其参数来源于 YShuffleKernel_Args).
@@ -490,7 +490,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_System_Runtime_Intrinsics_Vector128_System_UInt32__System_Runtime_Intrinsics_Vector128_System_UInt32__System_Runtime_Intrinsics_Vector128_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core(System.Runtime.Intrinsics.Vector128{System.UInt32},System.Runtime.Intrinsics.Vector128{System.UInt32},System.Runtime.Intrinsics.Vector128{System.UInt32})">
   YShuffleKernel_Core(Vector128&lt;uint&gt;, Vector128&lt;uint&gt;, Vector128&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2528"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4184"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for only shuffle (仅换位的核心计算). Its arguments are derived from YShuffleKernel_Args (其参数来源于 YShuffleKernel_Args).
@@ -543,7 +543,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_System_Runtime_Intrinsics_Vector128_System_Int64__System_Runtime_Intrinsics_Vector128_System_Int64__System_Runtime_Intrinsics_Vector128_System_Int64__" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core(System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64})">
   YShuffleKernel_Core(Vector128&lt;long&gt;, Vector128&lt;long&gt;, Vector128&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2540"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4196"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for only shuffle (仅换位的核心计算). Its arguments are derived from YShuffleKernel_Args (其参数来源于 YShuffleKernel_Args).
@@ -596,7 +596,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits128_YShuffleKernel_Core_System_Runtime_Intrinsics_Vector128_System_UInt64__System_Runtime_Intrinsics_Vector128_System_UInt64__System_Runtime_Intrinsics_Vector128_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits128.YShuffleKernel_Core(System.Runtime.Intrinsics.Vector128{System.UInt64},System.Runtime.Intrinsics.Vector128{System.UInt64},System.Runtime.Intrinsics.Vector128{System.UInt64})">
   YShuffleKernel_Core(Vector128&lt;ulong&gt;, Vector128&lt;ulong&gt;, Vector128&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2552"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4208"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for only shuffle (仅换位的核心计算). Its arguments are derived from YShuffleKernel_Args (其参数来源于 YShuffleKernel_Args).
@@ -648,7 +648,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L2442" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits128.Y.cs/#L4098" class="edit-link">Edit this page</a>
         </div>
 
 

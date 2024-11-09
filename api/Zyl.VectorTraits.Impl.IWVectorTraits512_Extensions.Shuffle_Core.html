@@ -1,0 +1,739 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Method Shuffle_Core </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Method Shuffle_Core ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*">
+
+
+
+
+
+<h1 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*" class="text-break">
+Method Shuffle_Core  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L554"><i class="bi bi-code-slash"></i></a>
+</h1>
+
+<div class="facts text-secondary">
+  <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a>.<a class="xref" href="Zyl.VectorTraits.Impl.html">Impl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+</div>
+
+<div class="markdown summary"></div>
+<div class="markdown conceptual"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core__2_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512___0__System_ValueTuple_System_Runtime_Intrinsics_Vector512___1__System_Runtime_Intrinsics_Vector512___1___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core``2(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{``0},System.ValueTuple{System.Runtime.Intrinsics.Vector512{``1},System.Runtime.Intrinsics.Vector512{``1}})">
+  Shuffle_Core&lt;T, TIdx&gt;(IWVectorTraits512, Vector512&lt;T&gt;, (Vector512&lt;TIdx&gt; args0, Vector512&lt;TIdx&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L554"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[Obsolete(&quot;It is only suitable for unit testing because it contains branching statements and has poor performance. In general, it is recommended to use the non-generic version of the methods (因它含有分支语句, 性能较差, 仅适用于单元测试. 一般情况下, 建议使用非泛型版方法).&quot;)]
+[CLSCompliant(false)]
+public static Vector512&lt;T&gt; Shuffle_Core&lt;T, TIdx&gt;(this IWVectorTraits512 athis, Vector512&lt;T&gt; vector, (Vector512&lt;TIdx&gt; args0, Vector512&lt;TIdx&gt; args1) args) where T : struct where TIdx : struct</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd><p>This object.</p>
+</dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;T&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;TIdx&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512---0-,system.runtime.intrinsics.vector512---0--.args0">args0</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;TIdx&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512---0-,system.runtime.intrinsics.vector512---0--.args1">args1</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;T&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Type Parameters</h4>
+<dl class="parameters">
+  <dt><code>T</code></dt>
+  <dd><p>The element type of the input parameter (输入参数的元素类型).</p>
+</dd>
+  <dt><code>TIdx</code></dt>
+  <dd><p>The element type of the indices parameter (索引参数的元素类型).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section">Exceptions</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
+  <dd><p>These element types(<code class="typeparamref">T</code>, <code class="typeparamref">TIdx</code>) are not supported.</p>
+</dd>
+</dl>
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_Single__System_Runtime_Intrinsics_Vector512_System_Int32__System_Runtime_Intrinsics_Vector512_System_Int32__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512_System_Single__System_ValueTuple_System_Runtime_Intrinsics_Vector512_System_Int32__System_Runtime_Intrinsics_Vector512_System_Int32___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{System.Single},System.ValueTuple{System.Runtime.Intrinsics.Vector512{System.Int32},System.Runtime.Intrinsics.Vector512{System.Int32}})">
+  Shuffle_Core(IWVectorTraits512, Vector512&lt;float&gt;, (Vector512&lt;int&gt; args0, Vector512&lt;int&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L585"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;float&gt; Shuffle_Core(this IWVectorTraits512 athis, Vector512&lt;float&gt; vector, (Vector512&lt;int&gt; args0, Vector512&lt;int&gt; args1) args)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd></dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.int32-,system.runtime.intrinsics.vector512-system.int32--.lower">Lower</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.int32-,system.runtime.intrinsics.vector512-system.int32--.upper">Upper</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_Single__System_Runtime_Intrinsics_Vector512_System_Int32__System_Runtime_Intrinsics_Vector512_System_Int32__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512_System_Double__System_ValueTuple_System_Runtime_Intrinsics_Vector512_System_Int64__System_Runtime_Intrinsics_Vector512_System_Int64___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{System.Double},System.ValueTuple{System.Runtime.Intrinsics.Vector512{System.Int64},System.Runtime.Intrinsics.Vector512{System.Int64}})">
+  Shuffle_Core(IWVectorTraits512, Vector512&lt;double&gt;, (Vector512&lt;long&gt; args0, Vector512&lt;long&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L592"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;double&gt; Shuffle_Core(this IWVectorTraits512 athis, Vector512&lt;double&gt; vector, (Vector512&lt;long&gt; args0, Vector512&lt;long&gt; args1) args)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd></dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.int64-,system.runtime.intrinsics.vector512-system.int64--.lower">Lower</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.int64-,system.runtime.intrinsics.vector512-system.int64--.upper">Upper</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_Double__System_Runtime_Intrinsics_Vector512_System_Int64__System_Runtime_Intrinsics_Vector512_System_Int64__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512_System_SByte__System_ValueTuple_System_Runtime_Intrinsics_Vector512_System_SByte__System_Runtime_Intrinsics_Vector512_System_SByte___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{System.SByte},System.ValueTuple{System.Runtime.Intrinsics.Vector512{System.SByte},System.Runtime.Intrinsics.Vector512{System.SByte}})">
+  Shuffle_Core(IWVectorTraits512, Vector512&lt;sbyte&gt;, (Vector512&lt;sbyte&gt; args0, Vector512&lt;sbyte&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L599"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;sbyte&gt; Shuffle_Core(this IWVectorTraits512 athis, Vector512&lt;sbyte&gt; vector, (Vector512&lt;sbyte&gt; args0, Vector512&lt;sbyte&gt; args1) args)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd></dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.sbyte-,system.runtime.intrinsics.vector512-system.sbyte--.args0">args0</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.sbyte-,system.runtime.intrinsics.vector512-system.sbyte--.args1">args1</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_SByte__System_Runtime_Intrinsics_Vector512_System_SByte__System_Runtime_Intrinsics_Vector512_System_SByte__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512_System_Byte__System_ValueTuple_System_Runtime_Intrinsics_Vector512_System_Byte__System_Runtime_Intrinsics_Vector512_System_Byte___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{System.Byte},System.ValueTuple{System.Runtime.Intrinsics.Vector512{System.Byte},System.Runtime.Intrinsics.Vector512{System.Byte}})">
+  Shuffle_Core(IWVectorTraits512, Vector512&lt;byte&gt;, (Vector512&lt;byte&gt; args0, Vector512&lt;byte&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L606"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;byte&gt; Shuffle_Core(this IWVectorTraits512 athis, Vector512&lt;byte&gt; vector, (Vector512&lt;byte&gt; args0, Vector512&lt;byte&gt; args1) args)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd></dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.byte-,system.runtime.intrinsics.vector512-system.byte--.args0">args0</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.byte-,system.runtime.intrinsics.vector512-system.byte--.args1">args1</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_Byte__System_Runtime_Intrinsics_Vector512_System_Byte__System_Runtime_Intrinsics_Vector512_System_Byte__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512_System_Int16__System_ValueTuple_System_Runtime_Intrinsics_Vector512_System_Int16__System_Runtime_Intrinsics_Vector512_System_Int16___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{System.Int16},System.ValueTuple{System.Runtime.Intrinsics.Vector512{System.Int16},System.Runtime.Intrinsics.Vector512{System.Int16}})">
+  Shuffle_Core(IWVectorTraits512, Vector512&lt;short&gt;, (Vector512&lt;short&gt; args0, Vector512&lt;short&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L612"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;short&gt; Shuffle_Core(this IWVectorTraits512 athis, Vector512&lt;short&gt; vector, (Vector512&lt;short&gt; args0, Vector512&lt;short&gt; args1) args)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd></dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.int16-,system.runtime.intrinsics.vector512-system.int16--.lower">Lower</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.int16-,system.runtime.intrinsics.vector512-system.int16--.upper">Upper</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_Int16__System_Runtime_Intrinsics_Vector512_System_Int16__System_Runtime_Intrinsics_Vector512_System_Int16__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512_System_UInt16__System_ValueTuple_System_Runtime_Intrinsics_Vector512_System_UInt16__System_Runtime_Intrinsics_Vector512_System_UInt16___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{System.UInt16},System.ValueTuple{System.Runtime.Intrinsics.Vector512{System.UInt16},System.Runtime.Intrinsics.Vector512{System.UInt16}})">
+  Shuffle_Core(IWVectorTraits512, Vector512&lt;ushort&gt;, (Vector512&lt;ushort&gt; args0, Vector512&lt;ushort&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L619"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;ushort&gt; Shuffle_Core(this IWVectorTraits512 athis, Vector512&lt;ushort&gt; vector, (Vector512&lt;ushort&gt; args0, Vector512&lt;ushort&gt; args1) args)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd></dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.uint16-,system.runtime.intrinsics.vector512-system.uint16--.lower">Lower</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.uint16-,system.runtime.intrinsics.vector512-system.uint16--.upper">Upper</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_UInt16__System_Runtime_Intrinsics_Vector512_System_UInt16__System_Runtime_Intrinsics_Vector512_System_UInt16__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512_System_Int32__System_ValueTuple_System_Runtime_Intrinsics_Vector512_System_Int32__System_Runtime_Intrinsics_Vector512_System_Int32___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{System.Int32},System.ValueTuple{System.Runtime.Intrinsics.Vector512{System.Int32},System.Runtime.Intrinsics.Vector512{System.Int32}})">
+  Shuffle_Core(IWVectorTraits512, Vector512&lt;int&gt;, (Vector512&lt;int&gt; args0, Vector512&lt;int&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L626"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;int&gt; Shuffle_Core(this IWVectorTraits512 athis, Vector512&lt;int&gt; vector, (Vector512&lt;int&gt; args0, Vector512&lt;int&gt; args1) args)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd></dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.int32-,system.runtime.intrinsics.vector512-system.int32--.lower">Lower</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.int32-,system.runtime.intrinsics.vector512-system.int32--.upper">Upper</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_Int32__System_Runtime_Intrinsics_Vector512_System_Int32__System_Runtime_Intrinsics_Vector512_System_Int32__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512_System_UInt32__System_ValueTuple_System_Runtime_Intrinsics_Vector512_System_UInt32__System_Runtime_Intrinsics_Vector512_System_UInt32___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{System.UInt32},System.ValueTuple{System.Runtime.Intrinsics.Vector512{System.UInt32},System.Runtime.Intrinsics.Vector512{System.UInt32}})">
+  Shuffle_Core(IWVectorTraits512, Vector512&lt;uint&gt;, (Vector512&lt;uint&gt; args0, Vector512&lt;uint&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L633"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;uint&gt; Shuffle_Core(this IWVectorTraits512 athis, Vector512&lt;uint&gt; vector, (Vector512&lt;uint&gt; args0, Vector512&lt;uint&gt; args1) args)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd></dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.uint32-,system.runtime.intrinsics.vector512-system.uint32--.lower">Lower</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.uint32-,system.runtime.intrinsics.vector512-system.uint32--.upper">Upper</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_UInt32__System_Runtime_Intrinsics_Vector512_System_UInt32__System_Runtime_Intrinsics_Vector512_System_UInt32__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512_System_Int64__System_ValueTuple_System_Runtime_Intrinsics_Vector512_System_Int64__System_Runtime_Intrinsics_Vector512_System_Int64___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{System.Int64},System.ValueTuple{System.Runtime.Intrinsics.Vector512{System.Int64},System.Runtime.Intrinsics.Vector512{System.Int64}})">
+  Shuffle_Core(IWVectorTraits512, Vector512&lt;long&gt;, (Vector512&lt;long&gt; args0, Vector512&lt;long&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L640"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;long&gt; Shuffle_Core(this IWVectorTraits512 athis, Vector512&lt;long&gt; vector, (Vector512&lt;long&gt; args0, Vector512&lt;long&gt; args1) args)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd></dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.int64-,system.runtime.intrinsics.vector512-system.int64--.lower">Lower</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.int64-,system.runtime.intrinsics.vector512-system.int64--.upper">Upper</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_Int64__System_Runtime_Intrinsics_Vector512_System_Int64__System_Runtime_Intrinsics_Vector512_System_Int64__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+<a id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core*"></a>
+
+<h3 id="Zyl_VectorTraits_Impl_IWVectorTraits512_Extensions_Shuffle_Core_Zyl_VectorTraits_Impl_IWVectorTraits512_System_Runtime_Intrinsics_Vector512_System_UInt64__System_ValueTuple_System_Runtime_Intrinsics_Vector512_System_UInt64__System_Runtime_Intrinsics_Vector512_System_UInt64___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits512_Extensions.Shuffle_Core(Zyl.VectorTraits.Impl.IWVectorTraits512,System.Runtime.Intrinsics.Vector512{System.UInt64},System.ValueTuple{System.Runtime.Intrinsics.Vector512{System.UInt64},System.Runtime.Intrinsics.Vector512{System.UInt64}})">
+  Shuffle_Core(IWVectorTraits512, Vector512&lt;ulong&gt;, (Vector512&lt;ulong&gt; args0, Vector512&lt;ulong&gt; args1))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L647"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Core calculation for shuffle and clear (换位并清零的核心计算). Its arguments are derived from Shuffle_Args (其参数来源于 Shuffle_Args).
+Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vector[indices[i]] ):0</code>.</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector512&lt;ulong&gt; Shuffle_Core(this IWVectorTraits512 athis, Vector512&lt;ulong&gt; vector, (Vector512&lt;ulong&gt; args0, Vector512&lt;ulong&gt; args1) args)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>athis</code> <a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.html">IWVectorTraits512</a></dt>
+  <dd></dd>
+  <dt><code>vector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>The input vector from which values are selected (从中选择值的输入向量).</p>
+</dd>
+  <dt><code>args</code> (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.uint64-,system.runtime.intrinsics.vector512-system.uint64--.lower">Lower</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.runtime.intrinsics.vector512-system.uint64-,system.runtime.intrinsics.vector512-system.uint64--.upper">Upper</a>)</dt>
+  <dd><p>The arguments(参数). Derived from Shuffle_Args .</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;</dt>
+  <dd><p>A new vector containing the values from <code class="paramref">vector</code> selected by the given <code>indices</code> (一个新向量，其中包含给定 <code>indices</code> 从 <code class="paramref">vector</code> 中选择的值).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+<dl class="typelist seealso">
+  <dt>See Also</dt>
+  <dd>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_AcceleratedTypes.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_AcceleratedTypes">Shuffle_AcceleratedTypes</a></div>
+  <div><a class="xref" href="Zyl.VectorTraits.Impl.IWVectorTraits512.Shuffle_Core.html#Zyl_VectorTraits_Impl_IWVectorTraits512_Shuffle_Core_System_Runtime_Intrinsics_Vector512_System_UInt64__System_Runtime_Intrinsics_Vector512_System_UInt64__System_Runtime_Intrinsics_Vector512_System_UInt64__">Shuffle_Core</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a>&gt;)</div>
+  </dd>
+</dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits512_Extensions.cs/#L554" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

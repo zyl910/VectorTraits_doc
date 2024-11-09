@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YShuffleInsert_Args_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YShuffleInsert_Args*" class="text-break">
-Method YShuffleInsert_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L830"><i class="bi bi-code-slash"></i></a>
+Method YShuffleInsert_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L832"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YShuffleInsert_Args  <a class="header-action link-secondary" title="View 
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YShuffleInsert_Args_System_Runtime_Intrinsics_Vector128_System_SByte__System_Runtime_Intrinsics_Vector128_System_SByte___System_Runtime_Intrinsics_Vector128_System_SByte___System_Runtime_Intrinsics_Vector128_System_SByte___" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YShuffleInsert_Args(System.Runtime.Intrinsics.Vector128{System.SByte},System.Runtime.Intrinsics.Vector128{System.SByte}@,System.Runtime.Intrinsics.Vector128{System.SByte}@,System.Runtime.Intrinsics.Vector128{System.SByte}@)">
   YShuffleInsert_Args(Vector128&lt;sbyte&gt;, out Vector128&lt;sbyte&gt;, out Vector128&lt;sbyte&gt;, out Vector128&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L830"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L832"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -168,7 +168,7 @@ public static void YShuffleInsert_Args(Vector128&lt;sbyte&gt; indices, out Vecto
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YShuffleInsert_Args_System_Runtime_Intrinsics_Vector128_System_Byte__System_Runtime_Intrinsics_Vector128_System_Byte___System_Runtime_Intrinsics_Vector128_System_Byte___System_Runtime_Intrinsics_Vector128_System_Byte___" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YShuffleInsert_Args(System.Runtime.Intrinsics.Vector128{System.Byte},System.Runtime.Intrinsics.Vector128{System.Byte}@,System.Runtime.Intrinsics.Vector128{System.Byte}@,System.Runtime.Intrinsics.Vector128{System.Byte}@)">
   YShuffleInsert_Args(Vector128&lt;byte&gt;, out Vector128&lt;byte&gt;, out Vector128&lt;byte&gt;, out Vector128&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L843"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L845"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -218,7 +218,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YShuffleInsert_Args_System_Runtime_Intrinsics_Vector128_System_Int16__System_Runtime_Intrinsics_Vector128_System_Int16___System_Runtime_Intrinsics_Vector128_System_Int16___System_Runtime_Intrinsics_Vector128_System_Int16___" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YShuffleInsert_Args(System.Runtime.Intrinsics.Vector128{System.Int16},System.Runtime.Intrinsics.Vector128{System.Int16}@,System.Runtime.Intrinsics.Vector128{System.Int16}@,System.Runtime.Intrinsics.Vector128{System.Int16}@)">
   YShuffleInsert_Args(Vector128&lt;short&gt;, out Vector128&lt;short&gt;, out Vector128&lt;short&gt;, out Vector128&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L855"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L857"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -268,7 +268,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YShuffleInsert_Args_System_Runtime_Intrinsics_Vector128_System_UInt16__System_Runtime_Intrinsics_Vector128_System_UInt16___System_Runtime_Intrinsics_Vector128_System_UInt16___System_Runtime_Intrinsics_Vector128_System_UInt16___" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YShuffleInsert_Args(System.Runtime.Intrinsics.Vector128{System.UInt16},System.Runtime.Intrinsics.Vector128{System.UInt16}@,System.Runtime.Intrinsics.Vector128{System.UInt16}@,System.Runtime.Intrinsics.Vector128{System.UInt16}@)">
   YShuffleInsert_Args(Vector128&lt;ushort&gt;, out Vector128&lt;ushort&gt;, out Vector128&lt;ushort&gt;, out Vector128&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L867"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L869"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -319,7 +319,7 @@ public static void YShuffleInsert_Args(Vector128&lt;ushort&gt; indices, out Vect
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YShuffleInsert_Args_System_Runtime_Intrinsics_Vector128_System_Int32__System_Runtime_Intrinsics_Vector128_System_Int32___System_Runtime_Intrinsics_Vector128_System_Int32___System_Runtime_Intrinsics_Vector128_System_Int32___" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YShuffleInsert_Args(System.Runtime.Intrinsics.Vector128{System.Int32},System.Runtime.Intrinsics.Vector128{System.Int32}@,System.Runtime.Intrinsics.Vector128{System.Int32}@,System.Runtime.Intrinsics.Vector128{System.Int32}@)">
   YShuffleInsert_Args(Vector128&lt;int&gt;, out Vector128&lt;int&gt;, out Vector128&lt;int&gt;, out Vector128&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L880"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L882"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -369,7 +369,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YShuffleInsert_Args_System_Runtime_Intrinsics_Vector128_System_UInt32__System_Runtime_Intrinsics_Vector128_System_UInt32___System_Runtime_Intrinsics_Vector128_System_UInt32___System_Runtime_Intrinsics_Vector128_System_UInt32___" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YShuffleInsert_Args(System.Runtime.Intrinsics.Vector128{System.UInt32},System.Runtime.Intrinsics.Vector128{System.UInt32}@,System.Runtime.Intrinsics.Vector128{System.UInt32}@,System.Runtime.Intrinsics.Vector128{System.UInt32}@)">
   YShuffleInsert_Args(Vector128&lt;uint&gt;, out Vector128&lt;uint&gt;, out Vector128&lt;uint&gt;, out Vector128&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L892"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L894"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -420,7 +420,7 @@ public static void YShuffleInsert_Args(Vector128&lt;uint&gt; indices, out Vector
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YShuffleInsert_Args_System_Runtime_Intrinsics_Vector128_System_Int64__System_Runtime_Intrinsics_Vector128_System_Int64___System_Runtime_Intrinsics_Vector128_System_Int64___System_Runtime_Intrinsics_Vector128_System_Int64___" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YShuffleInsert_Args(System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64}@,System.Runtime.Intrinsics.Vector128{System.Int64}@,System.Runtime.Intrinsics.Vector128{System.Int64}@)">
   YShuffleInsert_Args(Vector128&lt;long&gt;, out Vector128&lt;long&gt;, out Vector128&lt;long&gt;, out Vector128&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L905"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L907"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -470,7 +470,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Base_Statics_YShuffleInsert_Args_System_Runtime_Intrinsics_Vector128_System_UInt64__System_Runtime_Intrinsics_Vector128_System_UInt64___System_Runtime_Intrinsics_Vector128_System_UInt64___System_Runtime_Intrinsics_Vector128_System_UInt64___" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Base.Statics.YShuffleInsert_Args(System.Runtime.Intrinsics.Vector128{System.UInt64},System.Runtime.Intrinsics.Vector128{System.UInt64}@,System.Runtime.Intrinsics.Vector128{System.UInt64}@,System.Runtime.Intrinsics.Vector128{System.UInt64}@)">
   YShuffleInsert_Args(Vector128&lt;ulong&gt;, out Vector128&lt;ulong&gt;, out Vector128&lt;ulong&gt;, out Vector128&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L917"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L919"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -520,7 +520,7 @@ public static void YShuffleInsert_Args(Vector128&lt;ulong&gt; indices, out Vecto
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L830" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128Base.YS.cs/#L832" class="edit-link">Edit this page</a>
         </div>
 
 

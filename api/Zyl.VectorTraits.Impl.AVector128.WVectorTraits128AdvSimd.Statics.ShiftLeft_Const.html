@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_ShiftLeft_Const_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.ShiftLeft_Const*" class="text-break">
-Method ShiftLeft_Const  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L909"><i class="bi bi-code-slash"></i></a>
+Method ShiftLeft_Const  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L916"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ShiftLeft_Const  <a class="header-action link-secondary" title="View sour
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_ShiftLeft_Const_System_Runtime_Intrinsics_Vector128_System_SByte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.ShiftLeft_Const(System.Runtime.Intrinsics.Vector128{System.SByte},System.Int32)">
   ShiftLeft_Const(Vector128&lt;sbyte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L909"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L916"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount - Const (将向量的每个元素左移指定量 - 常量).
@@ -169,7 +169,7 @@ public static Vector128&lt;sbyte&gt; ShiftLeft_Const(Vector128&lt;sbyte&gt; valu
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_ShiftLeft_Const_System_Runtime_Intrinsics_Vector128_System_Byte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.ShiftLeft_Const(System.Runtime.Intrinsics.Vector128{System.Byte},System.Int32)">
   ShiftLeft_Const(Vector128&lt;byte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L916"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L923"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount - Const (将向量的每个元素左移指定量 - 常量).
@@ -220,7 +220,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_ShiftLeft_Const_System_Runtime_Intrinsics_Vector128_System_Int16__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.ShiftLeft_Const(System.Runtime.Intrinsics.Vector128{System.Int16},System.Int32)">
   ShiftLeft_Const(Vector128&lt;short&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L922"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L929"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount - Const (将向量的每个元素左移指定量 - 常量).
@@ -271,7 +271,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_ShiftLeft_Const_System_Runtime_Intrinsics_Vector128_System_UInt16__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.ShiftLeft_Const(System.Runtime.Intrinsics.Vector128{System.UInt16},System.Int32)">
   ShiftLeft_Const(Vector128&lt;ushort&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L928"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L935"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount - Const (将向量的每个元素左移指定量 - 常量).
@@ -323,7 +323,7 @@ public static Vector128&lt;ushort&gt; ShiftLeft_Const(Vector128&lt;ushort&gt; va
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_ShiftLeft_Const_System_Runtime_Intrinsics_Vector128_System_Int32__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.ShiftLeft_Const(System.Runtime.Intrinsics.Vector128{System.Int32},System.Int32)">
   ShiftLeft_Const(Vector128&lt;int&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L935"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L942"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount - Const (将向量的每个元素左移指定量 - 常量).
@@ -374,7 +374,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_ShiftLeft_Const_System_Runtime_Intrinsics_Vector128_System_UInt32__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.ShiftLeft_Const(System.Runtime.Intrinsics.Vector128{System.UInt32},System.Int32)">
   ShiftLeft_Const(Vector128&lt;uint&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L941"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L948"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount - Const (将向量的每个元素左移指定量 - 常量).
@@ -426,7 +426,7 @@ public static Vector128&lt;uint&gt; ShiftLeft_Const(Vector128&lt;uint&gt; value,
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_ShiftLeft_Const_System_Runtime_Intrinsics_Vector128_System_Int64__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.ShiftLeft_Const(System.Runtime.Intrinsics.Vector128{System.Int64},System.Int32)">
   ShiftLeft_Const(Vector128&lt;long&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L948"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L955"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount - Const (将向量的每个元素左移指定量 - 常量).
@@ -477,7 +477,7 @@ Mnemonic: <code>rt[i] := value[i] &lt;&lt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Impl_AVector128_WVectorTraits128AdvSimd_Statics_ShiftLeft_Const_System_Runtime_Intrinsics_Vector128_System_UInt64__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128AdvSimd.Statics.ShiftLeft_Const(System.Runtime.Intrinsics.Vector128{System.UInt64},System.Int32)">
   ShiftLeft_Const(Vector128&lt;ulong&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L954"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L961"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts each element of a vector left by the specified amount - Const (将向量的每个元素左移指定量 - 常量).
@@ -528,7 +528,7 @@ public static Vector128&lt;ulong&gt; ShiftLeft_Const(Vector128&lt;ulong&gt; valu
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L909" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector128/WVectorTraits128AdvSimd.cs/#L916" class="edit-link">Edit this page</a>
         </div>
 
 

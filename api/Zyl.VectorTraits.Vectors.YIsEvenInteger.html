@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger*" class="text-break">
-Method YIsEvenInteger  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L355"><i class="bi bi-code-slash"></i></a>
+Method YIsEvenInteger  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4104"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YIsEvenInteger  <a class="header-action link-secondary" title="View sourc
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_System_Numerics_Vector_System_Single__" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger(System.Numerics.Vector{System.Single})">
   YIsEvenInteger(Vector&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4104"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).
@@ -164,7 +164,7 @@ Mnemonic: <code>rt[i] := to_mask(isEvenInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_System_Numerics_Vector_System_Double__" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger(System.Numerics.Vector{System.Double})">
   YIsEvenInteger(Vector&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4119"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).
@@ -212,7 +212,7 @@ Mnemonic: <code>rt[i] := to_mask(isEvenInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger(System.Numerics.Vector{System.SByte})">
   YIsEvenInteger(Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L375"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4134"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).
@@ -261,7 +261,7 @@ public static Vector&lt;sbyte&gt; YIsEvenInteger(Vector&lt;sbyte&gt; value)</cod
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger(System.Numerics.Vector{System.Byte})">
   YIsEvenInteger(Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4150"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).
@@ -309,7 +309,7 @@ Mnemonic: <code>rt[i] := to_mask(isEvenInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger(System.Numerics.Vector{System.Int16})">
   YIsEvenInteger(Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L396"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4165"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).
@@ -357,7 +357,7 @@ Mnemonic: <code>rt[i] := to_mask(isEvenInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger(System.Numerics.Vector{System.UInt16})">
   YIsEvenInteger(Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4180"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).
@@ -406,7 +406,7 @@ public static Vector&lt;ushort&gt; YIsEvenInteger(Vector&lt;ushort&gt; value)</c
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger(System.Numerics.Vector{System.Int32})">
   YIsEvenInteger(Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L417"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4196"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).
@@ -454,7 +454,7 @@ Mnemonic: <code>rt[i] := to_mask(isEvenInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger(System.Numerics.Vector{System.UInt32})">
   YIsEvenInteger(Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L427"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4211"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).
@@ -503,7 +503,7 @@ public static Vector&lt;uint&gt; YIsEvenInteger(Vector&lt;uint&gt; value)</code>
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger(System.Numerics.Vector{System.Int64})">
   YIsEvenInteger(Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L438"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4227"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).
@@ -551,7 +551,7 @@ Mnemonic: <code>rt[i] := to_mask(isEvenInteger(value[i]))</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vectors_YIsEvenInteger_System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Vectors.YIsEvenInteger(System.Numerics.Vector{System.UInt64})">
   YIsEvenInteger(Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4242"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Determines if a element represents an even integral number (确定元素是否为偶数整数).
@@ -599,7 +599,7 @@ public static Vector&lt;ulong&gt; YIsEvenInteger(Vector&lt;ulong&gt; value)</cod
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L355" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L4104" class="edit-link">Edit this page</a>
         </div>
 
 

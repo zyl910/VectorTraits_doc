@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_VectorTextUtil_Write_" data-uid="Zyl.VectorTraits.VectorTextUtil.Write*" class="text-break">
-Method Write  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L512"><i class="bi bi-code-slash"></i></a>
+Method Write  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L589"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Write  <a class="header-action link-secondary" title="View source" href="
 
 <h3 id="Zyl_VectorTraits_VectorTextUtil_Write_System_String_System_IO_TextWriter_System_Nullable_System_Boolean__System_String_System_String_System_String_System_Object___" data-uid="Zyl.VectorTraits.VectorTextUtil.Write(System.String,System.IO.TextWriter,System.Nullable{System.Boolean},System.String,System.String,System.String,System.Object[])">
   Write(string?, TextWriter, bool?, string?, string?, string, params object?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L589"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Writes a formatted string to the text stream, using the same semantics as the <a class="xref" href="Zyl.VectorTraits.VectorTextUtil.Format.html#Zyl_VectorTraits_VectorTextUtil_Format_System_String_System_Object___">Format(string, params object?[])</a> method (使用与 Format 方法相同的语义，将格式化的字符串写入文本流). With these parameters: <code class="paramref">indent</code>, <code class="paramref">noHex</code>, <code class="paramref">lineCommentSeparator</code>, <code class="paramref">lineCommentItemSeparator</code> .</p>
@@ -174,7 +174,7 @@ Method Write  <a class="header-action link-secondary" title="View source" href="
 
 <h3 id="Zyl_VectorTraits_VectorTextUtil_Write_System_String_System_IO_TextWriter_System_String_System_Object___" data-uid="Zyl.VectorTraits.VectorTextUtil.Write(System.String,System.IO.TextWriter,System.String,System.Object[])">
   Write(string?, TextWriter, string, params object?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L537"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L614"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Writes a formatted string to the text stream, using the same semantics as the <a class="xref" href="Zyl.VectorTraits.VectorTextUtil.Format.html#Zyl_VectorTraits_VectorTextUtil_Format_System_String_System_Object___">Format(string, params object?[])</a> method (使用与 Format 方法相同的语义，将格式化的字符串写入文本流). With these parameters: <code class="paramref">indent</code> .</p>
@@ -222,7 +222,7 @@ Method Write  <a class="header-action link-secondary" title="View source" href="
 
 <h3 id="Zyl_VectorTraits_VectorTextUtil_Write_System_IO_TextWriter_System_String_System_Object___" data-uid="Zyl.VectorTraits.VectorTextUtil.Write(System.IO.TextWriter,System.String,System.Object[])">
   Write(TextWriter, string, params object?[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L549"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L626"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Writes a formatted string to the text stream, using the same semantics as the <a class="xref" href="Zyl.VectorTraits.VectorTextUtil.Format.html#Zyl_VectorTraits_VectorTextUtil_Format_System_String_System_Object___">Format(string, params object?[])</a> method (使用与 Format 方法相同的语义，将格式化的字符串写入文本流).</p>
@@ -266,7 +266,7 @@ Method Write  <a class="header-action link-secondary" title="View source" href="
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L512" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/VectorTextUtil.cs/#L589" class="edit-link">Edit this page</a>
         </div>
 
 

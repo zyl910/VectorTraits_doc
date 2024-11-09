@@ -1,0 +1,4564 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Benchmark group - ConvertToDouble </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Benchmark group - ConvertToDouble ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/AVector/ConvertToDouble_Group.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="benchmark-group---converttodouble">Benchmark group - ConvertToDouble</h1>
+
+<p>(<a href="ConvertToDouble.html">← Back</a>)</p>
+<p>Unit of data: Million operations per second. The larger the number, the better the performance.</p>
+<h3 id="x86---amd-ryzen-7-7840h">X86 - AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1138.328</td>
+<td style="text-align: right;">1137.900</td>
+<td style="text-align: right;">1136.919</td>
+<td style="text-align: right;">1133.493</td>
+<td style="text-align: right;">1138.926</td>
+<td style="text-align: right;">1135.301</td>
+<td style="text-align: right;">1139.568</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">1783.739</td>
+<td style="text-align: right;">1666.708</td>
+<td style="text-align: right;">1726.822</td>
+<td style="text-align: right;">1725.295</td>
+<td style="text-align: right;">1672.452</td>
+<td style="text-align: right;">4353.395</td>
+<td style="text-align: right;">4314.428</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">4478.307</td>
+<td style="text-align: right;">4507.281</td>
+<td style="text-align: right;">4498.555</td>
+<td style="text-align: right;">4494.114</td>
+<td style="text-align: right;">4518.671</td>
+<td style="text-align: right;">4497.730</td>
+<td style="text-align: right;">4455.272</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1730.644</td>
+<td style="text-align: right;">1628.077</td>
+<td style="text-align: right;">3311.139</td>
+<td style="text-align: right;">4082.377</td>
+<td style="text-align: right;">4380.002</td>
+<td style="text-align: right;">4362.887</td>
+<td style="text-align: right;">4480.699</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">4477.813</td>
+<td style="text-align: right;">4482.558</td>
+<td style="text-align: right;">4491.106</td>
+<td style="text-align: right;">4512.945</td>
+<td style="text-align: right;">4487.376</td>
+<td style="text-align: right;">4461.216</td>
+<td style="text-align: right;">4466.599</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2197.004</td>
+<td style="text-align: right;">2173.102</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">278.386</td>
+<td style="text-align: right;">277.099</td>
+<td style="text-align: right;">275.836</td>
+<td style="text-align: right;">277.507</td>
+<td style="text-align: right;">273.481</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">278.944</td>
+<td style="text-align: right;">278.289</td>
+<td style="text-align: right;">276.740</td>
+<td style="text-align: right;">2196.144</td>
+<td style="text-align: right;">2185.449</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">278.436</td>
+<td style="text-align: right;">277.525</td>
+<td style="text-align: right;">277.238</td>
+<td style="text-align: right;">2260.615</td>
+<td style="text-align: right;">2261.199</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1720.034</td>
+<td style="text-align: right;">2082.181</td>
+<td style="text-align: right;">2193.677</td>
+<td style="text-align: right;">2193.453</td>
+<td style="text-align: right;">2260.038</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2248.248</td>
+<td style="text-align: right;">2263.122</td>
+<td style="text-align: right;">2270.771</td>
+<td style="text-align: right;">2262.011</td>
+<td style="text-align: right;">2262.247</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4372.025</td>
+<td style="text-align: right;">4277.539</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">509.413</td>
+<td style="text-align: right;">507.167</td>
+<td style="text-align: right;">510.632</td>
+<td style="text-align: right;">508.520</td>
+<td style="text-align: right;">485.632</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">510.183</td>
+<td style="text-align: right;">504.168</td>
+<td style="text-align: right;">509.734</td>
+<td style="text-align: right;">4352.892</td>
+<td style="text-align: right;">4298.224</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">509.788</td>
+<td style="text-align: right;">497.555</td>
+<td style="text-align: right;">509.852</td>
+<td style="text-align: right;">4489.240</td>
+<td style="text-align: right;">4474.760</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3326.829</td>
+<td style="text-align: right;">4096.189</td>
+<td style="text-align: right;">4358.339</td>
+<td style="text-align: right;">4360.025</td>
+<td style="text-align: right;">4319.021</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_HwScalar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1650.213</td>
+<td style="text-align: right;">1626.068</td>
+<td style="text-align: right;">1650.168</td>
+<td style="text-align: right;">1642.647</td>
+<td style="text-align: right;">1578.679</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4456.488</td>
+<td style="text-align: right;">4502.850</td>
+<td style="text-align: right;">4431.773</td>
+<td style="text-align: right;">4468.637</td>
+<td style="text-align: right;">4473.990</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3427.010</td>
+<td style="text-align: right;">4095.964</td>
+<td style="text-align: right;">4351.279</td>
+<td style="text-align: right;">4358.358</td>
+<td style="text-align: right;">4478.929</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4496.869</td>
+<td style="text-align: right;">4493.781</td>
+<td style="text-align: right;">4493.398</td>
+<td style="text-align: right;">4475.541</td>
+<td style="text-align: right;">4455.008</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">872.324</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">869.401</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7647.151</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">341.295</td>
+<td style="text-align: right;">331.915</td>
+<td style="text-align: right;">356.577</td>
+<td style="text-align: right;">367.737</td>
+<td style="text-align: right;">368.594</td>
+<td style="text-align: right;">384.267</td>
+<td style="text-align: right;">1071.323</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">2306.101</td>
+<td style="text-align: right;">2254.436</td>
+<td style="text-align: right;">2256.057</td>
+<td style="text-align: right;">2265.902</td>
+<td style="text-align: right;">2263.979</td>
+<td style="text-align: right;">4328.772</td>
+<td style="text-align: right;">4304.313</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">4489.217</td>
+<td style="text-align: right;">4514.439</td>
+<td style="text-align: right;">4499.029</td>
+<td style="text-align: right;">4506.452</td>
+<td style="text-align: right;">4469.219</td>
+<td style="text-align: right;">4472.157</td>
+<td style="text-align: right;">4482.896</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">2344.096</td>
+<td style="text-align: right;">2261.942</td>
+<td style="text-align: right;">3339.149</td>
+<td style="text-align: right;">4132.420</td>
+<td style="text-align: right;">4352.220</td>
+<td style="text-align: right;">4384.902</td>
+<td style="text-align: right;">4492.807</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">4478.226</td>
+<td style="text-align: right;">4510.294</td>
+<td style="text-align: right;">4482.461</td>
+<td style="text-align: right;">4491.039</td>
+<td style="text-align: right;">4499.255</td>
+<td style="text-align: right;">4479.913</td>
+<td style="text-align: right;">4477.748</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2202.955</td>
+<td style="text-align: right;">2167.744</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">247.759</td>
+<td style="text-align: right;">242.334</td>
+<td style="text-align: right;">247.768</td>
+<td style="text-align: right;">246.510</td>
+<td style="text-align: right;">264.096</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">240.335</td>
+<td style="text-align: right;">242.055</td>
+<td style="text-align: right;">244.653</td>
+<td style="text-align: right;">2198.103</td>
+<td style="text-align: right;">2173.747</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">247.264</td>
+<td style="text-align: right;">241.971</td>
+<td style="text-align: right;">246.630</td>
+<td style="text-align: right;">2260.749</td>
+<td style="text-align: right;">2259.417</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1678.198</td>
+<td style="text-align: right;">2074.959</td>
+<td style="text-align: right;">2187.089</td>
+<td style="text-align: right;">2185.758</td>
+<td style="text-align: right;">2258.444</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2256.730</td>
+<td style="text-align: right;">2265.560</td>
+<td style="text-align: right;">2259.172</td>
+<td style="text-align: right;">2265.459</td>
+<td style="text-align: right;">2263.224</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4354.259</td>
+<td style="text-align: right;">4255.747</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">280.106</td>
+<td style="text-align: right;">281.051</td>
+<td style="text-align: right;">282.909</td>
+<td style="text-align: right;">276.268</td>
+<td style="text-align: right;">477.503</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">276.133</td>
+<td style="text-align: right;">278.286</td>
+<td style="text-align: right;">282.128</td>
+<td style="text-align: right;">4368.641</td>
+<td style="text-align: right;">4298.339</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">280.833</td>
+<td style="text-align: right;">282.518</td>
+<td style="text-align: right;">283.756</td>
+<td style="text-align: right;">4510.324</td>
+<td style="text-align: right;">4442.575</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Avx2_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3353.687</td>
+<td style="text-align: right;">4216.202</td>
+<td style="text-align: right;">4352.187</td>
+<td style="text-align: right;">4295.434</td>
+<td style="text-align: right;">4287.501</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4516.192</td>
+<td style="text-align: right;">4502.041</td>
+<td style="text-align: right;">4486.005</td>
+<td style="text-align: right;">4477.522</td>
+<td style="text-align: right;">4491.225</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3293.701</td>
+<td style="text-align: right;">4151.561</td>
+<td style="text-align: right;">4362.896</td>
+<td style="text-align: right;">4366.718</td>
+<td style="text-align: right;">4477.267</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4494.216</td>
+<td style="text-align: right;">4484.841</td>
+<td style="text-align: right;">4498.954</td>
+<td style="text-align: right;">4491.777</td>
+<td style="text-align: right;">4467.321</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">873.102</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">867.217</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7753.940</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1638.626</td>
+<td style="text-align: right;">1595.892</td>
+<td style="text-align: right;">1600.449</td>
+<td style="text-align: right;">1598.075</td>
+<td style="text-align: right;">1603.518</td>
+<td style="text-align: right;">1617.700</td>
+<td style="text-align: right;">1623.235</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">1754.547</td>
+<td style="text-align: right;">1633.239</td>
+<td style="text-align: right;">1670.933</td>
+<td style="text-align: right;">1630.275</td>
+<td style="text-align: right;">1688.237</td>
+<td style="text-align: right;">516.277</td>
+<td style="text-align: right;">517.278</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">2017.237</td>
+<td style="text-align: right;">1762.935</td>
+<td style="text-align: right;">2100.918</td>
+<td style="text-align: right;">4372.285</td>
+<td style="text-align: right;">4267.413</td>
+<td style="text-align: right;">4181.004</td>
+<td style="text-align: right;">3962.523</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52RoundToEven</td>
+<td style="text-align: right;">7657.413</td>
+<td style="text-align: right;">7011.856</td>
+<td style="text-align: right;">7158.505</td>
+<td style="text-align: right;">6815.281</td>
+<td style="text-align: right;">6886.875</td>
+<td style="text-align: right;">7673.773</td>
+<td style="text-align: right;">5518.297</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1728.372</td>
+<td style="text-align: right;">1635.181</td>
+<td style="text-align: right;">1851.438</td>
+<td style="text-align: right;">2201.093</td>
+<td style="text-align: right;">2453.610</td>
+<td style="text-align: right;">2507.194</td>
+<td style="text-align: right;">8943.808</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">1786.787</td>
+<td style="text-align: right;">1677.086</td>
+<td style="text-align: right;">5944.655</td>
+<td style="text-align: right;">6502.462</td>
+<td style="text-align: right;">6917.255</td>
+<td style="text-align: right;">6094.533</td>
+<td style="text-align: right;">8672.266</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52RoundToEven</td>
+<td style="text-align: right;">7713.485</td>
+<td style="text-align: right;">6934.704</td>
+<td style="text-align: right;">6578.539</td>
+<td style="text-align: right;">6794.903</td>
+<td style="text-align: right;">7365.267</td>
+<td style="text-align: right;">6120.616</td>
+<td style="text-align: right;">9009.652</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">287.623</td>
+<td style="text-align: right;">262.269</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">290.794</td>
+<td style="text-align: right;">288.413</td>
+<td style="text-align: right;">289.465</td>
+<td style="text-align: right;">291.137</td>
+<td style="text-align: right;">284.169</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">290.432</td>
+<td style="text-align: right;">289.206</td>
+<td style="text-align: right;">289.177</td>
+<td style="text-align: right;">286.709</td>
+<td style="text-align: right;">261.584</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">291.005</td>
+<td style="text-align: right;">288.762</td>
+<td style="text-align: right;">287.868</td>
+<td style="text-align: right;">2305.564</td>
+<td style="text-align: right;">2119.720</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">916.785</td>
+<td style="text-align: right;">1110.483</td>
+<td style="text-align: right;">1231.606</td>
+<td style="text-align: right;">1290.529</td>
+<td style="text-align: right;">4763.183</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3296.085</td>
+<td style="text-align: right;">3419.467</td>
+<td style="text-align: right;">3538.835</td>
+<td style="text-align: right;">3714.017</td>
+<td style="text-align: right;">4780.778</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52RoundToEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3503.241</td>
+<td style="text-align: right;">3927.285</td>
+<td style="text-align: right;">3836.373</td>
+<td style="text-align: right;">3691.546</td>
+<td style="text-align: right;">4763.328</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">543.910</td>
+<td style="text-align: right;">273.433</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">529.174</td>
+<td style="text-align: right;">521.848</td>
+<td style="text-align: right;">527.797</td>
+<td style="text-align: right;">528.550</td>
+<td style="text-align: right;">497.872</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">530.507</td>
+<td style="text-align: right;">522.398</td>
+<td style="text-align: right;">527.404</td>
+<td style="text-align: right;">542.758</td>
+<td style="text-align: right;">273.868</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">528.208</td>
+<td style="text-align: right;">518.673</td>
+<td style="text-align: right;">527.709</td>
+<td style="text-align: right;">4166.561</td>
+<td style="text-align: right;">3933.894</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_HwScalar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1582.852</td>
+<td style="text-align: right;">1550.655</td>
+<td style="text-align: right;">1615.349</td>
+<td style="text-align: right;">1588.051</td>
+<td style="text-align: right;">1661.119</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2148.678</td>
+<td style="text-align: right;">2545.404</td>
+<td style="text-align: right;">2873.944</td>
+<td style="text-align: right;">2963.079</td>
+<td style="text-align: right;">2620.609</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVarFix</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1908.552</td>
+<td style="text-align: right;">2322.051</td>
+<td style="text-align: right;">2405.989</td>
+<td style="text-align: right;">2576.074</td>
+<td style="text-align: right;">2313.218</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6011.455</td>
+<td style="text-align: right;">6422.094</td>
+<td style="text-align: right;">6528.405</td>
+<td style="text-align: right;">6204.789</td>
+<td style="text-align: right;">8894.188</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1875.265</td>
+<td style="text-align: right;">2126.255</td>
+<td style="text-align: right;">2467.732</td>
+<td style="text-align: right;">2514.294</td>
+<td style="text-align: right;">8875.725</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6065.159</td>
+<td style="text-align: right;">6471.331</td>
+<td style="text-align: right;">6636.340</td>
+<td style="text-align: right;">6035.781</td>
+<td style="text-align: right;">8866.368</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52RoundToEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6656.631</td>
+<td style="text-align: right;">7181.377</td>
+<td style="text-align: right;">7512.979</td>
+<td style="text-align: right;">6257.690</td>
+<td style="text-align: right;">8771.898</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">177.618</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">178.692</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9713.809</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">269.005</td>
+<td style="text-align: right;">270.116</td>
+<td style="text-align: right;">241.378</td>
+<td style="text-align: right;">265.687</td>
+<td style="text-align: right;">255.508</td>
+<td style="text-align: right;">265.267</td>
+<td style="text-align: right;">264.980</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">170.190</td>
+<td style="text-align: right;">159.727</td>
+<td style="text-align: right;">164.376</td>
+<td style="text-align: right;">190.550</td>
+<td style="text-align: right;">191.986</td>
+<td style="text-align: right;">240.317</td>
+<td style="text-align: right;">237.975</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">1871.772</td>
+<td style="text-align: right;">1826.783</td>
+<td style="text-align: right;">2113.133</td>
+<td style="text-align: right;">4108.526</td>
+<td style="text-align: right;">4225.794</td>
+<td style="text-align: right;">4211.328</td>
+<td style="text-align: right;">3935.655</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52RoundToEven</td>
+<td style="text-align: right;">6970.436</td>
+<td style="text-align: right;">6822.432</td>
+<td style="text-align: right;">6822.259</td>
+<td style="text-align: right;">7816.186</td>
+<td style="text-align: right;">7639.011</td>
+<td style="text-align: right;">7786.992</td>
+<td style="text-align: right;">6019.378</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">167.350</td>
+<td style="text-align: right;">167.450</td>
+<td style="text-align: right;">2887.840</td>
+<td style="text-align: right;">3513.113</td>
+<td style="text-align: right;">3493.482</td>
+<td style="text-align: right;">3640.510</td>
+<td style="text-align: right;">8877.831</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">1964.761</td>
+<td style="text-align: right;">1755.834</td>
+<td style="text-align: right;">6025.482</td>
+<td style="text-align: right;">6826.889</td>
+<td style="text-align: right;">7169.392</td>
+<td style="text-align: right;">6166.445</td>
+<td style="text-align: right;">8829.251</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52RoundToEven</td>
+<td style="text-align: right;">7735.064</td>
+<td style="text-align: right;">7283.890</td>
+<td style="text-align: right;">6575.867</td>
+<td style="text-align: right;">7715.611</td>
+<td style="text-align: right;">7963.862</td>
+<td style="text-align: right;">6365.631</td>
+<td style="text-align: right;">8985.633</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">224.787</td>
+<td style="text-align: right;">174.899</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">221.612</td>
+<td style="text-align: right;">226.356</td>
+<td style="text-align: right;">221.310</td>
+<td style="text-align: right;">225.864</td>
+<td style="text-align: right;">214.776</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">225.827</td>
+<td style="text-align: right;">221.153</td>
+<td style="text-align: right;">224.639</td>
+<td style="text-align: right;">224.582</td>
+<td style="text-align: right;">175.932</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">221.406</td>
+<td style="text-align: right;">223.801</td>
+<td style="text-align: right;">219.039</td>
+<td style="text-align: right;">2222.792</td>
+<td style="text-align: right;">2210.661</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1499.256</td>
+<td style="text-align: right;">1647.829</td>
+<td style="text-align: right;">1795.908</td>
+<td style="text-align: right;">1881.938</td>
+<td style="text-align: right;">4687.445</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3170.567</td>
+<td style="text-align: right;">3621.163</td>
+<td style="text-align: right;">3391.479</td>
+<td style="text-align: right;">3387.049</td>
+<td style="text-align: right;">4884.330</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52RoundToEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3643.508</td>
+<td style="text-align: right;">3912.023</td>
+<td style="text-align: right;">3785.339</td>
+<td style="text-align: right;">3505.374</td>
+<td style="text-align: right;">4857.641</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">241.103</td>
+<td style="text-align: right;">174.817</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">238.264</td>
+<td style="text-align: right;">234.366</td>
+<td style="text-align: right;">234.507</td>
+<td style="text-align: right;">240.897</td>
+<td style="text-align: right;">227.237</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">237.887</td>
+<td style="text-align: right;">236.329</td>
+<td style="text-align: right;">230.987</td>
+<td style="text-align: right;">241.971</td>
+<td style="text-align: right;">173.461</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">236.974</td>
+<td style="text-align: right;">235.774</td>
+<td style="text-align: right;">229.505</td>
+<td style="text-align: right;">4109.712</td>
+<td style="text-align: right;">3951.041</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2985.914</td>
+<td style="text-align: right;">3513.235</td>
+<td style="text-align: right;">3544.814</td>
+<td style="text-align: right;">3556.478</td>
+<td style="text-align: right;">3342.598</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6035.207</td>
+<td style="text-align: right;">6656.904</td>
+<td style="text-align: right;">6796.506</td>
+<td style="text-align: right;">6003.864</td>
+<td style="text-align: right;">8879.996</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2868.868</td>
+<td style="text-align: right;">3419.469</td>
+<td style="text-align: right;">3575.332</td>
+<td style="text-align: right;">3643.262</td>
+<td style="text-align: right;">8784.506</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6077.850</td>
+<td style="text-align: right;">6607.416</td>
+<td style="text-align: right;">7111.012</td>
+<td style="text-align: right;">6250.955</td>
+<td style="text-align: right;">8808.130</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52RoundToEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6627.138</td>
+<td style="text-align: right;">7684.661</td>
+<td style="text-align: right;">7774.516</td>
+<td style="text-align: right;">6418.539</td>
+<td style="text-align: right;">8805.704</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">130.167</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">129.746</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9744.563</td>
+</tr>
+</tbody>
+</table>
+<h3 id="x86---intel-core-i5-8250u">X86 - Intel Core i5-8250U</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">714.217</td>
+<td style="text-align: right;">845.692</td>
+<td style="text-align: right;">844.201</td>
+<td style="text-align: right;">845.977</td>
+<td style="text-align: right;">844.954</td>
+<td style="text-align: right;">845.009</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">1069.087</td>
+<td style="text-align: right;">1343.119</td>
+<td style="text-align: right;">1342.139</td>
+<td style="text-align: right;">1341.178</td>
+<td style="text-align: right;">1343.349</td>
+<td style="text-align: right;">3259.472</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">2847.061</td>
+<td style="text-align: right;">3364.195</td>
+<td style="text-align: right;">3364.185</td>
+<td style="text-align: right;">3367.463</td>
+<td style="text-align: right;">3367.645</td>
+<td style="text-align: right;">3362.752</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1120.710</td>
+<td style="text-align: right;">1341.000</td>
+<td style="text-align: right;">2712.295</td>
+<td style="text-align: right;">3034.230</td>
+<td style="text-align: right;">3289.890</td>
+<td style="text-align: right;">3226.141</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">1103.745</td>
+<td style="text-align: right;">1332.506</td>
+<td style="text-align: right;">3356.046</td>
+<td style="text-align: right;">3370.674</td>
+<td style="text-align: right;">3372.362</td>
+<td style="text-align: right;">3241.084</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1687.774</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">293.738</td>
+<td style="text-align: right;">306.543</td>
+<td style="text-align: right;">305.637</td>
+<td style="text-align: right;">307.153</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">294.116</td>
+<td style="text-align: right;">306.563</td>
+<td style="text-align: right;">306.154</td>
+<td style="text-align: right;">1686.513</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">294.119</td>
+<td style="text-align: right;">306.229</td>
+<td style="text-align: right;">305.961</td>
+<td style="text-align: right;">1684.287</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1570.683</td>
+<td style="text-align: right;">1683.303</td>
+<td style="text-align: right;">1687.923</td>
+<td style="text-align: right;">1683.957</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1688.289</td>
+<td style="text-align: right;">1688.336</td>
+<td style="text-align: right;">1689.682</td>
+<td style="text-align: right;">1686.228</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3252.412</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">519.638</td>
+<td style="text-align: right;">498.050</td>
+<td style="text-align: right;">244.115</td>
+<td style="text-align: right;">540.854</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">519.536</td>
+<td style="text-align: right;">498.267</td>
+<td style="text-align: right;">244.945</td>
+<td style="text-align: right;">3212.416</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">517.258</td>
+<td style="text-align: right;">498.273</td>
+<td style="text-align: right;">244.828</td>
+<td style="text-align: right;">3365.257</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2737.511</td>
+<td style="text-align: right;">3013.489</td>
+<td style="text-align: right;">3285.401</td>
+<td style="text-align: right;">3251.798</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_HwScalar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1341.411</td>
+<td style="text-align: right;">1342.566</td>
+<td style="text-align: right;">1343.861</td>
+<td style="text-align: right;">1342.899</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3357.796</td>
+<td style="text-align: right;">3365.467</td>
+<td style="text-align: right;">3371.826</td>
+<td style="text-align: right;">2483.589</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2731.855</td>
+<td style="text-align: right;">3032.861</td>
+<td style="text-align: right;">3282.494</td>
+<td style="text-align: right;">3103.940</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3329.274</td>
+<td style="text-align: right;">3363.078</td>
+<td style="text-align: right;">3366.373</td>
+<td style="text-align: right;">3109.072</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">322.727</td>
+<td style="text-align: right;">377.235</td>
+<td style="text-align: right;">375.934</td>
+<td style="text-align: right;">374.606</td>
+<td style="text-align: right;">374.114</td>
+<td style="text-align: right;">376.168</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">2036.146</td>
+<td style="text-align: right;">2556.260</td>
+<td style="text-align: right;">2349.708</td>
+<td style="text-align: right;">2538.418</td>
+<td style="text-align: right;">2565.161</td>
+<td style="text-align: right;">1938.229</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">2867.041</td>
+<td style="text-align: right;">3370.946</td>
+<td style="text-align: right;">3374.604</td>
+<td style="text-align: right;">3364.609</td>
+<td style="text-align: right;">3368.743</td>
+<td style="text-align: right;">3244.167</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1967.466</td>
+<td style="text-align: right;">2544.092</td>
+<td style="text-align: right;">2729.668</td>
+<td style="text-align: right;">3365.159</td>
+<td style="text-align: right;">3367.071</td>
+<td style="text-align: right;">3056.233</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">1607.021</td>
+<td style="text-align: right;">1927.839</td>
+<td style="text-align: right;">3271.381</td>
+<td style="text-align: right;">3365.471</td>
+<td style="text-align: right;">3371.469</td>
+<td style="text-align: right;">3266.012</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1686.821</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">231.362</td>
+<td style="text-align: right;">283.145</td>
+<td style="text-align: right;">283.142</td>
+<td style="text-align: right;">286.549</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">240.265</td>
+<td style="text-align: right;">283.429</td>
+<td style="text-align: right;">282.855</td>
+<td style="text-align: right;">1679.199</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">254.189</td>
+<td style="text-align: right;">282.990</td>
+<td style="text-align: right;">283.017</td>
+<td style="text-align: right;">1689.381</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1583.074</td>
+<td style="text-align: right;">1686.269</td>
+<td style="text-align: right;">1686.936</td>
+<td style="text-align: right;">1687.610</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1689.269</td>
+<td style="text-align: right;">1684.347</td>
+<td style="text-align: right;">1689.726</td>
+<td style="text-align: right;">1685.814</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3256.912</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">300.193</td>
+<td style="text-align: right;">316.367</td>
+<td style="text-align: right;">231.238</td>
+<td style="text-align: right;">317.184</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">298.250</td>
+<td style="text-align: right;">317.538</td>
+<td style="text-align: right;">231.201</td>
+<td style="text-align: right;">3190.223</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">300.088</td>
+<td style="text-align: right;">318.693</td>
+<td style="text-align: right;">230.526</td>
+<td style="text-align: right;">3360.745</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Avx2_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2712.725</td>
+<td style="text-align: right;">3360.144</td>
+<td style="text-align: right;">3365.877</td>
+<td style="text-align: right;">3229.109</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3361.202</td>
+<td style="text-align: right;">3361.765</td>
+<td style="text-align: right;">3371.967</td>
+<td style="text-align: right;">3336.262</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2696.696</td>
+<td style="text-align: right;">3354.670</td>
+<td style="text-align: right;">3360.322</td>
+<td style="text-align: right;">2847.721</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3355.055</td>
+<td style="text-align: right;">3372.283</td>
+<td style="text-align: right;">3369.292</td>
+<td style="text-align: right;">3258.582</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1054.250</td>
+<td style="text-align: right;">1658.661</td>
+<td style="text-align: right;">1655.768</td>
+<td style="text-align: right;">1657.406</td>
+<td style="text-align: right;">1658.672</td>
+<td style="text-align: right;">1688.567</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">974.012</td>
+<td style="text-align: right;">1324.984</td>
+<td style="text-align: right;">1328.972</td>
+<td style="text-align: right;">1328.933</td>
+<td style="text-align: right;">1310.982</td>
+<td style="text-align: right;">601.633</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">1032.931</td>
+<td style="text-align: right;">1551.359</td>
+<td style="text-align: right;">1714.504</td>
+<td style="text-align: right;">2660.723</td>
+<td style="text-align: right;">2510.361</td>
+<td style="text-align: right;">2519.799</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52RoundToEven</td>
+<td style="text-align: right;">2995.845</td>
+<td style="text-align: right;">3676.266</td>
+<td style="text-align: right;">3700.541</td>
+<td style="text-align: right;">3673.417</td>
+<td style="text-align: right;">4788.926</td>
+<td style="text-align: right;">4833.489</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1060.334</td>
+<td style="text-align: right;">1321.285</td>
+<td style="text-align: right;">1449.290</td>
+<td style="text-align: right;">1617.708</td>
+<td style="text-align: right;">1637.423</td>
+<td style="text-align: right;">1677.416</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">1042.162</td>
+<td style="text-align: right;">1322.172</td>
+<td style="text-align: right;">3385.336</td>
+<td style="text-align: right;">3535.908</td>
+<td style="text-align: right;">3662.527</td>
+<td style="text-align: right;">3524.158</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52RoundToEven</td>
+<td style="text-align: right;">3320.321</td>
+<td style="text-align: right;">3701.596</td>
+<td style="text-align: right;">3663.925</td>
+<td style="text-align: right;">3703.357</td>
+<td style="text-align: right;">4926.614</td>
+<td style="text-align: right;">4500.594</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">343.013</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">314.260</td>
+<td style="text-align: right;">324.763</td>
+<td style="text-align: right;">326.141</td>
+<td style="text-align: right;">328.030</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">314.640</td>
+<td style="text-align: right;">324.752</td>
+<td style="text-align: right;">323.862</td>
+<td style="text-align: right;">342.343</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">314.300</td>
+<td style="text-align: right;">325.139</td>
+<td style="text-align: right;">325.697</td>
+<td style="text-align: right;">1878.978</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">749.001</td>
+<td style="text-align: right;">840.886</td>
+<td style="text-align: right;">825.764</td>
+<td style="text-align: right;">942.576</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2138.218</td>
+<td style="text-align: right;">2193.217</td>
+<td style="text-align: right;">2206.149</td>
+<td style="text-align: right;">2383.121</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52RoundToEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2244.453</td>
+<td style="text-align: right;">2695.710</td>
+<td style="text-align: right;">2883.229</td>
+<td style="text-align: right;">2724.293</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">600.151</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">559.664</td>
+<td style="text-align: right;">527.109</td>
+<td style="text-align: right;">251.346</td>
+<td style="text-align: right;">574.576</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">557.984</td>
+<td style="text-align: right;">533.109</td>
+<td style="text-align: right;">251.276</td>
+<td style="text-align: right;">599.821</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">548.320</td>
+<td style="text-align: right;">533.012</td>
+<td style="text-align: right;">251.662</td>
+<td style="text-align: right;">2708.575</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_HwScalar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1344.431</td>
+<td style="text-align: right;">1335.218</td>
+<td style="text-align: right;">1343.364</td>
+<td style="text-align: right;">1344.392</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1786.405</td>
+<td style="text-align: right;">1839.951</td>
+<td style="text-align: right;">1830.518</td>
+<td style="text-align: right;">1786.333</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVarFix</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1462.548</td>
+<td style="text-align: right;">1559.028</td>
+<td style="text-align: right;">1624.847</td>
+<td style="text-align: right;">1677.217</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3383.125</td>
+<td style="text-align: right;">3533.645</td>
+<td style="text-align: right;">3661.482</td>
+<td style="text-align: right;">3705.817</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1460.074</td>
+<td style="text-align: right;">1623.511</td>
+<td style="text-align: right;">1614.229</td>
+<td style="text-align: right;">1714.996</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3378.792</td>
+<td style="text-align: right;">3541.993</td>
+<td style="text-align: right;">3696.190</td>
+<td style="text-align: right;">3729.287</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52RoundToEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3692.122</td>
+<td style="text-align: right;">3707.898</td>
+<td style="text-align: right;">4908.634</td>
+<td style="text-align: right;">4749.525</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">205.407</td>
+<td style="text-align: right;">282.048</td>
+<td style="text-align: right;">301.216</td>
+<td style="text-align: right;">284.554</td>
+<td style="text-align: right;">286.658</td>
+<td style="text-align: right;">288.546</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">140.489</td>
+<td style="text-align: right;">187.497</td>
+<td style="text-align: right;">180.540</td>
+<td style="text-align: right;">205.761</td>
+<td style="text-align: right;">220.689</td>
+<td style="text-align: right;">261.833</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">1083.559</td>
+<td style="text-align: right;">1616.455</td>
+<td style="text-align: right;">1720.754</td>
+<td style="text-align: right;">2930.959</td>
+<td style="text-align: right;">2662.751</td>
+<td style="text-align: right;">2473.041</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52RoundToEven</td>
+<td style="text-align: right;">2599.294</td>
+<td style="text-align: right;">4977.686</td>
+<td style="text-align: right;">3758.543</td>
+<td style="text-align: right;">5101.545</td>
+<td style="text-align: right;">5085.319</td>
+<td style="text-align: right;">4822.031</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">137.657</td>
+<td style="text-align: right;">188.202</td>
+<td style="text-align: right;">2044.114</td>
+<td style="text-align: right;">2605.814</td>
+<td style="text-align: right;">2606.017</td>
+<td style="text-align: right;">2343.486</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">1133.001</td>
+<td style="text-align: right;">1617.783</td>
+<td style="text-align: right;">3383.054</td>
+<td style="text-align: right;">3974.415</td>
+<td style="text-align: right;">3911.706</td>
+<td style="text-align: right;">3554.745</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52RoundToEven</td>
+<td style="text-align: right;">2834.962</td>
+<td style="text-align: right;">4607.170</td>
+<td style="text-align: right;">3750.896</td>
+<td style="text-align: right;">5124.713</td>
+<td style="text-align: right;">4877.922</td>
+<td style="text-align: right;">4818.579</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">238.666</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">249.890</td>
+<td style="text-align: right;">236.623</td>
+<td style="text-align: right;">242.004</td>
+<td style="text-align: right;">241.047</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">247.156</td>
+<td style="text-align: right;">246.721</td>
+<td style="text-align: right;">251.975</td>
+<td style="text-align: right;">242.631</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">248.197</td>
+<td style="text-align: right;">237.764</td>
+<td style="text-align: right;">243.027</td>
+<td style="text-align: right;">1770.881</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1121.648</td>
+<td style="text-align: right;">1348.552</td>
+<td style="text-align: right;">1343.466</td>
+<td style="text-align: right;">1322.616</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2223.242</td>
+<td style="text-align: right;">2372.976</td>
+<td style="text-align: right;">2380.127</td>
+<td style="text-align: right;">2220.273</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52RoundToEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2724.063</td>
+<td style="text-align: right;">2951.292</td>
+<td style="text-align: right;">3010.790</td>
+<td style="text-align: right;">2737.007</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">259.494</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">263.071</td>
+<td style="text-align: right;">260.760</td>
+<td style="text-align: right;">267.444</td>
+<td style="text-align: right;">256.998</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">262.911</td>
+<td style="text-align: right;">263.428</td>
+<td style="text-align: right;">267.572</td>
+<td style="text-align: right;">259.239</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">262.918</td>
+<td style="text-align: right;">259.770</td>
+<td style="text-align: right;">267.514</td>
+<td style="text-align: right;">2746.415</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1991.893</td>
+<td style="text-align: right;">2482.375</td>
+<td style="text-align: right;">2576.156</td>
+<td style="text-align: right;">2242.477</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3180.236</td>
+<td style="text-align: right;">3969.420</td>
+<td style="text-align: right;">4010.195</td>
+<td style="text-align: right;">3271.825</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2031.217</td>
+<td style="text-align: right;">2603.524</td>
+<td style="text-align: right;">2606.011</td>
+<td style="text-align: right;">2277.153</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3395.744</td>
+<td style="text-align: right;">3972.419</td>
+<td style="text-align: right;">4024.953</td>
+<td style="text-align: right;">3494.704</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52RoundToEven</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3750.985</td>
+<td style="text-align: right;">4759.686</td>
+<td style="text-align: right;">5287.314</td>
+<td style="text-align: right;">4504.691</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---apple-m2">Arm - Apple M2</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1135.416</td>
+<td style="text-align: right;">1134.064</td>
+<td style="text-align: right;">1134.070</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">2331.370</td>
+<td style="text-align: right;">2268.603</td>
+<td style="text-align: right;">2332.061</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">2266.688</td>
+<td style="text-align: right;">2267.970</td>
+<td style="text-align: right;">2267.912</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">2267.406</td>
+<td style="text-align: right;">2268.344</td>
+<td style="text-align: right;">2331.625</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">2266.519</td>
+<td style="text-align: right;">2267.670</td>
+<td style="text-align: right;">2332.283</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2268.206</td>
+<td style="text-align: right;">2332.436</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">1875.354</td>
+<td style="text-align: right;">1899.437</td>
+<td style="text-align: right;">1895.197</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">1868.588</td>
+<td style="text-align: right;">2268.238</td>
+<td style="text-align: right;">2332.222</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">1870.054</td>
+<td style="text-align: right;">2267.397</td>
+<td style="text-align: right;">2268.528</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;">2265.654</td>
+<td style="text-align: right;">2268.232</td>
+<td style="text-align: right;">2332.153</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;">2265.626</td>
+<td style="text-align: right;">2266.891</td>
+<td style="text-align: right;">2267.586</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">2302.603</td>
+<td style="text-align: right;">2267.896</td>
+<td style="text-align: right;">2331.737</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">2267.529</td>
+<td style="text-align: right;">2267.812</td>
+<td style="text-align: right;">2332.124</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">481.433</td>
+<td style="text-align: right;">4537.012</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">397.134</td>
+<td style="text-align: right;">497.080</td>
+<td style="text-align: right;">1986.317</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">333.280</td>
+<td style="text-align: right;">481.451</td>
+<td style="text-align: right;">4535.767</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">333.247</td>
+<td style="text-align: right;">174.206</td>
+<td style="text-align: right;">4533.895</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_HwScalar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">336.441</td>
+<td style="text-align: right;">481.731</td>
+<td style="text-align: right;">4537.298</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">336.421</td>
+<td style="text-align: right;">438.214</td>
+<td style="text-align: right;">4536.814</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9053.050</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9051.040</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9050.424</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1133.402</td>
+<td style="text-align: right;">1133.831</td>
+<td style="text-align: right;">1133.875</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">2267.488</td>
+<td style="text-align: right;">2268.293</td>
+<td style="text-align: right;">2332.449</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">2267.088</td>
+<td style="text-align: right;">2267.855</td>
+<td style="text-align: right;">2267.788</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">2267.128</td>
+<td style="text-align: right;">2268.020</td>
+<td style="text-align: right;">2332.397</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">2267.499</td>
+<td style="text-align: right;">2268.165</td>
+<td style="text-align: right;">2332.089</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2268.271</td>
+<td style="text-align: right;">2332.289</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">1916.083</td>
+<td style="text-align: right;">1947.352</td>
+<td style="text-align: right;">1945.902</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">1915.386</td>
+<td style="text-align: right;">2268.454</td>
+<td style="text-align: right;">2332.207</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">1916.058</td>
+<td style="text-align: right;">2267.856</td>
+<td style="text-align: right;">2268.469</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;">2266.254</td>
+<td style="text-align: right;">2268.315</td>
+<td style="text-align: right;">2332.394</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;">2266.146</td>
+<td style="text-align: right;">2267.330</td>
+<td style="text-align: right;">2267.639</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">2330.481</td>
+<td style="text-align: right;">2267.967</td>
+<td style="text-align: right;">2331.380</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">2331.357</td>
+<td style="text-align: right;">2268.141</td>
+<td style="text-align: right;">2331.771</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">481.439</td>
+<td style="text-align: right;">4536.388</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">398.138</td>
+<td style="text-align: right;">499.847</td>
+<td style="text-align: right;">1943.895</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">336.600</td>
+<td style="text-align: right;">481.444</td>
+<td style="text-align: right;">4537.003</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">339.053</td>
+<td style="text-align: right;">184.522</td>
+<td style="text-align: right;">4534.382</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Avx2_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">336.370</td>
+<td style="text-align: right;">481.366</td>
+<td style="text-align: right;">4536.775</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">337.896</td>
+<td style="text-align: right;">441.125</td>
+<td style="text-align: right;">4537.368</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9062.899</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9065.223</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">9063.756</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1690.882</td>
+<td style="text-align: right;">2247.321</td>
+<td style="text-align: right;">2247.165</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">3399.553</td>
+<td style="text-align: right;">3402.723</td>
+<td style="text-align: right;">3402.060</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">2718.321</td>
+<td style="text-align: right;">3021.979</td>
+<td style="text-align: right;">3352.229</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52RoundToEven</td>
+<td style="text-align: right;">3399.855</td>
+<td style="text-align: right;">3401.786</td>
+<td style="text-align: right;">3400.447</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">3400.578</td>
+<td style="text-align: right;">3402.116</td>
+<td style="text-align: right;">3402.349</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">3399.154</td>
+<td style="text-align: right;">3401.333</td>
+<td style="text-align: right;">3402.544</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52RoundToEven</td>
+<td style="text-align: right;">3400.471</td>
+<td style="text-align: right;">3401.792</td>
+<td style="text-align: right;">3401.498</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3401.719</td>
+<td style="text-align: right;">3402.088</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">2290.195</td>
+<td style="text-align: right;">2323.924</td>
+<td style="text-align: right;">2314.049</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">2295.804</td>
+<td style="text-align: right;">3402.478</td>
+<td style="text-align: right;">3402.065</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">2289.662</td>
+<td style="text-align: right;">3352.455</td>
+<td style="text-align: right;">3351.817</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;">2717.670</td>
+<td style="text-align: right;">3402.392</td>
+<td style="text-align: right;">3402.123</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;">2717.438</td>
+<td style="text-align: right;">3015.554</td>
+<td style="text-align: right;">3347.639</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">3399.905</td>
+<td style="text-align: right;">3401.955</td>
+<td style="text-align: right;">3401.701</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">3400.408</td>
+<td style="text-align: right;">3402.606</td>
+<td style="text-align: right;">3401.717</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52RoundToEven</td>
+<td style="text-align: right;">3400.328</td>
+<td style="text-align: right;">3401.596</td>
+<td style="text-align: right;">3401.676</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">596.678</td>
+<td style="text-align: right;">6802.198</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">504.148</td>
+<td style="text-align: right;">597.660</td>
+<td style="text-align: right;">2573.070</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">422.592</td>
+<td style="text-align: right;">531.314</td>
+<td style="text-align: right;">6801.951</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">422.994</td>
+<td style="text-align: right;">101.986</td>
+<td style="text-align: right;">3354.102</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_HwScalar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVarFix</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">423.065</td>
+<td style="text-align: right;">530.973</td>
+<td style="text-align: right;">6802.634</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">423.003</td>
+<td style="text-align: right;">499.363</td>
+<td style="text-align: right;">6801.826</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52RoundToEven</td>
+<td style="text-align: right;">422.934</td>
+<td style="text-align: right;">208.240</td>
+<td style="text-align: right;">5070.914</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11424.624</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11427.139</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11426.862</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">1690.404</td>
+<td style="text-align: right;">2247.837</td>
+<td style="text-align: right;">2248.484</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">847.969</td>
+<td style="text-align: right;">3402.398</td>
+<td style="text-align: right;">3402.351</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">2719.271</td>
+<td style="text-align: right;">3022.343</td>
+<td style="text-align: right;">3398.654</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52RoundToEven</td>
+<td style="text-align: right;">3401.300</td>
+<td style="text-align: right;">3401.717</td>
+<td style="text-align: right;">3401.586</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">3400.103</td>
+<td style="text-align: right;">3401.652</td>
+<td style="text-align: right;">3401.867</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">3400.541</td>
+<td style="text-align: right;">3402.380</td>
+<td style="text-align: right;">3402.008</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52RoundToEven</td>
+<td style="text-align: right;">3399.014</td>
+<td style="text-align: right;">3401.553</td>
+<td style="text-align: right;">3401.877</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3401.908</td>
+<td style="text-align: right;">3401.429</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">2342.283</td>
+<td style="text-align: right;">2380.812</td>
+<td style="text-align: right;">2381.774</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">2343.382</td>
+<td style="text-align: right;">3401.850</td>
+<td style="text-align: right;">3401.296</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">2343.206</td>
+<td style="text-align: right;">3399.747</td>
+<td style="text-align: right;">3398.545</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;">2718.449</td>
+<td style="text-align: right;">3401.548</td>
+<td style="text-align: right;">3402.009</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;">2719.025</td>
+<td style="text-align: right;">3018.788</td>
+<td style="text-align: right;">3353.785</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">3393.724</td>
+<td style="text-align: right;">3401.601</td>
+<td style="text-align: right;">3401.720</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">3400.227</td>
+<td style="text-align: right;">3401.873</td>
+<td style="text-align: right;">3402.265</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52RoundToEven</td>
+<td style="text-align: right;">3394.818</td>
+<td style="text-align: right;">3401.981</td>
+<td style="text-align: right;">3401.629</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">600.111</td>
+<td style="text-align: right;">6803.223</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">483.048</td>
+<td style="text-align: right;">598.797</td>
+<td style="text-align: right;">2603.576</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">429.004</td>
+<td style="text-align: right;">539.319</td>
+<td style="text-align: right;">6798.531</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">447.274</td>
+<td style="text-align: right;">111.563</td>
+<td style="text-align: right;">3459.866</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">472.145</td>
+<td style="text-align: right;">538.870</td>
+<td style="text-align: right;">6801.977</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">452.690</td>
+<td style="text-align: right;">533.536</td>
+<td style="text-align: right;">6804.504</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52RoundToEven</td>
+<td style="text-align: right;">457.301</td>
+<td style="text-align: right;">262.293</td>
+<td style="text-align: right;">5246.035</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11492.489</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11492.022</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11494.183</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---aws-arm-t4gsmall">Arm - AWS Arm t4g.small</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">803.088</td>
+<td style="text-align: right;">823.140</td>
+<td style="text-align: right;">823.536</td>
+<td style="text-align: right;">929.164</td>
+<td style="text-align: right;">928.650</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">1983.059</td>
+<td style="text-align: right;">1970.505</td>
+<td style="text-align: right;">1964.017</td>
+<td style="text-align: right;">2474.455</td>
+<td style="text-align: right;">2430.213</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">1419.599</td>
+<td style="text-align: right;">1619.608</td>
+<td style="text-align: right;">1635.968</td>
+<td style="text-align: right;">1976.516</td>
+<td style="text-align: right;">1916.919</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">2125.336</td>
+<td style="text-align: right;">1970.736</td>
+<td style="text-align: right;">2101.750</td>
+<td style="text-align: right;">2476.539</td>
+<td style="text-align: right;">2430.008</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">2125.090</td>
+<td style="text-align: right;">2099.204</td>
+<td style="text-align: right;">1971.227</td>
+<td style="text-align: right;">2476.164</td>
+<td style="text-align: right;">2432.635</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2471.941</td>
+<td style="text-align: right;">2433.292</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">248.785</td>
+<td style="text-align: right;">645.273</td>
+<td style="text-align: right;">639.294</td>
+<td style="text-align: right;">648.895</td>
+<td style="text-align: right;">646.964</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">247.894</td>
+<td style="text-align: right;">644.772</td>
+<td style="text-align: right;">634.464</td>
+<td style="text-align: right;">2477.441</td>
+<td style="text-align: right;">2429.587</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">246.752</td>
+<td style="text-align: right;">647.550</td>
+<td style="text-align: right;">634.777</td>
+<td style="text-align: right;">1964.186</td>
+<td style="text-align: right;">1919.070</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">808.461</td>
+<td style="text-align: right;">813.233</td>
+<td style="text-align: right;">2478.187</td>
+<td style="text-align: right;">2433.021</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">699.634</td>
+<td style="text-align: right;">810.728</td>
+<td style="text-align: right;">1014.160</td>
+<td style="text-align: right;">988.711</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">248.726</td>
+<td style="text-align: right;">2104.629</td>
+<td style="text-align: right;">1966.672</td>
+<td style="text-align: right;">2477.574</td>
+<td style="text-align: right;">2433.779</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">248.032</td>
+<td style="text-align: right;">1972.364</td>
+<td style="text-align: right;">2097.259</td>
+<td style="text-align: right;">2477.604</td>
+<td style="text-align: right;">2433.642</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">220.323</td>
+<td style="text-align: right;">3360.087</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">155.051</td>
+<td style="text-align: right;">227.355</td>
+<td style="text-align: right;">226.258</td>
+<td style="text-align: right;">258.481</td>
+<td style="text-align: right;">643.212</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">142.065</td>
+<td style="text-align: right;">201.891</td>
+<td style="text-align: right;">201.544</td>
+<td style="text-align: right;">220.275</td>
+<td style="text-align: right;">3355.438</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">134.796</td>
+<td style="text-align: right;">201.758</td>
+<td style="text-align: right;">201.625</td>
+<td style="text-align: right;">96.582</td>
+<td style="text-align: right;">2131.072</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_HwScalar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">123.684</td>
+<td style="text-align: right;">201.896</td>
+<td style="text-align: right;">201.291</td>
+<td style="text-align: right;">220.394</td>
+<td style="text-align: right;">3353.365</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">123.650</td>
+<td style="text-align: right;">201.946</td>
+<td style="text-align: right;">201.594</td>
+<td style="text-align: right;">189.809</td>
+<td style="text-align: right;">3361.564</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3397.917</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3386.558</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3373.171</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">822.580</td>
+<td style="text-align: right;">822.854</td>
+<td style="text-align: right;">821.698</td>
+<td style="text-align: right;">929.269</td>
+<td style="text-align: right;">929.381</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">2092.470</td>
+<td style="text-align: right;">2125.892</td>
+<td style="text-align: right;">1984.585</td>
+<td style="text-align: right;">2444.958</td>
+<td style="text-align: right;">2481.167</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">1457.436</td>
+<td style="text-align: right;">1651.605</td>
+<td style="text-align: right;">1652.599</td>
+<td style="text-align: right;">1954.375</td>
+<td style="text-align: right;">1965.794</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">1972.154</td>
+<td style="text-align: right;">2124.522</td>
+<td style="text-align: right;">2123.248</td>
+<td style="text-align: right;">2437.301</td>
+<td style="text-align: right;">2472.410</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">1971.364</td>
+<td style="text-align: right;">1985.782</td>
+<td style="text-align: right;">1985.624</td>
+<td style="text-align: right;">2428.823</td>
+<td style="text-align: right;">2475.657</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2441.717</td>
+<td style="text-align: right;">2475.390</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">223.732</td>
+<td style="text-align: right;">671.938</td>
+<td style="text-align: right;">678.677</td>
+<td style="text-align: right;">631.633</td>
+<td style="text-align: right;">650.931</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">224.177</td>
+<td style="text-align: right;">670.521</td>
+<td style="text-align: right;">673.479</td>
+<td style="text-align: right;">2448.406</td>
+<td style="text-align: right;">2471.611</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">223.730</td>
+<td style="text-align: right;">675.576</td>
+<td style="text-align: right;">673.407</td>
+<td style="text-align: right;">1931.942</td>
+<td style="text-align: right;">1966.954</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">891.078</td>
+<td style="text-align: right;">842.760</td>
+<td style="text-align: right;">2446.379</td>
+<td style="text-align: right;">2470.735</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">699.336</td>
+<td style="text-align: right;">840.903</td>
+<td style="text-align: right;">974.014</td>
+<td style="text-align: right;">1091.910</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">224.207</td>
+<td style="text-align: right;">2105.191</td>
+<td style="text-align: right;">2125.258</td>
+<td style="text-align: right;">2447.988</td>
+<td style="text-align: right;">2471.237</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">223.060</td>
+<td style="text-align: right;">1974.663</td>
+<td style="text-align: right;">1984.017</td>
+<td style="text-align: right;">2443.880</td>
+<td style="text-align: right;">2468.289</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">221.729</td>
+<td style="text-align: right;">3939.407</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">150.819</td>
+<td style="text-align: right;">229.703</td>
+<td style="text-align: right;">229.630</td>
+<td style="text-align: right;">255.227</td>
+<td style="text-align: right;">666.310</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">139.822</td>
+<td style="text-align: right;">202.330</td>
+<td style="text-align: right;">201.942</td>
+<td style="text-align: right;">221.794</td>
+<td style="text-align: right;">3936.665</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">130.571</td>
+<td style="text-align: right;">202.277</td>
+<td style="text-align: right;">202.039</td>
+<td style="text-align: right;">107.622</td>
+<td style="text-align: right;">2284.839</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Avx2_Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">118.755</td>
+<td style="text-align: right;">202.384</td>
+<td style="text-align: right;">201.904</td>
+<td style="text-align: right;">219.179</td>
+<td style="text-align: right;">3949.787</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">120.560</td>
+<td style="text-align: right;">202.221</td>
+<td style="text-align: right;">202.074</td>
+<td style="text-align: right;">190.500</td>
+<td style="text-align: right;">3948.189</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3775.580</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3781.553</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3795.193</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">721.978</td>
+<td style="text-align: right;">728.604</td>
+<td style="text-align: right;">725.987</td>
+<td style="text-align: right;">1138.664</td>
+<td style="text-align: right;">1140.359</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">2125.322</td>
+<td style="text-align: right;">2101.559</td>
+<td style="text-align: right;">1970.241</td>
+<td style="text-align: right;">2478.246</td>
+<td style="text-align: right;">2442.694</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">397.263</td>
+<td style="text-align: right;">769.632</td>
+<td style="text-align: right;">797.162</td>
+<td style="text-align: right;">858.902</td>
+<td style="text-align: right;">996.661</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52RoundToEven</td>
+<td style="text-align: right;">1625.790</td>
+<td style="text-align: right;">1629.327</td>
+<td style="text-align: right;">1772.770</td>
+<td style="text-align: right;">1976.347</td>
+<td style="text-align: right;">1916.926</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">2083.430</td>
+<td style="text-align: right;">2105.549</td>
+<td style="text-align: right;">1971.068</td>
+<td style="text-align: right;">2478.113</td>
+<td style="text-align: right;">2434.718</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">2070.814</td>
+<td style="text-align: right;">2103.203</td>
+<td style="text-align: right;">1969.692</td>
+<td style="text-align: right;">2478.920</td>
+<td style="text-align: right;">2434.657</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52RoundToEven</td>
+<td style="text-align: right;">1606.876</td>
+<td style="text-align: right;">2103.089</td>
+<td style="text-align: right;">1967.876</td>
+<td style="text-align: right;">2469.312</td>
+<td style="text-align: right;">2434.697</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2476.826</td>
+<td style="text-align: right;">2433.753</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">254.742</td>
+<td style="text-align: right;">651.343</td>
+<td style="text-align: right;">637.036</td>
+<td style="text-align: right;">658.409</td>
+<td style="text-align: right;">638.889</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">252.064</td>
+<td style="text-align: right;">647.361</td>
+<td style="text-align: right;">636.899</td>
+<td style="text-align: right;">2476.758</td>
+<td style="text-align: right;">2431.186</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">249.270</td>
+<td style="text-align: right;">652.023</td>
+<td style="text-align: right;">637.189</td>
+<td style="text-align: right;">1102.667</td>
+<td style="text-align: right;">1001.485</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">690.677</td>
+<td style="text-align: right;">698.669</td>
+<td style="text-align: right;">2481.384</td>
+<td style="text-align: right;">2431.848</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">687.247</td>
+<td style="text-align: right;">694.498</td>
+<td style="text-align: right;">830.249</td>
+<td style="text-align: right;">857.791</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">253.779</td>
+<td style="text-align: right;">1974.253</td>
+<td style="text-align: right;">2097.498</td>
+<td style="text-align: right;">2479.130</td>
+<td style="text-align: right;">2435.131</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">252.263</td>
+<td style="text-align: right;">1972.642</td>
+<td style="text-align: right;">2100.457</td>
+<td style="text-align: right;">2477.099</td>
+<td style="text-align: right;">2432.061</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52RoundToEven</td>
+<td style="text-align: right;">251.048</td>
+<td style="text-align: right;">1946.735</td>
+<td style="text-align: right;">2102.340</td>
+<td style="text-align: right;">2474.462</td>
+<td style="text-align: right;">2435.906</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">274.035</td>
+<td style="text-align: right;">3352.972</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">156.824</td>
+<td style="text-align: right;">250.287</td>
+<td style="text-align: right;">249.968</td>
+<td style="text-align: right;">259.074</td>
+<td style="text-align: right;">645.398</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">144.297</td>
+<td style="text-align: right;">218.587</td>
+<td style="text-align: right;">218.279</td>
+<td style="text-align: right;">233.156</td>
+<td style="text-align: right;">3349.217</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">143.702</td>
+<td style="text-align: right;">218.637</td>
+<td style="text-align: right;">218.202</td>
+<td style="text-align: right;">48.950</td>
+<td style="text-align: right;">1101.062</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_HwScalar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVarFix</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">124.653</td>
+<td style="text-align: right;">218.393</td>
+<td style="text-align: right;">218.222</td>
+<td style="text-align: right;">232.200</td>
+<td style="text-align: right;">3179.954</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">126.220</td>
+<td style="text-align: right;">218.485</td>
+<td style="text-align: right;">218.143</td>
+<td style="text-align: right;">195.693</td>
+<td style="text-align: right;">3318.784</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52RoundToEven</td>
+<td style="text-align: right;">125.134</td>
+<td style="text-align: right;">218.414</td>
+<td style="text-align: right;">218.306</td>
+<td style="text-align: right;">104.302</td>
+<td style="text-align: right;">2126.039</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3378.058</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3372.974</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3375.953</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">729.403</td>
+<td style="text-align: right;">726.411</td>
+<td style="text-align: right;">727.146</td>
+<td style="text-align: right;">1140.096</td>
+<td style="text-align: right;">1139.760</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">201.039</td>
+<td style="text-align: right;">260.913</td>
+<td style="text-align: right;">326.070</td>
+<td style="text-align: right;">2441.726</td>
+<td style="text-align: right;">2476.672</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">365.337</td>
+<td style="text-align: right;">795.560</td>
+<td style="text-align: right;">812.664</td>
+<td style="text-align: right;">840.547</td>
+<td style="text-align: right;">1093.957</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52RoundToEven</td>
+<td style="text-align: right;">1409.023</td>
+<td style="text-align: right;">1647.945</td>
+<td style="text-align: right;">1648.076</td>
+<td style="text-align: right;">1948.516</td>
+<td style="text-align: right;">1968.423</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">204.188</td>
+<td style="text-align: right;">1985.050</td>
+<td style="text-align: right;">2100.218</td>
+<td style="text-align: right;">2443.790</td>
+<td style="text-align: right;">2473.393</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">372.517</td>
+<td style="text-align: right;">1984.815</td>
+<td style="text-align: right;">2087.182</td>
+<td style="text-align: right;">2443.184</td>
+<td style="text-align: right;">2461.760</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52RoundToEven</td>
+<td style="text-align: right;">1456.974</td>
+<td style="text-align: right;">1985.529</td>
+<td style="text-align: right;">2117.388</td>
+<td style="text-align: right;">2447.064</td>
+<td style="text-align: right;">2468.781</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2436.402</td>
+<td style="text-align: right;">2472.723</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">239.558</td>
+<td style="text-align: right;">675.535</td>
+<td style="text-align: right;">656.784</td>
+<td style="text-align: right;">641.221</td>
+<td style="text-align: right;">662.527</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">242.772</td>
+<td style="text-align: right;">675.500</td>
+<td style="text-align: right;">670.621</td>
+<td style="text-align: right;">2443.997</td>
+<td style="text-align: right;">2474.604</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">235.642</td>
+<td style="text-align: right;">675.657</td>
+<td style="text-align: right;">668.004</td>
+<td style="text-align: right;">993.160</td>
+<td style="text-align: right;">1094.770</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">744.302</td>
+<td style="text-align: right;">752.353</td>
+<td style="text-align: right;">2443.414</td>
+<td style="text-align: right;">2471.321</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">750.527</td>
+<td style="text-align: right;">751.758</td>
+<td style="text-align: right;">748.164</td>
+<td style="text-align: right;">954.850</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">238.933</td>
+<td style="text-align: right;">2126.551</td>
+<td style="text-align: right;">1980.894</td>
+<td style="text-align: right;">2438.747</td>
+<td style="text-align: right;">2471.647</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">241.094</td>
+<td style="text-align: right;">2126.259</td>
+<td style="text-align: right;">1984.041</td>
+<td style="text-align: right;">2441.300</td>
+<td style="text-align: right;">2470.676</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52RoundToEven</td>
+<td style="text-align: right;">238.221</td>
+<td style="text-align: right;">2123.621</td>
+<td style="text-align: right;">1982.111</td>
+<td style="text-align: right;">2438.515</td>
+<td style="text-align: right;">2473.339</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">271.040</td>
+<td style="text-align: right;">3927.520</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">154.413</td>
+<td style="text-align: right;">254.081</td>
+<td style="text-align: right;">255.399</td>
+<td style="text-align: right;">257.588</td>
+<td style="text-align: right;">651.238</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">141.386</td>
+<td style="text-align: right;">220.549</td>
+<td style="text-align: right;">220.414</td>
+<td style="text-align: right;">229.338</td>
+<td style="text-align: right;">3911.748</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">144.068</td>
+<td style="text-align: right;">220.734</td>
+<td style="text-align: right;">220.382</td>
+<td style="text-align: right;">51.492</td>
+<td style="text-align: right;">1116.385</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVar</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">124.103</td>
+<td style="text-align: right;">220.697</td>
+<td style="text-align: right;">220.382</td>
+<td style="text-align: right;">230.015</td>
+<td style="text-align: right;">3930.058</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">123.669</td>
+<td style="text-align: right;">220.602</td>
+<td style="text-align: right;">219.796</td>
+<td style="text-align: right;">229.512</td>
+<td style="text-align: right;">3796.007</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52RoundToEven</td>
+<td style="text-align: right;">123.421</td>
+<td style="text-align: right;">220.605</td>
+<td style="text-align: right;">220.250</td>
+<td style="text-align: right;">117.127</td>
+<td style="text-align: right;">2341.065</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3808.571</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3801.655</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3728.360</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wasm---wasm-on-amd-ryzen-7-7840h">Wasm - Wasm on AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">40.937</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">18.228</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">12.528</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">35.202</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">89.154</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;">29.015</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">71.150</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">30.713</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">12.844</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">30.739</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">102.404</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;">8.346</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">12.310</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">8.214</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">4.071</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Bcl</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_HwScalar</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">6.283</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">6.175</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;">7.922</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">7.974</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_Int64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">7.050</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">34.107</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">16.598</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">16.142</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">26.667</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">90.999</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;">24.331</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">44.108</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">24.022</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">22.163</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">25.196</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">102.508</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;">7.799</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">11.146</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">7.735</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">6.468</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Avx2_Bcl</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">5.901</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">5.639</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;">7.776</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">7.596</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToDoubleBenchmark_UInt64</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">6.510</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">38.690</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">27.405</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">11.314</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52RoundToEven</td>
+<td style="text-align: right;">13.829</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">31.274</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">87.617</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52RoundToEven</td>
+<td style="text-align: right;">42.715</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;">28.093</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">66.348</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">30.298</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">8.846</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">29.324</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">93.164</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52RoundToEven</td>
+<td style="text-align: right;">104.034</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;">9.888</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">14.026</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">9.482</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">3.017</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_HwScalar</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVar</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVarFix</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">6.734</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">6.808</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52RoundToEven</td>
+<td style="text-align: right;">3.909</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;">7.842</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">7.547</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">6.948</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumScalar</td>
+<td style="text-align: right;">32.120</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBcl</td>
+<td style="text-align: right;">9.490</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52_Impl</td>
+<td style="text-align: right;">12.621</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumBase_Range52RoundToEven</td>
+<td style="text-align: right;">17.835</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits</td>
+<td style="text-align: right;">6.604</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52</td>
+<td style="text-align: right;">98.670</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">SumTraits_Range52RoundToEven</td>
+<td style="text-align: right;">47.826</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Bcl</td>
+<td style="text-align: right;">7.370</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Basic</td>
+<td style="text-align: right;">20.218</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base</td>
+<td style="text-align: right;">6.770</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Base_Range52_Impl</td>
+<td style="text-align: right;">12.292</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128AdvSimd_Range52_Impl</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits</td>
+<td style="text-align: right;">7.150</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52</td>
+<td style="text-align: right;">104.650</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum128Traits_Range52RoundToEven</td>
+<td style="text-align: right;">112.940</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Bcl</td>
+<td style="text-align: right;">4.270</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Basic</td>
+<td style="text-align: right;">9.071</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base</td>
+<td style="text-align: right;">4.290</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Base_Range52_Impl</td>
+<td style="text-align: right;">3.623</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_ShiftVar</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Avx2_Range52</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits</td>
+<td style="text-align: right;">3.797</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52</td>
+<td style="text-align: right;">3.850</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum256Traits_Range52RoundToEven</td>
+<td style="text-align: right;">5.816</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Bcl</td>
+<td style="text-align: right;">3.918</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Base</td>
+<td style="text-align: right;">3.738</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConvertToUInt64Benchmark_Double</td>
+<td style="text-align: left;">Sum512Traits</td>
+<td style="text-align: right;">3.552</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/AVector/ConvertToDouble_Group.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_BitMath_CopySign_" data-uid="Zyl.VectorTraits.BitMath.CopySign*" class="text-break">
-Method CopySign  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L102"><i class="bi bi-code-slash"></i></a>
+Method CopySign  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L110"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method CopySign  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Zyl_VectorTraits_BitMath_CopySign_System_Single_System_Single_" data-uid="Zyl.VectorTraits.BitMath.CopySign(System.Single,System.Single)">
   CopySign(float, float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L110"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
@@ -173,7 +173,7 @@ Method CopySign  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Zyl_VectorTraits_BitMath_CopySign_System_Double_System_Double_" data-uid="Zyl.VectorTraits.BitMath.CopySign(System.Double,System.Double)">
   CopySign(double, double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L108"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L116"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
@@ -227,7 +227,7 @@ Method CopySign  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Zyl_VectorTraits_BitMath_CopySign_System_Half_System_Half_" data-uid="Zyl.VectorTraits.BitMath.CopySign(System.Half,System.Half)">
   CopySign(Half, Half)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L123"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
@@ -282,7 +282,7 @@ Method CopySign  <a class="header-action link-secondary" title="View source" hre
 
 <h3 id="Zyl_VectorTraits_BitMath_CopySign_System_SByte_System_SByte_" data-uid="Zyl.VectorTraits.BitMath.CopySign(System.SByte,System.SByte)">
   CopySign(sbyte, sbyte)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L130"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
@@ -338,7 +338,7 @@ public static sbyte CopySign(sbyte value, sbyte sign)</code></pre>
 
 <h3 id="Zyl_VectorTraits_BitMath_CopySign_System_Int16_System_Int16_" data-uid="Zyl.VectorTraits.BitMath.CopySign(System.Int16,System.Int16)">
   CopySign(short, short)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L137"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
@@ -393,7 +393,7 @@ public static sbyte CopySign(sbyte value, sbyte sign)</code></pre>
 
 <h3 id="Zyl_VectorTraits_BitMath_CopySign_System_Int32_System_Int32_" data-uid="Zyl.VectorTraits.BitMath.CopySign(System.Int32,System.Int32)">
   CopySign(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L143"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
@@ -448,7 +448,7 @@ public static sbyte CopySign(sbyte value, sbyte sign)</code></pre>
 
 <h3 id="Zyl_VectorTraits_BitMath_CopySign_System_Int64_System_Int64_" data-uid="Zyl.VectorTraits.BitMath.CopySign(System.Int64,System.Int64)">
   CopySign(long, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L149"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Copies the sign of a value to the sign of another value (将一个值的符号复制到另一个值).</p>
@@ -502,7 +502,7 @@ public static sbyte CopySign(sbyte value, sbyte sign)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L102" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/BitMath.INumber.cs/#L110" class="edit-link">Edit this page</a>
         </div>
 
 

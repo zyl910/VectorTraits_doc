@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_IWVectorTraits256_ShiftRightLogical_Args_" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits256.ShiftRightLogical_Args*" class="text-break">
-Method ShiftRightLogical_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1617"><i class="bi bi-code-slash"></i></a>
+Method ShiftRightLogical_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1623"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ShiftRightLogical_Args  <a class="header-action link-secondary" title="Vi
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits256_ShiftRightLogical_Args_System_Runtime_Intrinsics_Vector256_System_SByte__System_Int32_System_Runtime_Intrinsics_Vector256_System_SByte___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits256.ShiftRightLogical_Args(System.Runtime.Intrinsics.Vector256{System.SByte},System.Int32,System.Runtime.Intrinsics.Vector256{System.SByte}@)">
   ShiftRightLogical_Args(Vector256&lt;sbyte&gt;, int, out Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1617"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1623"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的参数计算). Provide arguments for ShiftRightLogical_Core (为 ShiftRightLogical_Core 提供参数).
@@ -172,7 +172,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits256_ShiftRightLogical_Args_System_Runtime_Intrinsics_Vector256_System_Byte__System_Int32_System_Runtime_Intrinsics_Vector256_System_Byte___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits256.ShiftRightLogical_Args(System.Runtime.Intrinsics.Vector256{System.Byte},System.Int32,System.Runtime.Intrinsics.Vector256{System.Byte}@)">
   ShiftRightLogical_Args(Vector256&lt;byte&gt;, int, out Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1631"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1637"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的参数计算). Provide arguments for ShiftRightLogical_Core (为 ShiftRightLogical_Core 提供参数).
@@ -227,7 +227,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits256_ShiftRightLogical_Args_System_Runtime_Intrinsics_Vector256_System_Int16__System_Int32_System_Runtime_Intrinsics_Vector256_System_Int16___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits256.ShiftRightLogical_Args(System.Runtime.Intrinsics.Vector256{System.Int16},System.Int32,System.Runtime.Intrinsics.Vector256{System.Int16}@)">
   ShiftRightLogical_Args(Vector256&lt;short&gt;, int, out Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1645"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1651"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的参数计算). Provide arguments for ShiftRightLogical_Core (为 ShiftRightLogical_Core 提供参数).
@@ -282,7 +282,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits256_ShiftRightLogical_Args_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Int32_System_Runtime_Intrinsics_Vector256_System_UInt16___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits256.ShiftRightLogical_Args(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Int32,System.Runtime.Intrinsics.Vector256{System.UInt16}@)">
   ShiftRightLogical_Args(Vector256&lt;ushort&gt;, int, out Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1659"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1665"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的参数计算). Provide arguments for ShiftRightLogical_Core (为 ShiftRightLogical_Core 提供参数).
@@ -337,7 +337,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits256_ShiftRightLogical_Args_System_Runtime_Intrinsics_Vector256_System_Int32__System_Int32_System_Runtime_Intrinsics_Vector256_System_Int32___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits256.ShiftRightLogical_Args(System.Runtime.Intrinsics.Vector256{System.Int32},System.Int32,System.Runtime.Intrinsics.Vector256{System.Int32}@)">
   ShiftRightLogical_Args(Vector256&lt;int&gt;, int, out Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1673"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1679"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的参数计算). Provide arguments for ShiftRightLogical_Core (为 ShiftRightLogical_Core 提供参数).
@@ -392,7 +392,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits256_ShiftRightLogical_Args_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Int32_System_Runtime_Intrinsics_Vector256_System_UInt32___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits256.ShiftRightLogical_Args(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Int32,System.Runtime.Intrinsics.Vector256{System.UInt32}@)">
   ShiftRightLogical_Args(Vector256&lt;uint&gt;, int, out Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1687"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1693"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的参数计算). Provide arguments for ShiftRightLogical_Core (为 ShiftRightLogical_Core 提供参数).
@@ -447,7 +447,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits256_ShiftRightLogical_Args_System_Runtime_Intrinsics_Vector256_System_Int64__System_Int32_System_Runtime_Intrinsics_Vector256_System_Int64___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits256.ShiftRightLogical_Args(System.Runtime.Intrinsics.Vector256{System.Int64},System.Int32,System.Runtime.Intrinsics.Vector256{System.Int64}@)">
   ShiftRightLogical_Args(Vector256&lt;long&gt;, int, out Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1701"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1707"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的参数计算). Provide arguments for ShiftRightLogical_Core (为 ShiftRightLogical_Core 提供参数).
@@ -502,7 +502,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 
 <h3 id="Zyl_VectorTraits_Impl_IWVectorTraits256_ShiftRightLogical_Args_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Int32_System_Runtime_Intrinsics_Vector256_System_UInt64___" data-uid="Zyl.VectorTraits.Impl.IWVectorTraits256.ShiftRightLogical_Args(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Int32,System.Runtime.Intrinsics.Vector256{System.UInt64}@)">
   ShiftRightLogical_Args(Vector256&lt;ulong&gt;, int, out Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1715"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1721"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shifts (unsigned) each element of a vector right by the specified amount. (将向量的每个无符号元素逻辑右移指定量的参数计算). Provide arguments for ShiftRightLogical_Core (为 ShiftRightLogical_Core 提供参数).
@@ -556,7 +556,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>, <code>shiftAm
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1617" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IWVectorTraits256.cs/#L1623" class="edit-link">Edit this page</a>
         </div>
 
 

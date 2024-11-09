@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vector64s_Create_" data-uid="Zyl.VectorTraits.Vector64s.Create*" class="text-break">
-Method Create  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L130"><i class="bi bi-code-slash"></i></a>
+Method Create  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L140"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vector64s_Create__1___0_" data-uid="Zyl.VectorTraits.Vector64s.Create``1(``0)">
   Create&lt;T&gt;(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L140"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a> instance with all elements initialized to the specified value (创建新的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a> 实例，其中所有元素已初始化为指定值).</p>
@@ -168,7 +168,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vector64s_Create__1___0___" data-uid="Zyl.VectorTraits.Vector64s.Create``1(``0[])">
   Create&lt;T&gt;(T[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L178"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a> from a given array (从给定数组创建一个新的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a> ).</p>
@@ -219,7 +219,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vector64s_Create__1___0___System_Int32_" data-uid="Zyl.VectorTraits.Vector64s.Create``1(``0[],System.Int32)">
   Create&lt;T&gt;(T[], int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L196"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a> from a given array starting at a specified index position (于指定索引位置开始，从指定数组创建一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a>).</p>
@@ -279,7 +279,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vector64s_Create__1_System_ReadOnlySpan_System_Byte__" data-uid="Zyl.VectorTraits.Vector64s.Create``1(System.ReadOnlySpan{System.Byte})">
   Create&lt;T&gt;(ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L218"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a> from a given read-only span of bytes (根据给定的只读字节跨度构造一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a>).</p>
@@ -336,7 +336,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vector64s_Create__1_System_ReadOnlySpan___0__" data-uid="Zyl.VectorTraits.Vector64s.Create``1(System.ReadOnlySpan{``0})">
   Create&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L224"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L234"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a> from a from the given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> (根据给定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> 构造一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a>).</p>
@@ -393,7 +393,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vector64s_Create__1_System_Span___0__" data-uid="Zyl.VectorTraits.Vector64s.Create``1(System.Span{``0})">
   Create&lt;T&gt;(Span&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L254"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a> from a from the given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> (根据给定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> 构造一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector64-1">Vector64&lt;T&gt;</a>).</p>
@@ -449,7 +449,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L130" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector64s.cs/#L140" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -173,6 +173,11 @@ Class WVectorTraits128Avx2.Statics  <a class="header-action link-secondary" titl
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.IsHardwareAccelerated.html#Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_IsHardwareAccelerated">IsHardwareAccelerated</a></dt>
+    <dd><p>Whether to exist hardware accelerated (是否存在硬件加速).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.IsSupported.html#Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_IsSupported">IsSupported</a></dt>
     <dd><p>Whether to support the run (是否支持运行).</p>
 </dd>
@@ -186,6 +191,12 @@ Class WVectorTraits128Avx2.Statics  <a class="header-action link-secondary" titl
   <h2 class="section" id="methods">Methods
 </h2>
 
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.ConditionalSelect_Relaxed.html#Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_ConditionalSelect_Relaxed__1_System_Runtime_Intrinsics_Vector128___0__System_Runtime_Intrinsics_Vector128___0__System_Runtime_Intrinsics_Vector128___0__">ConditionalSelect_Relaxed&lt;T&gt;(Vector128&lt;T&gt;, Vector128&lt;T&gt;, Vector128&lt;T&gt;)</a></dt>
+    <dd><p>Conditionally selects a value from two vectors on a bitwise basis (按条件从两个向量中按位选择值).
+Mnemonic: <code>rt[i] := (left[i] &amp; condition[i]) | (right[i] &amp; ~condition[i])</code>.</p>
+</dd>
+  </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.AVector128.WVectorTraits128Avx2.Statics.ConvertToDouble.html#Zyl_VectorTraits_Impl_AVector128_WVectorTraits128Avx2_Statics_ConvertToDouble_System_Runtime_Intrinsics_Vector128_System_Int64__">ConvertToDouble(Vector128&lt;long&gt;)</a></dt>
     <dd><p>Convert to a vector whose elements are of type Double (转换为元素类型是Double的向量)..

@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Method ToString </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Method ToString ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_ExVectorUtil_ToString_.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.ExVectorUtil.ToString*%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.ExVectorUtil.ToString*">
+
+
+
+
+
+<h1 id="Zyl_VectorTraits_ExVectorUtil_ToString_" data-uid="Zyl.VectorTraits.ExVectorUtil.ToString*" class="text-break">
+Method ToString  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/ExVectorUtil.cs/#L144"><i class="bi bi-code-slash"></i></a>
+</h1>
+
+<div class="facts text-secondary">
+  <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+</div>
+
+<div class="markdown summary"></div>
+<div class="markdown conceptual"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_ExVectorUtil_ToString_" data-uid="Zyl.VectorTraits.ExVectorUtil.ToString*"></a>
+
+<h3 id="Zyl_VectorTraits_ExVectorUtil_ToString_System_FormattableString_" data-uid="Zyl.VectorTraits.ExVectorUtil.ToString(System.FormattableString)">
+  ToString(FormattableString)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/ExVectorUtil.cs/#L144"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Safely convert interpolated string to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. Based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring">FormattableString</a> (安全地将内插字符串转为 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. 基于 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring">FormattableString</a>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static string ToString(FormattableString message)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring">FormattableString</a></dt>
+  <dd><p>The format (格式).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+  <dd><p>Formatted string (格式化之后的字符串).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+<h4 class="section" id="Zyl_VectorTraits_ExVectorUtil_ToString_System_FormattableString__remarks">Remarks</h4>
+<div class="markdown level1 remarks"><p>When a vector type contains an ExType, an exception occurs if the vector type is directly interpolated. With this method, the format can be done safely (当向量类型里含有 ExType 时, 若直接使用内插字符串, 会有异常. 而使用本办法后, 能安全地进行格式化).</p>
+<pre><code class="lang-csharp">var temp = Vectors&lt;int&gt;.Serial.ExAsExInt128();
+// Bug! - Console.Out.WriteLine($"InterpolatedString:\t{temp}."); // System.NotSupportedException: Specified type is not supported
+Console.Out.WriteLine(ExVectorUtil.ToString($"InterpolatedString:\t{temp}.")); // Successes.</code></pre>
+</div>
+
+
+
+
+<a id="Zyl_VectorTraits_ExVectorUtil_ToString_" data-uid="Zyl.VectorTraits.ExVectorUtil.ToString*"></a>
+
+<h3 id="Zyl_VectorTraits_ExVectorUtil_ToString_System_IFormatProvider_System_FormattableString_" data-uid="Zyl.VectorTraits.ExVectorUtil.ToString(System.IFormatProvider,System.FormattableString)">
+  ToString(IFormatProvider?, FormattableString)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/ExVectorUtil.cs/#L154"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Safely convert interpolated string to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, with <code class="paramref">provider</code> parameter. Based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring">FormattableString</a> (安全地将内插字符串转为 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, 带有 <code class="paramref">provider</code> 参数. 基于 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring">FormattableString</a>).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static string ToString(IFormatProvider? provider, FormattableString message)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>provider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformatprovider">IFormatProvider</a></dt>
+  <dd><p>An object that provides culture-specific formatting information (一个提供区域性特定的格式设置信息的对象).</p>
+</dd>
+  <dt><code>message</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring">FormattableString</a></dt>
+  <dd><p>The format (格式).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+  <dd><p>Formatted string (格式化之后的字符串).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/ExVectorUtil.cs/#L144" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

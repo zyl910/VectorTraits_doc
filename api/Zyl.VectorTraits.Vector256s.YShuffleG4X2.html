@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2*" class="text-break">
-Method YShuffleG4X2  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L35"><i class="bi bi-code-slash"></i></a>
+Method YShuffleG4X2  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L40"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,10 +117,10 @@ Method YShuffleG4X2  <a class="header-action link-secondary" title="View source"
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2__1_System_Runtime_Intrinsics_Vector256___0__System_Runtime_Intrinsics_Vector256___0__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2&lt;T&gt;(Vector256&lt;T&gt;, Vector256&lt;T&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L40"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -177,10 +177,10 @@ public static (Vector256&lt;T&gt; Result0, Vector256&lt;T&gt; Result1) YShuffleG
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Single__System_Runtime_Intrinsics_Vector256_System_Single__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Single},System.Runtime.Intrinsics.Vector256{System.Single},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2(Vector256&lt;float&gt;, Vector256&lt;float&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L86"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -229,10 +229,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Double__System_Runtime_Intrinsics_Vector256_System_Double__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Double},System.Runtime.Intrinsics.Vector256{System.Double},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2(Vector256&lt;double&gt;, Vector256&lt;double&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L101"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -281,10 +281,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2(Vector256&lt;sbyte&gt;, Vector256&lt;sbyte&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L116"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -334,10 +334,10 @@ public static (Vector256&lt;sbyte&gt; Result0, Vector256&lt;sbyte&gt; Result1) Y
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Byte__System_Runtime_Intrinsics_Vector256_System_Byte__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2(Vector256&lt;byte&gt;, Vector256&lt;byte&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L132"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -386,10 +386,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2(Vector256&lt;short&gt;, Vector256&lt;short&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L147"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -438,10 +438,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Runtime_Intrinsics_Vector256_System_UInt16__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2(Vector256&lt;ushort&gt;, Vector256&lt;ushort&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L162"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -491,10 +491,10 @@ public static (Vector256&lt;ushort&gt; Result0, Vector256&lt;ushort&gt; Result1)
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2(Vector256&lt;int&gt;, Vector256&lt;int&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L178"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -543,10 +543,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Runtime_Intrinsics_Vector256_System_UInt32__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2(Vector256&lt;uint&gt;, Vector256&lt;uint&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L193"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -596,10 +596,10 @@ public static (Vector256&lt;uint&gt; Result0, Vector256&lt;uint&gt; Result1) YSh
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2(Vector256&lt;long&gt;, Vector256&lt;long&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L209"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -648,10 +648,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Runtime_Intrinsics_Vector256_System_UInt64__Zyl_VectorTraits_ShuffleControlG4_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64},Zyl.VectorTraits.ShuffleControlG4)">
   YShuffleG4X2(Vector256&lt;ulong&gt;, Vector256&lt;ulong&gt;, ShuffleControlG4)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L224"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -701,10 +701,10 @@ public static (Vector256&lt;ulong&gt; Result0, Vector256&lt;ulong&gt; Result1) Y
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Single__System_Runtime_Intrinsics_Vector256_System_Single__Zyl_VectorTraits_ShuffleControlG4_System_Runtime_Intrinsics_Vector256_System_Single___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Single},System.Runtime.Intrinsics.Vector256{System.Single},Zyl.VectorTraits.ShuffleControlG4,System.Runtime.Intrinsics.Vector256{System.Single}@)">
   YShuffleG4X2(Vector256&lt;float&gt;, Vector256&lt;float&gt;, ShuffleControlG4, out Vector256&lt;float&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2066"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L4719"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -756,10 +756,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Double__System_Runtime_Intrinsics_Vector256_System_Double__Zyl_VectorTraits_ShuffleControlG4_System_Runtime_Intrinsics_Vector256_System_Double___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Double},System.Runtime.Intrinsics.Vector256{System.Double},Zyl.VectorTraits.ShuffleControlG4,System.Runtime.Intrinsics.Vector256{System.Double}@)">
   YShuffleG4X2(Vector256&lt;double&gt;, Vector256&lt;double&gt;, ShuffleControlG4, out Vector256&lt;double&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2076"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L4729"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -811,10 +811,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte__Zyl_VectorTraits_ShuffleControlG4_System_Runtime_Intrinsics_Vector256_System_SByte___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte},Zyl.VectorTraits.ShuffleControlG4,System.Runtime.Intrinsics.Vector256{System.SByte}@)">
   YShuffleG4X2(Vector256&lt;sbyte&gt;, Vector256&lt;sbyte&gt;, ShuffleControlG4, out Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2086"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L4739"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -867,10 +867,10 @@ public static Vector256&lt;sbyte&gt; YShuffleG4X2(Vector256&lt;sbyte&gt; source0
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Byte__System_Runtime_Intrinsics_Vector256_System_Byte__Zyl_VectorTraits_ShuffleControlG4_System_Runtime_Intrinsics_Vector256_System_Byte___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte},Zyl.VectorTraits.ShuffleControlG4,System.Runtime.Intrinsics.Vector256{System.Byte}@)">
   YShuffleG4X2(Vector256&lt;byte&gt;, Vector256&lt;byte&gt;, ShuffleControlG4, out Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2097"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L4750"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -922,10 +922,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16__Zyl_VectorTraits_ShuffleControlG4_System_Runtime_Intrinsics_Vector256_System_Int16___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16},Zyl.VectorTraits.ShuffleControlG4,System.Runtime.Intrinsics.Vector256{System.Int16}@)">
   YShuffleG4X2(Vector256&lt;short&gt;, Vector256&lt;short&gt;, ShuffleControlG4, out Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L4760"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -977,10 +977,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Runtime_Intrinsics_Vector256_System_UInt16__Zyl_VectorTraits_ShuffleControlG4_System_Runtime_Intrinsics_Vector256_System_UInt16___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16},Zyl.VectorTraits.ShuffleControlG4,System.Runtime.Intrinsics.Vector256{System.UInt16}@)">
   YShuffleG4X2(Vector256&lt;ushort&gt;, Vector256&lt;ushort&gt;, ShuffleControlG4, out Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L4770"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -1033,10 +1033,10 @@ public static Vector256&lt;ushort&gt; YShuffleG4X2(Vector256&lt;ushort&gt; sourc
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32__Zyl_VectorTraits_ShuffleControlG4_System_Runtime_Intrinsics_Vector256_System_Int32___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32},Zyl.VectorTraits.ShuffleControlG4,System.Runtime.Intrinsics.Vector256{System.Int32}@)">
   YShuffleG4X2(Vector256&lt;int&gt;, Vector256&lt;int&gt;, ShuffleControlG4, out Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L4781"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -1088,10 +1088,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Runtime_Intrinsics_Vector256_System_UInt32__Zyl_VectorTraits_ShuffleControlG4_System_Runtime_Intrinsics_Vector256_System_UInt32___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32},Zyl.VectorTraits.ShuffleControlG4,System.Runtime.Intrinsics.Vector256{System.UInt32}@)">
   YShuffleG4X2(Vector256&lt;uint&gt;, Vector256&lt;uint&gt;, ShuffleControlG4, out Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2138"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L4791"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -1144,10 +1144,10 @@ public static Vector256&lt;uint&gt; YShuffleG4X2(Vector256&lt;uint&gt; source0, 
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64__Zyl_VectorTraits_ShuffleControlG4_System_Runtime_Intrinsics_Vector256_System_Int64___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64},Zyl.VectorTraits.ShuffleControlG4,System.Runtime.Intrinsics.Vector256{System.Int64}@)">
   YShuffleG4X2(Vector256&lt;long&gt;, Vector256&lt;long&gt;, ShuffleControlG4, out Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L4802"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -1199,10 +1199,10 @@ Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleG4X2_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Runtime_Intrinsics_Vector256_System_UInt64__Zyl_VectorTraits_ShuffleControlG4_System_Runtime_Intrinsics_Vector256_System_UInt64___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleG4X2(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64},Zyl.VectorTraits.ShuffleControlG4,System.Runtime.Intrinsics.Vector256{System.UInt64}@)">
   YShuffleG4X2(Vector256&lt;ulong&gt;, Vector256&lt;ulong&gt;, ShuffleControlG4, out Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L4812"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>For each 4-element group in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
+<div class="markdown level1 summary"><p>For each 4-element groups in two vector, shuffle is performed (对于两个向量中的每个 4-元素组, 进行换位).
 Mnemonic: View for group: <code>rt.xyzw = shuffleG4_ref(control, source0, source1)</code>. View for element: <code>element_ref(i, result0, result1) := element_ref((i&amp;(~3)) | ((control &gt;&gt; ((i&amp;3)*2)) &amp; 3), source0, source1)</code>.</p>
 </div>
 <div class="markdown level1 conceptual"></div>
@@ -1254,7 +1254,7 @@ public static Vector256&lt;ulong&gt; YShuffleG4X2(Vector256&lt;ulong&gt; source0
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L35" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L40" class="edit-link">Edit this page</a>
         </div>
 
 

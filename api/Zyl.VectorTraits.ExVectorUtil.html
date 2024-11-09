@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ExVectorUtil </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ExVectorUtil ">
+      
+      <meta name="description" content="Some utility functions are provided for ExType vectors. For example, the Format function can be used to safely output an ExType vector (为ExType 向量, 提供了一些 的工具函数. 例如用 Format 函数可以安全的输出ExType 向量).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_ExVectorUtil.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.ExVectorUtil%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.ExVectorUtil">
+
+
+
+  <h1 id="Zyl_VectorTraits_ExVectorUtil" data-uid="Zyl.VectorTraits.ExVectorUtil" class="text-break">
+Class ExVectorUtil  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/ExVectorUtil.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Some utility functions are provided for ExType vectors. For example, the Format function can be used to safely output an ExType vector (为ExType 向量, 提供了一些 的工具函数. 例如用 Format 函数可以安全的输出ExType 向量).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class ExVectorUtil</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ExVectorUtil</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Zyl_VectorTraits_ExVectorUtil_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>When a vector type contains an ExType, an exception will occur if it is format as a string. Using methods of this class, the format can be done safely. (当向量类型里含有 ExType 时, 若直接使用字符串格式化, 会有异常. 而使用本类的办法后, 能安全地进行格式化).</p>
+</div>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format_System_IFormatProvider_System_String_System_Object_">Format(IFormatProvider?, string, object?)</a></dt>
+    <dd><p>Replaces the format item or items in a specified string with the string representation of the corresponding object. A parameter supplies culture-specific formatting information.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format_System_IFormatProvider_System_String_System_Object_System_Object_">Format(IFormatProvider?, string, object?, object?)</a></dt>
+    <dd><p>Replaces the format items in a string with the string representation of two specified objects. A parameter supplies culture-specific formatting information.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format_System_IFormatProvider_System_String_System_Object_System_Object_System_Object_">Format(IFormatProvider?, string, object?, object?, object?)</a></dt>
+    <dd><p>Replaces the format items in a string with the string representation of three specified objects. An parameter supplies culture-specific formatting information.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format_System_IFormatProvider_System_String_System_Object___">Format(IFormatProvider?, string, params object?[])</a></dt>
+    <dd><p>Replaces the format items in a string with the string representations of corresponding objects in a specified array. A parameter supplies culture-specific formatting information.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format_System_IFormatProvider_System_Text_CompositeFormat_System_Object___">Format(IFormatProvider?, CompositeFormat, params object?[])</a></dt>
+    <dd><p>Replaces the format item or items in a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.compositeformat">CompositeFormat</a> with the string representation of the corresponding objects in the specified format.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format_System_IFormatProvider_System_Text_CompositeFormat_System_ReadOnlySpan_System_Object__">Format(IFormatProvider?, CompositeFormat, ReadOnlySpan&lt;object?&gt;)</a></dt>
+    <dd><p>Replaces the format item or items in a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.compositeformat">CompositeFormat</a> with the string representation of the corresponding objects in the specified format.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format_System_String_System_Object_">Format(string, object?)</a></dt>
+    <dd><p>Replaces one or more format items in a string with the string representation of a specified object.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format_System_String_System_Object_System_Object_">Format(string, object?, object?)</a></dt>
+    <dd><p>Replaces the format items in a string with the string representation of two specified objects.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format_System_String_System_Object_System_Object_System_Object_">Format(string, object?, object?, object?)</a></dt>
+    <dd><p>Replaces the format items in a string with the string representation of three specified objects.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format_System_String_System_Object___">Format(string, params object?[])</a></dt>
+    <dd><p>Replaces the format item in a specified string with the string representation of a corresponding object in a specified array.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format__1_System_IFormatProvider_System_Text_CompositeFormat___0_">Format&lt;TArg0&gt;(IFormatProvider?, CompositeFormat, TArg0)</a></dt>
+    <dd><p>Replaces the format item or items in a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.compositeformat">CompositeFormat</a> with the string representation of the corresponding objects in the specified format.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format__1___0_">Format&lt;T&gt;(T)</a></dt>
+    <dd><p>Returns a string that represents the current object. It is used to replace the ToString method for vector types and no longer throws exceptions (返回表示当前对象的字符串. 用于替代向量类型的 ToString 方法. 它用于替换向量类型的 ToString 方法，不再抛出异常).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format__2_System_IFormatProvider_System_Text_CompositeFormat___0___1_">Format&lt;TArg0, TArg1&gt;(IFormatProvider?, CompositeFormat, TArg0, TArg1)</a></dt>
+    <dd><p>Replaces the format item or items in a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.compositeformat">CompositeFormat</a> with the string representation of the corresponding objects in the specified format.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.Format.html#Zyl_VectorTraits_ExVectorUtil_Format__3_System_IFormatProvider_System_Text_CompositeFormat___0___1___2_">Format&lt;TArg0, TArg1, TArg2&gt;(IFormatProvider?, CompositeFormat, TArg0, TArg1, TArg2)</a></dt>
+    <dd><p>Replaces the format item or items in a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.text.compositeformat">CompositeFormat</a> with the string representation of the corresponding objects in the specified format.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.ToString.html#Zyl_VectorTraits_ExVectorUtil_ToString_System_FormattableString_">ToString(FormattableString)</a></dt>
+    <dd><p>Safely convert interpolated string to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. Based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring">FormattableString</a> (安全地将内插字符串转为 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>. 基于 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring">FormattableString</a>).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExVectorUtil.ToString.html#Zyl_VectorTraits_ExVectorUtil_ToString_System_IFormatProvider_System_FormattableString_">ToString(IFormatProvider?, FormattableString)</a></dt>
+    <dd><p>Safely convert interpolated string to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, with <code class="paramref">provider</code> parameter. Based on <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring">FormattableString</a> (安全地将内插字符串转为 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, 带有 <code class="paramref">provider</code> 参数. 基于 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.formattablestring">FormattableString</a>).</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/ExVectorUtil.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

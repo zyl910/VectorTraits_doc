@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Zyl_VectorTraits_Impl_VectorConstants" data-uid="Zyl.VectorTraits.Impl.VectorConstants" class="text-break">
-Class VectorConstants  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorConstants.cs/#L20"><i class="bi bi-code-slash"></i></a>
+Class VectorConstants  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorConstants.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -268,6 +268,24 @@ The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(index)</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetMaskBits_ExInt128.html#Zyl_VectorTraits_Impl_VectorConstants_GetMaskBits_ExInt128_System_Int32_">GetMaskBits_ExInt128(int)</a></dt>
+    <dd><p>Get bits mask by index (根据索引获取位集掩码) - ExInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetMaskBits_ExUInt128.html#Zyl_VectorTraits_Impl_VectorConstants_GetMaskBits_ExUInt128_System_Int32_">GetMaskBits_ExUInt128(int)</a></dt>
+    <dd><p>Get bits mask by index (根据索引获取位集掩码) - ExUInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetMaskBits_Int128.html#Zyl_VectorTraits_Impl_VectorConstants_GetMaskBits_Int128_System_Int32_">GetMaskBits_Int128(int)</a></dt>
+    <dd><p>Get bits mask by index (根据索引获取位集掩码) - Int128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetMaskBits_Int16.html#Zyl_VectorTraits_Impl_VectorConstants_GetMaskBits_Int16_System_Int32_">GetMaskBits_Int16(int)</a></dt>
     <dd><p>Get bits mask by index (根据索引获取位集掩码) - Int16. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
 The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(index)</code>.</p>
@@ -288,6 +306,12 @@ The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(index)</code>.</p>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetMaskBits_SByte.html#Zyl_VectorTraits_Impl_VectorConstants_GetMaskBits_SByte_System_Int32_">GetMaskBits_SByte(int)</a></dt>
     <dd><p>Get bits mask by index (根据索引获取位集掩码) - SByte. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetMaskBits_UInt128.html#Zyl_VectorTraits_Impl_VectorConstants_GetMaskBits_UInt128_System_Int32_">GetMaskBits_UInt128(int)</a></dt>
+    <dd><p>Get bits mask by index (根据索引获取位集掩码) - UInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
 The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(index)</code>.</p>
 </dd>
   </dl>
@@ -322,6 +346,24 @@ The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetResidueMaskBits_ExInt128.html#Zyl_VectorTraits_Impl_VectorConstants_GetResidueMaskBits_ExInt128_System_Int32_">GetResidueMaskBits_ExInt128(int)</a></dt>
+    <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - ExInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetResidueMaskBits_ExUInt128.html#Zyl_VectorTraits_Impl_VectorConstants_GetResidueMaskBits_ExUInt128_System_Int32_">GetResidueMaskBits_ExUInt128(int)</a></dt>
+    <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - ExUInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetResidueMaskBits_Int128.html#Zyl_VectorTraits_Impl_VectorConstants_GetResidueMaskBits_Int128_System_Int32_">GetResidueMaskBits_Int128(int)</a></dt>
+    <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - Int128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetResidueMaskBits_Int16.html#Zyl_VectorTraits_Impl_VectorConstants_GetResidueMaskBits_Int16_System_Int32_">GetResidueMaskBits_Int16(int)</a></dt>
     <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - Int16. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
 The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>.</p>
@@ -343,6 +385,12 @@ The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetResidueMaskBits_SByte.html#Zyl_VectorTraits_Impl_VectorConstants_GetResidueMaskBits_SByte_System_Int32_">GetResidueMaskBits_SByte(int)</a></dt>
     <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - SByte. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
 The equivalent of <code>Vectors&lt;T&gt;.GetResidueMaskBits(sizeof(T)*8 - index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.VectorConstants.GetResidueMaskBits_UInt128.html#Zyl_VectorTraits_Impl_VectorConstants_GetResidueMaskBits_UInt128_System_Int32_">GetResidueMaskBits_UInt128(int)</a></dt>
+    <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - UInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vectors&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -375,7 +423,7 @@ The equivalent of <code>Vectors&lt;T&gt;.GetResidueMaskBits(sizeof(T)*8 - index)
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorConstants.cs/#L20" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/VectorConstants.cs/#L26" class="edit-link">Edit this page</a>
         </div>
 
 

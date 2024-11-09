@@ -1,0 +1,2686 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Benchmark group - Widen </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Benchmark group - Widen ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/AVector/Widen_Group.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="benchmark-group---widen">Benchmark group - Widen</h1>
+
+<p>(<a href="Widen.html">← Back</a>)</p>
+<p>Unit of data: Million operations per second. The larger the number, the better the performance.</p>
+<h3 id="x86---amd-ryzen-7-7840h">X86 - AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">2254.532</td>
+<td style="text-align: right;">2333.616</td>
+<td style="text-align: right;">2341.300</td>
+<td style="text-align: right;">2539.831</td>
+<td style="text-align: right;">2483.047</td>
+<td style="text-align: right;">2181.156</td>
+<td style="text-align: right;">2490.283</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">8901.453</td>
+<td style="text-align: right;">8495.477</td>
+<td style="text-align: right;">8630.642</td>
+<td style="text-align: right;">7849.956</td>
+<td style="text-align: right;">7868.034</td>
+<td style="text-align: right;">11092.317</td>
+<td style="text-align: right;">11010.849</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">9230.734</td>
+<td style="text-align: right;">8622.161</td>
+<td style="text-align: right;">8132.605</td>
+<td style="text-align: right;">8303.912</td>
+<td style="text-align: right;">8343.677</td>
+<td style="text-align: right;">11603.759</td>
+<td style="text-align: right;">11190.965</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRef</td>
+<td style="text-align: right;">832.749</td>
+<td style="text-align: right;">830.498</td>
+<td style="text-align: right;">830.793</td>
+<td style="text-align: right;">909.563</td>
+<td style="text-align: right;">831.884</td>
+<td style="text-align: right;">797.388</td>
+<td style="text-align: right;">779.716</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRef2</td>
+<td style="text-align: right;">826.891</td>
+<td style="text-align: right;">821.905</td>
+<td style="text-align: right;">828.135</td>
+<td style="text-align: right;">907.051</td>
+<td style="text-align: right;">832.016</td>
+<td style="text-align: right;">786.949</td>
+<td style="text-align: right;">793.123</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRefInc</td>
+<td style="text-align: right;">787.091</td>
+<td style="text-align: right;">836.429</td>
+<td style="text-align: right;">830.023</td>
+<td style="text-align: right;">864.312</td>
+<td style="text-align: right;">823.433</td>
+<td style="text-align: right;">857.018</td>
+<td style="text-align: right;">789.599</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRefInc2</td>
+<td style="text-align: right;">801.669</td>
+<td style="text-align: right;">832.033</td>
+<td style="text-align: right;">834.798</td>
+<td style="text-align: right;">902.386</td>
+<td style="text-align: right;">834.023</td>
+<td style="text-align: right;">901.551</td>
+<td style="text-align: right;">791.533</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_Ref</td>
+<td style="text-align: right;">837.384</td>
+<td style="text-align: right;">842.798</td>
+<td style="text-align: right;">850.886</td>
+<td style="text-align: right;">875.297</td>
+<td style="text-align: right;">832.714</td>
+<td style="text-align: right;">871.953</td>
+<td style="text-align: right;">783.012</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_Ref2</td>
+<td style="text-align: right;">803.198</td>
+<td style="text-align: right;">764.199</td>
+<td style="text-align: right;">845.225</td>
+<td style="text-align: right;">877.880</td>
+<td style="text-align: right;">851.150</td>
+<td style="text-align: right;">800.242</td>
+<td style="text-align: right;">784.322</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_RefInc</td>
+<td style="text-align: right;">785.104</td>
+<td style="text-align: right;">831.387</td>
+<td style="text-align: right;">833.070</td>
+<td style="text-align: right;">853.735</td>
+<td style="text-align: right;">827.436</td>
+<td style="text-align: right;">853.803</td>
+<td style="text-align: right;">784.351</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_Ref</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_Ref2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefI</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefI2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefInc</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefInc2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_Ref</td>
+<td style="text-align: right;">940.833</td>
+<td style="text-align: right;">968.398</td>
+<td style="text-align: right;">954.283</td>
+<td style="text-align: right;">982.957</td>
+<td style="text-align: right;">978.591</td>
+<td style="text-align: right;">990.262</td>
+<td style="text-align: right;">922.974</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_Ref2</td>
+<td style="text-align: right;">951.698</td>
+<td style="text-align: right;">966.483</td>
+<td style="text-align: right;">968.096</td>
+<td style="text-align: right;">975.754</td>
+<td style="text-align: right;">967.552</td>
+<td style="text-align: right;">988.872</td>
+<td style="text-align: right;">925.527</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefI</td>
+<td style="text-align: right;">771.960</td>
+<td style="text-align: right;">782.584</td>
+<td style="text-align: right;">786.836</td>
+<td style="text-align: right;">800.777</td>
+<td style="text-align: right;">788.191</td>
+<td style="text-align: right;">780.180</td>
+<td style="text-align: right;">784.102</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefI2</td>
+<td style="text-align: right;">781.617</td>
+<td style="text-align: right;">796.398</td>
+<td style="text-align: right;">798.786</td>
+<td style="text-align: right;">800.279</td>
+<td style="text-align: right;">794.031</td>
+<td style="text-align: right;">785.472</td>
+<td style="text-align: right;">789.902</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefInc</td>
+<td style="text-align: right;">763.544</td>
+<td style="text-align: right;">796.305</td>
+<td style="text-align: right;">791.618</td>
+<td style="text-align: right;">796.520</td>
+<td style="text-align: right;">792.729</td>
+<td style="text-align: right;">784.849</td>
+<td style="text-align: right;">779.901</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefInc2</td>
+<td style="text-align: right;">794.708</td>
+<td style="text-align: right;">821.672</td>
+<td style="text-align: right;">823.588</td>
+<td style="text-align: right;">842.005</td>
+<td style="text-align: right;">809.007</td>
+<td style="text-align: right;">837.674</td>
+<td style="text-align: right;">779.018</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">9014.183</td>
+<td style="text-align: right;">8192.115</td>
+<td style="text-align: right;">11612.415</td>
+<td style="text-align: right;">11955.292</td>
+<td style="text-align: right;">11552.556</td>
+<td style="text-align: right;">11214.266</td>
+<td style="text-align: right;">10877.148</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">8935.941</td>
+<td style="text-align: right;">8377.396</td>
+<td style="text-align: right;">11970.531</td>
+<td style="text-align: right;">12001.438</td>
+<td style="text-align: right;">11684.651</td>
+<td style="text-align: right;">11693.881</td>
+<td style="text-align: right;">11025.536</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">3065.080</td>
+<td style="text-align: right;">3028.525</td>
+<td style="text-align: right;">11492.239</td>
+<td style="text-align: right;">11582.847</td>
+<td style="text-align: right;">11290.438</td>
+<td style="text-align: right;">11643.575</td>
+<td style="text-align: right;">10728.196</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6277.958</td>
+<td style="text-align: right;">6227.012</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6153.964</td>
+<td style="text-align: right;">6164.549</td>
+<td style="text-align: right;">6110.993</td>
+<td style="text-align: right;">6046.995</td>
+<td style="text-align: right;">5832.495</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">6012.154</td>
+<td style="text-align: right;">6140.319</td>
+<td style="text-align: right;">6188.656</td>
+<td style="text-align: right;">5920.061</td>
+<td style="text-align: right;">5863.818</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12170.002</td>
+<td style="text-align: right;">11965.955</td>
+<td style="text-align: right;">11470.935</td>
+<td style="text-align: right;">11065.353</td>
+<td style="text-align: right;">10963.784</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Avx_ConvertTo</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11644.099</td>
+<td style="text-align: right;">11936.744</td>
+<td style="text-align: right;">11226.810</td>
+<td style="text-align: right;">11682.224</td>
+<td style="text-align: right;">10907.020</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Avx_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">8769.076</td>
+<td style="text-align: right;">8913.498</td>
+<td style="text-align: right;">8940.537</td>
+<td style="text-align: right;">8180.578</td>
+<td style="text-align: right;">7667.019</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">14043.277</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">14324.904</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">1492.863</td>
+<td style="text-align: right;">1426.625</td>
+<td style="text-align: right;">1434.122</td>
+<td style="text-align: right;">1447.139</td>
+<td style="text-align: right;">1375.062</td>
+<td style="text-align: right;">1563.158</td>
+<td style="text-align: right;">1568.560</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">36649.220</td>
+<td style="text-align: right;">34597.722</td>
+<td style="text-align: right;">35241.148</td>
+<td style="text-align: right;">34600.498</td>
+<td style="text-align: right;">35492.417</td>
+<td style="text-align: right;">46271.101</td>
+<td style="text-align: right;">47530.522</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">36763.036</td>
+<td style="text-align: right;">34640.379</td>
+<td style="text-align: right;">34431.268</td>
+<td style="text-align: right;">34742.227</td>
+<td style="text-align: right;">34369.078</td>
+<td style="text-align: right;">49842.042</td>
+<td style="text-align: right;">46969.276</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">36897.153</td>
+<td style="text-align: right;">34662.534</td>
+<td style="text-align: right;">33918.783</td>
+<td style="text-align: right;">34558.728</td>
+<td style="text-align: right;">34821.768</td>
+<td style="text-align: right;">43161.333</td>
+<td style="text-align: right;">48768.485</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">36267.794</td>
+<td style="text-align: right;">34987.598</td>
+<td style="text-align: right;">35774.898</td>
+<td style="text-align: right;">35476.955</td>
+<td style="text-align: right;">34685.544</td>
+<td style="text-align: right;">48446.925</td>
+<td style="text-align: right;">46052.153</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">12770.732</td>
+<td style="text-align: right;">12224.085</td>
+<td style="text-align: right;">34278.713</td>
+<td style="text-align: right;">33455.855</td>
+<td style="text-align: right;">34353.965</td>
+<td style="text-align: right;">50581.458</td>
+<td style="text-align: right;">49141.174</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">26037.456</td>
+<td style="text-align: right;">26125.447</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">26002.149</td>
+<td style="text-align: right;">25942.320</td>
+<td style="text-align: right;">25393.202</td>
+<td style="text-align: right;">26959.443</td>
+<td style="text-align: right;">26410.807</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">26270.943</td>
+<td style="text-align: right;">25556.874</td>
+<td style="text-align: right;">25221.824</td>
+<td style="text-align: right;">26563.574</td>
+<td style="text-align: right;">26021.520</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">49754.472</td>
+<td style="text-align: right;">50828.126</td>
+<td style="text-align: right;">49829.990</td>
+<td style="text-align: right;">46999.940</td>
+<td style="text-align: right;">46249.842</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Avx_ConvertTo</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">49920.569</td>
+<td style="text-align: right;">48627.285</td>
+<td style="text-align: right;">50193.948</td>
+<td style="text-align: right;">47815.329</td>
+<td style="text-align: right;">47836.951</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Avx_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">36225.980</td>
+<td style="text-align: right;">36124.811</td>
+<td style="text-align: right;">36274.033</td>
+<td style="text-align: right;">34241.669</td>
+<td style="text-align: right;">32412.234</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">63574.604</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">64258.185</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">1101.312</td>
+<td style="text-align: right;">1092.188</td>
+<td style="text-align: right;">1093.369</td>
+<td style="text-align: right;">1100.053</td>
+<td style="text-align: right;">1093.376</td>
+<td style="text-align: right;">1087.595</td>
+<td style="text-align: right;">1086.179</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">8251.694</td>
+<td style="text-align: right;">7913.950</td>
+<td style="text-align: right;">8080.949</td>
+<td style="text-align: right;">8161.360</td>
+<td style="text-align: right;">8026.283</td>
+<td style="text-align: right;">7807.261</td>
+<td style="text-align: right;">7548.402</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">8120.703</td>
+<td style="text-align: right;">8000.543</td>
+<td style="text-align: right;">8012.472</td>
+<td style="text-align: right;">7918.373</td>
+<td style="text-align: right;">7862.327</td>
+<td style="text-align: right;">7635.939</td>
+<td style="text-align: right;">7537.233</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">8490.373</td>
+<td style="text-align: right;">8008.741</td>
+<td style="text-align: right;">7630.889</td>
+<td style="text-align: right;">7747.803</td>
+<td style="text-align: right;">7833.755</td>
+<td style="text-align: right;">7401.778</td>
+<td style="text-align: right;">7655.748</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">8408.776</td>
+<td style="text-align: right;">7952.727</td>
+<td style="text-align: right;">7456.988</td>
+<td style="text-align: right;">7797.809</td>
+<td style="text-align: right;">7568.426</td>
+<td style="text-align: right;">7669.193</td>
+<td style="text-align: right;">7566.118</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">3125.429</td>
+<td style="text-align: right;">3073.498</td>
+<td style="text-align: right;">7566.192</td>
+<td style="text-align: right;">7800.314</td>
+<td style="text-align: right;">7680.428</td>
+<td style="text-align: right;">7606.420</td>
+<td style="text-align: right;">7653.703</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4403.237</td>
+<td style="text-align: right;">4430.082</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128_ArmB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4429.080</td>
+<td style="text-align: right;">4351.855</td>
+<td style="text-align: right;">4347.376</td>
+<td style="text-align: right;">4404.759</td>
+<td style="text-align: right;">4418.325</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4456.605</td>
+<td style="text-align: right;">4417.706</td>
+<td style="text-align: right;">4430.264</td>
+<td style="text-align: right;">4415.913</td>
+<td style="text-align: right;">4376.894</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7816.010</td>
+<td style="text-align: right;">7710.094</td>
+<td style="text-align: right;">7735.555</td>
+<td style="text-align: right;">7649.611</td>
+<td style="text-align: right;">7423.171</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10125.983</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">10177.939</td>
+</tr>
+</tbody>
+</table>
+<h3 id="x86---intel-core-i5-8250u">X86 - Intel Core i5-8250U</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">1488.682</td>
+<td style="text-align: right;">1914.571</td>
+<td style="text-align: right;">1824.120</td>
+<td style="text-align: right;">1595.172</td>
+<td style="text-align: right;">1909.800</td>
+<td style="text-align: right;">1691.289</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">5277.892</td>
+<td style="text-align: right;">5690.177</td>
+<td style="text-align: right;">5711.283</td>
+<td style="text-align: right;">4170.211</td>
+<td style="text-align: right;">5683.556</td>
+<td style="text-align: right;">8157.616</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">5303.791</td>
+<td style="text-align: right;">5694.722</td>
+<td style="text-align: right;">5693.597</td>
+<td style="text-align: right;">2781.591</td>
+<td style="text-align: right;">5668.000</td>
+<td style="text-align: right;">8181.966</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRef</td>
+<td style="text-align: right;">758.378</td>
+<td style="text-align: right;">834.543</td>
+<td style="text-align: right;">807.800</td>
+<td style="text-align: right;">673.187</td>
+<td style="text-align: right;">837.096</td>
+<td style="text-align: right;">914.744</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRef2</td>
+<td style="text-align: right;">743.722</td>
+<td style="text-align: right;">806.525</td>
+<td style="text-align: right;">785.839</td>
+<td style="text-align: right;">633.759</td>
+<td style="text-align: right;">809.733</td>
+<td style="text-align: right;">896.702</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRefInc</td>
+<td style="text-align: right;">801.638</td>
+<td style="text-align: right;">863.181</td>
+<td style="text-align: right;">833.035</td>
+<td style="text-align: right;">878.999</td>
+<td style="text-align: right;">877.333</td>
+<td style="text-align: right;">853.985</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRefInc2</td>
+<td style="text-align: right;">739.365</td>
+<td style="text-align: right;">837.199</td>
+<td style="text-align: right;">820.346</td>
+<td style="text-align: right;">846.194</td>
+<td style="text-align: right;">846.171</td>
+<td style="text-align: right;">830.746</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_Ref</td>
+<td style="text-align: right;">605.298</td>
+<td style="text-align: right;">765.494</td>
+<td style="text-align: right;">750.241</td>
+<td style="text-align: right;">774.337</td>
+<td style="text-align: right;">772.252</td>
+<td style="text-align: right;">846.803</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_Ref2</td>
+<td style="text-align: right;">581.694</td>
+<td style="text-align: right;">786.332</td>
+<td style="text-align: right;">769.718</td>
+<td style="text-align: right;">801.616</td>
+<td style="text-align: right;">796.884</td>
+<td style="text-align: right;">893.476</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_RefInc</td>
+<td style="text-align: right;">628.192</td>
+<td style="text-align: right;">862.461</td>
+<td style="text-align: right;">833.020</td>
+<td style="text-align: right;">877.667</td>
+<td style="text-align: right;">875.525</td>
+<td style="text-align: right;">855.817</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_Ref</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_Ref2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefI</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefI2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefInc</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefInc2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_Ref</td>
+<td style="text-align: right;">590.196</td>
+<td style="text-align: right;">918.569</td>
+<td style="text-align: right;">859.514</td>
+<td style="text-align: right;">1005.326</td>
+<td style="text-align: right;">999.970</td>
+<td style="text-align: right;">955.637</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_Ref2</td>
+<td style="text-align: right;">594.956</td>
+<td style="text-align: right;">919.197</td>
+<td style="text-align: right;">857.095</td>
+<td style="text-align: right;">966.818</td>
+<td style="text-align: right;">964.429</td>
+<td style="text-align: right;">932.827</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefI</td>
+<td style="text-align: right;">581.864</td>
+<td style="text-align: right;">914.435</td>
+<td style="text-align: right;">833.154</td>
+<td style="text-align: right;">963.666</td>
+<td style="text-align: right;">962.075</td>
+<td style="text-align: right;">940.102</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefI2</td>
+<td style="text-align: right;">609.939</td>
+<td style="text-align: right;">911.349</td>
+<td style="text-align: right;">832.108</td>
+<td style="text-align: right;">942.934</td>
+<td style="text-align: right;">940.756</td>
+<td style="text-align: right;">913.873</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefInc</td>
+<td style="text-align: right;">657.288</td>
+<td style="text-align: right;">907.999</td>
+<td style="text-align: right;">830.766</td>
+<td style="text-align: right;">924.255</td>
+<td style="text-align: right;">927.801</td>
+<td style="text-align: right;">910.103</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefInc2</td>
+<td style="text-align: right;">571.519</td>
+<td style="text-align: right;">885.249</td>
+<td style="text-align: right;">831.602</td>
+<td style="text-align: right;">910.871</td>
+<td style="text-align: right;">909.589</td>
+<td style="text-align: right;">886.063</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">2782.298</td>
+<td style="text-align: right;">5601.481</td>
+<td style="text-align: right;">7616.240</td>
+<td style="text-align: right;">7617.971</td>
+<td style="text-align: right;">7579.159</td>
+<td style="text-align: right;">8178.935</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">2796.704</td>
+<td style="text-align: right;">5693.582</td>
+<td style="text-align: right;">7593.985</td>
+<td style="text-align: right;">7614.725</td>
+<td style="text-align: right;">7617.416</td>
+<td style="text-align: right;">8170.439</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4700.274</td>
+<td style="text-align: right;">4709.869</td>
+<td style="text-align: right;">4669.189</td>
+<td style="text-align: right;">5126.681</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7538.434</td>
+<td style="text-align: right;">7572.857</td>
+<td style="text-align: right;">7541.495</td>
+<td style="text-align: right;">8180.761</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Avx_ConvertTo</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">7618.521</td>
+<td style="text-align: right;">7610.558</td>
+<td style="text-align: right;">7638.327</td>
+<td style="text-align: right;">8175.748</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Avx_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5762.401</td>
+<td style="text-align: right;">5744.760</td>
+<td style="text-align: right;">5785.389</td>
+<td style="text-align: right;">6239.180</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">787.017</td>
+<td style="text-align: right;">1602.848</td>
+<td style="text-align: right;">1603.028</td>
+<td style="text-align: right;">1598.229</td>
+<td style="text-align: right;">1691.638</td>
+<td style="text-align: right;">1682.945</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">14898.377</td>
+<td style="text-align: right;">24245.618</td>
+<td style="text-align: right;">24172.155</td>
+<td style="text-align: right;">24344.085</td>
+<td style="text-align: right;">24391.974</td>
+<td style="text-align: right;">35108.612</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">12652.168</td>
+<td style="text-align: right;">24257.284</td>
+<td style="text-align: right;">24228.986</td>
+<td style="text-align: right;">24296.294</td>
+<td style="text-align: right;">24329.711</td>
+<td style="text-align: right;">35129.716</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">10658.810</td>
+<td style="text-align: right;">24512.905</td>
+<td style="text-align: right;">24097.252</td>
+<td style="text-align: right;">24043.838</td>
+<td style="text-align: right;">24367.657</td>
+<td style="text-align: right;">35043.588</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">11729.631</td>
+<td style="text-align: right;">24532.131</td>
+<td style="text-align: right;">24170.269</td>
+<td style="text-align: right;">24208.835</td>
+<td style="text-align: right;">24265.151</td>
+<td style="text-align: right;">34715.131</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">19602.814</td>
+<td style="text-align: right;">19509.404</td>
+<td style="text-align: right;">19522.882</td>
+<td style="text-align: right;">17908.484</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">34172.219</td>
+<td style="text-align: right;">34273.834</td>
+<td style="text-align: right;">34299.718</td>
+<td style="text-align: right;">35140.634</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Avx_ConvertTo</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">34226.865</td>
+<td style="text-align: right;">34202.248</td>
+<td style="text-align: right;">34404.021</td>
+<td style="text-align: right;">35136.199</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Avx_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">24063.055</td>
+<td style="text-align: right;">24661.423</td>
+<td style="text-align: right;">24572.602</td>
+<td style="text-align: right;">26326.472</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">634.488</td>
+<td style="text-align: right;">840.000</td>
+<td style="text-align: right;">843.191</td>
+<td style="text-align: right;">839.261</td>
+<td style="text-align: right;">841.721</td>
+<td style="text-align: right;">840.517</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">3594.591</td>
+<td style="text-align: right;">6098.000</td>
+<td style="text-align: right;">6115.246</td>
+<td style="text-align: right;">6123.769</td>
+<td style="text-align: right;">6115.295</td>
+<td style="text-align: right;">6124.735</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">3241.637</td>
+<td style="text-align: right;">5995.226</td>
+<td style="text-align: right;">6095.198</td>
+<td style="text-align: right;">6087.328</td>
+<td style="text-align: right;">6126.545</td>
+<td style="text-align: right;">6082.314</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">3828.368</td>
+<td style="text-align: right;">6099.402</td>
+<td style="text-align: right;">6194.871</td>
+<td style="text-align: right;">6109.801</td>
+<td style="text-align: right;">6170.394</td>
+<td style="text-align: right;">6084.322</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">4591.236</td>
+<td style="text-align: right;">6106.502</td>
+<td style="text-align: right;">5951.918</td>
+<td style="text-align: right;">6028.154</td>
+<td style="text-align: right;">6088.241</td>
+<td style="text-align: right;">6110.339</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128_ArmB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3366.437</td>
+<td style="text-align: right;">3375.541</td>
+<td style="text-align: right;">3374.769</td>
+<td style="text-align: right;">3378.751</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5922.261</td>
+<td style="text-align: right;">6116.942</td>
+<td style="text-align: right;">6019.948</td>
+<td style="text-align: right;">6113.611</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---apple-m2">Arm - Apple M2</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">1730.782</td>
+<td style="text-align: right;">1747.163</td>
+<td style="text-align: right;">1747.574</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">6803.226</td>
+<td style="text-align: right;">6803.028</td>
+<td style="text-align: right;">6804.250</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">6801.120</td>
+<td style="text-align: right;">6804.076</td>
+<td style="text-align: right;">6804.020</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRef</td>
+<td style="text-align: right;">2155.604</td>
+<td style="text-align: right;">2567.712</td>
+<td style="text-align: right;">2701.874</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRef2</td>
+<td style="text-align: right;">2352.115</td>
+<td style="text-align: right;">2833.900</td>
+<td style="text-align: right;">2773.761</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRefInc</td>
+<td style="text-align: right;">2358.251</td>
+<td style="text-align: right;">2709.955</td>
+<td style="text-align: right;">3153.551</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRefInc2</td>
+<td style="text-align: right;">2169.733</td>
+<td style="text-align: right;">2581.155</td>
+<td style="text-align: right;">2783.450</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_Ref</td>
+<td style="text-align: right;">2009.639</td>
+<td style="text-align: right;">2569.250</td>
+<td style="text-align: right;">2706.734</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_Ref2</td>
+<td style="text-align: right;">2259.802</td>
+<td style="text-align: right;">2690.564</td>
+<td style="text-align: right;">2610.766</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_RefInc</td>
+<td style="text-align: right;">2358.161</td>
+<td style="text-align: right;">2709.309</td>
+<td style="text-align: right;">3151.770</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_Ref</td>
+<td style="text-align: right;">3178.062</td>
+<td style="text-align: right;">3294.916</td>
+<td style="text-align: right;">3395.136</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_Ref2</td>
+<td style="text-align: right;">3227.189</td>
+<td style="text-align: right;">3293.200</td>
+<td style="text-align: right;">3394.358</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefI</td>
+<td style="text-align: right;">3257.744</td>
+<td style="text-align: right;">3314.283</td>
+<td style="text-align: right;">3396.126</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefI2</td>
+<td style="text-align: right;">3233.826</td>
+<td style="text-align: right;">3293.809</td>
+<td style="text-align: right;">3390.830</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefInc</td>
+<td style="text-align: right;">3229.408</td>
+<td style="text-align: right;">3293.997</td>
+<td style="text-align: right;">3377.728</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefInc2</td>
+<td style="text-align: right;">3058.537</td>
+<td style="text-align: right;">3258.196</td>
+<td style="text-align: right;">3393.094</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_Ref</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_Ref2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefI</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefI2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefInc</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefInc2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">6800.379</td>
+<td style="text-align: right;">6803.195</td>
+<td style="text-align: right;">6803.998</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">6803.411</td>
+<td style="text-align: right;">6803.633</td>
+<td style="text-align: right;">6803.699</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">3359.160</td>
+<td style="text-align: right;">3189.992</td>
+<td style="text-align: right;">6803.850</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3190.474</td>
+<td style="text-align: right;">6804.371</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;">6800.430</td>
+<td style="text-align: right;">6802.587</td>
+<td style="text-align: right;">6803.538</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;">6800.337</td>
+<td style="text-align: right;">6801.833</td>
+<td style="text-align: right;">6803.583</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;">3359.087</td>
+<td style="text-align: right;">3187.982</td>
+<td style="text-align: right;">6803.260</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;">711.244</td>
+<td style="text-align: right;">282.078</td>
+<td style="text-align: right;">13507.372</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Avx_ConvertTo</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Avx_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13527.831</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13527.071</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">1688.465</td>
+<td style="text-align: right;">1691.328</td>
+<td style="text-align: right;">1692.147</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">27229.541</td>
+<td style="text-align: right;">27216.188</td>
+<td style="text-align: right;">27229.453</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">27209.420</td>
+<td style="text-align: right;">27221.954</td>
+<td style="text-align: right;">27229.410</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">27221.867</td>
+<td style="text-align: right;">27222.696</td>
+<td style="text-align: right;">27231.529</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">27222.661</td>
+<td style="text-align: right;">27225.615</td>
+<td style="text-align: right;">27229.186</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">13420.688</td>
+<td style="text-align: right;">12750.485</td>
+<td style="text-align: right;">27232.954</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">12749.405</td>
+<td style="text-align: right;">27229.658</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;">27208.961</td>
+<td style="text-align: right;">27224.351</td>
+<td style="text-align: right;">27228.620</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;">27239.426</td>
+<td style="text-align: right;">12740.490</td>
+<td style="text-align: right;">27238.115</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;">13428.271</td>
+<td style="text-align: right;">6054.487</td>
+<td style="text-align: right;">27236.399</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;">1523.490</td>
+<td style="text-align: right;">646.792</td>
+<td style="text-align: right;">54065.309</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Avx_ConvertTo</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Avx_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">54230.681</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">54247.210</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">1133.883</td>
+<td style="text-align: right;">1165.922</td>
+<td style="text-align: right;">1165.793</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">4537.542</td>
+<td style="text-align: right;">4536.672</td>
+<td style="text-align: right;">4536.819</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">4535.382</td>
+<td style="text-align: right;">4537.063</td>
+<td style="text-align: right;">4537.021</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">4536.357</td>
+<td style="text-align: right;">4536.623</td>
+<td style="text-align: right;">4537.396</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">4536.093</td>
+<td style="text-align: right;">4537.297</td>
+<td style="text-align: right;">4537.599</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">3360.726</td>
+<td style="text-align: right;">3180.835</td>
+<td style="text-align: right;">4536.955</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4537.007</td>
+<td style="text-align: right;">4537.337</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;">1528.218</td>
+<td style="text-align: right;">1532.928</td>
+<td style="text-align: right;">1928.528</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128_ArmB64</td>
+<td style="text-align: right;">4535.853</td>
+<td style="text-align: right;">4536.535</td>
+<td style="text-align: right;">4537.619</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;">4536.361</td>
+<td style="text-align: right;">4536.837</td>
+<td style="text-align: right;">4537.559</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;">3499.643</td>
+<td style="text-align: right;">3246.749</td>
+<td style="text-align: right;">4538.026</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;">581.915</td>
+<td style="text-align: right;">293.185</td>
+<td style="text-align: right;">9028.034</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13579.285</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">13578.096</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---aws-arm-t4gsmall">Arm - AWS Arm t4g.small</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">749.244</td>
+<td style="text-align: right;">747.360</td>
+<td style="text-align: right;">749.738</td>
+<td style="text-align: right;">1241.653</td>
+<td style="text-align: right;">1243.836</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">3553.920</td>
+<td style="text-align: right;">3192.224</td>
+<td style="text-align: right;">3192.094</td>
+<td style="text-align: right;">3813.135</td>
+<td style="text-align: right;">3206.932</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">3543.074</td>
+<td style="text-align: right;">3142.346</td>
+<td style="text-align: right;">3457.053</td>
+<td style="text-align: right;">3816.794</td>
+<td style="text-align: right;">3196.625</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRef</td>
+<td style="text-align: right;">532.938</td>
+<td style="text-align: right;">533.904</td>
+<td style="text-align: right;">534.798</td>
+<td style="text-align: right;">547.755</td>
+<td style="text-align: right;">539.521</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRef2</td>
+<td style="text-align: right;">532.833</td>
+<td style="text-align: right;">368.947</td>
+<td style="text-align: right;">527.858</td>
+<td style="text-align: right;">547.288</td>
+<td style="text-align: right;">539.731</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRefInc</td>
+<td style="text-align: right;">526.785</td>
+<td style="text-align: right;">508.097</td>
+<td style="text-align: right;">512.722</td>
+<td style="text-align: right;">543.955</td>
+<td style="text-align: right;">549.302</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRefInc2</td>
+<td style="text-align: right;">532.259</td>
+<td style="text-align: right;">520.827</td>
+<td style="text-align: right;">519.690</td>
+<td style="text-align: right;">412.721</td>
+<td style="text-align: right;">552.214</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_Ref</td>
+<td style="text-align: right;">536.899</td>
+<td style="text-align: right;">533.218</td>
+<td style="text-align: right;">533.031</td>
+<td style="text-align: right;">545.583</td>
+<td style="text-align: right;">539.944</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_Ref2</td>
+<td style="text-align: right;">534.587</td>
+<td style="text-align: right;">531.701</td>
+<td style="text-align: right;">340.391</td>
+<td style="text-align: right;">549.645</td>
+<td style="text-align: right;">542.143</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_RefInc</td>
+<td style="text-align: right;">305.822</td>
+<td style="text-align: right;">511.621</td>
+<td style="text-align: right;">511.485</td>
+<td style="text-align: right;">544.878</td>
+<td style="text-align: right;">548.963</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_Ref</td>
+<td style="text-align: right;">516.063</td>
+<td style="text-align: right;">505.397</td>
+<td style="text-align: right;">507.320</td>
+<td style="text-align: right;">536.108</td>
+<td style="text-align: right;">549.244</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_Ref2</td>
+<td style="text-align: right;">517.332</td>
+<td style="text-align: right;">507.588</td>
+<td style="text-align: right;">506.936</td>
+<td style="text-align: right;">536.552</td>
+<td style="text-align: right;">548.710</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefI</td>
+<td style="text-align: right;">518.065</td>
+<td style="text-align: right;">508.464</td>
+<td style="text-align: right;">508.962</td>
+<td style="text-align: right;">535.673</td>
+<td style="text-align: right;">548.106</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefI2</td>
+<td style="text-align: right;">520.847</td>
+<td style="text-align: right;">511.014</td>
+<td style="text-align: right;">511.073</td>
+<td style="text-align: right;">535.215</td>
+<td style="text-align: right;">547.161</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefInc</td>
+<td style="text-align: right;">523.538</td>
+<td style="text-align: right;">514.092</td>
+<td style="text-align: right;">513.827</td>
+<td style="text-align: right;">537.479</td>
+<td style="text-align: right;">547.948</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefInc2</td>
+<td style="text-align: right;">532.347</td>
+<td style="text-align: right;">520.542</td>
+<td style="text-align: right;">520.732</td>
+<td style="text-align: right;">538.432</td>
+<td style="text-align: right;">546.744</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_Ref</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_Ref2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefI</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefI2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefInc</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefInc2</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">3291.431</td>
+<td style="text-align: right;">3480.225</td>
+<td style="text-align: right;">3226.132</td>
+<td style="text-align: right;">3792.197</td>
+<td style="text-align: right;">3270.046</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">3554.814</td>
+<td style="text-align: right;">3461.064</td>
+<td style="text-align: right;">3127.243</td>
+<td style="text-align: right;">3782.360</td>
+<td style="text-align: right;">3273.569</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">740.407</td>
+<td style="text-align: right;">742.823</td>
+<td style="text-align: right;">721.010</td>
+<td style="text-align: right;">766.501</td>
+<td style="text-align: right;">3210.275</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">769.057</td>
+<td style="text-align: right;">3209.519</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2981.951</td>
+<td style="text-align: right;">2966.613</td>
+<td style="text-align: right;">3806.328</td>
+<td style="text-align: right;">3182.450</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;">243.827</td>
+<td style="text-align: right;">2998.620</td>
+<td style="text-align: right;">2996.682</td>
+<td style="text-align: right;">3806.301</td>
+<td style="text-align: right;">3211.422</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;">167.510</td>
+<td style="text-align: right;">742.083</td>
+<td style="text-align: right;">713.744</td>
+<td style="text-align: right;">767.994</td>
+<td style="text-align: right;">3174.646</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;">181.773</td>
+<td style="text-align: right;">270.374</td>
+<td style="text-align: right;">269.044</td>
+<td style="text-align: right;">115.035</td>
+<td style="text-align: right;">3604.290</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Avx_ConvertTo</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Avx_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3625.745</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3627.551</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">763.832</td>
+<td style="text-align: right;">745.586</td>
+<td style="text-align: right;">844.629</td>
+<td style="text-align: right;">1201.863</td>
+<td style="text-align: right;">1208.435</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">14270.443</td>
+<td style="text-align: right;">12796.934</td>
+<td style="text-align: right;">12982.929</td>
+<td style="text-align: right;">15281.536</td>
+<td style="text-align: right;">12969.867</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">14300.698</td>
+<td style="text-align: right;">12796.786</td>
+<td style="text-align: right;">12996.731</td>
+<td style="text-align: right;">15289.153</td>
+<td style="text-align: right;">12969.157</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">13208.029</td>
+<td style="text-align: right;">13947.906</td>
+<td style="text-align: right;">13626.837</td>
+<td style="text-align: right;">15324.971</td>
+<td style="text-align: right;">12963.049</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">13189.526</td>
+<td style="text-align: right;">12982.516</td>
+<td style="text-align: right;">13712.771</td>
+<td style="text-align: right;">15121.821</td>
+<td style="text-align: right;">12998.963</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">3068.204</td>
+<td style="text-align: right;">2977.798</td>
+<td style="text-align: right;">2758.807</td>
+<td style="text-align: right;">2960.328</td>
+<td style="text-align: right;">12982.925</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3083.452</td>
+<td style="text-align: right;">12974.279</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11954.541</td>
+<td style="text-align: right;">11973.719</td>
+<td style="text-align: right;">15356.639</td>
+<td style="text-align: right;">12956.539</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;">445.229</td>
+<td style="text-align: right;">11668.198</td>
+<td style="text-align: right;">11988.909</td>
+<td style="text-align: right;">3083.590</td>
+<td style="text-align: right;">12979.281</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;">335.194</td>
+<td style="text-align: right;">3047.689</td>
+<td style="text-align: right;">2864.418</td>
+<td style="text-align: right;">1867.340</td>
+<td style="text-align: right;">12983.269</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;">460.131</td>
+<td style="text-align: right;">572.922</td>
+<td style="text-align: right;">572.637</td>
+<td style="text-align: right;">172.468</td>
+<td style="text-align: right;">14461.715</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Avx_ConvertTo</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Avx_Unpack</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">14805.651</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">14805.076</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">901.465</td>
+<td style="text-align: right;">825.338</td>
+<td style="text-align: right;">827.889</td>
+<td style="text-align: right;">1243.598</td>
+<td style="text-align: right;">1243.899</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">3281.583</td>
+<td style="text-align: right;">3168.093</td>
+<td style="text-align: right;">3469.623</td>
+<td style="text-align: right;">3618.807</td>
+<td style="text-align: right;">3136.182</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">3552.245</td>
+<td style="text-align: right;">3149.163</td>
+<td style="text-align: right;">3199.008</td>
+<td style="text-align: right;">3622.533</td>
+<td style="text-align: right;">3138.588</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">3548.242</td>
+<td style="text-align: right;">3444.203</td>
+<td style="text-align: right;">3160.921</td>
+<td style="text-align: right;">3622.737</td>
+<td style="text-align: right;">3136.279</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">3284.196</td>
+<td style="text-align: right;">3248.274</td>
+<td style="text-align: right;">3462.879</td>
+<td style="text-align: right;">3624.135</td>
+<td style="text-align: right;">3186.439</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">756.511</td>
+<td style="text-align: right;">765.812</td>
+<td style="text-align: right;">713.384</td>
+<td style="text-align: right;">731.596</td>
+<td style="text-align: right;">3126.116</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3612.349</td>
+<td style="text-align: right;">3136.396</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">405.555</td>
+<td style="text-align: right;">405.416</td>
+<td style="text-align: right;">593.858</td>
+<td style="text-align: right;">843.967</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128_ArmB64</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2927.491</td>
+<td style="text-align: right;">2951.373</td>
+<td style="text-align: right;">3622.139</td>
+<td style="text-align: right;">3122.563</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;">213.478</td>
+<td style="text-align: right;">2912.039</td>
+<td style="text-align: right;">2928.986</td>
+<td style="text-align: right;">3627.594</td>
+<td style="text-align: right;">3133.783</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;">156.006</td>
+<td style="text-align: right;">768.810</td>
+<td style="text-align: right;">713.954</td>
+<td style="text-align: right;">765.985</td>
+<td style="text-align: right;">3138.652</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;">181.686</td>
+<td style="text-align: right;">259.164</td>
+<td style="text-align: right;">257.456</td>
+<td style="text-align: right;">110.853</td>
+<td style="text-align: right;">3463.491</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3627.605</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3599.776</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wasm---wasm-on-amd-ryzen-7-7840h">Wasm - Wasm on AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">46.833</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">6.146</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">6.178</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRef</td>
+<td style="text-align: right;">8.178</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRef2</td>
+<td style="text-align: right;">7.961</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRefInc</td>
+<td style="text-align: right;">8.141</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_NRefInc2</td>
+<td style="text-align: right;">7.424</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_Ref</td>
+<td style="text-align: right;">7.775</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_Ref2</td>
+<td style="text-align: right;">7.844</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase_RefInc</td>
+<td style="text-align: right;">8.180</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_Ref</td>
+<td style="text-align: right;">9.001</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_Ref2</td>
+<td style="text-align: right;">9.077</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefI</td>
+<td style="text-align: right;">9.234</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefI2</td>
+<td style="text-align: right;">9.090</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefInc</td>
+<td style="text-align: right;">8.877</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase128_RefInc2</td>
+<td style="text-align: right;">8.916</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_Ref</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_Ref2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefI</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefI2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefInc</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorBase256_RefInc2</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">6.589</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">6.953</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">4.046</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;">6.438</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;">14.124</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;">6.505</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;">3.946</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Avx_ConvertTo</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector256Avx_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;">2.500</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Int32</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;">3.884</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">47.880</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">22.841</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">22.437</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">20.009</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">19.733</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">15.138</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;">16.885</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;">13.664</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;">16.474</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;">12.840</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Avx_ConvertTo</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector256Avx_Unpack</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;">12.828</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_SByte</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;">12.100</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenScalar</td>
+<td style="text-align: right;">46.406</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenBcl</td>
+<td style="text-align: right;">5.276</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorBase</td>
+<td style="text-align: right;">5.114</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits</td>
+<td style="text-align: right;">1.883</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits_Ptr</td>
+<td style="text-align: right;">1.835</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVectorTraits_Tuple</td>
+<td style="text-align: right;">3.454</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Bcl</td>
+<td style="text-align: right;">6.235</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128_AdvSimd</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128_ArmB64</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Traits</td>
+<td style="text-align: right;">2.619</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector128Traits_Tuple</td>
+<td style="text-align: right;">5.874</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector256Traits</td>
+<td style="text-align: right;">3.693</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector512Bcl</td>
+<td style="text-align: right;">2.343</td>
+</tr>
+<tr>
+<td style="text-align: left;">WidenBenchmark_Single</td>
+<td style="text-align: left;">SumWidenVector512Traits</td>
+<td style="text-align: right;">3.979</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/AVector/Widen_Group.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

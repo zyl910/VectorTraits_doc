@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert*" class="text-break">
-Method YShuffleInsert  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L849"><i class="bi bi-code-slash"></i></a>
+Method YShuffleInsert  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2289"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YShuffleInsert  <a class="header-action link-secondary" title="View sourc
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Int32})">
   YShuffleInsert(Vector&lt;float&gt;, Vector&lt;float&gt;, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L849"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2289"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -170,7 +170,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Int64})">
   YShuffleInsert(Vector&lt;double&gt;, Vector&lt;double&gt;, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L855"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2295"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -223,7 +223,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte})">
   YShuffleInsert(Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L861"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2301"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -278,7 +278,7 @@ public override Vector&lt;sbyte&gt; YShuffleInsert(Vector&lt;sbyte&gt; back, Vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte})">
   YShuffleInsert(Vector&lt;byte&gt;, Vector&lt;byte&gt;, Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L868"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2308"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -332,7 +332,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16})">
   YShuffleInsert(Vector&lt;short&gt;, Vector&lt;short&gt;, Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L874"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2314"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -385,7 +385,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16})">
   YShuffleInsert(Vector&lt;ushort&gt;, Vector&lt;ushort&gt;, Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L880"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2320"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -439,7 +439,7 @@ public override Vector&lt;ushort&gt; YShuffleInsert(Vector&lt;ushort&gt; back, V
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})">
   YShuffleInsert(Vector&lt;int&gt;, Vector&lt;int&gt;, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L887"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2327"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -492,7 +492,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32})">
   YShuffleInsert(Vector&lt;uint&gt;, Vector&lt;uint&gt;, Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L893"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2333"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -546,7 +546,7 @@ public override Vector&lt;uint&gt; YShuffleInsert(Vector&lt;uint&gt; back, Vecto
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})">
   YShuffleInsert(Vector&lt;long&gt;, Vector&lt;long&gt;, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L900"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2340"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -599,7 +599,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits128AdvSimdB64Abstract_YShuffleInsert_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits128AdvSimdB64Abstract.YShuffleInsert(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64})">
   YShuffleInsert(Vector&lt;ulong&gt;, Vector&lt;ulong&gt;, Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L906"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2346"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shuffle and insert (换位并插入). Creates a new vector by selecting values from an input vector using a set of indices (通过使用一组索引从输入向量中选择值，来创建一个新向量). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -652,7 +652,7 @@ public override Vector&lt;ulong&gt; YShuffleInsert(Vector&lt;ulong&gt; back, Vec
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L849" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits128AdvSimdB64Abstract.Y.cs/#L2289" class="edit-link">Edit this page</a>
         </div>
 
 

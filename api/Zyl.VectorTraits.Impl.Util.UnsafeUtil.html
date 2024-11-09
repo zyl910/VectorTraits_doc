@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -148,6 +148,27 @@ Class UnsafeUtil  <a class="header-action link-secondary" title="View source" hr
 </h2>
 
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.BitCast.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_BitCast__2___0_">BitCast&lt;TFrom, TTo&gt;(TFrom)</a></dt>
+    <dd><p>Reinterprets the given value of type <code class="typeparamref">TFrom</code> as a value of type <code class="typeparamref">TTo</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.Dec.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_Dec__1___0__">Dec&lt;T&gt;(ref T)</a></dt>
+    <dd><p>Decrement to the given managed pointer (向给定的托管指针递减).
+Mnemonic: <code>--p</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.GetArrayDataReference.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_GetArrayDataReference__1___0___">GetArrayDataReference&lt;T&gt;(T[])</a></dt>
+    <dd><p>Returns a reference to the 0th element of array. If the array is empty, returns a reference to where the 0th element would have been stored. Such a reference may be used for pinning but must never be dereferenced.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.GetOffset.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_GetOffset__1___0____0__">GetOffset&lt;T&gt;(ref T, ref T)</a></dt>
+    <dd><p>Determines byte offset from origin to target from the given references (确定给定托管指针从源到目标的字节偏移量).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.GetReference.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_GetReference__1_System_ReadOnlySpan___0__">GetReference&lt;T&gt;(ReadOnlySpan&lt;T&gt;)</a></dt>
     <dd><p>Returns a reference to the element of the read-only span at index 0 (返回只读跨度在索引0处的引用).</p>
 </dd>
@@ -155,6 +176,96 @@ Class UnsafeUtil  <a class="header-action link-secondary" title="View source" hr
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.GetReference.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_GetReference__1_System_Span___0__">GetReference&lt;T&gt;(Span&lt;T&gt;)</a></dt>
     <dd><p>Returns a reference to the element of the span at index 0 (返回跨度在索引0处的引用).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.Inc.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_Inc__1___0__">Inc&lt;T&gt;(ref T)</a></dt>
+    <dd><p>Increment to the given managed pointer (向给定的托管指针递增).
+Mnemonic: <code>++p</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.IsAddressGreaterThanOrEqual.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_IsAddressGreaterThanOrEqual__1___0____0__">IsAddressGreaterThanOrEqual&lt;T&gt;(ref T, ref T)</a></dt>
+    <dd><p>Determines whether the memory address referenced by <code class="paramref">left</code> is greater or equal than the memory address referenced by <code class="paramref">right</code> (返回一个值，该值指示指定的托管指针是否大于另一个指定的托管指针).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.IsAddressGreaterThanOrEqual.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_IsAddressGreaterThanOrEqual__1___0____0__System_Int32_">IsAddressGreaterThanOrEqual&lt;T&gt;(ref T, ref T, int)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.IsAddressLessThaOrEqual.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_IsAddressLessThaOrEqual__1___0____0__">IsAddressLessThaOrEqual&lt;T&gt;(ref T, ref T)</a></dt>
+    <dd><p>Determines whether the memory address referenced by <code class="paramref">left</code> is less or equal than the memory address referenced by <code class="paramref">right</code> (返回一个值，该值指示指定的托管指针是否小于另一个指定的托管指针).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.IsNullRef.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_IsNullRef__1___0__">IsNullRef&lt;T&gt;(ref T)</a></dt>
+    <dd><p>Determines if a given managed pointer to a value of type <code class="typeparamref">T</code> is a null reference (确定指向类型的 <code class="typeparamref">T</code> 值的给定托管指针是否为 null 引用).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.NullRef.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_NullRef__1">NullRef&lt;T&gt;()</a></dt>
+    <dd><p>Returns a reference to a value of type <code class="typeparamref">T</code> that is a null reference (返回指向 <code class="typeparamref">T</code> 类型的值的 null 托管指针).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.PostDecExceptZero.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_PostDecExceptZero__1___0____0____0_">PostDecExceptZero&lt;T&gt;(ref T, out T, T)</a></dt>
+    <dd><p>When not equal to the zero, post-decrement of the given managed pointer (当不与0相等时, 向给定的托管指针后置递减).
+Mnemonic: <code>beforeValue = (*p != 0) ? *p-- : newValue)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.PostDecExcept.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_PostDecExcept__1___0____0____0_">PostDecExcept&lt;T&gt;(ref T, out T, T)</a></dt>
+    <dd><p>When not equal to the specified value, post-decrement of the given managed pointer (当不与指定值相等时, 向给定的托管指针后置递减).
+Mnemonic: <code>beforeValue = (*p != checkValue) ? *p-- : newValue)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.PostDecExcept.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_PostDecExcept__1___0____0____0___0_">PostDecExcept&lt;T&gt;(ref T, out T, T, T)</a></dt>
+    <dd><p>When not equal to the specified value, post-decrement of the given managed pointer. It contains the checkValue parameter (当不与指定值相等时, 向给定的托管指针后置递减. 它含有 checkValue 参数).
+Mnemonic: <code>beforeValue = (*p != checkValue) ? *p-- : newValue)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.PostDec.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_PostDec__1___0____0__">PostDec&lt;T&gt;(ref T, out T)</a></dt>
+    <dd><p>Post-decrement to the given managed pointer. It also returns the value pointed to before the decrement (向给定的托管指针后置递减. 还会返回递减之前所指向的值).
+Mnemonic: <code>beforeValue = p--</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.PostIncExceptZero.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_PostIncExceptZero__1___0____0____0_">PostIncExceptZero&lt;T&gt;(ref T, out T, T)</a></dt>
+    <dd><p>When not equal to the zero, post-increment of the given managed pointer (当不与0相等时, 向给定的托管指针后置递增).
+Mnemonic: <code>beforeValue = (*p != 0) ? *p++ : newValue)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.PostIncExcept.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_PostIncExcept__1___0____0____0_">PostIncExcept&lt;T&gt;(ref T, out T, T)</a></dt>
+    <dd><p>When not equal to the specified value, post-increment of the given managed pointer (当不与指定值相等时, 向给定的托管指针后置递增).
+Mnemonic: <code>beforeValue = (*p != checkValue) ? *p++ : newValue)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.PostIncExcept.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_PostIncExcept__1___0____0____0___0_">PostIncExcept&lt;T&gt;(ref T, out T, T, T)</a></dt>
+    <dd><p>When not equal to the specified value, post-increment of the given managed pointer. It contains the checkValue parameter (当不与指定值相等时, 向给定的托管指针后置递增. 它含有 checkValue 参数).
+Mnemonic: <code>beforeValue = (*p != checkValue) ? *p++ : newValue)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.PostInc.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_PostInc__1___0____0__">PostInc&lt;T&gt;(ref T, out T)</a></dt>
+    <dd><p>Post-increment to the given managed pointer. It also returns the value pointed to before the increment (向给定的托管指针后置递增. 还会返回递增之前所指向的值).
+Mnemonic: <code>beforeValue = p++</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.PreDec.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_PreDec__1___0____0__">PreDec&lt;T&gt;(ref T, out T)</a></dt>
+    <dd><p>Pre-decrement to the given managed pointer. It also returns the value pointed to after the decrement (向给定的托管指针前置递减. 还会返回递减之后所指向的值).
+Mnemonic: <code>afterValue = --p</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Util.UnsafeUtil.PreInc.html#Zyl_VectorTraits_Impl_Util_UnsafeUtil_PreInc__1___0____0__">PreInc&lt;T&gt;(ref T, out T)</a></dt>
+    <dd><p>Pre-increment to the given managed pointer. It also returns the value pointed to after the increment (向给定的托管指针前置递增. 还会返回递增之后所指向的值).
+Mnemonic: <code>afterValue = ++p</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">

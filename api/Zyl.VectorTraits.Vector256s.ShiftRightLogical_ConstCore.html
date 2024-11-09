@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vector256s_ShiftRightLogical_ConstCore_" data-uid="Zyl.VectorTraits.Vector256s.ShiftRightLogical_ConstCore*" class="text-break">
-Method ShiftRightLogical_ConstCore  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1750"><i class="bi bi-code-slash"></i></a>
+Method ShiftRightLogical_ConstCore  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1758"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ShiftRightLogical_ConstCore  <a class="header-action link-secondary" titl
 
 <h3 id="Zyl_VectorTraits_Vector256s_ShiftRightLogical_ConstCore_System_Runtime_Intrinsics_Vector256_System_SByte__System_Int32_System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Vector256s.ShiftRightLogical_ConstCore(System.Runtime.Intrinsics.Vector256{System.SByte},System.Int32,System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte})">
   ShiftRightLogical_ConstCore(Vector256&lt;sbyte&gt;, int, Vector256&lt;sbyte&gt;, Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1750"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1758"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量的核心计算 - 常量). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -176,7 +176,7 @@ public static Vector256&lt;sbyte&gt; ShiftRightLogical_ConstCore(Vector256&lt;sb
 
 <h3 id="Zyl_VectorTraits_Vector256s_ShiftRightLogical_ConstCore_System_Runtime_Intrinsics_Vector256_System_Byte__System_Int32_System_Runtime_Intrinsics_Vector256_System_Byte__System_Runtime_Intrinsics_Vector256_System_Byte__" data-uid="Zyl.VectorTraits.Vector256s.ShiftRightLogical_ConstCore(System.Runtime.Intrinsics.Vector256{System.Byte},System.Int32,System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte})">
   ShiftRightLogical_ConstCore(Vector256&lt;byte&gt;, int, Vector256&lt;byte&gt;, Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1761"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1769"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量的核心计算 - 常量). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -234,7 +234,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vector256s_ShiftRightLogical_ConstCore_System_Runtime_Intrinsics_Vector256_System_Int16__System_Int32_System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Vector256s.ShiftRightLogical_ConstCore(System.Runtime.Intrinsics.Vector256{System.Int16},System.Int32,System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16})">
   ShiftRightLogical_ConstCore(Vector256&lt;short&gt;, int, Vector256&lt;short&gt;, Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1771"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1779"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量的核心计算 - 常量). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -292,7 +292,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vector256s_ShiftRightLogical_ConstCore_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Int32_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Runtime_Intrinsics_Vector256_System_UInt16__" data-uid="Zyl.VectorTraits.Vector256s.ShiftRightLogical_ConstCore(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Int32,System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16})">
   ShiftRightLogical_ConstCore(Vector256&lt;ushort&gt;, int, Vector256&lt;ushort&gt;, Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1781"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1789"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量的核心计算 - 常量). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -351,7 +351,7 @@ public static Vector256&lt;ushort&gt; ShiftRightLogical_ConstCore(Vector256&lt;u
 
 <h3 id="Zyl_VectorTraits_Vector256s_ShiftRightLogical_ConstCore_System_Runtime_Intrinsics_Vector256_System_Int32__System_Int32_System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Vector256s.ShiftRightLogical_ConstCore(System.Runtime.Intrinsics.Vector256{System.Int32},System.Int32,System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32})">
   ShiftRightLogical_ConstCore(Vector256&lt;int&gt;, int, Vector256&lt;int&gt;, Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1792"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1800"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量的核心计算 - 常量). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -409,7 +409,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vector256s_ShiftRightLogical_ConstCore_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Int32_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Runtime_Intrinsics_Vector256_System_UInt32__" data-uid="Zyl.VectorTraits.Vector256s.ShiftRightLogical_ConstCore(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Int32,System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32})">
   ShiftRightLogical_ConstCore(Vector256&lt;uint&gt;, int, Vector256&lt;uint&gt;, Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1802"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1810"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量的核心计算 - 常量). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -468,7 +468,7 @@ public static Vector256&lt;uint&gt; ShiftRightLogical_ConstCore(Vector256&lt;uin
 
 <h3 id="Zyl_VectorTraits_Vector256s_ShiftRightLogical_ConstCore_System_Runtime_Intrinsics_Vector256_System_Int64__System_Int32_System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Vector256s.ShiftRightLogical_ConstCore(System.Runtime.Intrinsics.Vector256{System.Int64},System.Int32,System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64})">
   ShiftRightLogical_ConstCore(Vector256&lt;long&gt;, int, Vector256&lt;long&gt;, Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1813"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1821"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量的核心计算 - 常量). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -526,7 +526,7 @@ Mnemonic: <code>rt[i] := value[i] &gt;&gt;&gt; shiftAmount</code>.</p>
 
 <h3 id="Zyl_VectorTraits_Vector256s_ShiftRightLogical_ConstCore_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Int32_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Runtime_Intrinsics_Vector256_System_UInt64__" data-uid="Zyl.VectorTraits.Vector256s.ShiftRightLogical_ConstCore(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Int32,System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64})">
   ShiftRightLogical_ConstCore(Vector256&lt;ulong&gt;, int, Vector256&lt;ulong&gt;, Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1823"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1831"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shifts (unsigned) each element of a vector right by the specified amount - Const (将向量的每个无符号元素逻辑右移指定量的核心计算 - 常量). Its arguments are derived from ShiftRightLogical_Args (其参数来源于 ShiftRightLogical_Args).
@@ -584,7 +584,7 @@ public static Vector256&lt;ulong&gt; ShiftRightLogical_ConstCore(Vector256&lt;ul
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1750" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.cs/#L1758" class="edit-link">Edit this page</a>
         </div>
 
 

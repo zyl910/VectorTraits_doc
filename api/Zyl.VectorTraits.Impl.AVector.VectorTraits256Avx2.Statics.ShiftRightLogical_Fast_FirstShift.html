@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2_Statics_ShiftRightLogical_Fast_FirstShift_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2.Statics.ShiftRightLogical_Fast_FirstShift*" class="text-break">
-Method ShiftRightLogical_Fast_FirstShift  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2.cs/#L1235"><i class="bi bi-code-slash"></i></a>
+Method ShiftRightLogical_Fast_FirstShift  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2.cs/#L1242"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method ShiftRightLogical_Fast_FirstShift  <a class="header-action link-secondary
 
 <h3 id="Zyl_VectorTraits_Impl_AVector_VectorTraits256Avx2_Statics_ShiftRightLogical_Fast_FirstShift_System_Numerics_Vector_System_Byte__System_Int32_" data-uid="Zyl.VectorTraits.Impl.AVector.VectorTraits256Avx2.Statics.ShiftRightLogical_Fast_FirstShift(System.Numerics.Vector{System.Byte},System.Int32)">
   ShiftRightLogical_Fast_FirstShift(Vector&lt;byte&gt;, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2.cs/#L1235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2.cs/#L1242"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Shifts (unsigned) each element of a vector right by the specified amount. - Fast(将向量的每个无符号元素逻辑右移指定量 - 快速). No check <code class="paramref">shiftAmount</code>, please use <a class="xref" href="Zyl.VectorTraits.Scalars.LimitShiftAmount.html#Zyl_VectorTraits_Scalars_LimitShiftAmount__1_System_Int32_">LimitShiftAmount&lt;T&gt;(int)</a> first, and shiftAmount must not be 0 .
@@ -168,7 +168,7 @@ public static Vector&lt;byte&gt; ShiftRightLogical_Fast_FirstShift(Vector&lt;byt
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2.cs/#L1235" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector/VectorTraits256Avx2.cs/#L1242" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vector128s_CreateRotate_" data-uid="Zyl.VectorTraits.Vector128s.CreateRotate*" class="text-break">
-Method CreateRotate  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L321"><i class="bi bi-code-slash"></i></a>
+Method CreateRotate  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L362"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method CreateRotate  <a class="header-action link-secondary" title="View source"
 
 <h3 id="Zyl_VectorTraits_Vector128s_CreateRotate__1___0___System_Int32_System_Int32_" data-uid="Zyl.VectorTraits.Vector128s.CreateRotate``1(``0[],System.Int32,System.Int32)">
   CreateRotate&lt;T&gt;(T[], int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L362"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Rotate creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> from a given span starting at a specified index position (于指定索引位置开始，从指定跨度旋转创建一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a>).</p>
@@ -174,7 +174,7 @@ Method CreateRotate  <a class="header-action link-secondary" title="View source"
 
 <h3 id="Zyl_VectorTraits_Vector128s_CreateRotate__1_System_ReadOnlySpan___0__System_Int32_System_Int32_" data-uid="Zyl.VectorTraits.Vector128s.CreateRotate``1(System.ReadOnlySpan{``0},System.Int32,System.Int32)">
   CreateRotate&lt;T&gt;(ReadOnlySpan&lt;T&gt;, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L375"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Rotate creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> from a given span starting at a specified index position (于指定索引位置开始，从指定跨度旋转创建一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a>).</p>
@@ -231,10 +231,10 @@ Method CreateRotate  <a class="header-action link-secondary" title="View source"
 
 <h3 id="Zyl_VectorTraits_Vector128s_CreateRotate__1_System_ReadOnlySpan___0__" data-uid="Zyl.VectorTraits.Vector128s.CreateRotate``1(System.ReadOnlySpan{``0})">
   CreateRotate&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L399"><i class="bi bi-code-slash"></i></a>
 </h3>
 
-<div class="markdown level1 summary"><p>Rotate creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> from a given span starting at a specified index position (于指定索引位置开始，从指定跨度旋转创建一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a>).</p>
+<div class="markdown level1 summary"><p>Rotate creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> from a given span (从指定跨度旋转创建一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a>).</p>
 </div>
 <div class="markdown level1 conceptual"></div>
 
@@ -276,7 +276,7 @@ Method CreateRotate  <a class="header-action link-secondary" title="View source"
 
 <h3 id="Zyl_VectorTraits_Vector128s_CreateRotate__1___0___" data-uid="Zyl.VectorTraits.Vector128s.CreateRotate``1(``0[])">
   CreateRotate&lt;T&gt;(params T[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L368"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L409"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Rotate creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> from a given array (从给定数组旋转创建一个新的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector128-1">Vector128&lt;T&gt;</a> ).</p>
@@ -320,7 +320,7 @@ Method CreateRotate  <a class="header-action link-secondary" title="View source"
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L321" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector128s.cs/#L362" class="edit-link">Edit this page</a>
         </div>
 
 

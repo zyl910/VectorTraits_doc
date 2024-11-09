@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vectors_Create_" data-uid="Zyl.VectorTraits.Vectors.Create*" class="text-break">
-Method Create  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L232"><i class="bi bi-code-slash"></i></a>
+Method Create  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L356"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vectors_Create__1___0_" data-uid="Zyl.VectorTraits.Vectors.Create``1(``0)">
   Create&lt;T&gt;(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L356"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> instance with all elements initialized to the specified value (创建新的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> 实例，其中所有元素已初始化为指定值).</p>
@@ -168,7 +168,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vectors_Create__1___0___" data-uid="Zyl.VectorTraits.Vectors.Create``1(``0[])">
   Create&lt;T&gt;(T[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L380"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> from a given array (从给定数组创建一个新的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> ).</p>
@@ -219,7 +219,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vectors_Create__1___0___System_Int32_" data-uid="Zyl.VectorTraits.Vectors.Create``1(``0[],System.Int32)">
   Create&lt;T&gt;(T[], int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L395"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> from a given array starting at a specified index position (于指定索引位置开始，从指定数组创建一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>).</p>
@@ -279,7 +279,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vectors_Create__1_System_ReadOnlySpan_System_Byte__" data-uid="Zyl.VectorTraits.Vectors.Create``1(System.ReadOnlySpan{System.Byte})">
   Create&lt;T&gt;(ReadOnlySpan&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L414"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> from a given read-only span of bytes (根据给定的只读字节跨度构造一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>).</p>
@@ -336,7 +336,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vectors_Create__1_System_ReadOnlySpan___0__" data-uid="Zyl.VectorTraits.Vectors.Create``1(System.ReadOnlySpan{``0})">
   Create&lt;T&gt;(ReadOnlySpan&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L291"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L431"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> from a from the given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> (根据给定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan&lt;T&gt;</a> 构造一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>).</p>
@@ -393,7 +393,7 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 
 <h3 id="Zyl_VectorTraits_Vectors_Create__1_System_Span___0__" data-uid="Zyl.VectorTraits.Vectors.Create``1(System.Span{``0})">
   Create&lt;T&gt;(Span&lt;T&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L448"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> from a from the given <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> (根据给定的 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.span-1">Span&lt;T&gt;</a> 构造一个 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a>).</p>
@@ -446,10 +446,168 @@ Method Create  <a class="header-action link-secondary" title="View source" href=
 </dl>
 
 
+<a id="Zyl_VectorTraits_Vectors_Create_" data-uid="Zyl.VectorTraits.Vectors.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vectors_Create_Zyl_VectorTraits_ExTypes_ExInt128_" data-uid="Zyl.VectorTraits.Vectors.Create(Zyl.VectorTraits.ExTypes.ExInt128)">
+  Create(ExInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.ExType.cs/#L21"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a> with all elements initialized to the specified value (创建新的元素类型为<a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a>的向量实例，其中所有元素已初始化为指定值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector&lt;ExInt128&gt; Create(ExInt128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a></dt>
+  <dd><p>The value that all elements will be initialized to (所有元素的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> with all elements initialized to <code class="paramref">value</code> (一个新向量，它的所有元素都初始化为 <code class="paramref">value</code>).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vectors_Create_" data-uid="Zyl.VectorTraits.Vectors.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vectors_Create_Zyl_VectorTraits_ExTypes_ExUInt128_" data-uid="Zyl.VectorTraits.Vectors.Create(Zyl.VectorTraits.ExTypes.ExUInt128)">
+  Create(ExUInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.ExType.cs/#L47"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a> with all elements initialized to the specified value (创建新的元素类型为<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>的向量实例，其中所有元素已初始化为指定值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector&lt;ExUInt128&gt; Create(ExUInt128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a></dt>
+  <dd><p>The value that all elements will be initialized to (所有元素的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> with all elements initialized to <code class="paramref">value</code> (一个新向量，它的所有元素都初始化为 <code class="paramref">value</code>).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vectors_Create_" data-uid="Zyl.VectorTraits.Vectors.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vectors_Create_System_Int128_" data-uid="Zyl.VectorTraits.Vectors.Create(System.Int128)">
+  Create(Int128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.ExType.cs/#L76"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a> with all elements initialized to the specified value (创建新的元素类型为<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a>的向量实例，其中所有元素已初始化为指定值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">public static Vector&lt;Int128&gt; Create(Int128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a></dt>
+  <dd><p>The value that all elements will be initialized to (所有元素的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> with all elements initialized to <code class="paramref">value</code> (一个新向量，它的所有元素都初始化为 <code class="paramref">value</code>).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+<a id="Zyl_VectorTraits_Vectors_Create_" data-uid="Zyl.VectorTraits.Vectors.Create*"></a>
+
+<h3 id="Zyl_VectorTraits_Vectors_Create_System_UInt128_" data-uid="Zyl.VectorTraits.Vectors.Create(System.UInt128)">
+  Create(UInt128)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.ExType.cs/#L84"><i class="bi bi-code-slash"></i></a>
+</h3>
+
+<div class="markdown level1 summary"><p>Creates a new vector instance of element type <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a> with all elements initialized to the specified value (创建新的元素类型为<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a>的向量实例，其中所有元素已初始化为指定值).</p>
+</div>
+<div class="markdown level1 conceptual"></div>
+
+<div class="codewrapper">
+  <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public static Vector&lt;UInt128&gt; Create(UInt128 value)</code></pre>
+</div>
+
+<h4 class="section">Parameters</h4>
+<dl class="parameters">
+  <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a></dt>
+  <dd><p>The value that all elements will be initialized to (所有元素的初始化值).</p>
+</dd>
+</dl>
+
+<h4 class="section">Returns</h4>
+<dl class="parameters">
+  <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a>&gt;</dt>
+  <dd><p>A new <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.vector-1">Vector&lt;T&gt;</a> with all elements initialized to <code class="paramref">value</code> (一个新向量，它的所有元素都初始化为 <code class="paramref">value</code>).</p>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L232" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.cs/#L356" class="edit-link">Edit this page</a>
         </div>
 
 

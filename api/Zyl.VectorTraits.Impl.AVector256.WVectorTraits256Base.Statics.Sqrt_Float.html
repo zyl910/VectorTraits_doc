@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Sqrt_Float_" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Sqrt_Float*" class="text-break">
-Method Sqrt_Float  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5050"><i class="bi bi-code-slash"></i></a>
+Method Sqrt_Float  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5205"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method Sqrt_Float  <a class="header-action link-secondary" title="View source" h
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Sqrt_Float_System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Sqrt_Float(System.Runtime.Intrinsics.Vector256{System.SByte})">
   Sqrt_Float(Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5050"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5205"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -164,7 +164,7 @@ public static Vector256&lt;sbyte&gt; Sqrt_Float(Vector256&lt;sbyte&gt; value)</c
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Sqrt_Float_System_Runtime_Intrinsics_Vector256_System_Byte__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Sqrt_Float(System.Runtime.Intrinsics.Vector256{System.Byte})">
   Sqrt_Float(Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5060"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5215"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -210,7 +210,7 @@ Mnemonic: <code>rt[i] := sqrt(vector[i]) = pow(vector[i], 1.0/2)</code>. When x 
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Sqrt_Float_System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Sqrt_Float(System.Runtime.Intrinsics.Vector256{System.Int16})">
   Sqrt_Float(Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5087"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5242"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -256,7 +256,7 @@ Mnemonic: <code>rt[i] := sqrt(vector[i]) = pow(vector[i], 1.0/2)</code>. When x 
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Sqrt_Float_System_Runtime_Intrinsics_Vector256_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Sqrt_Float(System.Runtime.Intrinsics.Vector256{System.UInt16})">
   Sqrt_Float(Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5096"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5251"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -303,7 +303,7 @@ public static Vector256&lt;ushort&gt; Sqrt_Float(Vector256&lt;ushort&gt; value)<
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Sqrt_Float_System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Sqrt_Float(System.Runtime.Intrinsics.Vector256{System.Int32})">
   Sqrt_Float(Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5269"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -349,7 +349,7 @@ Mnemonic: <code>rt[i] := sqrt(vector[i]) = pow(vector[i], 1.0/2)</code>. When x 
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Sqrt_Float_System_Runtime_Intrinsics_Vector256_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Sqrt_Float(System.Runtime.Intrinsics.Vector256{System.UInt32})">
   Sqrt_Float(Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5123"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5278"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -396,7 +396,7 @@ public static Vector256&lt;uint&gt; Sqrt_Float(Vector256&lt;uint&gt; value)</cod
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Sqrt_Float_System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Sqrt_Float(System.Runtime.Intrinsics.Vector256{System.Int64})">
   Sqrt_Float(Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5141"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5296"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -442,7 +442,7 @@ Mnemonic: <code>rt[i] := sqrt(vector[i]) = pow(vector[i], 1.0/2)</code>. When x 
 
 <h3 id="Zyl_VectorTraits_Impl_AVector256_WVectorTraits256Base_Statics_Sqrt_Float_System_Runtime_Intrinsics_Vector256_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.AVector256.WVectorTraits256Base.Statics.Sqrt_Float(System.Runtime.Intrinsics.Vector256{System.UInt64})">
   Sqrt_Float(Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5305"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Computes the square root of a vector on a per-element basis (计算向量中每个元素的平方根).
@@ -488,7 +488,7 @@ public static Vector256&lt;ulong&gt; Sqrt_Float(Vector256&lt;ulong&gt; value)</c
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5050" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/AVector256/WVectorTraits256Base.Supplement.cs/#L5205" class="edit-link">Edit this page</a>
         </div>
 
 

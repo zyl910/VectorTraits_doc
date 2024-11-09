@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Zyl_VectorTraits_Impl_Vector256Constants" data-uid="Zyl.VectorTraits.Impl.Vector256Constants" class="text-break">
-Class Vector256Constants  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/Vector256Constants.cs/#L22"><i class="bi bi-code-slash"></i></a>
+Class Vector256Constants  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/Vector256Constants.YG.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -150,6 +150,11 @@ Class Vector256Constants  <a class="header-action link-secondary" title="View so
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.Byte_One.html#Zyl_VectorTraits_Impl_Vector256Constants_Byte_One">Byte_One</a></dt>
     <dd><p>Value 1 .</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.Byte_VMinSByte.html#Zyl_VectorTraits_Impl_Vector256Constants_Byte_VMinSByte">Byte_VMinSByte</a></dt>
+    <dd><p>Value -128 (sbyte.MinValue).</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -322,6 +327,1871 @@ Class Vector256Constants  <a class="header-action link-secondary" title="View so
     <dd><p>YBitToByte - Shuffle - Indices .</p>
 </dd>
   </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt16_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt16_0">YGroup1ToGroup3_ShuffleOnByte_UInt16_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt16 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt16_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt16_1">YGroup1ToGroup3_ShuffleOnByte_UInt16_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt16 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt16_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt16_2">YGroup1ToGroup3_ShuffleOnByte_UInt16_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt16 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt16_Each128_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt16_Each128_0">YGroup1ToGroup3_ShuffleOnByte_UInt16_Each128_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt16 - Each 128 bits - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt16_Each128_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt16_Each128_1">YGroup1ToGroup3_ShuffleOnByte_UInt16_Each128_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt16 - Each 128 bits - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt16_Each128_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt16_Each128_2">YGroup1ToGroup3_ShuffleOnByte_UInt16_Each128_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt16 - Each 128 bits - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt32_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt32_0">YGroup1ToGroup3_ShuffleOnByte_UInt32_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt32 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt32_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt32_1">YGroup1ToGroup3_ShuffleOnByte_UInt32_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt32 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt32_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt32_2">YGroup1ToGroup3_ShuffleOnByte_UInt32_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt32 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt32_Each128_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt32_Each128_0">YGroup1ToGroup3_ShuffleOnByte_UInt32_Each128_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt32 - Each 128 bits - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt32_Each128_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt32_Each128_1">YGroup1ToGroup3_ShuffleOnByte_UInt32_Each128_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt32 - Each 128 bits - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt32_Each128_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt32_Each128_2">YGroup1ToGroup3_ShuffleOnByte_UInt32_Each128_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt32 - Each 128 bits - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt64_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt64_0">YGroup1ToGroup3_ShuffleOnByte_UInt64_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt64 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt64_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt64_1">YGroup1ToGroup3_ShuffleOnByte_UInt64_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt64 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt64_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt64_2">YGroup1ToGroup3_ShuffleOnByte_UInt64_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt64 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt64_Each128_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt64_Each128_0">YGroup1ToGroup3_ShuffleOnByte_UInt64_Each128_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt64 - Each 128 bits - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt64_Each128_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt64_Each128_1">YGroup1ToGroup3_ShuffleOnByte_UInt64_Each128_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt64 - Each 128 bits - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_ShuffleOnByte_UInt64_Each128_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_ShuffleOnByte_UInt64_Each128_2">YGroup1ToGroup3_ShuffleOnByte_UInt64_Each128_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle on byte - UInt64 - Each 128 bits - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_Byte_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_Byte_0">YGroup1ToGroup3_Shuffle_Byte_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - Byte - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_Byte_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_Byte_1">YGroup1ToGroup3_Shuffle_Byte_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - Byte - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_Byte_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_Byte_2">YGroup1ToGroup3_Shuffle_Byte_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - Byte - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_Byte_Each128_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_Byte_Each128_0">YGroup1ToGroup3_Shuffle_Byte_Each128_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - Byte - Each 128 bits - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_Byte_Each128_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_Byte_Each128_1">YGroup1ToGroup3_Shuffle_Byte_Each128_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - Byte - Each 128 bits - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_Byte_Each128_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_Byte_Each128_2">YGroup1ToGroup3_Shuffle_Byte_Each128_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - Byte - Each 128 bits - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_UInt16_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_UInt16_0">YGroup1ToGroup3_Shuffle_UInt16_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - UInt16 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_UInt16_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_UInt16_1">YGroup1ToGroup3_Shuffle_UInt16_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - UInt16 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_UInt16_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_UInt16_2">YGroup1ToGroup3_Shuffle_UInt16_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - UInt16 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_UInt32_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_UInt32_0">YGroup1ToGroup3_Shuffle_UInt32_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - UInt32 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_UInt32_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_UInt32_1">YGroup1ToGroup3_Shuffle_UInt32_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - UInt32 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_UInt32_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_UInt32_2">YGroup1ToGroup3_Shuffle_UInt32_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - UInt32 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_UInt64_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_UInt64_0">YGroup1ToGroup3_Shuffle_UInt64_0</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - UInt64 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_UInt64_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_UInt64_1">YGroup1ToGroup3_Shuffle_UInt64_1</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - UInt64 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup1ToGroup3_Shuffle_UInt64_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup1ToGroup3_Shuffle_UInt64_2">YGroup1ToGroup3_Shuffle_UInt64_2</a></dt>
+    <dd><p>YGroup1ToGroup3 - Shuffle - UInt64 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt16_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt16_0">YGroup2Transpose_ShuffleOnByte_UInt16_0</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt16 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt16_0A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt16_0A">YGroup2Transpose_ShuffleOnByte_UInt16_0A</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt16 - The index of item 0 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt16_0B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt16_0B">YGroup2Transpose_ShuffleOnByte_UInt16_0B</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt16 - The index of item 0 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt16_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt16_1">YGroup2Transpose_ShuffleOnByte_UInt16_1</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt16 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt16_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt16_1A">YGroup2Transpose_ShuffleOnByte_UInt16_1A</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt16 - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt16_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt16_1B">YGroup2Transpose_ShuffleOnByte_UInt16_1B</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt16 - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt32_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt32_0">YGroup2Transpose_ShuffleOnByte_UInt32_0</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt32 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt32_0A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt32_0A">YGroup2Transpose_ShuffleOnByte_UInt32_0A</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt32 - The index of item 0 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt32_0B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt32_0B">YGroup2Transpose_ShuffleOnByte_UInt32_0B</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt32 - The index of item 0 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt32_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt32_1">YGroup2Transpose_ShuffleOnByte_UInt32_1</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt32 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt32_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt32_1A">YGroup2Transpose_ShuffleOnByte_UInt32_1A</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt32 - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt32_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt32_1B">YGroup2Transpose_ShuffleOnByte_UInt32_1B</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt32 - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt64_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt64_0">YGroup2Transpose_ShuffleOnByte_UInt64_0</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt64 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt64_0A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt64_0A">YGroup2Transpose_ShuffleOnByte_UInt64_0A</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt64 - The index of item 0 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt64_0B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt64_0B">YGroup2Transpose_ShuffleOnByte_UInt64_0B</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt64 - The index of item 0 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt64_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt64_1">YGroup2Transpose_ShuffleOnByte_UInt64_1</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt64 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt64_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt64_1A">YGroup2Transpose_ShuffleOnByte_UInt64_1A</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt64 - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_ShuffleOnByte_UInt64_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_ShuffleOnByte_UInt64_1B">YGroup2Transpose_ShuffleOnByte_UInt64_1B</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle on byte - UInt64 - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_Byte_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_Byte_0">YGroup2Transpose_Shuffle_Byte_0</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - Byte - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_Byte_0A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_Byte_0A">YGroup2Transpose_Shuffle_Byte_0A</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - Byte - The index of item 0 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_Byte_0B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_Byte_0B">YGroup2Transpose_Shuffle_Byte_0B</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - Byte - The index of item 0 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_Byte_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_Byte_1">YGroup2Transpose_Shuffle_Byte_1</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - Byte - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_Byte_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_Byte_1A">YGroup2Transpose_Shuffle_Byte_1A</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - Byte - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_Byte_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_Byte_1B">YGroup2Transpose_Shuffle_Byte_1B</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - Byte - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_UInt16_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_UInt16_0">YGroup2Transpose_Shuffle_UInt16_0</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - UInt16 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_UInt16_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_UInt16_1">YGroup2Transpose_Shuffle_UInt16_1</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - UInt16 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_UInt32_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_UInt32_0">YGroup2Transpose_Shuffle_UInt32_0</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - UInt32 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_UInt32_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_UInt32_1">YGroup2Transpose_Shuffle_UInt32_1</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - UInt32 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_UInt64_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_UInt64_0">YGroup2Transpose_Shuffle_UInt64_0</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - UInt64 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Transpose_Shuffle_UInt64_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Transpose_Shuffle_UInt64_1">YGroup2Transpose_Shuffle_UInt64_1</a></dt>
+    <dd><p>YGroup2Transpose - Shuffle - UInt64 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Unzip_ShuffleX2_Byte_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Unzip_ShuffleX2_Byte_X">YGroup2Unzip_ShuffleX2_Byte_X</a></dt>
+    <dd><p>YGroup2Unzip - ShuffleX2 - Byte - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Unzip_ShuffleX2_Byte_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Unzip_ShuffleX2_Byte_Y">YGroup2Unzip_ShuffleX2_Byte_Y</a></dt>
+    <dd><p>YGroup2Unzip - ShuffleX2 - Byte - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Unzip_ShuffleX2_UInt16_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Unzip_ShuffleX2_UInt16_X">YGroup2Unzip_ShuffleX2_UInt16_X</a></dt>
+    <dd><p>YGroup2Unzip - ShuffleX2 - UInt16 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Unzip_ShuffleX2_UInt16_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Unzip_ShuffleX2_UInt16_Y">YGroup2Unzip_ShuffleX2_UInt16_Y</a></dt>
+    <dd><p>YGroup2Unzip - ShuffleX2 - UInt16 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Unzip_ShuffleX2_UInt32_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Unzip_ShuffleX2_UInt32_X">YGroup2Unzip_ShuffleX2_UInt32_X</a></dt>
+    <dd><p>YGroup2Unzip - ShuffleX2 - UInt32 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Unzip_ShuffleX2_UInt32_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Unzip_ShuffleX2_UInt32_Y">YGroup2Unzip_ShuffleX2_UInt32_Y</a></dt>
+    <dd><p>YGroup2Unzip - ShuffleX2 - UInt32 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Unzip_ShuffleX2_UInt64_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Unzip_ShuffleX2_UInt64_X">YGroup2Unzip_ShuffleX2_UInt64_X</a></dt>
+    <dd><p>YGroup2Unzip - ShuffleX2 - UInt64 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Unzip_ShuffleX2_UInt64_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Unzip_ShuffleX2_UInt64_Y">YGroup2Unzip_ShuffleX2_UInt64_Y</a></dt>
+    <dd><p>YGroup2Unzip - ShuffleX2 - UInt64 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Zip_ShuffleX2_Byte_Data0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Zip_ShuffleX2_Byte_Data0">YGroup2Zip_ShuffleX2_Byte_Data0</a></dt>
+    <dd><p>YGroup2Zip - ShuffleX2 - Byte - The index of data0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Zip_ShuffleX2_Byte_Data1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Zip_ShuffleX2_Byte_Data1">YGroup2Zip_ShuffleX2_Byte_Data1</a></dt>
+    <dd><p>YGroup2Zip - ShuffleX2 - Byte - The index of data1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Zip_ShuffleX2_UInt16_Data0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Zip_ShuffleX2_UInt16_Data0">YGroup2Zip_ShuffleX2_UInt16_Data0</a></dt>
+    <dd><p>YGroup2Zip - ShuffleX2 - UInt16 - The index of data0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Zip_ShuffleX2_UInt16_Data1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Zip_ShuffleX2_UInt16_Data1">YGroup2Zip_ShuffleX2_UInt16_Data1</a></dt>
+    <dd><p>YGroup2Zip - ShuffleX2 - UInt16 - The index of data1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Zip_ShuffleX2_UInt32_Data0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Zip_ShuffleX2_UInt32_Data0">YGroup2Zip_ShuffleX2_UInt32_Data0</a></dt>
+    <dd><p>YGroup2Zip - ShuffleX2 - UInt32 - The index of data0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Zip_ShuffleX2_UInt32_Data1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Zip_ShuffleX2_UInt32_Data1">YGroup2Zip_ShuffleX2_UInt32_Data1</a></dt>
+    <dd><p>YGroup2Zip - ShuffleX2 - UInt32 - The index of data1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Zip_ShuffleX2_UInt64_Data0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Zip_ShuffleX2_UInt64_Data0">YGroup2Zip_ShuffleX2_UInt64_Data0</a></dt>
+    <dd><p>YGroup2Zip - ShuffleX2 - UInt64 - The index of data0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup2Zip_ShuffleX2_UInt64_Data1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup2Zip_ShuffleX2_UInt64_Data1">YGroup2Zip_ShuffleX2_UInt64_Data1</a></dt>
+    <dd><p>YGroup2Zip - ShuffleX2 - UInt64 - The index of data1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_0">YGroup3ToGroup4_ShuffleOnByte_UInt16_0</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_0_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_0_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt16_0_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_1">YGroup3ToGroup4_ShuffleOnByte_UInt16_1</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_1A">YGroup3ToGroup4_ShuffleOnByte_UInt16_1A</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_1A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_1A_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt16_1A_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 1 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_1B">YGroup3ToGroup4_ShuffleOnByte_UInt16_1B</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_1B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_1B_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt16_1B_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 1 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_2">YGroup3ToGroup4_ShuffleOnByte_UInt16_2</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_2A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_2A">YGroup3ToGroup4_ShuffleOnByte_UInt16_2A</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 2 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_2A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_2A_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt16_2A_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 2 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_2B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_2B">YGroup3ToGroup4_ShuffleOnByte_UInt16_2B</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 2 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_2B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_2B_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt16_2B_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 2 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_3.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_3">YGroup3ToGroup4_ShuffleOnByte_UInt16_3</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt16_3_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt16_3_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt16_3_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt16 - The index of item 3 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_0">YGroup3ToGroup4_ShuffleOnByte_UInt32_0</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_0_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_0_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt32_0_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_1">YGroup3ToGroup4_ShuffleOnByte_UInt32_1</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_1A">YGroup3ToGroup4_ShuffleOnByte_UInt32_1A</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_1A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_1A_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt32_1A_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 1 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_1B">YGroup3ToGroup4_ShuffleOnByte_UInt32_1B</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_1B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_1B_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt32_1B_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 1 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_2">YGroup3ToGroup4_ShuffleOnByte_UInt32_2</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_2A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_2A">YGroup3ToGroup4_ShuffleOnByte_UInt32_2A</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 2 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_2A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_2A_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt32_2A_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 2 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_2B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_2B">YGroup3ToGroup4_ShuffleOnByte_UInt32_2B</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 2 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_2B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_2B_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt32_2B_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 2 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_3.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_3">YGroup3ToGroup4_ShuffleOnByte_UInt32_3</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt32_3_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt32_3_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt32_3_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt32 - The index of item 3 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_0">YGroup3ToGroup4_ShuffleOnByte_UInt64_0</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_0_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_0_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt64_0_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_1">YGroup3ToGroup4_ShuffleOnByte_UInt64_1</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_1A">YGroup3ToGroup4_ShuffleOnByte_UInt64_1A</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_1A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_1A_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt64_1A_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 1 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_1B">YGroup3ToGroup4_ShuffleOnByte_UInt64_1B</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_1B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_1B_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt64_1B_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 1 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_2">YGroup3ToGroup4_ShuffleOnByte_UInt64_2</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_2A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_2A">YGroup3ToGroup4_ShuffleOnByte_UInt64_2A</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 2 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_2A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_2A_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt64_2A_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 2 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_2B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_2B">YGroup3ToGroup4_ShuffleOnByte_UInt64_2B</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 2 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_2B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_2B_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt64_2B_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 2 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_3.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_3">YGroup3ToGroup4_ShuffleOnByte_UInt64_3</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_ShuffleOnByte_UInt64_3_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_ShuffleOnByte_UInt64_3_Each128">YGroup3ToGroup4_ShuffleOnByte_UInt64_3_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle on byte - UInt64 - The index of item 3 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_0">YGroup3ToGroup4_Shuffle_Byte_0</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_0_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_0_Each128">YGroup3ToGroup4_Shuffle_Byte_0_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_1">YGroup3ToGroup4_Shuffle_Byte_1</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_1A">YGroup3ToGroup4_Shuffle_Byte_1A</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_1A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_1A_Each128">YGroup3ToGroup4_Shuffle_Byte_1A_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 1 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_1B">YGroup3ToGroup4_Shuffle_Byte_1B</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_1B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_1B_Each128">YGroup3ToGroup4_Shuffle_Byte_1B_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 1 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_2">YGroup3ToGroup4_Shuffle_Byte_2</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_2A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_2A">YGroup3ToGroup4_Shuffle_Byte_2A</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 2 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_2A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_2A_Each128">YGroup3ToGroup4_Shuffle_Byte_2A_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 2 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_2B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_2B">YGroup3ToGroup4_Shuffle_Byte_2B</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 2 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_2B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_2B_Each128">YGroup3ToGroup4_Shuffle_Byte_2B_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 2 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_3.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_3">YGroup3ToGroup4_Shuffle_Byte_3</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_Byte_3_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_Byte_3_Each128">YGroup3ToGroup4_Shuffle_Byte_3_Each128</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - Byte - The index of item 3 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt16_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt16_0">YGroup3ToGroup4_Shuffle_UInt16_0</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt16 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt16_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt16_1">YGroup3ToGroup4_Shuffle_UInt16_1</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt16 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt16_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt16_2">YGroup3ToGroup4_Shuffle_UInt16_2</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt16 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt16_3.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt16_3">YGroup3ToGroup4_Shuffle_UInt16_3</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt16 - The index of item 3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt32_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt32_0">YGroup3ToGroup4_Shuffle_UInt32_0</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt32 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt32_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt32_1">YGroup3ToGroup4_Shuffle_UInt32_1</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt32 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt32_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt32_2">YGroup3ToGroup4_Shuffle_UInt32_2</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt32 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt32_3.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt32_3">YGroup3ToGroup4_Shuffle_UInt32_3</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt32 - The index of item 3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt64_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt64_0">YGroup3ToGroup4_Shuffle_UInt64_0</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt64 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt64_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt64_1">YGroup3ToGroup4_Shuffle_UInt64_1</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt64 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt64_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt64_2">YGroup3ToGroup4_Shuffle_UInt64_2</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt64 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3ToGroup4_Shuffle_UInt64_3.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3ToGroup4_Shuffle_UInt64_3">YGroup3ToGroup4_Shuffle_UInt64_3</a></dt>
+    <dd><p>YGroup3ToGroup4 - Shuffle - UInt64 - The index of item 3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_X">YGroup3Unzip_ShuffleOnByte_UInt16_X</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_X_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_X_Each128Part0">YGroup3Unzip_ShuffleOnByte_UInt16_X_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of X - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_X_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_X_Each128Part1">YGroup3Unzip_ShuffleOnByte_UInt16_X_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of X - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_X_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_X_Each128Part2">YGroup3Unzip_ShuffleOnByte_UInt16_X_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of X - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_Y">YGroup3Unzip_ShuffleOnByte_UInt16_Y</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_Y_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_Y_Each128Part0">YGroup3Unzip_ShuffleOnByte_UInt16_Y_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of Y - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_Y_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_Y_Each128Part1">YGroup3Unzip_ShuffleOnByte_UInt16_Y_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of Y - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_Y_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_Y_Each128Part2">YGroup3Unzip_ShuffleOnByte_UInt16_Y_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of Y - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_Z">YGroup3Unzip_ShuffleOnByte_UInt16_Z</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_Z_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_Z_Each128Part0">YGroup3Unzip_ShuffleOnByte_UInt16_Z_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of Z - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_Z_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_Z_Each128Part1">YGroup3Unzip_ShuffleOnByte_UInt16_Z_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of Z - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt16_Z_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt16_Z_Each128Part2">YGroup3Unzip_ShuffleOnByte_UInt16_Z_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt16 - The index of Z - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_X">YGroup3Unzip_ShuffleOnByte_UInt32_X</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_X_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_X_Each128Part0">YGroup3Unzip_ShuffleOnByte_UInt32_X_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of X - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_X_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_X_Each128Part1">YGroup3Unzip_ShuffleOnByte_UInt32_X_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of X - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_X_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_X_Each128Part2">YGroup3Unzip_ShuffleOnByte_UInt32_X_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of X - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_Y">YGroup3Unzip_ShuffleOnByte_UInt32_Y</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_Y_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_Y_Each128Part0">YGroup3Unzip_ShuffleOnByte_UInt32_Y_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of Y - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_Y_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_Y_Each128Part1">YGroup3Unzip_ShuffleOnByte_UInt32_Y_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of Y - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_Y_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_Y_Each128Part2">YGroup3Unzip_ShuffleOnByte_UInt32_Y_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of Y - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_Z">YGroup3Unzip_ShuffleOnByte_UInt32_Z</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_Z_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_Z_Each128Part0">YGroup3Unzip_ShuffleOnByte_UInt32_Z_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of Z - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_Z_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_Z_Each128Part1">YGroup3Unzip_ShuffleOnByte_UInt32_Z_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of Z - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt32_Z_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt32_Z_Each128Part2">YGroup3Unzip_ShuffleOnByte_UInt32_Z_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt32 - The index of Z - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_X">YGroup3Unzip_ShuffleOnByte_UInt64_X</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_X_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_X_Each128Part0">YGroup3Unzip_ShuffleOnByte_UInt64_X_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of X - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_X_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_X_Each128Part1">YGroup3Unzip_ShuffleOnByte_UInt64_X_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of X - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_X_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_X_Each128Part2">YGroup3Unzip_ShuffleOnByte_UInt64_X_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of X - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_Y">YGroup3Unzip_ShuffleOnByte_UInt64_Y</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_Y_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_Y_Each128Part0">YGroup3Unzip_ShuffleOnByte_UInt64_Y_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of Y - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_Y_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_Y_Each128Part1">YGroup3Unzip_ShuffleOnByte_UInt64_Y_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of Y - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_Y_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_Y_Each128Part2">YGroup3Unzip_ShuffleOnByte_UInt64_Y_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of Y - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_Z">YGroup3Unzip_ShuffleOnByte_UInt64_Z</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_Z_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_Z_Each128Part0">YGroup3Unzip_ShuffleOnByte_UInt64_Z_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of Z - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_Z_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_Z_Each128Part1">YGroup3Unzip_ShuffleOnByte_UInt64_Z_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of Z - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_ShuffleOnByte_UInt64_Z_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_ShuffleOnByte_UInt64_Z_Each128Part2">YGroup3Unzip_ShuffleOnByte_UInt64_Z_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle on byte - UInt64 - The index of Z - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_X">YGroup3Unzip_Shuffle_Byte_X</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_X_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_X_Each128Part0">YGroup3Unzip_Shuffle_Byte_X_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of X - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_X_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_X_Each128Part1">YGroup3Unzip_Shuffle_Byte_X_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of X - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_X_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_X_Each128Part2">YGroup3Unzip_Shuffle_Byte_X_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of X - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_X_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_X_Part2Combine">YGroup3Unzip_Shuffle_Byte_X_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of X - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_Y">YGroup3Unzip_Shuffle_Byte_Y</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_Y_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_Y_Each128Part0">YGroup3Unzip_Shuffle_Byte_Y_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of Y - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_Y_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_Y_Each128Part1">YGroup3Unzip_Shuffle_Byte_Y_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of Y - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_Y_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_Y_Each128Part2">YGroup3Unzip_Shuffle_Byte_Y_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of Y - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_Y_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_Y_Part2Combine">YGroup3Unzip_Shuffle_Byte_Y_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of Y - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_Z">YGroup3Unzip_Shuffle_Byte_Z</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_Z_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_Z_Each128Part0">YGroup3Unzip_Shuffle_Byte_Z_Each128Part0</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of Z - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_Z_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_Z_Each128Part1">YGroup3Unzip_Shuffle_Byte_Z_Each128Part1</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of Z - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_Z_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_Z_Each128Part2">YGroup3Unzip_Shuffle_Byte_Z_Each128Part2</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of Z - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_Byte_Z_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_Byte_Z_Part2Combine">YGroup3Unzip_Shuffle_Byte_Z_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - Byte - The index of Z - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt16_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt16_X">YGroup3Unzip_Shuffle_UInt16_X</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt16 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt16_X_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt16_X_Part2Combine">YGroup3Unzip_Shuffle_UInt16_X_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt16 - The index of X - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt16_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt16_Y">YGroup3Unzip_Shuffle_UInt16_Y</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt16 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt16_Y_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt16_Y_Part2Combine">YGroup3Unzip_Shuffle_UInt16_Y_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt16 - The index of Y - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt16_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt16_Z">YGroup3Unzip_Shuffle_UInt16_Z</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt16 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt16_Z_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt16_Z_Part2Combine">YGroup3Unzip_Shuffle_UInt16_Z_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt16 - The index of Z - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt32_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt32_X">YGroup3Unzip_Shuffle_UInt32_X</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt32 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt32_X_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt32_X_Part2Combine">YGroup3Unzip_Shuffle_UInt32_X_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt32 - The index of X - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt32_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt32_Y">YGroup3Unzip_Shuffle_UInt32_Y</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt32 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt32_Y_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt32_Y_Part2Combine">YGroup3Unzip_Shuffle_UInt32_Y_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt32 - The index of Y - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt32_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt32_Z">YGroup3Unzip_Shuffle_UInt32_Z</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt32 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt32_Z_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt32_Z_Part2Combine">YGroup3Unzip_Shuffle_UInt32_Z_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt32 - The index of Z - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt64_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt64_X">YGroup3Unzip_Shuffle_UInt64_X</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt64 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt64_X_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt64_X_Part2Combine">YGroup3Unzip_Shuffle_UInt64_X_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt64 - The index of X - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt64_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt64_Y">YGroup3Unzip_Shuffle_UInt64_Y</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt64 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt64_Y_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt64_Y_Part2Combine">YGroup3Unzip_Shuffle_UInt64_Y_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt64 - The index of Y - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt64_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt64_Z">YGroup3Unzip_Shuffle_UInt64_Z</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt64 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Unzip_Shuffle_UInt64_Z_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Unzip_Shuffle_UInt64_Z_Part2Combine">YGroup3Unzip_Shuffle_UInt64_Z_Part2Combine</a></dt>
+    <dd><p>YGroup3Unzip - Shuffle - UInt64 - The index of Z - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_X">YGroup3Zip_ShuffleOnByte_UInt16_X</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_X_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_X_Each128Part0">YGroup3Zip_ShuffleOnByte_UInt16_X_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of X - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_X_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_X_Each128Part1">YGroup3Zip_ShuffleOnByte_UInt16_X_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of X - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_X_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_X_Each128Part2">YGroup3Zip_ShuffleOnByte_UInt16_X_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of X - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_Y">YGroup3Zip_ShuffleOnByte_UInt16_Y</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_Y_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_Y_Each128Part0">YGroup3Zip_ShuffleOnByte_UInt16_Y_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of Y - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_Y_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_Y_Each128Part1">YGroup3Zip_ShuffleOnByte_UInt16_Y_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of Y - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_Y_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_Y_Each128Part2">YGroup3Zip_ShuffleOnByte_UInt16_Y_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of Y - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_Z">YGroup3Zip_ShuffleOnByte_UInt16_Z</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_Z_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_Z_Each128Part0">YGroup3Zip_ShuffleOnByte_UInt16_Z_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of Z - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_Z_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_Z_Each128Part1">YGroup3Zip_ShuffleOnByte_UInt16_Z_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of Z - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt16_Z_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt16_Z_Each128Part2">YGroup3Zip_ShuffleOnByte_UInt16_Z_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt16 - The index of Z - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_X">YGroup3Zip_ShuffleOnByte_UInt32_X</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_X_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_X_Each128Part0">YGroup3Zip_ShuffleOnByte_UInt32_X_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of X - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_X_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_X_Each128Part1">YGroup3Zip_ShuffleOnByte_UInt32_X_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of X - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_X_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_X_Each128Part2">YGroup3Zip_ShuffleOnByte_UInt32_X_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of X - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_Y">YGroup3Zip_ShuffleOnByte_UInt32_Y</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_Y_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_Y_Each128Part0">YGroup3Zip_ShuffleOnByte_UInt32_Y_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of Y - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_Y_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_Y_Each128Part1">YGroup3Zip_ShuffleOnByte_UInt32_Y_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of Y - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_Y_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_Y_Each128Part2">YGroup3Zip_ShuffleOnByte_UInt32_Y_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of Y - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_Z">YGroup3Zip_ShuffleOnByte_UInt32_Z</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_Z_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_Z_Each128Part0">YGroup3Zip_ShuffleOnByte_UInt32_Z_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of Z - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_Z_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_Z_Each128Part1">YGroup3Zip_ShuffleOnByte_UInt32_Z_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of Z - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt32_Z_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt32_Z_Each128Part2">YGroup3Zip_ShuffleOnByte_UInt32_Z_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt32 - The index of Z - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_X">YGroup3Zip_ShuffleOnByte_UInt64_X</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_X_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_X_Each128Part0">YGroup3Zip_ShuffleOnByte_UInt64_X_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of X - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_X_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_X_Each128Part1">YGroup3Zip_ShuffleOnByte_UInt64_X_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of X - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_X_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_X_Each128Part2">YGroup3Zip_ShuffleOnByte_UInt64_X_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of X - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_Y">YGroup3Zip_ShuffleOnByte_UInt64_Y</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_Y_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_Y_Each128Part0">YGroup3Zip_ShuffleOnByte_UInt64_Y_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of Y - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_Y_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_Y_Each128Part1">YGroup3Zip_ShuffleOnByte_UInt64_Y_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of Y - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_Y_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_Y_Each128Part2">YGroup3Zip_ShuffleOnByte_UInt64_Y_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of Y - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_Z">YGroup3Zip_ShuffleOnByte_UInt64_Z</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_Z_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_Z_Each128Part0">YGroup3Zip_ShuffleOnByte_UInt64_Z_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of Z - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_Z_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_Z_Each128Part1">YGroup3Zip_ShuffleOnByte_UInt64_Z_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of Z - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_ShuffleOnByte_UInt64_Z_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_ShuffleOnByte_UInt64_Z_Each128Part2">YGroup3Zip_ShuffleOnByte_UInt64_Z_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle on byte - UInt64 - The index of Z - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_X">YGroup3Zip_Shuffle_Byte_X</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_X_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_X_Each128Part0">YGroup3Zip_Shuffle_Byte_X_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of X - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_X_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_X_Each128Part1">YGroup3Zip_Shuffle_Byte_X_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of X - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_X_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_X_Each128Part2">YGroup3Zip_Shuffle_Byte_X_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of X - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_X_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_X_Part2Combine">YGroup3Zip_Shuffle_Byte_X_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of X - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_Y">YGroup3Zip_Shuffle_Byte_Y</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_Y_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_Y_Each128Part0">YGroup3Zip_Shuffle_Byte_Y_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of Y - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_Y_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_Y_Each128Part1">YGroup3Zip_Shuffle_Byte_Y_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of Y - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_Y_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_Y_Each128Part2">YGroup3Zip_Shuffle_Byte_Y_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of Y - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_Y_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_Y_Part2Combine">YGroup3Zip_Shuffle_Byte_Y_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of Y - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_Z">YGroup3Zip_Shuffle_Byte_Z</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_Z_Each128Part0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_Z_Each128Part0">YGroup3Zip_Shuffle_Byte_Z_Each128Part0</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of Z - Each128 sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_Z_Each128Part1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_Z_Each128Part1">YGroup3Zip_Shuffle_Byte_Z_Each128Part1</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of Z - Each128 sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_Z_Each128Part2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_Z_Each128Part2">YGroup3Zip_Shuffle_Byte_Z_Each128Part2</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of Z - Each128 sub part2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_Byte_Z_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_Byte_Z_Part2Combine">YGroup3Zip_Shuffle_Byte_Z_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - Byte - The index of Z - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt16_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt16_X">YGroup3Zip_Shuffle_UInt16_X</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt16 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt16_X_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt16_X_Part2Combine">YGroup3Zip_Shuffle_UInt16_X_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt16 - The index of X - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt16_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt16_Y">YGroup3Zip_Shuffle_UInt16_Y</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt16 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt16_Y_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt16_Y_Part2Combine">YGroup3Zip_Shuffle_UInt16_Y_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt16 - The index of Y - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt16_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt16_Z">YGroup3Zip_Shuffle_UInt16_Z</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt16 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt16_Z_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt16_Z_Part2Combine">YGroup3Zip_Shuffle_UInt16_Z_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt16 - The index of Z - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt32_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt32_X">YGroup3Zip_Shuffle_UInt32_X</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt32 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt32_X_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt32_X_Part2Combine">YGroup3Zip_Shuffle_UInt32_X_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt32 - The index of X - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt32_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt32_Y">YGroup3Zip_Shuffle_UInt32_Y</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt32 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt32_Y_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt32_Y_Part2Combine">YGroup3Zip_Shuffle_UInt32_Y_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt32 - The index of Y - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt32_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt32_Z">YGroup3Zip_Shuffle_UInt32_Z</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt32 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt32_Z_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt32_Z_Part2Combine">YGroup3Zip_Shuffle_UInt32_Z_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt32 - The index of Z - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt64_X.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt64_X">YGroup3Zip_Shuffle_UInt64_X</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt64 - The index of X.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt64_X_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt64_X_Part2Combine">YGroup3Zip_Shuffle_UInt64_X_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt64 - The index of X - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt64_Y.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt64_Y">YGroup3Zip_Shuffle_UInt64_Y</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt64 - The index of Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt64_Y_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt64_Y_Part2Combine">YGroup3Zip_Shuffle_UInt64_Y_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt64 - The index of Y - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt64_Z.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt64_Z">YGroup3Zip_Shuffle_UInt64_Z</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt64 - The index of Z.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup3Zip_Shuffle_UInt64_Z_Part2Combine.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup3Zip_Shuffle_UInt64_Z_Part2Combine">YGroup3Zip_Shuffle_UInt64_Z_Part2Combine</a></dt>
+    <dd><p>YGroup3Zip - Shuffle - UInt64 - The index of Z - Sub part2 combine 0|1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_0">YGroup4ToGroup3_ShuffleOnByte_UInt16_0</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_0A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_0A">YGroup4ToGroup3_ShuffleOnByte_UInt16_0A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 0 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_0A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_0A_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt16_0A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 0 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_0B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_0B">YGroup4ToGroup3_ShuffleOnByte_UInt16_0B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 0 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_0B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_0B_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt16_0B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 0 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_1">YGroup4ToGroup3_ShuffleOnByte_UInt16_1</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_1A">YGroup4ToGroup3_ShuffleOnByte_UInt16_1A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_1A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_1A_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt16_1A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 1 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_1B">YGroup4ToGroup3_ShuffleOnByte_UInt16_1B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_1B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_1B_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt16_1B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 1 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_2">YGroup4ToGroup3_ShuffleOnByte_UInt16_2</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_2A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_2A">YGroup4ToGroup3_ShuffleOnByte_UInt16_2A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 2 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_2A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_2A_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt16_2A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 2 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_2B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_2B">YGroup4ToGroup3_ShuffleOnByte_UInt16_2B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 2 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt16_2B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt16_2B_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt16_2B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt16 - The index of item 2 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_0">YGroup4ToGroup3_ShuffleOnByte_UInt32_0</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_0A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_0A">YGroup4ToGroup3_ShuffleOnByte_UInt32_0A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 0 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_0A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_0A_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt32_0A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 0 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_0B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_0B">YGroup4ToGroup3_ShuffleOnByte_UInt32_0B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 0 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_0B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_0B_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt32_0B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 0 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_1">YGroup4ToGroup3_ShuffleOnByte_UInt32_1</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_1A">YGroup4ToGroup3_ShuffleOnByte_UInt32_1A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_1A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_1A_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt32_1A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 1 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_1B">YGroup4ToGroup3_ShuffleOnByte_UInt32_1B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_1B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_1B_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt32_1B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 1 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_2">YGroup4ToGroup3_ShuffleOnByte_UInt32_2</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_2A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_2A">YGroup4ToGroup3_ShuffleOnByte_UInt32_2A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 2 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_2A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_2A_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt32_2A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 2 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_2B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_2B">YGroup4ToGroup3_ShuffleOnByte_UInt32_2B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 2 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt32_2B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt32_2B_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt32_2B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt32 - The index of item 2 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_0">YGroup4ToGroup3_ShuffleOnByte_UInt64_0</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_0A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_0A">YGroup4ToGroup3_ShuffleOnByte_UInt64_0A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 0 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_0B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_0B">YGroup4ToGroup3_ShuffleOnByte_UInt64_0B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 0 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_1">YGroup4ToGroup3_ShuffleOnByte_UInt64_1</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_1A">YGroup4ToGroup3_ShuffleOnByte_UInt64_1A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_1A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_1A_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt64_1A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 1 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_1B">YGroup4ToGroup3_ShuffleOnByte_UInt64_1B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_1B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_1B_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt64_1B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 1 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_2">YGroup4ToGroup3_ShuffleOnByte_UInt64_2</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_2A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_2A">YGroup4ToGroup3_ShuffleOnByte_UInt64_2A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 2 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_2A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_2A_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt64_2A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 2 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_2B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_2B">YGroup4ToGroup3_ShuffleOnByte_UInt64_2B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 2 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_ShuffleOnByte_UInt64_2B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_ShuffleOnByte_UInt64_2B_Each128">YGroup4ToGroup3_ShuffleOnByte_UInt64_2B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle on byte - UInt64 - The index of item 2 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_0">YGroup4ToGroup3_Shuffle_Byte_0</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_0A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_0A">YGroup4ToGroup3_Shuffle_Byte_0A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 0 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_0A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_0A_Each128">YGroup4ToGroup3_Shuffle_Byte_0A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 0 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_0B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_0B">YGroup4ToGroup3_Shuffle_Byte_0B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 0 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_0B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_0B_Each128">YGroup4ToGroup3_Shuffle_Byte_0B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 0 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_1">YGroup4ToGroup3_Shuffle_Byte_1</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_1A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_1A">YGroup4ToGroup3_Shuffle_Byte_1A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 1 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_1A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_1A_Each128">YGroup4ToGroup3_Shuffle_Byte_1A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 1 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_1B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_1B">YGroup4ToGroup3_Shuffle_Byte_1B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 1 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_1B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_1B_Each128">YGroup4ToGroup3_Shuffle_Byte_1B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 1 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_2">YGroup4ToGroup3_Shuffle_Byte_2</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_2A.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_2A">YGroup4ToGroup3_Shuffle_Byte_2A</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 2 - Sub part0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_2A_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_2A_Each128">YGroup4ToGroup3_Shuffle_Byte_2A_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 2 - Sub part0 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_2B.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_2B">YGroup4ToGroup3_Shuffle_Byte_2B</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 2 - Sub part1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_Byte_2B_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_Byte_2B_Each128">YGroup4ToGroup3_Shuffle_Byte_2B_Each128</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - Byte - The index of item 2 - Sub part1 - Each 128 bits.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_UInt16_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_UInt16_0">YGroup4ToGroup3_Shuffle_UInt16_0</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - UInt16 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_UInt16_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_UInt16_1">YGroup4ToGroup3_Shuffle_UInt16_1</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - UInt16 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_UInt16_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_UInt16_2">YGroup4ToGroup3_Shuffle_UInt16_2</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - UInt16 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_UInt32_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_UInt32_0">YGroup4ToGroup3_Shuffle_UInt32_0</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - UInt32 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_UInt32_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_UInt32_1">YGroup4ToGroup3_Shuffle_UInt32_1</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - UInt32 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_UInt32_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_UInt32_2">YGroup4ToGroup3_Shuffle_UInt32_2</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - UInt32 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_UInt64_0.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_UInt64_0">YGroup4ToGroup3_Shuffle_UInt64_0</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - UInt64 - The index of item 0.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_UInt64_1.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_UInt64_1">YGroup4ToGroup3_Shuffle_UInt64_1</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - UInt64 - The index of item 1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4ToGroup3_Shuffle_UInt64_2.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4ToGroup3_Shuffle_UInt64_2">YGroup4ToGroup3_Shuffle_UInt64_2</a></dt>
+    <dd><p>YGroup4ToGroup3 - Shuffle - UInt64 - The index of item 2.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Unzip_ShuffleX2Longer_Byte_XY.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Unzip_ShuffleX2Longer_Byte_XY">YGroup4Unzip_ShuffleX2Longer_Byte_XY</a></dt>
+    <dd><p>YGroup4Unzip - ShuffleX2 Longer - Byte - The index of X/Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Unzip_ShuffleX2Longer_Byte_ZW.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Unzip_ShuffleX2Longer_Byte_ZW">YGroup4Unzip_ShuffleX2Longer_Byte_ZW</a></dt>
+    <dd><p>YGroup4Unzip - ShuffleX2 Longer - Byte - The index of Z/W.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Unzip_ShuffleX2Longer_UInt16_XY.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Unzip_ShuffleX2Longer_UInt16_XY">YGroup4Unzip_ShuffleX2Longer_UInt16_XY</a></dt>
+    <dd><p>YGroup4Unzip - ShuffleX2 Longer - UInt16 - The index of X/Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Unzip_ShuffleX2Longer_UInt16_ZW.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Unzip_ShuffleX2Longer_UInt16_ZW">YGroup4Unzip_ShuffleX2Longer_UInt16_ZW</a></dt>
+    <dd><p>YGroup4Unzip - ShuffleX2 Longer - UInt16 - The index of Z/W.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Unzip_ShuffleX2Longer_UInt32_XY.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Unzip_ShuffleX2Longer_UInt32_XY">YGroup4Unzip_ShuffleX2Longer_UInt32_XY</a></dt>
+    <dd><p>YGroup4Unzip - ShuffleX2 Longer - UInt32 - The index of X/Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Unzip_ShuffleX2Longer_UInt32_ZW.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Unzip_ShuffleX2Longer_UInt32_ZW">YGroup4Unzip_ShuffleX2Longer_UInt32_ZW</a></dt>
+    <dd><p>YGroup4Unzip - ShuffleX2 Longer - UInt32 - The index of Z/W.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Unzip_ShuffleX2Longer_UInt64_XY.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Unzip_ShuffleX2Longer_UInt64_XY">YGroup4Unzip_ShuffleX2Longer_UInt64_XY</a></dt>
+    <dd><p>YGroup4Unzip - ShuffleX2 Longer - UInt64 - The index of X/Y.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Unzip_ShuffleX2Longer_UInt64_ZW.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Unzip_ShuffleX2Longer_UInt64_ZW">YGroup4Unzip_ShuffleX2Longer_UInt64_ZW</a></dt>
+    <dd><p>YGroup4Unzip - ShuffleX2 Longer - UInt64 - The index of Z/W.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Zip_ShuffleX2Longer_Byte_Data01.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Zip_ShuffleX2Longer_Byte_Data01">YGroup4Zip_ShuffleX2Longer_Byte_Data01</a></dt>
+    <dd><p>YGroup4Zip - ShuffleX2 Longer - Byte - The index of data0/data1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Zip_ShuffleX2Longer_Byte_Data23.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Zip_ShuffleX2Longer_Byte_Data23">YGroup4Zip_ShuffleX2Longer_Byte_Data23</a></dt>
+    <dd><p>YGroup4Zip - ShuffleX2 Longer - Byte - The index of data2/data3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Zip_ShuffleX2Longer_UInt16_Data01.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Zip_ShuffleX2Longer_UInt16_Data01">YGroup4Zip_ShuffleX2Longer_UInt16_Data01</a></dt>
+    <dd><p>YGroup4Zip - ShuffleX2 Longer - UInt16 - The index of data0/data1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Zip_ShuffleX2Longer_UInt16_Data23.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Zip_ShuffleX2Longer_UInt16_Data23">YGroup4Zip_ShuffleX2Longer_UInt16_Data23</a></dt>
+    <dd><p>YGroup4Zip - ShuffleX2 Longer - UInt16 - The index of data2/data3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Zip_ShuffleX2Longer_UInt32_Data01.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Zip_ShuffleX2Longer_UInt32_Data01">YGroup4Zip_ShuffleX2Longer_UInt32_Data01</a></dt>
+    <dd><p>YGroup4Zip - ShuffleX2 Longer - UInt32 - The index of data0/data1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Zip_ShuffleX2Longer_UInt32_Data23.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Zip_ShuffleX2Longer_UInt32_Data23">YGroup4Zip_ShuffleX2Longer_UInt32_Data23</a></dt>
+    <dd><p>YGroup4Zip - ShuffleX2 Longer - UInt32 - The index of data2/data3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Zip_ShuffleX2Longer_UInt64_Data01.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Zip_ShuffleX2Longer_UInt64_Data01">YGroup4Zip_ShuffleX2Longer_UInt64_Data01</a></dt>
+    <dd><p>YGroup4Zip - ShuffleX2 Longer - UInt64 - The index of data0/data1.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4Zip_ShuffleX2Longer_UInt64_Data23.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4Zip_ShuffleX2Longer_UInt64_Data23">YGroup4Zip_ShuffleX2Longer_UInt64_Data23</a></dt>
+    <dd><p>YGroup4Zip - ShuffleX2 Longer - UInt64 - The index of data2/data3.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4_MaskXYZ_Byte.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4_MaskXYZ_Byte">YGroup4_MaskXYZ_Byte</a></dt>
+    <dd><p>YGroup4 - Mask of X,Y,Z (clear W) - Byte.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4_MaskXYZ_UInt16.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4_MaskXYZ_UInt16">YGroup4_MaskXYZ_UInt16</a></dt>
+    <dd><p>YGroup4 - Mask of X,Y,Z (clear W) - UInt16.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4_MaskXYZ_UInt32.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4_MaskXYZ_UInt32">YGroup4_MaskXYZ_UInt32</a></dt>
+    <dd><p>YGroup4 - Mask of X,Y,Z (clear W) - UInt32.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4_MaskXYZ_UInt64.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4_MaskXYZ_UInt64">YGroup4_MaskXYZ_UInt64</a></dt>
+    <dd><p>YGroup4 - Mask of X,Y,Z (clear W) - UInt64.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.YGroup4_MaskXYZ_UInt64_1_Each128.html#Zyl_VectorTraits_Impl_Vector256Constants_YGroup4_MaskXYZ_UInt64_1_Each128">YGroup4_MaskXYZ_UInt64_1_Each128</a></dt>
+    <dd><p>YGroup4 - Mask of X,Y,Z (clear W) - UInt64 - Part 1 - Each 128 bits.</p>
+</dd>
+  </dl>
 
   <h2 class="section" id="methods">Methods
 </h2>
@@ -329,6 +2199,24 @@ Class Vector256Constants  <a class="header-action link-secondary" title="View so
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetMaskBits_Byte.html#Zyl_VectorTraits_Impl_Vector256Constants_GetMaskBits_Byte_System_Int32_">GetMaskBits_Byte(int)</a></dt>
     <dd><p>Get bits mask by index (根据索引获取位集掩码) - Byte. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetMaskBits_ExInt128.html#Zyl_VectorTraits_Impl_Vector256Constants_GetMaskBits_ExInt128_System_Int32_">GetMaskBits_ExInt128(int)</a></dt>
+    <dd><p>Get bits mask by index (根据索引获取位集掩码) - ExInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetMaskBits_ExUInt128.html#Zyl_VectorTraits_Impl_Vector256Constants_GetMaskBits_ExUInt128_System_Int32_">GetMaskBits_ExUInt128(int)</a></dt>
+    <dd><p>Get bits mask by index (根据索引获取位集掩码) - ExUInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetMaskBits_Int128.html#Zyl_VectorTraits_Impl_Vector256Constants_GetMaskBits_Int128_System_Int32_">GetMaskBits_Int128(int)</a></dt>
+    <dd><p>Get bits mask by index (根据索引获取位集掩码) - Int128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
 The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(index)</code>.</p>
 </dd>
   </dl>
@@ -353,6 +2241,12 @@ The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(index)</code>.</p>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetMaskBits_SByte.html#Zyl_VectorTraits_Impl_Vector256Constants_GetMaskBits_SByte_System_Int32_">GetMaskBits_SByte(int)</a></dt>
     <dd><p>Get bits mask by index (根据索引获取位集掩码) - SByte. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetMaskBits_UInt128.html#Zyl_VectorTraits_Impl_Vector256Constants_GetMaskBits_UInt128_System_Int32_">GetMaskBits_UInt128(int)</a></dt>
+    <dd><p>Get bits mask by index (根据索引获取位集掩码) - UInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
 The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(index)</code>.</p>
 </dd>
   </dl>
@@ -387,6 +2281,24 @@ The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</co
 </dd>
   </dl>
   <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetResidueMaskBits_ExInt128.html#Zyl_VectorTraits_Impl_Vector256Constants_GetResidueMaskBits_ExInt128_System_Int32_">GetResidueMaskBits_ExInt128(int)</a></dt>
+    <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - ExInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetResidueMaskBits_ExUInt128.html#Zyl_VectorTraits_Impl_Vector256Constants_GetResidueMaskBits_ExUInt128_System_Int32_">GetResidueMaskBits_ExUInt128(int)</a></dt>
+    <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - ExUInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetResidueMaskBits_Int128.html#Zyl_VectorTraits_Impl_Vector256Constants_GetResidueMaskBits_Int128_System_Int32_">GetResidueMaskBits_Int128(int)</a></dt>
+    <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - Int128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetResidueMaskBits_Int16.html#Zyl_VectorTraits_Impl_Vector256Constants_GetResidueMaskBits_Int16_System_Int32_">GetResidueMaskBits_Int16(int)</a></dt>
     <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - Int16. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
 The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>.</p>
@@ -408,6 +2320,12 @@ The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</co
     <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetResidueMaskBits_SByte.html#Zyl_VectorTraits_Impl_Vector256Constants_GetResidueMaskBits_SByte_System_Int32_">GetResidueMaskBits_SByte(int)</a></dt>
     <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - SByte. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
 The equivalent of <code>Vector256s&lt;T&gt;.GetResidueMaskBits(sizeof(T)*8 - index)</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.Impl.Vector256Constants.GetResidueMaskBits_UInt128.html#Zyl_VectorTraits_Impl_Vector256Constants_GetResidueMaskBits_UInt128_System_Int32_">GetResidueMaskBits_UInt128(int)</a></dt>
+    <dd><p>Get residue bits mask by index (根据索引获取剩余的位集掩码) - UInt128. The index value ranges from 0 to <code>sizeof(T)*8-1</code> (索引值的范围是 0 ~ <code>sizeof(T)*8-1</code>).
+The equivalent of <code>Vector256s&lt;T&gt;.GetMaskBits(sizeof(T)*8 - index)</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -485,7 +2403,7 @@ The equivalent of <code>Vector256s&lt;T&gt;.GetResidueMaskBits(sizeof(T)*8 - ind
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/Vector256Constants.cs/#L22" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/Vector256Constants.YG.cs/#L22" class="edit-link">Edit this page</a>
         </div>
 
 

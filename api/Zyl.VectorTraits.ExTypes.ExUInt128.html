@@ -1,0 +1,924 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Struct ExUInt128 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Struct ExUInt128 ">
+      
+      <meta name="description" content="Represents a 128-bit unsigned integer. It is binary compatible with  (表示 128 位无符号整数. 它与  是二进制兼容的).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_ExTypes_ExUInt128.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.ExTypes.ExUInt128%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.ExTypes.ExUInt128">
+
+
+
+  <h1 id="Zyl_VectorTraits_ExTypes_ExUInt128" data-uid="Zyl.VectorTraits.ExTypes.ExUInt128" class="text-break">
+Struct ExUInt128  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/ExTypes/ExUInt128.Ex.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a>.<a class="xref" href="Zyl.VectorTraits.ExTypes.html">ExTypes</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a 128-bit unsigned integer. It is binary compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a> (表示 128 位无符号整数. 它与 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a> 是二进制兼容的).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[CLSCompliant(false)]
+public readonly struct ExUInt128 : IBinaryInteger&lt;ExUInt128&gt;, IBinaryNumber&lt;ExUInt128&gt;, IBitwiseOperators&lt;ExUInt128, ExUInt128, ExUInt128&gt;, INumber&lt;ExUInt128&gt;, IComparable, IComparable&lt;ExUInt128&gt;, IComparisonOperators&lt;ExUInt128, ExUInt128, bool&gt;, IModulusOperators&lt;ExUInt128, ExUInt128, ExUInt128&gt;, IShiftOperators&lt;ExUInt128, int, ExUInt128&gt;, IMinMaxValue&lt;ExUInt128&gt;, IUnsignedNumber&lt;ExUInt128&gt;, INumberBase&lt;ExUInt128&gt;, IEquatable&lt;ExUInt128&gt;, ISpanFormattable, IFormattable, ISpanParsable&lt;ExUInt128&gt;, IParsable&lt;ExUInt128&gt;, IAdditionOperators&lt;ExUInt128, ExUInt128, ExUInt128&gt;, IAdditiveIdentity&lt;ExUInt128, ExUInt128&gt;, IDecrementOperators&lt;ExUInt128&gt;, IDivisionOperators&lt;ExUInt128, ExUInt128, ExUInt128&gt;, IEqualityOperators&lt;ExUInt128, ExUInt128, bool&gt;, IIncrementOperators&lt;ExUInt128&gt;, IMultiplicativeIdentity&lt;ExUInt128, ExUInt128&gt;, IMultiplyOperators&lt;ExUInt128, ExUInt128, ExUInt128&gt;, ISubtractionOperators&lt;ExUInt128, ExUInt128, ExUInt128&gt;, IUnaryNegationOperators&lt;ExUInt128, ExUInt128&gt;, IUnaryPlusOperators&lt;ExUInt128, ExUInt128&gt;, IUtf8SpanFormattable, IUtf8SpanParsable&lt;ExUInt128&gt;</code></pre>
+  </div>
+
+
+
+
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.ibinaryinteger-1">IBinaryInteger</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.ibinarynumber-1">IBinaryNumber</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.ibitwiseoperators-3">IBitwiseOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1">INumber</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable">IComparable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.icomparable-1">IComparable</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.icomparisonoperators-3">IComparisonOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.imodulusoperators-3">IModulusOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.ishiftoperators-3">IShiftOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.iminmaxvalue-1">IMinMaxValue</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.iunsignednumber-1">IUnsignedNumber</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.inumberbase-1">INumberBase</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.ispanformattable">ISpanFormattable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iformattable">IFormattable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.ispanparsable-1">ISpanParsable</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iparsable-1">IParsable</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.iadditionoperators-3">IAdditionOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.iadditiveidentity-2">IAdditiveIdentity</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.idecrementoperators-1">IDecrementOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.idivisionoperators-3">IDivisionOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.iequalityoperators-3">IEqualityOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.iincrementoperators-1">IIncrementOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.imultiplicativeidentity-2">IMultiplicativeIdentity</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.imultiplyoperators-3">IMultiplyOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.isubtractionoperators-3">ISubtractionOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.iunarynegationoperators-2">IUnaryNegationOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.iunaryplusoperators-2">IUnaryPlusOperators</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>, <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iutf8spanformattable">IUtf8SpanFormattable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iutf8spanparsable-1">IUtf8SpanParsable</a>&lt;<a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.-ctor.html#Zyl_VectorTraits_ExTypes_ExUInt128__ctor_System_UInt64_System_UInt64_">ExUInt128(ulong, ulong)</a></dt>
+    <dd><p>Initializes a new instance of the <a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.html">ExUInt128</a> struct.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.AllBitsSet.html#Zyl_VectorTraits_ExTypes_ExUInt128_AllBitsSet">AllBitsSet</a></dt>
+    <dd><p>Gets an instance of the binary type in which all bits are set.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Lower.html#Zyl_VectorTraits_ExTypes_ExUInt128_Lower">Lower</a></dt>
+    <dd><p>Get the lower half (取得低半部分).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.MaxValue.html#Zyl_VectorTraits_ExTypes_ExUInt128_MaxValue">MaxValue</a></dt>
+    <dd><p>Gets the maximum value of the current type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.MinValue.html#Zyl_VectorTraits_ExTypes_ExUInt128_MinValue">MinValue</a></dt>
+    <dd><p>Gets the minimum value of the current type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.One.html#Zyl_VectorTraits_ExTypes_ExUInt128_One">One</a></dt>
+    <dd><p>Gets the value <code>1</code> for the type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Upper.html#Zyl_VectorTraits_ExTypes_ExUInt128_Upper">Upper</a></dt>
+    <dd><p>Get the upper half (取得高半部分).</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Zero.html#Zyl_VectorTraits_ExTypes_ExUInt128_Zero">Zero</a></dt>
+    <dd><p>Gets the value <code>0</code> for the type.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Clamp.html#Zyl_VectorTraits_ExTypes_ExUInt128_Clamp_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">Clamp(ExUInt128, ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Clamps a value to an inclusive minimum and maximum value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.CompareTo.html#Zyl_VectorTraits_ExTypes_ExUInt128_CompareTo_System_Object_">CompareTo(object?)</a></dt>
+    <dd><p>Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.CompareTo.html#Zyl_VectorTraits_ExTypes_ExUInt128_CompareTo_Zyl_VectorTraits_ExTypes_ExUInt128_">CompareTo(ExUInt128)</a></dt>
+    <dd><p>Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.CreateChecked.html#Zyl_VectorTraits_ExTypes_ExUInt128_CreateChecked__1___0_">CreateChecked&lt;TOther&gt;(TOther)</a></dt>
+    <dd><p>Creates an instance of the current type from a value, throwing an overflow exception for any values that fall outside the representable range of the current type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.CreateSaturating.html#Zyl_VectorTraits_ExTypes_ExUInt128_CreateSaturating__1___0_">CreateSaturating&lt;TOther&gt;(TOther)</a></dt>
+    <dd><p>Creates an instance of the current type from a value, saturating any values that fall outside the representable range of the current type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.CreateTruncating.html#Zyl_VectorTraits_ExTypes_ExUInt128_CreateTruncating__1___0_">CreateTruncating&lt;TOther&gt;(TOther)</a></dt>
+    <dd><p>Creates an instance of the current type from a value, truncating any values that fall outside the representable range of the current type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.DivRem.html#Zyl_VectorTraits_ExTypes_ExUInt128_DivRem_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">DivRem(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Computes the quotient and remainder of two values.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Equals.html#Zyl_VectorTraits_ExTypes_ExUInt128_Equals_System_Object_">Equals(object?)</a></dt>
+    <dd><p>Determines whether the specified object is equal to the current object.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Equals.html#Zyl_VectorTraits_ExTypes_ExUInt128_Equals_Zyl_VectorTraits_ExTypes_ExUInt128_">Equals(ExUInt128)</a></dt>
+    <dd><p>Indicates whether the current object is equal to another object of the same type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.GetByteCount.html#Zyl_VectorTraits_ExTypes_ExUInt128_GetByteCount">GetByteCount()</a></dt>
+    <dd><p>Gets the number of bytes that will be written as part of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.numerics.ibinaryinteger-1.trywritelittleendian">TryWriteLittleEndian(Span&lt;byte&gt;, out int)</a>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.GetHashCode.html#Zyl_VectorTraits_ExTypes_ExUInt128_GetHashCode">GetHashCode()</a></dt>
+    <dd><p>Serves as the default hash function.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.GetShortestBitLength.html#Zyl_VectorTraits_ExTypes_ExUInt128_GetShortestBitLength">GetShortestBitLength()</a></dt>
+    <dd><p>Gets the length, in bits, of the shortest two's complement representation of the current value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.IsEvenInteger.html#Zyl_VectorTraits_ExTypes_ExUInt128_IsEvenInteger_Zyl_VectorTraits_ExTypes_ExUInt128_">IsEvenInteger(ExUInt128)</a></dt>
+    <dd><p>Determines if a value represents an even integral number.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.IsOddInteger.html#Zyl_VectorTraits_ExTypes_ExUInt128_IsOddInteger_Zyl_VectorTraits_ExTypes_ExUInt128_">IsOddInteger(ExUInt128)</a></dt>
+    <dd><p>Determines if a value represents an odd integral number.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.IsPow2.html#Zyl_VectorTraits_ExTypes_ExUInt128_IsPow2_Zyl_VectorTraits_ExTypes_ExUInt128_">IsPow2(ExUInt128)</a></dt>
+    <dd><p>Determines if a value is a power of two.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.LeadingZeroCount.html#Zyl_VectorTraits_ExTypes_ExUInt128_LeadingZeroCount_Zyl_VectorTraits_ExTypes_ExUInt128_">LeadingZeroCount(ExUInt128)</a></dt>
+    <dd><p>Computes the number of leading zero bits in a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Log2.html#Zyl_VectorTraits_ExTypes_ExUInt128_Log2_Zyl_VectorTraits_ExTypes_ExUInt128_">Log2(ExUInt128)</a></dt>
+    <dd><p>Computes the log2 of a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Max.html#Zyl_VectorTraits_ExTypes_ExUInt128_Max_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">Max(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Compares two values to compute which is greater.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Min.html#Zyl_VectorTraits_ExTypes_ExUInt128_Min_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">Min(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Compares two values to compute which is lesser.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.MultiplyAddEstimate.html#Zyl_VectorTraits_ExTypes_ExUInt128_MultiplyAddEstimate_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">MultiplyAddEstimate(ExUInt128, ExUInt128, ExUInt128)</a></dt>
+    <dd></dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Parse.html#Zyl_VectorTraits_ExTypes_ExUInt128_Parse_System_ReadOnlySpan_System_Byte__System_Globalization_NumberStyles_System_IFormatProvider_">Parse(ReadOnlySpan&lt;byte&gt;, NumberStyles, IFormatProvider?)</a></dt>
+    <dd><p>Parses a span of UTF-8 characters into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Parse.html#Zyl_VectorTraits_ExTypes_ExUInt128_Parse_System_ReadOnlySpan_System_Byte__System_IFormatProvider_">Parse(ReadOnlySpan&lt;byte&gt;, IFormatProvider?)</a></dt>
+    <dd><p>Parses a span of UTF-8 characters into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Parse.html#Zyl_VectorTraits_ExTypes_ExUInt128_Parse_System_ReadOnlySpan_System_Char__System_Globalization_NumberStyles_System_IFormatProvider_">Parse(ReadOnlySpan&lt;char&gt;, NumberStyles, IFormatProvider?)</a></dt>
+    <dd><p>Parses a span of characters into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Parse.html#Zyl_VectorTraits_ExTypes_ExUInt128_Parse_System_ReadOnlySpan_System_Char__System_IFormatProvider_">Parse(ReadOnlySpan&lt;char&gt;, IFormatProvider?)</a></dt>
+    <dd><p>Parses a span of characters into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Parse.html#Zyl_VectorTraits_ExTypes_ExUInt128_Parse_System_String_">Parse(string)</a></dt>
+    <dd><p>Parses a string into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Parse.html#Zyl_VectorTraits_ExTypes_ExUInt128_Parse_System_String_System_Globalization_NumberStyles_">Parse(string, NumberStyles)</a></dt>
+    <dd><p>Parses a string into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Parse.html#Zyl_VectorTraits_ExTypes_ExUInt128_Parse_System_String_System_Globalization_NumberStyles_System_IFormatProvider_">Parse(string, NumberStyles, IFormatProvider?)</a></dt>
+    <dd><p>Parses a string into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Parse.html#Zyl_VectorTraits_ExTypes_ExUInt128_Parse_System_String_System_IFormatProvider_">Parse(string, IFormatProvider?)</a></dt>
+    <dd><p>Parses a string into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.PopCount.html#Zyl_VectorTraits_ExTypes_ExUInt128_PopCount_Zyl_VectorTraits_ExTypes_ExUInt128_">PopCount(ExUInt128)</a></dt>
+    <dd><p>Computes the number of bits that are set in a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.RotateLeft.html#Zyl_VectorTraits_ExTypes_ExUInt128_RotateLeft_Zyl_VectorTraits_ExTypes_ExUInt128_System_Int32_">RotateLeft(ExUInt128, int)</a></dt>
+    <dd><p>Rotates a value left by a given amount.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.RotateRight.html#Zyl_VectorTraits_ExTypes_ExUInt128_RotateRight_Zyl_VectorTraits_ExTypes_ExUInt128_System_Int32_">RotateRight(ExUInt128, int)</a></dt>
+    <dd><p>Rotates a value right by a given amount.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.Sign.html#Zyl_VectorTraits_ExTypes_ExUInt128_Sign_Zyl_VectorTraits_ExTypes_ExUInt128_">Sign(ExUInt128)</a></dt>
+    <dd><p>Computes the sign of a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.ToString.html#Zyl_VectorTraits_ExTypes_ExUInt128_ToString">ToString()</a></dt>
+    <dd><p>Returns a string that represents the current object.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.ToString.html#Zyl_VectorTraits_ExTypes_ExUInt128_ToString_System_IFormatProvider_">ToString(IFormatProvider?)</a></dt>
+    <dd><p>Converts the numeric value of this instance to its equivalent string representation using the specified culture-specific format information.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.ToString.html#Zyl_VectorTraits_ExTypes_ExUInt128_ToString_System_String_">ToString(string?)</a></dt>
+    <dd><p>Converts the numeric value of this instance to its equivalent string representation, using the specified format.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.ToString.html#Zyl_VectorTraits_ExTypes_ExUInt128_ToString_System_String_System_IFormatProvider_">ToString(string?, IFormatProvider?)</a></dt>
+    <dd><p>Formats the value of the current instance using the specified format.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TrailingZeroCount.html#Zyl_VectorTraits_ExTypes_ExUInt128_TrailingZeroCount_Zyl_VectorTraits_ExTypes_ExUInt128_">TrailingZeroCount(ExUInt128)</a></dt>
+    <dd><p>Computes the number of trailing zero bits in a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryFormat.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryFormat_System_Span_System_Byte__System_Int32__System_ReadOnlySpan_System_Char__System_IFormatProvider_">TryFormat(Span&lt;byte&gt;, out int, ReadOnlySpan&lt;char&gt;, IFormatProvider?)</a></dt>
+    <dd><p>Tries to format the value of the current instance as UTF-8 into the provided span of bytes.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryFormat.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryFormat_System_Span_System_Char__System_Int32__System_ReadOnlySpan_System_Char__System_IFormatProvider_">TryFormat(Span&lt;char&gt;, out int, ReadOnlySpan&lt;char&gt;, IFormatProvider?)</a></dt>
+    <dd><p>Tries to format the value of the current instance into the provided span of characters.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryParse.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryParse_System_ReadOnlySpan_System_Byte__System_Globalization_NumberStyles_System_IFormatProvider_Zyl_VectorTraits_ExTypes_ExUInt128__">TryParse(ReadOnlySpan&lt;byte&gt;, NumberStyles, IFormatProvider?, out ExUInt128)</a></dt>
+    <dd><p>Tries to parse a span of UTF-8 characters into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryParse.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryParse_System_ReadOnlySpan_System_Byte__System_IFormatProvider_Zyl_VectorTraits_ExTypes_ExUInt128__">TryParse(ReadOnlySpan&lt;byte&gt;, IFormatProvider?, out ExUInt128)</a></dt>
+    <dd><p>Tries to parse a span of UTF-8 characters into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryParse.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryParse_System_ReadOnlySpan_System_Byte__Zyl_VectorTraits_ExTypes_ExUInt128__">TryParse(ReadOnlySpan&lt;byte&gt;, out ExUInt128)</a></dt>
+    <dd><p>Tries to convert a UTF-8 character span containing the string representation of a number to its 128-bit unsigned integer equivalent.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryParse.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryParse_System_ReadOnlySpan_System_Char__System_Globalization_NumberStyles_System_IFormatProvider_Zyl_VectorTraits_ExTypes_ExUInt128__">TryParse(ReadOnlySpan&lt;char&gt;, NumberStyles, IFormatProvider?, out ExUInt128)</a></dt>
+    <dd><p>Tries to parse a span of characters into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryParse.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryParse_System_ReadOnlySpan_System_Char__System_IFormatProvider_Zyl_VectorTraits_ExTypes_ExUInt128__">TryParse(ReadOnlySpan&lt;char&gt;, IFormatProvider?, out ExUInt128)</a></dt>
+    <dd><p>Tries to parse a span of characters into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryParse.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryParse_System_ReadOnlySpan_System_Char__Zyl_VectorTraits_ExTypes_ExUInt128__">TryParse(ReadOnlySpan&lt;char&gt;, out ExUInt128)</a></dt>
+    <dd><p>Tries to parse a span of characters into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryParse.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryParse_System_String_System_Globalization_NumberStyles_System_IFormatProvider_Zyl_VectorTraits_ExTypes_ExUInt128__">TryParse(string?, NumberStyles, IFormatProvider?, out ExUInt128)</a></dt>
+    <dd><p>Tries to parse a string into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryParse.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryParse_System_String_System_IFormatProvider_Zyl_VectorTraits_ExTypes_ExUInt128__">TryParse(string?, IFormatProvider?, out ExUInt128)</a></dt>
+    <dd><p>Tries to parse a string into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryParse.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryParse_System_String_Zyl_VectorTraits_ExTypes_ExUInt128__">TryParse(string?, out ExUInt128)</a></dt>
+    <dd><p>Tries to parse a string into a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryReadBigEndian.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryReadBigEndian_System_ReadOnlySpan_System_Byte__System_Boolean_Zyl_VectorTraits_ExTypes_ExUInt128__">TryReadBigEndian(ReadOnlySpan&lt;byte&gt;, bool, out ExUInt128)</a></dt>
+    <dd><p>Tries to read a two's complement number from a span, in big-endian format, and convert it to an instance of the current type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryReadLittleEndian.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryReadLittleEndian_System_ReadOnlySpan_System_Byte__System_Boolean_Zyl_VectorTraits_ExTypes_ExUInt128__">TryReadLittleEndian(ReadOnlySpan&lt;byte&gt;, bool, out ExUInt128)</a></dt>
+    <dd><p>Tries to read a two's complement number from a span, in little-endian format, and convert it to an instance of the current type.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryWriteBigEndian.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryWriteBigEndian_System_Span_System_Byte__System_Int32__">TryWriteBigEndian(Span&lt;byte&gt;, out int)</a></dt>
+    <dd><p>Tries to write the current value, in big-endian format, to a given span.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.TryWriteLittleEndian.html#Zyl_VectorTraits_ExTypes_ExUInt128_TryWriteLittleEndian_System_Span_System_Byte__System_Int32__">TryWriteLittleEndian(Span&lt;byte&gt;, out int)</a></dt>
+    <dd><p>Tries to write the current value, in little-endian format, to a given span.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Addition.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Addition_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator +(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Adds two values together to compute their sum.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_BitwiseAnd.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_BitwiseAnd_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator &amp;(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Computes the bitwise-and of two values.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_BitwiseOr.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_BitwiseOr_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator |(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Computes the bitwise-or of two values.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedAddition.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedAddition_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator checked +(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Adds two values together to compute their sum.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedDecrement.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedDecrement_Zyl_VectorTraits_ExTypes_ExUInt128_">operator checked --(ExUInt128)</a></dt>
+    <dd><p>Decrements a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedDivision.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedDivision_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator checked /(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Divides two values together to compute their quotient.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_System_Double__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator checked ExUInt128(double)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a> value to a 128-bit unsigned integer, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_System_Half__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator checked ExUInt128(Half)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a> value to a 128-bit unsigned integer, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_System_Int16__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator checked ExUInt128(short)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a> value to a 128-bit unsigned integer, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_System_Int32__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator checked ExUInt128(int)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value to a 128-bit unsigned integer, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_System_Int64__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator checked ExUInt128(long)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value to a 128-bit unsigned integer, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_System_IntPtr__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator checked ExUInt128(nint)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a> value to a 128-bit unsigned integer, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_System_SByte__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator checked ExUInt128(sbyte)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a> value to a 128-bit unsigned integer, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_System_Single__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator checked ExUInt128(float)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> value to a 128-bit unsigned integer, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Byte">explicit operator checked byte(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Char">explicit operator checked char(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Int16">explicit operator checked short(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Int32">explicit operator checked int(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Int64">explicit operator checked long(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_IntPtr">explicit operator checked nint(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_SByte">explicit operator checked sbyte(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_UInt16">explicit operator checked ushort(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_UInt32">explicit operator checked uint(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_UInt64">explicit operator checked ulong(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_UIntPtr">explicit operator checked nuint(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedExplicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedExplicit_Zyl_VectorTraits_ExTypes_ExUInt128__Zyl_VectorTraits_ExTypes_ExInt128">explicit operator checked ExInt128(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a> value, throwing an overflow exception for any values that fall outside the representable range.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedIncrement.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedIncrement_Zyl_VectorTraits_ExTypes_ExUInt128_">operator checked ++(ExUInt128)</a></dt>
+    <dd><p>Increments a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedMultiply.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedMultiply_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator checked *(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Multiplies two values together to compute their product.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedSubtraction.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedSubtraction_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator checked -(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Subtracts two values to compute their difference.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_CheckedUnaryNegation.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_CheckedUnaryNegation_Zyl_VectorTraits_ExTypes_ExUInt128_">operator checked -(ExUInt128)</a></dt>
+    <dd><p>Computes the checked unary negation of a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Decrement.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Decrement_Zyl_VectorTraits_ExTypes_ExUInt128_">operator --(ExUInt128)</a></dt>
+    <dd><p>Decrements a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Division.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Division_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator /(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Divides one value by another to compute their quotient.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Equality.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Equality_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator ==(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Compares two values to determine equality.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_ExclusiveOr.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_ExclusiveOr_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator ^(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Computes the exclusive-or of two values.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_System_Decimal__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator ExUInt128(decimal)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_System_Double__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator ExUInt128(double)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_System_Half__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator ExUInt128(Half)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_System_Int128__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator ExUInt128(Int128)</a></dt>
+    <dd><p>Implicit converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_System_Int16__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator ExUInt128(short)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_System_Int32__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator ExUInt128(int)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_System_Int64__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator ExUInt128(long)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_System_IntPtr__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator ExUInt128(nint)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_System_SByte__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator ExUInt128(sbyte)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_System_Single__Zyl_VectorTraits_ExTypes_ExUInt128">explicit operator ExUInt128(float)</a></dt>
+    <dd><p>Explicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Byte">explicit operator byte(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Char">explicit operator char(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Decimal">explicit operator decimal(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Double">explicit operator double(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Half">explicit operator Half(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.half">Half</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Int128">explicit operator Int128(ExUInt128)</a></dt>
+    <dd><p>Implicit converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int128">Int128</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Int16">explicit operator short(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int16">short</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Int32">explicit operator int(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Int64">explicit operator long(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_IntPtr">explicit operator nint(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.intptr">nint</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_SByte">explicit operator sbyte(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.sbyte">sbyte</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_Single">explicit operator float(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_UInt16">explicit operator ushort(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_UInt32">explicit operator uint(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_UInt64">explicit operator ulong(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_UIntPtr">explicit operator nuint(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Explicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Explicit_Zyl_VectorTraits_ExTypes_ExUInt128__Zyl_VectorTraits_ExTypes_ExInt128">explicit operator ExInt128(ExUInt128)</a></dt>
+    <dd><p>Explicitly converts a 128-bit unsigned integer to a <a class="xref" href="Zyl.VectorTraits.ExTypes.ExInt128.html">ExInt128</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_GreaterThan.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_GreaterThan_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator &gt;(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Compares two values to determine which is greater.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_GreaterThanOrEqual.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_GreaterThanOrEqual_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator &gt;=(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Compares two values to determine which is greater or equal.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Implicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Implicit_System_Byte__Zyl_VectorTraits_ExTypes_ExUInt128">implicit operator ExUInt128(byte)</a></dt>
+    <dd><p>Implicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Implicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Implicit_System_Char__Zyl_VectorTraits_ExTypes_ExUInt128">implicit operator ExUInt128(char)</a></dt>
+    <dd><p>Implicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.char">char</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Implicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Implicit_System_UInt128__Zyl_VectorTraits_ExTypes_ExUInt128">implicit operator ExUInt128(UInt128)</a></dt>
+    <dd><p>Implicit converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Implicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Implicit_System_UInt16__Zyl_VectorTraits_ExTypes_ExUInt128">implicit operator ExUInt128(ushort)</a></dt>
+    <dd><p>Implicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint16">ushort</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Implicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Implicit_System_UInt32__Zyl_VectorTraits_ExTypes_ExUInt128">implicit operator ExUInt128(uint)</a></dt>
+    <dd><p>Implicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint32">uint</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Implicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Implicit_System_UInt64__Zyl_VectorTraits_ExTypes_ExUInt128">implicit operator ExUInt128(ulong)</a></dt>
+    <dd><p>Implicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint64">ulong</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Implicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Implicit_System_UIntPtr__Zyl_VectorTraits_ExTypes_ExUInt128">implicit operator ExUInt128(nuint)</a></dt>
+    <dd><p>Implicitly converts a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a> value to a 128-bit unsigned integer.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Implicit.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Implicit_Zyl_VectorTraits_ExTypes_ExUInt128__System_UInt128">implicit operator UInt128(ExUInt128)</a></dt>
+    <dd><p>Implicit converts a 128-bit unsigned integer to a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uint128">UInt128</a> value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Increment.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Increment_Zyl_VectorTraits_ExTypes_ExUInt128_">operator ++(ExUInt128)</a></dt>
+    <dd><p>Increments a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Inequality.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Inequality_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator !=(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Compares two values to determine inequality.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_LeftShift.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_LeftShift_Zyl_VectorTraits_ExTypes_ExUInt128_System_Int32_">operator &lt;&lt;(ExUInt128, int)</a></dt>
+    <dd><p>Shifts a value left by a given amount.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_LessThan.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_LessThan_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator &lt;(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Compares two values to determine which is less.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_LessThanOrEqual.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_LessThanOrEqual_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator &lt;=(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Compares two values to determine which is less or equal.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Modulus.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Modulus_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator %(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Divides two values together to compute their modulus or remainder.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Multiply.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Multiply_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator *(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Multiplies two values together to compute their product.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_OnesComplement.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_OnesComplement_Zyl_VectorTraits_ExTypes_ExUInt128_">operator ~(ExUInt128)</a></dt>
+    <dd><p>Computes the ones-complement representation of a given value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_RightShift.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_RightShift_Zyl_VectorTraits_ExTypes_ExUInt128_System_Int32_">operator &gt;&gt;(ExUInt128, int)</a></dt>
+    <dd><p>Shifts a value right by a given amount.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_Subtraction.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_Subtraction_Zyl_VectorTraits_ExTypes_ExUInt128_Zyl_VectorTraits_ExTypes_ExUInt128_">operator -(ExUInt128, ExUInt128)</a></dt>
+    <dd><p>Subtracts two values to compute their difference.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_UnaryNegation.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_UnaryNegation_Zyl_VectorTraits_ExTypes_ExUInt128_">operator -(ExUInt128)</a></dt>
+    <dd><p>Computes the unary negation of a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_UnaryPlus.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_UnaryPlus_Zyl_VectorTraits_ExTypes_ExUInt128_">operator +(ExUInt128)</a></dt>
+    <dd><p>Computes the unary plus of a value.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.ExTypes.ExUInt128.op_UnsignedRightShift.html#Zyl_VectorTraits_ExTypes_ExUInt128_op_UnsignedRightShift_Zyl_VectorTraits_ExTypes_ExUInt128_System_Int32_">operator &gt;&gt;&gt;(ExUInt128, int)</a></dt>
+    <dd><p>Shifts a value right by a given amount.</p>
+</dd>
+  </dl>
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/ExTypes/ExUInt128.Ex.cs/#L18" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

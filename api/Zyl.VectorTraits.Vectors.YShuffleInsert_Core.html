@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core*" class="text-break">
-Method YShuffleInsert_Core  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L606"><i class="bi bi-code-slash"></i></a>
+Method YShuffleInsert_Core  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L632"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YShuffleInsert_Core  <a class="header-action link-secondary" title="View 
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Single__System_ValueTuple_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32___" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single},System.ValueTuple{System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32}})">
   YShuffleInsert_Core(Vector&lt;float&gt;, Vector&lt;float&gt;, (Vector&lt;int&gt; args0, Vector&lt;int&gt; args1, Vector&lt;int&gt; args2))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L606"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L632"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -170,7 +170,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Double__System_ValueTuple_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64___" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double},System.ValueTuple{System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64}})">
   YShuffleInsert_Core(Vector&lt;double&gt;, Vector&lt;double&gt;, (Vector&lt;long&gt; args0, Vector&lt;long&gt; args1, Vector&lt;long&gt; args2))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L621"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L647"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -223,7 +223,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_ValueTuple_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte___" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte},System.ValueTuple{System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte}})">
   YShuffleInsert_Core(Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;, (Vector&lt;sbyte&gt; args0, Vector&lt;sbyte&gt; args1, Vector&lt;sbyte&gt; args2))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L636"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L662"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -277,7 +277,7 @@ public static Vector&lt;sbyte&gt; YShuffleInsert_Core(Vector&lt;sbyte&gt; back, 
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_ValueTuple_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte___" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte},System.ValueTuple{System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte}})">
   YShuffleInsert_Core(Vector&lt;byte&gt;, Vector&lt;byte&gt;, (Vector&lt;byte&gt; args0, Vector&lt;byte&gt; args1, Vector&lt;byte&gt; args2))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L652"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L678"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -330,7 +330,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_ValueTuple_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16___" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16},System.ValueTuple{System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16}})">
   YShuffleInsert_Core(Vector&lt;short&gt;, Vector&lt;short&gt;, (Vector&lt;short&gt; args0, Vector&lt;short&gt; args1, Vector&lt;short&gt; args2))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L667"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L693"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -383,7 +383,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_ValueTuple_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16___" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16},System.ValueTuple{System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16}})">
   YShuffleInsert_Core(Vector&lt;ushort&gt;, Vector&lt;ushort&gt;, (Vector&lt;ushort&gt; args0, Vector&lt;ushort&gt; args1, Vector&lt;ushort&gt; args2))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L682"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L708"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -437,7 +437,7 @@ public static Vector&lt;ushort&gt; YShuffleInsert_Core(Vector&lt;ushort&gt; back
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_ValueTuple_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32___" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},System.ValueTuple{System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32}})">
   YShuffleInsert_Core(Vector&lt;int&gt;, Vector&lt;int&gt;, (Vector&lt;int&gt; args0, Vector&lt;int&gt; args1, Vector&lt;int&gt; args2))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L698"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L724"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -490,7 +490,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_ValueTuple_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32___" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32},System.ValueTuple{System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32}})">
   YShuffleInsert_Core(Vector&lt;uint&gt;, Vector&lt;uint&gt;, (Vector&lt;uint&gt; args0, Vector&lt;uint&gt; args1, Vector&lt;uint&gt; args2))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L713"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L739"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -544,7 +544,7 @@ public static Vector&lt;uint&gt; YShuffleInsert_Core(Vector&lt;uint&gt; back, Ve
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_ValueTuple_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64___" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},System.ValueTuple{System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64}})">
   YShuffleInsert_Core(Vector&lt;long&gt;, Vector&lt;long&gt;, (Vector&lt;long&gt; args0, Vector&lt;long&gt; args1, Vector&lt;long&gt; args2))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L729"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L755"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -597,7 +597,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_ValueTuple_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64___" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64},System.ValueTuple{System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64}})">
   YShuffleInsert_Core(Vector&lt;ulong&gt;, Vector&lt;ulong&gt;, (Vector&lt;ulong&gt; args0, Vector&lt;ulong&gt; args1, Vector&lt;ulong&gt; args2))
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L744"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L770"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -651,7 +651,7 @@ public static Vector&lt;ulong&gt; YShuffleInsert_Core(Vector&lt;ulong&gt; back, 
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Single__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Single},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})">
   YShuffleInsert_Core(Vector&lt;float&gt;, Vector&lt;float&gt;, Vector&lt;int&gt;, Vector&lt;int&gt;, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L2505"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L7034"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -710,7 +710,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Double__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})">
   YShuffleInsert_Core(Vector&lt;double&gt;, Vector&lt;double&gt;, Vector&lt;long&gt;, Vector&lt;long&gt;, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L2515"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L7049"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -769,7 +769,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte},System.Numerics.Vector{System.SByte})">
   YShuffleInsert_Core(Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;, Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L2525"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L7064"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -830,7 +830,7 @@ public static Vector&lt;sbyte&gt; YShuffleInsert_Core(Vector&lt;sbyte&gt; back, 
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte},System.Numerics.Vector{System.Byte})">
   YShuffleInsert_Core(Vector&lt;byte&gt;, Vector&lt;byte&gt;, Vector&lt;byte&gt;, Vector&lt;byte&gt;, Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L2536"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L7080"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -890,7 +890,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16},System.Numerics.Vector{System.Int16})">
   YShuffleInsert_Core(Vector&lt;short&gt;, Vector&lt;short&gt;, Vector&lt;short&gt;, Vector&lt;short&gt;, Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L2546"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L7095"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -949,7 +949,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16},System.Numerics.Vector{System.UInt16})">
   YShuffleInsert_Core(Vector&lt;ushort&gt;, Vector&lt;ushort&gt;, Vector&lt;ushort&gt;, Vector&lt;ushort&gt;, Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L2556"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L7110"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -1009,7 +1009,7 @@ public static Vector&lt;ushort&gt; YShuffleInsert_Core(Vector&lt;ushort&gt; back
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32},System.Numerics.Vector{System.Int32})">
   YShuffleInsert_Core(Vector&lt;int&gt;, Vector&lt;int&gt;, Vector&lt;int&gt;, Vector&lt;int&gt;, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L2567"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L7126"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -1068,7 +1068,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32},System.Numerics.Vector{System.UInt32})">
   YShuffleInsert_Core(Vector&lt;uint&gt;, Vector&lt;uint&gt;, Vector&lt;uint&gt;, Vector&lt;uint&gt;, Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L2577"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L7141"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -1128,7 +1128,7 @@ public static Vector&lt;uint&gt; YShuffleInsert_Core(Vector&lt;uint&gt; back, Ve
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64},System.Numerics.Vector{System.Int64})">
   YShuffleInsert_Core(Vector&lt;long&gt;, Vector&lt;long&gt;, Vector&lt;long&gt;, Vector&lt;long&gt;, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L2588"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L7157"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -1187,7 +1187,7 @@ Mnemonic: <code>rt[i] := (0&lt;=indices[i] &amp;&amp; indices[i]&lt;Count)?( vec
 
 <h3 id="Zyl_VectorTraits_Vectors_YShuffleInsert_Core_System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Vectors.YShuffleInsert_Core(System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64},System.Numerics.Vector{System.UInt64})">
   YShuffleInsert_Core(Vector&lt;ulong&gt;, Vector&lt;ulong&gt;, Vector&lt;ulong&gt;, Vector&lt;ulong&gt;, Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L2598"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Traits.Y.cs/#L7172"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Core calculation for shuffle and insert (换位并插入的核心计算). Its arguments are derived from YShuffleInsert_Args (其参数来源于 YShuffleInsert_Args).
@@ -1246,7 +1246,7 @@ public static Vector&lt;ulong&gt; YShuffleInsert_Core(Vector&lt;ulong&gt; back, 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L606" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vectors.Extensions.Y.cs/#L632" class="edit-link">Edit this page</a>
         </div>
 
 

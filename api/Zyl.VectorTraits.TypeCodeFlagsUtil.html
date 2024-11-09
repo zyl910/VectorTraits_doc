@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -85,7 +85,7 @@
 
 
   <h1 id="Zyl_VectorTraits_TypeCodeFlagsUtil" data-uid="Zyl.VectorTraits.TypeCodeFlagsUtil" class="text-break">
-Class TypeCodeFlagsUtil  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/TypeCodeFlagsUtil.cs/#L80"><i class="bi bi-code-slash"></i></a>
+Class TypeCodeFlagsUtil  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/TypeCodeFlagsUtil.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -149,12 +149,12 @@ Class TypeCodeFlagsUtil  <a class="header-action link-secondary" title="View sou
 
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.AllTypes.html">AllTypes</a></dt>
-    <dd><p>TypeCodeFlags of all types. <code>AllTypes = TypeCodeFlags.Single | TypeCodeFlags.Double | TypeCodeFlags.SByte | TypeCodeFlags.Byte | TypeCodeFlags.Int16 | TypeCodeFlags.UInt16 | TypeCodeFlags.Int32 | TypeCodeFlags.UInt32 | TypeCodeFlags.Int64 | TypeCodeFlags.UInt64</code>.</p>
+    <dd><p>TypeCodeFlags of Standard all types (标准所有类型). <code>AllTypes = TypeCodeFlags.Single | TypeCodeFlags.Double | TypeCodeFlags.SByte | TypeCodeFlags.Byte | TypeCodeFlags.Int16 | TypeCodeFlags.UInt16 | TypeCodeFlags.Int32 | TypeCodeFlags.UInt32 | TypeCodeFlags.Int64 | TypeCodeFlags.UInt64</code>.</p>
 </dd>
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.FloatTypes.html">FloatTypes</a></dt>
-    <dd><p>TypeCodeFlags of float types.</p>
+    <dd><p>TypeCodeFlags of Standard float types (标准浮点类型).</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -169,7 +169,7 @@ Class TypeCodeFlagsUtil  <a class="header-action link-secondary" title="View sou
   </dl>
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.IntTypes.html">IntTypes</a></dt>
-    <dd><p>TypeCodeFlags of integer types.</p>
+    <dd><p>TypeCodeFlags of Standard integer types (标准整数类型).</p>
 </dd>
   </dl>
   <dl class="jumplist">
@@ -195,6 +195,65 @@ Class TypeCodeFlagsUtil  <a class="header-action link-secondary" title="View sou
   <dl class="jumplist">
     <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.UIntPtrFlags.html">UIntPtrFlags</a></dt>
     <dd><p>TypeCodeFlags of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.uintptr">nuint</a>.</p>
+</dd>
+  </dl>
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.Bit128Types.html#Zyl_VectorTraits_TypeCodeFlagsUtil_Bit128Types">Bit128Types</a></dt>
+    <dd><p>TypeCodeFlags of 128-bits types (128位的类型). <code>Bit128Types = TypeCodeFlags.Int128 | TypeCodeFlags.UInt128</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.Bit16Types.html#Zyl_VectorTraits_TypeCodeFlagsUtil_Bit16Types">Bit16Types</a></dt>
+    <dd><p>TypeCodeFlags of 16-bits types (16位的类型). <code>Bit16Types = TypeCodeFlags.Int16 | TypeCodeFlags.UInt16</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.Bit32Types.html#Zyl_VectorTraits_TypeCodeFlagsUtil_Bit32Types">Bit32Types</a></dt>
+    <dd><p>TypeCodeFlags of 32-bits types (32位的类型). <code>Bit32Types = TypeCodeFlags.Int32 | TypeCodeFlags.UInt32 | TypeCodeFlags.Single</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.Bit64Types.html#Zyl_VectorTraits_TypeCodeFlagsUtil_Bit64Types">Bit64Types</a></dt>
+    <dd><p>TypeCodeFlags of 64-bits types (64位的类型). <code>Bit64Types = TypeCodeFlags.Int64 | TypeCodeFlags.UInt64 | TypeCodeFlags.Double</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.Bit8Types.html#Zyl_VectorTraits_TypeCodeFlagsUtil_Bit8Types">Bit8Types</a></dt>
+    <dd><p>TypeCodeFlags of 8-bits types (8位的类型). <code>Bit8Types = TypeCodeFlags.SByte | TypeCodeFlags.Byte</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.ExAllTypes.html#Zyl_VectorTraits_TypeCodeFlagsUtil_ExAllTypes">ExAllTypes</a></dt>
+    <dd><p>TypeCodeFlags of Ex all types (扩展所有类型). <code>ExAllTypes = TypeCodeFlags.Single | TypeCodeFlags.Double | TypeCodeFlags.SByte | TypeCodeFlags.Byte | TypeCodeFlags.Int16 | TypeCodeFlags.UInt16 | TypeCodeFlags.Int32 | TypeCodeFlags.UInt32 | TypeCodeFlags.Int64 | TypeCodeFlags.UInt64 | TypeCodeFlags.Int128 | TypeCodeFlags.UInt128</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.ExFloatTypes.html#Zyl_VectorTraits_TypeCodeFlagsUtil_ExFloatTypes">ExFloatTypes</a></dt>
+    <dd><p>TypeCodeFlags of Ex float types (扩展浮点类型). <code>ExFloatTypes = TypeCodeFlags.Single | TypeCodeFlags.Double</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.ExIntTypes.html#Zyl_VectorTraits_TypeCodeFlagsUtil_ExIntTypes">ExIntTypes</a></dt>
+    <dd><p>TypeCodeFlags of Ex integer types (扩展整数类型). <code>ExIntTypes = TypeCodeFlags.SByte | TypeCodeFlags.Byte | TypeCodeFlags.Int16 | TypeCodeFlags.UInt16 | TypeCodeFlags.Int32 | TypeCodeFlags.UInt32 | TypeCodeFlags.Int64 | TypeCodeFlags.UInt64 | TypeCodeFlags.Int128 | TypeCodeFlags.UInt128</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.PureExAllTypes.html#Zyl_VectorTraits_TypeCodeFlagsUtil_PureExAllTypes">PureExAllTypes</a></dt>
+    <dd><p>TypeCodeFlags of PureEx all types (纯扩展所有类型). <code>PureExAllTypes = TypeCodeFlags.Int128 | TypeCodeFlags.UInt128</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.PureExFloatTypes.html#Zyl_VectorTraits_TypeCodeFlagsUtil_PureExFloatTypes">PureExFloatTypes</a></dt>
+    <dd><p>TypeCodeFlags of PureEx float types (纯扩展浮点类型). <code>PureExFloatTypes = TypeCodeFlags.None</code>.</p>
+</dd>
+  </dl>
+  <dl class="jumplist">
+    <dt><a class="xref" href="Zyl.VectorTraits.TypeCodeFlagsUtil.PureExIntTypes.html#Zyl_VectorTraits_TypeCodeFlagsUtil_PureExIntTypes">PureExIntTypes</a></dt>
+    <dd><p>TypeCodeFlags of PureEx integer types (纯扩展整数类型). <code>PureExIntTypes = TypeCodeFlags.Int128 | TypeCodeFlags.UInt128</code>.</p>
 </dd>
   </dl>
 
@@ -247,7 +306,7 @@ Class TypeCodeFlagsUtil  <a class="header-action link-secondary" title="View sou
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/TypeCodeFlagsUtil.cs/#L80" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/TypeCodeFlagsUtil.cs/#L93" class="edit-link">Edit this page</a>
         </div>
 
 

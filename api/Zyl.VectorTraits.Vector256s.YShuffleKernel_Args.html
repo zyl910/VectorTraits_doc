@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args*" class="text-break">
-Method YShuffleKernel_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L770"><i class="bi bi-code-slash"></i></a>
+Method YShuffleKernel_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L795"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YShuffleKernel_Args  <a class="header-action link-secondary" title="View 
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args__1_System_Runtime_Intrinsics_Vector256___0__System_Runtime_Intrinsics_Vector256___0___System_Runtime_Intrinsics_Vector256___0___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0}@,System.Runtime.Intrinsics.Vector256{``0}@)">
   YShuffleKernel_Args&lt;TIdx&gt;(Vector256&lt;TIdx&gt;, out Vector256&lt;TIdx&gt;, out Vector256&lt;TIdx&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L770"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L795"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -177,7 +177,7 @@ public static void YShuffleKernel_Args&lt;TIdx&gt;(Vector256&lt;TIdx&gt; indices
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args__1_System_Runtime_Intrinsics_Vector256___0__" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args``1(System.Runtime.Intrinsics.Vector256{``0})">
   YShuffleKernel_Args&lt;TIdx&gt;(Vector256&lt;TIdx&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L820"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L845"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -237,7 +237,7 @@ public static (Vector256&lt;TIdx&gt; args0, Vector256&lt;TIdx&gt; args1) YShuffl
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_SByte__" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.SByte})">
   YShuffleKernel_Args(Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L836"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L861"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -285,7 +285,7 @@ public static (Vector256&lt;sbyte&gt; args0, Vector256&lt;sbyte&gt; args1) YShuf
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_Byte__" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.Byte})">
   YShuffleKernel_Args(Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L851"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L876"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -332,7 +332,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_Int16__" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.Int16})">
   YShuffleKernel_Args(Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L865"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L890"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -379,7 +379,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_UInt16__" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.UInt16})">
   YShuffleKernel_Args(Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L879"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L904"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -427,7 +427,7 @@ public static (Vector256&lt;ushort&gt; args0, Vector256&lt;ushort&gt; args1) YSh
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_Int32__" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.Int32})">
   YShuffleKernel_Args(Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L894"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L919"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -474,7 +474,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_UInt32__" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.UInt32})">
   YShuffleKernel_Args(Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L908"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L933"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -522,7 +522,7 @@ public static (Vector256&lt;uint&gt; args0, Vector256&lt;uint&gt; args1) YShuffl
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_Int64__" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.Int64})">
   YShuffleKernel_Args(Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L923"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L948"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -569,7 +569,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_UInt64__" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.UInt64})">
   YShuffleKernel_Args(Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L937"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L962"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -617,7 +617,7 @@ public static (Vector256&lt;ulong&gt; args0, Vector256&lt;ulong&gt; args1) YShuf
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_SByte__System_Runtime_Intrinsics_Vector256_System_SByte___System_Runtime_Intrinsics_Vector256_System_SByte___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte}@,System.Runtime.Intrinsics.Vector256{System.SByte}@)">
   YShuffleKernel_Args(Vector256&lt;sbyte&gt;, out Vector256&lt;sbyte&gt;, out Vector256&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2697"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L5350"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -665,7 +665,7 @@ public static void YShuffleKernel_Args(Vector256&lt;sbyte&gt; indices, out Vecto
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_Byte__System_Runtime_Intrinsics_Vector256_System_Byte___System_Runtime_Intrinsics_Vector256_System_Byte___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte}@,System.Runtime.Intrinsics.Vector256{System.Byte}@)">
   YShuffleKernel_Args(Vector256&lt;byte&gt;, out Vector256&lt;byte&gt;, out Vector256&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2708"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L5361"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -712,7 +712,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_Int16__System_Runtime_Intrinsics_Vector256_System_Int16___System_Runtime_Intrinsics_Vector256_System_Int16___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16}@,System.Runtime.Intrinsics.Vector256{System.Int16}@)">
   YShuffleKernel_Args(Vector256&lt;short&gt;, out Vector256&lt;short&gt;, out Vector256&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2718"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L5371"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -759,7 +759,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_UInt16__System_Runtime_Intrinsics_Vector256_System_UInt16___System_Runtime_Intrinsics_Vector256_System_UInt16___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16}@,System.Runtime.Intrinsics.Vector256{System.UInt16}@)">
   YShuffleKernel_Args(Vector256&lt;ushort&gt;, out Vector256&lt;ushort&gt;, out Vector256&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2728"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L5381"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -807,7 +807,7 @@ public static void YShuffleKernel_Args(Vector256&lt;ushort&gt; indices, out Vect
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_Int32__System_Runtime_Intrinsics_Vector256_System_Int32___System_Runtime_Intrinsics_Vector256_System_Int32___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32}@,System.Runtime.Intrinsics.Vector256{System.Int32}@)">
   YShuffleKernel_Args(Vector256&lt;int&gt;, out Vector256&lt;int&gt;, out Vector256&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2739"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L5392"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -854,7 +854,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_UInt32__System_Runtime_Intrinsics_Vector256_System_UInt32___System_Runtime_Intrinsics_Vector256_System_UInt32___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32}@,System.Runtime.Intrinsics.Vector256{System.UInt32}@)">
   YShuffleKernel_Args(Vector256&lt;uint&gt;, out Vector256&lt;uint&gt;, out Vector256&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2749"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L5402"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -902,7 +902,7 @@ public static void YShuffleKernel_Args(Vector256&lt;uint&gt; indices, out Vector
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_Int64__System_Runtime_Intrinsics_Vector256_System_Int64___System_Runtime_Intrinsics_Vector256_System_Int64___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64}@,System.Runtime.Intrinsics.Vector256{System.Int64}@)">
   YShuffleKernel_Args(Vector256&lt;long&gt;, out Vector256&lt;long&gt;, out Vector256&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2760"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L5413"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -949,7 +949,7 @@ Mnemonic: <code>rt[i] := vector[indices[i]]</code>. Conditions: <code>0&lt;=indi
 
 <h3 id="Zyl_VectorTraits_Vector256s_YShuffleKernel_Args_System_Runtime_Intrinsics_Vector256_System_UInt64__System_Runtime_Intrinsics_Vector256_System_UInt64___System_Runtime_Intrinsics_Vector256_System_UInt64___" data-uid="Zyl.VectorTraits.Vector256s.YShuffleKernel_Args(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64}@,System.Runtime.Intrinsics.Vector256{System.UInt64}@)">
   YShuffleKernel_Args(Vector256&lt;ulong&gt;, out Vector256&lt;ulong&gt;, out Vector256&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L2770"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Traits.Y.cs/#L5423"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for only shuffle (仅换位的参数计算). Provide arguments for YShuffleKernel_Core (为 YShuffleKernel_Core 提供参数). If the index value is out of range, the result is undefined (若索引值超出范围, 结果是未定义的). You can use the <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> to constrain the parameters (可使用 <a class="xref" href="Zyl.VectorTraits.Vectors-1.IndexMask.html">IndexMask</a> 掩码来约束参数).
@@ -996,7 +996,7 @@ public static void YShuffleKernel_Args(Vector256&lt;ulong&gt; indices, out Vecto
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L770" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Vector256s.Extensions.Y.cs/#L795" class="edit-link">Edit this page</a>
         </div>
 
 

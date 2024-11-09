@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -73,7 +73,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -87,7 +87,7 @@
 
 
 <h1 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args_" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args*" class="text-break">
-Method YShuffleInsert_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L235"><i class="bi bi-code-slash"></i></a>
+Method YShuffleInsert_Args  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L261"><i class="bi bi-code-slash"></i></a>
 </h1>
 
 <div class="facts text-secondary">
@@ -117,7 +117,7 @@ Method YShuffleInsert_Args  <a class="header-action link-secondary" title="View 
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args__1_Zyl_VectorTraits_Impl_IVectorTraits_System_Numerics_Vector___0__System_Numerics_Vector___0___System_Numerics_Vector___0___System_Numerics_Vector___0___" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args``1(Zyl.VectorTraits.Impl.IVectorTraits,System.Numerics.Vector{``0},System.Numerics.Vector{``0}@,System.Numerics.Vector{``0}@,System.Numerics.Vector{``0}@)">
   YShuffleInsert_Args&lt;TIdx&gt;(IVectorTraits, Vector&lt;TIdx&gt;, out Vector&lt;TIdx&gt;, out Vector&lt;TIdx&gt;, out Vector&lt;TIdx&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L261"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -166,7 +166,7 @@ public static void YShuffleInsert_Args&lt;TIdx&gt;(this IVectorTraits athis, Vec
 <h4 class="section">Exceptions</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-  <dd><p>These element types(TIdx) are not supported.</p>
+  <dd><p>These element types(<code class="typeparamref">TIdx</code>) are not supported.</p>
 </dd>
 </dl>
 
@@ -183,7 +183,7 @@ public static void YShuffleInsert_Args&lt;TIdx&gt;(this IVectorTraits athis, Vec
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args__1_Zyl_VectorTraits_Impl_IVectorTraits_System_Numerics_Vector___0__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args``1(Zyl.VectorTraits.Impl.IVectorTraits,System.Numerics.Vector{``0})">
   YShuffleInsert_Args&lt;TIdx&gt;(IVectorTraits, Vector&lt;TIdx&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L285"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L311"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -229,7 +229,7 @@ public static (Vector&lt;TIdx&gt; args0, Vector&lt;TIdx&gt; args1, Vector&lt;TId
 <h4 class="section">Exceptions</h4>
 <dl class="parameters">
   <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notsupportedexception">NotSupportedException</a></dt>
-  <dd><p>These element types(TIdx) are not supported.</p>
+  <dd><p>These element types(<code class="typeparamref">TIdx</code>) are not supported.</p>
 </dd>
 </dl>
 
@@ -246,7 +246,7 @@ public static (Vector&lt;TIdx&gt; args0, Vector&lt;TIdx&gt; args1, Vector&lt;TId
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args_Zyl_VectorTraits_Impl_IVectorTraits_System_Numerics_Vector_System_SByte__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args(Zyl.VectorTraits.Impl.IVectorTraits,System.Numerics.Vector{System.SByte})">
   YShuffleInsert_Args(IVectorTraits, Vector&lt;sbyte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L320"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -296,7 +296,7 @@ public static (Vector&lt;sbyte&gt; args0, Vector&lt;sbyte&gt; args1, Vector&lt;s
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args_Zyl_VectorTraits_Impl_IVectorTraits_System_Numerics_Vector_System_Byte__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args(Zyl.VectorTraits.Impl.IVectorTraits,System.Numerics.Vector{System.Byte})">
   YShuffleInsert_Args(IVectorTraits, Vector&lt;byte&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L302"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L328"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -346,7 +346,7 @@ public static (Vector&lt;byte&gt; args0, Vector&lt;byte&gt; args1, Vector&lt;byt
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args_Zyl_VectorTraits_Impl_IVectorTraits_System_Numerics_Vector_System_Int16__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args(Zyl.VectorTraits.Impl.IVectorTraits,System.Numerics.Vector{System.Int16})">
   YShuffleInsert_Args(IVectorTraits, Vector&lt;short&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L336"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -396,7 +396,7 @@ public static (Vector&lt;short&gt; args0, Vector&lt;short&gt; args1, Vector&lt;s
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args_Zyl_VectorTraits_Impl_IVectorTraits_System_Numerics_Vector_System_UInt16__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args(Zyl.VectorTraits.Impl.IVectorTraits,System.Numerics.Vector{System.UInt16})">
   YShuffleInsert_Args(IVectorTraits, Vector&lt;ushort&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L344"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -446,7 +446,7 @@ public static (Vector&lt;ushort&gt; args0, Vector&lt;ushort&gt; args1, Vector&lt
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args_Zyl_VectorTraits_Impl_IVectorTraits_System_Numerics_Vector_System_Int32__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args(Zyl.VectorTraits.Impl.IVectorTraits,System.Numerics.Vector{System.Int32})">
   YShuffleInsert_Args(IVectorTraits, Vector&lt;int&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L326"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L352"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -496,7 +496,7 @@ public static (Vector&lt;int&gt; args0, Vector&lt;int&gt; args1, Vector&lt;int&g
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args_Zyl_VectorTraits_Impl_IVectorTraits_System_Numerics_Vector_System_UInt32__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args(Zyl.VectorTraits.Impl.IVectorTraits,System.Numerics.Vector{System.UInt32})">
   YShuffleInsert_Args(IVectorTraits, Vector&lt;uint&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L360"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -546,7 +546,7 @@ public static (Vector&lt;uint&gt; args0, Vector&lt;uint&gt; args1, Vector&lt;uin
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args_Zyl_VectorTraits_Impl_IVectorTraits_System_Numerics_Vector_System_Int64__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args(Zyl.VectorTraits.Impl.IVectorTraits,System.Numerics.Vector{System.Int64})">
   YShuffleInsert_Args(IVectorTraits, Vector&lt;long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L368"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -596,7 +596,7 @@ public static (Vector&lt;long&gt; args0, Vector&lt;long&gt; args1, Vector&lt;lon
 
 <h3 id="Zyl_VectorTraits_Impl_IVectorTraits_Extensions_YShuffleInsert_Args_Zyl_VectorTraits_Impl_IVectorTraits_System_Numerics_Vector_System_UInt64__" data-uid="Zyl.VectorTraits.Impl.IVectorTraits_Extensions.YShuffleInsert_Args(Zyl.VectorTraits.Impl.IVectorTraits,System.Numerics.Vector{System.UInt64})">
   YShuffleInsert_Args(IVectorTraits, Vector&lt;ulong&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L350"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L376"><i class="bi bi-code-slash"></i></a>
 </h3>
 
 <div class="markdown level1 summary"><p>Arguments calculation for shuffle and insert (换位并插入的参数计算). Provide arguments for YShuffleInsert_Core (为 YShuffleInsert_Core 提供参数). If the index value is out of range, the elements of the background vector will be inserted (若索引值超出范围, 会插入背景向量的元素).
@@ -645,7 +645,7 @@ public static (Vector&lt;ulong&gt; args0, Vector&lt;ulong&gt; args1, Vector&lt;u
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L235" class="edit-link">Edit this page</a>
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/IVectorTraits_Extensions.Y.cs/#L261" class="edit-link">Edit this page</a>
         </div>
 
 

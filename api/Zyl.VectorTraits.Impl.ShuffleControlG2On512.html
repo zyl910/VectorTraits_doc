@@ -1,0 +1,922 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Enum ShuffleControlG2On512 </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Enum ShuffleControlG2On512 ">
+      
+      <meta name="description" content="Shuffle control constants for &amp;quot;2-element group&amp;quot; at 512 bits vector (&amp;quot;2元素组&amp;quot;在512位向量时的换位控制常数) .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/new/main/apiSpec/new?filename=Zyl_VectorTraits_Impl_ShuffleControlG2On512.md&amp;value=---%0Auid%3A%20Zyl.VectorTraits.Impl.ShuffleControlG2On512%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Zyl.VectorTraits.Impl.ShuffleControlG2On512">
+
+
+
+
+  <h1 id="Zyl_VectorTraits_Impl_ShuffleControlG2On512" data-uid="Zyl.VectorTraits.Impl.ShuffleControlG2On512" class="text-break">
+Enum ShuffleControlG2On512  <a class="header-action link-secondary" title="View source" href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/ShuffleControlG2On512.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Zyl.html">Zyl</a>.<a class="xref" href="Zyl.VectorTraits.html">VectorTraits</a>.<a class="xref" href="Zyl.VectorTraits.Impl.html">Impl</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VectorTraits.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Shuffle control constants for &quot;2-element group&quot; at 512 bits vector (&quot;2元素组&quot;在512位向量时的换位控制常数) .</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum ShuffleControlG2On512 : byte</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h2 id="fields">Fields
+</h2>
+  <dl class="parameters">
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXXXXX"><code>XXXXXXXX = 0</code></dt>
+    <dd><p>XXXXXXXX := GetByteBy8XBitR(0, 0, 0, 0, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x00 = 0 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXXXXY"><code>XXXXXXXY = 128</code></dt>
+    <dd><p>XXXXXXXY := GetByteBy8XBitR(0, 0, 0, 0, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x80 = 128 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXXXYX"><code>XXXXXXYX = 64</code></dt>
+    <dd><p>XXXXXXYX := GetByteBy8XBitR(0, 0, 0, 0, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x40 = 64 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXXXYY"><code>XXXXXXYY = 192</code></dt>
+    <dd><p>XXXXXXYY := GetByteBy8XBitR(0, 0, 0, 0, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xC0 = 192 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXXYXX"><code>XXXXXYXX = 32</code></dt>
+    <dd><p>XXXXXYXX := GetByteBy8XBitR(0, 0, 0, 0, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x20 = 32 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXXYXY"><code>XXXXXYXY = 160</code></dt>
+    <dd><p>XXXXXYXY := GetByteBy8XBitR(0, 0, 0, 0, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xA0 = 160 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXXYYX"><code>XXXXXYYX = 96</code></dt>
+    <dd><p>XXXXXYYX := GetByteBy8XBitR(0, 0, 0, 0, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x60 = 96 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXXYYY"><code>XXXXXYYY = 224</code></dt>
+    <dd><p>XXXXXYYY := GetByteBy8XBitR(0, 0, 0, 0, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xE0 = 224 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXYXXX"><code>XXXXYXXX = 16</code></dt>
+    <dd><p>XXXXYXXX := GetByteBy8XBitR(0, 0, 0, 0, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x10 = 16 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXYXXY"><code>XXXXYXXY = 144</code></dt>
+    <dd><p>XXXXYXXY := GetByteBy8XBitR(0, 0, 0, 0, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x90 = 144 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXYXYX"><code>XXXXYXYX = 80</code></dt>
+    <dd><p>XXXXYXYX := GetByteBy8XBitR(0, 0, 0, 0, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x50 = 80 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXYXYY"><code>XXXXYXYY = 208</code></dt>
+    <dd><p>XXXXYXYY := GetByteBy8XBitR(0, 0, 0, 0, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xD0 = 208 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXYYXX"><code>XXXXYYXX = 48</code></dt>
+    <dd><p>XXXXYYXX := GetByteBy8XBitR(0, 0, 0, 0, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x30 = 48 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXYYXY"><code>XXXXYYXY = 176</code></dt>
+    <dd><p>XXXXYYXY := GetByteBy8XBitR(0, 0, 0, 0, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xB0 = 176 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXYYYX"><code>XXXXYYYX = 112</code></dt>
+    <dd><p>XXXXYYYX := GetByteBy8XBitR(0, 0, 0, 0, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x70 = 112 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXXYYYY"><code>XXXXYYYY = 240</code></dt>
+    <dd><p>XXXXYYYY := GetByteBy8XBitR(0, 0, 0, 0, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xF0 = 240 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYXXXX"><code>XXXYXXXX = 8</code></dt>
+    <dd><p>XXXYXXXX := GetByteBy8XBitR(0, 0, 0, 1, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x08 = 8 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYXXXY"><code>XXXYXXXY = 136</code></dt>
+    <dd><p>XXXYXXXY := GetByteBy8XBitR(0, 0, 0, 1, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x88 = 136 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYXXYX"><code>XXXYXXYX = 72</code></dt>
+    <dd><p>XXXYXXYX := GetByteBy8XBitR(0, 0, 0, 1, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x48 = 72 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYXXYY"><code>XXXYXXYY = 200</code></dt>
+    <dd><p>XXXYXXYY := GetByteBy8XBitR(0, 0, 0, 1, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xC8 = 200 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYXYXX"><code>XXXYXYXX = 40</code></dt>
+    <dd><p>XXXYXYXX := GetByteBy8XBitR(0, 0, 0, 1, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x28 = 40 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYXYXY"><code>XXXYXYXY = 168</code></dt>
+    <dd><p>XXXYXYXY := GetByteBy8XBitR(0, 0, 0, 1, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xA8 = 168 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYXYYX"><code>XXXYXYYX = 104</code></dt>
+    <dd><p>XXXYXYYX := GetByteBy8XBitR(0, 0, 0, 1, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x68 = 104 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYXYYY"><code>XXXYXYYY = 232</code></dt>
+    <dd><p>XXXYXYYY := GetByteBy8XBitR(0, 0, 0, 1, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xE8 = 232 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYYXXX"><code>XXXYYXXX = 24</code></dt>
+    <dd><p>XXXYYXXX := GetByteBy8XBitR(0, 0, 0, 1, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x18 = 24 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYYXXY"><code>XXXYYXXY = 152</code></dt>
+    <dd><p>XXXYYXXY := GetByteBy8XBitR(0, 0, 0, 1, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x98 = 152 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYYXYX"><code>XXXYYXYX = 88</code></dt>
+    <dd><p>XXXYYXYX := GetByteBy8XBitR(0, 0, 0, 1, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x58 = 88 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYYXYY"><code>XXXYYXYY = 216</code></dt>
+    <dd><p>XXXYYXYY := GetByteBy8XBitR(0, 0, 0, 1, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xD8 = 216 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYYYXX"><code>XXXYYYXX = 56</code></dt>
+    <dd><p>XXXYYYXX := GetByteBy8XBitR(0, 0, 0, 1, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x38 = 56 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYYYXY"><code>XXXYYYXY = 184</code></dt>
+    <dd><p>XXXYYYXY := GetByteBy8XBitR(0, 0, 0, 1, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xB8 = 184 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYYYYX"><code>XXXYYYYX = 120</code></dt>
+    <dd><p>XXXYYYYX := GetByteBy8XBitR(0, 0, 0, 1, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x78 = 120 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXXYYYYY"><code>XXXYYYYY = 248</code></dt>
+    <dd><p>XXXYYYYY := GetByteBy8XBitR(0, 0, 0, 1, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xF8 = 248 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXXXXX"><code>XXYXXXXX = 4</code></dt>
+    <dd><p>XXYXXXXX := GetByteBy8XBitR(0, 0, 1, 0, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x04 = 4 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXXXXY"><code>XXYXXXXY = 132</code></dt>
+    <dd><p>XXYXXXXY := GetByteBy8XBitR(0, 0, 1, 0, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x84 = 132 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXXXYX"><code>XXYXXXYX = 68</code></dt>
+    <dd><p>XXYXXXYX := GetByteBy8XBitR(0, 0, 1, 0, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x44 = 68 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXXXYY"><code>XXYXXXYY = 196</code></dt>
+    <dd><p>XXYXXXYY := GetByteBy8XBitR(0, 0, 1, 0, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xC4 = 196 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXXYXX"><code>XXYXXYXX = 36</code></dt>
+    <dd><p>XXYXXYXX := GetByteBy8XBitR(0, 0, 1, 0, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x24 = 36 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXXYXY"><code>XXYXXYXY = 164</code></dt>
+    <dd><p>XXYXXYXY := GetByteBy8XBitR(0, 0, 1, 0, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xA4 = 164 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXXYYX"><code>XXYXXYYX = 100</code></dt>
+    <dd><p>XXYXXYYX := GetByteBy8XBitR(0, 0, 1, 0, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x64 = 100 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXXYYY"><code>XXYXXYYY = 228</code></dt>
+    <dd><p>XXYXXYYY := GetByteBy8XBitR(0, 0, 1, 0, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xE4 = 228 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXYXXX"><code>XXYXYXXX = 20</code></dt>
+    <dd><p>XXYXYXXX := GetByteBy8XBitR(0, 0, 1, 0, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x14 = 20 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXYXXY"><code>XXYXYXXY = 148</code></dt>
+    <dd><p>XXYXYXXY := GetByteBy8XBitR(0, 0, 1, 0, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x94 = 148 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXYXYX"><code>XXYXYXYX = 84</code></dt>
+    <dd><p>XXYXYXYX := GetByteBy8XBitR(0, 0, 1, 0, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x54 = 84 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXYXYY"><code>XXYXYXYY = 212</code></dt>
+    <dd><p>XXYXYXYY := GetByteBy8XBitR(0, 0, 1, 0, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xD4 = 212 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXYYXX"><code>XXYXYYXX = 52</code></dt>
+    <dd><p>XXYXYYXX := GetByteBy8XBitR(0, 0, 1, 0, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x34 = 52 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXYYXY"><code>XXYXYYXY = 180</code></dt>
+    <dd><p>XXYXYYXY := GetByteBy8XBitR(0, 0, 1, 0, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xB4 = 180 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXYYYX"><code>XXYXYYYX = 116</code></dt>
+    <dd><p>XXYXYYYX := GetByteBy8XBitR(0, 0, 1, 0, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x74 = 116 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYXYYYY"><code>XXYXYYYY = 244</code></dt>
+    <dd><p>XXYXYYYY := GetByteBy8XBitR(0, 0, 1, 0, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xF4 = 244 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYXXXX"><code>XXYYXXXX = 12</code></dt>
+    <dd><p>XXYYXXXX := GetByteBy8XBitR(0, 0, 1, 1, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x0C = 12 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYXXXY"><code>XXYYXXXY = 140</code></dt>
+    <dd><p>XXYYXXXY := GetByteBy8XBitR(0, 0, 1, 1, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x8C = 140 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYXXYX"><code>XXYYXXYX = 76</code></dt>
+    <dd><p>XXYYXXYX := GetByteBy8XBitR(0, 0, 1, 1, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x4C = 76 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYXXYY"><code>XXYYXXYY = 204</code></dt>
+    <dd><p>XXYYXXYY := GetByteBy8XBitR(0, 0, 1, 1, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xCC = 204 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYXYXX"><code>XXYYXYXX = 44</code></dt>
+    <dd><p>XXYYXYXX := GetByteBy8XBitR(0, 0, 1, 1, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x2C = 44 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYXYXY"><code>XXYYXYXY = 172</code></dt>
+    <dd><p>XXYYXYXY := GetByteBy8XBitR(0, 0, 1, 1, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xAC = 172 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYXYYX"><code>XXYYXYYX = 108</code></dt>
+    <dd><p>XXYYXYYX := GetByteBy8XBitR(0, 0, 1, 1, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x6C = 108 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYXYYY"><code>XXYYXYYY = 236</code></dt>
+    <dd><p>XXYYXYYY := GetByteBy8XBitR(0, 0, 1, 1, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xEC = 236 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYYXXX"><code>XXYYYXXX = 28</code></dt>
+    <dd><p>XXYYYXXX := GetByteBy8XBitR(0, 0, 1, 1, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x1C = 28 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYYXXY"><code>XXYYYXXY = 156</code></dt>
+    <dd><p>XXYYYXXY := GetByteBy8XBitR(0, 0, 1, 1, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x9C = 156 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYYXYX"><code>XXYYYXYX = 92</code></dt>
+    <dd><p>XXYYYXYX := GetByteBy8XBitR(0, 0, 1, 1, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x5C = 92 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYYXYY"><code>XXYYYXYY = 220</code></dt>
+    <dd><p>XXYYYXYY := GetByteBy8XBitR(0, 0, 1, 1, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xDC = 220 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYYYXX"><code>XXYYYYXX = 60</code></dt>
+    <dd><p>XXYYYYXX := GetByteBy8XBitR(0, 0, 1, 1, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x3C = 60 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYYYXY"><code>XXYYYYXY = 188</code></dt>
+    <dd><p>XXYYYYXY := GetByteBy8XBitR(0, 0, 1, 1, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xBC = 188 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYYYYX"><code>XXYYYYYX = 124</code></dt>
+    <dd><p>XXYYYYYX := GetByteBy8XBitR(0, 0, 1, 1, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0x7C = 124 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XXYYYYYY"><code>XXYYYYYY = 252</code></dt>
+    <dd><p>XXYYYYYY := GetByteBy8XBitR(0, 0, 1, 1, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 0 = 0xFC = 252 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXXXXX"><code>XYXXXXXX = 2</code></dt>
+    <dd><p>XYXXXXXX := GetByteBy8XBitR(0, 1, 0, 0, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x02 = 2 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXXXXY"><code>XYXXXXXY = 130</code></dt>
+    <dd><p>XYXXXXXY := GetByteBy8XBitR(0, 1, 0, 0, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x82 = 130 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXXXYX"><code>XYXXXXYX = 66</code></dt>
+    <dd><p>XYXXXXYX := GetByteBy8XBitR(0, 1, 0, 0, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x42 = 66 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXXXYY"><code>XYXXXXYY = 194</code></dt>
+    <dd><p>XYXXXXYY := GetByteBy8XBitR(0, 1, 0, 0, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xC2 = 194 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXXYXX"><code>XYXXXYXX = 34</code></dt>
+    <dd><p>XYXXXYXX := GetByteBy8XBitR(0, 1, 0, 0, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x22 = 34 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXXYXY"><code>XYXXXYXY = 162</code></dt>
+    <dd><p>XYXXXYXY := GetByteBy8XBitR(0, 1, 0, 0, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xA2 = 162 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXXYYX"><code>XYXXXYYX = 98</code></dt>
+    <dd><p>XYXXXYYX := GetByteBy8XBitR(0, 1, 0, 0, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x62 = 98 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXXYYY"><code>XYXXXYYY = 226</code></dt>
+    <dd><p>XYXXXYYY := GetByteBy8XBitR(0, 1, 0, 0, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xE2 = 226 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXYXXX"><code>XYXXYXXX = 18</code></dt>
+    <dd><p>XYXXYXXX := GetByteBy8XBitR(0, 1, 0, 0, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x12 = 18 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXYXXY"><code>XYXXYXXY = 146</code></dt>
+    <dd><p>XYXXYXXY := GetByteBy8XBitR(0, 1, 0, 0, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x92 = 146 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXYXYX"><code>XYXXYXYX = 82</code></dt>
+    <dd><p>XYXXYXYX := GetByteBy8XBitR(0, 1, 0, 0, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x52 = 82 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXYXYY"><code>XYXXYXYY = 210</code></dt>
+    <dd><p>XYXXYXYY := GetByteBy8XBitR(0, 1, 0, 0, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xD2 = 210 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXYYXX"><code>XYXXYYXX = 50</code></dt>
+    <dd><p>XYXXYYXX := GetByteBy8XBitR(0, 1, 0, 0, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x32 = 50 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXYYXY"><code>XYXXYYXY = 178</code></dt>
+    <dd><p>XYXXYYXY := GetByteBy8XBitR(0, 1, 0, 0, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xB2 = 178 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXYYYX"><code>XYXXYYYX = 114</code></dt>
+    <dd><p>XYXXYYYX := GetByteBy8XBitR(0, 1, 0, 0, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x72 = 114 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXXYYYY"><code>XYXXYYYY = 242</code></dt>
+    <dd><p>XYXXYYYY := GetByteBy8XBitR(0, 1, 0, 0, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xF2 = 242 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYXXXX"><code>XYXYXXXX = 10</code></dt>
+    <dd><p>XYXYXXXX := GetByteBy8XBitR(0, 1, 0, 1, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x0A = 10 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYXXXY"><code>XYXYXXXY = 138</code></dt>
+    <dd><p>XYXYXXXY := GetByteBy8XBitR(0, 1, 0, 1, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x8A = 138 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYXXYX"><code>XYXYXXYX = 74</code></dt>
+    <dd><p>XYXYXXYX := GetByteBy8XBitR(0, 1, 0, 1, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x4A = 74 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYXXYY"><code>XYXYXXYY = 202</code></dt>
+    <dd><p>XYXYXXYY := GetByteBy8XBitR(0, 1, 0, 1, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xCA = 202 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYXYXX"><code>XYXYXYXX = 42</code></dt>
+    <dd><p>XYXYXYXX := GetByteBy8XBitR(0, 1, 0, 1, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x2A = 42 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYXYXY"><code>XYXYXYXY = 170</code></dt>
+    <dd><p>XYXYXYXY := GetByteBy8XBitR(0, 1, 0, 1, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xAA = 170 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYXYYX"><code>XYXYXYYX = 106</code></dt>
+    <dd><p>XYXYXYYX := GetByteBy8XBitR(0, 1, 0, 1, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x6A = 106 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYXYYY"><code>XYXYXYYY = 234</code></dt>
+    <dd><p>XYXYXYYY := GetByteBy8XBitR(0, 1, 0, 1, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xEA = 234 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYYXXX"><code>XYXYYXXX = 26</code></dt>
+    <dd><p>XYXYYXXX := GetByteBy8XBitR(0, 1, 0, 1, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x1A = 26 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYYXXY"><code>XYXYYXXY = 154</code></dt>
+    <dd><p>XYXYYXXY := GetByteBy8XBitR(0, 1, 0, 1, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x9A = 154 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYYXYX"><code>XYXYYXYX = 90</code></dt>
+    <dd><p>XYXYYXYX := GetByteBy8XBitR(0, 1, 0, 1, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x5A = 90 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYYXYY"><code>XYXYYXYY = 218</code></dt>
+    <dd><p>XYXYYXYY := GetByteBy8XBitR(0, 1, 0, 1, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xDA = 218 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYYYXX"><code>XYXYYYXX = 58</code></dt>
+    <dd><p>XYXYYYXX := GetByteBy8XBitR(0, 1, 0, 1, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x3A = 58 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYYYXY"><code>XYXYYYXY = 186</code></dt>
+    <dd><p>XYXYYYXY := GetByteBy8XBitR(0, 1, 0, 1, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xBA = 186 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYYYYX"><code>XYXYYYYX = 122</code></dt>
+    <dd><p>XYXYYYYX := GetByteBy8XBitR(0, 1, 0, 1, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x7A = 122 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYXYYYYY"><code>XYXYYYYY = 250</code></dt>
+    <dd><p>XYXYYYYY := GetByteBy8XBitR(0, 1, 0, 1, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xFA = 250 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXXXXX"><code>XYYXXXXX = 6</code></dt>
+    <dd><p>XYYXXXXX := GetByteBy8XBitR(0, 1, 1, 0, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x06 = 6 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXXXXY"><code>XYYXXXXY = 134</code></dt>
+    <dd><p>XYYXXXXY := GetByteBy8XBitR(0, 1, 1, 0, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x86 = 134 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXXXYX"><code>XYYXXXYX = 70</code></dt>
+    <dd><p>XYYXXXYX := GetByteBy8XBitR(0, 1, 1, 0, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x46 = 70 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXXXYY"><code>XYYXXXYY = 198</code></dt>
+    <dd><p>XYYXXXYY := GetByteBy8XBitR(0, 1, 1, 0, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xC6 = 198 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXXYXX"><code>XYYXXYXX = 38</code></dt>
+    <dd><p>XYYXXYXX := GetByteBy8XBitR(0, 1, 1, 0, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x26 = 38 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXXYXY"><code>XYYXXYXY = 166</code></dt>
+    <dd><p>XYYXXYXY := GetByteBy8XBitR(0, 1, 1, 0, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xA6 = 166 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXXYYX"><code>XYYXXYYX = 102</code></dt>
+    <dd><p>XYYXXYYX := GetByteBy8XBitR(0, 1, 1, 0, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x66 = 102 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXXYYY"><code>XYYXXYYY = 230</code></dt>
+    <dd><p>XYYXXYYY := GetByteBy8XBitR(0, 1, 1, 0, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xE6 = 230 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXYXXX"><code>XYYXYXXX = 22</code></dt>
+    <dd><p>XYYXYXXX := GetByteBy8XBitR(0, 1, 1, 0, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x16 = 22 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXYXXY"><code>XYYXYXXY = 150</code></dt>
+    <dd><p>XYYXYXXY := GetByteBy8XBitR(0, 1, 1, 0, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x96 = 150 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXYXYX"><code>XYYXYXYX = 86</code></dt>
+    <dd><p>XYYXYXYX := GetByteBy8XBitR(0, 1, 1, 0, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x56 = 86 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXYXYY"><code>XYYXYXYY = 214</code></dt>
+    <dd><p>XYYXYXYY := GetByteBy8XBitR(0, 1, 1, 0, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xD6 = 214 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXYYXX"><code>XYYXYYXX = 54</code></dt>
+    <dd><p>XYYXYYXX := GetByteBy8XBitR(0, 1, 1, 0, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x36 = 54 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXYYXY"><code>XYYXYYXY = 182</code></dt>
+    <dd><p>XYYXYYXY := GetByteBy8XBitR(0, 1, 1, 0, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xB6 = 182 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXYYYX"><code>XYYXYYYX = 118</code></dt>
+    <dd><p>XYYXYYYX := GetByteBy8XBitR(0, 1, 1, 0, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x76 = 118 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYXYYYY"><code>XYYXYYYY = 246</code></dt>
+    <dd><p>XYYXYYYY := GetByteBy8XBitR(0, 1, 1, 0, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xF6 = 246 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYXXXX"><code>XYYYXXXX = 14</code></dt>
+    <dd><p>XYYYXXXX := GetByteBy8XBitR(0, 1, 1, 1, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x0E = 14 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYXXXY"><code>XYYYXXXY = 142</code></dt>
+    <dd><p>XYYYXXXY := GetByteBy8XBitR(0, 1, 1, 1, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x8E = 142 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYXXYX"><code>XYYYXXYX = 78</code></dt>
+    <dd><p>XYYYXXYX := GetByteBy8XBitR(0, 1, 1, 1, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x4E = 78 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYXXYY"><code>XYYYXXYY = 206</code></dt>
+    <dd><p>XYYYXXYY := GetByteBy8XBitR(0, 1, 1, 1, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xCE = 206 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYXYXX"><code>XYYYXYXX = 46</code></dt>
+    <dd><p>XYYYXYXX := GetByteBy8XBitR(0, 1, 1, 1, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x2E = 46 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYXYXY"><code>XYYYXYXY = 174</code></dt>
+    <dd><p>XYYYXYXY := GetByteBy8XBitR(0, 1, 1, 1, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xAE = 174 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYXYYX"><code>XYYYXYYX = 110</code></dt>
+    <dd><p>XYYYXYYX := GetByteBy8XBitR(0, 1, 1, 1, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x6E = 110 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYXYYY"><code>XYYYXYYY = 238</code></dt>
+    <dd><p>XYYYXYYY := GetByteBy8XBitR(0, 1, 1, 1, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xEE = 238 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYYXXX"><code>XYYYYXXX = 30</code></dt>
+    <dd><p>XYYYYXXX := GetByteBy8XBitR(0, 1, 1, 1, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x1E = 30 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYYXXY"><code>XYYYYXXY = 158</code></dt>
+    <dd><p>XYYYYXXY := GetByteBy8XBitR(0, 1, 1, 1, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x9E = 158 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYYXYX"><code>XYYYYXYX = 94</code></dt>
+    <dd><p>XYYYYXYX := GetByteBy8XBitR(0, 1, 1, 1, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x5E = 94 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYYXYY"><code>XYYYYXYY = 222</code></dt>
+    <dd><p>XYYYYXYY := GetByteBy8XBitR(0, 1, 1, 1, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xDE = 222 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYYYXX"><code>XYYYYYXX = 62</code></dt>
+    <dd><p>XYYYYYXX := GetByteBy8XBitR(0, 1, 1, 1, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x3E = 62 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYYYXY"><code>XYYYYYXY = 190</code></dt>
+    <dd><p>XYYYYYXY := GetByteBy8XBitR(0, 1, 1, 1, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xBE = 190 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYYYYX"><code>XYYYYYYX = 126</code></dt>
+    <dd><p>XYYYYYYX := GetByteBy8XBitR(0, 1, 1, 1, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0x7E = 126 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_XYYYYYYY"><code>XYYYYYYY = 254</code></dt>
+    <dd><p>XYYYYYYY := GetByteBy8XBitR(0, 1, 1, 1, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 0) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 0 = 0xFE = 254 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXXXXX"><code>YXXXXXXX = 1</code></dt>
+    <dd><p>YXXXXXXX := GetByteBy8XBitR(1, 0, 0, 0, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x01 = 1 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXXXXY"><code>YXXXXXXY = 129</code></dt>
+    <dd><p>YXXXXXXY := GetByteBy8XBitR(1, 0, 0, 0, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x81 = 129 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXXXYX"><code>YXXXXXYX = 65</code></dt>
+    <dd><p>YXXXXXYX := GetByteBy8XBitR(1, 0, 0, 0, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x41 = 65 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXXXYY"><code>YXXXXXYY = 193</code></dt>
+    <dd><p>YXXXXXYY := GetByteBy8XBitR(1, 0, 0, 0, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xC1 = 193 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXXYXX"><code>YXXXXYXX = 33</code></dt>
+    <dd><p>YXXXXYXX := GetByteBy8XBitR(1, 0, 0, 0, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x21 = 33 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXXYXY"><code>YXXXXYXY = 161</code></dt>
+    <dd><p>YXXXXYXY := GetByteBy8XBitR(1, 0, 0, 0, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xA1 = 161 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXXYYX"><code>YXXXXYYX = 97</code></dt>
+    <dd><p>YXXXXYYX := GetByteBy8XBitR(1, 0, 0, 0, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x61 = 97 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXXYYY"><code>YXXXXYYY = 225</code></dt>
+    <dd><p>YXXXXYYY := GetByteBy8XBitR(1, 0, 0, 0, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xE1 = 225 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXYXXX"><code>YXXXYXXX = 17</code></dt>
+    <dd><p>YXXXYXXX := GetByteBy8XBitR(1, 0, 0, 0, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x11 = 17 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXYXXY"><code>YXXXYXXY = 145</code></dt>
+    <dd><p>YXXXYXXY := GetByteBy8XBitR(1, 0, 0, 0, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x91 = 145 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXYXYX"><code>YXXXYXYX = 81</code></dt>
+    <dd><p>YXXXYXYX := GetByteBy8XBitR(1, 0, 0, 0, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x51 = 81 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXYXYY"><code>YXXXYXYY = 209</code></dt>
+    <dd><p>YXXXYXYY := GetByteBy8XBitR(1, 0, 0, 0, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xD1 = 209 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXYYXX"><code>YXXXYYXX = 49</code></dt>
+    <dd><p>YXXXYYXX := GetByteBy8XBitR(1, 0, 0, 0, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x31 = 49 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXYYXY"><code>YXXXYYXY = 177</code></dt>
+    <dd><p>YXXXYYXY := GetByteBy8XBitR(1, 0, 0, 0, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xB1 = 177 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXYYYX"><code>YXXXYYYX = 113</code></dt>
+    <dd><p>YXXXYYYX := GetByteBy8XBitR(1, 0, 0, 0, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x71 = 113 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXXYYYY"><code>YXXXYYYY = 241</code></dt>
+    <dd><p>YXXXYYYY := GetByteBy8XBitR(1, 0, 0, 0, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xF1 = 241 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYXXXX"><code>YXXYXXXX = 9</code></dt>
+    <dd><p>YXXYXXXX := GetByteBy8XBitR(1, 0, 0, 1, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x09 = 9 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYXXXY"><code>YXXYXXXY = 137</code></dt>
+    <dd><p>YXXYXXXY := GetByteBy8XBitR(1, 0, 0, 1, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x89 = 137 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYXXYX"><code>YXXYXXYX = 73</code></dt>
+    <dd><p>YXXYXXYX := GetByteBy8XBitR(1, 0, 0, 1, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x49 = 73 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYXXYY"><code>YXXYXXYY = 201</code></dt>
+    <dd><p>YXXYXXYY := GetByteBy8XBitR(1, 0, 0, 1, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xC9 = 201 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYXYXX"><code>YXXYXYXX = 41</code></dt>
+    <dd><p>YXXYXYXX := GetByteBy8XBitR(1, 0, 0, 1, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x29 = 41 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYXYXY"><code>YXXYXYXY = 169</code></dt>
+    <dd><p>YXXYXYXY := GetByteBy8XBitR(1, 0, 0, 1, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xA9 = 169 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYXYYX"><code>YXXYXYYX = 105</code></dt>
+    <dd><p>YXXYXYYX := GetByteBy8XBitR(1, 0, 0, 1, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x69 = 105 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYXYYY"><code>YXXYXYYY = 233</code></dt>
+    <dd><p>YXXYXYYY := GetByteBy8XBitR(1, 0, 0, 1, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xE9 = 233 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYYXXX"><code>YXXYYXXX = 25</code></dt>
+    <dd><p>YXXYYXXX := GetByteBy8XBitR(1, 0, 0, 1, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x19 = 25 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYYXXY"><code>YXXYYXXY = 153</code></dt>
+    <dd><p>YXXYYXXY := GetByteBy8XBitR(1, 0, 0, 1, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x99 = 153 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYYXYX"><code>YXXYYXYX = 89</code></dt>
+    <dd><p>YXXYYXYX := GetByteBy8XBitR(1, 0, 0, 1, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x59 = 89 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYYXYY"><code>YXXYYXYY = 217</code></dt>
+    <dd><p>YXXYYXYY := GetByteBy8XBitR(1, 0, 0, 1, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xD9 = 217 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYYYXX"><code>YXXYYYXX = 57</code></dt>
+    <dd><p>YXXYYYXX := GetByteBy8XBitR(1, 0, 0, 1, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x39 = 57 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYYYXY"><code>YXXYYYXY = 185</code></dt>
+    <dd><p>YXXYYYXY := GetByteBy8XBitR(1, 0, 0, 1, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xB9 = 185 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYYYYX"><code>YXXYYYYX = 121</code></dt>
+    <dd><p>YXXYYYYX := GetByteBy8XBitR(1, 0, 0, 1, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x79 = 121 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXXYYYYY"><code>YXXYYYYY = 249</code></dt>
+    <dd><p>YXXYYYYY := GetByteBy8XBitR(1, 0, 0, 1, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xF9 = 249 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXXXXX"><code>YXYXXXXX = 5</code></dt>
+    <dd><p>YXYXXXXX := GetByteBy8XBitR(1, 0, 1, 0, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x05 = 5 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXXXXY"><code>YXYXXXXY = 133</code></dt>
+    <dd><p>YXYXXXXY := GetByteBy8XBitR(1, 0, 1, 0, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x85 = 133 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXXXYX"><code>YXYXXXYX = 69</code></dt>
+    <dd><p>YXYXXXYX := GetByteBy8XBitR(1, 0, 1, 0, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x45 = 69 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXXXYY"><code>YXYXXXYY = 197</code></dt>
+    <dd><p>YXYXXXYY := GetByteBy8XBitR(1, 0, 1, 0, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xC5 = 197 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXXYXX"><code>YXYXXYXX = 37</code></dt>
+    <dd><p>YXYXXYXX := GetByteBy8XBitR(1, 0, 1, 0, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x25 = 37 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXXYXY"><code>YXYXXYXY = 165</code></dt>
+    <dd><p>YXYXXYXY := GetByteBy8XBitR(1, 0, 1, 0, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xA5 = 165 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXXYYX"><code>YXYXXYYX = 101</code></dt>
+    <dd><p>YXYXXYYX := GetByteBy8XBitR(1, 0, 1, 0, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x65 = 101 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXXYYY"><code>YXYXXYYY = 229</code></dt>
+    <dd><p>YXYXXYYY := GetByteBy8XBitR(1, 0, 1, 0, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xE5 = 229 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXYXXX"><code>YXYXYXXX = 21</code></dt>
+    <dd><p>YXYXYXXX := GetByteBy8XBitR(1, 0, 1, 0, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x15 = 21 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXYXXY"><code>YXYXYXXY = 149</code></dt>
+    <dd><p>YXYXYXXY := GetByteBy8XBitR(1, 0, 1, 0, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x95 = 149 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXYXYX"><code>YXYXYXYX = 85</code></dt>
+    <dd><p>YXYXYXYX := GetByteBy8XBitR(1, 0, 1, 0, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x55 = 85 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXYXYY"><code>YXYXYXYY = 213</code></dt>
+    <dd><p>YXYXYXYY := GetByteBy8XBitR(1, 0, 1, 0, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xD5 = 213 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXYYXX"><code>YXYXYYXX = 53</code></dt>
+    <dd><p>YXYXYYXX := GetByteBy8XBitR(1, 0, 1, 0, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x35 = 53 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXYYXY"><code>YXYXYYXY = 181</code></dt>
+    <dd><p>YXYXYYXY := GetByteBy8XBitR(1, 0, 1, 0, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xB5 = 181 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXYYYX"><code>YXYXYYYX = 117</code></dt>
+    <dd><p>YXYXYYYX := GetByteBy8XBitR(1, 0, 1, 0, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x75 = 117 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYXYYYY"><code>YXYXYYYY = 245</code></dt>
+    <dd><p>YXYXYYYY := GetByteBy8XBitR(1, 0, 1, 0, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xF5 = 245 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYXXXX"><code>YXYYXXXX = 13</code></dt>
+    <dd><p>YXYYXXXX := GetByteBy8XBitR(1, 0, 1, 1, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x0D = 13 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYXXXY"><code>YXYYXXXY = 141</code></dt>
+    <dd><p>YXYYXXXY := GetByteBy8XBitR(1, 0, 1, 1, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x8D = 141 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYXXYX"><code>YXYYXXYX = 77</code></dt>
+    <dd><p>YXYYXXYX := GetByteBy8XBitR(1, 0, 1, 1, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x4D = 77 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYXXYY"><code>YXYYXXYY = 205</code></dt>
+    <dd><p>YXYYXXYY := GetByteBy8XBitR(1, 0, 1, 1, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xCD = 205 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYXYXX"><code>YXYYXYXX = 45</code></dt>
+    <dd><p>YXYYXYXX := GetByteBy8XBitR(1, 0, 1, 1, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x2D = 45 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYXYXY"><code>YXYYXYXY = 173</code></dt>
+    <dd><p>YXYYXYXY := GetByteBy8XBitR(1, 0, 1, 1, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xAD = 173 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYXYYX"><code>YXYYXYYX = 109</code></dt>
+    <dd><p>YXYYXYYX := GetByteBy8XBitR(1, 0, 1, 1, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x6D = 109 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYXYYY"><code>YXYYXYYY = 237</code></dt>
+    <dd><p>YXYYXYYY := GetByteBy8XBitR(1, 0, 1, 1, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xED = 237 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYYXXX"><code>YXYYYXXX = 29</code></dt>
+    <dd><p>YXYYYXXX := GetByteBy8XBitR(1, 0, 1, 1, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x1D = 29 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYYXXY"><code>YXYYYXXY = 157</code></dt>
+    <dd><p>YXYYYXXY := GetByteBy8XBitR(1, 0, 1, 1, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x9D = 157 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYYXYX"><code>YXYYYXYX = 93</code></dt>
+    <dd><p>YXYYYXYX := GetByteBy8XBitR(1, 0, 1, 1, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x5D = 93 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYYXYY"><code>YXYYYXYY = 221</code></dt>
+    <dd><p>YXYYYXYY := GetByteBy8XBitR(1, 0, 1, 1, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xDD = 221 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYYYXX"><code>YXYYYYXX = 61</code></dt>
+    <dd><p>YXYYYYXX := GetByteBy8XBitR(1, 0, 1, 1, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x3D = 61 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYYYXY"><code>YXYYYYXY = 189</code></dt>
+    <dd><p>YXYYYYXY := GetByteBy8XBitR(1, 0, 1, 1, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xBD = 189 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYYYYX"><code>YXYYYYYX = 125</code></dt>
+    <dd><p>YXYYYYYX := GetByteBy8XBitR(1, 0, 1, 1, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0x7D = 125 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YXYYYYYY"><code>YXYYYYYY = 253</code></dt>
+    <dd><p>YXYYYYYY := GetByteBy8XBitR(1, 0, 1, 1, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(0, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (0 &lt;&lt; 1) | 1 = 0xFD = 253 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXXXXX"><code>YYXXXXXX = 3</code></dt>
+    <dd><p>YYXXXXXX := GetByteBy8XBitR(1, 1, 0, 0, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x03 = 3 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXXXXY"><code>YYXXXXXY = 131</code></dt>
+    <dd><p>YYXXXXXY := GetByteBy8XBitR(1, 1, 0, 0, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x83 = 131 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXXXYX"><code>YYXXXXYX = 67</code></dt>
+    <dd><p>YYXXXXYX := GetByteBy8XBitR(1, 1, 0, 0, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x43 = 67 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXXXYY"><code>YYXXXXYY = 195</code></dt>
+    <dd><p>YYXXXXYY := GetByteBy8XBitR(1, 1, 0, 0, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xC3 = 195 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXXYXX"><code>YYXXXYXX = 35</code></dt>
+    <dd><p>YYXXXYXX := GetByteBy8XBitR(1, 1, 0, 0, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x23 = 35 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXXYXY"><code>YYXXXYXY = 163</code></dt>
+    <dd><p>YYXXXYXY := GetByteBy8XBitR(1, 1, 0, 0, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xA3 = 163 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXXYYX"><code>YYXXXYYX = 99</code></dt>
+    <dd><p>YYXXXYYX := GetByteBy8XBitR(1, 1, 0, 0, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x63 = 99 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXXYYY"><code>YYXXXYYY = 227</code></dt>
+    <dd><p>YYXXXYYY := GetByteBy8XBitR(1, 1, 0, 0, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xE3 = 227 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXYXXX"><code>YYXXYXXX = 19</code></dt>
+    <dd><p>YYXXYXXX := GetByteBy8XBitR(1, 1, 0, 0, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x13 = 19 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXYXXY"><code>YYXXYXXY = 147</code></dt>
+    <dd><p>YYXXYXXY := GetByteBy8XBitR(1, 1, 0, 0, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x93 = 147 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXYXYX"><code>YYXXYXYX = 83</code></dt>
+    <dd><p>YYXXYXYX := GetByteBy8XBitR(1, 1, 0, 0, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x53 = 83 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXYXYY"><code>YYXXYXYY = 211</code></dt>
+    <dd><p>YYXXYXYY := GetByteBy8XBitR(1, 1, 0, 0, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xD3 = 211 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXYYXX"><code>YYXXYYXX = 51</code></dt>
+    <dd><p>YYXXYYXX := GetByteBy8XBitR(1, 1, 0, 0, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x33 = 51 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXYYXY"><code>YYXXYYXY = 179</code></dt>
+    <dd><p>YYXXYYXY := GetByteBy8XBitR(1, 1, 0, 0, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xB3 = 179 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXYYYX"><code>YYXXYYYX = 115</code></dt>
+    <dd><p>YYXXYYYX := GetByteBy8XBitR(1, 1, 0, 0, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x73 = 115 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXXYYYY"><code>YYXXYYYY = 243</code></dt>
+    <dd><p>YYXXYYYY := GetByteBy8XBitR(1, 1, 0, 0, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xF3 = 243 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYXXXX"><code>YYXYXXXX = 11</code></dt>
+    <dd><p>YYXYXXXX := GetByteBy8XBitR(1, 1, 0, 1, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x0B = 11 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYXXXY"><code>YYXYXXXY = 139</code></dt>
+    <dd><p>YYXYXXXY := GetByteBy8XBitR(1, 1, 0, 1, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x8B = 139 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYXXYX"><code>YYXYXXYX = 75</code></dt>
+    <dd><p>YYXYXXYX := GetByteBy8XBitR(1, 1, 0, 1, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x4B = 75 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYXXYY"><code>YYXYXXYY = 203</code></dt>
+    <dd><p>YYXYXXYY := GetByteBy8XBitR(1, 1, 0, 1, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xCB = 203 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYXYXX"><code>YYXYXYXX = 43</code></dt>
+    <dd><p>YYXYXYXX := GetByteBy8XBitR(1, 1, 0, 1, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x2B = 43 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYXYXY"><code>YYXYXYXY = 171</code></dt>
+    <dd><p>YYXYXYXY := GetByteBy8XBitR(1, 1, 0, 1, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xAB = 171 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYXYYX"><code>YYXYXYYX = 107</code></dt>
+    <dd><p>YYXYXYYX := GetByteBy8XBitR(1, 1, 0, 1, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x6B = 107 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYXYYY"><code>YYXYXYYY = 235</code></dt>
+    <dd><p>YYXYXYYY := GetByteBy8XBitR(1, 1, 0, 1, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xEB = 235 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYYXXX"><code>YYXYYXXX = 27</code></dt>
+    <dd><p>YYXYYXXX := GetByteBy8XBitR(1, 1, 0, 1, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x1B = 27 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYYXXY"><code>YYXYYXXY = 155</code></dt>
+    <dd><p>YYXYYXXY := GetByteBy8XBitR(1, 1, 0, 1, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x9B = 155 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYYXYX"><code>YYXYYXYX = 91</code></dt>
+    <dd><p>YYXYYXYX := GetByteBy8XBitR(1, 1, 0, 1, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x5B = 91 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYYXYY"><code>YYXYYXYY = 219</code></dt>
+    <dd><p>YYXYYXYY := GetByteBy8XBitR(1, 1, 0, 1, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xDB = 219 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYYYXX"><code>YYXYYYXX = 59</code></dt>
+    <dd><p>YYXYYYXX := GetByteBy8XBitR(1, 1, 0, 1, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x3B = 59 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYYYXY"><code>YYXYYYXY = 187</code></dt>
+    <dd><p>YYXYYYXY := GetByteBy8XBitR(1, 1, 0, 1, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xBB = 187 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYYYYX"><code>YYXYYYYX = 123</code></dt>
+    <dd><p>YYXYYYYX := GetByteBy8XBitR(1, 1, 0, 1, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x7B = 123 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYXYYYYY"><code>YYXYYYYY = 251</code></dt>
+    <dd><p>YYXYYYYY := GetByteBy8XBitR(1, 1, 0, 1, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 0)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (0 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xFB = 251 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXXXXX"><code>YYYXXXXX = 7</code></dt>
+    <dd><p>YYYXXXXX := GetByteBy8XBitR(1, 1, 1, 0, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x07 = 7 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXXXXY"><code>YYYXXXXY = 135</code></dt>
+    <dd><p>YYYXXXXY := GetByteBy8XBitR(1, 1, 1, 0, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x87 = 135 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXXXYX"><code>YYYXXXYX = 71</code></dt>
+    <dd><p>YYYXXXYX := GetByteBy8XBitR(1, 1, 1, 0, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x47 = 71 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXXXYY"><code>YYYXXXYY = 199</code></dt>
+    <dd><p>YYYXXXYY := GetByteBy8XBitR(1, 1, 1, 0, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xC7 = 199 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXXYXX"><code>YYYXXYXX = 39</code></dt>
+    <dd><p>YYYXXYXX := GetByteBy8XBitR(1, 1, 1, 0, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x27 = 39 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXXYXY"><code>YYYXXYXY = 167</code></dt>
+    <dd><p>YYYXXYXY := GetByteBy8XBitR(1, 1, 1, 0, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xA7 = 167 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXXYYX"><code>YYYXXYYX = 103</code></dt>
+    <dd><p>YYYXXYYX := GetByteBy8XBitR(1, 1, 1, 0, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x67 = 103 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXXYYY"><code>YYYXXYYY = 231</code></dt>
+    <dd><p>YYYXXYYY := GetByteBy8XBitR(1, 1, 1, 0, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xE7 = 231 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXYXXX"><code>YYYXYXXX = 23</code></dt>
+    <dd><p>YYYXYXXX := GetByteBy8XBitR(1, 1, 1, 0, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x17 = 23 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXYXXY"><code>YYYXYXXY = 151</code></dt>
+    <dd><p>YYYXYXXY := GetByteBy8XBitR(1, 1, 1, 0, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x97 = 151 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXYXYX"><code>YYYXYXYX = 87</code></dt>
+    <dd><p>YYYXYXYX := GetByteBy8XBitR(1, 1, 1, 0, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x57 = 87 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXYXYY"><code>YYYXYXYY = 215</code></dt>
+    <dd><p>YYYXYXYY := GetByteBy8XBitR(1, 1, 1, 0, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xD7 = 215 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXYYXX"><code>YYYXYYXX = 55</code></dt>
+    <dd><p>YYYXYYXX := GetByteBy8XBitR(1, 1, 1, 0, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x37 = 55 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXYYXY"><code>YYYXYYXY = 183</code></dt>
+    <dd><p>YYYXYYXY := GetByteBy8XBitR(1, 1, 1, 0, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xB7 = 183 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXYYYX"><code>YYYXYYYX = 119</code></dt>
+    <dd><p>YYYXYYYX := GetByteBy8XBitR(1, 1, 1, 0, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x77 = 119 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYXYYYY"><code>YYYXYYYY = 247</code></dt>
+    <dd><p>YYYXYYYY := GetByteBy8XBitR(1, 1, 1, 0, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(0, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (0 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xF7 = 247 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYXXXX"><code>YYYYXXXX = 15</code></dt>
+    <dd><p>YYYYXXXX := GetByteBy8XBitR(1, 1, 1, 1, 0, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x0F = 15 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYXXXY"><code>YYYYXXXY = 143</code></dt>
+    <dd><p>YYYYXXXY := GetByteBy8XBitR(1, 1, 1, 1, 0, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x8F = 143 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYXXYX"><code>YYYYXXYX = 79</code></dt>
+    <dd><p>YYYYXXYX := GetByteBy8XBitR(1, 1, 1, 1, 0, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x4F = 79 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYXXYY"><code>YYYYXXYY = 207</code></dt>
+    <dd><p>YYYYXXYY := GetByteBy8XBitR(1, 1, 1, 1, 0, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xCF = 207 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYXYXX"><code>YYYYXYXX = 47</code></dt>
+    <dd><p>YYYYXYXX := GetByteBy8XBitR(1, 1, 1, 1, 0, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x2F = 47 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYXYXY"><code>YYYYXYXY = 175</code></dt>
+    <dd><p>YYYYXYXY := GetByteBy8XBitR(1, 1, 1, 1, 0, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xAF = 175 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYXYYX"><code>YYYYXYYX = 111</code></dt>
+    <dd><p>YYYYXYYX := GetByteBy8XBitR(1, 1, 1, 1, 0, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x6F = 111 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYXYYY"><code>YYYYXYYY = 239</code></dt>
+    <dd><p>YYYYXYYY := GetByteBy8XBitR(1, 1, 1, 1, 0, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 0)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (0 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xEF = 239 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYYXXX"><code>YYYYYXXX = 31</code></dt>
+    <dd><p>YYYYYXXX := GetByteBy8XBitR(1, 1, 1, 1, 1, 0, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x1F = 31 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYYXXY"><code>YYYYYXXY = 159</code></dt>
+    <dd><p>YYYYYXXY := GetByteBy8XBitR(1, 1, 1, 1, 1, 0, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x9F = 159 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYYXYX"><code>YYYYYXYX = 95</code></dt>
+    <dd><p>YYYYYXYX := GetByteBy8XBitR(1, 1, 1, 1, 1, 0, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x5F = 95 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYYXYY"><code>YYYYYXYY = 223</code></dt>
+    <dd><p>YYYYYXYY := GetByteBy8XBitR(1, 1, 1, 1, 1, 0, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(0, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (0 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xDF = 223 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYYYXX"><code>YYYYYYXX = 63</code></dt>
+    <dd><p>YYYYYYXX := GetByteBy8XBitR(1, 1, 1, 1, 1, 1, 0, 0) = (_MM_SHUFFLE2(0, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x3F = 63 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYYYXY"><code>YYYYYYXY = 191</code></dt>
+    <dd><p>YYYYYYXY := GetByteBy8XBitR(1, 1, 1, 1, 1, 1, 0, 1) = (_MM_SHUFFLE2(1, 0)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (0 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xBF = 191 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYYYYX"><code>YYYYYYYX = 127</code></dt>
+    <dd><p>YYYYYYYX := GetByteBy8XBitR(1, 1, 1, 1, 1, 1, 1, 0) = (_MM_SHUFFLE2(0, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (0 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0x7F = 127 .</p>
+</dd>
+    <dt id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_YYYYYYYY"><code>YYYYYYYY = 255</code></dt>
+    <dd><p>YYYYYYYY := GetByteBy8XBitR(1, 1, 1, 1, 1, 1, 1, 1) = (_MM_SHUFFLE2(1, 1)&lt;&lt;6) | (_MM_SHUFFLE2(1, 1)&lt;&lt;4) | (_MM_SHUFFLE2(1, 1)&lt;&lt;2) | _MM_SHUFFLE2(1, 1) = (1 &lt;&lt; 7) | (1 &lt;&lt; 6) | (1 &lt;&lt; 5) | (1 &lt;&lt; 4) | (1 &lt;&lt; 3) | (1 &lt;&lt; 2) | (1 &lt;&lt; 1) | 1 = 0xFF = 255 .</p>
+</dd>
+  </dl>
+
+
+  <h2 id="Zyl_VectorTraits_Impl_ShuffleControlG2On512_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Constant names are referenced to HLSL(High-level shader language)/GLSL(OpenGL Shading Language), using the Little-Endian mode (常量名参考了 HLSL(高级着色语言)/GLSL(OpenGL着色语言), 使用的是小端模式). </p>
+</div>
+
+  <h2 id="seealso">See Also</h2>
+  <div class="seealso">
+      <div><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore._MM_SHUFFLE2.html#Zyl_VectorTraits_Numerics_BitMathCore__MM_SHUFFLE2_System_Byte_System_Byte_">_MM_SHUFFLE2</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>)</div>
+      <div><a class="xref" href="Zyl.VectorTraits.Numerics.BitMathCore.GetByteBy8XBitR.html#Zyl_VectorTraits_Numerics_BitMathCore_GetByteBy8XBitR_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_System_Byte_">GetByteBy8XBitR</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>)</div>
+      <div><a class="xref" href="Zyl.VectorTraits.ShuffleControlG2.html">ShuffleControlG2</a></div>
+      <div><a class="xref" href="Zyl.VectorTraits.Impl.ShuffleControlG2On256.html">ShuffleControlG2On256</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.x86.avx512f.shuffle#system-runtime-intrinsics-x86-avx512f-shuffle(system-runtime-intrinsics-vector512((system-double))-system-runtime-intrinsics-vector512((system-double))-system-byte)">Shuffle</a>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.runtime.intrinsics.vector512-1">Vector512</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a>&gt;, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>)</div>
+  </div>
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/src/VectorTraits/Impl/ShuffleControlG2On512.cs/#L23" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

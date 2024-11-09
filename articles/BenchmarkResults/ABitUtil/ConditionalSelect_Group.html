@@ -1,0 +1,526 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Benchmark group - ConditionalSelect </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Benchmark group - ConditionalSelect ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/ABitUtil/ConditionalSelect_Group.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="benchmark-group---conditionalselect">Benchmark group - ConditionalSelect</h1>
+
+<p>(<a href="ConditionalSelect.html">← Back</a>)</p>
+<p>Unit of data: Million operations per second. The larger the number, the better the performance.</p>
+<h3 id="x86---amd-ryzen-7-7840h">X86 - AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_If</td>
+<td style="text-align: right;">248.375</td>
+<td style="text-align: right;">265.678</td>
+<td style="text-align: right;">254.998</td>
+<td style="text-align: right;">268.225</td>
+<td style="text-align: right;">238.324</td>
+<td style="text-align: right;">250.418</td>
+<td style="text-align: right;">274.599</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_Min</td>
+<td style="text-align: right;">266.157</td>
+<td style="text-align: right;">264.734</td>
+<td style="text-align: right;">267.393</td>
+<td style="text-align: right;">267.610</td>
+<td style="text-align: right;">263.789</td>
+<td style="text-align: right;">267.778</td>
+<td style="text-align: right;">249.648</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_Min_BitMath</td>
+<td style="text-align: right;">612.177</td>
+<td style="text-align: right;">586.454</td>
+<td style="text-align: right;">595.906</td>
+<td style="text-align: right;">224.989</td>
+<td style="text-align: right;">224.358</td>
+<td style="text-align: right;">523.123</td>
+<td style="text-align: right;">845.041</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_BitMath</td>
+<td style="text-align: right;">635.831</td>
+<td style="text-align: right;">589.919</td>
+<td style="text-align: right;">588.455</td>
+<td style="text-align: right;">224.643</td>
+<td style="text-align: right;">223.172</td>
+<td style="text-align: right;">527.387</td>
+<td style="text-align: right;">832.783</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_If</td>
+<td style="text-align: right;">286.486</td>
+<td style="text-align: right;">247.281</td>
+<td style="text-align: right;">252.101</td>
+<td style="text-align: right;">263.400</td>
+<td style="text-align: right;">252.650</td>
+<td style="text-align: right;">271.650</td>
+<td style="text-align: right;">271.325</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_Min</td>
+<td style="text-align: right;">285.266</td>
+<td style="text-align: right;">278.508</td>
+<td style="text-align: right;">252.637</td>
+<td style="text-align: right;">281.243</td>
+<td style="text-align: right;">281.350</td>
+<td style="text-align: right;">279.236</td>
+<td style="text-align: right;">286.129</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_Min_BitMath</td>
+<td style="text-align: right;">656.447</td>
+<td style="text-align: right;">641.490</td>
+<td style="text-align: right;">644.163</td>
+<td style="text-align: right;">259.486</td>
+<td style="text-align: right;">257.134</td>
+<td style="text-align: right;">734.006</td>
+<td style="text-align: right;">995.294</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_BitMath</td>
+<td style="text-align: right;">653.392</td>
+<td style="text-align: right;">645.750</td>
+<td style="text-align: right;">639.818</td>
+<td style="text-align: right;">257.656</td>
+<td style="text-align: right;">258.375</td>
+<td style="text-align: right;">720.890</td>
+<td style="text-align: right;">983.366</td>
+</tr>
+</tbody>
+</table>
+<h3 id="x86---intel-core-i5-8250u">X86 - Intel Core i5-8250U</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Framework</th>
+<th style="text-align: right;">.NET Core 2.1</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_If</td>
+<td style="text-align: right;">263.246</td>
+<td style="text-align: right;">260.432</td>
+<td style="text-align: right;">262.881</td>
+<td style="text-align: right;">264.835</td>
+<td style="text-align: right;">260.428</td>
+<td style="text-align: right;">265.583</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_Min</td>
+<td style="text-align: right;">259.818</td>
+<td style="text-align: right;">258.723</td>
+<td style="text-align: right;">264.886</td>
+<td style="text-align: right;">258.053</td>
+<td style="text-align: right;">263.702</td>
+<td style="text-align: right;">275.521</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_Min_BitMath</td>
+<td style="text-align: right;">639.426</td>
+<td style="text-align: right;">640.044</td>
+<td style="text-align: right;">644.014</td>
+<td style="text-align: right;">293.147</td>
+<td style="text-align: right;">294.908</td>
+<td style="text-align: right;">642.865</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_BitMath</td>
+<td style="text-align: right;">641.049</td>
+<td style="text-align: right;">644.608</td>
+<td style="text-align: right;">664.438</td>
+<td style="text-align: right;">293.112</td>
+<td style="text-align: right;">293.813</td>
+<td style="text-align: right;">643.402</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_If</td>
+<td style="text-align: right;">270.898</td>
+<td style="text-align: right;">261.092</td>
+<td style="text-align: right;">251.691</td>
+<td style="text-align: right;">262.473</td>
+<td style="text-align: right;">263.535</td>
+<td style="text-align: right;">275.987</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_Min</td>
+<td style="text-align: right;">269.116</td>
+<td style="text-align: right;">264.939</td>
+<td style="text-align: right;">252.458</td>
+<td style="text-align: right;">258.770</td>
+<td style="text-align: right;">261.950</td>
+<td style="text-align: right;">279.368</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_Min_BitMath</td>
+<td style="text-align: right;">567.211</td>
+<td style="text-align: right;">568.681</td>
+<td style="text-align: right;">568.145</td>
+<td style="text-align: right;">321.976</td>
+<td style="text-align: right;">321.661</td>
+<td style="text-align: right;">823.804</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_BitMath</td>
+<td style="text-align: right;">568.896</td>
+<td style="text-align: right;">568.289</td>
+<td style="text-align: right;">568.745</td>
+<td style="text-align: right;">321.944</td>
+<td style="text-align: right;">321.671</td>
+<td style="text-align: right;">820.385</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---apple-m2">Arm - Apple M2</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_If</td>
+<td style="text-align: right;">322.610</td>
+<td style="text-align: right;">374.282</td>
+<td style="text-align: right;">378.087</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_Min</td>
+<td style="text-align: right;">330.368</td>
+<td style="text-align: right;">377.937</td>
+<td style="text-align: right;">377.411</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_Min_BitMath</td>
+<td style="text-align: right;">909.113</td>
+<td style="text-align: right;">1189.876</td>
+<td style="text-align: right;">1416.073</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_BitMath</td>
+<td style="text-align: right;">908.751</td>
+<td style="text-align: right;">1190.112</td>
+<td style="text-align: right;">1416.267</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_If</td>
+<td style="text-align: right;">325.934</td>
+<td style="text-align: right;">379.365</td>
+<td style="text-align: right;">383.156</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_Min</td>
+<td style="text-align: right;">324.900</td>
+<td style="text-align: right;">385.891</td>
+<td style="text-align: right;">380.136</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_Min_BitMath</td>
+<td style="text-align: right;">1275.294</td>
+<td style="text-align: right;">1594.486</td>
+<td style="text-align: right;">1648.205</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_BitMath</td>
+<td style="text-align: right;">1275.641</td>
+<td style="text-align: right;">1595.740</td>
+<td style="text-align: right;">1648.203</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm---aws-arm-t4gsmall">Arm - AWS Arm t4g.small</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET Core 3.1</th>
+<th style="text-align: right;">.NET 5.0</th>
+<th style="text-align: right;">.NET 6.0</th>
+<th style="text-align: right;">.NET 7.0</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_If</td>
+<td style="text-align: right;">189.066</td>
+<td style="text-align: right;">203.350</td>
+<td style="text-align: right;">198.357</td>
+<td style="text-align: right;">240.197</td>
+<td style="text-align: right;">229.961</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_Min</td>
+<td style="text-align: right;">197.687</td>
+<td style="text-align: right;">196.932</td>
+<td style="text-align: right;">195.789</td>
+<td style="text-align: right;">239.216</td>
+<td style="text-align: right;">234.449</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_Min_BitMath</td>
+<td style="text-align: right;">341.051</td>
+<td style="text-align: right;">271.614</td>
+<td style="text-align: right;">271.640</td>
+<td style="text-align: right;">363.397</td>
+<td style="text-align: right;">526.199</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_BitMath</td>
+<td style="text-align: right;">340.847</td>
+<td style="text-align: right;">271.752</td>
+<td style="text-align: right;">271.642</td>
+<td style="text-align: right;">363.283</td>
+<td style="text-align: right;">525.977</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_If</td>
+<td style="text-align: right;">195.950</td>
+<td style="text-align: right;">203.823</td>
+<td style="text-align: right;">206.090</td>
+<td style="text-align: right;">253.399</td>
+<td style="text-align: right;">258.629</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_Min</td>
+<td style="text-align: right;">202.614</td>
+<td style="text-align: right;">201.241</td>
+<td style="text-align: right;">201.451</td>
+<td style="text-align: right;">251.272</td>
+<td style="text-align: right;">246.550</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_Min_BitMath</td>
+<td style="text-align: right;">431.288</td>
+<td style="text-align: right;">320.498</td>
+<td style="text-align: right;">320.060</td>
+<td style="text-align: right;">482.265</td>
+<td style="text-align: right;">684.860</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_BitMath</td>
+<td style="text-align: right;">431.424</td>
+<td style="text-align: right;">320.497</td>
+<td style="text-align: right;">320.653</td>
+<td style="text-align: right;">482.510</td>
+<td style="text-align: right;">685.026</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wasm---wasm-on-amd-ryzen-7-7840h">Wasm - Wasm on AMD Ryzen 7 7840H</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">.NET 8.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_If</td>
+<td style="text-align: right;">42.403</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_Min</td>
+<td style="text-align: right;">42.318</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_Min_BitMath</td>
+<td style="text-align: right;">50.430</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int16</td>
+<td style="text-align: left;">SumConditionalSelect_BitMath</td>
+<td style="text-align: right;">48.513</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_If</td>
+<td style="text-align: right;">43.613</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_Min</td>
+<td style="text-align: right;">41.879</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_Min_BitMath</td>
+<td style="text-align: right;">50.349</td>
+</tr>
+<tr>
+<td style="text-align: left;">ConditionalSelectBenchmark_Int32</td>
+<td style="text-align: left;">SumConditionalSelect_BitMath</td>
+<td style="text-align: right;">51.996</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zyl910/VectorTraits/blob/main/articles/BenchmarkResults/ABitUtil/ConditionalSelect_Group.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
