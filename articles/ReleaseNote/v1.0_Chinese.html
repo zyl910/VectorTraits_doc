@@ -115,9 +115,9 @@
 <li>为每一个特征方法, 增加了一些获取信息的的属性. e.g. <code>_AcceleratedTypes</code>, <code>_FullAcceleratedTypes</code> .</li>
 </ul>
 <p>提示: 在 Visual Studio 的 Disassembly窗口可以查看运行时的汇编代码. 例如在支持 Avx指令集的机器上运行时, <code>Vectors.ShiftLeft_Const</code> 会被内联编译优化为使用 <code>vpsllw</code> 指令. 且对于常量值(1), 会被编译为指令的立即数.
-<img src="https://raw.githubusercontent.com/zyl910/VectorTraits/main/images/Vectors.ShiftLeft_use_inline.png" alt="Vectors.ShiftLeft_use_inline.png"></p>
+<img src="../../images/Vectors.ShiftLeft_use_inline.png" alt="Vectors.ShiftLeft_use_inline.png"></p>
 <p>例2: 使用 <code>Vectors.ShiftLeft_Args</code> 与 <code>Vectors.ShiftLeft_Core</code>, 能将部分运算挪到循环外去提前处理. 例如在支持 Avx指令集的机器上运行时, 会在循环外设置好 <code>xmm1</code>, 随后在内循环的<code>vpsllw</code>指令里使用了它. 且这里展示了: 内联编译优化消除了冗余的 xmm/ymm 转换.
-<img src="https://raw.githubusercontent.com/zyl910/VectorTraits/main/images/Vectors.ShiftLeft_Core_use_inline.png" alt="Vectors.ShiftLeft_Core_use_inline.png"></p>
+<img src="../../images/Vectors.ShiftLeft_Core_use_inline.png" alt="Vectors.ShiftLeft_Core_use_inline.png"></p>
 <h2 id="简介">简介</h2>
 <p>本库为向量类型提供了许多重要的算术方法(如 Shift, Shuffle, NarrowSaturate)及常数, 使您能更方便的编写跨平台的SIMD运算代码。它充分利用了 X86、Arm架构的内在函数实现硬件加速，且能够享受内联编译优化。</p>
 <p>常用类型：</p>
@@ -669,7 +669,7 @@ ShiftLeft_AcceleratedTypes的值含有“Int16”等类型，这表示ShiftLeft�
 <p>对于ShiftLeft来说, 当参数<code>shiftAmount</code> 是常量时, 性能一般会比用变量时更高. 无论是 BCL还是本库的方法, 都是如此.
 使用本库的 <code>Core</code> 后缀的方法,  能将部分运算挪到循环外去提前处理, 从而优化了性能. 而当 CPU提供了常数参数的指令时（专业术语是“立即数参数”）, 该指令的性能一般会更高. 于是本库还提供了 <code>ConstCore</code> 后缀的方法, 会选择该平台最快的指令.
 因“CPU睿频”、“其他进程抢占CPU资源”等因素, 有时性能波动比较大. 但请放心, 已经检查过了Release的程序运行时的汇编指令, 它已经是按最佳硬件指令运行的. 例如下图.</p>
-<p><img src="https://raw.githubusercontent.com/zyl910/VectorTraits/main/images/Vectors.ShiftLeft_Core_use_inline.png" alt="Vectors.ShiftLeft_Core_use_inline.png"></p>
+<p><img src="../../images/Vectors.ShiftLeft_Core_use_inline.png" alt="Vectors.ShiftLeft_Core_use_inline.png"></p>
 <h4 id="shiftleft---arm---aws-arm-t4gsmall">ShiftLeft - Arm - AWS Arm t4g.small</h4>
 <table>
 <thead>
